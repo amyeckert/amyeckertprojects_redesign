@@ -9,7 +9,7 @@ view thumbnails button
 // when page is loaded/ready, show first image from sequence as default
 // when thumbnail button is clicked:
 	// show thumbs container overlaid on top of big img, 
-	// 	same positioning as big img- top left aligned.	
+	// same positioning as big img- top left aligned.	
 	// isActive big img is removed or hidden
 	// When an .item (the image thumbnail) is clicked it hides thumbs container
 	// displays clicked img in big img container.

@@ -740,7 +740,7 @@ section.main-content {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: top-left;
-	background-image:url("../images/horiz.png"); /*default image */
+	/*background-image:url("../images/horiz.png"); /*default image */
 
 }
 .image-info {
