@@ -33,7 +33,7 @@ $('.item').on('click', function(e) {
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
 	//change visibility of  .thumbs to hidden
-	var thumbs = document.getElementById("thumb-nav");
+	var thumbs = document.getElementById("thumbNav");
 	console.log(thumbs);
 	thumbs.style.display =  "none";
 
