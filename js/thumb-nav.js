@@ -28,8 +28,14 @@ $('.item').on('click', function(e) {
 	var chosen_thumb = $(this).find('img').attr('src');
 	console.log(chosen_thumb);
 
+
 	// $('.big-img-container').attr('style', {'background-image':chosen_thumb});
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+
+	//change visibility of  .thumbs to hidden
+	var thumbs = document.getElementById("thumb-nav");
+	console.log(thumbs);
+	thumbs.style.display =  "none";
 
 	// only display Image Info div when a thumb is chosen. HIDE div when showing 
 	// thumbnail view hide by changing color to #aba7a7, when visible.

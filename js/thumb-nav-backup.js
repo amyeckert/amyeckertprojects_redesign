@@ -27,7 +27,13 @@ $('.item').on('click', function(e) {
 	// Figure out which thumbnail we should use
 	var chosen_thumb = $(this).find('img').attr('src');
 	console.log(chosen_thumb);
+	//change visibility of  .thumbs to hidden
+	document.getElementById("thumbs").style.visibility;
 
+	// thumbs.hide()?
+		
+
+	}
 	// $('.big-img-container').attr('style', {'background-image':chosen_thumb});
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
@@ -36,8 +42,10 @@ $('.item').on('click', function(e) {
 
 });	
 
+
 function carouselnav(event){
 	console.log(event);
+
 	// step 1- previous or next?
 	// step 2 find the active item
 	// step 3a if prev trigger a click on .item isActive previous sibling, prevSibling
