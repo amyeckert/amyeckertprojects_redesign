@@ -96,31 +96,31 @@ nav ul li a{
 
 .statement-title {
 	margin:0.3em 0 1em 0;
-		width:100%;
+	width:100%;
 	
 	}
 
 .project-row, .front-row {
-		max-width:100%;
-		padding:0;
-		margin:1em auto;
-		overflow:auto;
-	}
+	max-width:100%;
+	padding:0;
+	margin:1em auto;
+	overflow:auto;
+}
 
 .project-row-img {
 	display:block;
 	max-width:100%;
-		width:100%;
-		margin:0 auto;
-		padding:0;
+	width:100%;
+	margin:0 auto;
+	padding:0;
 }
 .front-row-img {
-		display:block;
-		max-width:100%;
-		width:100%;
-		margin:0 auto;
-		padding:0;
-	
+	display:block;
+	max-width:100%;
+	width:100%;
+	margin:0 auto;
+	padding:0;
+
 }
 .front-row-img img, .project-row-img img {
 	display:block;
@@ -149,22 +149,23 @@ nav ul li a{
 
 .item img {
 	display:block;
-		width:100%;
-		height:auto;
+	width:100%;
+	height:auto;
 		
 }
 .item p {
 	display:none;
 }
 .statement-body {
-		width:90%;
-		padding:0;
-		margin:0 auto;
-		font-size: 1em;
-		text-indent: 0;
-		letter-spacing: 0.05em;
+	width:90%;
+	padding:0;
+	margin:0 auto;
+	font-size: 1em;
+	text-indent: 0;
+	letter-spacing: 0.05em;
 
-	}
+}
+// #nzbirds .statement-body { margin-top: 3em; }
 /*-----about pages -------------------------------------------*/
 
 .about-left-col {
@@ -413,9 +414,9 @@ section.main-content {
 .statement-title {
 		width:100%;
 		margin:1em 0 1em 0;
-
-
 }
+
+// #nzbirds .statement-body { margin-top: 3em; }
 
 .statement-body {
 	min-width:100%;
@@ -746,6 +747,7 @@ section.main-content {
 
 }
 .image-info {
+	visibility: hidden;
 	height:40px; 
 	width:60%;
 	margin-left:0;
@@ -766,6 +768,7 @@ section.main-content {
 	padding-left:0;
 }
 .carousel-nav {
+	visibility: hidden;
 	height:40px; 
 	width:40%;
 	background-color: #fff;
@@ -830,8 +833,9 @@ section.main-content {
 .statement-body{
 	width:100%;
 
-
 }
+// #nzbirds .statement-body { margin-top: 3em; }
+
 .statement-title {
 	position:relative;
 	width:100%;
@@ -1147,6 +1151,8 @@ nav ul li{
 	/*border:1px solid red;*/
 
 }
+.image-info { visibility: hidden;}
+
 .image-info p {
 	padding:0;
 	margin:0;
@@ -1159,6 +1165,7 @@ nav ul li{
 	padding-left:0;
 }
 .carousel-nav {
+	visibility: hidden;
 	height:40px; 
 	width:40%;
 	background-color: #fff;
@@ -1218,8 +1225,9 @@ nav ul li{
 .statement-body{
 	width:100%;
 
-
 }
+// #nzbirds .statement-body { margin-top: 3em; }
+
 .statement-title {
 	position:relative;
 	width:100%;

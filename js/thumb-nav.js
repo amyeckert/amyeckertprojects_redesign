@@ -33,9 +33,19 @@ $('.item').on('click', function(e) {
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
 	//change visibility of  .thumbs to hidden
-	var thumbs = document.getElementById("thumbNav");
-	console.log(thumbs);
-	thumbs.style.display =  "none";
+	var thumbs = document.getElementById('thumbNav');
+	//____________________________________________________________________________________
+	//specify breakpoint where this happens if minwidth<= xpx (display=flex) else {display=none}
+	//_____________________________________________________________________________________
+	thumbs.style.display =  'none';
+
+	var imgInfo = document.getElementById('imgInfo');
+	imgInfo.style.visibility = 'visible';
+
+	var cNav = document.getElementById('cNav');
+	cNav.style.visibility = 'visible';
+
+
 
 	// only display Image Info div when a thumb is chosen. HIDE div when showing 
 	// thumbnail view hide by changing color to #aba7a7, when visible.
