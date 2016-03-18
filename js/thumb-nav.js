@@ -3,16 +3,6 @@
 
 $(document).ready(function(){
 
-/*-------------------------------------------------------------------
-view thumbnails button
-/*----------------------------------------------------------------------
-// when page is loaded/ready, show first image from sequence as default
-// when thumbnail button is clicked:
-	// show thumbs container overlaid on top of big img, 
-	// same positioning as big img- top left aligned.	
-	// isActive big img is removed or hidden
-	// When an .item (the image thumbnail) is clicked it hides thumbs container
-	// displays clicked img in big img container.
 
 
 /*-------------------------------------------------------------------------------------------------
@@ -63,22 +53,38 @@ $('.thumbs-only').on('click', function() {
 
 })
 
+// slick carousel
+// $(document).ready(function(){
+// 	$('.thumbs-container').slick({
+	// setting-name: setting-value
+	
+// 	$('.fade').slick({
+// 		dots: true,
+// 		infinite: true,
+// 		speed: 500,
+// 		fade: true,
+// 		cssEase: 'linear'
+// 	});
+
+// });
+// });
+
 function carouselNav(event){
 	console.log(event);
+
+	var previous = document.querySelector('#prevImg');
 
 	// step 1- previous or next?
 	// step 2 find the active item
 	// step 3a if prev trigger a click on .item isActive previous sibling, prevSibling
-	// 		3b if isActive i first in list, then do what? then find last .item
+	// 		3b if isActive is first in list, then do what? then find last .item
 	// 	 	3c if next, trigger click on .item isActive nextSibling.
 	//      3d if isActive is last in list then find first .item
 
 	
 }
-// $('.carousel-nav .button').bind('click', carouselnav);
-$('.thumbs-only').on('click', function() {
 
-	var prevImg = document.getElementById('prevImg');
+$('.thumbs-only').on('click', function() {
 
 
 
