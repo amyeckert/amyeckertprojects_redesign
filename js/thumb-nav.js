@@ -38,22 +38,34 @@ $('.item').on('click', function(e) {
 	//specify breakpoint where this happens if minwidth<= xpx (display=flex) else {display=none}
 	//_____________________________________________________________________________________
 	thumbs.style.display =  'none';
-
-	var imgInfo = document.getElementById('imgInfo');
-	imgInfo.style.visibility = 'visible';
-
+	
 	var cNav = document.getElementById('cNav');
 	cNav.style.visibility = 'visible';
 
-
+	var imgInfo = document.getElementById('imgInfo');
+	imgInfo.style.visibility = 'visible';
 
 	// only display Image Info div when a thumb is chosen. HIDE div when showing 
 	// thumbnail view hide by changing color to #aba7a7, when visible.
 
 });	
 
-function carouselnav(event){
+
+
+// Hide Image info div when "thumbnails" button is clicked
+$('.thumbs-only').on('click', function() {
+
+	var bigImg = document.getElementById('bigImg');
+	var showThumbs = document.getElementById('thumbNav');
+	
+	bigImg.style.visibility = 'hidden';
+	showThumbs.style.display = 'block';
+
+})
+
+function carouselNav(event){
 	console.log(event);
+
 	// step 1- previous or next?
 	// step 2 find the active item
 	// step 3a if prev trigger a click on .item isActive previous sibling, prevSibling
@@ -61,14 +73,16 @@ function carouselnav(event){
 	// 	 	3c if next, trigger click on .item isActive nextSibling.
 	//      3d if isActive is last in list then find first .item
 
-	// Hide Image info div when "thumbnails" button is clicked
+	
 }
-$('.carousel-nav .button').bind('click', carouselnav);
+// $('.carousel-nav .button').bind('click', carouselnav);
+$('.thumbs-only').on('click', function() {
+
+	var prevImg = document.getElementById('prevImg');
 
 
 
-
-
+})
 
 });
 })(jQuery);

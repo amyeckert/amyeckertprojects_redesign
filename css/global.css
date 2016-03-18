@@ -391,6 +391,11 @@ section.main-content {
 	border-bottom:1px solid #aba7a7;
 }
 
+.image-info { 
+	display: block;
+	visibility: hidden;
+	color: #aba7a7;
+}
 
 /*.............CAROUSEL NAVIGATION ...........................*/
 /*
