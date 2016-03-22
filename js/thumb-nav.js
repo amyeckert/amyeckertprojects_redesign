@@ -47,48 +47,25 @@ $('.thumbs-only').on('click', function() {
 
 	var bigImg = document.getElementById('bigImg');
 	var showThumbs = document.getElementById('thumbNav');
-	
+	var imgInfo = document.getElementById('imgInfo');
+
 	bigImg.style.visibility = 'hidden';
 	showThumbs.style.display = 'block';
 
+	imgInfo.style.visibility = 'hidden';
 })
 
-// slick carousel
-// $(document).ready(function(){
-// 	$('.thumbs-container').slick({
-	// setting-name: setting-value
-	
-// 	$('.fade').slick({
-// 		dots: true,
-// 		infinite: true,
-// 		speed: 500,
-// 		fade: true,
-// 		cssEase: 'linear'
-// 	});
-
-// });
-// });
-
-function carouselNav(event){
-	console.log(event);
-
-	var previous = document.querySelector('#prevImg');
-
-	// step 1- previous or next?
-	// step 2 find the active item
-	// step 3a if prev trigger a click on .item isActive previous sibling, prevSibling
-	// 		3b if isActive is first in list, then do what? then find last .item
-	// 	 	3c if next, trigger click on .item isActive nextSibling.
-	//      3d if isActive is last in list then find first .item
-
-	
-}
-
-$('.thumbs-only').on('click', function() {
 
 
+// _______PREVIOUS OR NEXT IMAGE:______________
 
-})
+// step 1- previous or next?
+// step 2 find the active item
+//step 3a if prev trigger an click on .item isActive previous sibling, prevSibling
+// step 3a if prev trigger a click on .item isActive previous sibling, prevSibling
+// 		3b if isActive is first in list, then do what? then find last .item
+// 	 	3c if next, trigger click on .item isActive nextSibling.
+//      3d if isActive is last in list then find first .item
 
 });
 })(jQuery);
