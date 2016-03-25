@@ -762,7 +762,6 @@ section.main-content {
 	padding-left:0;
 }
 .carousel-nav {
-	visibility: hidden;
 	height:40px; 
 	width:40%;
 	background-color: #fff;
@@ -771,12 +770,13 @@ section.main-content {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 1em;
 	color:#aba7a7;
+	visibility: hidden;
 
 }
 .carousel-nav.button {
 	border-radius:0; 
 	padding:10px;
-
+	visibility: hidden;
 
 }
 .thumbs {
@@ -1175,6 +1175,9 @@ nav ul li{
 	color:#aba7a7;
 
 }
+.carousel-nav.button {
+	visibility: hidden;
+}
 
 .thumbs {
 	display:block;
@@ -1225,7 +1228,7 @@ nav ul li{
 	width:100%;
 
 }
-// #nzbirds .statement-body { margin-top: 3em; }
+#nzbirds .statement-body { margin-top: 3em; }
 
 .statement-title {
 	position:relative;

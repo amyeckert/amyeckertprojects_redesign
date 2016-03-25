@@ -30,6 +30,11 @@ $('.previous').on('click', function() {
 
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
+
+
+	//if chosen_thumb is last, do this.
+	//if chosen_thumb is first, do this.
+	console.log(imgCount);
 });
 
 $('.next').on('click', function() {
@@ -46,6 +51,12 @@ $('.next').on('click', function() {
 
 	//makes that img new big img.
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+
+	//if chosen_thumb is last, do this.
+	//if chosen_thumb is first, do this.
+
+
+	console.log(imgCount);
 
 });
 
@@ -77,19 +88,33 @@ $('.item').on('click', function(e) {
 	var imgInfo = document.getElementById('imgInfo');
 	imgInfo.style.visibility = 'visible';
 
+	var previous = document.getElementById('prevImg');
+	var next = document.getElementById('nextImg');
+
+	prevImg.style.visibility = 'visible';
+	nextImg.style.visibility = 'visible';
+
 });	
 
-// Hides Image info div when "thumbnails" button is clicked
+// Hides Image info div, prev/next buttons when "thumbnails" button is clicked
 $('.thumbs-only').on('click', function() {
 
 	var bigImg = document.getElementById('bigImg');
 	var showThumbs = document.getElementById('thumbNav');
 	var imgInfo = document.getElementById('imgInfo');
+	var previous = document.getElementById('prevImg');
+	var next = document.getElementById('nextImg');
+	var carouselNav = document.querySelector('div.carousel-nav');
 
 	bigImg.style.visibility = 'hidden';
 	showThumbs.style.display = 'block';
 	imgInfo.style.visibility = 'hidden';
-})
+	carouselNav.style.visibility = 'hidden';
+	prevImg.style.visibility = 'hidden';
+	nextImg.style.visibility = 'hidden';
+
+});
+
 
 
 //https://www.christianheilmann.com/2015/04/08/keeping-it-simple-coding-a-carousel/ :

@@ -213,8 +213,12 @@ a:active {
 	color:#fff; 
 
 	}
+/*.statement-body {
+	visibility: hidden;
+}*/
 .statement-body p {
 	text-decoration:underline;
+	visibility: hidden;
 }
 
 /*.....showing page location..... */
@@ -223,7 +227,7 @@ a:active {
 section.main-content {
 	order:3;
 	flex-grow:1;
-	overflow: auto;
+	overflow: hidden;
 }
 
 #photography .navphoto, #design .navdesign, #interactive .navinter, 
@@ -501,6 +505,7 @@ section.carousel {
 	margin-top:1em;
 	line-height:1.3em;
 	text-decoration:none;
+	visibility: visible;
 }
 .statement-body p:nth-child(1) {
 	margin-top:0;
