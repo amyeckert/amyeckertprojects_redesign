@@ -412,15 +412,15 @@ section.main-content {
 	display:none;
 }
 .statement-title {
-		width:100%;
-		margin:1em 0 1em 0;
+	width:100%;
+	margin:1em 0 1em 0;
 }
 
-// #nzbirds .statement-body { margin-top: 3em; }
+#nzbirds .statement-body { margin-top: 3em; }
 
 .statement-body {
-	min-width:100%;
-	max-width:19em;
+	min-width: 100%;
+	max-width: 19em;
 	width:100%;
 	padding:0;
 	margin:0;
@@ -749,7 +749,10 @@ section.main-content {
 	text-align:left;
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 0.7em;
-	color:#aba7a7;
+	display: block;
+	visibility: hidden;
+	color: #aba7a7;
+
 }
 .image-info p {
 	padding:0;
@@ -825,10 +828,10 @@ section.main-content {
 
 
 .statement-body{
-	width:100%;
+	width: 100%;
 
 }
-// #nzbirds .statement-body { margin-top: 3em; }
+#nzbirds .statement-body { margin-top: 3em; }
 
 .statement-title {
 	position:relative;
@@ -1225,7 +1228,7 @@ nav ul li{
 
 
 .statement-body{
-	width:100%;
+	width:75%;
 
 }
 #nzbirds .statement-body { margin-top: 3em; }

@@ -6,42 +6,49 @@ $(document).ready(function(){
 
 // _______PREVIOUS OR NEXT IMAGE Navigation ______________
 
-// step 1- previous or next button clicked?
-// step 2 find the active item
-
-//step 3a if prev triggers a click on .item isActive previous sibling, 
-//step 3a if next triggers a click on .item isActive next sibling, 
-// 		3b if isActive is first in list, then find last .item
-// 	 	3c if next, trigger click on .item isActive nextSibling.
-//      3d if isActive is last in list then find first .item
+//if prev button clicked, triggers a click on .item isActive's previous sibling, which becomes isActive
+//if isActive is first in list, then find last .item
 
 $('.previous').on('click', function() {
-	// makes big image visible
-	var bigImg = document.getElementById('bigImg');
-	bigImg.style.visibility = 'visible';
 
 	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
-	// step 2 find the active item and chose next sibling
+	
+	// step 2 find the active item 
+	var activeImg = document.querySelector('div.isActive');
+	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;	
+	var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
 	var prevImg = document.querySelector('div.isActive').previousElementSibling;
+
 	$('.item.isActive').removeClass('isActive');
-	$(prevImg).addClass('isActive');
 
-	var chosen_thumb = $(prevImg).find('img').attr('src');
+		//if activeImg is first image in list
+		if(activeImg == imgCount[0]) {
 
-	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+			//get the url to inject into .big-img-container
+			var chosen_thumb = $(lastImg).find('img').attr('src');
+			$(lastImg).addClass('isActive');
 
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
+		}
+		//else choose prev sibling
+		else { 		
+			$(prevImg).addClass('isActive');
+			var chosen_thumb = $(prevImg).find('img').attr('src');
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');}
 
-	//if chosen_thumb is last, do this.
-	//if chosen_thumb is first, do this.
-	console.log(imgCount);
+	console.log(activeImg, imgCount, lastImg, prevImg);
 });
 
-$('.next').on('click', function() {
-	// makes big image visible
-	var bigImg = document.getElementById('bigImg');
-	bigImg.style.visibility = 'visible';
 
+
+//if next button clicked, triggers a click on .item isActive's next sibling, which becomes isActive 
+//if isActive is last in list then find first .item
+
+$('.next').on('click', function() {
+	
 	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
 	 // step 2 find the active item and chose next sibling
 	var nextImg = document.querySelector('div.isActive').nextElementSibling;
@@ -49,17 +56,16 @@ $('.next').on('click', function() {
 	$(nextImg).addClass('isActive');
 	var chosen_thumb = $(nextImg).find('img').attr('src');
 
-	//makes that img new big img.
+	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;
+	var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
+
+	
+	//make that img new big img.
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
-
-	//if chosen_thumb is last, do this.
-	//if chosen_thumb is first, do this.
-
-
-	console.log(imgCount);
+	
+	console.log(imgCount, lastImg, firstImg);
 
 });
-
 /*-------------------------------------------------------------------------------------------------
 thumbnail picker
 -------------------------------------------------------------------------------------------------*/
@@ -77,20 +83,14 @@ $('.item').on('click', function(e) {
 
 	//change visibility of .thumbs to hidden
 	var thumbs = document.getElementById('thumbNav');
-	//____________________________________________________________________________________
-	//specify breakpoint where this happens if minwidth<= xpx (display=flex) else {display=none}
-	//_____________________________________________________________________________________
-	thumbs.style.display =  'none';
-	
 	var cNav = document.getElementById('cNav');
-	cNav.style.visibility = 'visible';
-
 	var imgInfo = document.getElementById('imgInfo');
-	imgInfo.style.visibility = 'visible';
-
 	var previous = document.getElementById('prevImg');
 	var next = document.getElementById('nextImg');
 
+	cNav.style.visibility = 'visible';
+	thumbs.style.display =  'none';
+	imgInfo.style.visibility = 'hidden';
 	prevImg.style.visibility = 'visible';
 	nextImg.style.visibility = 'visible';
 
@@ -116,66 +116,6 @@ $('.thumbs-only').on('click', function() {
 });
 
 
-
-//https://www.christianheilmann.com/2015/04/08/keeping-it-simple-coding-a-carousel/ :
-// carousel = (function(){
-//   //find buttons for next/prev"
-//   var box = document.querySelector('div.carousel-nav');
-//   var next = document.querySelector('button.nextImg');
-//   var prev = document.querySelector('button.prevImg');
-
-//   //finds container with images in it-
-//   var items = document.querySelectorAll('div.item');
-//   var counter = 0;
-//   var amount = items.length;
-//   var current = items[0];
-
-//   items.classList.add('isActive');
-
-//   function navigate(direction) {
-//     current.classList.remove('isActive');
-//     counter = counter + direction;
-//     if (direction === -1 && 
-//         counter < 0) { 
-//       counter = amount - 1; 
-//     }
-//     if (direction === 1 && 
-//         !items[counter]) { 
-//       counter = 0;
-//     }
-//     current = items[counter];
-//     current.classList.add('isActive');
-//   }
-//   next.addEventListener('click', function(ev) {
-//     navigate(1);
-//   });
-//   prev.addEventListener('click', function(ev) {
-//     navigate(-1);
-//   });
-//   navigate(0);
-// }) ();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//___________________________________________
+//________THE END____________________________________________________________________________________________________________________
 });
 })(jQuery);

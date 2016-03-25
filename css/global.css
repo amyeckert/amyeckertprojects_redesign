@@ -202,23 +202,21 @@ nav ul ul li a {
 a:link {
 	color:#aba7a7;
 	text-decoration: none;
-	} 
+} 
 a:visited {
 	color:#aba7a7;
-	}
+}
 a:hover {
 	color:#fff;
-	}
+}
 a:active {
 	color:#fff; 
 
-	}
-/*.statement-body {
-	visibility: hidden;
-}*/
+}
+
 .statement-body p {
 	text-decoration:underline;
-	visibility: hidden;
+
 }
 
 /*.....showing page location..... */
@@ -478,7 +476,7 @@ section.carousel {
 	
 	}*/
 .statement-body {
-	width:100%;
+	width:75%%;
 	height:100%;
 	/*margin-left:20%;*/
 	 -webkit-column-width: 100%; /* Chrome, Safari, Opera */
