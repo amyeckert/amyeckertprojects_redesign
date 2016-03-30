@@ -4,14 +4,14 @@
 $(document).ready(function(){
 
 
-// _______PREVIOUS OR NEXT IMAGE Navigation ______________
-
-//if prev button clicked, triggers a click on .item isActive's previous sibling, which becomes isActive
-//if isActive is first in list, then find last .item
+/*-------------------------------------------------------------------------------------------------
+			previous or next button
+-------------------------------------------------------------------------------------------------*/
 
 $('.previous').on('click', function() {
 
 	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
+	var items = document.querySelectorAll('div.item');
 	
 	// step 2 find the active item 
 	var activeImg = document.querySelector('div.isActive');
@@ -22,7 +22,7 @@ $('.previous').on('click', function() {
 	$('.item.isActive').removeClass('isActive');
 
 		//if activeImg is first image in list
-		if(activeImg == imgCount[0]) {
+		if(activeImg == items[0]) {
 
 			//get the url to inject into .big-img-container
 			var chosen_thumb = $(lastImg).find('img').attr('src');
@@ -39,35 +39,47 @@ $('.previous').on('click', function() {
 			//make that img new big img.
 			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');}
 
-	console.log(activeImg, imgCount, lastImg, prevImg);
+	// console.log(activeImg, imgCount, lastImg, prevImg, items);
 });
 
-
-
-//if next button clicked, triggers a click on .item isActive's next sibling, which becomes isActive 
-//if isActive is last in list then find first .item
 
 $('.next').on('click', function() {
-	
+
 	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
-	 // step 2 find the active item and chose next sibling
-	var nextImg = document.querySelector('div.isActive').nextElementSibling;
-	$('.item.isActive').removeClass('isActive');
-	$(nextImg).addClass('isActive');
-	var chosen_thumb = $(nextImg).find('img').attr('src');
-
-	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;
+	var items = document.querySelectorAll('div.item');
+	
+	// find the active item 
+	var activeImg = document.querySelector('div.isActive');
+	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;	
 	var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
+	var prevImg = document.querySelector('div.isActive').previousElementSibling;
 
-	
-	//make that img new big img.
-	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
-	
-	console.log(imgCount, lastImg, firstImg);
+	$('.item.isActive').removeClass('isActive');
+
+		//if activeImg is first image in list
+		if(activeImg == items[0]) {
+
+			//get the url to inject into .big-img-container
+			var chosen_thumb = $(lastImg).find('img').attr('src');
+			$(lastImg).addClass('isActive');
+
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+
+		}
+		//else choose prev sibling
+		else { 		
+			$(prevImg).addClass('isActive');
+			var chosen_thumb = $(prevImg).find('img').attr('src');
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');}
+
+	// console.log(activeImg, imgCount, lastImg, prevImg, items);
 
 });
+
 /*-------------------------------------------------------------------------------------------------
-thumbnail picker
+			pick a thumbnail
 -------------------------------------------------------------------------------------------------*/
 $('.item').on('click', function(e) {
 	e.preventDefault();
@@ -96,7 +108,9 @@ $('.item').on('click', function(e) {
 
 });	
 
-// Hides Image info div, prev/next buttons when "thumbnails" button is clicked
+/*-------------------------------------------------------------------------------------------------
+			hide thumbnails
+-------------------------------------------------------------------------------------------------*/
 $('.thumbs-only').on('click', function() {
 
 	var bigImg = document.getElementById('bigImg');
@@ -114,7 +128,6 @@ $('.thumbs-only').on('click', function() {
 	nextImg.style.visibility = 'hidden';
 
 });
-
 
 //________THE END____________________________________________________________________________________________________________________
 });
