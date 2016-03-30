@@ -6,28 +6,27 @@ $(document).ready(function(){
 
 // _______PREVIOUS OR NEXT IMAGE Navigation ______________
 
-//if prev button clicked, find .item current's previous sibling, which becomes current.
-//if current is first in list, then find last .item
+//if prev button clicked, triggers a click on .item isActive's previous sibling, which becomes isActive
+//if isActive is first in list, then find last .item
 
 $('.previous').on('click', function() {
 
 	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
 	
 	// step 2 find the active item 
-	var activeImg = document.querySelector('div.current');
+	var activeImg = document.querySelector('div.isActive');
 	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;	
 	var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
-	var prevImg = document.querySelector('div.current').previousElementSibling;
+	var prevImg = document.querySelector('div.isActive').previousElementSibling;
 
-	$('.item.current').removeClass('current');
+	$('.item.isActive').removeClass('isActive');
 
 		//if activeImg is first image in list
 		if(activeImg == imgCount[0]) {
-			//make lastImg .current
-			lastImg=lastImg.addClass('current');
 
-			//get the src url to inject into .big-img-container
+			//get the url to inject into .big-img-container
 			var chosen_thumb = $(lastImg).find('img').attr('src');
+			$(lastImg).addClass('isActive');
 
 			//make that img new big img.
 			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
@@ -35,7 +34,7 @@ $('.previous').on('click', function() {
 		}
 		//else choose prev sibling
 		else { 		
-			$(prevImg).addClass('current');
+			$(prevImg).addClass('isActive');
 			var chosen_thumb = $(prevImg).find('img').attr('src');
 			//make that img new big img.
 			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');}
@@ -43,16 +42,18 @@ $('.previous').on('click', function() {
 	console.log(activeImg, imgCount, lastImg, prevImg);
 });
 
-// if next button clicked, triggers a click on .item current's next sibling, which becomes current 
-// if current is last in list then find first .item
+
+
+//if next button clicked, triggers a click on .item isActive's next sibling, which becomes isActive 
+//if isActive is last in list then find first .item
 
 $('.next').on('click', function() {
 	
 	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
 	 // step 2 find the active item and chose next sibling
-	var nextImg = document.querySelector('div.current').nextElementSibling;
-	$('.item.current').removeClass('current');
-	$(nextImg).addClass('current');
+	var nextImg = document.querySelector('div.isActive').nextElementSibling;
+	$('.item.isActive').removeClass('isActive');
+	$(nextImg).addClass('isActive');
 	var chosen_thumb = $(nextImg).find('img').attr('src');
 
 	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;
@@ -70,8 +71,8 @@ thumbnail picker
 -------------------------------------------------------------------------------------------------*/
 $('.item').on('click', function(e) {
 	e.preventDefault();
-	$('.item.current').removeClass('current');
-	$(this).addClass('current');
+	$('.item.isActive').removeClass('isActive');
+	$(this).addClass('isActive');
 	console.log(e);
 
 	// Figure out which thumbnail we should use
