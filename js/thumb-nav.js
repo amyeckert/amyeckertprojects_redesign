@@ -3,20 +3,83 @@
 
 $(document).ready(function(){
 
-/*-------------------------------------------------------------------
-view thumbnails button
-/*----------------------------------------------------------------------
-// when page is loaded/ready, show first image from sequence as default
-// when thumbnail button is clicked:
-	// show thumbs container overlaid on top of big img, 
-	// same positioning as big img- top left aligned.	
-	// isActive big img is removed or hidden
-	// When an .item (the image thumbnail) is clicked it hides thumbs container
-	// displays clicked img in big img container.
-
 
 /*-------------------------------------------------------------------------------------------------
-thumbnail picker
+			previous or next button
+-------------------------------------------------------------------------------------------------*/
+
+$('.previous').on('click', function() {
+
+	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
+	var items = document.querySelectorAll('div.item');
+	
+	// step 2 find the active item 
+	var activeImg = document.querySelector('div.isActive');
+	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;	
+	var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
+	var prevImg = document.querySelector('div.isActive').previousElementSibling;
+
+	$('.item.isActive').removeClass('isActive');
+
+		//if activeImg is first image in list
+		if(activeImg == items[0]) {
+
+			//get the url to inject into .big-img-container
+			var chosen_thumb = $(lastImg).find('img').attr('src');
+			$(lastImg).addClass('isActive');
+
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+
+		}
+		//else choose prev sibling
+		else { 		
+			$(prevImg).addClass('isActive');
+			var chosen_thumb = $(prevImg).find('img').attr('src');
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');}
+
+	// console.log(activeImg, imgCount, lastImg, prevImg, items);
+});
+
+
+$('.next').on('click', function() {
+
+	var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
+	var items = document.querySelectorAll('div.item');
+	
+	// find the active item 
+	var activeImg = document.querySelector('div.isActive');
+	var lastImg = document.querySelector('div.thumbs-container').lastElementChild;	
+	var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
+	var prevImg = document.querySelector('div.isActive').previousElementSibling;
+
+	$('.item.isActive').removeClass('isActive');
+
+		//if activeImg is first image in list
+		if(activeImg == items[0]) {
+
+			//get the url to inject into .big-img-container
+			var chosen_thumb = $(lastImg).find('img').attr('src');
+			$(lastImg).addClass('isActive');
+
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+
+		}
+		//else choose prev sibling
+		else { 		
+			$(prevImg).addClass('isActive');
+			var chosen_thumb = $(prevImg).find('img').attr('src');
+			//make that img new big img.
+			$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');}
+
+	// console.log(activeImg, imgCount, lastImg, prevImg, items);
+
+});
+
+/*-------------------------------------------------------------------------------------------------
+			pick a thumbnail
 -------------------------------------------------------------------------------------------------*/
 $('.item').on('click', function(e) {
 	e.preventDefault();
@@ -28,61 +91,44 @@ $('.item').on('click', function(e) {
 	var chosen_thumb = $(this).find('img').attr('src');
 	console.log(chosen_thumb);
 
-
-	// $('.big-img-container').attr('style', {'background-image':chosen_thumb});
 	$('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
-	//change visibility of  .thumbs to hidden
+	//change visibility of .thumbs to hidden
 	var thumbs = document.getElementById('thumbNav');
-	//____________________________________________________________________________________
-	//specify breakpoint where this happens if minwidth<= xpx (display=flex) else {display=none}
-	//_____________________________________________________________________________________
-	thumbs.style.display =  'none';
-	
 	var cNav = document.getElementById('cNav');
-	cNav.style.visibility = 'visible';
-
 	var imgInfo = document.getElementById('imgInfo');
-	imgInfo.style.visibility = 'visible';
+	var previous = document.getElementById('prevImg');
+	var next = document.getElementById('nextImg');
 
-	// only display Image Info div when a thumb is chosen. HIDE div when showing 
-	// thumbnail view hide by changing color to #aba7a7, when visible.
+	cNav.style.visibility = 'visible';
+	thumbs.style.display =  'none';
+	imgInfo.style.visibility = 'hidden';
+	prevImg.style.visibility = 'visible';
+	nextImg.style.visibility = 'visible';
 
 });	
 
-
-
-// Hide Image info div when "thumbnails" button is clicked
+/*-------------------------------------------------------------------------------------------------
+			hide thumbnails
+-------------------------------------------------------------------------------------------------*/
 $('.thumbs-only').on('click', function() {
 
 	var bigImg = document.getElementById('bigImg');
 	var showThumbs = document.getElementById('thumbNav');
-	
+	var imgInfo = document.getElementById('imgInfo');
+	var previous = document.getElementById('prevImg');
+	var next = document.getElementById('nextImg');
+	var carouselNav = document.querySelector('div.carousel-nav');
+
 	bigImg.style.visibility = 'hidden';
 	showThumbs.style.display = 'block';
+	imgInfo.style.visibility = 'hidden';
+	carouselNav.style.visibility = 'hidden';
+	prevImg.style.visibility = 'hidden';
+	nextImg.style.visibility = 'hidden';
 
-})
+});
 
-function carouselNav(event){
-	console.log(event);
-
-	// step 1- previous or next?
-	// step 2 find the active item
-	// step 3a if prev trigger a click on .item isActive previous sibling, prevSibling
-	// 		3b if isActive i first in list, then do what? then find last .item
-	// 	 	3c if next, trigger click on .item isActive nextSibling.
-	//      3d if isActive is last in list then find first .item
-
-	
-}
-// $('.carousel-nav .button').bind('click', carouselnav);
-$('.thumbs-only').on('click', function() {
-
-	var prevImg = document.getElementById('prevImg');
-
-
-
-})
-
+//________THE END____________________________________________________________________________________________________________________
 });
 })(jQuery);

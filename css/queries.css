@@ -19,245 +19,228 @@ grey #aba7a7;
 
 @media only screen and (max-width: 340px) { 
 
-.header {
-	width:90%;
-	max-width:340px;
-	margin:1em auto 0 auto;
-	border-bottom:1px solid #aba7a7;
-}
-
-.logo {  
-	width:100%;
- 	min-width:236px;
- 	margin:) auto;
- 	height:auto; 
- 	
- }
-
-.logo img {
-	width:100%;
-}
-	
-nav .main-menu {
-	display:none;
-}
-
-/*#photography section.main-content, 
-#design section.main-content, 
-#interactive section.main-content, 
-#mixedmedia section.main-content, 
-#about section.main-content,
-#blog section.main-content,
-#contact section */.main-content {
-	display:block;
-	max-width:90%;
-	margin:1em auto 1em auto;
-	border:none;
-	padding-top:0;
-	overflow:auto;
-}
-
-#about p {
- 	padding:0.5em 0 0.5em 0;
-
- }
-
-.page-location {
-	display:none;
-	
-}
-
-.menu-top {
-	display:none;
- 	border-top:none;
- }
-
-
-nav ul li a{
-	font-size:1.2em;
-}
-
-/*.....showing page location in menu..... */
-
-#photography .navphoto, #design .navdesign, #interactive .navinter, 
-#mixedmedia .navmixed, #about .navabout, #blog .navblog,
-#contact .navcontact, #project-template .navproject {
-	border: none;
+	.header {
+		width:90%;
+		max-width:340px;
+		margin:1em auto 0 auto;
+		border-bottom:1px solid #aba7a7;
 	}
 
-#photography .navphoto,#photography .navphoto, #design .navdesign, #interactive .navinter, 
-#mixedmedia .navmixed, #about .navabout, #blog .navblog,
-#contact .navcontact, #project-template .navproject {
-	border-top:none;
+	.logo {  
+		width:100%;
+	 	min-width:236px;
+	 	margin: auto;
+	 	height:auto; 
+	 	
+	 }
+
+	.logo img {
+		width:100%;
+	}
+		
+	nav .main-menu {
+		display:none;
+	}
+	.main-content {
+		display:block;
+		max-width:90%;
+		margin:1em auto 1em auto;
+		border:none;
+		padding-top:0;
+		overflow:auto;
+	}
+
+	#about p {
+	 	padding:0.5em 0 0.5em 0;
+
+	 }
+
+	.page-location {
+		display:none;
+		
+	}
+
+	.menu-top {
+		display:none;
+	 	border-top:none;
+	 }
+
+
+	nav ul li a{
+		font-size:1.2em;
+	}
+
+	/*.....showing page location in menu..... */
+
+	#photography .navphoto, #design .navdesign, #interactive .navinter, 
+	#mixedmedia .navmixed, #about .navabout, #blog .navblog,
+	#contact .navcontact, #project-template .navproject {
+		border: none;
 		}
 
-/*........portfolio title visibility.......*/
+	#photography .navphoto,#photography .navphoto, #design .navdesign, #interactive .navinter, 
+	#mixedmedia .navmixed, #about .navabout, #blog .navblog,
+	#contact .navcontact, #project-template .navproject {
+		border-top:none;
+			}
+
+	/*........POERTFOLIO TITLE VISIBILITY .......*/
 
 
-.statement-title {
-	margin:0.3em 0 1em 0;
-	width:100%;
-	
-	}
-
-.project-row, .front-row {
-	max-width:100%;
-	padding:0;
-	margin:1em auto;
-	overflow:auto;
-}
-
-.project-row-img {
-	display:block;
-	max-width:100%;
-	width:100%;
-	margin:0 auto;
-	padding:0;
-}
-.front-row-img {
-	display:block;
-	max-width:100%;
-	width:100%;
-	margin:0 auto;
-	padding:0;
-
-}
-.front-row-img img, .project-row-img img {
-	display:block;
-}
-
-
-/*------------------------------------------------------------------
------ project pages -----------------------------------------------*/ 
-
-.menu-side, .big {
-		display:none;
-
-}
-	
-.thumbnav-container {
-		display:block;
-		max-height:100%;
-		max-width:300px;
+	.statement-title {
+		margin:0.3em 0 1em 0;
 		width:100%;
 		
-}
-.item {
-	width:100%;
-}
+		}
+
+	.project-row, .front-row {
+		max-width:100%;
+		padding:0;
+		margin:1em auto;
+		overflow:auto;
+	}
+
+	.project-row-img {
+		display:block;
+		max-width:100%;
+		width:100%;
+		margin:0 auto;
+		padding:0;
+	}
+	.front-row-img {
+		display:block;
+		max-width:100%;
+		width:100%;
+		margin:0 auto;
+		padding:0;
+
+	}
+	.front-row-img img, .project-row-img img {
+		display:block;
+	}
 
 
-.item img {
-	display:block;
-	width:100%;
-	height:auto;
+	/*.........PROJECT PAGES .......................................*/
+
+	.menu-side, .big {
+			display:none;
+
+	}
 		
-}
-.item p {
-	display:none;
-}
-.statement-body {
-	width:90%;
-	padding:0;
-	margin:0 auto;
-	font-size: 1em;
-	text-indent: 0;
-	letter-spacing: 0.05em;
-
-}
-// #nzbirds .statement-body { margin-top: 3em; }
-/*-----about pages -------------------------------------------*/
-
-.about-left-col {
-	width:90%;
-	overflow:hidden;
-	min-width:6em;
-	margin:0;
-
-}
-
-#about .about-left-col p {
-    padding: 1em 0 0.5em 0;
-}
-.about-left-col p:first-of-type {
-	margin-top:0;
-}
+	.thumbnav-container {
+			display:block;
+			max-height:100%;
+			max-width:300px;
+			width:100%;
+			
+	}
+	.item {
+		width:100%;
+	}
 
 
-.cv { margin:auto;}
-
-.cv button {
-	padding:4%;
-	margin:auto;
-	font-size: 0.7em;
-	letter-spacing: 0.12em;
-
-}
-.about-col-2, .clients-r, .clients-l, .awards {
+	.item img {
+		display:block;
+		width:100%;
+		height:auto;
+			
+	}
+	.item p {
 		display:none;
+	}
+	.statement-body {
+		width:90%;
+		padding:0;
+		margin:0 auto;
+		font-size: 1em;
+		text-indent: 0;
+		letter-spacing: 0.05em;
 
 	}
+	// #nzbirds .statement-body { margin-top: 3em; }
 
+	/*.........ABOUT PAGE .......................................*/
 
-.commercial-site {
-		margin:1.5em 0 1.5em 0;
-	}
-
-
-/*........contact page............................................*/
-
-div .contact-img img {
-	display: none;
-}
-
-
-/*-------footer-----------*/
-.footer {
-	width:90%;
-	margin:1em auto 1em auto;
-	padding:0;
-	border-top:1px solid #aba7a7;
-		
-}
-
-.column {
-	width:100%;
-	
-	
-}
-
-.footer-col-1,
-.footer-col-2,
-.footer-col-3 {
-	margin: 0;
-	width:100%;
-}
-
-.footer ul li {
+	.about-left-col {
+		width:90%;
+		overflow:hidden;
+		min-width:6em;
 		margin:0;
 
-}
+	}
 
-.footer-col-1 ul li, 
-.footer-col-2 ul li {
-	width:100%;
-	padding-left:0;
+	#about .about-left-col p {
+	    padding: 1em 0 0.5em 0;
+	}
+	.about-left-col p:first-of-type {
+		margin-top:0;
+	}
+
+
+	.cv { margin:auto;}
+
+	.cv button {
+		padding:4%;
+		margin:auto;
+		font-size: 0.7em;
+		letter-spacing: 0.12em;
+	}
+	.about-col-2, .clients-r, .clients-l, .awards {
+			display:none;
+
+	}
+	.commercial-site {
+			margin:1.5em 0 1.5em 0;
+	}
+
+
+	/*........CONTACT PAGE ............................................*/
+
+	div .contact-img img {
+		display: none;
+	}
+
+
+	/*......... FOOTER.......................................*/
+	.footer {
+		width:90%;
+		margin:1em auto 1em auto;
+		padding:0;
+		border-top:1px solid #aba7a7;
+			
+	}
+
+	.column {
+		width:100%;
 		
-}
-.footer-col-1 ul li a, 
-.footer-col-2 ul li a  {
-	display: block;
-    padding:5% 0;
-    width: 100%;
-    height: 100%;
-}		
-	
-} /*close media query*/
+	}
 
+	.footer-col-1,
+	.footer-col-2,
+	.footer-col-3 {
+		margin: 0;
+		width:100%;
+	}
 
+	.footer ul li {
+			margin:0;
 
+	}
 
-
+	.footer-col-1 ul li, 
+	.footer-col-2 ul li {
+		width:100%;
+		padding-left:0;
+			
+	}
+	.footer-col-1 ul li a, 
+	.footer-col-2 ul li a  {
+		display: block;
+	    padding:5% 0;
+	    width: 100%;
+	    height: 100%;
+	}			
+} 
 
 
 
@@ -268,318 +251,300 @@ div .contact-img img {
 
 @media only screen and (min-width: 341px) and (max-width:920px) {
 
-.wrapper {
-	max-width:90%; 
-	margin:0 auto;
-}
-.header{
-	width:100%; 
-	border-bottom:1px solid #aba7a7;
-}
-div.logo {
-	width:60%;
-	max-width:900px;
-	height:auto;
-	margin:0;
-}
-img {
-	width:100%;
-	max-width:100%;
-	display:block;
-}
-  
-.menu-top, .main-menu {
-	display: none;
+	.wrapper {
+		max-width:90%; 
+		margin:0 auto;
+	}
+	.header{
+		width:100%; 
+		border-bottom:1px solid #aba7a7;
+	}
+	div.logo {
+		width:60%;
+		max-width:900px;
+		height:auto;
+		margin:0;
+	}
+	img {
+		width:100%;
+		max-width:100%;
+		display:block;
+	}
+	  
+	.menu-top, .main-menu {
+		display: none;
+			
+	}
+
+	section.main-content {
+		margin:0 auto 1em auto;
+		overflow: auto;
+	}
+
+	.page-location {
+		display:block;	
+	}
+	.page-location p {
+		display:block;
 		
-}
+	}
+	#contact .page-location, #contact .page-location p {
+		display:none;
 
-section.main-content {
-	margin:0 auto 1em auto;
-	overflow: auto;
-}
+	}
+		
+	.front-titles, .project-titles {
+		width: 100%;
+		background-color: white;	
+		float: left;
+		position: relative; 
+		top: 30%;
+		color: #aba7a7;
+		margin-bottom: 4%;
+		font-size:0.9em;
 
-.page-location {
-	display:block;	
-}
-.page-location p {
-	display:block;
+	}
+	 
+	.front-titles p, .project-titles p {
+		font-size:0.85em;
+		text-align:center;
+		margin:0;
+		padding:0;
+	}
+	.project-row .front-row {
+		padding-top:0;
+		margin:0 auto;
+	}
+	.project-row-img, .front-row-img  {
+		min-width:50%;
+		width:100%;	
+		
+	}
+
+	/*.........PROJECT PAGES.......................................*/
 	
+	.menu-side ul li {
+		display:none;
+		width:100%;
+	}
 
+	#manhome .menu-side ul li:first-child, 
+	#truckers .menu-side ul li:first-child,
+	#mncooks .menu-side ul li:first-child,
+	#submarine .menu-side ul li:first-child,
+	#soap .menu-side ul li:first-child,
+	#optimiste .menu-side ul li:first-child,
+	#mossburn .menu-side ul li:first-child,
+	/*design*/
+	#mhbook .menu-side ul li:first-child,
+	#nzbirds .menu-side ul li:first-child,
+	#letters .menu-side ul li:first-child,
+	#print-portfolio .menu-side ul li:first-child,
+	/*interactive*/
+	/*mixed media*/ 
+	#misunderstood .menu-side ul li:first-child,
+	#rigs .menu-side ul li:first-child,
+	#prefab .menu-side ul li:first-child,
+	#proteus .menu-side ul li:first-child,
+	#kansas .menu-side ul li:first-child,
+	#weather .menu-side ul li:first-child {
+		display: block;
+		width:100%;
+	}
 
-}
-#contact .page-location, #contact .page-location p {
-	display:none;
+	/*photography*/
+	#manhome .menu-side ul li:nth-child(2),
+	#truckers .menu-side ul li:nth-child(3),
+	#mncooks .menu-side ul li:nth-child(4),
+	#submarine .menu-side ul li:nth-child(5),
+	#soap .menu-side ul li:nth-child(6),
+	#optimiste .menu-side ul li:nth-child(7),
+	#mossburn .menu-side ul li:nth-child(8), 
 
-}
-	
-.front-titles, .project-titles {
-	width: 100%;
-	background-color: white;	
-	float: left;
-	position: relative; 
-	top: 30%;
-	color: #aba7a7;
-	margin-bottom: 4%;
-	font-size:0.9em;
+	/*design*/
+	#mhbook .menu-side ul li:nth-child(2),
+	#nzbirds .menu-side ul li:nth-child(3),
+	#letters .menu-side ul li:nth-child(4),
+	#print-portfolio .menu-side ul li:nth-child(5),
+	/*#school .menu-side ul li:nth-child(6),*/
 
-}
- 
-.front-titles p, .project-titles p {
-	font-size:0.85em;
-	text-align:center;
-	margin:0;
-	padding:0;
-}
-.project-row .front-row {
-	padding-top:0;
-	margin:0 auto;
-}
-.project-row-img, .front-row-img  {
-	min-width:50%;
-	width:100%;	
-	
-}
+	/*interactive*/
 
-
-/*------------------------------------------------------------------
------ project pages -----------------------------------------------*/
-	
-.menu-side {
-/*	display:none;*/
-	
-}
-.menu-side ul li {
-	display:none;
-	width:100%;
-}
-
-#manhome .menu-side ul li:first-child, 
-#truckers .menu-side ul li:first-child,
-#mncooks .menu-side ul li:first-child,
-#submarine .menu-side ul li:first-child,
-#soap .menu-side ul li:first-child,
-#optimiste .menu-side ul li:first-child,
-#mossburn .menu-side ul li:first-child,
-/*design*/
-#mhbook .menu-side ul li:first-child,
-#nzbirds .menu-side ul li:first-child,
-#letters .menu-side ul li:first-child,
-#print-portfolio .menu-side ul li:first-child,
-/*interactive*/
-/*mixed media*/ 
-#misunderstood .menu-side ul li:first-child,
-#rigs .menu-side ul li:first-child,
-#prefab .menu-side ul li:first-child,
-#proteus .menu-side ul li:first-child,
-#kansas .menu-side ul li:first-child,
-#weather .menu-side ul li:first-child {
-	display: block;
-	width:100%;
-}
-
-/*photography*/
-#manhome .menu-side ul li:nth-child(2),
-#truckers .menu-side ul li:nth-child(3),
-#mncooks .menu-side ul li:nth-child(4),
-#submarine .menu-side ul li:nth-child(5),
-#soap .menu-side ul li:nth-child(6),
-#optimiste .menu-side ul li:nth-child(7),
-#mossburn .menu-side ul li:nth-child(8), 
-
-/*design*/
-#mhbook .menu-side ul li:nth-child(2),
-#nzbirds .menu-side ul li:nth-child(3),
-#letters .menu-side ul li:nth-child(4),
-#print-portfolio .menu-side ul li:nth-child(5),
-/*#school .menu-side ul li:nth-child(6),*/
-
-/*interactive*/
-
-/*mixed media*/
-#misunderstood .menu-side ul li:nth-child(2),
-#rigs .menu-side ul li:nth-child(3),
-#prefab .menu-side ul li:nth-child(4),
-#proteus .menu-side ul li:nth-child(5),
-#kansas .menu-side ul li:nth-child(6),
-#weather .menu-side ul li:nth-child(7) {
-	display: block;
-	width:100%;
-}
+	/*mixed media*/
+	#misunderstood .menu-side ul li:nth-child(2),
+	#rigs .menu-side ul li:nth-child(3),
+	#prefab .menu-side ul li:nth-child(4),
+	#proteus .menu-side ul li:nth-child(5),
+	#kansas .menu-side ul li:nth-child(6),
+	#weather .menu-side ul li:nth-child(7) {
+		display: block;
+		width:100%;
+	}
 
 
 
-.big {
-	display:none;
-}
-.statement-title {
+	.big {
+		display:none;
+	}
+	.statement-title {
 		width:100%;
 		margin:1em 0 1em 0;
-}
+	}
 
-// #nzbirds .statement-body { margin-top: 3em; }
+	#nzbirds .statement-body { margin-top: 3em; }
 
-.statement-body {
-	min-width:100%;
-	max-width:19em;
-	width:100%;
-	padding:0;
-	margin:0;
-	text-indent: 0;
-	letter-spacing: 0.05em;
+	.statement-body {
+		min-width: 100%;
+		max-width: 19em;
+		width:100%;
+		padding:0;
+		margin:0;
+		text-indent: 0;
+		letter-spacing: 0.05em;
 
-}
+	}
 
-.big-img-container {
+	.big-img-container {
+			display:none;
+	}
+
+
+	.big-img-container {
 		display:none;
-}
+	}
+	button {
+		text-align: right;
+	}
+	.thumbnav-container {
+		max-width:100%;
+		max-height:100%;
+		width:100%;
+		float:left;
+		/*margin:0 auto;*/
+		display:block;
+	}
+	.item {
+		width:100%;
+	}
+	.item img {
+		max-width:100%;
+
+		height:auto;
+
+	}
+	.item p {
+		display:none;
+	}
 
 
-.big-img-container {
-	display:none;
-}
-button {
-	text-align: right;
-}
-.thumbnav-container {
-	max-width:100%;
-	max-height:100%;
-	width:100%;
-	float:left;
-	/*margin:0 auto;*/
-	display:block;
-}
-.item {
-	width:100%;
-}
-.item img {
-	/*min-width:100%;*/
-	max-width:100%;
+	/*.........ABOUT PAGE .......................................*/
 
-	height:auto;
+	.about-col-1 {
+		text-align:left;
+		margin:0;
+		padding:0 2% 0 0;
+		width:100%;
+		margin:0 auto;
+		min-width:250px;
+		max-width:40em;
+	}
+	.about-col-1 p {
+		  	padding: 0.5em 0 1em 0;
+	}
 
-}
-.item p {
-	display:none;
-}
+	.cv {
+		margin:auto;
 
+	}
 
+	.cv button {
+		padding:3%;
+		margin:auto;
+		font-size: 0.7em;
+		letter-spacing: 0.12em;
 
-/* ---------------------------------------------------
------about pages -------------------------------------------*/
+	}
+	.about-col-2, .clients-r, .clients-l, .awards {
+		display:none;
 
-.about-col-1 {
-	text-align:left;
-	margin:0;
-	padding:0 2% 0 0;
-	width:100%;
-	margin:0 auto;
-	min-width:250px;
-	max-width:40em;
-}
-.about-col-1 p {
-	  	padding: 0.5em 0 1em 0;
-}
-
-.cv {
-	margin:auto;
-
-}
-
-.cv button {
-	padding:3%;
-	margin:auto;
-	font-size: 0.7em;
-	letter-spacing: 0.12em;
-
-}
-.about-col-2, .clients-r, .clients-l, .awards {
-	display:none;
-
-}
+	}
 
 
-.commercial-site {
-	margin:1.5em 0 1.5em 0;
-}
-/*----contact page------------------------------------------------*/
+	.commercial-site {
+		margin:1.5em 0 1.5em 0;
+	}
 
-div .contact-info {
-	width: 75%;
-	margin:0;
-	/*float: left;*/
-}
-div .message-body {
-	width: 100%; 
-	float:left;
-	clear:both; 
-}
-div .contact-img {
-	display: none;
-	width:49%;
-	height:auto;
-	float:right;
-	clear:both;
-}
+	/*.........CONTACT PAGE .......................................*/
 
-legend { margin:0; }
+	div .contact-info {
+		width: 75%;
+		margin:0;
+		/*float: left;*/
+	}
+	div .message-body {
+		width: 100%; 
+		float:left;
+		clear:both; 
+	}
+	div .contact-img {
+		display: none;
+		width:49%;
+		height:auto;
+		float:right;
+		clear:both;
+	}
 
-input[type="text"], 
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="search"],
-input[type="number"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-textarea {
-	width:100%;
-	max-width:40em;
-}
-input[type="submit"] {width:50%;}
-/*------------------------------------------------------------------
-----footer----------------------------------------------------------
-*/
-.footer {
-	order:4;
-	align-self:flex-end;
-	color: #aba7a7;
-	max-width:1125px;
-	width:100%;
-	height:10em;
-	border-top: 1px solid #aba7a7;
-	text-align:left;
-	zoom:1; I.E hack 	
-	font-size:0.8em;
-}
+	legend { margin:0; }
 
-.column {
-	width:50%;
-}
+	input[type="text"], 
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="search"],
+	input[type="number"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	textarea {
+		width:100%;
+		max-width:40em;
+	}
+	input[type="submit"] {width:50%;}
 
-.footer ul li {
-	margin:0;
-	font-size:0.9em;
+	/*.........FOOTER .......................................*/
 
-}
-.footer-col-1 ul li a, .footer-col-2 ul li a  {
-	display: block;
-    padding:4% 0;
-}
+	.footer {
+		order:4;
+		align-self:flex-end;
+		color: #aba7a7;
+		max-width:1125px;
+		width:100%;
+		height:10em;
+		border-top: 1px solid #aba7a7;
+		text-align:left;
+		zoom:1; I.E hack 	
+		font-size:0.8em;
+	}
 
+	.column {
+		width:50%;
+	}
 
-}    /*close media query*/
+	.footer ul li {
+		margin:0;
+		font-size:0.9em;
 
-
-
-
-
-
+	}
+	.footer-col-1 ul li a, .footer-col-2 ul li a  {
+		display: block;
+	    padding:4% 0;
+	}
+}   
 
 
 
@@ -592,424 +557,362 @@ input[type="submit"] {width:50%;}
 
 @media only screen and (min-width: 921px ) and (max-width:1280px) {
 
-.wrapper  {
-	display:flex;
-	flex-direction:column;
-	max-width:850px;
-	min-width:305px;
-	margin:0 auto;
-	min-height: 100vh;
-}
+	.wrapper  {
+		display:flex;
+		flex-direction:column;
+		max-width:850px;
+		min-width:305px;
+		margin:0 auto;
+		min-height: 100vh;
+	}
 
 
-.header {
-	order:1;
-	width:100%;
-	min-width:300px;
-	margin-top: 1em;
-}
+	.header {
+		order:1;
+		width:100%;
+		min-width:300px;
+		margin-top: 1em;
+	}
 
-.logo img {
-	border:none;
-	width:50%;
+	.logo img {
+		border:none;
+		width:50%;
+		
+
+	}
+
+	nav.menu-top {
+		display:block;
+		order:2;
+		flex-grow:1;
+		font-size:0.8em;
+		text-align:left;
+		border-top: 1px solid #aba7a7;
+
+	}
+		
+	nav {
+		order:2;
+		flex-grow:1
+	}
+
+	nav ul {
+		font-size:0.9em;
+		width:100%;
+		margin:0 auto;
+	}
+
+	section.main-content {
+		order:3;
+		flex-grow:1;
+		margin-top: 1em;
+		margin-bottom:1em;
+		width:100%;
+		overflow:auto;
+	}
+
+	#contact.main-content {
+		margin-top:0.28em;
+		margin-bottom:1em;
+	}
+
+	.project-row-img, .front-row-img {
+	    max-width: 33.3%;
+	}
+
+	/*........PORTFOLIO TITLES....................................*/
+
+	#interactive .page-location, #mixedmedia .page-location, 
+	#photography .page-location, #design .page-location, 
+	#portfolio-template .page-location, #project-template .page-location, 
+	#exhibitions .page-location, #contact .page-location, #about .page-location,
+	#blog .page-location {
+		display:none;
+	}
+	#interactive .page-location p, #mixedmedia .page-location p, 
+	#photography .page-location p, #design .page-location p, 
+	#portfolio-template .page-location p, #project-template .page-location p, 
+	#exhibitions .page-location p,
+	#about .page-location p, #blog.page-location p {
+		display:none;
+		margin-bottom:0;
+	}		
+
+	.project-row .front-row {
+		padding-top:0;
+	}
+
+	/*.........PROJECT PAGES .......................................*/
+
+	.menu-side {
+		display:block;
+		width:25%;
+	}
+
+
+	#manhome .menu-side ul li:first-child, 
+	#truckers .menu-side ul li:first-child,
+	#mncooks .menu-side ul li:first-child,
+	#submarine .menu-side ul li:first-child,
+	#soap .menu-side ul li:first-child,
+	#optimiste .menu-side ul li:first-child,
+	#mossburn .menu-side ul li:first-child,
+	/*design*/
+	#mhbook .menu-side ul li:first-child,
+	#nzbirds .menu-side ul li:first-child,
+	#letters .menu-side ul li:first-child,
+	#print-portfolio .menu-side ul li:first-child,
+	/*interactive*/
+	/*mixed media*/ 
+
+	#misunderstood .menu-side ul li:first-child,
+	#rigs .menu-side ul li:first-child,
+	#prefab .menu-side ul li:first-child,
+	#proteus .menu-side ul li:first-child,
+	#kansas .menu-side ul li:first-child,
+	#weather .menu-side ul li:first-child {
+		display:none;
+	}
+
+	#carousel {
+		display:block;
+		width:75%;
+		margin-left:20%;
+		height:100%;
+		position:relative;
+		overflow: auto;
+
+	}
+	.big {
+		width:100%;
+		height:600px;
+		display:block;
+		z-index:1;
+
+	}
+	.big-img-container {
+		width:100%;
+		height:600px;
+		margin-left:0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top-left;	
+
+	}
+	.image-info {
+		height:40px; 
+		width:60%;
+		margin-left:0;
+		text-align:left;
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 0.7em;
+		display: block;
+		visibility: hidden;
+		color: #aba7a7;
+
+	}
+	.image-info p {
+		padding:0;
+		margin:0;
+		display: inline-block;
+		padding:10px;
+		color: #aba7a7;
+	}
+	.image-info p:first-child{
+		padding-left:0;
+	}
+	.carousel-nav {
+		height:40px; 
+		width:40%;
+		background-color: #fff;
+		text-align:left;
+		float:left;
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 1em;
+		color:#aba7a7;
+		visibility: hidden;
+
+	}
+	.carousel-nav.button {
+		border-radius:0; 
+		padding:10px;
+		visibility: hidden;
+
+	}
+	.thumbs {
+		display:block;
+		width:100%;
+		height:600px;
+		position:absolute;
+		left:0;
+		top:0;
+		z-index:2;
+		clear:both;
+
+	}
+	.thumbs-container {
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		align-items:flex-start;
+		width:100%;
+		overflow: hidden;
+
+
+	}
+	.item {
+		display:inline;
+		width:20%;
+		height:auto;
+		float:left;
+		order: 1;
+		align-self: flex-start;
+		
+
+	}
+	.item img {
+		width:100%;
+		height:auto;
+		display:block;
+		opacity:0.9;
+	}
+	.item img:hover{
+		opacity:1;
+
+	}
+	.item p {display:none;}
+
+
+	.statement-body{
+		width: 100%;
+
+	}
+	#nzbirds .statement-body { margin-top: 3em; }
+
+	.statement-title {
+		position:relative;
+		width:100%;
+		margin:1em 0;
+		float:right;
+		font-size: 1em;
+		text-indent:0;
+
+	}
+
+	/*.........ABOUT PAGE .......................................*/
+
+
+	
+	/*.........CONTACT PAGE.......................................*/
+
+	#contact .page-location,
+	#contact .page-location p,
+	{
+		display:none;
+	}
+
+	#contact .contact-img {
+		display:block;
+		width:45%;
+		float:left;
+		margin-left:5%;
+
+	}
+	#contact .contact-info{
+		width:45%;
+		margin:1.3em auto 1em auto;
+		overflow:auto;
+	}
+
+	div .message-body {
+		width: 40%; 
+		float:right;
+	}
+
+	div .contact-img {
+		display: block;
+		width:45%;
+		margin: 33px 0 0 0;
+		height:auto;
+		float:left;
+		
+	}
+
+	input[type="text"], 
+	input[type="password"],
+	input[type="email"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="search"],
+	input[type="number"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="submit"],
+	textarea {
+		width:100%;
+		max-width:50em;
+		
+	}
+	input[type="submit"] {
+		display:block;
+		width: 50%;
+		max-width:30em;
 	
 
-}
-
-nav.menu-top {
-	display:block;
-	order:2;
-	flex-grow:1;
-	font-size:0.8em;
-	text-align:left;
-	border-top: 1px solid #aba7a7;
-
-}
+	}
+	label {
+		font-size: 1em;
+		display: inline-block;
+		
+	}
 	
-nav {
-	order:2;
-	flex-grow:1
-}
+	/*------------------------------------------------------------------
+	----footer---------------------------------------------------------*/
 
-nav ul {
-	font-size:0.9em;
-	width:100%;
-	margin:0 auto;
-	/*text-align:center;*/
+	.footer {
+		order:4;
+		align-self:flex-end;
+		color: #aba7a7;
+		max-width:1125px;
+		width:100%;
+		height:10em;
+		border-top: 1px solid #aba7a7;
+		text-align:left;
+		zoom:1; /*I.E hack*/ 	
+		font-size:0.8em;
+	}
 
-}
+	.column {
+		width:25%;
+	}
 
-section.main-content {
-	order:3;
-	flex-grow:1;
-	margin-top: 1em;
-	margin-bottom:1em;
-	width:100%;
-	overflow:auto;
-}
+	.footer ul li {
+		margin:0;
+		font-size:0.9em;
 
-#contact.main-content {
-	margin-top:0.28em;
-	margin-bottom:1em;
-}
+	}
+	.footer-col-1 ul li a, .footer-col-2 ul li a  {
+		display: block;
+	    padding:5% 0;
+	}
 
-.project-row-img, .front-row-img {
-    max-width: 33.3%;
-}
+	.footer-col-3 img {
+		padding:7%;
+		
+	}
 
-/*........PORTFOLIO TITLES....................................*/
-
-#interactive .page-location, #mixedmedia .page-location, 
-#photography .page-location, #design .page-location, 
-#portfolio-template .page-location, #project-template .page-location, 
-#exhibitions .page-location, #contact .page-location, #about .page-location,
-#blog .page-location {
-	display:none;
-}
-#interactive .page-location p, #mixedmedia .page-location p, 
-#photography .page-location p, #design .page-location p, 
-#portfolio-template .page-location p, #project-template .page-location p, 
-#exhibitions .page-location p,
-#about .page-location p, #blog.page-location p {
-	display:none;
-	margin-bottom:0;
-}		
-
-.project-row .front-row {
-	padding-top:0;
-}
-/*.project-row-img, .front-row-img  {
-		margin-bottom:3%;
-			
-}*/
-
-
-
-/*------------------------------------------------------------------
------ project pages -----------------------------------------------*/
-.menu-side {
-	display:block;
-	width:25%;
-}
-
-
-#manhome .menu-side ul li:first-child, 
-#truckers .menu-side ul li:first-child,
-#mncooks .menu-side ul li:first-child,
-#submarine .menu-side ul li:first-child,
-#soap .menu-side ul li:first-child,
-#optimiste .menu-side ul li:first-child,
-#mossburn .menu-side ul li:first-child,
-/*design*/
-#mhbook .menu-side ul li:first-child,
-#nzbirds .menu-side ul li:first-child,
-#letters .menu-side ul li:first-child,
-#print-portfolio .menu-side ul li:first-child,
-/*interactive*/
-/*mixed media*/ 
-
-#misunderstood .menu-side ul li:first-child,
-#rigs .menu-side ul li:first-child,
-#prefab .menu-side ul li:first-child,
-#proteus .menu-side ul li:first-child,
-#kansas .menu-side ul li:first-child,
-#weather .menu-side ul li:first-child {
-	display:none;
-}
-
-#carousel {
-	display:block;
-	width:75%;
-	margin-left:20%;
-	height:100%;
-	position:relative;
-	overflow: auto;
-
-}
-.big {
-	width:100%;
-	height:600px;
-	display:block;
-	z-index:1;
-
-}
-.big-img-container {
-	width:100%;
-	height:600px;
-	margin-left:0;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: top-left;	
-
-}
-.image-info {
-	height:40px; 
-	width:60%;
-	margin-left:0;
-	text-align:left;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 0.7em;
-	color:#aba7a7;
-}
-.image-info p {
-	padding:0;
-	margin:0;
-	display: inline-block;
-	padding:10px;
-	color: #aba7a7;
-}
-.image-info p:first-child{
-	padding-left:0;
-}
-.carousel-nav {
-	visibility: hidden;
-	height:40px; 
-	width:40%;
-	background-color: #fff;
-	text-align:left;
-	float:left;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 1em;
-	color:#aba7a7;
-
-}
-.carousel-nav.button {
-	border-radius:0; 
-	padding:10px;
-
-
-}
-.thumbs {
-	display:block;
-	width:100%;
-	height:600px;
-	position:absolute;
-	left:0;
-	top:0;
-	z-index:2;
-	clear:both;
-
-}
-.thumbs-container {
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	align-items:flex-start;
-	width:100%;
-	overflow: hidden;
-
-
-}
-.item {
-	display:inline;
-	width:20%;
-	height:auto;
-	float:left;
-	order: 1;
-	align-self: flex-start;
-	
-
-}
-.item img {
-	width:100%;
-	height:auto;
-	display:block;
-	/*float:left;
-*/	opacity:0.9;
-}
-.item img:hover{
-	opacity:1;
-
-}
-.item p {display:none;}
-
-
-.statement-body{
-	width:100%;
-
-}
-// #nzbirds .statement-body { margin-top: 3em; }
-
-.statement-title {
-	position:relative;
-	width:100%;
-	margin:1em 0;
-	float:right;
-	font-size: 1em;
-	text-indent:0;
-
-}
-
-
-
-
-/* ---------------------------------------------------
------about pages -------------------------------------------
-}
-.about-col-1 {
-	margin:0 auto;
-	padding:0 2% 0 0;
-	min-width:250px;
-	max-width:40em;
-	float:none;
-}
-/*.cv {
-	margin:auto;
-
-}
-
-/*.cv button {
-padding:3%;
-margin:5% auto;
-font-size: 0.7em;
-letter-spacing: 0.12em;
-
-}
-/*.about-col-2, .clients-r, .clients-l, .awards {
-	display:none;
-
-}*/
-
-
-/*.commercial-site {
-	margin:1.5em 0 1.5em 0;
-}*/
-
-
-
-/*.........CONTACT PAGE.......................................*/
-
-#contact .page-location,
-#contact .page-location p,
-{
-	display:none;
-}
-
-#contact .contact-img {
-	display:block;
-	width:45%;
-	float:left;
-	margin-left:5%;
-
-}
-#contact .contact-info{
-	width:45%;
-	margin:1.3em auto 1em auto;
-	overflow:auto;
-}
-
-/*div .contact-info {
-	width: 40%;
-	float:right;
-	clear:right;
-	margin:25px 0 0 0;
-}*/
-/*legend:nth-of-type(1) {
-	display:none;
-}*/
-
-div .message-body {
-	width: 40%; 
-	float:right;
-	/*clear:right;*/
-}
-
-div .contact-img {
-	display: block;
-	width:45%;
-	margin: 33px 0 0 0;
-	height:auto;
-	float:left;
-	
-}
-
-/*legend {
- margin:0;
-	 
-}*/
-
-
-input[type="text"], 
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="search"],
-input[type="number"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="submit"],
-textarea {
-	width:100%;
-	max-width:50em;
-	
-}
-input[type="submit"] {
-	display:block;
-	width: 50%;
-	max-width:30em;
-/*	float:left;*/
-
-}
-label {
-	font-size: 1em;
-	display: inline-block;
-	/*float:left;
-	clear:right;*/
-}
-/*.contact input[type="submit"] {
-	display:block;
-	margin-top: 0.5em;
-	width:100%;
-	max-width:30em;
-}
-*//*------------------------------------------------------------------
-----footer---------------------------------------------------------*/
-
-.footer {
-	order:4;
-	align-self:flex-end;
-	color: #aba7a7;
-	max-width:1125px;
-	width:100%;
-	height:10em;
-	border-top: 1px solid #aba7a7;
-	text-align:left;
-	zoom:1; /*I.E hack*/ 	
-	font-size:0.8em;
-}
-
-.column {
-	width:25%;
-}
-
-.footer ul li {
-	margin:0;
-	font-size:0.9em;
-
-}
-.footer-col-1 ul li a, .footer-col-2 ul li a  {
-	display: block;
-    padding:5% 0;
-}
-
-.footer-col-3 img {
-	padding:7%;
-	
-}
-
-.footer-col-4 {
-	padding-top:2%;
-	text-align:center;
-	font-size:0.7em;
-	
-}
-} /*close medium large query*/
+	.footer-col-4 {
+		padding-top:2%;
+		text-align:center;
+		font-size:0.7em;
+		
+	}
+} 
 
 
 
@@ -1024,381 +927,295 @@ label {
 
 @media only screen and (min-width:1280px) {
 
-.wrapper  {
-	display:flex;
-	flex-direction:column;
-	max-width:1280px;
-	min-width:305px;
-	margin:0 auto;
-	min-height: 100vh;
-}
+	.wrapper  {
+		display:flex;
+		flex-direction:column;
+		max-width:1280px;
+		min-width:305px;
+		margin:0 auto;
+		min-height: 100vh;
+	}
 
-.header {
-	order:1;
-	width:100%;
-	min-width:300px;
-	margin-top: 1em;
+	.header {
+		order:1;
+		width:100%;
+		min-width:300px;
+		margin-top: 1em;
 
-}
- .logo {
- 	width:25%;
- 	margin-top:0;
- 	/*overflow:auto;*/
- }
-.logo img {
-	border-bottom:none;
-	margin: 0 auto;
-    padding-bottom: 1%;
-	width: 100%;
-	float:left;
-}
-.menu-top {
-	width:75%;
-	float:left;
-	max-width: 1280;
-    margin:0 auto;
-    text-align: left;
-    border-top: 1px solid #aba7a7;
-}
+	}
+	 .logo {
+	 	width:25%;
+	 	margin-top:0;
+	 	/*overflow:auto;*/
+	 }
+	.logo img {
+		border-bottom:none;
+		margin: 0 auto;
+	    padding-bottom: 1%;
+		width: 100%;
+		float:left;
+	}
+	.menu-top {
+		width:75%;
+		float:left;
+		max-width: 1280;
+	    margin:0 auto;
+	    text-align: left;
+	    border-top: 1px solid #aba7a7;
+	}
 
-nav .main-menu{
-	width:75%;
-	font-size: 0.7em;
-	margin-right:0;
-	
-}
-nav ul li{
-	text-align:right;
-	
-}
-
-.main-content{
-	display: block;
-	order:2;
-	margin: 1em 0 ;
-
-}
-
-
-#home .page-location {
-	display:none;
-}
-
-#interactive .page-location, #mixedmedia .page-location, 
-#photography .page-location, #design .page-location, 
-#portfolio-template .page-location, #project-template .page-location, 
-#exhibitions .page-location {
-	display:none;
-
-
-}
-#interactive .page-location p, #mixedmedia .page-location p, 
-#photography .page-location p, #design .page-location p, 
-#portfolio-template .page-location p, #project-template .page-location p, 
-#exhibitions .page-location p {
-	display:none;
-
-}
-
-.project-row-img, 
-.front-row-img {
-	width:33.3%;
-}
-
-
-/*-----------Project pages-----------------*/
-
-.menu-side{
-	margin
-}
-.menu-side ul li:first-child {
-	display:none;
-}
-#carousel {
-	display:block;
-	width:75%;
-	margin-right:0;
-	margin-left:25%;
-	height:100%;
-	position:relative;
-	overflow: auto;
-
-}
-.big {
-	width:100%;
-	height:600px;
-	display:block;
-/*	position:absolute;
-	top:0;
-	left:0;*/
-	z-index:1;
-
-}
-.big-img-container {
-	width:100%;
-	height:600px;
-	margin-left:0;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: top-left;
-	/*background-image:url("../images/horiz.png");*/ /*default image */
-	/*border:1px solid red;*/
-
-}
-.image-info { 
-	height: 40px;
-    width: 60%;
-	display: block; 
-	visibility: hidden;
-}
-
-.image-info p {
-	padding:0;
-	margin:0;
-	display:inline-block;
-	padding:10px;
-	color: #aba7a7;
-	font-size:0.8em;
-}
-.image-info p:first-child{
-	padding-left:0;
-}
-.carousel-nav {
-	visibility: hidden;
-	height:40px; 
-	width:40%;
-	background-color: #fff;
-	text-align:left;
-	float:left;
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 1em;
-	color:#aba7a7;
-
-}
-
-.thumbs {
-	display:block;
-	width:100%;
-	height:700px;
-	position:absolute;
-	left:0;
-	top:0;
-	z-index:2;
-	clear:both;
-
-}
-.thumbs-container {
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	align-items:flex-start;
-	width:100%;
-	overflow: hidden;
-
-
-}
-.item {
-	display:inline;
-	width:15%;
-	height:auto;
-	float:left;
-	order: 1;
-	align-self: flex-start;
-	
-
-}
-.item img {
-	width:100%;
-	height:auto;
-	display:block;
-	/*float:left;
-*/	opacity:0.9;
-}
-.item img:hover{
-	opacity:1;
-
-}
-.item p {display:none;}
-
-
-.statement-body{
-	width:100%;
-
-}
-// #nzbirds .statement-body { margin-top: 3em; }
-
-.statement-title {
-	position:relative;
-	width:100%;
-	margin:1em 0;
-	float:right;
-	font-size: 1em;
-	text-indent:0;
-
-}
-
-/*------about--------------------------------------------------*/
-.about-left-col {
-	 -webkit-column-count: auto; /* Chrome, Safari, Opera */
-    -moz-column-count: auto; /* Firefox */
-    column-count: auto;
-
-    -webkit-column-gap: 30; /* Chrome, Safari, Opera */
-    -moz-column-gap: 30px; /* Firefox */
-    column-gap: 30px;
-	width:30em;
-	margin:0 auto;
-
-	
-}
-
-/*--------contact----------------------------------*/
-.contact-info {
-	width:45%;
-	margin:0 0 0 10%;
-	float:left;
-	border-right:1px solid #aba7a7;
-}
-
-.contact-img {
-	display:block;
-	width:45%; 
-	margin:0;
-	float: left;
-
-}
-input[type="submit"] {
-	width:30%;
-}
-
-/*---------------------------footer----------------------------*/
-.footer {
-	order:3;
-	padding:0;
-	max-width:100%;
-	margin:1em 0 2em 0;
-	border-top:1px solid #aba7a7;
-	
-}
-.column {
-	width:25%;
-	margin-top: 0.5em;
-}
-.footer ul li {
-	margin:0;
-	font-size:0.9em;
-
-}
-.footer-col-3 li {
-	border:none;
-}
-.footer-col-3 ul li {
-	padding:0;
-	
-}
-.footer-col-3 img {
-	padding:12%;
-
-}
-.footer-col-1 ul li a, 
-.footer-col-2 ul li a  {
-	display: block;
-    padding:2% 0 1.5% 0;
-}
-
-.footer-col-4 {
-	text-align:center;
-	font-size:0.7em;
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-} /*end large media query*/
-
-/*----------------------------------------------------------
--------------DROPDOWN MENU --------------------------------
-
-/*.....this hides the nested <ul's> .....
-		/*nav ul ul {
-		display: none;
+	nav .main-menu{
+		width:75%;
+		font-size: 0.7em;
+		margin-right:0;
 		
-			}
-/*.....this makes sure only the first child <ul> is selected under a 
-specific li in the main level..... 
-		/*nav ul li:hover > ul {
-			display: block;
-			}
-/*.....general styling..... */
-		/*nav ul {
-			z-index: 1;
-			width:100%;
-			max-width:1125px;
-			text-align:center;
-			margin:auto;
-			text-align:left;
-			padding: 0;  
-			list-style: none;
-			position: relative;
-			display: inline-table; /*...note table display!.. */ 
+	}
+	nav ul li{
+		text-align:right;
+		
+	}
 
-	/*			}
-		nav ul:after {
-			content: ""; clear: both; display: block;
-			}
-		nav ul li {
-			float: left;
-			padding: 0;
-			border: 1px solid #fff;
+	.main-content{
+		display: block;
+		order:2;
+		margin: 1em 0 ;
+
+	}
 
 
-			}*/
-/*..... main list item background hover color..... */
-		/*nav ul li:hover {
-			background: #fff;
-			 
-			
-			}*/
-/*..... main list item link text hover color.....*/
-		/*nav ul li:hover a {
-				color: #099949; 
-				}*/
-/*..... main list item link text cover */
-		/*nav ul li a {
-			padding: 0.2em;
-			font-size: 1.3em;
-			letter-spacing: 0.04em;
-			display: block; 
-			padding: 10px 20px;
-			color: #aba7a7; 
-			text-decoration: none;
-			}*/
-			
-/*.....background color for drop down menu <ul> */
-		/*nav ul ul {
-			background: #fff;
-		 	padding: 0;
-			position: absolute; 
-			top: 100%;
-			}
-		nav ul ul li {
-			float: none; 
-			position: relative;
+	#home .page-location {
+		display:none;
+	}
 
-			}
-		nav ul ul li a {
-			padding: 15px 30px;
-			color: #820064;
-			}	
-			nav ul ul li a:hover {
-			background: #fff;
-			}*/
-}
+	#interactive .page-location, #mixedmedia .page-location, 
+	#photography .page-location, #design .page-location, 
+	#portfolio-template .page-location, #project-template .page-location, 
+	#exhibitions .page-location {
+		display:none;
+
+
+	}
+	#interactive .page-location p, #mixedmedia .page-location p, 
+	#photography .page-location p, #design .page-location p, 
+	#portfolio-template .page-location p, #project-template .page-location p, 
+	#exhibitions .page-location p {
+		display:none;
+
+	}
+
+	.project-row-img, 
+	.front-row-img {
+		width:33.3%;
+	}
+
+
+	/*-----------Project pages-----------------*/
+
+	.menu-side{
+		margin
+	}
+	.menu-side ul li:first-child {
+		display:none;
+	}
+	#carousel {
+		display:block;
+		width:75%;
+		margin-right:0;
+		margin-left:25%;
+		height:100%;
+		position:relative;
+		overflow: auto;
+
+	}
+	.big {
+		width:100%;
+		height:600px;
+		display:block;
+	/*	position:absolute;
+		top:0;
+		left:0;*/
+		z-index:1;
+
+	}
+	.big-img-container {
+		width:100%;
+		height:600px;
+		margin-left:0;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top-left;
+		/*background-image:url("../images/horiz.png");*/ /*default image */
+		/*border:1px solid red;*/
+
+	}
+	.image-info { 
+		height: 40px;
+	    width: 60%;
+		display: block; 
+		visibility: hidden;
+	}
+
+	.image-info p {
+		padding:0;
+		margin:0;
+		display:inline-block;
+		padding:10px;
+		color: #aba7a7;
+		font-size:0.8em;
+	}
+	.image-info p:first-child{
+		padding-left:0;
+	}
+	.carousel-nav {
+		visibility: hidden;
+		height:40px; 
+		width:40%;
+		background-color: #fff;
+		text-align:left;
+		float:left;
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 1em;
+		color:#aba7a7;
+
+	}
+	.carousel-nav.button {
+		visibility: hidden;
+	}
+
+	.thumbs {
+		display:block;
+		width:100%;
+		height:700px;
+		position:absolute;
+		left:0;
+		top:0;
+		z-index:2;
+		clear:both;
+
+	}
+	.thumbs-container {
+		display:flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		align-items:flex-start;
+		width:100%;
+		overflow: hidden;
+
+
+	}
+	.item {
+		display:inline;
+		width:15%;
+		height:auto;
+		float:left;
+		order: 1;
+		align-self: flex-start;
+		
+
+	}
+	.item img {
+		width:100%;
+		height:auto;
+		display:block;
+		/*float:left;
+	*/	opacity:0.9;
+	}
+	.item img:hover{
+		opacity:1;
+
+	}
+	.item p {display:none;}
+
+
+	.statement-body{
+		width:75%;
+
+	}
+	#nzbirds .statement-body { margin-top: 3em; }
+
+	.statement-title {
+		position:relative;
+		width:100%;
+		margin:1em 0;
+		float:right;
+		font-size: 1em;
+		text-indent:0;
+
+	}
+
+	/*------about--------------------------------------------------*/
+	.about-left-col {
+		 -webkit-column-count: auto; /* Chrome, Safari, Opera */
+	    -moz-column-count: auto; /* Firefox */
+	    column-count: auto;
+
+	    -webkit-column-gap: 30; /* Chrome, Safari, Opera */
+	    -moz-column-gap: 30px; /* Firefox */
+	    column-gap: 30px;
+		width:30em;
+		margin:0 auto;
+
+		
+	}
+
+	/*--------contact----------------------------------*/
+	.contact-info {
+		/*visibility: hidden;*/
+		width:45%;
+		margin:0 0 0 10%;
+		float:left;
+		/*border-right:1px solid #aba7a7;*/
+	}
+
+	.contact-img {
+		display:block;
+		width:45%; 
+		margin:0;
+		float: left;
+
+	}
+	input[type="submit"] {
+		width:30%;
+	}
+
+	/*---------------------------footer----------------------------*/
+	.footer {
+		order:3;
+		padding:0;
+		max-width:100%;
+		margin:1em 0 2em 0;
+		border-top:1px solid #aba7a7;
+		
+	}
+	.column {
+		width:25%;
+		margin-top: 0.5em;
+	}
+	.footer ul li {
+		margin:0;
+		font-size:0.9em;
+
+	}
+	.footer-col-3 li {
+		border:none;
+	}
+	.footer-col-3 ul li {
+		padding:0;
+		
+	}
+	.footer-col-3 img {
+		padding:12%;
+
+	}
+	.footer-col-1 ul li a, 
+	.footer-col-2 ul li a  {
+		display: block;
+	    padding:2% 0 1.5% 0;
+	}
+
+	.footer-col-4 {
+		text-align:center;
+		font-size:0.7em;
+		
+	}
+} 

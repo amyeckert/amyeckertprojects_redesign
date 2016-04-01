@@ -9,7 +9,10 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content=" width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/global.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/queries.css" > 
+	<link rel="stylesheet" type="text/css" href="../css/queries.css"/>
+	<!-- Slick carousel -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+ 
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -36,61 +39,58 @@
 <!--.............................................................
 	..............MAIN MENU...................................................-->
 		<nav class="menu-top"> 
-
 			<ul class="main-menu">
 				<li class="navphoto "><a href="photography.html" >PHOTOGRAPHY</a>
-					<!-- <ul>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
+					<ul>
+						<li><a href="#">Manufacturing Home</a></li>
+						<li><a href="#">Truckers</a></li>
+						<li><a href="#">Minnesota Cooks</a></li>
+						<li><a href="#">Submarine</a></li>
+						<li><a href="#">Soap</a></li>
+						<li><a href="#">Je Suis Optimiste</a></li>
+						<li><a href="#">Mossburn</a></li>
+						<li><a href="#">Commercial</a></li>
 					
-					</ul> -->
+					</ul>
 				</li>
 
 				<li class="navdesign"><a href="design.html">DESIGN</a>
-					<!-- <ul>
+					<ul>
 						<li><a href="#">project 1</a></li>
 						<li><a href="#">project 2</a></li>
 						<li><a href="#">project 3</a></li>
 						<li><a href="#">project 4</a></li>
 						<li><a href="#">project 5</a></li>
-					</ul> -->
+					</ul>
 				</li>
 
 				<li class="navinter"><a href="interactive.html">INTERACTIVE</a>
-					<!-- <ul>
+					<ul>
 						<li><a href="#">project 1</a></li>
 						<li><a href="#">project 2</a></li>
 						<li><a href="#">project 3</a></li>
 						<li><a href="#">project 4</a></li>
 						<li><a href="#">project 5</a></li>
-					</ul> -->
+					</ul>
 				</li>
 
 				<li class="navmixed"><a href="mixedmedia.html">MIXED MEDIA</a>
-					<!-- <ul>
+					<ul>
 						<li><a href="#">project 1</a></li>
 						<li><a href="#">project 2</a></li>
 						<li><a href="#">project 3</a></li>
 						<li><a href="#">project 4</a></li>
 						<li><a href="#">project 5</a></li>
-					</ul> -->
+					</ul>
 
 				</li>
-	
 			
 				<li class="navabout"><a href="about.html">ABOUT</a></li>
 				<!-- <li class="navblog"><a href="blog.html">BLOG</a></li> -->
 				<li class="navcontact"><a href="contact.html">CONTACT</a></li>		
 			</ul> 
-
-	</nav><!-- close main-menu -->
-</div><!--close header -->
+		</nav><!-- close main-menu -->
+	</div><!--close header -->
 
 
 <!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
@@ -115,7 +115,7 @@
 
 		<div class="big">
 
-			<div class="big-img-container">
+			<div class="big-img-container"  id="bigImg">
 			</div>
 
 			<div class="image-info" id="imgInfo">
@@ -126,10 +126,10 @@
 			</div>
 
 			<div class="carousel-nav" id="cNav">	
-				<button class="thumbs-only button">thumbnails</button>
-				<button class="previous button">&lt;</button>
-				<button class="next button">&gt;</button>
-			</div>
+			<button class="thumbs-only" id="showThumbs">thumbnails</button>
+			<button class="previous button" id="prevImg">&lt;</button>
+			<button class="next button" id="nextImg">&gt;</button>
+		</div>
 		
 		</div> <!--close big-->
 
@@ -138,7 +138,7 @@
 			<div class="thumbs-container">
 
 
-				<div class="item"> 
+				<div class="item fade"> 
 					<img src="../images/mixed-media/weather/weather_02.jpg" alt="Untitled" title="Untitled">
 					<p class="title">Untitled 4</p>
 					<p class="date">2011</p> 
@@ -147,7 +147,7 @@
 					<!-- <p class="client"></p> -->
 				</div>
 
-				<div class="item"> 
+				<div class="item fade"> 
 					<img src="../images/mixed-media/weather/weather_09.jpg" alt="Untitled" title="Untitled">
 					<p class="title">Untitled 63</p>
 					<p class="date">2011</p> 
@@ -283,18 +283,19 @@
 
 
 
-	<!-- Include jQuery first -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<!-- then JQuery UI -->
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>	
+<!-- Include jQuery first -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
-<!-- <script src="js/../imagesloaded.pkgd.min.js"></script>
- -->
-<!-- <script src="js/isotope.pkgd.js"></script> -->
+<!-- then JQuery UI -->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>	
 
-<!-- <script type="js/packery.pkgd.js"></script>  -->
-
+<!-- thumb nav custom -->
 <script src="../js/thumb-nav.js"></script> 
+
+<!-- Slick carousel -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
 
 </body>
 </html>
