@@ -199,6 +199,23 @@ grey #aba7a7;
 	div .contact-img img {
 		display: none;
 	}
+	.temp-contact_page {
+	display: block;	
+	margin: 30px auto;
+	width: 100%;
+
+	}
+	.temp-contact_page p {
+		padding: 8% 0 8% 0;
+		text-indent: 6px;
+	}
+ 	.temp-contact_page p:last-child {
+ 		display:none;
+ 	}
+	.temp-contact_page:hover {
+		    background-color: #4866fb;	    
+	}
+
 
 
 	/*......... FOOTER.......................................*/
@@ -481,6 +498,22 @@ grey #aba7a7;
 		margin:0;
 		/*float: left;*/
 	}
+	.temp-contact_page {
+	display: block;	
+	margin: 30px auto;
+	width: 100%;
+
+	}
+	.temp-contact_page p {
+		padding: 4% 0 1.5% 0;
+		text-indent: 6px;
+	}
+
+	.temp-contact_page:hover {
+		    background-color: #4866fb;	    
+	}
+
+
 	div .message-body {
 		width: 100%; 
 		float:left;
@@ -824,6 +857,22 @@ grey #aba7a7;
 		overflow:auto;
 	}
 
+	.temp-contact_page {
+	display: block;
+	margin-top: 200px;
+	width: 100%;
+	
+
+	}
+	.temp-contact_page p {
+		padding: 2% 0 1.5% 0;
+		text-indent: 4px;
+	}
+
+	.temp-contact_page:hover {
+		    background-color: #4866fb;    
+	}
+
 	div .message-body {
 		width: 40%; 
 		float:right;
@@ -1160,11 +1209,11 @@ grey #aba7a7;
 
 	/*--------contact----------------------------------*/
 	.contact-info {
-		/*visibility: hidden;*/
+		
 		width:45%;
 		margin:0 0 0 10%;
 		float:left;
-		/*border-right:1px solid #aba7a7;*/
+		
 	}
 
 	.contact-img {

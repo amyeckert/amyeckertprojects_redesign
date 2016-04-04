@@ -190,7 +190,7 @@ a:active {
 
 }
 
-/*.........SHOE PAGE LOCATION .......................................*/
+/*.........SHOW PAGE LOCATION .......................................*/
 
 
 section.main-content {
@@ -482,6 +482,28 @@ a.button:hover {
 }
 
 /*.............CONTACT PAGE ..........................................*/
+
+
+#contact form {
+	display:none;
+}
+
+.temp-contact_page {
+	display: block;
+	margin-top: 200px;
+	width: 70%;
+	
+
+}
+.temp-contact_page p {
+	padding: 2% 0 1.5% 0;
+	text-indent: 4px;
+}
+
+.temp-contact_page:hover {
+	background-color: #4866fb;    
+	    
+}
 
 div .message-body {
 
