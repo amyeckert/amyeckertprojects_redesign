@@ -310,6 +310,11 @@ section.main-content {
 
 
 /*......... PROJECT PAGES.......................................*/
+
+/*.big-img-container {
+	display: block;
+}*/
+
 .menu-side {
 	min-width:16%;
 	font-size:0.8em;
