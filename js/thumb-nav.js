@@ -2,6 +2,17 @@
 
     $(document).ready(function() {
 
+        // init Masonry
+        var $grid = $('.grid').masonry({
+          itemSelector: '.grid-item',
+          percentPosition: true,
+          columnWidth: '.grid-sizer'
+        });
+        // layout Isotope after each image loads
+        $grid.imagesLoaded().progress( function() {
+          $grid.masonry();
+        });
+
     // ******** HELP ANDRE! SOMETHING IS NOT WORKING WITH THIS MEDIA QUERY PART 
 
     //  Disable this for MOBILE  max-width: 340px
@@ -85,7 +96,7 @@
             });
 
                 /*-------------------------------------------------------------------------------------------------
-                            pick a thumbnail  */
+                        picks a thumbnail / hides thumbnail grid */
 
             $('.item').on('click', function(e) {
                 e.preventDefault();
@@ -117,7 +128,7 @@
                 console.log(chosen_thumb, bigImg);
             }); 
                 /*-------------------------------------------------------------------------------------------------
-                            hide all thumbnails */
+                            hides big image/ shows thumbs grid */
             $('.thumbs-only').on('click', function() {
 
                 var bigImg = document.getElementById('bigImg');
@@ -126,6 +137,7 @@
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
                 var carouselNav = document.querySelector('div.carousel-nav');
+                var thumbsContainer = document.querySelector('grid');
 
                 bigImg.style.visibility = 'hidden';
                 showThumbs.style.display = 'block';
@@ -133,6 +145,7 @@
                 carouselNav.style.visibility = 'hidden';
                 prevImg.style.visibility = 'hidden';
                 nextImg.style.visibility = 'hidden';
+                thumbsContainer.style.margin = '-30em, 0,0,0';
             });
      //     }
      //     else if (mq.matches == "(min-width: 921px ) and (max-width:1280px)") {
