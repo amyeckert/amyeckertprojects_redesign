@@ -313,6 +313,10 @@ section.main-content {
 
 /*.big-img-container {
 	display: block;
+}
+.big {
+	display:block;
+	visibility: visible;
 }*/
 
 .menu-side {
