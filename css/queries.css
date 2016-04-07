@@ -1274,16 +1274,17 @@ grey #aba7a7;
 		
 
 	}*/
-	.item img {
-		width:100%;
+	/*.item img {
+		width: 100%;
 		height:auto;
 		display:block;
-		opacity:0.9;
-	}
-	.item img:hover{
+		opacity:0.6;
+	
+	}*/
+	/*.item img:hover{
 		opacity:1;
 
-	}
+	}*/
 	.item p {display:none;}
 
 

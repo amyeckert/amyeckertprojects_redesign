@@ -22,6 +22,7 @@ html {
   box-sizing: inherit;
 }
 
+* { box-sizing: border-box; }
 .clear {  	
 	clear:both;
 	margin:0;
@@ -413,21 +414,46 @@ section.main-content {
 }
 .grid {
 	margin-top: -30em;
-	/*position: absolute;*/
-
 }
+
 .grid-sizer,
 .grid-item {
   width: 20%;
 }
 .grid-item {
 	float:left;
-
 }
 
 .grid-item img {
-  display: block;
-  max-width: 100%;
+  	width: 100%;
+	height:auto;
+	display:block;
+	opacity:1;
+}
+.grid-item img:hover{
+		opacity:0.8;
+
+}
+
+#photography .grid,
+#design .grid,
+#interactive .grid,
+#mixedmedia .grid {
+	margin-top: 0;
+}
+
+#photography .grid-sizer,
+#design .grid-sizer,
+#interactive .grid-sizer,
+#mixedmedia .grid-sizer {
+	width: 33.335%;
+}
+
+#photography .grid-item img,
+#design .grid-item img,
+#interactive .grid-item img,
+#mixedmedia .grid-item img  {
+	max-width: 100%;
 }
 /*.........ABOUT PAGE .......................................*/
 
