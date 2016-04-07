@@ -241,10 +241,11 @@ section.main-content {
 }
 
 #home .page-location p {
-	display:block;
+	display:none;
 	padding:0 0 0 3%;
 	color:#fff;
 }
+
 
 #contact .page-location, 
 #contact .page-location p {
@@ -413,7 +414,7 @@ section.main-content {
   clear: both;
 }
 .grid {
-	margin-top: -30em;
+	/*margin-top: -30em;*/
 }
 
 .grid-sizer,
@@ -434,7 +435,9 @@ section.main-content {
 		opacity:0.8;
 
 }
-
+.grid-item p {
+	display:none;
+}
 #photography .grid,
 #design .grid,
 #interactive .grid,
@@ -799,7 +802,7 @@ input[type="submit"]:hover {
 	padding-top:1%;
 	}
 
-.footer-col-4{
+.footer-col-4 {
 	font-size: 0.8em;
 	width: 25%;
 	padding-bottom: 3.2em; 
