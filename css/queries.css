@@ -56,7 +56,7 @@ grey #aba7a7;
 	 }
 
 	.page-location {
-		display:none;
+		display:block;
 		
 	}
 
@@ -121,17 +121,99 @@ grey #aba7a7;
 
 
 	/*.........PROJECT PAGES .......................................*/
+	.menu-side ul li {
+    display: none;
+    width: 100%;
+	}
 
-	.menu-side, .big {
-			display:none;
+	#manhome .menu-side ul li:first-child, 
+	#truckers .menu-side ul li:first-child,
+	#mncooks .menu-side ul li:first-child,
+	#submarine .menu-side ul li:first-child,
+	#soap .menu-side ul li:first-child,
+	#optimiste .menu-side ul li:first-child,
+	#mossburn .menu-side ul li:first-child,
+
+	/*design*/
+	#mhbook .menu-side ul li:first-child,
+	#nzbirds .menu-side ul li:first-child,
+	#letters .menu-side ul li:first-child,
+	#print-portfolio .menu-side ul li:first-child,
+
+	/*interactive*/
+
+	/*mixed media*/ 
+	#misunderstood .menu-side ul li:first-child,
+	#rigs .menu-side ul li:first-child,
+	#prefab .menu-side ul li:first-child,
+	#proteus .menu-side ul li:first-child,
+	#kansas .menu-side ul li:first-child,
+	#weather .menu-side ul li:first-child {
+		display: block;
+		width:100%;
+	}
+
+	/*photography*/
+	#manhome .menu-side ul li:nth-child(2),
+	#truckers .menu-side ul li:nth-child(3),
+	#mncooks .menu-side ul li:nth-child(4),
+	#submarine .menu-side ul li:nth-child(5),
+	#soap .menu-side ul li:nth-child(6),
+	#optimiste .menu-side ul li:nth-child(7),
+	#mossburn .menu-side ul li:nth-child(8), 
+
+	/*design*/
+	#mhbook .menu-side ul li:nth-child(2),
+	#nzbirds .menu-side ul li:nth-child(3),
+	#letters .menu-side ul li:nth-child(4),
+	#print-portfolio .menu-side ul li:nth-child(5),
+	/*#school .menu-side ul li:nth-child(6),*/
+
+	/*interactive*/
+
+	/*mixed media*/
+	#misunderstood .menu-side ul li:nth-child(2),
+	#rigs .menu-side ul li:nth-child(3),
+	#prefab .menu-side ul li:nth-child(4),
+	#proteus .menu-side ul li:nth-child(5),
+	#kansas .menu-side ul li:nth-child(6),
+	#weather .menu-side ul li:nth-child(7) {
+		display: block;
+		width:100%;
+	}
+
+	.big {
+		width:100%;
+		height:auto;
+		display:block;
+		visibility: visible;
+		z-index:1;
+	}
+
+	.big-image-container {
+		display: block;
+	    visibility: visible;
+	    width: 100%;
+	    height: 26em;
+	    margin-left: 0;
+        margin-top: 3.5em;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	}
+	.carousel-nav {
+		display: none;
+		visibility: visible;
 
 	}
-		
-	.thumbnav-container {
-			display:block;
-			max-height:100%;
-			max-width:300px;
-			width:100%;
+	/*.thumbs {
+		margin-top: -1em;
+	}*/	
+	
+	/*.thumbnav-container {
+		display:block;
+		max-height:100%;
+		max-width:300px;
+		width:100%;
 			
 	}
 	.item {
@@ -144,7 +226,7 @@ grey #aba7a7;
 		width:100%;
 		height:auto;
 			
-	}
+	}*/
 	.item p {
 		display:none;
 	}
@@ -199,6 +281,23 @@ grey #aba7a7;
 	div .contact-img img {
 		display: none;
 	}
+	.temp-contact_page {
+	display: block;	
+	margin: 30px auto;
+	width: 100%;
+
+	}
+	.temp-contact_page p {
+		padding: 8% 0 8% 0;
+		text-indent: 6px;
+	}
+ 	.temp-contact_page p:last-child {
+ 		display:none;
+ 	}
+	.temp-contact_page:hover {
+		    background-color: #4866fb;	    
+	}
+
 
 
 	/*......... FOOTER.......................................*/
@@ -327,7 +426,7 @@ grey #aba7a7;
 		display:none;
 		width:100%;
 	}
-
+	 /*	 display the "back to... projects" <li> */
 	#manhome .menu-side ul li:first-child, 
 	#truckers .menu-side ul li:first-child,
 	#mncooks .menu-side ul li:first-child,
@@ -335,12 +434,15 @@ grey #aba7a7;
 	#soap .menu-side ul li:first-child,
 	#optimiste .menu-side ul li:first-child,
 	#mossburn .menu-side ul li:first-child,
+
 	/*design*/
 	#mhbook .menu-side ul li:first-child,
 	#nzbirds .menu-side ul li:first-child,
 	#letters .menu-side ul li:first-child,
 	#print-portfolio .menu-side ul li:first-child,
+
 	/*interactive*/
+
 	/*mixed media*/ 
 	#misunderstood .menu-side ul li:first-child,
 	#rigs .menu-side ul li:first-child,
@@ -352,6 +454,7 @@ grey #aba7a7;
 		width:100%;
 	}
 
+	/*	display the current project <li> */
 	/*photography*/
 	#manhome .menu-side ul li:nth-child(2),
 	#truckers .menu-side ul li:nth-child(3),
@@ -381,11 +484,8 @@ grey #aba7a7;
 		width:100%;
 	}
 
+	
 
-
-	.big {
-		display:none;
-	}
 	.statement-title {
 		width:100%;
 		margin:1em 0 1em 0;
@@ -403,35 +503,60 @@ grey #aba7a7;
 		letter-spacing: 0.05em;
 
 	}
-
-	.big-img-container {
-			display:none;
+	.big {
+		width:100%;
+		height:auto;
+		display:block;
+		visibility: visible;
+		z-index:1;
 	}
 
-
 	.big-img-container {
-		display:none;
+	    display: block;
+	    visibility: visible;
+	    width: 100%;
+	    height: 26em;
+	    margin-left: 0;
+        margin-top: 3.5em;
+	    background-size: contain;
+	    background-repeat: no-repeat;
 	}
+
+	.carousel-nav {
+		display: block;
+		visibility: visible;
+	}
+
 	button {
 		text-align: right;
 	}
-	.thumbnav-container {
+	/*.thumbnav-container {
 		max-width:100%;
 		max-height:100%;
 		width:100%;
 		float:left;
-		/*margin:0 auto;*/
 		display:block;
 	}
+
+	.thumbs-container {
+		margin-top: -31.5em;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items:flex-start;
+		align-content:flex-start;
+	}
+
 	.item {
-		width:100%;
+		width:50%;
+		/*flex-grow: 1;*/
 	}
 	.item img {
 		max-width:100%;
-
 		height:auto;
 
-	}
+	}*/
 	.item p {
 		display:none;
 	}
@@ -481,6 +606,22 @@ grey #aba7a7;
 		margin:0;
 		/*float: left;*/
 	}
+	.temp-contact_page {
+	display: block;	
+	margin: 30px auto;
+	width: 100%;
+
+	}
+	.temp-contact_page p {
+		padding: 4% 0 1.5% 0;
+		text-indent: 6px;
+	}
+
+	.temp-contact_page:hover {
+		    background-color: #4866fb;	    
+	}
+
+
 	div .message-body {
 		width: 100%; 
 		float:left;
@@ -687,16 +828,19 @@ grey #aba7a7;
 		width:100%;
 		height:600px;
 		display:block;
+		visibility: visible;
 		z-index:1;
 
 	}
 	.big-img-container {
+		display: block;
+		visibility: visible;
 		width:100%;
 		height:600px;
 		margin-left:0;
+		margin-top: 0;
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: top-left;	
 
 	}
 	.image-info {
@@ -739,7 +883,7 @@ grey #aba7a7;
 		visibility: hidden;
 
 	}
-	.thumbs {
+	/*.thumbs {
 		display:block;
 		width:100%;
 		height:600px;
@@ -751,21 +895,21 @@ grey #aba7a7;
 
 	}
 	.thumbs-container {
-		display:flex;
-		flex-direction:row;
-		flex-wrap:wrap;
-		align-items:flex-start;
 		width:100%;
+		display:flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
 		overflow: hidden;
 
 
 	}
 	.item {
-		display:inline;
+		/*display:flex
 		width:20%;
 		height:auto;
-		float:left;
-		order: 1;
+		flex-grow: 1
 		align-self: flex-start;
 		
 
@@ -775,7 +919,8 @@ grey #aba7a7;
 		height:auto;
 		display:block;
 		opacity:0.9;
-	}
+	}*/
+	
 	.item img:hover{
 		opacity:1;
 
@@ -822,6 +967,22 @@ grey #aba7a7;
 		width:45%;
 		margin:1.3em auto 1em auto;
 		overflow:auto;
+	}
+
+	.temp-contact_page {
+	display: block;
+	margin-top: 200px;
+	width: 100%;
+	
+
+	}
+	.temp-contact_page p {
+		padding: 2% 0 1.5% 0;
+		text-indent: 4px;
+	}
+
+	.temp-contact_page:hover {
+		    background-color: #4866fb;    
 	}
 
 	div .message-body {
@@ -1024,28 +1185,27 @@ grey #aba7a7;
 		margin-left:25%;
 		height:100%;
 		position:relative;
-		overflow: auto;
+		overflow: hidden;
 
 	}
 	.big {
 		width:100%;
 		height:600px;
 		display:block;
-	/*	position:absolute;
-		top:0;
-		left:0;*/
+		visibility: visible;
 		z-index:1;
 
 	}
 	.big-img-container {
-		width:100%;
-		height:600px;
+		display: block;
+		visibility: visible;
+		width: 100%;
+		height: 26em;
 		margin-left:0;
+		margin-top: 0;
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: top-left;
-		/*background-image:url("../images/horiz.png");*/ /*default image */
-		/*border:1px solid red;*/
 
 	}
 	.image-info { 
@@ -1082,7 +1242,7 @@ grey #aba7a7;
 		visibility: hidden;
 	}
 
-	.thumbs {
+/*	.thumbs {
 		display:block;
 		width:100%;
 		height:700px;
@@ -1091,13 +1251,14 @@ grey #aba7a7;
 		top:0;
 		z-index:2;
 		clear:both;
+		overflow: hidden;
 
 	}
 	.thumbs-container {
 		display:flex;
-		flex-direction:row;
-		flex-wrap:wrap;
-		align-items:flex-start;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
 		width:100%;
 		overflow: hidden;
 
@@ -1112,13 +1273,12 @@ grey #aba7a7;
 		align-self: flex-start;
 		
 
-	}
+	}*/
 	.item img {
 		width:100%;
 		height:auto;
 		display:block;
-		/*float:left;
-	*/	opacity:0.9;
+		opacity:0.9;
 	}
 	.item img:hover{
 		opacity:1;
@@ -1160,11 +1320,11 @@ grey #aba7a7;
 
 	/*--------contact----------------------------------*/
 	.contact-info {
-		/*visibility: hidden;*/
+		
 		width:45%;
 		margin:0 0 0 10%;
 		float:left;
-		/*border-right:1px solid #aba7a7;*/
+		
 	}
 
 	.contact-img {

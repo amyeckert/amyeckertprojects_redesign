@@ -190,7 +190,7 @@ a:active {
 
 }
 
-/*.........SHOE PAGE LOCATION .......................................*/
+/*.........SHOW PAGE LOCATION .......................................*/
 
 
 section.main-content {
@@ -310,6 +310,9 @@ section.main-content {
 
 
 /*......... PROJECT PAGES.......................................*/
+
+
+
 .menu-side {
 	min-width:16%;
 	font-size:0.8em;
@@ -401,7 +404,31 @@ section.main-content {
 	color:#099949;
 	border-bottom:1px solid #099949;
 } 
+/* ............MASONRY AND IMAGES LOADED STYLES...............*/
 
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid {
+	margin-top: -30em;
+	/*position: absolute;*/
+
+}
+.grid-sizer,
+.grid-item {
+  width: 20%;
+}
+.grid-item {
+	float:left;
+
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
 /*.........ABOUT PAGE .......................................*/
 
 .about-left-col {
@@ -482,6 +509,28 @@ a.button:hover {
 }
 
 /*.............CONTACT PAGE ..........................................*/
+
+
+#contact form {
+	display:none;
+}
+
+.temp-contact_page {
+	display: block;
+	margin-top: 200px;
+	width: 70%;
+	
+
+}
+.temp-contact_page p {
+	padding: 2% 0 1.5% 0;
+	text-indent: 4px;
+}
+
+.temp-contact_page:hover {
+	background-color: #4866fb;    
+	    
+}
 
 div .message-body {
 
