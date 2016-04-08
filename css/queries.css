@@ -39,7 +39,7 @@ grey #aba7a7;
 	}
 		
 	nav .main-menu {
-		display:none;
+		display:inline-block;
 	}
 	.main-content {
 		display:block;
@@ -85,8 +85,13 @@ grey #aba7a7;
 			}
 
 	/*........POERTFOLIO TITLE VISIBILITY .......*/
+	#home .page-location p {
+		display: none;
+	} 
+	#home .grid-sizer {
+		width:100%;
 
-
+	}
 	.statement-title {
 		margin:0.3em 0 1em 0;
 		width:100%;
@@ -205,28 +210,6 @@ grey #aba7a7;
 		visibility: visible;
 
 	}
-	/*.thumbs {
-		margin-top: -1em;
-	}*/	
-	
-	/*.thumbnav-container {
-		display:block;
-		max-height:100%;
-		max-width:300px;
-		width:100%;
-			
-	}
-	.item {
-		width:100%;
-	}
-
-
-	.item img {
-		display:block;
-		width:100%;
-		height:auto;
-			
-	}*/
 	.item p {
 		display:none;
 	}
@@ -244,15 +227,16 @@ grey #aba7a7;
 	/*.........ABOUT PAGE .......................................*/
 
 	.about-left-col {
-		width:90%;
+		width:100%;
 		overflow:hidden;
 		min-width:6em;
-		margin:0;
+		margin: 0;
+		padding: 0;
 
 	}
 
 	#about .about-left-col p {
-	    padding: 1em 0 0.5em 0;
+	   font-size:1.2em;
 	}
 	.about-left-col p:first-of-type {
 		margin-top:0;
@@ -356,10 +340,10 @@ grey #aba7a7;
 	}
 	.header{
 		width:100%; 
-		border-bottom:1px solid #aba7a7;
+		/*border-bottom:1px solid #aba7a7;*/
 	}
 	div.logo {
-		width:60%;
+		width:100%;
 		max-width:900px;
 		height:auto;
 		margin:0;
@@ -370,9 +354,45 @@ grey #aba7a7;
 		display:block;
 	}
 	  
-	.menu-top, .main-menu {
+	#photography .menu-top,
+	#design .menu-top,
+	#interactive .menu-top,
+	#mixedmedia .menu-top, 
+	#about .menu-top, 
+	#contact .menu-top, 
+	#manhome .menu-top, 
+	#truckers .menu-top,
+	#mncooks .menu-top,
+	#submarine .menu-top,
+	#soap .menu-top,
+	#optimiste .menu-top,
+	#mossburn .menu-top,
+
+	/*design*/
+	#mhbook .menu-top,
+	#nzbirds .menu-top,
+	#letters .menu-top,
+	#print-portfolio .menu-top,
+
+	/*interactive*/
+
+	/*mixed media*/ 
+	#misunderstood .menu-top,
+	#rigs .menu-top,
+	#prefab .menu-top,
+	#proteus .menu-top,
+	#kansas .menu-top,
+	#weather .menu-top {
 		display: none;
-			
+	}
+
+
+
+	nav ul li {
+		float: none;
+	}
+	nav ul li a {
+		font-size: 1.5em;
 	}
 
 	section.main-content {
@@ -380,15 +400,9 @@ grey #aba7a7;
 		overflow: auto;
 	}
 
-	.page-location {
-		display:block;	
-	}
-	.page-location p {
-		display:block;
-		
-	}
+	
 	#contact .page-location, #contact .page-location p {
-		display:none;
+		display: none;
 
 	}
 		
@@ -410,18 +424,21 @@ grey #aba7a7;
 		margin:0;
 		padding:0;
 	}
-	.project-row .front-row {
-		padding-top:0;
-		margin:0 auto;
+	.project-row, .front-row {
+		/*margin-top:10px;*/
+		margin: 2em auto 1.5em auto;
 	}
+
 	.project-row-img, .front-row-img  {
+		max-width:80%;
 		min-width:50%;
-		width:100%;	
-		
+		margin: 0 auto;
+		/*width:100%;	*/
+		float: none;
 	}
 
 	/*.........PROJECT PAGES.......................................*/
-	
+
 	.menu-side ul li {
 		display:none;
 		width:100%;
@@ -484,8 +501,6 @@ grey #aba7a7;
 		width:100%;
 	}
 
-	
-
 	.statement-title {
 		width:100%;
 		margin:1em 0 1em 0;
@@ -530,7 +545,7 @@ grey #aba7a7;
 	button {
 		text-align: right;
 	}
-	/*.thumbnav-container {
+	.thumbnav-container {
 		max-width:100%;
 		max-height:100%;
 		width:100%;
@@ -538,31 +553,36 @@ grey #aba7a7;
 		display:block;
 	}
 
+
+	.grid-sizer {
+
+	}
 	.thumbs-container {
 		margin-top: -31.5em;
-		display: flex;
+		height:auto;
+		/*display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		align-items:flex-start;
-		align-content:flex-start;
+		align-content:flex-start;*/
 	}
 
 	.item {
 		width:50%;
-		/*flex-grow: 1;*/
+		
 	}
 	.item img {
 		max-width:100%;
 		height:auto;
 
-	}*/
+	}
 	.item p {
 		display:none;
 	}
 
 
-	/*.........ABOUT PAGE .......................................*/
+	/*.........ABOUT PAGE .......................................
 
 	.about-col-1 {
 		text-align:left;
@@ -604,7 +624,7 @@ grey #aba7a7;
 	div .contact-info {
 		width: 75%;
 		margin:0;
-		/*float: left;*/
+		
 	}
 	.temp-contact_page {
 	display: block;	
@@ -666,14 +686,23 @@ grey #aba7a7;
 		max-width:1125px;
 		width:100%;
 		height:10em;
+		margin-top: 10px;
 		border-top: 1px solid #aba7a7;
 		text-align:left;
-		zoom:1; I.E hack 	
+		zoom:1; 	
 		font-size:0.8em;
 	}
 
 	.column {
 		width:50%;
+		height: auto;
+	}
+
+	.footer-col-4{
+		padding-top: 1.2em;
+	}
+	.footer-col-4 p {
+		font-size: 1.2em;
 	}
 
 	.footer ul li {
@@ -694,9 +723,9 @@ grey #aba7a7;
 
 /*--------------------------------------------------------------------------
 -----------MEDIUM-LARGE-------------------------------------------------------
-----------------------------------------------------------------------*/
+----------------------------------------------------------------------
 
-@media only screen and (min-width: 921px ) and (max-width:1280px) {
+/*@media only screen and (min-width: 921px ) and (max-width:1280px) {
 
 	.wrapper  {
 		display:flex;
@@ -759,11 +788,11 @@ grey #aba7a7;
 
 	.project-row-img, .front-row-img {
 	    max-width: 33.3%;
-	}
+	}*/
 
 	/*........PORTFOLIO TITLES....................................*/
 
-	#interactive .page-location, #mixedmedia .page-location, 
+	/*#interactive .page-location, #mixedmedia .page-location, 
 	#photography .page-location, #design .page-location, 
 	#portfolio-template .page-location, #project-template .page-location, 
 	#exhibitions .page-location, #contact .page-location, #about .page-location,
@@ -781,11 +810,11 @@ grey #aba7a7;
 
 	.project-row .front-row {
 		padding-top:0;
-	}
+	}*/
 
 	/*.........PROJECT PAGES .......................................*/
 
-	.menu-side {
+/*	.menu-side {
 		display:block;
 		width:25%;
 	}
@@ -799,22 +828,22 @@ grey #aba7a7;
 	#optimiste .menu-side ul li:first-child,
 	#mossburn .menu-side ul li:first-child,
 	/*design*/
-	#mhbook .menu-side ul li:first-child,
+	/*#mhbook .menu-side ul li:first-child,
 	#nzbirds .menu-side ul li:first-child,
 	#letters .menu-side ul li:first-child,
-	#print-portfolio .menu-side ul li:first-child,
+	#print-portfolio .menu-side ul li:first-child,*/
 	/*interactive*/
 	/*mixed media*/ 
 
-	#misunderstood .menu-side ul li:first-child,
+/*	#misunderstood .menu-side ul li:first-child,
 	#rigs .menu-side ul li:first-child,
 	#prefab .menu-side ul li:first-child,
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
 		display:none;
-	}
-
+	}*/
+/*
 	#carousel {
 		display:block;
 		width:75%;
@@ -823,8 +852,8 @@ grey #aba7a7;
 		position:relative;
 		overflow: auto;
 
-	}
-	.big {
+	}*/
+	/*.big {
 		width:100%;
 		height:600px;
 		display:block;
@@ -882,7 +911,7 @@ grey #aba7a7;
 		padding:10px;
 		visibility: hidden;
 
-	}
+	}*/
 	/*.thumbs {
 		display:block;
 		width:100%;
@@ -921,14 +950,14 @@ grey #aba7a7;
 		opacity:0.9;
 	}*/
 	
-	.item img:hover{
+	/*.item img:hover{
 		opacity:1;
 
 	}
 	.item p {display:none;}
 
-
-	.statement-body{
+*/
+	/*.statement-body{
 		width: 100%;
 
 	}
@@ -943,13 +972,13 @@ grey #aba7a7;
 		text-indent:0;
 
 	}
-
+*/
 	/*.........ABOUT PAGE .......................................*/
 
 
 	
 	/*.........CONTACT PAGE.......................................*/
-
+/*
 	#contact .page-location,
 	#contact .page-location p,
 	{
@@ -1030,12 +1059,12 @@ grey #aba7a7;
 		font-size: 1em;
 		display: inline-block;
 		
-	}
+	}*/
 	
 	/*------------------------------------------------------------------
 	----footer---------------------------------------------------------*/
 
-	.footer {
+	/*.footer {
 		order:4;
 		align-self:flex-end;
 		color: #aba7a7;
@@ -1044,7 +1073,7 @@ grey #aba7a7;
 		height:10em;
 		border-top: 1px solid #aba7a7;
 		text-align:left;
-		zoom:1; /*I.E hack*/ 	
+		zoom:1;	
 		font-size:0.8em;
 	}
 
@@ -1073,7 +1102,7 @@ grey #aba7a7;
 		font-size:0.7em;
 		
 	}
-} 
+} */
 
 
 
@@ -1085,297 +1114,3 @@ grey #aba7a7;
 /*--------------------------------------------------------------------------
 -----------MEDIUM-LARGE and above-------------------------------------------------------
 ----------------------------------------------------------------------*/
-
-@media only screen and (min-width:1280px) {
-
-	.wrapper  {
-		display:flex;
-		flex-direction:column;
-		max-width:1280px;
-		min-width:305px;
-		margin:0 auto;
-		min-height: 100vh;
-	}
-
-	.header {
-		order:1;
-		width:100%;
-		min-width:300px;
-		margin-top: 1em;
-
-	}
-	 .logo {
-	 	width:25%;
-	 	margin-top:0;
-	 	/*overflow:auto;*/
-	 }
-	.logo img {
-		border-bottom:none;
-		margin: 0 auto;
-	    padding-bottom: 1%;
-		width: 100%;
-		float:left;
-	}
-	.menu-top {
-		width:75%;
-		float:left;
-		max-width: 1280;
-	    margin:0 auto;
-	    text-align: left;
-	    border-top: 1px solid #aba7a7;
-	}
-
-	nav .main-menu{
-		width:75%;
-		font-size: 0.7em;
-		margin-right:0;
-		
-	}
-	nav ul li{
-		text-align:right;
-		
-	}
-
-	.main-content{
-		display: block;
-		order:2;
-		margin: 1em 0 ;
-
-	}
-
-
-	#home .page-location {
-		display:none;
-	}
-
-	#interactive .page-location, #mixedmedia .page-location, 
-	#photography .page-location, #design .page-location, 
-	#portfolio-template .page-location, #project-template .page-location, 
-	#exhibitions .page-location {
-		display:none;
-
-
-	}
-	#interactive .page-location p, #mixedmedia .page-location p, 
-	#photography .page-location p, #design .page-location p, 
-	#portfolio-template .page-location p, #project-template .page-location p, 
-	#exhibitions .page-location p {
-		display:none;
-
-	}
-
-	.project-row-img, 
-	.front-row-img {
-		width:33.3%;
-	}
-
-
-	/*-----------Project pages-----------------*/
-
-	.menu-side{
-		margin
-	}
-	.menu-side ul li:first-child {
-		display:none;
-	}
-	#carousel {
-		display:block;
-		width:75%;
-		margin-right:0;
-		margin-left:25%;
-		height:100%;
-		position:relative;
-		overflow: hidden;
-
-	}
-	.big {
-		width:100%;
-		height:600px;
-		display:block;
-		visibility: visible;
-		z-index:1;
-
-	}
-	.big-img-container {
-		display: block;
-		visibility: visible;
-		width: 100%;
-		height: 26em;
-		margin-left:0;
-		margin-top: 0;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: top-left;
-
-	}
-	.image-info { 
-		height: 40px;
-	    width: 60%;
-		display: block; 
-		visibility: hidden;
-	}
-
-	.image-info p {
-		padding:0;
-		margin:0;
-		display:inline-block;
-		padding:10px;
-		color: #aba7a7;
-		font-size:0.8em;
-	}
-	.image-info p:first-child{
-		padding-left:0;
-	}
-	.carousel-nav {
-		visibility: hidden;
-		height:40px; 
-		width:40%;
-		background-color: #fff;
-		text-align:left;
-		float:left;
-		font-family: 'Josefin Sans', sans-serif;
-		font-size: 1em;
-		color:#aba7a7;
-
-	}
-	.carousel-nav.button {
-		visibility: hidden;
-	}
-
-/*	.thumbs {
-		display:block;
-		width:100%;
-		height:700px;
-		position:absolute;
-		left:0;
-		top:0;
-		z-index:2;
-		clear:both;
-		overflow: hidden;
-
-	}
-	.thumbs-container {
-		display:flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		width:100%;
-		overflow: hidden;
-
-
-	}
-	.item {
-		display:inline;
-		width:15%;
-		height:auto;
-		float:left;
-		order: 1;
-		align-self: flex-start;
-		
-
-	}*/
-	.item img {
-		width:100%;
-		height:auto;
-		display:block;
-		opacity:0.9;
-	}
-	.item img:hover{
-		opacity:1;
-
-	}
-	.item p {display:none;}
-
-
-	.statement-body{
-		width:75%;
-
-	}
-	#nzbirds .statement-body { margin-top: 3em; }
-
-	.statement-title {
-		position:relative;
-		width:100%;
-		margin:1em 0;
-		float:right;
-		font-size: 1em;
-		text-indent:0;
-
-	}
-
-	/*------about--------------------------------------------------*/
-	.about-left-col {
-		 -webkit-column-count: auto; /* Chrome, Safari, Opera */
-	    -moz-column-count: auto; /* Firefox */
-	    column-count: auto;
-
-	    -webkit-column-gap: 30; /* Chrome, Safari, Opera */
-	    -moz-column-gap: 30px; /* Firefox */
-	    column-gap: 30px;
-		width:30em;
-		margin:0 auto;
-
-		
-	}
-
-	/*--------contact----------------------------------*/
-	.contact-info {
-		
-		width:45%;
-		margin:0 0 0 10%;
-		float:left;
-		
-	}
-
-	.contact-img {
-		display:block;
-		width:45%; 
-		margin:0;
-		float: left;
-
-	}
-	input[type="submit"] {
-		width:30%;
-	}
-
-	/*---------------------------footer----------------------------*/
-	.footer {
-		order:3;
-		padding:0;
-		max-width:100%;
-		margin:1em 0 2em 0;
-		border-top:1px solid #aba7a7;
-		
-	}
-	.column {
-		width:25%;
-		margin-top: 0.5em;
-	}
-	.footer ul li {
-		margin:0;
-		font-size:0.9em;
-
-	}
-	.footer-col-3 li {
-		border:none;
-	}
-	.footer-col-3 ul li {
-		padding:0;
-		
-	}
-	.footer-col-3 img {
-		padding:12%;
-
-	}
-	.footer-col-1 ul li a, 
-	.footer-col-2 ul li a  {
-		display: block;
-	    padding:2% 0 1.5% 0;
-	}
-
-	.footer-col-4 {
-		text-align:center;
-		font-size:0.7em;
-		
-	}
-} 

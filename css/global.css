@@ -22,6 +22,7 @@ html {
   box-sizing: inherit;
 }
 
+* { box-sizing: border-box; }
 .clear {  	
 	clear:both;
 	margin:0;
@@ -240,10 +241,11 @@ section.main-content {
 }
 
 #home .page-location p {
-	display:block;
+	display:none;
 	padding:0 0 0 3%;
 	color:#fff;
 }
+
 
 #contact .page-location, 
 #contact .page-location p {
@@ -412,22 +414,49 @@ section.main-content {
   clear: both;
 }
 .grid {
-	margin-top: -30em;
-	/*position: absolute;*/
-
+	/*margin-top: -30em;*/
 }
+
 .grid-sizer,
 .grid-item {
   width: 20%;
 }
 .grid-item {
 	float:left;
-
 }
 
 .grid-item img {
-  display: block;
-  max-width: 100%;
+  	width: 100%;
+	height:auto;
+	display:block;
+	opacity:1;
+}
+.grid-item img:hover{
+		opacity:0.8;
+
+}
+.grid-item p {
+	display:none;
+}
+#photography .grid,
+#design .grid,
+#interactive .grid,
+#mixedmedia .grid {
+	margin-top: 0;
+}
+
+#photography .grid-sizer,
+#design .grid-sizer,
+#interactive .grid-sizer,
+#mixedmedia .grid-sizer {
+	width: 33.335%;
+}
+
+#photography .grid-item img,
+#design .grid-item img,
+#interactive .grid-item img,
+#mixedmedia .grid-item img  {
+	max-width: 100%;
 }
 /*.........ABOUT PAGE .......................................*/
 
@@ -773,7 +802,7 @@ input[type="submit"]:hover {
 	padding-top:1%;
 	}
 
-.footer-col-4{
+.footer-col-4 {
 	font-size: 0.8em;
 	width: 25%;
 	padding-bottom: 3.2em; 
