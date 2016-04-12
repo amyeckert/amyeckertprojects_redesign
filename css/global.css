@@ -73,7 +73,9 @@ button:hover {
 }
 
 /* .........HEADER .............................*/
-
+.header {
+	border-bottom:1px solid #aba7a7;
+}
 div .logo {
 
 	height:auto;
@@ -252,7 +254,7 @@ section.main-content {
 	display:none;
 }
  
-.project-row, 
+/*.project-row, 
 .front-row {
 	max-width:100%;
 	width:100%;
@@ -277,7 +279,7 @@ section.main-content {
 .front-row-img img {
 	max-width:100%;
 	display: block;
-}
+}*/
 
 /*.............PORTFOLIO TITLES ............................... */
 
