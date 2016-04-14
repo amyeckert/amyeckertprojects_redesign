@@ -136,13 +136,13 @@
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
-                var carouselNav = document.querySelector('div.carousel-nav');
+                var clNav = document.getElementById('cNav');
                 var thumbsContainer = document.querySelector('grid');
 
                 bigImg.style.visibility = 'hidden';
                 showThumbs.style.display = 'block';
                 imgInfo.style.visibility = 'hidden';
-                carouselNav.style.visibility = 'hidden';
+                cNav.style.visibility = 'hidden';
                 prevImg.style.visibility = 'hidden';
                 nextImg.style.visibility = 'hidden';
                 thumbsContainer.style.margin = '-30em, 0,0,0';
