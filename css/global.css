@@ -36,6 +36,11 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 	
 }
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
 
 ul {
 	margin:0;
@@ -73,6 +78,7 @@ button:hover {
 
 /* .........HEADER .............................*/
 .header {
+	order: 1;
 	border-bottom:1px solid #aba7a7;
 }
 div .logo {
@@ -196,8 +202,8 @@ a:active {
 
 
 section.main-content {
-	order:3;
-	flex-grow:1;
+	order:2;
+	/*flex-grow:1;*/
 	overflow: hidden;
 }
 
@@ -388,8 +394,8 @@ section.main-content {
 .statement-body p {
 	margin-top:1em;
 	line-height:1.3em;
-	text-decoration:none;
-	visibility: visible;
+	text-decoration: none;
+	visibility: hidden;
 }
 .statement-body p:nth-child(1) {
 	margin-top:0;
@@ -647,7 +653,7 @@ input[type="submit"]:hover {
 /*.............FOOTER....................................................*/
 
 .footer {
-	order:4;
+	order:3;
 	align-self:flex-end;
 	color: #aba7a7;
 	max-width:1125px;

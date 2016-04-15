@@ -43,12 +43,12 @@ grey #aba7a7;
 		display:inline-block;
 	}
 	.main-content {
-		display:block;
-		max-width:90%;
-		margin:1em auto 1em auto;
-		border:none;
-		padding-top:0;
-		overflow:auto;
+		/*position: relative;*/
+		right:0;
+		top: 0px;
+		margin:0 auto 1em auto;
+		width: 100%;
+		overflow-x: hidden;
 	}
 
 	#about p {
@@ -211,16 +211,14 @@ grey #aba7a7;
 	}
 	.carousel-nav {
 		display: block;
-		visibility: visible;
+		visibility: hidden;
 		margin: 15px auto;
 
 	}
 
-	.thumbs {
-		margin-top: -25em;
-	}
 	.grid {
 		width: 100%;
+		margin-top: -17em;
 
 	}
 	.grid-sizer {
@@ -434,10 +432,9 @@ grey #aba7a7;
 	section.main-content {
 		position: relative;
 		right:0;
-		top: 35px;
+		top: 0px;
 		margin:0 auto 1em auto;
 		width: 100%;
-		height: 100vh;
 		overflow-x: hidden;
 	}
 
@@ -446,7 +443,8 @@ grey #aba7a7;
 	#design .main-content,
 	#interactive .main-content,
 	#mixedmedia .main-content {
-
+		position: relative;
+		top: 0;
 	}
 	
 	#contact .page-location, 
@@ -489,44 +487,49 @@ grey #aba7a7;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
 
+
+	.project-row-img {
+		min-width: 30%;
+		max-width: 75%;
+
+	}
+
 	#photography .grid,
 	#design .grid,
 	#mixedmedia .grid,
 	#interactive .grid {
-		width: 100%;
-		position: absolute;
+		position: relative;
 		top: 0;
+		right: 0;
+		width: 100%;
+		height: auto;
+		/*background-color: red;*/
 		
 	}
 
 	#photography .grid-sizer, 
-	#photography .grid-item,
 	#design .grid-sizer,
-	#design .grid-item,
 	#interactive .grid-sizer,
-	#interactive .grid-item,
-	#mixedmedia .grid-sizer,
-	#mixedmedia .grid-item {
-		position: relative;
-		top: 0px;
+	#mixedmedia .grid-sizer {
+		
 		width: 50%;
 	}
 
-/*	#photography .grid-item img, 
-	#design .grid-item img,
-	#interactive .grid-item img, 
-	#mixedmedia .grid-item img {
-		max-width: 100%;
-		height:auto;
+	#photography .grid-item,
+	#design .grid-item,
+	#interactive .grid-item,
+	#mixedmedia .grid-item {
+		
+		width: 50%;
 
-	}*/
+	}
 
 	/*.........PROJECT PAGES.......................................*/
 
 	.menu-side {
 		position: absolute;
 		left: 0;
-		top: -6px;
+		top: 0.8em;
 	}
 	#exhibitions .menu-side {
 		display:none;
@@ -597,10 +600,12 @@ grey #aba7a7;
 
 	#carousel {
 		position: relative;
-		top: 106px;
-		right: -35px;
-		max-width: 80%;
-		margin-left:16%;
+		top: 0.8em;
+		right: -93px;
+		max-width: 85%;
+		/*order: 2;*/
+		/*height: 900px;*/
+		margin-left: 9%;
 	}
 
 	.statement-title {
@@ -628,7 +633,8 @@ grey #aba7a7;
 		visibility: visible;
 		z-index:1;
 		position: absolute;
-		top: ;
+		top: 0;
+		left: 50px;
 	
 	}
 
@@ -638,7 +644,6 @@ grey #aba7a7;
 	    width: 100%;
 	    height: 31.6em;
 	    margin-left: 20%;
-        // margin-top: 3.5em;
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	}
@@ -652,8 +657,8 @@ grey #aba7a7;
 	}
 	.grid {
 		width: 100%;
-		position: absolute;
-		top: 712px;
+		/*position: absolute;*/
+		top: 0px;
 		right: -20px;
 	
 	}
@@ -677,16 +682,17 @@ grey #aba7a7;
 		margin-top: -30.5em;
 	}
 
-	.thumbs {
+	/*.thumbs {
 		position: absolute;
-		/*right: -35px;*/
+		/*right: -35px;
 
-	}
-	.thumbs-container {
+
+	}*/
+	/*.thumbs-container {
 		margin-top: -40.9em;
 		height:auto;
 		overflow: auto;
-	}
+	}*/
 
 	/*.........ABOUT PAGE .......................................*/
 	.about-me {
@@ -757,29 +763,27 @@ grey #aba7a7;
 	/*.........FOOTER .......................................*/
 
 	.footer {
-		order:4;
-		align-self:flex-end;
+		
 		color: #aba7a7;
+		bottom: 0;
 		max-width:1125px;
 		width:100%;
-		height:10em;
 		margin-top: 10px;
 		border-top: 1px solid #aba7a7;
 		text-align:left;
-		zoom:1; 	
+		zoom: 1; 	
 		font-size:0.8em;
 	}
 
 	.column {
-		width:50%;
+		width: 50%;
 		height: auto;
 	}
 	.footer-col-3 img {
 		max-width: 24%;
 		min-width: 20%;
 		height: auto;
-	    padding: 3% 10% 3% 3%;
-	    
+	    padding: 3% 10% 3% 3%;   
     	
 	}
 
@@ -787,16 +791,17 @@ grey #aba7a7;
 		padding-top: 1.2em;
 		font-size: 1.3em;
 	}
-	// .footer-col-4 p {
-	// 	font-size: 1.2em;
-	// }
+	.footer-col-4 p {
+		font-size: 1.2em;
+	}
 
 	.footer ul li {
 		margin:0;
 		font-size: 1.6em;
 
 	}
-	.footer-col-1 ul li a, .footer-col-2 ul li a  {
+	.footer-col-1 ul li a, 
+	.footer-col-2 ul li a  {
 		display: block;
 	    padding:4% 0;
 	}
@@ -911,7 +916,7 @@ grey #aba7a7;
 	#design .grid,
 	#mixedmedia .grid,
 	#interactive {
-		margin-top: 9%;
+		/*margin-top: 9%;*/
 		width: 100%;
 	}
 
@@ -936,7 +941,10 @@ grey #aba7a7;
 		display:block;
 		width:25%;
 	}
-
+	#exhibitions .menu-side{
+		display: block;
+		visibility: hidden;
+	}
 
 	#manhome .menu-side ul li:first-child, 
 	#truckers .menu-side ul li:first-child,
