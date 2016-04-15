@@ -10,7 +10,7 @@ K #98983e;
 E #b56618;
 R #68b7d5;
 T #820064; 
-grey #aba7a7;
+grey #878787;
 
 /*----------------------------------------------------------------------
 ------- SMALL (MOBILE) ----------------------------------------
@@ -23,7 +23,7 @@ grey #aba7a7;
 		// width:90%;
 		max-width:90%;
 		margin:1em auto 0 auto;
-		border-bottom:1px solid #aba7a7;
+		border-bottom:1px solid #878787;
 	}
 
 	.logo {  
@@ -320,7 +320,7 @@ grey #aba7a7;
 		width:90%;
 		margin:60px auto 0 auto;
 		padding:0;
-		border-top:1px solid #aba7a7;
+		border-top:1px solid #878787;
 			
 	}
 
@@ -371,7 +371,7 @@ grey #aba7a7;
 	}
 	.header{
 		width:100%; 
-		border-bottom:1px solid #aba7a7;
+		border-bottom:1px solid #878787;
 	}
 	div.logo {
 		width:100%;
@@ -460,7 +460,7 @@ grey #aba7a7;
 		float: left;
 		position: relative; 
 		top: 30%;
-		color: #aba7a7;
+		color: #878787;
 		margin-bottom: 4%;
 		font-size:0.9em;
 
@@ -503,7 +503,6 @@ grey #aba7a7;
 		right: 0;
 		width: 100%;
 		height: auto;
-		/*background-color: red;*/
 		
 	}
 
@@ -603,35 +602,16 @@ grey #aba7a7;
 		top: 0.8em;
 		right: -93px;
 		max-width: 85%;
-		/*order: 2;*/
-		/*height: 900px;*/
+		height: 900px;
 		margin-left: 9%;
 	}
 
-	.statement-title {
-		width:100%;
-		margin:1em 0 1em 0;
-	}
-
-	#nzbirds .statement-body { margin-top: 3em; }
-
-	.statement-body p {
-		display: block;
-		min-width: 50%;
-		max-width: 80%;
-		width:100%;
-		padding-top: 8px;
-		margin:0;
-		text-indent: 10px;
-		letter-spacing: 0.05em;
-
-	}
 	.big {
 		width: 100%;
-		height: auto;
+		height: 750px;
 		display: block;
 		visibility: visible;
-		z-index:1;
+		z-index: 0;
 		position: absolute;
 		top: 0;
 		left: 50px;
@@ -642,11 +622,47 @@ grey #aba7a7;
 	    display: block;
 	    visibility: visible;
 	    width: 100%;
-	    height: 31.6em;
-	    margin-left: 20%;
+	    height: 600px;
+	    margin-left: 0;
+	    margin-top: 0;
 	    background-size: contain;
 	    background-repeat: no-repeat;
+	    /*display: block;
+	    visibility: visible;
+	    /*position: absolute;*/
+	    /*top: 0;
+	    left: 50px;
+	    width: 100%;
+	    height: 600px;
+	    margin-left: 20%;
+	    background-size: contain;
+	    background-repeat: no-repeat;*/
 	}
+
+	.statement-title {
+		width:100%;
+		margin:1em 0 1em 0;
+	}
+
+	#nzbirds .statement-body { margin-top: 3em; }
+
+	.statement-body {
+		display: block;
+		visibility: hidden;
+	}
+	.statement-body p {
+		display: none;
+		visibility: hidden;
+		min-width: 50%;
+		max-width: 80%;
+		width:100%;
+		padding-top: 8px;
+		margin:0;
+		text-indent: 10px;
+		letter-spacing: 0.05em;
+
+	}
+
 	.image-info {
 		display: none;
 	}
@@ -657,14 +673,17 @@ grey #aba7a7;
 	}
 	.grid {
 		width: 100%;
-		/*position: absolute;*/
+		z-index: 1;
+		position: absolute;
 		top: 0px;
-		right: -20px;
+		right: -48px;
 	
 	}
+
 	#exhibitions .grid {
 		top: 447px;
 	}
+
 	.grid-sizer,
 	.grid-item {
 		width: 15%;
@@ -678,21 +697,11 @@ grey #aba7a7;
 	.item p {
 		display:none;
 	}
+
 	#exhibitions .thumbs-container {
 		margin-top: -30.5em;
 	}
 
-	/*.thumbs {
-		position: absolute;
-		/*right: -35px;
-
-
-	}*/
-	/*.thumbs-container {
-		margin-top: -40.9em;
-		height:auto;
-		overflow: auto;
-	}*/
 
 	/*.........ABOUT PAGE .......................................*/
 	.about-me {
@@ -763,13 +772,14 @@ grey #aba7a7;
 	/*.........FOOTER .......................................*/
 
 	.footer {
-		
-		color: #aba7a7;
-		bottom: 0;
+		/*position:absolute;
+		bottom 0;*/
+		/*align-self: flex-end;*/
+		color: #878787;	
 		max-width:1125px;
 		width:100%;
 		margin-top: 10px;
-		border-top: 1px solid #aba7a7;
+		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1; 	
 		font-size:0.8em;
@@ -819,17 +829,17 @@ grey #aba7a7;
 @media only screen and (min-width: 1126px )  {
 
 	.wrapper  {
-		display:flex;
-		flex-direction:column;
+		/*display:flex;
+		flex-direction:column;*/
 		max-width:1126px;
 		min-width:305px;
 		margin:0 auto;
-		min-height: 100vh;
+		/*min-height: 100vh;*/
 	}
 
 
 	.header {
-		order:1;
+		/*order:1;*/
 		width:100%;
 		min-width:300px;
 		margin-top: 1em;
@@ -839,23 +849,13 @@ grey #aba7a7;
 	.logo img {
 		border:none;
 		width:50%;
-		
-
 	}
 
 	.menu-top {
-		display:block;
-		order:2;
-		flex-grow:1;
-		/*// font-size:0.8em;*/
-		text-align:left;
+		display:block; 
+		text-align: left;
 		border-top: 1px solid #aba787;
 
-	}
-		
-	nav {
-		order:2;
-		flex-grow:1
 	}
 
 	nav ul {
@@ -865,8 +865,6 @@ grey #aba7a7;
 	}
 
 	section.main-content {
-		order:3;
-		flex-grow:1;
 		margin-top: 1em;
 		margin-bottom:1em;
 		width:100%;
@@ -877,18 +875,54 @@ grey #aba7a7;
 		margin-top:0.28em;
 		margin-bottom:1em;
 	}
+	/*........PORTFOLIO LANDING PAGES....................................*/
 
-	.front-row-img {
-		max-width:100%;
-		margin: 0 25% 0 35%;
+	.front-row {
+		margin-top: 1em;
 	}
-	#design
+	.front-row-img {
+		max-width:50%;
+		margin: 0 25% 0 40%;
+	}
 	.front-row-img img {
 		min-width: 30%;
 		max-width: 75%;
 	}
-	/*........PORTFOLIO PAGES....................................*/
 
+	.project-row-img {
+		min-width: 30%;
+		max-width: 75%;
+
+	}
+
+	#photography .grid,
+	#design .grid,
+	#mixedmedia .grid,
+	#interactive .grid {
+		position: relative;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: auto;
+		
+	}
+
+	#photography .grid-sizer, 
+	#design .grid-sizer,
+	#interactive .grid-sizer,
+	#mixedmedia .grid-sizer {
+		
+		width: 50%;
+	}
+
+	#photography .grid-item,
+	#design .grid-item,
+	#interactive .grid-item,
+	#mixedmedia .grid-item {
+		
+		width: 50%;
+
+	}
 	#interactive .page-location, #mixedmedia .page-location, 
 	#photography .page-location, #design .page-location, 
 	#portfolio-template .page-location, #project-template .page-location, 
@@ -905,18 +939,10 @@ grey #aba7a7;
 		margin-bottom:0;
 	}		
 
-	.project-row .front-row {
-		padding-top:0;
-	}
-	.project-row-img {
-		margin: 0 auto;
-	}
-
 	#photography .grid,
 	#design .grid,
 	#mixedmedia .grid,
 	#interactive {
-		/*margin-top: 9%;*/
 		width: 100%;
 	}
 
@@ -976,7 +1002,7 @@ grey #aba7a7;
 		margin-left:20%;
 		height:100%;
 		position:relative;
-		overflow: auto;
+		overflow-x: hidden;
 
 	}
 	.big {
@@ -1007,7 +1033,7 @@ grey #aba7a7;
 		font-size: 0.7em;
 		display: block;
 		visibility: hidden;
-		color: #aba7a7;
+		color: #878787;
 
 	}
 	.image-info p {
@@ -1015,12 +1041,13 @@ grey #aba7a7;
 		margin:0;
 		display: inline-block;
 		padding:10px;
-		color: #aba7a7;
+		color: #878787;
 	}
 	.image-info p:first-child {
 		padding-left:0;
 	}
 	.carousel-nav {
+		visibility: hidden;
 		height:40px; 
 		width:40%;
 		background-color: #fff;
@@ -1028,51 +1055,38 @@ grey #aba7a7;
 		float:left;
 		font-family: 'Josefin Sans', sans-serif;
 		font-size: 1em;
-		color:#aba7a7;
-		visibility: hidden;
-
+		color:#878787;
+		
 	}
 	.carousel-nav.button {
 		border-radius:0; 
-		padding:10px;
+		padding: 10px;
 		visibility: hidden;
 
 	}
-	.thumbs {
-		display:block;
-		width:100%;
-		height:600px;
-		position:absolute;
-		left:0;
-		top:0;
-		z-index:2;
-		clear:both;
+	.grid {
+		width: 100%;
+		z-index: 1;
+		position: absolute;
+		top: -34em;
+		right: -81px;
+		overflow-x: hidden;
+	
+	}
+
+	#exhibitions .grid {
+		top: 447px;
+	}
+
+	.grid-sizer,
+	.grid-item {
+		width: 15%;
 
 	}
-	.thumbs-container {
-		width:100%;
-		display:flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-items: flex-start;
-		overflow: hidden;
-
-
-	}
-	.item {
-		display:flex
-		width:20%;
+	.grid-item img {
+		max-width: 100%;
 		height:auto;
-		flex-grow: 1
-		align-self: flex-start;
-		
-	}
-	.item img {
-		width:100%;
-		height:auto;
-		display:block;
-		opacity:0.9;
+
 	}
 	
 	.item img:hover{
@@ -1099,7 +1113,11 @@ grey #aba7a7;
 	}
 
 	/*.........ABOUT PAGE .......................................*/
+	.about-me {
+		max-width: 45%;
+		margin: 0;
 
+	}
 
 	
 	/*.........CONTACT PAGE.......................................*/
@@ -1192,11 +1210,11 @@ grey #aba7a7;
 	.footer {
 		order:4;
 		align-self:flex-end;
-		color: #aba7a7;
+		color: #878787;
 		max-width:1125px;
 		width:100%;
 		height:10em;
-		border-top: 1px solid #aba7a7;
+		border-top: 1px solid #878787;
 		text-align:left;
 		zoom:1;	
 		font-size:0.8em;
@@ -1229,13 +1247,3 @@ grey #aba7a7;
 	}
 } 
 
-
-
-
-
-
-
-
-/*--------------------------------------------------------------------------
------------MEDIUM-LARGE and above-------------------------------------------------------
-----------------------------------------------------------------------*/
