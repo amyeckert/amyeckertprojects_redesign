@@ -406,6 +406,7 @@ grey #aba7a7;
 	#nzbirds .menu-top,
 	#letters .menu-top,
 	#print-portfolio .menu-top,
+	#d6sunset .menu-top,
 
 	/*interactive*/
 
@@ -431,10 +432,22 @@ grey #aba7a7;
 	}
 
 	section.main-content {
+		position: relative;
+		right:0;
+		top: 35px;
 		margin:0 auto 1em auto;
-		overflow: auto;
+		width: 100%;
+		height: 100vh;
+		overflow-x: hidden;
 	}
 
+	#exhibitions .main-content, 
+	#photography .main-content,
+	#design .main-content,
+	#interactive .main-content,
+	#mixedmedia .main-content {
+
+	}
 	
 	#contact .page-location, 
 	#contact .page-location p {
@@ -462,9 +475,7 @@ grey #aba7a7;
 		margin:0;
 		padding:0;
 	}
-	.project-row {
-		margin: 2em auto 1.5em auto;
-	}
+	
 	.front-row {
 		margin-top: 1em;
 	}
@@ -477,29 +488,49 @@ grey #aba7a7;
 		max-width: 75%;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
-	#photography .grid, 
+
+	#photography .grid,
 	#design .grid,
-	#interactive .grid,
-	#mixedmedia .grid {
+	#mixedmedia .grid,
+	#interactive .grid {
 		width: 100%;
-		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		
 	}
 
 	#photography .grid-sizer, 
 	#photography .grid-item,
-
 	#design .grid-sizer,
 	#design .grid-item,
-
 	#interactive .grid-sizer,
 	#interactive .grid-item,
-	
 	#mixedmedia .grid-sizer,
 	#mixedmedia .grid-item {
+		position: relative;
+		top: 0px;
 		width: 50%;
 	}
 
+/*	#photography .grid-item img, 
+	#design .grid-item img,
+	#interactive .grid-item img, 
+	#mixedmedia .grid-item img {
+		max-width: 100%;
+		height:auto;
+
+	}*/
+
 	/*.........PROJECT PAGES.......................................*/
+
+	.menu-side {
+		position: absolute;
+		left: 0;
+		top: -6px;
+	}
+	#exhibitions .menu-side {
+		display:none;
+	}
 
 	.menu-side ul li {
 		display: block;
@@ -533,7 +564,7 @@ grey #aba7a7;
 		width:100%;
 	}
 
-	/*	display the current project <li> */
+	/*	display the current project */
 	/*photography*/
 	#manhome .menu-side ul li:nth-child(2),
 	#truckers .menu-side ul li:nth-child(3),
@@ -548,7 +579,7 @@ grey #aba7a7;
 	#nzbirds .menu-side ul li:nth-child(3),
 	#letters .menu-side ul li:nth-child(4),
 	#print-portfolio .menu-side ul li:nth-child(5),
-	/*#school .menu-side ul li:nth-child(6),*/
+	#d6sunset .menu-side li:nth-child(6),
 
 	/*interactive*/
 
@@ -561,6 +592,15 @@ grey #aba7a7;
 	#weather .menu-side ul li:nth-child(7) {
 		display: block;
 		width:100%;
+	}
+	 /*................CAROUSEL AREA ................................*/
+
+	#carousel {
+		position: relative;
+		top: 106px;
+		right: -35px;
+		max-width: 80%;
+		margin-left:16%;
 	}
 
 	.statement-title {
@@ -587,6 +627,8 @@ grey #aba7a7;
 		display: block;
 		visibility: visible;
 		z-index:1;
+		position: absolute;
+		top: ;
 	
 	}
 
@@ -609,28 +651,22 @@ grey #aba7a7;
 		margin-top:50px;
 	}
 	.grid {
-		width: 80%;
-		margin: 6% 0 0 20%
-		
-	}
-	#letters .grid {
-		margin-top: 10em;
-	}
-	#print-portfolio .grid {
-		margin-top: 9.3em;
-
+		width: 100%;
+		position: absolute;
+		top: 712px;
+		right: -20px;
+	
 	}
 	#exhibitions .grid {
-		margin-top: 0;
+		top: 447px;
 	}
-
 	.grid-sizer,
 	.grid-item {
-		width: 50%;
+		width: 15%;
 
 	}
 	.grid-item img {
-		max-width:100%;
+		max-width: 100%;
 		height:auto;
 
 	}
@@ -639,6 +675,12 @@ grey #aba7a7;
 	}
 	#exhibitions .thumbs-container {
 		margin-top: -30.5em;
+	}
+
+	.thumbs {
+		position: absolute;
+		/*right: -35px;*/
+
 	}
 	.thumbs-container {
 		margin-top: -40.9em;
@@ -800,7 +842,7 @@ grey #aba7a7;
 		display:block;
 		order:2;
 		flex-grow:1;
-		// font-size:0.8em;
+		/*// font-size:0.8em;*/
 		text-align:left;
 		border-top: 1px solid #aba787;
 
@@ -869,6 +911,7 @@ grey #aba7a7;
 	#design .grid,
 	#mixedmedia .grid,
 	#interactive {
+		margin-top: 9%;
 		width: 100%;
 	}
 
