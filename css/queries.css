@@ -17,11 +17,11 @@ grey #aba7a7;
 ----------------------------------------------------------------------*/
 
 
-@media only screen and (max-width: 340px) { 
+@media only screen and (max-width: 650px) { 
 
 	.header {
-		width:90%;
-		max-width:340px;
+		// width:90%;
+		max-width:90%;
 		margin:1em auto 0 auto;
 		border-bottom:1px solid #aba7a7;
 	}
@@ -217,7 +217,7 @@ grey #aba7a7;
 	}
 
 	.thumbs {
-		margin-top: -19em;
+		margin-top: -25em;
 	}
 	.grid {
 		width: 100%;
@@ -361,11 +361,11 @@ grey #aba7a7;
 
 
 /*----------------------------------------------------------------------
--------MEDIUM SMALL ----------------------------------------
+-------MEDIUM ----------------------------------------
 ----------------------------------------------------------------------*/
 
 
-@media only screen and (min-width: 341px) and (max-width:920px) {
+@media only screen and (min-width: 651px) and (max-width:1125px) {
 
 	.wrapper {
 		max-width:90%; 
@@ -470,13 +470,20 @@ grey #aba7a7;
 	}
 	.front-row-img {
 		max-width:50%;
-		margin: 0 auto;
+		margin: 0 25% 0 40%;
 	}
 	.front-row-img img {
 		min-width: 30%;
 		max-width: 75%;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
+	#photography .grid, 
+	#design .grid,
+	#interactive .grid,
+	#mixedmedia .grid {
+		width: 100%;
+		margin: 0 auto;
+	}
 
 	#photography .grid-sizer, 
 	#photography .grid-item,
@@ -489,13 +496,13 @@ grey #aba7a7;
 	
 	#mixedmedia .grid-sizer,
 	#mixedmedia .grid-item {
-		width: 33.334%;
+		width: 50%;
 	}
 
 	/*.........PROJECT PAGES.......................................*/
 
 	.menu-side ul li {
-		display:none;
+		display: block;
 		width:100%;
 	}
 	 /*	 display the "back to... projects" <li> */
@@ -522,7 +529,7 @@ grey #aba7a7;
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
-		display: block;
+		display: none;
 		width:100%;
 	}
 
@@ -587,9 +594,9 @@ grey #aba7a7;
 	    display: block;
 	    visibility: visible;
 	    width: 100%;
-	    height: 26em;
-	    margin-left: 0;
-        margin-top: 3.5em;
+	    height: 31.6em;
+	    margin-left: 20%;
+        // margin-top: 3.5em;
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	}
@@ -602,12 +609,16 @@ grey #aba7a7;
 		margin-top:50px;
 	}
 	.grid {
-		width: 100%;
+		width: 80%;
+		margin: 6% 0 0 20%
 		
 	}
-	#letters .grid,
+	#letters .grid {
+		margin-top: 10em;
+	}
 	#print-portfolio .grid {
-		margin-top: 4em;
+		margin-top: 9.3em;
+
 	}
 	#exhibitions .grid {
 		margin-top: 0;
@@ -615,7 +626,7 @@ grey #aba7a7;
 
 	.grid-sizer,
 	.grid-item {
-		width: 33.334%;
+		width: 50%;
 
 	}
 	.grid-item img {
@@ -630,14 +641,10 @@ grey #aba7a7;
 		margin-top: -30.5em;
 	}
 	.thumbs-container {
-		margin-top: -29.50em;
+		margin-top: -40.9em;
 		height:auto;
 		overflow: auto;
 	}
-
-
-	
-
 
 	/*.........ABOUT PAGE .......................................*/
 	.about-me {
@@ -726,18 +733,25 @@ grey #aba7a7;
 		height: auto;
 	}
 	.footer-col-3 img {
-		padding: 12%;
+		max-width: 24%;
+		min-width: 20%;
+		height: auto;
+	    padding: 3% 10% 3% 3%;
+	    
+    	
 	}
+
 	.footer-col-4 {
 		padding-top: 1.2em;
+		font-size: 1.3em;
 	}
-	.footer-col-4 p {
-		font-size: 1.2em;
-	}
+	// .footer-col-4 p {
+	// 	font-size: 1.2em;
+	// }
 
 	.footer ul li {
 		margin:0;
-		font-size:0.9em;
+		font-size: 1.6em;
 
 	}
 	.footer-col-1 ul li a, .footer-col-2 ul li a  {
@@ -751,16 +765,16 @@ grey #aba7a7;
 
 
 
---------------------------------------------------------------------------
------------MEDIUM-LARGE-------------------------------------------------------
-----------------------------------------------------------------------
+/*--------------------------------------------------------------------------
+-----------LARGE-------------------------------------------------------
+---------------------------------------------------------------- */ 
 
-@media only screen and (min-width: 921px ) and (max-width:1280px) {
+@media only screen and (min-width: 1126px )  {
 
 	.wrapper  {
 		display:flex;
 		flex-direction:column;
-		max-width:850px;
+		max-width:1126px;
 		min-width:305px;
 		margin:0 auto;
 		min-height: 100vh;
@@ -772,6 +786,7 @@ grey #aba7a7;
 		width:100%;
 		min-width:300px;
 		margin-top: 1em;
+		border-bottom: none;
 	}
 
 	.logo img {
@@ -781,13 +796,13 @@ grey #aba7a7;
 
 	}
 
-	nav.menu-top {
+	.menu-top {
 		display:block;
 		order:2;
 		flex-grow:1;
-		font-size:0.8em;
+		// font-size:0.8em;
 		text-align:left;
-		border-top: 1px solid #aba7a7;
+		border-top: 1px solid #aba787;
 
 	}
 		
@@ -816,11 +831,16 @@ grey #aba7a7;
 		margin-bottom:1em;
 	}
 
-	.project-row-img, .front-row-img {
-	    max-width: 33.3%;
+	.front-row-img {
+		max-width:100%;
+		margin: 0 25% 0 35%;
 	}
-
-	/*........PORTFOLIO TITLES....................................*/
+	#design
+	.front-row-img img {
+		min-width: 30%;
+		max-width: 75%;
+	}
+	/*........PORTFOLIO PAGES....................................*/
 
 	#interactive .page-location, #mixedmedia .page-location, 
 	#photography .page-location, #design .page-location, 
@@ -841,7 +861,32 @@ grey #aba7a7;
 	.project-row .front-row {
 		padding-top:0;
 	}
+	.project-row-img {
+		margin: 0 auto;
+	}
 
+	#photography .grid,
+	#design .grid,
+	#mixedmedia .grid,
+	#interactive {
+		width: 100%;
+	}
+
+	#photography .grid-sizer, 
+	#photography .grid-item,
+	#design .grid-sizer,
+	#design .grid-item,
+	#interactive .grid-sizer,
+	#interactive .grid-item,
+	#mixedmedia .grid-sizer,
+	#mixedmedia .grid-item {
+		width: 50%;
+		height: 600px;
+
+	}
+
+	
+	
 	/*.........PROJECT PAGES .......................................*/
 
 	.menu-side {
@@ -921,7 +966,7 @@ grey #aba7a7;
 		padding:10px;
 		color: #aba7a7;
 	}
-	.image-info p:first-child{
+	.image-info p:first-child {
 		padding-left:0;
 	}
 	.carousel-nav {
@@ -1112,7 +1157,7 @@ grey #aba7a7;
 
 	.footer ul li {
 		margin:0;
-		font-size:0.9em;
+		font-size: 1.3em;
 
 	}
 	.footer-col-1 ul li a, .footer-col-2 ul li a  {
@@ -1121,14 +1166,14 @@ grey #aba7a7;
 	}
 
 	.footer-col-3 img {
-		padding:7%;
+		padding: 10%;
 		
 	}
 
 	.footer-col-4 {
 		padding-top:2%;
 		text-align:center;
-		font-size:0.7em;
+		font-size: 1.5em;
 		
 	}
 } 
