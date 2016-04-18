@@ -22,7 +22,7 @@ grey #878787;
 	.header {
 		// width:90%;
 		max-width:90%;
-		margin:1em auto 0 auto;
+		margin:1em auto 0 auto;a
 		border-bottom:1px solid #878787;
 	}
 
@@ -43,11 +43,10 @@ grey #878787;
 		display:inline-block;
 	}
 	.main-content {
-		/*position: relative;*/
 		right:0;
 		top: 0px;
 		margin:0 auto 1em auto;
-		width: 100%;
+		width: 90%;
 		overflow-x: hidden;
 	}
 
@@ -55,9 +54,13 @@ grey #878787;
 	 	padding:0.5em 0 0.5em 0;
 
 	 }
-
-	.page-location {
-		display:block;
+	#photography .page-location,
+	#design	.page-location, 
+	#interactive .page-location, 
+	#mixedmedia .page-location, 
+	#exhibitions .page-location {
+		display: block;
+		margin: 0;
 		
 	}
 
@@ -77,13 +80,13 @@ grey #878787;
 	#mixedmedia .navmixed, #about .navabout, #blog .navblog,
 	#contact .navcontact, #project-template .navproject {
 		border: none;
-		}
+	}
 
 	#photography .navphoto,#photography .navphoto, #design .navdesign, #interactive .navinter, 
 	#mixedmedia .navmixed, #about .navabout, #blog .navblog,
 	#contact .navcontact, #project-template .navproject {
 		border-top:none;
-			}
+	}
 
 	/*........POERTFOLIO TITLE VISIBILITY .......*/
 	#home .page-location p {
@@ -97,7 +100,7 @@ grey #878787;
 		margin:0.3em 0 1em 0;
 		width:100%;
 		
-		}
+	}
 
 	.project-row, .front-row {
 		max-width:100%;
@@ -128,8 +131,21 @@ grey #878787;
 		min-width:30%;
 	}
 
+	#photography .grid-sizer a:nth-of-type(-n+2),
+
+	#design .grid-sizer a:nth-of-type(-n+2),
+	#interactive .grid-sizer a:nth-of-type(-n+2),
+	#mixedmedia .grid-sizer a:nth-of-type(-n+2) {
+		display: block;
+	}
 
 	/*.........PROJECT PAGES .......................................*/
+	 #carousel {
+	 	max-width: 100%;
+		margin: 0 auto;
+
+	 }
+
 	.menu-side ul li {
     display: none;
     width: 100%;
@@ -148,7 +164,7 @@ grey #878787;
 	#nzbirds .menu-side ul li:first-child,
 	#letters .menu-side ul li:first-child,
 	#print-portfolio .menu-side ul li:first-child,
-
+	#d6sunset .menu-side ul li:first-child,
 	/*interactive*/
 
 	/*mixed media*/ 
@@ -176,7 +192,7 @@ grey #878787;
 	#nzbirds .menu-side ul li:nth-child(3),
 	#letters .menu-side ul li:nth-child(4),
 	#print-portfolio .menu-side ul li:nth-child(5),
-	/*#school .menu-side ul li:nth-child(6),*/
+	#d6sunset .menu-side ul li:nth-child(5),
 
 	/*interactive*/
 
@@ -218,8 +234,11 @@ grey #878787;
 
 	.grid {
 		width: 100%;
-		margin-top: -17em;
+		margin: -20em 0 0 0;
 
+	}
+	#nzbirds .grid {
+		margin: -20em 0 0 0;
 	}
 	.grid-sizer {
 		width: 50%;
@@ -244,7 +263,7 @@ grey #878787;
 	}
 
 	.statement-body {
-		display:none;
+		display: none;
 		width: 90%;
 		padding: 15px auto;
 		margin: 0 auto;
@@ -318,7 +337,7 @@ grey #878787;
 	/*......... FOOTER.......................................*/
 	.footer {
 		width:90%;
-		margin:60px auto 0 auto;
+		margin: 15px auto 0 auto;
 		padding:0;
 		border-top:1px solid #878787;
 			
@@ -523,6 +542,14 @@ grey #878787;
 
 	}
 
+	#photography .grid-sizer a:nth-of-type(n+2),
+
+	#design .grid-sizer a:nth-of-type(n+2),
+	#interactive .grid-sizer a:nth-of-type(n+2),
+	#mixedmedia .grid-sizer a:nth-of-type(n+2) {
+		display: none;
+	}
+
 	/*.........PROJECT PAGES.......................................*/
 
 	.menu-side {
@@ -600,7 +627,7 @@ grey #878787;
 	#carousel {
 		position: relative;
 		top: 0.8em;
-		right: -93px;
+		right: -65px;
 		max-width: 85%;
 		height: 900px;
 		margin-left: 9%;
@@ -627,16 +654,6 @@ grey #878787;
 	    margin-top: 0;
 	    background-size: contain;
 	    background-repeat: no-repeat;
-	    /*display: block;
-	    visibility: visible;
-	    /*position: absolute;*/
-	    /*top: 0;
-	    left: 50px;
-	    width: 100%;
-	    height: 600px;
-	    margin-left: 20%;
-	    background-size: contain;
-	    background-repeat: no-repeat;*/
 	}
 
 	.statement-title {
@@ -648,11 +665,11 @@ grey #878787;
 
 	.statement-body {
 		display: block;
-		visibility: hidden;
+		visibility: visible;
 	}
 	.statement-body p {
-		display: none;
-		visibility: hidden;
+		display: block;
+		visibility: visible;
 		min-width: 50%;
 		max-width: 80%;
 		width:100%;
@@ -672,11 +689,11 @@ grey #878787;
 		margin-top:50px;
 	}
 	.grid {
-		width: 100%;
+		max-width: 90%;
 		z-index: 1;
 		position: absolute;
 		top: 0px;
-		right: -48px;
+		right: -60px;
 	
 	}
 
@@ -772,9 +789,6 @@ grey #878787;
 	/*.........FOOTER .......................................*/
 
 	.footer {
-		/*position:absolute;
-		bottom 0;*/
-		/*align-self: flex-end;*/
 		color: #878787;	
 		max-width:1125px;
 		width:100%;
@@ -782,7 +796,7 @@ grey #878787;
 		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1; 	
-		font-size:0.8em;
+		font-size:0.5em;
 	}
 
 	.column {
@@ -799,7 +813,7 @@ grey #878787;
 
 	.footer-col-4 {
 		padding-top: 1.2em;
-		font-size: 1.3em;
+		font-size: 1.4em;
 	}
 	.footer-col-4 p {
 		font-size: 1.2em;
@@ -1000,9 +1014,10 @@ grey #878787;
 		display:block;
 		width:75%;
 		margin-left:20%;
-		height:100%;
+		max-height:700px;
 		position:relative;
 		overflow-x: hidden;
+		overflow-y: hidden;
 
 	}
 	.big {
@@ -1073,7 +1088,10 @@ grey #878787;
 		overflow-x: hidden;
 	
 	}
-
+	#letters .grid, 
+	#print-portfolio .grid {
+		top: -30em;
+	}
 	#exhibitions .grid {
 		top: 447px;
 	}
@@ -1096,8 +1114,9 @@ grey #878787;
 	.item p {display:none;}
 
 
-	.statement-body{
-		width: 100%;
+	.statement-body {
+		display: block;
+		max-width: 80%;
 
 	}
 	#nzbirds .statement-body { margin-top: 3em; }

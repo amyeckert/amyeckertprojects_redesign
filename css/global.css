@@ -248,7 +248,7 @@ section.main-content {
 }
 
 #home .page-location p {
-	display:none;
+	display:bnone;
 	padding:0 0 0 3%;
 	color:#fff;
 }
@@ -368,7 +368,10 @@ section.main-content {
 }
 
 .statement-body {
-	width:75%%;
+	display: block;
+	visibility: visible;
+	width:75%;
+	margin: 0 auto;
 	height:100%;
 
 	 -webkit-column-width: 100%; /* Chrome, Safari, Opera */
@@ -386,6 +389,7 @@ section.main-content {
 	
 	
 }
+
 #nzbirds .statement-body {
 	margin-top: 4em;
 
