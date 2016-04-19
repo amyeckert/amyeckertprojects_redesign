@@ -638,7 +638,7 @@ grey #878787;
 		right: -65px;
 		max-width: 85%;
 		height: 900px;
-		margin-left: 9%;
+		margin-left: 12.2%;
 	}
 
 	.big {
@@ -646,10 +646,10 @@ grey #878787;
 		height: 750px;
 		display: block;
 		visibility: visible;
-		z-index: 0;
-		position: absolute;
+		z-index: 0;	
+		position:absolute;
 		top: 0;
-		left: 50px;
+		right: 0%;
 	
 	}
 
@@ -658,12 +658,24 @@ grey #878787;
 	    visibility: visible;
 	    width: 100%;
 	    height: 600px;
-	    margin-left: 0;
-	    margin-top: 0;
+	    position: absolute;
+	    top: 0;
+	    right:0;
+	  /*  margin-left: 0;
+	    margin-top: 1em;*/
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	}
 
+	.carousel-nav {
+		display: block;
+		visibility: visible;
+		position: absolute;
+		top: 85%;
+	}
+	.image-info {
+		display: none;
+	}
 	.statement-title {
 		width:100%;
 		margin:1em 0 1em 0;
@@ -672,7 +684,7 @@ grey #878787;
 	#nzbirds .statement-body { margin-top: 3em; }
 
 	.statement-body {
-		display: block;
+		display: none;
 		visibility: visible;
 		max-width: 70%;
 		margin-left: 0;
@@ -692,20 +704,12 @@ grey #878787;
 
 	}
 
-	.image-info {
-		display: none;
-	}
-	.carousel-nav {
-		display: block;
-		visibility: hidden;
-		margin-top:50px;
-	}
 	.grid {
-		max-width: 90%;
+		max-width: 100%;
 		z-index: 1;
 		position: absolute;
-		top: 0px;
-		right: -60px;
+		top: 0;
+		right: 0;
 	
 	}
 
@@ -720,11 +724,11 @@ grey #878787;
 	}
 	.grid-item img {
 		max-width: 100%;
-		height:auto;
-
+		height: auto;
 	}
+
 	.item p {
-		display:none;
+		display: none;
 	}
 
 	#exhibitions .thumbs-container {
@@ -1130,7 +1134,7 @@ grey #878787;
 
 
 	.statement-body {
-		display: block;
+		display: none;
 		max-width: 80%;
 		margin-left: 0;
 

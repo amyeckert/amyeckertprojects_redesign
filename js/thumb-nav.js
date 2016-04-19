@@ -110,13 +110,13 @@
 
                 $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
-                //change visibility of .thumbs to hidden
+                //change visibility of .thumbs to hidden, hide statement-body
                 var thumbs = document.getElementById('thumbNav');
                 var cNav = document.getElementById('cNav');
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
-
+                
                 bigImg.style.display = 'block';
                 bigImg.style.visibility = 'visible';
                 cNav.style.visibility = 'visible';
@@ -124,6 +124,7 @@
                 imgInfo.style.visibility = 'hidden';
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
+                
 
                 console.log(chosen_thumb, bigImg);
             }); 
@@ -138,6 +139,8 @@
                 var next = document.getElementById('nextImg');
                 var clNav = document.getElementById('cNav');
                 var thumbsContainer = document.querySelector('grid');
+                var statement = document.querySelector('statement-body');
+
 
                 bigImg.style.visibility = 'hidden';
                 showThumbs.style.display = 'block';
@@ -146,6 +149,8 @@
                 prevImg.style.visibility = 'hidden';
                 nextImg.style.visibility = 'hidden';
                 thumbsContainer.style.margin = '-30em, 0,0,0';
+                statement.style.visibility = 'hidden';
+
             });
      //     }
      //     else if (mq.matches == "(min-width: 921px ) and (max-width:1280px)") {
