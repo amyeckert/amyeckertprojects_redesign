@@ -209,7 +209,8 @@ a:active {
 
 
 section.main-content {
-	order:2;
+	flex: 1 0;
+	order: 2;
 	/*flex-grow:1;*/
 	overflow: hidden;
 }
