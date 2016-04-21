@@ -1,5 +1,10 @@
 # Created by https://www.gitignore.io/api/images
 
+# directories #
+###############
+images-copy/**
+
+
 
 # Compiled source #
 ###################
