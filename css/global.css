@@ -356,6 +356,12 @@ section.main-content {
 	border-bottom:1px solid #878787;
 }
 
+.carousel-nav {
+	display: block;
+	visibility: hidden;
+
+}
+
 .image-info { 
 	display: block;
 	visibility: hidden;

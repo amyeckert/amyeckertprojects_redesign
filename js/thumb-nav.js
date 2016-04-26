@@ -71,7 +71,7 @@
                 var activeImg = document.querySelector('div.isActive');
                 var lastImg = document.querySelector('div.thumbs-container').lastElementChild;  
                 var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
-                var prevImg = document.querySelector('div.isActive').previousElementSibling;
+                var nextImg = document.querySelector('div.isActive').nextElementSibling;
 
                 $('.item.isActive').removeClass('isActive');
 
@@ -79,20 +79,32 @@
                 if(activeImg == items[0]) {
 
                     //get the url to inject into .big-img-container
-                    var chosen_thumb = $(lastImg).find('img').attr('src');
-                    $(lastImg).addClass('isActive');
+                    var chosen_thumb = $(nextImg).find('img').attr('src');
+                    $(nextImg).addClass('isActive');
 
                     //make that img new big img.
                     $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
                 }
 
-                //else choose prev sibling
+                //if activeImg is last image in list
+                else if (activeImg === lastImg) {
+                    //get the url to inject into .big-img-container
+                    var chosen_thumb = $(firstImg).find('img').attr('src');
+                    $(firstImg).addClass('isActive');
+
+                    //make that img new big img.
+                    $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+
+
+                }
+                //else choose next sibling
                 else {      
-                    $(prevImg).addClass('isActive');
-                    var chosen_thumb = $(prevImg).find('img').attr('src');
+                    $(nextImg).addClass('isActive');
+                    var chosen_thumb = $(nextImg).find('img').attr('src');
                     //make that img new big img.
                     $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
                 }
+                console.log (nextImg)
             });
 
                 /*-------------------------------------------------------------------------------------------------
@@ -130,6 +142,7 @@
             }); 
                 /*-------------------------------------------------------------------------------------------------
                             hides big image/ shows thumbs grid */
+                            
             $('.thumbs-only').on('click', function() {
 
                 var bigImg = document.getElementById('bigImg');
