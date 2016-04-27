@@ -632,11 +632,10 @@ grey #878787;
 
 	#carousel {
 		position: relative;
-		top: 0.8em;
-		right: -65px;
-		max-width: 85%;
-		height: 900px;
-		margin-left: 12.2%;
+		top: 1em;
+		max-width: 90%;
+		height: 600px;
+		margin: 0 0 0 25%;
 	}
 
 	.big {
@@ -665,7 +664,9 @@ grey #878787;
 
 	.carousel-nav {
 		position: absolute;
-		top: 85%;
+		min-width: 25%;
+		top: 34%;
+		left: -33%;
 	}
 	.image-info {
 		display: none;
@@ -700,6 +701,7 @@ grey #878787;
 
 	.grid {
 		max-width: 100%;
+    	margin: 0 auto;
 		z-index: 1;
 		position: absolute;
 		top: 0;
@@ -893,9 +895,10 @@ grey #878787;
 	}
 
 	section.main-content {
-		margin-top: 1em;
-		margin-bottom:1em;
+		/*margin-top: 1em;*/
+		
 		width:100%;
+		height: 75vh;
 		overflow: hidden;
 	}
 
@@ -993,6 +996,7 @@ grey #878787;
 	.menu-side {
 		display:block;
 		width:25%;
+		margin-top: 1em;
 	}
 	#exhibitions .menu-side{
 		display: block;
@@ -1027,8 +1031,8 @@ grey #878787;
 	#carousel {
 		display:block;
 		width:75%;
-		margin-left:20%;
-		max-height:750px;
+		margin-left: 20%;
+		max-height: 100vh;
 		position:relative;
 		overflow-x: hidden;
 		overflow-y: hidden;
@@ -1083,16 +1087,16 @@ grey #878787;
 		text-align:left;
 		float:left;
 		font-family: 'Josefin Sans', sans-serif;
-		font-size: 1em;
+		font-size: 1.2em;
 		color:#878787;
 		
 	}
-	.carousel-nav.button {
+	/*.carousel-nav button {
 		border-radius:0; 
 		padding: 10px;
 		visibility: hidden;
 
-	}
+	}*/
 	.grid {
 		width: 100%;
 		z-index: 1;
@@ -1247,7 +1251,7 @@ grey #878787;
 		color: #878787;
 		max-width: 1125px;
 		width:100%;
-		height:10em;
+		height:5em;
 		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1;	
