@@ -664,10 +664,9 @@ grey #878787;
 	}
 
 	.carousel-nav {
-		position: absolute;
 		min-width: 25%;
-		top: 34%;
-		left: -33%;
+		/*top: 34%;
+		left: 0;*/
 	}
 	.image-info {
 		display: none;
@@ -1083,15 +1082,16 @@ grey #878787;
 		visibility: hidden;
 		display: block;
 		height: auto;
-		width: auto;
-		max-width: 25%;
-		position: absolute;
+		width: 52%;
+		/*max-width: 35%;*/
+	/*	position: absolute;
 		top: 48%;
-		left: 10%;
+		left: 10%;*/
 		border-top: 1px solid #68b7d5;
 		z-index: 1;
 		
 	}
+
 
 
 	
