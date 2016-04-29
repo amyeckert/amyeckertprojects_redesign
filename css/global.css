@@ -137,7 +137,8 @@ nav ul:after {
 }
 
 nav ul li:first-child {
-	padding-left: 0;
+
+	border-left: 1px solid #878787;
 }
 
 nav ul li {
