@@ -70,7 +70,7 @@ button {
 	border: 1px solid #fff;
 	color: #68b7d5;
 	cursor: pointer;
-	margin-top: 1%;
+	
 	padding: 7px;
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
@@ -78,7 +78,8 @@ button {
 }
 
 button:hover {
-	border: 1px solid #68b7d5;
+	border-bottom: 1px solid #68b7d5;
+	/*border-top: none;*/
 
 }
 
