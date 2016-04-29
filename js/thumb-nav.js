@@ -136,9 +136,12 @@
                 imgInfo.style.visibility = 'hidden';
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
-                
 
-                console.log(chosen_thumb, bigImg);
+                 // show image information 
+                // var imgInfo = document.querySelector('image-info');
+                // imgInfo.style.display = 'block';
+
+                console.log(chosen_thumb, bigImg, imgInfo);
             }); 
                 /*-------------------------------------------------------------------------------------------------
                             hides big image/ shows thumbs grid */

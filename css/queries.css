@@ -1083,18 +1083,11 @@ grey #878787;
 		display: block;
 		height: auto;
 		width: 52%;
-		/*max-width: 35%;*/
-	/*	position: absolute;
-		top: 48%;
-		left: 10%;*/
 		border-top: 1px solid #68b7d5;
 		z-index: 1;
 		
 	}
 
-
-
-	
 	.grid {
 		width: 100%;
 		z-index: 1;
@@ -1107,9 +1100,6 @@ grey #878787;
 	#letters .grid, 
 	#print-portfolio .grid {
 		top: -30em;
-	}
-	#exhibitions .grid {
-		top: 447px;
 	}
 
 	.grid-sizer,
@@ -1127,7 +1117,9 @@ grey #878787;
 		opacity:1;
 
 	}
-	.item p {display:none;}
+	.item p {
+		display:none;
+	}
 
 
 	.statement-body {
