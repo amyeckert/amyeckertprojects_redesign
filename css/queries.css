@@ -1123,14 +1123,11 @@ grey #878787;
 	}
 
 
-	.statement-body {
-		/*display: none;
-*/		max-width: 80%;
+	/*.statement-body {
+		max-width: 80%;
 		margin-left: 0;
 
-	}
-
-/*	#nzbirds .statement-body { margin-top: 3em; }*/
+	}*/
 
 	.statement-title {
 		position:relative;
@@ -1139,6 +1136,18 @@ grey #878787;
 		float:right;
 		font-size: 1em;
 		text-indent:0;
+
+	}
+	.statement-body p {
+		/*display: block;
+		visibility: visible;*/
+	/*	min-width: 50%;
+		max-width: 80%;
+		width:100%;
+		padding-top: 8px;
+		margin:0;
+		text-indent: 10px;
+		letter-spacing: 0.05em;*/
 
 	}
 

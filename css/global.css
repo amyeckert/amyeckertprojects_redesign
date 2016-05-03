@@ -413,7 +413,7 @@ section.main-content {
 }
 
 #carousel {
-	display: none;
+	display: block;
 	visibility:hidden;
 	order: 2;
 	flex: 1 0;
@@ -437,20 +437,19 @@ section.main-content {
 	letter-spacing: 0.03em;
 	color:#878787;
 	text-indent: 1.3em;
-	
-	
+		
 }
-
-#nzbirds .statement-body {
-	margin-top: 4em;
-
+.showStatement {
+	display: block;
+	z-index: 1;
+	max-width: 50%;
+	margin: 0 25%;
 }
 
 .statement-body p {
 	margin-top:1em;
 	line-height:1.3em;
 	text-decoration: none;
-	visibility: visible;
 }
 .statement-body p:nth-child(1) {
 	margin-top:0;

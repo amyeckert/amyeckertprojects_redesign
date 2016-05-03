@@ -13,6 +13,8 @@
           $grid.masonry();
         });
 
+       
+
     // ******** HELP ANDRE! SOMETHING IS NOT WORKING WITH THIS MEDIA QUERY PART 
 
     //  Disable this for MOBILE  max-width: 340px
@@ -122,25 +124,29 @@
 
                 $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
-                //change visibility of .thumbs to hidden, hide statement-body
+                //change visibility of .thumbs to hidden and hide statement-body
                 var thumbs = document.getElementById('thumbNav');
                 var cNav = document.getElementById('cNav');
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
-                var statement = document.querySelector('statement-body');
-                
+                // var showHideStatement = document.querySelector('statement-body');
+
                 carousel.style.display = 'block';
                 carousel.style.width = '75%';
-                // carousel.style.margin = '0 0 0 0';
-              
+                 
                 bigImg.style.visibility = 'visible';
                 cNav.style.visibility = 'visible';
                 thumbs.style.display =  'none';
+
                 imgInfo.style.visibility = 'hidden';
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
-                statement.style.display = 'block';
+                showHideStatement.display = 'none';
+
+                // document.getElementById('showHide').addEventListener('click', function(e) {
+                // $('.statement-body').removeClass('showStatement');
+
                  // show image information 
                 // var imgInfo = document.querySelector('image-info');
                 // imgInfo.style.display = 'block';
@@ -159,9 +165,8 @@
                 var next = document.getElementById('nextImg');
                 var clNav = document.getElementById('cNav');
                 var thumbsContainer = document.querySelector('grid');
-                var statement = document.querySelector('statement-body');
-
-
+                // var showHideStatement = document.getElementById('statement-body');
+                
                 carousel.style.display = 'none';
                 showThumbs.style.display = 'block';
                 imgInfo.style.visibility = 'hidden';
@@ -169,7 +174,7 @@
                 prevImg.style.visibility = 'hidden';
                 nextImg.style.visibility = 'hidden';
                 thumbsContainer.style.margin = '0, 0, 0, 0';
-                statement.style.visibility = 'hidden';
+                // showHideStatement.display = 'none';
 
             });
      //     }
@@ -177,6 +182,38 @@
      //        console.log('is it working?')
      //     }
      // });
+
+      // ****** SHOW / HIDE STATEMENT click BUTTON ****************
+      document.getElementById('showHide').addEventListener('click', function(e) {
+        $('.statement-body.showStatement').removeClass('showStatement');
+        $('.statement-body').addClass('showStatement');
+
+        // var showHideStatement = document.getElementById('statement-body');
+          
+
+        // document.getElementsByTagName('button p').innerHTML = 'close';
+        // showHideStatement.style.display = 'block';
+        // showHideButton.innerHTML = 'close';
+
+        // console.log(showHideButton);
+        });
+
+
+    // $('.showHide').on('click', function(e) {
+    //      e.preventDefault();
+    //      $(this).addClass('showStatement');
+    //         // $('.item.isActive').removeClass('isActive');
+    //         // $(this).addClass('isActive');
+    //         console.log(e);
+
+    //     var showHideStatement = document.querySelector('statement-body');
+
+    //     showHideStatement.style.display = 'block';
+
+    //     console.log(e);
+
+
+    // });
 
 //________THE END______________________________________________________________________________________________________________
 });
