@@ -118,7 +118,7 @@
 
                 // Figure out which thumbnail is chosen
                 var chosen_thumb = $(this).find('img').attr('src');
-                var bigImg = document.getElementById('bigImg');
+                var carousel = document.getElementById('carousel');
 
                 $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
@@ -128,15 +128,19 @@
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
+                var statement = document.querySelector('statement-body');
                 
-                bigImg.style.display = 'block';
+                carousel.style.display = 'block';
+                carousel.style.width = '75%';
+                // carousel.style.margin = '0 0 0 0';
+              
                 bigImg.style.visibility = 'visible';
                 cNav.style.visibility = 'visible';
                 thumbs.style.display =  'none';
                 imgInfo.style.visibility = 'hidden';
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
-
+                statement.style.display = 'block';
                  // show image information 
                 // var imgInfo = document.querySelector('image-info');
                 // imgInfo.style.display = 'block';
@@ -148,7 +152,7 @@
                             
             $('.thumbs-only').on('click', function() {
 
-                var bigImg = document.getElementById('bigImg');
+                var carousel = document.getElementById('carousel');
                 var showThumbs = document.getElementById('thumbNav');
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
@@ -158,13 +162,13 @@
                 var statement = document.querySelector('statement-body');
 
 
-                bigImg.style.visibility = 'hidden';
+                carousel.style.display = 'none';
                 showThumbs.style.display = 'block';
                 imgInfo.style.visibility = 'hidden';
                 cNav.style.visibility = 'hidden';
                 prevImg.style.visibility = 'hidden';
                 nextImg.style.visibility = 'hidden';
-                thumbsContainer.style.margin = '-30em, 0,0,0';
+                thumbsContainer.style.margin = '0, 0, 0, 0';
                 statement.style.visibility = 'hidden';
 
             });

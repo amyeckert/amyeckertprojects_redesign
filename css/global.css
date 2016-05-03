@@ -12,6 +12,9 @@ T #820064
 grey #878787
 */
 html { 
+	height: 100%;
+	margin: 0;
+	padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -34,21 +37,22 @@ html {
 }
 
 body {
-	min-height:100%;
-	padding:0;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	
 }
 .wrapper {
-	height: 100vh;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: nowrap;
+
 }
 
-#truckers .wrapper {
+/*#truckers .wrapper {
 	height: 104vh;
-}
+}*/
 ul {
 	margin:0;
 	padding:0;
@@ -210,10 +214,7 @@ a:active {
 
 }
 
-.statement-body p {
-	text-decoration: underline;
 
-}
 
 /*.........SHOW PAGE LOCATION .......................................*/
 
@@ -224,15 +225,10 @@ section.main-content {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-/*	align-items: flex-start;*/
-	/*flex: 1 0;*/
-	border: 1px solid orange;
+	flex: 1;
 	overflow: hidden;
 }
 
-#carousel {
-	border: 1px solid red;
-}
 #photography .navphoto, 
 #design .navdesign, 
 #interactive .navinter, 
@@ -242,7 +238,7 @@ section.main-content {
 #contact .navcontact, 
 #project-template .navproject {
 	border: 1px solid #878787;
-	}
+}
 
 #photography .navphoto,
 #photography .navphoto, 
@@ -254,7 +250,7 @@ section.main-content {
 #contact .navcontact, 
 #project-template .navproject {
 	border-top:none;
-		}
+}
 
 /*......... MAIN CONTENT AREA .......................................*/
 
@@ -302,7 +298,34 @@ section.main-content {
 	display:none;
 }
 
-/*.............PORTFOLIO TITLES ............................... */
+
+.front-row,
+.project-row {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding-bottom: 1em;
+}
+.front-row-img {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.project-row-img {
+	display: flex;
+	flex-direction: column;
+}
+
+ .front-row-img img,
+ .project-row-img img {
+ 	width: 30%;
+ 	height: auto;
+ 	margin: 0 auto;
+ }
+
+
+ /*.............PORTFOLIO TITLES ............................... */
 
 .front-titles, .project-titles {
 	width: 100%;
@@ -338,8 +361,10 @@ section.main-content {
 
 
 
+
 .menu-side {
-	/*flex-grow: 1;*/
+	order: 1;
+	flex: 1 0;
 	min-width:16%;
 	max-width: 25%;
 	font-size:0.8em;
@@ -389,27 +414,28 @@ section.main-content {
 	padding-left: 0;
 
 }
+
+#carousel {
+	display: none;
+	visibility:hidden;
+	order: 2;
+	flex: 1 0;
+	border: 1px solid red;
+}
 .image-info { 
 	display: block;
 	visibility: hidden;
 	color: #878787;
 }
 
+
 .statement-body {
-	display: block;
-	visibility: visible;
-	width:75%;
+	order: 4;
+	flex: 2 0;
+	display: none;
+	min-width:75%;
 	margin: 0 auto;
 	height:100%;
-
-	 -webkit-column-width: 100%; /* Chrome, Safari, Opera */
-    column-width: 100%;
-	 -webkit-column-count: 1; /* Chrome, Safari, Opera */
-    -moz-column-count: 1; /* Firefox */
-    column-count: 1;
-	 -webkit-column-gap: 20px;  /*Chrome, Safari, Opera*/ 
-    -moz-column-gap: 2040px; /*Firefox*/ 
-    column-gap: 20px;
 	font-size: 0.8em;
 	letter-spacing: 0.03em;
 	color:#878787;
@@ -450,13 +476,9 @@ section.main-content {
   clear: both;
 }
 .grid {
-	order: 2;
-	width: auto;
+	order: 3;
+	min-width: 75%;
 	height: auto;
-	/*flex-grow: 2;*/
-	/*flex-basis: content;*/
-
-	/*width: 100%;*/
 }
 
 .grid-sizer,
@@ -464,7 +486,9 @@ section.main-content {
   width: 20%;
 }
 .grid-item {
-	float:left;
+	order: 1;
+	flex: 1 0;
+	align-self: flex-start;
 	opacity: 1;
 }
 .grid-item:hover {
@@ -692,6 +716,7 @@ input[type="submit"]:hover {
 .footer {
 	order:3;
 	align-self: flex-end;
+	bottom: 0;
 	color: #878787;
 	max-width:1125px;
 	width:100%;
@@ -699,7 +724,6 @@ input[type="submit"]:hover {
 	text-align:left;
 	zoom:1; /*I.E hack */
 	clear: both;
-
 }
 .footer:before,
 .footer:after {
@@ -819,6 +843,9 @@ input[type="submit"]:hover {
 }
 .footer-col-3 li:nth-last-of-type(1) {
 	padding-top:1%;
+}
+#about .footer-col-3 li:nth-last-of-type(1) {
+	padding-top: 1.5%;
 }
 .footer-col-4 {
 	font-size: 0.8em;

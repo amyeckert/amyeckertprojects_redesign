@@ -727,9 +727,9 @@ grey #878787;
 		display: none;
 	}
 
-	#exhibitions .thumbs-container {
+	/*#exhibitions .thumbs-container {
 		margin-top: -30.5em;
-	}
+	}*/
 
 
 	/*.........ABOUT PAGE .......................................*/
@@ -907,22 +907,24 @@ grey #878787;
 	/*........PORTFOLIO LANDING PAGES....................................*/
 
 	.front-row {
-		margin-top: 1em;
+
+		/*margin-top: 1em;*/
 	}
-	.front-row-img {
+	/*.front-row-img {
 		max-width:50%;
-		margin: 0 25% 0 40%;
+		margin: 0 auto;
 	}
 	.front-row-img img {
 		min-width: 30%;
-		max-width: 75%;
-	}
+		max-width: 100%;
+		max-height: 100%
+	}*/
 
-	.project-row-img {
+	/*.project-row-img {
 		min-width: 30%;
 		max-width: 75%;
 
-	}
+	}*/
 
 	#photography .grid,
 	#design .grid,
@@ -1027,7 +1029,7 @@ grey #878787;
 	}
 
 	#carousel {
-		display:block;
+		display:none;
 		width:75%;
 		/*margin-left: 20%;*/
 		/*max-height: 100vh;*/
@@ -1089,19 +1091,16 @@ grey #878787;
 	}
 
 	.grid {
-		width: 75%;
 		z-index: 1;
-		flex-grow: 3;
-		position: absolute;
-		top: -34.45em;
-		margin-left: 18%;
-		right: -81px;
-		overflow-x: hidden;
+		flex-grow: 2;
 	
 	}
-	#letters .grid, 
-	#print-portfolio .grid {
-		top: -30em;
+
+	#photography .grid, 
+	#design .grid,
+	#interactive .grid,
+	#mixedmedia .grid  {
+		margin-left: 0;
 	}
 
 	.grid-sizer,
@@ -1125,12 +1124,13 @@ grey #878787;
 
 
 	.statement-body {
-		display: block;
-		max-width: 80%;
+		/*display: none;
+*/		max-width: 80%;
 		margin-left: 0;
 
 	}
-	#nzbirds .statement-body { margin-top: 3em; }
+
+/*	#nzbirds .statement-body { margin-top: 3em; }*/
 
 	.statement-title {
 		position:relative;
@@ -1268,10 +1268,9 @@ grey #878787;
 	}
 
 	.footer-col-3 img {
-		padding: 10%;
+		padding: 9%;
 		
 	}
-
 	.footer-col-4 {
 		padding-top:2%;
 		margin: 0 0 0 4%;
