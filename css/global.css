@@ -40,11 +40,15 @@ body {
 	
 }
 .wrapper {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 }
 
+#truckers .wrapper {
+	height: 104vh;
+}
 ul {
 	margin:0;
 	padding:0;
@@ -207,7 +211,7 @@ a:active {
 }
 
 .statement-body p {
-	text-decoration:underline;
+	text-decoration: underline;
 
 }
 
@@ -215,12 +219,20 @@ a:active {
 
 
 section.main-content {
-	/*display: flex;*/
-	flex: 1 0;
 	order: 2;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+/*	align-items: flex-start;*/
+	/*flex: 1 0;*/
+	border: 1px solid orange;
 	overflow: hidden;
 }
 
+#carousel {
+	border: 1px solid red;
+}
 #photography .navphoto, 
 #design .navdesign, 
 #interactive .navinter, 
@@ -327,9 +339,11 @@ section.main-content {
 
 
 .menu-side {
+	/*flex-grow: 1;*/
 	min-width:16%;
+	max-width: 25%;
 	font-size:0.8em;
-	float:left;
+	/*float:left;*/
 	margin:0;
 	line-height:2em;	
 }
@@ -413,7 +427,7 @@ section.main-content {
 	margin-top:1em;
 	line-height:1.3em;
 	text-decoration: none;
-	visibility: hidden;
+	visibility: visible;
 }
 .statement-body p:nth-child(1) {
 	margin-top:0;
@@ -436,7 +450,13 @@ section.main-content {
   clear: both;
 }
 .grid {
-	width: 100%;
+	order: 2;
+	width: auto;
+	height: auto;
+	/*flex-grow: 2;*/
+	/*flex-basis: content;*/
+
+	/*width: 100%;*/
 }
 
 .grid-sizer,
@@ -445,17 +465,16 @@ section.main-content {
 }
 .grid-item {
 	float:left;
+	opacity: 1;
 }
-
+.grid-item:hover {
+		opacity:0.8;
+}
 .grid-item img {
   	width: 100%;
 	height:auto;
 	display:block;
-	opacity:1;
-}
-.grid-item img:hover{
-		opacity:0.8;
-
+	
 }
 .grid-item p {
 	display:none;
@@ -672,7 +691,7 @@ input[type="submit"]:hover {
 
 .footer {
 	order:3;
-	align-self:flex-end;
+	align-self: flex-end;
 	color: #878787;
 	max-width:1125px;
 	width:100%;
