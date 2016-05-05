@@ -42,12 +42,10 @@ grey #878787;
 	nav .main-menu {
 		display:inline-block;
 	}
-	.main-content {
-		right:0;
-		top: 0px;
-		margin:0 auto 1em auto;
+	.main-content {	
 		width: 90%;
-		overflow-x: hidden;
+		max-height: 100%;
+		margin: 0 auto;
 	}
 
 	#about p {
@@ -103,32 +101,34 @@ grey #878787;
 	}
 
 	.project-row, .front-row {
-		max-width:100%;
+		max-width: 100%;
 		padding:0;
-		margin:1em auto;
-		overflow:auto;
-	}
+		margin: 1em auto;
 
-	.project-row-img {
-		display:block;
-		max-width:100%;
-		width:100%;
-		margin:0 auto;
-		padding:0;
 	}
 	.front-row-img {
-		display:block;
-		
-		margin:0 auto;
-		padding:0;
-
+		display: block;
+		margin: 0 auto;
+		padding: 0;
 	}
-	.front-row-img img, 
+	.front-row-img img {
+		display: block;
+		margin: 0 auto;
+		width: 50%;
+		min-width: 30%;
+	}
+	.project-row-img {
+		display: block;
+		max-width: 100%;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
 	.project-row-img img {
 		display:block;
 		margin: 0 auto;
-		max-width:65%;
-		min-width:30%;
+		max-width: 100%;
+		min-width: 30%;
 	}
 
 	#photography .grid-sizer a,
@@ -141,14 +141,17 @@ grey #878787;
 
 	/*.........PROJECT PAGES .......................................*/
 	 #carousel {
+	 	display: none;
 	 	max-width: 100%;
 		margin: 0 auto;
 
 	 }
-
+	.menu-side {
+		max-width: 100%;
+	}
 	.menu-side ul li {
-    display: none;
-    width: 100%;
+	    display: none;
+	    width: 100%;
 	}
 
 	#manhome .menu-side ul li:first-child, 
@@ -192,7 +195,7 @@ grey #878787;
 	#nzbirds .menu-side ul li:nth-child(3),
 	#letters .menu-side ul li:nth-child(4),
 	#print-portfolio .menu-side ul li:nth-child(5),
-	#d6sunset .menu-side ul li:nth-child(5),
+	#d6sunset .menu-side ul li:nth-child(6),
 
 	/*interactive*/
 
@@ -210,13 +213,13 @@ grey #878787;
 	.big {
 		width:100%;
 		height: 400px;		
-		display: block;
+		display: none;
 		visibility: visible;
 		z-index: 1;
 	}
 
 	.big-img-container {
-		display: block;
+		display: none;
 	    visibility: visible;
 	    width: 100%;
 	    height: 300px;
@@ -226,18 +229,17 @@ grey #878787;
 	    background-repeat: no-repeat;
 	}
 	.carousel-nav {
+		display: none;
 		margin: 15px auto;
 
 	}
 
 	.grid {
 		width: 100%;
-		margin: -20em 0 0 0;
+		margin: 0.5em 0 0 0;
 
 	}
-	#nzbirds .grid {
-		margin: -20em 0 0 0;
-	}
+
 	.grid-sizer {
 		width: 50%;
 
@@ -246,22 +248,21 @@ grey #878787;
 		width: 100%;
 
 	}
+	.grid-item:hover {
+		opacity: 1;
+	}
 
 	.item p {
 		display: none;
 	}
-	/*.button {
-		padding: 12px;
-		font-size: 0.7em;
-		margin: 0 3px;
-	}*/
+	
 	.image-info {
 		display: none;
 
 	}
 
 	.statement-body {
-		display: block;
+		display: none;
 		width: 90%;
 		padding: 15px auto;
 		margin: 0 auto;
@@ -270,7 +271,6 @@ grey #878787;
 		letter-spacing: 0.05em;
 
 	}
-	// #nzbirds .statement-body { margin-top: 3em; }
 
 	/*.........ABOUT PAGE .......................................*/
 
@@ -340,7 +340,9 @@ grey #878787;
 		border-top:1px solid #878787;
 			
 	}
-
+	#home .footer {
+		margin-top: 0;
+	}
 	.column {
 		width:100%;
 		
@@ -445,125 +447,46 @@ grey #878787;
 	nav ul li a {
 		font-size: 1.5em;
 	}
-
-	section.main-content {
-		position: relative;
-		right:0;
-		top: 0px;
-		margin:0 auto 1em auto;
-		width: 100%;
-		overflow-x: hidden;
+	nav ul li:first-child {
+		border: none;
 	}
 
-	#exhibitions .main-content, 
-	#photography .main-content,
-	#design .main-content,
-	#interactive .main-content,
-	#mixedmedia .main-content {
-		position: relative;
-		top: 0;
+	.main-content {
+		/*margin-top: 1rem;*/
+		order: 2;
 	}
-	
+		
 	#contact .page-location, 
 	#contact .page-location p {
 		display: none;
 
 	}
-		
-	.front-titles, 
-	.project-titles {
-		width: 100%;
-		background-color: white;	
-		float: left;
-		position: relative; 
-		top: 30%;
-		color: #878787;
-		margin-bottom: 4%;
-		font-size:0.9em;
+	/* ............	FRONT PAGE...........................................*/
 
-	}
-	
-	.front-titles p, 
-	.project-titles p {
-		font-size:0.85em;
-		text-align:center;
-		margin:0;
-		padding:0;
-	}
-	
 	.front-row {
 		margin-top: 1em;
 	}
 	.front-row-img {
-		max-width:50%;
-		margin: 0 25% 0 40%;
+		max-width: 100%;
+		margin: 0 auto;
 	}
 	.front-row-img img {
-		min-width: 30%;
-		max-width: 75%;
+		margin: 0 auto;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
 
-
-	.project-row-img {
-		min-width: 30%;
-		max-width: 75%;
-
-	}
-
-	#photography .grid,
-	#design .grid,
-	#mixedmedia .grid,
-	#interactive .grid {
-		position: relative;
-		top: 0;
-		right: 0;
-		max-width: 100%;
-		height: auto;
-		
-	}
-
-	#photography .grid-sizer, 
-	#design .grid-sizer,
-	#interactive .grid-sizer,
-	#mixedmedia .grid-sizer {
-		
-		width: 50%;
-	}
-
-
-
-	#photography .grid-item,
-	#design .grid-item,
-	#interactive .grid-item,
-	#mixedmedia .grid-item {
-		
-		width: 50%;
-
-	}
-
-	#photography .grid-sizer a, 
-	#design .grid-sizer a,
-	#interactive .grid-sizer a, 
-	#mixedmedia .grid-sizer a {
-		display: none;
-	}
-
-	#photography .grid-sizer a:nth-child(-n+2),
-	#design .grid-sizer a:nth-child(-n+2),
-	#interactive .grid-sizer a:nth-child(-n+2),
-	#mixedmedia .grid-sizer a:nth-child(-n+2) {
-		display: block;
-	}
-
+	
 	/*.........PROJECT PAGES.......................................*/
+	#manhome .main-content {
+		display: flex;
+		flex-direction: row;
+	}
 
 	.menu-side {
-		position: absolute;
-		left: 0;
-		top: 0.8em;
-		width: 24%;
+		order: 1;
+		margin-top: 1em;
 	}
+
 	#exhibitions .menu-side {
 		display:none;
 	}
@@ -632,22 +555,21 @@ grey #878787;
 	 /*................CAROUSEL AREA ................................*/
 
 	#carousel {
+		display: none;
 		position: relative;
-		top: 1em;
-		width: 75%;
-		height: 600px;
-		margin: 0 0 0 25%;
+		height: auto;
+		margin: 1em 0 
 	}
 
 	.big {
-		width: 100%;
-		height: 750px;
+	/*	width: 100%;
+		height: 100%;
 		display: block;
 		visibility: visible;
 		z-index: 0;	
 		position:absolute;
 		top: 0;
-		right: 0%;
+		right: 0%;*/
 	
 	}
 
@@ -655,7 +577,7 @@ grey #878787;
 	    display: block;
 	    visibility: visible;
 	    width: 100%;
-	    height: 600px;
+	    height: 100%;
 	    position: absolute;
 	    top: 0;
 	    right:0;
@@ -665,57 +587,50 @@ grey #878787;
 
 	.carousel-nav {
 		min-width: 25%;
-		/*top: 34%;
-		left: 0;*/
 	}
 	.image-info {
 		display: none;
 	}
-	.statement-title {
-		width:100%;
-		margin:1em 0 1em 0;
-	}
-
-	#nzbirds .statement-body { margin-top: 3em; }
-
-	.statement-body {
-		display: block;
-		visibility: visible;
-		max-width: 70%;
-		margin-left: 0;
-
-	}
 	
-	.statement-body p {
-		display: block;
-		visibility: visible;
-		min-width: 50%;
-		max-width: 80%;
-		width:100%;
-		padding-top: 8px;
-		margin:0;
-		text-indent: 10px;
-		letter-spacing: 0.05em;
+	.thumbs {
+		order: 2;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 75%;
+		height: 100%;
 
 	}
 
+	.thumbs-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;	
+	}
+	.item {
+		order: 1;
+		width: 25%;
+		height: 25%;
+		flex-basis: auto;
+	}
+
+	.item img {
+		width: 100%;
+		height: auto;
+	}
 	.grid {
-		max-width: 100%;
-    	margin: 0 auto;
-		z-index: 1;
-		position: absolute;
-		top: 0;
-		right: 0;
-	
-	}
-
-	#exhibitions .grid {
-		top: 447px;
+		flex-grow: 2;
+		order: 2;
+		/*min-width: 74%;*/
+		width: 75%;
+		margin-top: 1em;
+		
 	}
 
 	.grid-sizer,
 	.grid-item {
-		width: 15%;
+		max-width: 15%;
+		height: auto;
 
 	}
 	.grid-item img {
@@ -727,10 +642,32 @@ grey #878787;
 		display: none;
 	}
 
-	/*#exhibitions .thumbs-container {
-		margin-top: -30.5em;
-	}*/
 
+	.statement-body {
+		/*display: none;
+		visibility: visible;
+		max-width: 70%;
+		margin-left: 0;
+
+	}
+	.statement-title {
+		/*width:100%;
+		margin:1em 0 1em 0;*/
+	}
+	.statement-body p {
+		/*display: block;
+		visibility: visible;
+		min-width: 50%;
+		max-width: 80%;
+		width:100%;
+		padding-top: 8px;
+		margin:0;
+		text-indent: 10px;
+		letter-spacing: 0.05em;*/
+
+	}
+
+	
 
 	/*.........ABOUT PAGE .......................................*/
 	.about-me {
@@ -804,7 +741,7 @@ grey #878787;
 		color: #878787;	
 		max-width:1125px;
 		width:100%;
-		margin-top: 10px;
+		/*margin-top: 10px;*/
 		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1; 	
@@ -1031,11 +968,8 @@ grey #878787;
 	#carousel {
 		display:none;
 		width:75%;
-		/*margin-left: 20%;*/
-		/*max-height: 100vh;*/
-		/*position: relative;*/
-		overflow-x: hidden;
-		overflow-y: hidden;
+		/*overflow-x: hidden;
+		overflow-y: hidden;*/
 
 	}
 	.big {
