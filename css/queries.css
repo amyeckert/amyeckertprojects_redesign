@@ -135,6 +135,10 @@ grey #878787;
 		max-width: 100%;
 		min-width: 30%;
 	}
+	#design .project-row a:first-child, 
+	#mixedmedia .project-row a:nth-child(2) {
+	width: 100%;
+	}
 
 	#photography .grid-sizer a,
 	#design .grid-sizer a,
@@ -146,18 +150,42 @@ grey #878787;
 
 	/*.........PROJECT PAGES .......................................*/
 	 #carousel {
+	 	order: 2;
 	 	display: none;
-	 	max-width: 100%;
+	 	width: 100%;
 		margin: 0 auto;
 
 	 }
 	.menu-side {
-		max-width: 100%;
+		display: inline-block;
+		min-width: 100%;
 	}
 	.menu-side ul li {
 	    display: none;
 	    width: 100%;
 	}
+
+	.carousel-nav {
+		display: inline-block;
+		position: relative;
+		top:440px;
+		width: 100%;
+	
+	}
+	.carousel-nav button:first-child {display: none;}
+
+	.carousel-nav button:nth-child(2),
+	.carousel-nav button:nth-child(3) {
+		padding: 0 5px;
+		font-size: 2em;
+		margin: 0 auto;
+	}
+	.carousel-nav button:nth-child(2) {
+		margin-left: 36%;
+	}
+	
+
+
 
 	#manhome .menu-side ul li:first-child, 
 	#truckers .menu-side ul li:first-child,
@@ -182,7 +210,7 @@ grey #878787;
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
-		display: block;
+		display: inline-block;
 		width:100%;
 	}
 
@@ -211,37 +239,31 @@ grey #878787;
 	#proteus .menu-side ul li:nth-child(5),
 	#kansas .menu-side ul li:nth-child(6),
 	#weather .menu-side ul li:nth-child(7) {
-		display: block;
+		display: inline-block;
 		width:100%;
 	}
 
 	.big {
 		width:100%;
 		height: 400px;		
-		display: none;
+		display: block;
 		visibility: visible;
 		z-index: 1;
 	}
 
 	.big-img-container {
-		display: none;
+		display: block;
 	    visibility: visible;
 	    width: 100%;
-	    height: 300px;
+	    height: 400px;
 	    margin-left: 0;
-        margin-top: 3.5em;
 	    background-size: contain;
 	    background-repeat: no-repeat;
-	}
-	.carousel-nav {
-		display: none;
-		margin: 15px auto;
-
 	}
 
 	.grid {
 		width: 100%;
-		margin: 0.5em 0 0 0;
+		margin: -1em 0 0 0;
 
 	}
 
@@ -256,15 +278,11 @@ grey #878787;
 	.grid-item:hover {
 		opacity: 1;
 	}
+	.item{ padding:7px 0;}
 
-	.item p {
-		display: none;
-	}
+	.item p {display: none;}
 	
-	.image-info {
-		display: none;
-
-	}
+	.image-info {display: none;}
 
 	.statement-body {
 		display: none;
@@ -340,7 +358,7 @@ grey #878787;
 	/*......... FOOTER.......................................*/
 	.footer {
 		width:90%;
-		margin: 15px auto 0 auto;
+		margin: 50px auto 0 auto;
 		padding:0;
 		border-top:1px solid #878787;
 			
@@ -564,18 +582,6 @@ grey #878787;
 		position: relative;
 		height: auto;
 		margin: 1em 0 
-	}
-
-	.big {
-	/*	width: 100%;
-		height: 100%;
-		display: block;
-		visibility: visible;
-		z-index: 0;	
-		position:absolute;
-		top: 0;
-		right: 0%;*/
-	
 	}
 
 	.big-img-container {
@@ -847,26 +853,6 @@ grey #878787;
 		margin-bottom:1em;
 	}
 	/*........PORTFOLIO LANDING PAGES....................................*/
-
-	.front-row {
-
-		/*margin-top: 1em;*/
-	}
-	/*.front-row-img {
-		max-width:50%;
-		margin: 0 auto;
-	}
-	.front-row-img img {
-		min-width: 30%;
-		max-width: 100%;
-		max-height: 100%
-	}*/
-
-	/*.project-row-img {
-		min-width: 30%;
-		max-width: 75%;
-
-	}*/
 
 	#photography .grid,
 	#design .grid,
