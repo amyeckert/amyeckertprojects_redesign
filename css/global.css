@@ -315,9 +315,7 @@ a:active {
 	height: auto;
 
 }
-.project-row a, 
-.project-row a,
-.project-row a, 
+ 
 .project-row a {
 	display: none;
 }
@@ -349,6 +347,9 @@ a:active {
 	justify-content: center;
 }
 
+.front-row-img img {
+	margin: 0 auto;
+}
 .project-row-img {
 	display: flex;
 	flex-direction: column;
@@ -402,8 +403,7 @@ a:active {
 	flex: 1 0;
 	min-width: 25%;
 	max-width: 25%;
-	font-size: 0.8em;
-	/*float:left;*/
+	font-size: 1.1em;
 	margin:0;
 	line-height:2em;	
 }
@@ -456,6 +456,7 @@ a:active {
 	order: 2;
 	flex: 1 0;
 	border: 1px solid red;
+	margin-bottom: 1em;
 }
 .image-info { 
 	display: block;
@@ -767,9 +768,9 @@ input[type="submit"]:hover {
 	color: #878787;
 	max-width:1125px;
 	width:100%;
-	margin-bottom:2em;
+	margin-bottom: 5em;
 	text-align:left;
-	zoom:1; /*I.E hack */
+	zoom: 1; /*I.E hack */
 	clear: both;
 }
 .footer:before,

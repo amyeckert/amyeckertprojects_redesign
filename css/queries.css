@@ -118,6 +118,10 @@ grey #878787;
 		width: 50%;
 		min-width: 30%;
 	}
+	.project-row a {
+		display: block;
+	}
+	
 	.project-row-img {
 		display: block;
 		max-width: 100%;
@@ -827,7 +831,7 @@ grey #878787;
 	}
 
 	nav ul {
-		font-size:0.9em;
+		font-size: 1.3em;
 		width:100%;
 		margin:0 auto;
 	}
@@ -1019,8 +1023,8 @@ grey #878787;
 		visibility: hidden;
 		display: block;
 		height: auto;
-		width: 52%;
-		border-top: 1px solid #68b7d5;
+		width: 60%;
+		/*border-top: 1px solid #68b7d5;*/
 		z-index: 1;
 		
 	}
@@ -1187,11 +1191,11 @@ grey #878787;
 		color: #878787;
 		max-width: 1125px;
 		width:100%;
-		height:5em;
+		height: 3em;
 		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1;	
-		font-size: 0.7em;
+		font-size: 1.3em;
 	}
 
 	.column {
