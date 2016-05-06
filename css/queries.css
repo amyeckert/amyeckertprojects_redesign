@@ -137,7 +137,7 @@ grey #878787;
 	}
 	#design .project-row a:first-child, 
 	#mixedmedia .project-row a:nth-child(2) {
-	width: 100%;
+		width: 100%;
 	}
 
 	#photography .grid-sizer a,
@@ -498,6 +498,10 @@ grey #878787;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
 
+	#design .project-row a:first-child, 
+	#mixedmedia .project-row a:nth-child(2) {
+		width: 150%;
+	}
 	
 	/*.........PROJECT PAGES.......................................*/
 	#manhome .main-content {
@@ -842,7 +846,7 @@ grey #878787;
 		margin:0 auto;
 	}
 
-	section.main-content {
+	.main-content {
 		width:100%;
 		height: auto;
 		overflow: hidden;
@@ -870,7 +874,6 @@ grey #878787;
 	#design .grid-sizer,
 	#interactive .grid-sizer,
 	#mixedmedia .grid-sizer {
-		
 		width: 50%;
 	}
 
@@ -892,7 +895,6 @@ grey #878787;
 	#design .grid-item,
 	#interactive .grid-item,
 	#mixedmedia .grid-item {
-		
 		width: 50%;
 
 	}
