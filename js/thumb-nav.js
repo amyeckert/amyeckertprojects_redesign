@@ -12,6 +12,9 @@
           $grid.masonry();
         });
 
+        var width = screen.width;
+        var height = screen.height;
+
         function thumbnailNav() {
             /*-------------------------------------------------------------------------------------------------
                         previous or next button */
@@ -159,14 +162,12 @@
             /*-------------------------------------------------------------------------------------------------
                   SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
         };
-        var width = screen.width;
-        var height = screen.height;
-        
-        // if ( width >= '450px' ) { 
 
-            // run thumbnailNav...
+        console.log(width);
 
-        // } else ( do not );
+        if ( width >= '450px' ) { 
+            thumbnailNav();           
+        };
 
 
 //________THE END______________________________________________________________________________________________________________
