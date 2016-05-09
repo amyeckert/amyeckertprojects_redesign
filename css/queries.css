@@ -20,9 +20,8 @@ grey #878787;
 @media only screen and (max-width: 650px) { 
 
 	.header {
-		// width:90%;
 		max-width:90%;
-		margin:1em auto 0 auto;a
+		margin: 0 auto;
 		border-bottom:1px solid #878787;
 	}
 
@@ -360,12 +359,12 @@ grey #878787;
 
 	}
 	.temp-contact_page p {
-		padding: 8% 0 8% 0;
+		padding: 2% 0;
 		text-align: center;
 	}
- 	.temp-contact_page p:last-child {
+ 	/*.temp-contact_page p:last-child {
  		display:none;
- 	}
+ 	}*/
 	.temp-contact_page:hover {
 		    background-color: #4866fb;	    
 	}
@@ -376,7 +375,7 @@ grey #878787;
 	.footer {
 		width:90%;
 		margin: 10px auto 0 auto;
-		padding:0;
+		padding: 0;
 		border-top:1px solid #878787;
 			
 	}
@@ -433,7 +432,7 @@ grey #878787;
 		width:100%; 
 		border-bottom:1px solid #878787;
 	}
-	div.logo {
+	.logo {
 		width:100%;
 		max-width:900px;
 		height:auto;
@@ -441,7 +440,7 @@ grey #878787;
 	}
 	
 	.logo img {
-		max-width: 100%;
+		max-width: 50%;
 	}
 
 	#exhibitions .menu-top, 
@@ -522,14 +521,15 @@ grey #878787;
 	}
 	
 	/*.........PROJECT PAGES.......................................*/
-	#manhome .main-content {
+	.main-content {
 		display: flex;
 		flex-direction: row;
 	}
 
 	.menu-side {
-		order: 1;
+		order: 0;
 		margin-top: 1em;
+
 	}
 
 	#exhibitions .menu-side {
@@ -597,15 +597,15 @@ grey #878787;
 		display: block;
 		width:100%;
 	}
-	 /*................CAROUSEL AREA ................................*/
-
+	 
 	#carousel {
 		display: none;
 		position: relative;
-		height: auto;
-		margin: 1em 0 
+		height: 26em;
+		margin: 1em 0; 
+		order: 2;
+		flex-grow: 2;
 	}
-
 	.big-img-container {
 	    display: block;
 	    visibility: visible;
@@ -617,14 +617,9 @@ grey #878787;
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	}
-
-	.carousel-nav {
-		min-width: 25%;
-	}
 	.image-info {
 		display: none;
 	}
-	
 	.thumbs {
 		order: 2;
 		display: flex;
@@ -634,35 +629,25 @@ grey #878787;
 		height: 100%;
 
 	}
-
 	.thumbs-container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;	
 	}
-	.item {
-		order: 1;
-		width: 25%;
-		height: 25%;
-		flex-basis: auto;
-	}
-
-	.item img {
-		width: 100%;
-		height: auto;
-	}
 	.grid {
+		display: block;
+		order: 0;
 		flex-grow: 2;
-		order: 2;
-		/*min-width: 74%;*/
-		width: 75%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		min-width: 74%;
+		max-width: 75%;
 		margin-top: 1em;
 		
 	}
-
 	.grid-sizer,
 	.grid-item {
-		max-width: 15%;
+		max-width: 30%;
 		height: auto;
 
 	}
@@ -671,11 +656,20 @@ grey #878787;
 		height: auto;
 	}
 
+	.item img {
+		width: 100%;
+		height: auto;
+	}
 	.item p {
 		display: none;
 	}
 
-
+	.carousel-nav {
+			min-width: 25%;
+			order: 4;
+			/*align-self:flex-end;*/
+			min-width: 100%;
+	}
 	.statement-body {
 		/*display: none;
 		visibility: visible;
@@ -685,7 +679,7 @@ grey #878787;
 	}
 	.statement-title {
 		/*width:100%;
-		margin:1em 0 1em 0;*/
+		margin:1em 0 1em 0;
 	}
 	.statement-body p {
 		/*display: block;
@@ -712,16 +706,32 @@ grey #878787;
 
 	/*.........CONTACT PAGE .......................................*/
 
-	div .contact-info {
-		width: 75%;
-		margin:0;
+ 	#contact .main-content{
+ 		flex-direction: row;
+ 		/*align-content: center;*/
+ 	}
+ 	.contact-img {
+		display: block;
+		width: 40%;
+		height: auto;
+		margin: 0 5%;
+	}	
+	.contact-img img {
+		width: 100%;
+		height: auto;
+		margin: 1em auto;
+	}
+	.contact-info {
+		width: 40%;
+		margin:0 5%;
+		text-align: center;
 		
 	}
-	.temp-contact_page {
-	display: block;	
-	margin: 30px auto;
-	width: 100%;
 
+	.temp-contact_page {
+		display: block;	
+		margin: 30px auto;
+		width: 100%;
 	}
 	.temp-contact_page p {
 		padding: 4% 0 1.5% 0;
@@ -733,17 +743,10 @@ grey #878787;
 	}
 
 
-	div .message-body {
+	.message-body {
 		width: 100%; 
 		float:left;
 		clear:both; 
-	}
-	div .contact-img {
-		display: none;
-		width:49%;
-		height:auto;
-		float:right;
-		clear:both;
 	}
 
 	legend { margin:0; }
@@ -774,7 +777,6 @@ grey #878787;
 		color: #878787;	
 		max-width:1125px;
 		width:100%;
-		/*margin-top: 10px;*/
 		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1; 	
@@ -829,20 +831,15 @@ grey #878787;
 @media only screen and (min-width: 1126px )  {
 
 	.wrapper  {
-		/*display:flex;
-		flex-direction:column;*/
 		max-width:1126px;
 		min-width:305px;
 		margin:0 auto;
-		/*min-height: 100vh;*/
 	}
 
 
 	.header {
-		/*order:1;*/
 		width:100%;
 		min-width:300px;
-		margin-top: 1em;
 		border-bottom: none;
 	}
 
@@ -855,21 +852,19 @@ grey #878787;
 		display:block; 
 		text-align: left;
 		border-top: 1px solid #aba787;
-
 	}
-
 	nav ul {
 		font-size: 1.3em;
 		width:100%;
 		margin:0 auto;
 	}
-
 	.main-content {
+		display: flex;
+		flex-direction: row;
 		width:100%;
 		height: auto;
 		overflow: hidden;
 	}
-
 	#contact.main-content {
 		margin-top:0.28em;
 		margin-bottom:1em;
@@ -942,9 +937,7 @@ grey #878787;
 	/*.........PROJECT PAGES .......................................*/
 
 	.menu-side {
-		display:block;
-		width:25%;
-		margin-top: 1em;
+		order: 0;
 	}
 	#exhibitions .menu-side{
 		display: block;
@@ -978,9 +971,10 @@ grey #878787;
 
 	#carousel {
 		display:none;
-		width:75%;
-		/*overflow-x: hidden;
-		overflow-y: hidden;*/
+		position: relative;
+		order: 2;
+		flex-grow: 2;
+		height: 26em;
 
 	}
 	.big {
@@ -1025,20 +1019,8 @@ grey #878787;
 		padding-left:0;
 	}
 
-	.carousel-nav {
-		visibility: hidden;
-		display: block;
-		height: auto;
-		width: 65%;
-		/*border-top: 1px solid #68b7d5;*/
-		z-index: 1;
-		
-	}
-
 	.grid {
-		z-index: 1;
-		flex-grow: 2;
-	
+		order: 0;
 	}
 
 	#photography .grid, 
@@ -1067,7 +1049,14 @@ grey #878787;
 		display:none;
 	}
 
-
+	.carousel-nav { 
+		order: 4;
+		visibility: hidden;
+		display: block;
+		height: auto;
+		width: 100%;
+		
+	}
 	/*.statement-body {
 		max-width: 80%;
 		margin-left: 0;

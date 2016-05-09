@@ -91,10 +91,10 @@ button:hover {
 /* .........HEADER .............................*/
 .header {
 	order: 1;
-	padding-top: 10px;
+	padding-top: 20px;
 	border-bottom:1px solid #878787;
 }
-div .logo {
+.logo {
 
 	height:auto;
 	padding-bottom:1%;	

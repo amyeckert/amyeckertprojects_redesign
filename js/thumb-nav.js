@@ -151,18 +151,15 @@
             var previous = document.getElementById('prevImg');
             var next = document.getElementById('nextImg');
             var clNav = document.getElementById('cNav');
-            var thumbs = document.getElementById('thumbNav');
             var grid = document.querySelector('grid');
             // var showHideStatement = document.getElementById('statement-body');
             
-            thumbs.style.display = 'flex'
             carousel.style.display = 'none';
             showThumbs.style.display = 'block';
             imgInfo.style.visibility = 'hidden';
             cNav.style.visibility = 'hidden';
             prevImg.style.visibility = 'hidden';
             nextImg.style.visibility = 'hidden';
-            // grid.style.height = '600px';
             // showHideStatement.display = 'none';
 
         });
