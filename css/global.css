@@ -236,6 +236,10 @@ a:active {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	flex: 1;
+
+	height: 50vh;
+	min-height: 50vh;
+
 }
 
 #photography .navphoto, 
@@ -520,6 +524,7 @@ a:active {
 	flex-wrap: wrap;	
 }
 .item {
+	display: -webkit-inline-block; 
 	order: 1;
 	width: 15%;
 	height: auto;
@@ -607,6 +612,7 @@ a:active {
 }
 .grid-item p {
 	display:none;
+	color: #fff;
 }
 
 /*.........ABOUT PAGE .......................................*/
