@@ -237,8 +237,8 @@ a:active {
 	justify-content: flex-start;
 	flex: 1;
 
-	height: 50vh;
-	min-height: 50vh;
+	/*height: 50vh;
+	min-height: 50vh;*/
 
 }
 
