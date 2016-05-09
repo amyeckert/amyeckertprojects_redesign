@@ -39,13 +39,15 @@ grey #878787;
 		min-width: 45%;
 	}
 		
-	nav .main-menu {
+	.main-menu {
 		display:inline-block;
 	}
 	.main-content {	
 		width: 90%;
 		max-height: 100%;
 		margin: 0 auto;
+		flex: 0;
+
 	}
 
 	#about p {
@@ -120,6 +122,7 @@ grey #878787;
 	}
 	.project-row a {
 		display: block;
+		padding: 5px 0;
 	}
 	
 	.project-row-img {
@@ -149,14 +152,10 @@ grey #878787;
 
 
 	/*.........PROJECT PAGES .......................................*/
-	 #carousel {
-	 	order: 2;
-	 	display: none;
-	 	width: 100%;
-		margin: 0 auto;
-
-	 }
+	
+	/*.........MENU-SIDE ............*/
 	.menu-side {
+		order: 1;
 		display: inline-block;
 		min-width: 100%;
 	}
@@ -164,28 +163,6 @@ grey #878787;
 	    display: none;
 	    width: 100%;
 	}
-
-	.carousel-nav {
-		display: inline-block;
-		position: relative;
-		top:440px;
-		width: 100%;
-	
-	}
-	.carousel-nav button:first-child {display: none;}
-
-	.carousel-nav button:nth-child(2),
-	.carousel-nav button:nth-child(3) {
-		padding: 0 5px;
-		font-size: 2em;
-		margin: 0 auto;
-	}
-	.carousel-nav button:nth-child(2) {
-		margin-left: 36%;
-	}
-	
-
-
 
 	#manhome .menu-side ul li:first-child, 
 	#truckers .menu-side ul li:first-child,
@@ -243,6 +220,16 @@ grey #878787;
 		width:100%;
 	}
 
+	#carousel {
+	 	order: 2;
+	 	display: none;
+	 	width: 100%;
+		margin: 0.5em auto;
+
+	 }
+	
+	
+
 	.big {
 		width:100%;
 		height: 400px;		
@@ -262,8 +249,10 @@ grey #878787;
 	}
 
 	.grid {
+		order: 3;
 		width: 100%;
-		margin: -1em 0 0 0;
+		margin: 0 0 0 0;
+
 
 	}
 
@@ -278,14 +267,34 @@ grey #878787;
 	.grid-item:hover {
 		opacity: 1;
 	}
-	.item{ padding:7px 0;}
+	.item{ padding: 5px 0;}
 
 	.item p {display: none;}
 	
 	.image-info {display: none;}
 
+	.carousel-nav {
+		display: inline-block;
+		position: relative;
+		order: 4;
+		/*top: 45px;*/
+		width: 100%;
+	
+	}
+	.carousel-nav button:first-child {display: none;}
+
+	.carousel-nav button:nth-child(2),
+	.carousel-nav button:nth-child(3) {
+		padding: 0 5px;
+		font-size: 2em;
+		margin: 0 auto;
+	}
+	.carousel-nav button:nth-child(2) {
+		margin-left: 36%;
+	}
 	.statement-body {
 		display: none;
+		order: 5;
 		width: 90%;
 		padding: 15px auto;
 		margin: 0 auto;
@@ -333,18 +342,26 @@ grey #878787;
 
 	/*........CONTACT PAGE ............................................*/
 
-	div .contact-img img {
+	.contact-img {
 		display: none;
+	}
+	.contact-img img {
+		display: none;
+	}
+	.contact-info {
+		width: 100%;
+		height: 3em;
+		margin: 2em auto;
 	}
 	.temp-contact_page {
 	display: block;	
-	margin: 30px auto;
+	margin: 0 auto;
 	width: 100%;
 
 	}
 	.temp-contact_page p {
 		padding: 8% 0 8% 0;
-		text-indent: 6px;
+		text-align: center;
 	}
  	.temp-contact_page p:last-child {
  		display:none;
@@ -358,7 +375,7 @@ grey #878787;
 	/*......... FOOTER.......................................*/
 	.footer {
 		width:90%;
-		margin: 50px auto 0 auto;
+		margin: 10px auto 0 auto;
 		padding:0;
 		border-top:1px solid #878787;
 			
@@ -392,9 +409,10 @@ grey #878787;
 	.footer-col-1 ul li a, 
 	.footer-col-2 ul li a  {
 		display: block;
-	    padding:5% 0;
+	    padding: 6% 0;
 	    width: 100%;
 	    height: 100%;
+	    text-align: center;
 	}			
 } 
 
