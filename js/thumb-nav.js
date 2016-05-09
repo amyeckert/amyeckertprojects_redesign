@@ -163,7 +163,7 @@
                   SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
         };
 
-        console.log(width);
+        console.log( width, height );
 
         if ( width >= '450px' ) { 
             thumbnailNav();           
