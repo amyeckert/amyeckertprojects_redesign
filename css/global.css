@@ -108,6 +108,7 @@ body {
 
 }
 
+
 ul {
 	margin:0;
 	padding:0;
@@ -147,7 +148,7 @@ button:hover {
 }
 
 /* .........HEADER .............................*/
-.header {
+header {
 	order: 1;
 	padding-top: 20px;
 	border-bottom:1px solid #878787;
@@ -493,30 +494,30 @@ nav.menu-side li a:hover{
 	
 }
 /*.PHOTGRPHY side menu......... */
-#manhome .menu-side li:nth-child(2) a,
-#truckers .menu-side li:nth-child(3) a,
-#mncooks .menu-side li:nth-child(4) a,
-#submarine .menu-side li:nth-child(5) a, 
-#soap .menu-side li:nth-child(6) a,
-#optimiste .menu-side li:nth-child(7) a, 
-#mossburn .menu-side li:nth-child(8) a,
+#manhome .menu-side li:nth-child(1) a,
+#truckers .menu-side li:nth-child(2) a,
+#mncooks .menu-side li:nth-child(3) a,
+#submarine .menu-side li:nth-child(4) a, 
+#soap .menu-side li:nth-child(5) a,
+#optimiste .menu-side li:nth-child(6) a, 
+#mossburn .menu-side li:nth-child(7) a,
 	
 /*.DESIGN side menu*/
-#mhbook .menu-side li:nth-child(2) a,
-#nzbirds .menu-side li:nth-child(3) a,
-#letters .menu-side li:nth-child(4) a, 
-#print-portfolio .menu-side li:nth-child(5) a, 
-#d6sunset .menu-side li:nth-child(6) a,
+#mhbook .menu-side li:nth-child(1) a,
+#nzbirds .menu-side li:nth-child(2) a,
+#letters .menu-side li:nth-child(3) a, 
+#print-portfolio .menu-side li:nth-child(4) a, 
+#d6sunset .menu-side li:nth-child(5) a,
 
 /*.INTERACTIVE side-menu...... */
 
 /*.MIXED MEDIA side menu.....*/
-#misunderstood .menu-side li:nth-child(2) a, 
-#rigs .menu-side li:nth-child(3) a,
-#prefab .menu-side li:nth-child(4) a,
-#proteus .menu-side li:nth-child(5) a,
-#kansas .menu-side li:nth-child(6) a,
-#weather .menu-side li:nth-child(7) a {
+#misunderstood .menu-side li:nth-child(1) a, 
+#rigs .menu-side li:nth-child(2) a,
+#prefab .menu-side li:nth-child(3) a,
+#proteus .menu-side li:nth-child(4) a,
+#kansas .menu-side li:nth-child(5) a,
+#weather .menu-side li:nth-child(6) a {
 	border-bottom:1px solid #878787;
 }
 
@@ -851,7 +852,7 @@ input[type="submit"]:hover {
 
 /*.............FOOTER....................................................*/
 
-.footer {
+footer {
 	order:3;
 	align-self: flex-end;
 	/*bottom: 0;*/

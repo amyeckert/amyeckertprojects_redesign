@@ -1,6 +1,10 @@
 ;(function($) {
 
     $(document).ready(function() {
+
+        var width = screen.availWidth;
+        var height = screen.availHeight;
+
         // init Masory
         var $grid = $('.grid').masonry({
           itemSelector: '.grid-item',
@@ -12,8 +16,6 @@
           $grid.masonry();
         });
 
-        var width = screen.width;
-        var height = screen.height;
 
         function thumbnailNav() {
             /*-------------------------------------------------------------------------------------------------
@@ -161,13 +163,17 @@
             });
             /*-------------------------------------------------------------------------------------------------
                   SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
-        };
+    
 
-        console.log( width, height );
+            console.log( width, height );
+        }
 
-        if ( width >= '450px' ) { 
-            thumbnailNav();           
-        };
+        if ( width >= 650 ) {
+            thumbnailNav();
+        }   
+        // if ( width >= '450px' ) { 
+        //     return thumbnailNav();           
+        // });
 
 //________THE END______________________________________________________________________________________________________________
 });

@@ -29,6 +29,10 @@ grey #878787;
 
 @media only screen and (max-width: 650px) { 
 
+	.wrapper {
+		max-width: 100%;
+		margin: 0 auto;
+	}
 	.header {
 		max-width:90%;
 		margin: 0 auto;
@@ -36,7 +40,7 @@ grey #878787;
 	}
 
 	.logo {  
-		width:100%;
+		width:90%;
 	 	min-width:200px;
 	 	margin: auto;
 	 	height:auto; 
@@ -102,7 +106,7 @@ grey #878787;
 		display: none;
 	} 
 	#home .grid-sizer {
-		width:100%;
+		width: 100%;
 
 	}
 	.statement-title {
@@ -162,7 +166,6 @@ grey #878787;
 
 	/*.........PROJECT PAGES .......................................*/
 	
-	/*.........MENU-SIDE ............*/
 	nav.menu-side {
 		order: 1;
 		display: inline-block;
@@ -172,68 +175,55 @@ grey #878787;
 	    display: none;
 	    width: 100%;
 	}
-
-	#manhome .menu-side ul li:first-child, 
-	#truckers .menu-side ul li:first-child,
-	#mncooks .menu-side ul li:first-child,
-	#submarine .menu-side ul li:first-child,
-	#soap .menu-side ul li:first-child,
-	#optimiste .menu-side ul li:first-child,
-	#mossburn .menu-side ul li:first-child,
-
-	/*design*/
-	#mhbook .menu-side ul li:first-child,
-	#nzbirds .menu-side ul li:first-child,
-	#letters .menu-side ul li:first-child,
-	#print-portfolio .menu-side ul li:first-child,
-	#d6sunset .menu-side ul li:first-child,
-	/*interactive*/
-
-	/*mixed media*/ 
-	#misunderstood .menu-side ul li:first-child,
-	#rigs .menu-side ul li:first-child,
-	#prefab .menu-side ul li:first-child,
-	#proteus .menu-side ul li:first-child,
-	#kansas .menu-side ul li:first-child,
-	#weather .menu-side ul li:first-child {
-		display: inline-block;
-		width:100%;
+	nav.menu-side a button.back {
+		padding: 20px;
+		background-image: url("../images/go-back-left-arrow.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: transparent;
 	}
+	
 
 	/*photography*/
-	#manhome .menu-side ul li:nth-child(2),
-	#truckers .menu-side ul li:nth-child(3),
-	#mncooks .menu-side ul li:nth-child(4),
-	#submarine .menu-side ul li:nth-child(5),
-	#soap .menu-side ul li:nth-child(6),
-	#optimiste .menu-side ul li:nth-child(7),
-	#mossburn .menu-side ul li:nth-child(8), 
+	#manhome .menu-side ul li:nth-child(1),
+	#truckers .menu-side ul li:nth-child(2),
+	#mncooks .menu-side ul li:nth-child(3),
+	#submarine .menu-side ul li:nth-child(4),
+	#soap .menu-side ul li:nth-child(5),
+	#optimiste .menu-side ul li:nth-child(6),
+	#mossburn .menu-side ul li:nth-child(7), 
 
 	/*design*/
-	#mhbook .menu-side ul li:nth-child(2),
-	#nzbirds .menu-side ul li:nth-child(3),
-	#letters .menu-side ul li:nth-child(4),
-	#print-portfolio .menu-side ul li:nth-child(5),
-	#d6sunset .menu-side ul li:nth-child(6),
+	#mhbook .menu-side ul li:nth-child(1),
+	#nzbirds .menu-side ul li:nth-child(2),
+	#letters .menu-side ul li:nth-child(3),
+	#print-portfolio .menu-side ul li:nth-child(4),
+	#d6sunset .menu-side ul li:nth-child(5),
 
 	/*interactive*/
 
 	/*mixed media*/
-	#misunderstood .menu-side ul li:nth-child(2),
-	#rigs .menu-side ul li:nth-child(3),
-	#prefab .menu-side ul li:nth-child(4),
-	#proteus .menu-side ul li:nth-child(5),
-	#kansas .menu-side ul li:nth-child(6),
-	#weather .menu-side ul li:nth-child(7) {
+	#misunderstood .menu-side ul li:nth-child(1),
+	#rigs .menu-side ul li:nth-child(2),
+	#prefab .menu-side ul li:nth-child(3),
+	#proteus .menu-side ul li:nth-child(4),
+	#kansas .menu-side ul li:nth-child(5),
+	#weather .menu-side ul li:nth-child(6) {
 		display: inline-block;
 		width:100%;
 	}
 
 	#carousel {
-	 	order: 2;
-	 	display: none;
+		display: none;
 	 	width: 100%;
 		margin: 0.5em auto;
+		height: 400px;
+		position: relative;
+		top: 0em;
+	 	order: 2;
+
+	 	
+	 	
 
 	 }
 	
@@ -258,9 +248,15 @@ grey #878787;
 	}
 
 	.grid {
-		order: 3;
 		width: 100%;
 		margin: 0 0 0 0;
+		float: left;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		order: 3;
+		
 
 
 	}
@@ -574,7 +570,7 @@ grey #878787;
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
-		display: none;
+		display: block;
 		width:100%;
 	}
 
@@ -977,7 +973,7 @@ grey #878787;
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
-		display:none;
+		display: block;
 	}
 
 	#carousel {
@@ -1126,33 +1122,28 @@ grey #878787;
 	}
 
 	.temp-contact_page {
-	display: block;
-	margin-top: 200px;
-	width: 100%;
-	
-
+		display: block;
+		margin-top: 200px;
+		width: 100%;
 	}
 	.temp-contact_page p {
 		padding: 2% 0 2% 2%;
 		text-indent: 4px;
 	}
-
 	.temp-contact_page:hover {
 		    background-color: #4866fb;    
 	}
-
 	div .message-body {
 		width: 40%; 
 		float:right;
 	}
-
 	div .contact-img {
 		display: block;
 		width:45%;
 		margin: 33px 0 0 0;
 		height:auto;
 		float:left;
-		
+	
 	}
 
 	input[type="text"], 
@@ -1201,7 +1192,6 @@ grey #878787;
 
 	.footer ul li {
 		margin:0;
-		/*font-size: 1.3em;*/
 
 	}
 	.footer-col-1 ul li a, .footer-col-2 ul li a  {
