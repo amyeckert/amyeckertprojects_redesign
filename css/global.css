@@ -1,4 +1,55 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300italic,300);
+
+/* Cross Browser Compatability CSS */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+/* end reset styles */
+
 /* logo colors
 A #a84420 
 M #5f9797 
@@ -15,6 +66,7 @@ html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -122,17 +174,17 @@ button:hover {
 /*......... MAIN MENU...DROP DOWN MENU (NOT IN USE)......................................*/
 
 /*.....this hides the nested <ul's> .....*/
-nav ul ul {
+nav.menu-top ul ul {
 display: none;
 
 }
 /*.....this makes sure only the first child <ul> is selected under a 
 specific li in the main level..... */
-nav ul li:hover > ul {
+nav.menu-top ul li:hover > ul {
 	display: none;
 }
 /*.....general styling..... */
-nav ul {
+nav.menu-top ul {
 	z-index: 1;
 	width:100%;
 	max-width:1125px;
@@ -144,65 +196,64 @@ nav ul {
 	display: inline-table; /*...note table display!.. */ 
 
 }
-nav ul:after {
+nav.menu-top ul:after {
 	content: ""; clear: both; display: block;
 }
 
-nav ul li:first-child {
+nav.menu-top ul li:first-child {
 
 	border-left: 1px solid #878787;
 }
 
-nav ul li {
+nav.menu-top ul li {
 	float: left;
 	padding: 0.4em 0.4em;
 	border: 1px solid #fff;
 
 
-	}
-nav ul li:nth-of-type(3) {
+}
+nav.menu-top ul li:nth-of-type(3) {
 	display:none;
 }
 
 /*..... main list item background hover color..... */
-nav ul li:hover {
+nav.menu-top ul li:hover {
 	background: #fff;
 	border-bottom: 1px solid #099949; 
 	
-	}
+}
 /*..... main list item link text hover color.....*/
-nav ul li:hover a {
+nav.menu-top ul li:hover a {
 		color: #099949; 
-		}
+}
 /*..... main list item link text cover */
-nav ul li a {
+nav.menu-top ul li a {
 	padding: 0;
 	font-size: 0.9em;
 	letter-spacing: 0.03em;
 	display: block; 
 	color: #878787; 
 	text-decoration: none;
-	}
-	
+}	
 /*.....background color for drop down menu <ul> */
-nav ul ul {
+nav.menu-top ul ul {
 	background: #fff;
  	padding: 0;
 	position: absolute; 
 	top: 100%;
-	}
-nav ul ul li {
+}
+nav.menu-top ul ul li {
 	float: none; 
 	position: relative;
 
-	}
-nav ul ul li a {
+}
+nav.menu-top ul ul li a {
 	padding: 15px 30px;
 	color: #820064;
-	}	
-	nav ul ul li a:hover {
+}	
+nav.menu-top ul ul li a:hover {
 	background: #fff;
-	}
+}
 a:link {
 	color:#878787;
 	text-decoration: none;
@@ -426,21 +477,18 @@ a:active {
 	float:left;
 }
 
-
-
 /*......... PROJECT PAGES.......................................*/
 
-
-.menu-side {
+nav.menu-side {
 	order: 1;
 	flex: 1 0;
 	min-width: 25%;
 	max-width: 25%;
-	font-size: 1.1em;
+	font-size: 1em;
 	margin:0;
 	line-height:2em;	
 }
-.menu-side li a:hover{
+nav.menu-side li a:hover{
 	color: #099949;
 	
 }

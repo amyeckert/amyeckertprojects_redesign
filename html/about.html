@@ -2,34 +2,27 @@
 <html lang="en"> 
 
 <head>
+	<title>Amy Eckert Projects::Photography </title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Amy Eckert Projects </title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<meta name="viewport" content="width=device-width, initial-scale=1">	
-	<link rel="stylesheet" href="../css/global.css" type="text/css">
-	<link rel="stylesheet" href="../css/queries.css" type="text/css"> 
-	<!--<link rel="stylesheet" href="css/index.css" type="reset/css"> -->
-	<!--jquery UIstyle sheet-->
-	<link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
-	
+	<link rel="stylesheet" type="text/css" href="../css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/queries.css"/>
 </head>
 	
-
 <body id="about">
 
 <div class="wrapper">
 	
 	<!--.....HEADER......................................................-->
-	<div class="header">
+	<header role="banner" class="header">
 
 		<div class="logo">
 			<a href="index.html"> <img  src="../images/LOGO/nameLOGO2.png" alt="amy eckert" width="900"> </a>
 		</div>
 
 		<!--...MAIN MENU...................................................-->
-		<nav class="menu-top"> 
+		<nav role="navigation" class="menu-top"> 
 			<ul class="main-menu">
 				<li class="navphoto "><a href="photography.html" >PHOTOGRAPHY</a>
 					<ul>
@@ -81,10 +74,9 @@
 				<li class="navcontact"><a href="contact.html">CONTACT</a></li>		
 			</ul> 
 		</nav>
-	</div>
+	</header>
 
 	<!--..................... MAIN CONTENT AREA . . . . .. . . . . ..............-->
-
 	<section class="main-content">
 
 		<div class="about-me">
@@ -116,25 +108,22 @@
 			<a href="../AMYECKERT-dev-CV.pdf" class="button">view my cv</a>
 
 		</div>
-
 	</section> 
 
-
-	<!--....FOOTER .................................................. -->
-	
-	<section class="footer">
+	<!-- FOOTER .................................................. -->
+	<footer role="contentinfo" class="footer">
 
 		<div class= "column footer-col-1">
 				<ul>
-					<li><a href="photography.html">PHOTOGRAPHY</a></li>
-					
-					<li><a href="design.html">DESIGN</a></li>
+				<li><a href="photography.html">PHOTOGRAPHY</a></li>
 				
-					<!-- <li><a href="interactive.html">INTERACTIVE</a></li> -->
+				<li><a href="design.html">DESIGN</a></li>
+			
+				<!-- <li><a href="interactive.html">INTERACTIVE</a></li> -->
+			
+				<li><a href="mixedmedia.html">MIXED MEDIA</a></li>
 				
-					<li><a href="mixedmedia.html">MIXED MEDIA</a></li>
-				
-				</ul>
+			</ul>
 		</div>
 		
 		<div class="column footer-col-2">
@@ -143,33 +132,36 @@
 				<!-- <li><a href="blog.html">BLOG</a></li> -->
 				<li><a href="about.html">ABOUT</a></li>
 				<li><a href="exhibitions.html">EXHIBITIONS</a></li>
+				<!-- <li><a href="http://www.amyekertphoto.com">CLIENT WORK</a></li> -->
 			</ul>
 		</div>
 
 		<div class="column footer-col-3">
 			<ul>
-				 <a href="https://www.facebook.com/amy.eckert.52" target="blank"><img src="../images/front/facebook-icon.png" alt="Amy Eckert's Facebook" > </a></li> 
+				<li> <a href="https://www.facebook.com/amy.eckert.52" target="blank"><img src="../images/front/facebook-icon.png" alt="facebook icon"> </a> </li>
 
-				<a href="https://instagram.com/amyeckertphoto" target="blank"><img src="../images/front/instagram-icon.png" alt="Amy Eckert's Instagram"></a></li>
+				<li><a href="https://instagram.com/amyeckertphoto" target="blank"><img src="../images/front/instagram-icon.png" alt="instagram icon" ></a> </li>
 
-				<a href="https://twitter.com/amyeckertphoto" target="blank"><img src="../images/front/Twitter-icon.png" alt="Amy Eckert's Twitter"> </a></li>
+				<li><a href="https://twitter.com/amyeckertphoto" target="blank"><img src="../images/front/Twitter-icon.png" alt="twitter icon" > </a></li>
 			</ul>
 		</div>
 
-		<div class="column footer-col-4">  © All images Copyright Amy Eckert 1999-2016
+		<div class="column footer-col-4">  © All images Copyright Amy Eckert 1999-2015
 		</div>
-
-	</section>
+	</footer>
 
 </div> 
 
-
-	<!-- Include jQuery first -->
+<!-- jQuery  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<!-- then JQuery UI -->
+<!--  JQuery UI -->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>	
-	
-
+<!-- masonry.js -->
+<script src="../js/masonry.pkgd.js"></script>
+<!-- imagesLoaded.js -->
+<script src="../js/imagesloaded.pkgd.min.js"></script>
+<!--custom.js -->
+<script src="../js/thumb-nav.js"></script> 
 
 </body>
 </html>
