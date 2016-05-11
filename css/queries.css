@@ -32,41 +32,38 @@ grey #878787;
 	.wrapper {
 		max-width: 100%;
 		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
 	}
 	.header {
 		max-width:90%;
 		margin: 0 auto;
 		border-bottom:1px solid #878787;
 	}
-
 	.logo {  
 		width:90%;
 	 	min-width:200px;
-	 	margin: auto;
-	 	height:auto; 
+	 	margin: 0 auto;
+	 	height: auto; 
 	 	
 	 }
-
 	.logo img {
 		max-width:100%;
 		min-width: 45%;
-	}
-		
-	.main-menu {
-		display:inline-block;
 	}
 	.main-content {	
 		width: 90%;
 		max-height: 100%;
 		margin: 0 auto;
-		flex: 0;
-
+		display: flex;
+		flex-direction: column;
+		align-content: flex-start;
+		flex: 1 0;
 	}
-
 	#about p {
 	 	padding:0.5rem 0 0.5rem 0;
 
-	 }
+	}
 	#photography .page-location,
 	#design	.page-location, 
 	#interactive .page-location, 
@@ -79,28 +76,34 @@ grey #878787;
 	#exhibitions .page-location p {
 		display: :none;
 	}
-	 
 	.menu-top {
 		display:none;
 	 	border-top:none;
-	 }
-
-
+	}
 	nav ul li a{
 		font-size:1.2rem;
 	}
-
 	/*.....showing page location in menu..... */
 
-	#photography .navphoto, #design .navdesign, #interactive .navinter, 
-	#mixedmedia .navmixed, #about .navabout, #blog .navblog,
-	#contact .navcontact, #project-template .navproject {
+	#photography .navphoto, 
+	#design .navdesign, 
+	#interactive .navinter, 
+	#mixedmedia .navmixed, 
+	#about .navabout, 
+	#blog .navblog,
+	#contact .navcontact, 
+	#project-template .navproject {
 		border: none;
 	}
-
-	#photography .navphoto,#photography .navphoto, #design .navdesign, #interactive .navinter, 
-	#mixedmedia .navmixed, #about .navabout, #blog .navblog,
-	#contact .navcontact, #project-template .navproject {
+	#photography .navphoto,
+	#photography .navphoto, 
+	#design .navdesign, 
+	#interactive .navinter, 
+	#mixedmedia .navmixed, 
+	#about .navabout, 
+	#blog .navblog,
+	#contact .navcontact, 
+	#project-template .navproject {
 		border-top:none;
 	}
 
@@ -110,20 +113,16 @@ grey #878787;
 	} 
 	#home .grid-sizer {
 		width: 100%;
-
 	}
 	.statement-title {
 		margin:0.3rem 0 1rem 0;
-		width:100%;
-		
+		width:100%;	
 	}
-
 	.project-row, .front-row {
 		max-width: 100%;
 		padding:0;
 		margin: 1rem auto;
 		flex-direction: column;
-
 	}
 	.front-row-img {
 		display: block;
@@ -140,7 +139,6 @@ grey #878787;
 		display: block;
 		padding: 5px 0;
 	}
-	
 	.project-row-img {
 		display: block;
 		max-width: 100%;
@@ -158,163 +156,69 @@ grey #878787;
 	#mixedmedia .project-row a:nth-child(2) {
 		width: 100%;
 	}
-
 	#photography .grid-sizer a,
 	#design .grid-sizer a,
 	#interactive .grid-sizer a,
 	#mixedmedia .grid-sizer a  {
 		display: block;
 	}
-
-
 	/*.........PROJECT PAGES .......................................*/
 	
 	nav.menu-side {
 		order: 1;
-		display: flex;
-		flex-direction : row;
-		min-width: 100%;
+		display: block;
+		max-width: 100%;	
 	}
 	nav.menu-side a {
-		align-self: flex-start;
-		order: 1;
+		width: 20%;
 	}
 	nav.menu-side a button.back {
 		padding: 14px;
-		width: 100%;
+		width: 20%;
 		background-image: url("../images/go-back-left-arrow.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-color: transparent;
 		margin: 5px auto;
-
+		float: left;
 	}
 	nav.menu-side a button.back:hover {
 		border-bottom: 1px solid #fff;
 	}
-
-
 	nav.menu-side p {
-		order: 2;
-		align-self: flex-end;
-		width:80%;
-		margin: 0 auto;
+		max-width:80%;
+		float: right;
 		color: #878787;
-		text-align: right;
-		/*border-bottom: 1px solid #878787;*/
+		text-align: right;	
 	}
-
 	nav.menu-side ul li {
-    display: none;
-    width: 100%;
-	}
-	/*photography*/
-	#manhome .menu-side ul li:nth-child(1),
-	#truckers .menu-side ul li:nth-child(2),
-	#mncooks .menu-side ul li:nth-child(3),
-	#submarine .menu-side ul li:nth-child(4),
-	#soap .menu-side ul li:nth-child(5),
-	#optimiste .menu-side ul li:nth-child(6),
-	#mossburn .menu-side ul li:nth-child(7), 
-
-	/*design*/
-	#mhbook .menu-side ul li:nth-child(1),
-	#nzbirds .menu-side ul li:nth-child(2),
-	#letters .menu-side ul li:nth-child(3),
-	#print-portfolio .menu-side ul li:nth-child(4),
-	#d6sunset .menu-side ul li:nth-child(5),
-
-	/*interactive*/
-
-	/*mixed media*/
-	#misunderstood .menu-side ul li:nth-child(1),
-	#rigs .menu-side ul li:nth-child(2),
-	#prefab .menu-side ul li:nth-child(3),
-	#proteus .menu-side ul li:nth-child(4),
-	#kansas .menu-side ul li:nth-child(5),
-	#weather .menu-side ul li:nth-child(6) {
-		display: none;
-		width:100%;
-	}
-
-	#carousel {
-		display: none;
-	 	width: 100%;
-		margin: 0.5rem auto;
-		height: 400px;
-		position: relative;
-		top: 0;
-	 	order: 2;
-
-	 }
-	
-	.big {
-		width:100%;
-		height: 400px;		
-		display: none;
-		visibility: visible;
-		z-index: 1;
-	}
-
-	.big-img-container {
-		display: none;
-	    visibility: visible;
+	    display: none;
 	    width: 100%;
-	    height: 400px;
-	    margin-left: 0;
-	    background-size: contain;
-	    background-repeat: no-repeat;
 	}
-
+	#carousel, 
+	.big,
+	.big-img-container 
+	.image-info,
+	.carousel-nav,
+	.item p  {	
+		display: none;
+	 }
 	.grid {
+		order: 2;
 		width: 100%;
+		max-width: 100%;
 		margin: 0 0 0 0;
 		float: left;
-		position: absolute;
-		top: 0;
-		left: 0;
-		order: 3;
-		
-
-
+		clear: both;
 	}
-
 	.grid-sizer {
-		width: 50%;
-
+		width: 100%;
 	}
 	.grid-item {
 		width: 100%;
+	}
+	.item { padding: 5px 0;}
 
-	}
-	.grid-item:hover {
-		opacity: 1;
-	}
-	.item{ padding: 5px 0;}
-
-	.item p {display: none;}
-	
-	.image-info {display: none;}
-
-	.carousel-nav {
-		display: inline-block;
-		position: relative;
-		order: 4;
-		/*top: 45px;*/
-		width: 100%;
-	
-	}
-	.carousel-nav button:first-child {display: none;}
-
-	.carousel-nav button:nth-child(2),
-	.carousel-nav button:nth-child(3) {
-		padding: 0 5px;
-		font-size: 2rem;
-		margin: 0 auto;
-	}
-	.carousel-nav button:nth-child(2) {
-		margin-left: 36%;
-	}
 	.statement-body {
 		display: none;
 		order: 5;
@@ -324,9 +228,7 @@ grey #878787;
 		font-size: 1rem;
 		text-indent: 0;
 		letter-spacing: 0.05rem;
-
 	}
-
 	/*.........ABOUT PAGE .......................................*/
 
 	.about-me {
@@ -337,15 +239,12 @@ grey #878787;
 		padding: 0;
 
 	}
-
 	#about .about-me p {
 	   font-size:1.2rem;
 	}
 	.about-me p:first-of-type {
 		margin-top:0;
 	}
-
-
 	.cv { margin:auto;}
 
 	.cv button {
@@ -361,7 +260,6 @@ grey #878787;
 	.commercial-site {
 			margin:1.5rem 0 1.5rem 0;
 	}
-
 
 	/*........CONTACT PAGE ............................................*/
 
@@ -386,22 +284,16 @@ grey #878787;
 		padding: 2% 0;
 		text-align: center;
 	}
- 	/*.temp-contact_page p:last-child {
- 		display:none;
- 	}*/
 	.temp-contact_page:hover {
 		    background-color: #4866fb;	    
 	}
-
-
 
 	/*......... FOOTER.......................................*/
 	.footer {
 		width:90%;
 		margin: 10px auto 0 auto;
 		padding: 0;
-		border-top:1px solid #878787;
-			
+		border-top:1px solid #878787;		
 	}
 	#home .footer {
 		margin-top: 0;
@@ -410,24 +302,21 @@ grey #878787;
 		width:100%;
 		
 	}
-
 	.footer-col-1,
 	.footer-col-2,
 	.footer-col-3 {
 		margin: 0;
 		width:100%;
 	}
-
 	.footer ul li {
 			margin:0;
 
 	}
-
 	.footer-col-1 ul li, 
 	.footer-col-2 ul li {
 		width:100%;
 		padding-left:0;
-			
+		
 	}
 	.footer-col-1 ul li a, 
 	.footer-col-2 ul li a  {
@@ -438,8 +327,6 @@ grey #878787;
 	    text-align: center;
 	}			
 } 
-
-
 
 /*----------------------------------------------------------------------
 -------MEDIUM ----------------------------------------------------------
@@ -554,6 +441,9 @@ grey #878787;
 		order: 0;
 		margin-top: 1em;
 
+	}
+	nav.menu-side p {
+		display: none;
 	}
 
 	#exhibitions .menu-side {
@@ -964,6 +854,9 @@ grey #878787;
 	nav.menu-side {
 		order: 0;
 	}
+	 nav.menu-side p {
+		display: none;
+	}
 	#exhibitions .menu-side{
 		display: block;
 		visibility: hidden;
@@ -1065,11 +958,11 @@ grey #878787;
 		height:auto;
 
 	}
-	
-	.item img:hover{
-		opacity:1;
-
+	.item:hover,
+	.grid-item:hover {
+		opacity: 1;
 	}
+	
 	.item p {
 		display:none;
 	}
@@ -1087,7 +980,7 @@ grey #878787;
 		margin-left: 0;
 
 	}*/
-
+/*
 	.statement-title {
 		position:relative;
 		width:100%;
@@ -1096,7 +989,7 @@ grey #878787;
 		font-size: 1rem;
 		text-indent:0;
 
-	}
+	}*/
 	.statement-body p {
 		/*display: block;
 		visibility: visible;*/
