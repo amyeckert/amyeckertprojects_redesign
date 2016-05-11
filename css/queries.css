@@ -70,13 +70,16 @@ grey #878787;
 	#photography .page-location,
 	#design	.page-location, 
 	#interactive .page-location, 
-	#mixedmedia .page-location, 
-	#exhibitions .page-location {
+	#mixedmedia .page-location {
 		display: block;
 		margin: 0;
 		
 	}
-
+	#exhibitions .page-location,
+	#exhibitions .page-location p {
+		display: :none;
+	}
+	 
 	.menu-top {
 		display:none;
 	 	border-top:none;
@@ -168,15 +171,17 @@ grey #878787;
 	
 	nav.menu-side {
 		order: 1;
-		display: inline-block;
+		display: flex;
+		flex-direction : row;
 		min-width: 100%;
 	}
-	nav.menu-side ul li {
-	    display: none;
-	    width: 100%;
+	nav.menu-side a {
+		align-self: flex-start;
+		order: 1;
 	}
 	nav.menu-side a button.back {
 		padding: 14px;
+		width: 100%;
 		background-image: url("../images/go-back-left-arrow.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -186,6 +191,22 @@ grey #878787;
 	}
 	nav.menu-side a button.back:hover {
 		border-bottom: 1px solid #fff;
+	}
+
+
+	nav.menu-side p {
+		order: 2;
+		align-self: flex-end;
+		width:80%;
+		margin: 0 auto;
+		color: #878787;
+		text-align: right;
+		/*border-bottom: 1px solid #878787;*/
+	}
+
+	nav.menu-side ul li {
+    display: none;
+    width: 100%;
 	}
 	/*photography*/
 	#manhome .menu-side ul li:nth-child(1),
@@ -212,7 +233,7 @@ grey #878787;
 	#proteus .menu-side ul li:nth-child(4),
 	#kansas .menu-side ul li:nth-child(5),
 	#weather .menu-side ul li:nth-child(6) {
-		display: inline-block;
+		display: none;
 		width:100%;
 	}
 
@@ -230,13 +251,13 @@ grey #878787;
 	.big {
 		width:100%;
 		height: 400px;		
-		display: block;
+		display: none;
 		visibility: visible;
 		z-index: 1;
 	}
 
 	.big-img-container {
-		display: block;
+		display: none;
 	    visibility: visible;
 	    width: 100%;
 	    height: 400px;
@@ -249,7 +270,6 @@ grey #878787;
 		width: 100%;
 		margin: 0 0 0 0;
 		float: left;
-
 		position: absolute;
 		top: 0;
 		left: 0;

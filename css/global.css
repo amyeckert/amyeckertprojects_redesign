@@ -134,7 +134,6 @@ button {
 	border: 1px solid #fff;
 	color: #68b7d5;
 	cursor: pointer;
-	
 	padding: 7px;
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
@@ -325,8 +324,7 @@ a:active {
 #photography .page-location, 
 #design .page-location, 
 #portfolio-template .page-location, 
-#project-template .page-location, 
-#exhibitions .page-location {
+#project-template .page-location {
 	width:100%;
 	display:block;
 	margin:0;
@@ -342,8 +340,7 @@ a:active {
 #photography .page-location p, 
 #design .page-location p, 
 #portfolio-template .page-location p, 
-#project-template .page-location p, 
-#exhibitions .page-location p {
+#project-template .page-location p {
 	display:block;
 	border-left:1px solid #878787;
 	padding:1% 0 0 3%;
@@ -352,15 +349,19 @@ a:active {
 }
 
 #home .page-location p {
-	display:none;
-	padding:0 0 0 3%;
-	color:#fff;
+	display: none;
+	padding: 0 0 0 3%;
+	color: #fff;
 }
 
+#exhibitions .page-location,
+#exhibitions .page-location p {
+	display: none;
+}
 
 #contact .page-location, 
 #contact .page-location p {
-	display:none;
+	display: none;
 }
 
 
@@ -723,13 +724,13 @@ nav.menu-side li a:hover{
 a.button {
 	display:block;
 	width: 8rem;
-	padding:0;
-	margin-top:2rem;
-	text-transform:uppercase;
+	padding: 0;
+	margin-top: 2rem;
+	text-transform: uppercase;
 	font-size: 1.1rem;
-	color:#878787;
+	color: #878787;
 	border:1px solid #878787;
-	padding:10px;
+	padding: 10px;
 	text-align:center;
 }
 
