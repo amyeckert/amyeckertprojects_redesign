@@ -142,7 +142,6 @@ button {
 
 button:hover {
 	border-bottom: 1px solid #68b7d5;
-	/*border-top: none;*/
 
 }
 
@@ -153,9 +152,8 @@ header {
 	border-bottom:1px solid #878787;
 }
 .logo {
-
 	height:auto;
-	padding-bottom:1%;	
+	/*padding-bottom:1%;	*/
 }
 
 #home .logo, #photography .logo, #design .logo, #interactive .logo, 
@@ -165,11 +163,6 @@ header {
 	padding-bottom:1%;
 	
 	}
-
-.logo img {
-	padding-bottom:1%;
-
-}
 
 /*......... MAIN MENU...DROP DOWN MENU (NOT IN USE)......................................*/
 
@@ -261,14 +254,11 @@ a:link {
 a:visited {
 	color:#878787;
 }
-a:hover {
+a:hover,
+a:active {
 	color:#fff;
 }
-a:active {
-	color:#fff; 
-
-}
-
+ 
 
 
 /*.........SHOW PAGE LOCATION .......................................*/
@@ -276,7 +266,6 @@ a:active {
 
 .main-content {
 	order: 2;
-
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -287,9 +276,6 @@ a:active {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	flex: 1;
-
-	/*height: 50vh;
-	min-height: 50vh;*/
 
 }
 
@@ -368,14 +354,18 @@ a:active {
 #photography .main-content,
 #design .main-content,
 #interactive .main-content,
-#mixedmedia .main-content {
+#mixedmedia .main-content,
+.project-row,
+.project-row-img,
+.front-row-img   {
+
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
  	display: -webkit-flex;     /* NEW - Chrome */
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	
-	flex-direction:column;
+	flex-direction: column;
 
 }
 .page-location: {
@@ -386,30 +376,17 @@ a:active {
 	width: 100%;
 	height: auto;
 }
-.project-row {
+.project-row { 
 	order: 2;
-
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
- 	display: -ms-flexbox;      /* TWEENER - IE 10 */
- 	display: -webkit-flex;     /* NEW - Chrome */
-  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	
-
 	flex-direction: row;
 	width: 100%;
 	height: auto;
-	margin: 1.5rem 0 0 0;
+	margin: 0 0 0 0;
 
 }
 .project-row-img {
 	display:  block; /* Firefox */
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  	display: -moz-block;        /* OLD - Firefox 19- (buggy but mostly works) */
- 	display: -ms-flexbox;      /* TWEENER - IE 10 */
- 	display: -webkit-flex;     /* NEW - Chrome */
-  	/*display: flex;*/             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
+  	/*display: flex;*/            
 	flex-direction: row;
 } 
 
@@ -432,13 +409,6 @@ a:active {
 	width: 120%;
 }
 .front-row-img {
-	
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
- 	display: -ms-flexbox;      /* TWEENER - IE 10 */
- 	display: -webkit-flex;     /* NEW - Chrome */
-  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
 	flex-direction: column;
 	justify-content: center;
 	margin: 1.5rem 0 0 0;
@@ -651,7 +621,7 @@ nav.menu-side li a:hover{
 }
 .item:hover,
 .grid-item:hover {
-		opacity:0.8;
+	opacity:0.8;
 }
 
 .grid-item img {
@@ -661,7 +631,7 @@ nav.menu-side li a:hover{
 	
 }
 .grid-item p {
-	display:none;
+	display: none;
 	color: #fff;
 }
 
@@ -722,8 +692,8 @@ nav.menu-side li a:hover{
 	
 }
 a.button {
-	display:block;
-	width: 8rem;
+	display: block;
+	width: 100%;
 	padding: 0;
 	margin-top: 2rem;
 	text-transform: uppercase;
@@ -731,7 +701,7 @@ a.button {
 	color: #878787;
 	border:1px solid #878787;
 	padding: 10px;
-	text-align:center;
+	text-align: center;
 }
 
 a.button:hover {
@@ -857,7 +827,7 @@ footer {
 	order:3;
 	align-self: flex-end;
 	color: #878787;
-	max-width:1125px;
+	max-width: 1600px;
 	width:100%;
 	text-align:left;
 	border-top: 1px solid #878787;
@@ -883,7 +853,7 @@ footer {
 .column ul li {
  	padding:0;
  	margin:0;
- 	font-size: 1rem;
+ 	font-size: 0.8rem;
  	text-align:left;
  	text-indent: 4px;
 }
