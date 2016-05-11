@@ -97,15 +97,15 @@ body {
 }
 .wrapper {
 	min-height: 100%;
+	display: block;
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
  	display: -webkit-flex;     /* NEW - Chrome */
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
 	flex-direction: column;
-
+	
 }
 
 
@@ -147,9 +147,11 @@ button:hover {
 
 /* .........HEADER .............................*/
 header {
+	display: inline-block;
 	order: 1;
 	padding-top: 20px;
 	border-bottom:1px solid #878787;
+
 }
 .logo {
 	height:auto;

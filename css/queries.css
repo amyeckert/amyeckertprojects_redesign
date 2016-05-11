@@ -439,7 +439,6 @@ grey #878787;
 	}
 
 	.main-content {
-		/*margin-top: 1rem;*/
 		order: 2;
 	}
 		
@@ -785,6 +784,7 @@ grey #878787;
 
 
 	header {
+		display: inline-block;
 		width:100%;
 		padding-top: 10px;
 		border-bottom: none;
