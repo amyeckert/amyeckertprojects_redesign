@@ -13,7 +13,7 @@ T #820064;
 grey #878787;
 
 /*----------------------------------------------------------------------
-------- MOBILE -----------------------------------------------------------
+------- MOBILE ---------------------------------------------------------
 ----------------------------------------------------------------------*/
 /*@media only screen and (max-width: 250px) {
 	#carousel {
@@ -27,7 +27,7 @@ grey #878787;
 ----------------------------------------------------------------------*/
 
 
-@media only screen and (max-width: 650px) { 
+@media only screen and (max-width: 400px) { 
 
 	.wrapper {
 
@@ -40,6 +40,7 @@ grey #878787;
 		flex-direction: column;
 		max-width: 100%;
 		margin: 0 auto;
+	
 	}
 	header {
 		order: 1;
@@ -86,6 +87,7 @@ grey #878787;
 		margin: 0;
 		
 	}
+
 	#exhibitions .page-location,
 	#exhibitions .page-location p {
 		display: :none;
@@ -108,8 +110,9 @@ grey #878787;
 	#contact .navcontact, 
 	#project-template .navproject {
 		border: none;
+		/*padding-top: 1%;*/
 	}
-	#photography .navphoto,
+/*	#photography .navphoto,
 	#photography .navphoto, 
 	#design .navdesign, 
 	#interactive .navinter, 
@@ -120,14 +123,14 @@ grey #878787;
 	#project-template .navproject {
 		border-top: none;
 	}
-
-	/*........POERTFOLIO TITLE VISIBILITY .......*/
+*/
 	#home .page-location p {
 		display: none;
 	} 
 	#home .grid-sizer {
 		width: 100%;
 	}
+
 	.statement-title {
 		margin:0.3rem 0 1rem 0;
 		width:100%;
@@ -364,12 +367,27 @@ grey #878787;
 	}			
 } 
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 400px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 400px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 400px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 400px),
+only screen and (                min-resolution: 192dpi) and (min-width: 400px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 400px) { 
+
+  /* Small screen, retina, stuff to override above media query */
+
+  /*.wrapper {background-color: red;}*/
+  .menu-side {display: none;}
+  
+
+}
 /*----------------------------------------------------------------------
 -------MEDIUM ----------------------------------------------------------
 ----------------------------------------------------------------------*/
 
 
-@media only screen and (min-width: 651px) and (max-width:1125px) {
+@media only screen and (min-width: 401px) and (max-width:1299px) {
 
 	.wrapper {
 		max-width:90%; 
@@ -377,19 +395,18 @@ grey #878787;
 	}
 	header {
 		width:100%; 
-		border-bottom:1px solid #878787;
 	}
 	.logo {
 		width:100%;
 		max-width:900px;
 		height:auto;
 		margin:0;
+		border-bottom:1px solid #878787;
+
 	}
-	
 	.logo img {
 		max-width: 50%;
 	}
-
 	#exhibitions .menu-top, 
 	#photography .menu-top,
 	#design .menu-top,
@@ -424,6 +441,10 @@ grey #878787;
 		display: none;
 	}
 
+	nav.menu-top ul li {
+		padding: 0.2rem 0.2rem;
+	}
+
 	.menu-top ul li:nth-child(5),
 	.menu-top ul li:nth-child(6) {
 		display: none;
@@ -441,7 +462,7 @@ grey #878787;
 	.main-content {
 		order: 2;
 	}
-		
+
 	#contact .page-location, 
 	#contact .page-location p {
 		display: none;
@@ -461,15 +482,7 @@ grey #878787;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
 
-	nav.menu-side {
-		max-width: 25% ;
-	}
-
-
-	#design .project-row a:first-child, 
-	#mixedmedia .project-row a:nth-child(2) {
-		width: 150%;
-	}
+	
 	
 	/*.........PROJECT PAGES.......................................*/
 	.main-content {
@@ -479,6 +492,7 @@ grey #878787;
 
 	nav.menu-side {
 		order: 0;
+		max-width: 25% 
 		margin-top: 1em;
 
 	}
@@ -599,17 +613,40 @@ grey #878787;
 		margin-top: 1rem;
 		
 	}
-	.grid-sizer,
-	.grid-item {
-		max-width: 30%;
-		height: auto;
 
+	#photography .grid, 
+	#design .grid,	
+	#interactive .grid,
+	#mixedmedia .grid {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0 0 0 0 ;
+
+	}
+
+	#photography .grid-sizer, 
+	#photography .grid-item, 
+	#design .grid-sizer,
+	#design .grid-item,	
+	#interactive .grid-sizer,
+	#interactive .grid-item,
+	#mixedmedia .grid-sizer,
+	#mixedmedia .grid-item {
+		width: 50%;
+		height: auto;
+		
 	}
 	.grid-item img {
 		max-width: 100%;
 		height: auto;
 	}
-
+	#photography .grid-item img,
+	#design .grid-item img,
+	#interactive .grid-item img,
+	#mixedmedia .grid-item img { 
+		padding: 7px; 
+	}
 	.item img {
 		width: 100%;
 		height: auto;
@@ -730,7 +767,7 @@ grey #878787;
 	.footer {
 		color: #878787;	
 		max-width:1125px;
-		width:100%;
+		width: 100%;
 		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1; 	
@@ -738,7 +775,7 @@ grey #878787;
 	}
 
 	.column {
-		width: 25%;
+		width: 50%;
 		height: auto;
 	}
 	.footer-col-3 img {
@@ -770,11 +807,49 @@ grey #878787;
 	}
 }   
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 401px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 401px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 401px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 401px),
+only screen and (                min-resolution: 192dpi) and (min-width: 401px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 401px) { 
+
+  /* Medium screen, retina, stuff to override above media query */
+
+  .wrapper {
+  	width: 100%;
+  }
+
+
+  nav.menu-top ul li {
+  	padding: 0.7rem 0.7rem;
+  }
+
+  .front-row-img {
+  	max-width: 100%;
+  	height:60vh;
+  /*	border: 1px solid red;*/
+  }
+  .front-row-img img {
+  	height: 100%;
+  	width: auto;
+  }
+
+
+
+
+  footer {
+  	margin-bottom: 4%;
+  }
+
+
+}
 /*--------------------------------------------------------------------------
 -----------LARGE------------------------------------------------------------
 --------------------------------------------------------------------------*/ 
 
-@media only screen and (min-width: 1126px )  {
+@media only screen and (min-width: 1300px )  {
 
 	.wrapper  {
 		max-width: 1300px;
