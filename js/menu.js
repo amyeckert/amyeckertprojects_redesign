@@ -1,19 +1,26 @@
-
-// Show the horizontal menu
-
 $(document).ready(function() {
 
-    $('.menu-toggle').click(function(e){
+	var width = screen.availWidth;
+    var height = screen.availHeight;
 
-        var menu = $(this).data('show-dialog');
+	function toggleMenu() {	
+		
+	// Show the horizontal menu
+	    $('.menu-toggle').click(function(e){
 
-        $('.' + menu).slideToggle('fast');
-    });
+	        var menu = $(this).data('show-dialog');
 
-    $('.options-menu-horizontal span.close-menu').click(function(){
+	        $('.' + menu).slideToggle('fast');
+	    });
 
-        $(this).closest('.options-menu-horizontal').slideUp('fast');
+	    $('.options-menu-horizontal span.close-menu').click(function(){
 
-    });
+	        $(this).closest('.options-menu-horizontal').slideUp('fast');
+		});
+	}
+
+	if ( width <= 650 ) {
+        toggleMenu();
+    }
+
 });
-

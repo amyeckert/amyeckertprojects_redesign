@@ -27,7 +27,7 @@ grey #878787;
 ----------------------------------------------------------------------*/
 
 
-@media only screen and (max-width: 400px) { 
+@media only screen and (max-width: 650px) { 
 
 	.wrapper {
 
@@ -49,17 +49,22 @@ grey #878787;
 		padding-top: 10px;
 		border-bottom:1px solid #878787;
 	}
-	.logo {  
+	.header a img {  
 		width:90%;
 	 	min-width:200px;
 	 	margin: 0 auto;
 	 	height: auto; 
 	 	
 	 }
-	.logo img {
-		max-width:100%;
-		min-width: 45%;
-	}
+	 header span.menu-toggle {
+        display: block;
+    }
+	nav ul li a { font-size: 1.2rem;}
+
+	nav.menu-top ul li:first-child {
+
+	border-left: none;
+}
 	.main-content {	
 		width: 90%;
 		height: 100% ;
@@ -93,12 +98,10 @@ grey #878787;
 		display: :none;
 	}
 	.menu-top {
-		display:none;
-	 	border-top:none;
+		display: none;
+	 	border-top: none;
 	}
-	nav ul li a{
-		font-size:1.2rem;
-	}
+	
 	/*.....showing page location in menu..... */
 
 	#photography .navphoto, 
@@ -230,7 +233,7 @@ grey #878787;
 		order: 2;
 		width: 100%;
 		max-width: 100%;
-		margin: 0 0 0 0;
+		margin: 1rem 0 0 0;
 		float: left;
 		clear: both;
 	}
@@ -325,6 +328,7 @@ grey #878787;
 
 	/*......... FOOTER.......................................*/
 	.footer {
+		display: none;
 		width: 90%;
 		margin: 10px auto 0 auto;
 		padding: 0;
@@ -387,7 +391,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 ----------------------------------------------------------------------*/
 
 
-@media only screen and (min-width: 401px) and (max-width:1299px) {
+@media only screen and (min-width: 651px) and (max-width:1299px) {
 
 	.wrapper {
 		max-width:90%; 
@@ -395,18 +399,16 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 	}
 	header {
 		width:100%; 
+		border-bottom: 1px solid #878787;
 	}
 	.logo {
-		width:100%;
-		max-width:900px;
+		max-width: 50%;
 		height:auto;
 		margin:0;
-		border-bottom:1px solid #878787;
+
 
 	}
-	.logo img {
-		max-width: 50%;
-	}
+	
 	#exhibitions .menu-top, 
 	#photography .menu-top,
 	#design .menu-top,
@@ -475,9 +477,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 	}
 	.front-row-img {
 		max-width: 100%;
-		margin: 0 auto;
+		margin: 1rem auto;
 	}
 	.front-row-img img {
+		max-height: 100%;
+		width: 30%;
 		margin: 0 auto;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
@@ -782,7 +786,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 		max-width: 20%;
 		min-width: 17%;
 		height: auto;
-	    padding: 3% 10% 0 3%;   
+	    padding: 1% 14% 0 3%;   
     	
 	}
 
@@ -862,17 +866,18 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 		display: inline-block;
 		width:100%;
 		padding-top: 10px;
-		border-bottom: none;
-	}
-	.logo { padding-bottom: 0; }
 
-	.logo img {
-		border: none;
+	}
+	.logo { 
 		width:30%;
+		border: none;
+		padding-bottom: 0; 
 	}
-
+	 span.menu-toggle {
+        display: none;
+    }
 	nav.menu-top {
-		display:block; 
+		display:none; 
 		font-size: 1.3rem;
 		text-align: left;
 		border-top: 1px solid #aba787;
@@ -895,6 +900,13 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 	#contact.main-content {
 		margin-top:0.28rem;
 		margin-bottom:1rem;
+	}
+
+	.front-row-img {
+		margin-top: 1rem;
+	}
+	.front-row-img img {
+		width: 30%;
 	}
 	/*........PORTFOLIO LANDING PAGES....................................*/
 
@@ -1207,7 +1219,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 
 	footer {	
 		font-size: 1rem;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 
 	.column {

@@ -7,7 +7,7 @@
  * html5doctor.com/html-5-reset-stylesheet/
  */
 
-html, body, div, span, object, iframe,
+html, body, div, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
@@ -150,23 +150,91 @@ header {
 	display: inline-block;
 	order: 1;
 	padding-top: 20px;
-	/*border-bottom:1px solid #878787;*/
+	border-bottom:1px solid #878787;
 
 }
 .logo {
 	height:auto;
-	/*padding-bottom:1%;	*/
-}
 
-#home .logo, #photography .logo, #design .logo, #interactive .logo, 
-#mixedmedia .logo, #about .logo, #blog .logo, #contact .logo, 
-#portfolio-template .logo, #project-template .logo {
-	height:auto;
-	padding-bottom:1%;
-	
-	}
+}
+header span.menu-toggle {
+        display: none;
+    }
 
 /*......... MAIN MENU...DROP DOWN MENU (NOT IN USE)......................................*/
+nav ul li a {
+	display: block;
+    width: 100%;
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+   
+}
+
+nav ul li a:hover { 
+	border-bottom: none;
+
+}
+nav li:first-child:hover,
+nav li:first-child:active,
+nav li:first-child a:hover {
+	background-color: #a84420;
+	color:#fff;
+}
+
+nav li:nth-child(2):hover,
+nav li:nth-child(2):active,
+nav li:nth-child(2) a:hover {
+	background-color: #5f9797;
+	color:#fff;
+	
+}
+nav  li:nth-child(3):hover,
+nav  li:nth-child(3):active, 
+nav li:nth-child(3) a:hover {
+	background-color: #8a5cd1;
+	color: #fff;
+} 
+nav li:nth-child(4):hover,
+nav li:nth-child(4):active, 
+nav li:nth-child(4) a:hover {
+	background-color: #4866fb;
+	
+}
+
+nav li:nth-child(5):hover,
+nav li:nth-child(5):active,
+nav li:nth-child(5) a:hover {
+	background-color: #099949;
+	color: #fff;
+}
+
+nav li:nth-child(6):hover, 
+nav li:nth-child(6):active,
+nav li:nth-child(6) a:hover {
+	background-color: #b56618;
+	color: #fff;
+	
+}
+nav li:nth-child(7):hover,
+nav  li:nth-child(7):active,
+nav  li:nth-child(7) a:hover {
+	background-color: #68b7d5;
+	color: #fff;
+}
+nav li:nth-child(8):hover,
+nav li:nth-child(8):active,
+nav li:nth-child(8) a:hover {
+	background-color: #820064;
+	color: #fff;
+}
+nav li:nth-child(9):hover, 
+nav li:nth-child(9):active,
+nav li:nth-child(9) a:hover {
+	background-color: #98983e;
+	color: #fff;
+}
+
+
 
 /*.....this hides the nested <ul's> .....*/
 nav.menu-top ul ul {
@@ -214,18 +282,18 @@ nav.menu-top ul li:nth-of-type(3) {
 /*..... main list item background hover color..... */
 nav.menu-top ul li:hover {
 	background: #fff;
-	border-bottom: 1px solid #099949; 
+	// border-bottom: 1px solid #099949; 
 	
 }
 /*..... main list item link text hover color.....*/
-nav.menu-top ul li:hover a {
-		color: #099949; 
-}
+// nav.menu-top ul li:hover a {
+// 		color: #099949; 
+// }
 /*..... main list item link text cover */
 nav.menu-top ul li a {
 	padding: 0;
 	font-size: 0.9em;
-	letter-spacing: 0.03rem;
+	letter-spacing: 0.05rem;
 	display: block; 
 	color: #878787; 
 	text-decoration: none;
@@ -331,7 +399,7 @@ a:active {
 #project-template .page-location p {
 	display:block;
 	border-left:1px solid #878787;
-	padding:1% 0 0 3%;
+	padding: 2% 0 0 3%;
 	margin-bottom: 1%;
 
 }
