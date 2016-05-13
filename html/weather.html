@@ -8,73 +8,35 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="../css/global.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/queries.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/menu.css"/>
 </head>
 	
-
 <body id="weather">
 
 <div class="wrapper">
 
 	<!--...HEADER......................................................-->
-	<header role=”banner” class="header">
+	<header role="banner" class="header main_h">
+	
+		<a href="index.html"> <img  src="../images/LOGO/nameLOGO2.png" alt="amy eckert" width="900"> </a>
+		
+		<span class="menu-toggle" data-show-dialog="options-menu-horizontal">Show Menu</span>
 
-		<div class="logo">
-			<a href="index.html"> <img  src="../images/LOGO/nameLOGO2.png" alt="amy eckert" width="900"> </a>
-		</div>  
-		<!--...MAIN MENU...................................................-->
-		<nav class="menu-top"> 
-			<ul class="main-menu">
-				<li class="navphoto "><a href="photography.html" >PHOTOGRAPHY</a>
-					<ul>
-						<li><a href="#">Manufacturing Home</a></li>
-						<li><a href="#">Truckers</a></li>
-						<li><a href="#">Minnesota Cooks</a></li>
-						<li><a href="#">Submarine</a></li>
-						<li><a href="#">Soap</a></li>
-						<li><a href="#">Je Suis Optimiste</a></li>
-						<li><a href="#">Mossburn</a></li>
-						<li><a href="#">Commercial</a></li>
-					
-					</ul>
-				</li>
-
-				<li class="navdesign"><a href="design.html">DESIGN</a>
-					<ul>
-						<li><a href="#">project 1</a></li>
-						<li><a href="#">project 2</a></li>
-						<li><a href="#">project 3</a></li>
-						<li><a href="#">project 4</a></li>
-						<li><a href="#">project 5</a></li>
-					</ul>
-				</li>
-
-				<li class="navinter"><a href="interactive.html">INTERACTIVE</a>
-					<ul>
-						<li><a href="#">project 1</a></li>
-						<li><a href="#">project 2</a></li>
-						<li><a href="#">project 3</a></li>
-						<li><a href="#">project 4</a></li>
-						<li><a href="#">project 5</a></li>
-					</ul>
-				</li>
-
-				<li class="navmixed"><a href="mixedmedia.html">MIXED MEDIA</a>
-					<ul>
-						<li><a href="#">project 1</a></li>
-						<li><a href="#">project 2</a></li>
-						<li><a href="#">project 3</a></li>
-						<li><a href="#">project 4</a></li>
-						<li><a href="#">project 5</a></li>
-					</ul>
-
-				</li>
-			
-				<li class="navabout"><a href="about.html">ABOUT</a></li>
-				<!-- <li class="navblog"><a href="blog.html">BLOG</a></li> -->
-				<li class="navcontact"><a href="contact.html">CONTACT</a></li>		
-			</ul> 
-		</nav>
 	</header>
+
+	<nav role="navigation" class="options-menu-horizontal menu-top"> 
+
+		<ul class="main-menu">
+
+			<li class="navphoto"><a href="photography.html" ><span>PHOTOGRAPHY</span></a></li>
+			<li class="navdesign"><a href="design.html">DESIGN</a></li>
+			<li class="navinter"><a href="interactive.html">INTERACTIVE</a></li>
+			<li class="navmixed"><a href="mixedmedia.html">MIXED MEDIA</a></li>
+			<li class="navabout"><a href="about.html">ABOUT</a></li>
+			<!-- <li class="navblog"><a href="blog.html">BLOG</a></li> -->
+			<li class="navcontact"><a href="contact.html">CONTACT</a></li>		
+		</ul> 
+	</nav>
 
 	<!-- MAIN CONTENT ..................................................-->
 	<section class="main-content">
@@ -262,12 +224,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <!-- JQuery UI -->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>	
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- masonry -->
 <script src="../js/masonry.pkgd.js"></script>
 <!-- imagesLoaded  -->
 <script src="../js/imagesloaded.pkgd.min.js"></script>
 <!--custom.js -->
 <script src="../js/thumb-nav.js"></script> 
+<script src="../js/menu.js"></script> 
 
 
 </body>
