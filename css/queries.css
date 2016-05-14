@@ -49,16 +49,56 @@ grey #878787;
 		padding-top: 10px;
 		border-bottom:1px solid #878787;
 	}
-	.header a img {  
-		width:90%;
+	.logo {
+		display: inline-block;
+		width: 80%;
+		min-width: 200px;
+		height: auto;
+		margin: 0;
+
+	}
+	/*.header a img {  
+		width:85%;
 	 	min-width:200px;
-	 	margin: 0 auto;
+	 	margin: 0;
 	 	height: auto; 
 	 	
-	 }
-	 header span.menu-toggle {
+	 }*/
+	/* header span.menu-toggle {
         display: block;
+    }*/
+    .hamburger {
+    	display: inline-block;
+    	width: 20%
+    	margin: 0;
+    	float: right;
+    	/*width: 20%;*/
     }
+    .menu-icon {
+	    position:relative;
+	    display: inline-block;
+	    right: 0;
+	    top: 0;
+	    max-width: 50px;
+	    min-width: 25px;
+	    text-indent:-999px;
+	}
+	 
+	.border-icon {
+	    height: 15px;
+	    border-top: 5px solid #b56618;
+	    border-bottom: 5px solid #68b7d5; 
+	}
+	 
+	.border-icon:before {
+	    content:"";
+	    position: absolute; 
+	    top: 15px;
+	    left: 0;
+	    width: 100%;
+	    border-top: 5px solid #98983e;
+	}
+
 	nav ul li a { font-size: 1.2rem;}
 
 	nav.menu-top ul li:first-child {
@@ -157,7 +197,7 @@ grey #878787;
 		width: 50%;
 		min-width: 30%;
 	}
-	.project-row a {
+	/*.project-row a {
 		display: block;
 		padding: 5px 0;
 	}
@@ -173,7 +213,7 @@ grey #878787;
 		margin: 0 auto;
 		max-width: 100%;
 		min-width: 30%;
-	}
+	}*/
 	#design .project-row a:first-child, 
 	#mixedmedia .project-row a:nth-child(2) {
 		width: 100%;
@@ -185,7 +225,12 @@ grey #878787;
 	#mixedmedia .grid-sizer a  {
 		display: block;
 	}
-
+	#photography .grid-item img,
+	#design .grid-item img,
+	#interactive .grid-item img,
+	#mixedmedia .grid-item img {
+		padding: 7px 0;
+	} 
 
 	/*.........PROJECT PAGES .......................................*/
 	
@@ -200,7 +245,7 @@ grey #878787;
 	}
 	nav.menu-side a button.back {
 		padding: 14px;
-		width: 20%;
+		/*width: 20%;*/
 		background-image: url("../images/go-back-left-arrow.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -212,10 +257,13 @@ grey #878787;
 		border-bottom: 1px solid #fff;
 	}
 	nav.menu-side p {
-		max-width:80%;
+		display: block;
+    	margin: 1% 0;
+		max-width: 80%;
 		float: right;
 		color: #878787;
 		text-align: right;	
+    	text-transform: uppercase;
 	}
 	nav.menu-side ul li {
 	    display: none;
@@ -233,9 +281,17 @@ grey #878787;
 		order: 2;
 		width: 100%;
 		max-width: 100%;
-		margin: 1rem 0 0 0;
+		margin: -2rem 0 0 0;
 		float: left;
 		clear: both;
+	}
+	#photography .grid, 
+	#design .grid,
+	#interactive .grid,
+	#mixedmedia .grid,
+	#truckers .grid,
+	#exhibitions .grid {
+		margin-top: 0;
 	}
 	.grid-sizer {
 		width: 100%;
@@ -243,11 +299,14 @@ grey #878787;
 	.grid-item {
 		width: 100%;
 	}
-	 .item:hover,
+	.item:hover,
 	.grid-item:hover {
 		opacity: 1;
 }
-	.item { padding: 5px 0;}
+	.item { 
+		padding: 7px 0;
+
+	}
 
 	.statement-body {
 		display: none;
@@ -401,11 +460,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 		width:100%; 
 		border-bottom: 1px solid #878787;
 	}
-	.logo {
+	.header a img {
 		max-width: 50%;
-		height:auto;
-		margin:0;
-
 
 	}
 	
@@ -496,7 +552,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 
 	nav.menu-side {
 		order: 0;
-		max-width: 25% 
+		max-width: 25%; 
 		margin-top: 1em;
 
 	}
@@ -868,11 +924,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 		padding-top: 10px;
 
 	}
-	.logo { 
-		width:30%;
-		border: none;
-		padding-bottom: 0; 
+	.header a img {
+		max-width: 30%;
+
 	}
+	
 	 span.menu-toggle {
         display: none;
     }

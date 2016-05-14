@@ -295,7 +295,7 @@ nav.menu-top ul li a {
 	font-size: 0.9em;
 	letter-spacing: 0.05rem;
 	display: block; 
-	color: #878787; 
+	// color: #878787; 
 	text-decoration: none;
 }	
 /*.....background color for drop down menu <ul> */
@@ -527,7 +527,8 @@ nav.menu-side {
 	line-height:2rem;	
 }
 nav.menu-side li a:hover{
-	color: #099949;
+	color: #fff;
+	padding-left: 5px;
 	
 }
 /*.PHOTGRPHY side menu......... */

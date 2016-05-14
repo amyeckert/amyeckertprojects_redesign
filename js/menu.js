@@ -3,9 +3,9 @@ $(document).ready(function() {
 	var width = screen.availWidth;
     var height = screen.availHeight;
 
-	function toggleMenu() {	
-		
-	// Show the horizontal menu
+	function toggleMainMenu() {	
+
+	// Show the main nav menu
 	    $('.menu-toggle').click(function(e){
 
 	        var menu = $(this).data('show-dialog');
@@ -19,8 +19,10 @@ $(document).ready(function() {
 		});
 	}
 
+	toggleMainMenu();
+
 	if ( width <= 650 ) {
-        toggleMenu();
+        toggleMainMenu();
     }
 
 });

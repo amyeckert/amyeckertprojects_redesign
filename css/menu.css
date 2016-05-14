@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300italic,300);
 
 .options-menu-horizontal {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Josefin Sans' sans-serif;
     text-align: center;
     display: none;
     background-color: #fff;
@@ -37,7 +37,6 @@
 }
 
 .options-menu-horizontal ul li {
-    // color: #ffffff;
     display: inline-block;
     font-size: 20px;
     font-weight: normal;
@@ -49,11 +48,6 @@
     user-select: none;
     box-sizing: border-box;
 }
-
-// .options-menu-horizontal ul li a {
-//     text-decoration: none;
-//     color: #ffffff;
-// }
 
 .options-menu-horizontal ul li span {
     cursor: pointer;
