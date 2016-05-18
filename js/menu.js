@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
 	var width = screen.availWidth;
@@ -23,6 +24,5 @@ $(document).ready(function() {
 
 	if ( width <= 650 ) {
         toggleMainMenu();
-    }
-
+};        
 });

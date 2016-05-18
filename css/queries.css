@@ -28,6 +28,9 @@ grey #878787;
 
 
 @media only screen and (max-width: 650px) { 
+	body {
+		padding-top: 50px;
+	}
 
 	.wrapper {
 
@@ -44,44 +47,48 @@ grey #878787;
 	}
 	header {
 		order: 1;
-		max-width: 90%;
+		z-index: 1;	
+		width: 100%;
+		height: 50px;
 		margin: 0 auto;
-		padding-top: 10px;
+		padding: 8px 5%;	
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #fff;
+		transition: top 0.2s ease-in-out;	
 		border-bottom:1px solid #878787;
+	}
+	.nav-up {
+		top: -40px;
+		border-bottom: none;
 	}
 	.logo {
 		display: inline-block;
-		width: 80%;
-		min-width: 200px;
-		height: auto;
+		width: 85%;
+		min-width: 140px;
+		max-width: 240px;
+		max-height: 40px;
 		margin: 0;
+		background-color: #fff;
 
 	}
-	/*.header a img {  
-		width:85%;
-	 	min-width:200px;
-	 	margin: 0;
-	 	height: auto; 
-	 	
-	 }*/
-	/* header span.menu-toggle {
-        display: block;
-    }*/
     .hamburger {
     	display: inline-block;
-    	width: 20%
+    	width: 15%;
     	margin: 0;
     	float: right;
-    	/*width: 20%;*/
+    	
     }
     .menu-icon {
 	    position:relative;
 	    display: inline-block;
 	    right: 0;
 	    top: 0;
-	    max-width: 50px;
+	    max-width: 35px;
 	    min-width: 25px;
 	    text-indent:-999px;
+	    float: right;
 	}
 	 
 	.border-icon {
@@ -102,9 +109,9 @@ grey #878787;
 	nav ul li a { font-size: 1.2rem;}
 
 	nav.menu-top ul li:first-child {
+		border-left: none;
+	}
 
-	border-left: none;
-}
 	.main-content {	
 		width: 90%;
 		height: 100% ;
@@ -153,27 +160,14 @@ grey #878787;
 	#contact .navcontact, 
 	#project-template .navproject {
 		border: none;
-		/*padding-top: 1%;*/
+		
 	}
-/*	#photography .navphoto,
-	#photography .navphoto, 
-	#design .navdesign, 
-	#interactive .navinter, 
-	#mixedmedia .navmixed, 
-	#about .navabout, 
-	#blog .navblog,
-	#contact .navcontact, 
-	#project-template .navproject {
-		border-top: none;
-	}
-*/
 	#home .page-location p {
 		display: none;
 	} 
 	#home .grid-sizer {
 		width: 100%;
 	}
-
 	.statement-title {
 		margin:0.3rem 0 1rem 0;
 		width:100%;
@@ -194,31 +188,13 @@ grey #878787;
 	.front-row-img img {
 		display: block;
 		margin: 0 auto;
-		width: 50%;
+		max-width: 60vw;
 		min-width: 30%;
 	}
-	/*.project-row a {
-		display: block;
-		padding: 5px 0;
-	}
-	.project-row-img {
-		display: block;
-		max-width: 100%;
-		width: 100%;
-		margin: 0 auto;
-		padding: 0;
-	}
-	.project-row-img img {
-		display:block;
-		margin: 0 auto;
-		max-width: 100%;
-		min-width: 30%;
-	}*/
 	#design .project-row a:first-child, 
 	#mixedmedia .project-row a:nth-child(2) {
 		width: 100%;
 	}
-
 	#photography .grid-sizer a,
 	#design .grid-sizer a,
 	#interactive .grid-sizer a,
@@ -263,6 +239,7 @@ grey #878787;
 		float: right;
 		color: #878787;
 		text-align: right;	
+		font-size: 0.6rem;
     	text-transform: uppercase;
 	}
 	nav.menu-side ul li {
@@ -302,12 +279,11 @@ grey #878787;
 	.item:hover,
 	.grid-item:hover {
 		opacity: 1;
-}
+	}
 	.item { 
 		padding: 7px 0;
 
 	}
-
 	.statement-body {
 		display: none;
 		order: 5;
@@ -329,7 +305,6 @@ grey #878787;
 		padding: 0;
 
 	}
-
 	#about .about-me p {
 	   font-size:1.2rem;
 	}
@@ -386,7 +361,11 @@ grey #878787;
 
 
 	/*......... FOOTER.......................................*/
-	.footer {
+	#home footer {
+		display: none;
+	}
+
+	footer {
 		display: none;
 		width: 90%;
 		margin: 10px auto 0 auto;
@@ -394,9 +373,7 @@ grey #878787;
 		border-top: 1px solid #878787;
 			
 	}
-	#home .footer {
-		margin-top: 0;
-	}
+
 	.column {
 		width: 100%;
 		
@@ -427,7 +404,8 @@ grey #878787;
 	    width: 100%;
 	    height: 100%;
 	    text-align: center;
-	}			
+	}		
+		
 } 
 
 @media
@@ -452,17 +430,73 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 
 @media only screen and (min-width: 651px) and (max-width:1299px) {
 
+	body {
+		padding-top: 50px;
+	}
+
 	.wrapper {
 		max-width:90%; 
 		margin:0 auto;
 	}
 	header {
-		width:100%; 
-		border-bottom: 1px solid #878787;
+		order: 1;
+		z-index: 1;	
+		width: 100%;
+		height: 50px;
+		margin: 0 auto;
+		padding: 8px 5%;	
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #fff;
+		transition: top 0.2s ease-in-out;	
+		border-bottom:1px solid #878787;
 	}
-	.header a img {
-		max-width: 50%;
+	.nav-up {
+		top: -40px;
+		border-bottom: none;
+	}
+	.logo {
+		display: inline-block;
+		width: 85%;
+		min-width: 140px;
+		max-width: 240px;
+		max-height: 40px;
+		margin: 0;
+		background-color: #fff;
 
+	}
+    .hamburger {
+    	display: inline-block;
+    	width: 15%;
+    	margin: 0;
+    	float: right;
+    	
+    }
+    .menu-icon {
+	    position:relative;
+	    display: inline-block;
+	    right: 0;
+	    top: 0;
+	    max-width: 45px;
+	    min-width: 30px;
+	    text-indent:-999px;
+	    float: right;
+	}
+	 
+	.border-icon {
+	    height: 15px;
+	    border-top: 5px solid #b56618;
+	    border-bottom: 5px solid #68b7d5; 
+	}
+	 
+	.border-icon:before {
+	    content:"";
+	    position: absolute; 
+	    top: 15px;
+	    left: 0;
+	    width: 100%;
+	    border-top: 5px solid #98983e;
 	}
 	
 	#exhibitions .menu-top, 
@@ -500,12 +534,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 	}
 
 	nav.menu-top ul li {
-		padding: 0.2rem 0.2rem;
-	}
-
-	.menu-top ul li:nth-child(5),
-	.menu-top ul li:nth-child(6) {
-		display: none;
+		display: inline-block;
+		padding: 0;
+		float: none;
+		width: 100%;
 	}
 	nav ul li {
 		float: none;
@@ -513,8 +545,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 	nav ul li a {
 		font-size: 1rem;
 	}
-	nav ul li:first-child {
-		border: none;
+	nav.menu-top ul li:first-child {
+		border-left: none;
 	}
 
 	.main-content {
@@ -537,7 +569,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 	}
 	.front-row-img img {
 		max-height: 100%;
-		width: 30%;
+		width: 40vh;
 		margin: 0 auto;
 	}
 	/*.........PORTFOLIO LANDING PAGES.......................................*/
@@ -552,13 +584,17 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 
 	nav.menu-side {
 		order: 0;
-		max-width: 25%; 
+		max-width: 27%; 
 		margin-top: 1em;
+		font-size: 0.8rem;
 
 	}
 	nav.menu-side p {
 		display: none;
 	}
+	nav.menu-side button {
+	 	display: none;
+	 }
 
 	#exhibitions .menu-side {
 		display:none;
@@ -671,6 +707,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 		min-width: 74%;
 		max-width: 75%;
 		margin-top: 1rem;
+		margin: 1rem 0 0 1rem;
 		
 	}
 
@@ -824,16 +861,19 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 
 	/*.........FOOTER .......................................*/
 
-	.footer {
+	#home footer {
+		display: none;
+	}
+	footer {
+		display: none;
 		color: #878787;	
 		max-width:1125px;
 		width: 100%;
 		border-top: 1px solid #878787;
 		text-align:left;
 		zoom: 1; 	
-	
 	}
-
+	
 	.column {
 		width: 50%;
 		height: auto;
@@ -910,6 +950,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 --------------------------------------------------------------------------*/ 
 
 @media only screen and (min-width: 1300px )  {
+	body {
+		padding-top: 0;
+	}
 
 	.wrapper  {
 		max-width: 1300px;
@@ -927,6 +970,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 	.header a img {
 		max-width: 30%;
 
+	}
+	.hamburger {
+		display: none;
 	}
 	
 	 span.menu-toggle {
@@ -1034,8 +1080,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 	nav.menu-side {
 		order: 0;
 	}
-	 nav.menu-side p {
+	nav.menu-side p {
 		display: none;
+	}
+	nav.menu-side button {
+	 	display: none;
 	}
 	#exhibitions .menu-side{
 		display: block;
