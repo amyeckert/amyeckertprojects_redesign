@@ -154,7 +154,23 @@ header span.menu-toggle {
         display: none;
 }
 
-/*......... HAMBURGER MENU.........................................*/
+/*......... HAMBURGER MENU ITEMS.........................................*/
+
+nav.menu-top ul.main-menu {
+	z-index: 1;
+	width:100%;
+	max-width:1125px;
+	text-align: center;
+	margin: 0 auto;
+	padding:0;  
+	list-style: none;
+	position: relative;
+	display: inline-block; 
+
+}
+nav.menu-top ul:after {
+	content: ""; clear: both; display: block;
+}
 nav.menu-top ul li a {
 	display: block;
     width: 100%;
@@ -163,110 +179,84 @@ nav.menu-top ul li a {
 }
 nav.menu-top ul li a:hover { 
 	border-bottom: none;
-
 }
-nav.menu-top li:first-child:hover,
-nav.menu-top li:first-child:active,
-nav.menu-top li:first-child a:hover {
+nav.menu-top ul.main-menu li:nth-child(1):hover, /*photography*/
+nav.menu-top ul.main-menu li:nth-child(1):active,
+nav.menu-top ul.main-menu li:nth-child(1) a:hover {
 	background-color: #a84420;
-	color:#fff;
+	color: #fff;
 }
-nav.menu-top li:nth-child(2):hover,
-nav.menu-top li:nth-child(2):active,
-nav.menu-top li:nth-child(2) a:hover {
+nav.menu-top ul.main-menu li:nth-child(2):hover, /*design*/
+nav.menu-top ul.main-menu li:nth-child(2):active,
+nav.menu-top ul.main-menu li:nth-child(2) a:hover {
 	background-color: #5f9797;
-	color:#fff;	
+	color: #fff;	
 }
-nav.menu-top li:nth-child(3):hover,
-nav.menu-top li:nth-child(3):active, 
-nav.menu-top li:nth-child(3) a:hover {
+nav.menu-top ul.main-menu li:nth-child(3):hover, /*mixed media*/
+nav.menu-top ul.main-menu li:nth-child(3):active, 
+nav.menu-top ul.main-menu li:nth-child(3) a:hover {
 	background-color: #8a5cd1;
 	color: #fff;
 } 
-nav.menu-top li:nth-child(4):hover,
-nav.menu-top li:nth-child(4):active, 
-nav.menu-top li:nth-child(4) a:hover {
+nav.menu-top ul.main-menu li:nth-child(4):hover, /*exhibitions*/
+nav.menu-top ul.main-menu li:nth-child(4):active, 
+nav.menu-top ul.main-menu li:nth-child(4) a:hover {
 	background-color: #4866fb;	
+	color: #fff;
 }
-nav.menu-top li:nth-child(5):hover,
-nav.menu-top li:nth-child(5):active,
-nav.menu-top li:nth-child(5) a:hover {
+nav.menu-top ul.main-menu li:nth-child(5):hover, /*about*/
+nav.menu-top ul.main-menu li:nth-child(5):active,
+nav.menu-top ul.main-menu li:nth-child(5) a:hover {
 	background-color: #099949;
 	color: #fff;
 }
 
-nav.menu-top li:nth-child(6):hover, 
-nav.menu-top li:nth-child(6):active,
-nav.menu-top li:nth-child(6) a:hover {
+nav.menu-top ul.main-menu li:nth-child(6):hover,  /*contact*/
+nav.menu-top ul.main-menu li:nth-child(6):active,
+nav.menu-top ul.main-menu li:nth-child(6) a:hover {
 	background-color: #b56618;
 	color: #fff;
 	
 }
-nav.menu-top li:nth-child(7):hover,
-nav.menu-top  li:nth-child(7):active,
-nav.menu-top  li:nth-child(7) a:hover {
+/*nav.menu-top ul.share li:nth-child(1):hover, /*facebook*/
+/*nav.menu-top ul.share li:nth-child(1):active,
+nav.menu-top ul.share li:nth-child(1) a:hover {
 	background-color: #68b7d5;
-	color: #fff;
-}
-nav.menu-top li:nth-child(8):hover,
-nav.menu-top li:nth-child(8):active,
-nav li:nth-child(8) a:hover {
+	color: #fff;*/
+/*}*/
+/*nav.menu-top ul.share li:nth-child(2):hover, /*instagram*/
+/*nav.menu-top ul.share li:nth-child(2):active,
+nav.menu-top ul.share li:nth-child(2) a:hover {
 	background-color: #820064;
 	color: #fff;
-}
-nav.menu-top li:nth-child(9):hover, 
-nav.menu-top li:nth-child(9):active,
-nav.menu-top li:nth-child(9) a:hover {
+}*/
+/*nav.menu-top ul.share li:nth-child(3):hover, *//*twitter*/
+/*nav.menu-top ul.share li:nth-child(3):active,
+nav.menu-top ul.share li:nth-child(3) a:hover {
 	background-color: #98983e;
 	color: #fff;
-}
-/*.....this hides the nested <ul's> .....*/
-nav.menu-top ul ul {
-display: none;
+}*/
 
-}
-/*.....this makes sure only the first child <ul> is selected under a 
-specific li in the main level..... */
-nav.menu-top ul li:hover > ul {
-	display: none;
-}
-/*.....general styling..... */
-nav.menu-top ul {
-	z-index: 1;
-	width:100%;
-	max-width:1125px;
-	text-align:center;
-	margin: 0 auto;
-	padding:0;  
-	list-style: none;
-	position: relative;
-	display: inline-table; /*...note table display!.. */ 
 
-}
-nav.menu-top ul:after {
-	content: ""; clear: both; display: block;
-}
+nav.menu-top ul.main-menu li,
+nav.menu-top ul.share li  {
+	float: left;
+	padding: 0.4rem 0.4rem;
+/*	border: 1px solid #fff;
+*/}
 
-nav.menu-top ul li:first-child {
+nav.menu-top ul.main-menu li:first-child {
 	border-left: 1px solid #878787;
 }
 
-nav.menu-top ul li {
-	float: left;
-	padding: 0.4rem 0.4rem;
-	border: 1px solid #fff;
-}
-
-/*..... main list item background hover color..... */
-nav.menu-top ul li:hover {
-	background: #fff;	
-}
 /*..... main list item link text hover color.....*/
-nav.menu-top ul li:hover a {
+nav.menu-top ul.menu-top li:hover a,
+nav.menu-top ul.share li:hover a  {
  	color: #fff; 
  }
 /*..... main list item link text cover */
-nav.menu-top ul li a {
+nav.menu-top ul.main-menu li a,
+nav.menu-top ul.share li a  {
 	padding: 0;
 	font-size: 0.9em;
 	letter-spacing: 0.05rem;
@@ -274,24 +264,10 @@ nav.menu-top ul li a {
 	color: #878787; 
 	text-decoration: none;
 }	
-/*.....background color for drop down menu <ul> */
-nav.menu-top ul ul {
-	background: #fff;
- 	padding: 0;
-	position: absolute; 
-	top: 100%;
-}
-nav.menu-top ul ul li {
-	float: none; 
-	position: relative;
+nav.menu-top ul.share li a img {
+	height: 50px;
+	width: auto;
 
-}
-nav.menu-top ul ul li a {
-	padding: 15px 30px;
-	color: #820064;
-}	
-nav.menu-top ul ul li a:hover {
-	background: #fff;
 }
 a:link {
 	color:#878787;

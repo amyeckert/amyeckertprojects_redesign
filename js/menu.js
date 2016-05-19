@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	function toggleMainMenu() {	
 
-	// Show the main nav menu
+		// Show the main nav menu
 	    $('.menu-toggle').click(function(e){
 
 	        var menu = $(this).data('show-dialog');

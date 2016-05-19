@@ -81,7 +81,7 @@ grey #878787;
     	
     }
     .menu-icon {
-	    position:relative;
+	    position: relative;
 	    display: inline-block;
 	    right: 0;
 	    top: 0;
@@ -108,10 +108,22 @@ grey #878787;
 
 	nav ul li a { font-size: 1.2rem;}
 
-	nav.menu-top ul li:first-child {
+	nav.menu-top ul.main-menu {
+		border-top: 1px solid #878787;
+	}
+	nav.menu-top ul.main-menu li:first-child {
 		border-left: none;
 	}
+	nav.menu-top ul.share li {
+		display: inline-block;
+		width: 30%;
+		margin: 0;
+		padding: 0;
+		float: left;
 
+	}
+
+	/*...............MAIN CONTENT AREA.......................................*/
 	.main-content {	
 		width: 90%;
 		height: 100% ;
@@ -173,7 +185,7 @@ grey #878787;
 		width:100%;
 		
 	}
-	.project-row, .front-row {
+	.front-row {
 		max-width: 100%;
 		padding:0;
 		margin: 1rem auto;
@@ -212,7 +224,7 @@ grey #878787;
 	
 	nav.menu-side {
 		order: 1;
-		display: block;
+		display: flex;
 		max-width: 100%;
 		
 	}
@@ -258,17 +270,15 @@ grey #878787;
 		order: 2;
 		width: 100%;
 		max-width: 100%;
-		margin: -2rem 0 0 0;
+		margin: 0 0 0 0;
 		float: left;
 		clear: both;
 	}
-	#photography .grid, 
-	#design .grid,
-	#interactive .grid,
-	#mixedmedia .grid,
-	#truckers .grid,
-	#exhibitions .grid {
-		margin-top: 0;
+	#manhome .grid,
+	#mhbook .grid,
+	#print-portfolio .grid {
+		margin-top: -2rem;
+		align-self: flex-start;
 	}
 	.grid-sizer {
 		width: 100%;
@@ -533,6 +543,16 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 		display: none;
 	}
 
+	#photography .navphoto, 
+	#design .navdesign, 
+	#interactive .navinter, 
+	#mixedmedia .navmixed, 
+	#about .navabout, 
+	#blog .navblog,
+	#contact .navcontact, 
+	#project-template .navproject {
+		border: none;
+	}
 	nav.menu-top ul li {
 		display: inline-block;
 		padding: 0;
@@ -548,6 +568,24 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 	nav.menu-top ul li:first-child {
 		border-left: none;
 	}
+
+	nav.menu-top ul.share {
+		width: 50%;
+		margin: 0 auto;
+	}
+	nav.menu-top ul.share li {
+		display: inline-block;
+		width: 30%;
+		margin: 0 auto;
+		padding: 0;
+	
+
+	}
+	nav.menu-top ul.share li a{
+		width: 100%;
+		display: inline-block;
+	}
+	
 
 	.main-content {
 		order: 2;
@@ -599,7 +637,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 	#exhibitions .menu-side {
 		display:none;
 	}
-
+	nav.menu-top ul.main-menu {
+		border-top: 1px solid #878787;
+	}
 	nav.menu-side ul li {
 		display: block;
 		width:100%;
@@ -979,12 +1019,12 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
         display: none;
     }
 	nav.menu-top {
-		display:none; 
+		display: none; 
 		font-size: 1.3rem;
 		text-align: left;
 		border-top: 1px solid #aba787;
 	}
-	nav..menu-side ul {
+	nav.menu-side ul {
 		font-size: 1rem;
 		width:100%;
 		margin:0 auto;
