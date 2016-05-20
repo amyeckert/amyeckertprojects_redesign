@@ -22,7 +22,6 @@ $(document).ready(function() {
 
 	toggleMainMenu();
 
-	if ( width <= 650 ) {
-        toggleMainMenu();
-};        
-});
+	// if ( width <= 650 ) {
+ //        toggleMainMenu();
+});        

@@ -146,17 +146,20 @@ header {
 	padding-top: 20px;
 	border-bottom:1px solid #878787;
 }
+header .hamburger {
+	display: block;
+}
+header span.menu-toggle {
+    display: block;
+}
 .logo {
 	height:auto;
 
 }
-header span.menu-toggle {
-        display: none;
-}
-
 /*......... HAMBURGER MENU ITEMS.........................................*/
 
-nav.menu-top ul.main-menu {
+nav.menu-top ul.main-menu,
+nav.menu-top ul.share {
 	z-index: 1;
 	width:100%;
 	max-width:1125px;
@@ -169,7 +172,8 @@ nav.menu-top ul.main-menu {
 
 }
 nav.menu-top ul:after {
-	content: ""; clear: both; display: block;
+	content: ""; clear: both; 
+	display: block;
 }
 nav.menu-top ul li a {
 	display: block;
@@ -221,12 +225,12 @@ nav.menu-top ul.main-menu li:nth-child(6) a:hover {
 
 nav.menu-top ul.main-menu li,
 nav.menu-top ul.share li  {
-	float: left;
+	float: none;
 }
 
-nav.menu-top ul.main-menu li:first-child {
+/*nav.menu-top ul.main-menu li:first-child {
 	border-left: 1px solid #878787;
-}
+}*/
 li.navphoto:hover {
 	color: #fff;
 }
@@ -235,8 +239,8 @@ li.navphoto:hover {
 nav.menu-top ul.main-menu li a,
 nav.menu-top ul.share li a  {
 	padding: 0;
-	font-size: 0.9em;
-	letter-spacing: 0.05rem;
+	font-size: 1em;
+	letter-spacing: 0.07rem;
 	display: block; 
 	color: #878787; 
 	text-decoration: none;
@@ -357,6 +361,7 @@ a:active {
 	
 	flex-direction: column;
 	width: 100%;
+	margin: 0 auto;
 
 }
 .page-location: {
@@ -741,6 +746,7 @@ input[type="submit"]:hover {
 /*.............FOOTER....................................................*/
 
 footer {
+	display: none;
 	order:3;
 	align-self: flex-end;
 	color: #878787;

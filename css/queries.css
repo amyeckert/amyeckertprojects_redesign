@@ -31,7 +31,7 @@ grey #878787;
 	  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
 		flex-direction: column;
-		max-width: 100%;
+		max-width: 90%;
 		margin: 0 auto;
 	
 	}
@@ -108,14 +108,14 @@ grey #878787;
 		width: 30%;
 		margin: 0;
 		padding: 0;
-		float: left;
+		
 
 	}
 
 	/*...............MAIN CONTENT AREA.......................................*/
 	.main-content {	
-		/*width: 90%;*/
-		height: 100% ;
+		width: 90%;
+		height: 100%;
 		margin: 0 auto;
 
 		order: 1;
@@ -465,14 +465,14 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 400px) 
 
 	}
     .hamburger {
-    	display: inline-block;
+    	
     	width: 15%;
     	margin: 0;
     	float: right;
     	
     }
     .menu-icon {
-	    position:relative;
+	    position: relative;
 	    display: inline-block;
 	    right: 0;
 	    top: 0;
@@ -924,7 +924,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 
 
   nav.menu-top ul li {
-  	padding: 0.7rem 0.7rem;
+  	padding: 0;
   }
 
   .front-row-img {
@@ -956,7 +956,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 	}
 
 	.wrapper  {
-		max-width: 1300px;
+		max-width: 1200px;
 		min-width: 305px;
 		margin:0 auto;
 	}
@@ -966,25 +966,24 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 		display: inline-block;
 		width:100%;
 		padding-top: 10px;
-		/*margin-bottom: 1rem;*/
 
 	}
 	.header a img {
 		max-width: 30%;
 
 	}
-	.hamburger {
-		display: none;
+	/*.hamburger {
+		display: block;
 	}
 	
-	 span.menu-toggle {
-        display: none;
-    }
+	header span.menu-toggle {
+        display: block;
+    }*/
 	nav.menu-top {
 		display: none; 
-		font-size: 1.3rem;
-		text-align: left;
-		border-top: 1px solid #aba787;
+		/*font-size: 1.3rem;
+		text-align: center;
+		border-top: 1px solid #aba787;*/
 	}
 	nav.menu-side ul {
 		font-size: 1rem;
@@ -1000,6 +999,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 		flex-direction: row;
 		width:100%;
 		height: auto;
+		/*margin: 1rem auto;*/
 	}
 	/*#contact.main-content {
 		margin-top:0.28rem;
@@ -1023,7 +1023,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 		right: 0;
 		width: 100%;
 		height: auto;
-		margin: 0 auto;
+		margin: 1rem auto;
 		
 	}
 
@@ -1053,8 +1053,13 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 	#interactive .grid-item,
 	#mixedmedia .grid-item {
 		width: 50%;
-
 	}
+	#photography .grid-item img,
+	#design .grid-item img,
+	#interactive .grid-item img,
+	#mixedmedia .grid-item img {
+		padding: 7px;
+	} 
 	#interactive .page-location, #mixedmedia .page-location, 
 	#photography .page-location, #design .page-location, 
 	#portfolio-template .page-location, #project-template .page-location, 
@@ -1311,7 +1316,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 401px) 
 	/*------------------------------------------------------------------
 	----footer---------------------------------------------------------*/
 
-	footer {	
+	footer {
+	display: block;	
 		font-size: 1rem;
 		margin-bottom: 15px;
 	}

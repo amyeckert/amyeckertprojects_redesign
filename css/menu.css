@@ -42,16 +42,12 @@
     font-weight: normal;
     margin: 0 60px auto auto;
     line-height: 4;
-    padding: 8px 0;
+    padding: 0 0;
 
     -webkit-user-select: none;
     user-select: none;
     box-sizing: border-box;
 }
-
-/*.options-menu-horizontal ul li span {
-    cursor: pointer;
-}*/
 
 /* Responsive */
 
@@ -96,9 +92,34 @@
 }
 
 @media only screen and (min-width: 1300px ) {
-
+    
      header span.menu-toggle {
-        display: none;
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .options-menu-horizontal ul li {
+        display: inline-block;
+        width: 15%;
+        font-size: 1rem;
+        margin: 0 auto;
+        line-height: 3;
+        padding: 4px 0;
+    }
+
+    .options-menu-horizontal span.close-menu {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        line-height: 1.1;
+        font-size: 30px;
+    }
+    nav.menu-top ul.share {
+        width: 15%;
+        float right;
     }
 
 }
+
