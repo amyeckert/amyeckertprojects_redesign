@@ -159,7 +159,7 @@ header span.menu-toggle {
 nav.menu-top ul.main-menu {
 	z-index: 1;
 	width:100%;
-	max-width:1125px;
+	max-width: 700px;
 	text-align: center;
 	margin: 0 auto;
 	padding:0;  
@@ -180,38 +180,38 @@ nav.menu-top ul li a {
 nav.menu-top ul li a:hover { 
 	border-bottom: none;
 }
-nav.menu-top ul.main-menu li:nth-child(1):hover, /*photography*/
+/*nav.menu-top ul.main-menu li:nth-child(1):hover,*/ /*photography*/
 nav.menu-top ul.main-menu li:nth-child(1):active,
 nav.menu-top ul.main-menu li:nth-child(1) a:hover {
 	background-color: #a84420;
 	color: #fff;
 }
-nav.menu-top ul.main-menu li:nth-child(2):hover, /*design*/
+/*nav.menu-top ul.main-menu li:nth-child(2):hover, /*design*/
 nav.menu-top ul.main-menu li:nth-child(2):active,
 nav.menu-top ul.main-menu li:nth-child(2) a:hover {
 	background-color: #5f9797;
 	color: #fff;	
 }
-nav.menu-top ul.main-menu li:nth-child(3):hover, /*mixed media*/
+/*nav.menu-top ul.main-menu li:nth-child(3):hover,*/ /*mixed media*/
 nav.menu-top ul.main-menu li:nth-child(3):active, 
 nav.menu-top ul.main-menu li:nth-child(3) a:hover {
 	background-color: #8a5cd1;
 	color: #fff;
 } 
-nav.menu-top ul.main-menu li:nth-child(4):hover, /*exhibitions*/
+/*nav.menu-top ul.main-menu li:nth-child(4):hover,*/ /*exhibitions*/
 nav.menu-top ul.main-menu li:nth-child(4):active, 
 nav.menu-top ul.main-menu li:nth-child(4) a:hover {
 	background-color: #4866fb;	
 	color: #fff;
 }
-nav.menu-top ul.main-menu li:nth-child(5):hover, /*about*/
+/*nav.menu-top ul.main-menu li:nth-child(5):hover,*/ /*about*/
 nav.menu-top ul.main-menu li:nth-child(5):active,
 nav.menu-top ul.main-menu li:nth-child(5) a:hover {
 	background-color: #099949;
 	color: #fff;
 }
 
-nav.menu-top ul.main-menu li:nth-child(6):hover,  /*contact*/
+/*nav.menu-top ul.main-menu li:nth-child(6):hover,*/  /*contact*/
 nav.menu-top ul.main-menu li:nth-child(6):active,
 nav.menu-top ul.main-menu li:nth-child(6) a:hover {
 	background-color: #b56618;
@@ -225,7 +225,7 @@ nav.menu-top ul.share li  {
 }
 
 nav.menu-top ul.main-menu li:first-child {
-	border-left: 1px solid #878787;
+	/*border-left: 1px solid #878787;*/
 }
 li.navphoto:hover {
 	color: #fff;
@@ -234,7 +234,7 @@ li.navphoto:hover {
 /*..... main list item link text cover */
 nav.menu-top ul.main-menu li a,
 nav.menu-top ul.share li a  {
-	padding: 0;
+	padding: 4px 4px;
 	font-size: 0.9em;
 	letter-spacing: 0.05rem;
 	display: block; 
@@ -272,7 +272,7 @@ a:active {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	flex: 1;
-	margin: 1rem auto;
+	margin: 0 auto;
 
 }
 
@@ -284,7 +284,7 @@ a:active {
 #blog .navblog,
 #contact .navcontact, 
 #project-template .navproject {
-	border: 1px solid #878787;
+	/*border: 1px solid #878787;*/
 }
 
 #photography .navphoto,
@@ -300,7 +300,6 @@ a:active {
 }
 
 /*......... MAIN CONTENT AREA .......................................*/
-
 	
 #interactive .page-location, 
 #mixedmedia .page-location, 
@@ -316,8 +315,6 @@ a:active {
 	text-transform:uppercase;
 }
 
-
-
 #interactive .page-location p, 
 #mixedmedia .page-location p, 
 #photography .page-location p, 
@@ -326,7 +323,7 @@ a:active {
 #project-template .page-location p {
 	display:block;
 	border-left:1px solid #878787;
-	padding: 2% 0 0 3%;
+	padding: 1% 0 0 1%;
 	margin-bottom: 1%;
 
 }
@@ -346,8 +343,7 @@ a:active {
 #photography .main-content,
 #design .main-content,
 #interactive .main-content,
-#mixedmedia .main-content,
-.front-row-img   {
+#mixedmedia .main-content {
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -366,14 +362,14 @@ a:active {
 	width: 100%;
 	height: auto;
 }
-.front-row-img {
+/*.front-row-img {
 	flex-direction: column;
 	justify-content: center;
 	margin: 1.5rem 0 0 0;
 }
 .front-row-img img {
 	margin: 0 auto;
-}
+}*/
  /*.............PORTFOLIO TITLES ............................... */
 
 .front-titles, .project-titles {
@@ -449,7 +445,7 @@ nav.menu-side li a:hover{
 
 .carousel-nav {
 	display: block;
-	visibility: hidden;
+	visibility: visible;
 
 }
 .carousel-nav button:first-child {
@@ -469,21 +465,6 @@ nav.menu-side li a:hover{
 	visibility: hidden;
 	color: #878787;
 }
-.item {
-	display: -webkit-inline-block; 
-	order: 1;
-	width: 15%;
-	height: auto;
-	padding: 7px;
-	flex-basis: auto;
-}
-
-.item img {
-	width: 100%;
-	height: auto;
-}
-
-
 .statement-body {
 	order: 4;
 	flex: 2 0;
@@ -528,35 +509,6 @@ nav.menu-side li a:hover{
   content: '';
   display: block;
   clear: both;
-}
-.grid {
-	order: 3;
-	min-width: 75%;
-	height: auto;
-}
-.grid-sizer,
-.grid-item {
-  width: 20%;
-}
-.grid-item {
-	order: 1;
-	flex: 1 0;
-	align-self: flex-start;
-	opacity: 1;
-}
-.item:hover,
-.grid-item:hover {
-	opacity:0.8;
-}
-.grid-item img {
-  	width: 100%;
-	height:auto;
-	display:block;
-	
-}
-.grid-item p {
-	display: none;
-	color: #fff;
 }
 /*.........ABOUT PAGE .......................................*/
 

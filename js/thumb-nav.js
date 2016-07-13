@@ -102,7 +102,7 @@
             });
 
             /*-------------------------------------------------------------------------------------------------
-                        picks a thumbnail / hides thumbnail grid */
+                when a thumbnail is clicked on / hides thumbnail grid / shows image big */
 
             $('.item').on('click', function(e) {
                 e.preventDefault();
@@ -125,7 +125,7 @@
                 // var showHideStatement = document.querySelector('statement-body');
 
                 carousel.style.display = 'block';
-                carousel.style.width = '75%';
+                carousel.style.width = '100%';
                  
                 bigImg.style.visibility = 'visible';
                 cNav.style.visibility = 'visible';
@@ -139,7 +139,7 @@
                 console.log(chosen_thumb, bigImg, imgInfo);
             }); 
             /*-------------------------------------------------------------------------------------------------
-                         hides big image/ shows thumbs grid */
+                hides big image/ shows thumbs grid */
                             
             $('.thumbs-only').on('click', function() {
 
@@ -168,7 +168,7 @@
             console.log( width, height );
         }
 
-        if ( width >= 650 ) {
+        if ( width >= 700 ) {
             thumbnailNav();
         }   
     

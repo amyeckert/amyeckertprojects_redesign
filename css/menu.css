@@ -40,18 +40,14 @@
     display: inline-block;
     font-size: 20px;
     font-weight: normal;
-    margin: 0 60px auto auto;
-    line-height: 4;
-    padding: 8px 0;
+    margin: 0 auto;
+    line-height: 2.5;
+    padding: 0;
 
     -webkit-user-select: none;
     user-select: none;
     box-sizing: border-box;
 }
-
-/*.options-menu-horizontal ul li span {
-    cursor: pointer;
-}*/
 
 /* Responsive */
 
@@ -97,8 +93,11 @@
 
 @media only screen and (min-width: 1300px ) {
 
-     header span.menu-toggle {
+    header span.menu-toggle {
         display: none;
     }
+   .options-menu-horizontal { 
+    display: none;
 
+    }
 }
