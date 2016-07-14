@@ -2,7 +2,6 @@
 // Source:  https://medium.com/@mariusc23/hide-header-on-scroll-down-show-on-scroll-up-67bbaae9a78c#.z5at3b43h
 
 // Hide Header on on scroll down
- // $(document).ready(function() {
  	
 	var didScroll;
 	var lastScrollTop = 0;
@@ -42,5 +41,4 @@
 	    lastScrollTop = st;
 	};
 
-// })
 (jQuery);

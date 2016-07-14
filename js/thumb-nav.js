@@ -16,13 +16,12 @@
           $grid.masonry();
         });
 
-
-        function thumbnailNav() {
+        // if ( width >= 700 ) {
             /*-------------------------------------------------------------------------------------------------
-                        previous or next button */
+                previous or next button */
 
             $('.previous').on('click', function() {
-      
+
                 var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
                 var items = document.querySelectorAll('div.item');
 
@@ -53,8 +52,7 @@
                     $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
                 }
                     
-                // console.log( mq );
-                });
+            });
 
             $('.next').on('click', function() {
 
@@ -122,8 +120,8 @@
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
-                // var showHideStatement = document.querySelector('statement-body');
 
+                // var showHideStatement = document.querySelector('statement-body');
                 carousel.style.display = 'block';
                 carousel.style.width = '100%';
                  
@@ -161,17 +159,11 @@
                 // showHideStatement.display = 'none';
 
             });
-            /*-------------------------------------------------------------------------------------------------
-                  SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
-    
+                /*-------------------------------------------------------------------------------------------------
+                      SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
 
-            console.log( width, height );
-        }
-
-        if ( width >= 700 ) {
-            thumbnailNav();
-        }   
-    
+                
+        // }
 
 //________THE END______________________________________________________________________________________________________________
 });

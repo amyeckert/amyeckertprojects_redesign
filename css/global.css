@@ -153,7 +153,7 @@ header span.menu-toggle {
     display: block;
 }
 .logo {
-	height:auto;
+	height: auto;
 
 }
 /*......... HAMBURGER MENU ITEMS.........................................*/
@@ -162,7 +162,7 @@ nav.menu-top ul.main-menu,
 nav.menu-top ul.share {
 	z-index: 1;
 	width:100%;
-	max-width: 700px;
+	max-width: 100%;
 	text-align: center;
 	margin: 0 auto;
 	padding:0;  
@@ -270,7 +270,7 @@ a:active {
 
 .main-content {
 	order: 2;
-	width: 90%;
+	width: 100%;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -453,26 +453,23 @@ nav.menu-side li a:hover{
 	border-bottom:1px solid #878787;
 }
 
-.carousel-nav {
+/*.carousel-nav {
 	display: block;
 	visibility: visible;
 
-}
+}*/
 .carousel-nav button:first-child {
 	padding-left: 0;
 
 }
 #carousel {
 	display: block;
-	visibility:hidden;
+	visibility: hidden;
 	order: 2;
 	flex: 1 0;
-	border: 1px solid red;
 	margin-bottom: 1rem;
 }
 .image-info { 
-	display: block;
-	visibility: hidden;
 	color: #878787;
 }
 .statement-body {
