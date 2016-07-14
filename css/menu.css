@@ -40,9 +40,12 @@
     display: inline-block;
     font-size: 20px;
     font-weight: normal;
-    margin: 0 auto;
+    margin: 0;
     line-height: 2.5;
     padding: 0;
+    margin: 0 60px auto auto;
+    line-height: 4;
+    padding: 0 0;
 
     -webkit-user-select: none;
     user-select: none;
@@ -71,7 +74,6 @@
         display: block;
         width: 100%;
     }
-
     .options-menu-horizontal ul li {
          display: block;
          font-size: 1.5rem;
@@ -79,7 +81,6 @@
          line-height: 3;
          padding: 4px 0;
     }
-
     .options-menu-horizontal span.close-menu {
         top: 10px;
         right: 10px;
@@ -88,16 +89,38 @@
         line-height: 1.1;
         font-size: 30px;
     }
-
 }
 
 @media only screen and (min-width: 1300px ) {
 
-    header span.menu-toggle {
-        display: none;
+     header span.menu-toggle {
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .options-menu-horizontal ul li {
+        display: inline-block;
+        width: 15%;
+        font-size: 1rem;
+        margin: 0 auto;
+        line-height: 3;
+        padding: 4px 0;
+    }
+    .options-menu-horizontal span.close-menu {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        line-height: 1.1;
+        font-size: 30px;
+    }
+    nav.menu-top ul.share {
+        width: 15%;
+        float right;
     }
    .options-menu-horizontal { 
     display: none;
-
     }
 }
+

@@ -31,7 +31,7 @@ grey #878787;
 	  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
 		flex-direction: column;
-		max-width: 100%;
+		max-width: 90%;
 		margin: 0 auto;
 	
 	}
@@ -108,14 +108,14 @@ grey #878787;
 		width: 30%;
 		margin: 0;
 		padding: 0;
-		float: left;
+		
 
 	}
 
 	/*...............MAIN CONTENT AREA.......................................*/
 	.main-content {	
-		/*width: 90%;*/
-		height: 100% ;
+		width: 90%;
+		height: 100%;
 		margin: 0 auto;
 
 		order: 1;
@@ -488,14 +488,14 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 
 	}
     .hamburger {
-    	display: inline-block;
+    	
     	width: 15%;
     	margin: 0;
     	float: right;
     	
     }
     .menu-icon {
-	    position:relative;
+	    position: relative;
 	    display: inline-block;
 	    right: 0;
 	    top: 0;
@@ -957,13 +957,18 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		width: 100%;
 		height: auto;
 	}
-	
-	.image-info {
-
+	nav.menu-top ul li {
+		padding: 0;
 	}
-	/*nav.menu-top ul li {
-		padding: 0.7rem 0.7rem;
-	}*/
+	.front-row-img {
+		max-width: 100%;
+		height:60vh;
+	/*	border: 1px solid red;*/
+	}
+	.front-row-img img {
+		height: 100%;
+		width: auto;
+	}
 
 	.front-row-img {
 		max-width: 100%;
@@ -985,7 +990,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	}
 
 	.wrapper  {
-		max-width: 1300px;
+		max-width: 1200px;
 		min-width: 305px;
 		margin:0 auto;
 	}
@@ -995,6 +1000,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		top: -109px;
 		width:100%;
 		padding-top: 10px;
+
 		margin-bottom: 0;
 
 	}
@@ -1038,8 +1044,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 
 	nav.menu-top ul.share li a img {
 		height: 30px;
-
-
 	}
 	nav.menu-side ul {
 		font-size: 1rem;
@@ -1057,8 +1061,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		height: auto;
 		position: relative;
 		top: -110px;
-		/*z-index: 1;*/
-
 	}
 	#contact.main-content {
 		margin-top:0.28rem;
@@ -1082,7 +1084,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		right: 0;
 		width: 100%;
 		height: auto;
-		margin: 0 auto;
+		margin: 1rem auto;
 		
 	}
 
@@ -1112,8 +1114,13 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	#interactive .grid-item,
 	#mixedmedia .grid-item {
 		width: 50%;
-
 	}
+	#photography .grid-item img,
+	#design .grid-item img,
+	#interactive .grid-item img,
+	#mixedmedia .grid-item img {
+		padding: 7px;
+	} 
 	#interactive .page-location, #mixedmedia .page-location, 
 	#photography .page-location, #design .page-location, 
 	#portfolio-template .page-location, #project-template .page-location, 
