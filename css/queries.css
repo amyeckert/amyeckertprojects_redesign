@@ -709,16 +709,16 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	}
 	.carousel-nav {
 		display: block;
-		visibility: visible;
+		visibility: hidden;
+		width: 100%;
 		min-width: 25%;
 		order: 4;
-		min-width: 100%;
 	}
 	#carousel, 
 	.big,
 	.big-img-container, 
 	.image-info,
-	.carousel-nav,
+	/*.carousel-nav,*/
 	.item p  {	
 		display: none;
 	 }
@@ -727,10 +727,10 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		display: none;
 		visibility: visible;
 		position: relative;
-		max-width: 90%;
+		max-width: 75%;
 		width: 100%;
 		height: 80vh;
-		margin: 1rem 0; 
+		margin: 1rem 0 0 13rem; 
 		order: 2;
 		flex-grow: 2;
 		border: 1px solid red;
@@ -738,17 +738,20 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	.big {	
 		display: block;
 		visibility: visible;
+		position: absolute;
+		top: 0;
+	    right: 0;
 		width: 100%;
 		height: auto;
 	}
 	.big-img-container {
-	    display: none;
+	    display: block;
 	    visibility: visible;
 	    width: 100%;
-	    height: 100%;
-	    position: absolute;
+	    height: 80vh;
+	   	position: absolute;
 	    top: 0;
-	    right: 0; /*was -60px;*/
+	    right: 0; /*-11.2%;*/
 	    background-size: contain;
 	    background-repeat: no-repeat;
 	    border: 1px solid purple;
@@ -758,7 +761,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		display: none;
 	}
 	.grid {
-		display: none;
+		display: block;
 		
 	}
 	.grid {

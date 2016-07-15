@@ -111,6 +111,8 @@
                 // Figure out which thumbnail is chosen
                 var chosen_thumb = $(this).find('img').attr('src');
                 var carousel = document.getElementById('carousel');
+                var header = document.querySelector('header')
+                $('header').removeClass('nav-up').addClass('nav-down');
 
                 $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
@@ -120,6 +122,7 @@
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
+
 
                 // var showHideStatement = document.querySelector('statement-body');
                 carousel.style.display = 'block';
@@ -133,6 +136,10 @@
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
                 // showHideStatement.display = 'none';
+
+                // return header to visible position//
+
+
 
                 console.log(chosen_thumb, bigImg, imgInfo);
             }); 
