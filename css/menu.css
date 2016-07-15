@@ -106,14 +106,8 @@
         z-index: 0;
         width: 70%;
         background-color: transparent;
-        /*border: 1px solid red;*/
     }
-   /*  header span.menu-toggle {
-        display: block;
-    }
-    .hamburger {
-        display: block;
-    }*/
+
      .options-menu-horizontal ul {
         display: inline-flex;
         width: 100%;
@@ -135,16 +129,9 @@
     .options-menu-horizontal ul li a {
         font-size: 0.8rem;
         padding: 10px 5px;
-        /*padding: 10px 5px;*/
+        
     }
-    /*.options-menu-horizontal span.close-menu {
-        top: 10px;
-        right: 10px;
-        width: 32px;
-        height: 32px;
-        line-height: 1.1;
-        font-size: 30px;
-    }*/
+   
     .menu-top ul.share {
         width: 15%;
         float: right;
