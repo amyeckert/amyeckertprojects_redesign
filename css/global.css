@@ -158,8 +158,8 @@ header span.menu-toggle {
 }
 /*......... HAMBURGER MENU ITEMS.........................................*/
 
-nav.menu-top ul.main-menu,
-nav.menu-top ul.share {
+/*.menu-top ul.main-menu,
+.menu-top ul.share {
 	z-index: 1;
 	width:100%;
 	max-width: 100%;
@@ -170,54 +170,67 @@ nav.menu-top ul.share {
 	position: relative;
 	display: inline-block; 
 
+}*/
+/*nav.menu-top ul.main-menu li a,
+nav.menu-top ul.share li a  {
+	padding: 4px 4px;
+	font-size: 0.9em;
+	letter-spacing: 0.05rem;
+	padding: 0;
+	font-size: 1em;
+	letter-spacing: 0.07rem;
+	display: block; 
+	color: #878787; 
+	text-decoration: none;
+}*/	
+.menu-top ul.share li a img {
+	height: 25px;
+	width: auto;
+
 }
-nav.menu-top ul:after {
+/*.menu-top ul:after {
 	content: ""; clear: both; 
 	display: block;
-}
-nav.menu-top ul li a {
-	display: block;
+}*/
+/*.menu-top ul li a {
+	display: inline-block;
     width: 100%;
     height: 100%;
     font-family: 'Josefin Sans', sans-serif; 
-}
-nav.menu-top ul li a:hover { 
+}*/
+/*.menu-top ul li a:hover { 
 	border-bottom: none;
-}
-/*nav.menu-top ul.main-menu li:nth-child(1):hover,*/ /*photography*/
-nav.menu-top ul.main-menu li:nth-child(1):active,
-nav.menu-top ul.main-menu li:nth-child(1) a:hover {
+}*/
+.menu-top ul.main-menu li:nth-child(1):hover, /*photography*/
+.menu-top ul.main-menu li:nth-child(1):active,
+.menu-top ul.main-menu li:nth-child(1) a:hover {
 	background-color: #a84420;
 	color: #fff;
 }
-/*nav.menu-top ul.main-menu li:nth-child(2):hover, /*design*/
-nav.menu-top ul.main-menu li:nth-child(2):active,
-nav.menu-top ul.main-menu li:nth-child(2) a:hover {
+nav.menu-top ul.main-menu li:nth-child(2):hover, /*design*/
+nav.menu-top ul.main-menu li:nth-child(2):active
+ {
 	background-color: #5f9797;
 	color: #fff;	
 }
-/*nav.menu-top ul.main-menu li:nth-child(3):hover,*/ /*mixed media*/
-nav.menu-top ul.main-menu li:nth-child(3):active, 
-nav.menu-top ul.main-menu li:nth-child(3) a:hover {
+nav.menu-top ul.main-menu li:nth-child(3):hover, /*mixed media*/
+nav.menu-top ul.main-menu li:nth-child(3):active {
 	background-color: #8a5cd1;
 	color: #fff;
 } 
-/*nav.menu-top ul.main-menu li:nth-child(4):hover,*/ /*exhibitions*/
-nav.menu-top ul.main-menu li:nth-child(4):active, 
-nav.menu-top ul.main-menu li:nth-child(4) a:hover {
+nav.menu-top ul.main-menu li:nth-child(4):hover, /*exhibitions*/
+nav.menu-top ul.main-menu li:nth-child(4):active {
 	background-color: #4866fb;	
 	color: #fff;
 }
-/*nav.menu-top ul.main-menu li:nth-child(5):hover,*/ /*about*/
-nav.menu-top ul.main-menu li:nth-child(5):active,
-nav.menu-top ul.main-menu li:nth-child(5) a:hover {
+nav.menu-top ul.main-menu li:nth-child(5):hover, /*about*/
+nav.menu-top ul.main-menu li:nth-child(5):active{
 	background-color: #099949;
 	color: #fff;
 }
 
-/*nav.menu-top ul.main-menu li:nth-child(6):hover,*/  /*contact*/
-nav.menu-top ul.main-menu li:nth-child(6):active,
-nav.menu-top ul.main-menu li:nth-child(6) a:hover {
+nav.menu-top ul.main-menu li:nth-child(6):hover,  /*contact*/
+nav.menu-top ul.main-menu li:nth-child(6):active {
 	background-color: #b56618;
 	color: #fff;
 	
@@ -238,23 +251,7 @@ li.navphoto:hover {
 }
 
 /*..... main list item link text cover */
-nav.menu-top ul.main-menu li a,
-nav.menu-top ul.share li a  {
-	padding: 4px 4px;
-	font-size: 0.9em;
-	letter-spacing: 0.05rem;
-	padding: 0;
-	font-size: 1em;
-	letter-spacing: 0.07rem;
-	display: block; 
-	color: #878787; 
-	text-decoration: none;
-}	
-nav.menu-top ul.share li a img {
-	height: 50px;
-	width: auto;
 
-}
 a:link {
 	color: #878787;
 	text-decoration: none;
@@ -293,19 +290,7 @@ a:active {
 #blog .navblog,
 #contact .navcontact, 
 #project-template .navproject {
-	/*border: 1px solid #878787;*/
-}
-
-#photography .navphoto,
-#photography .navphoto, 
-#design .navdesign, 
-#interactive .navinter, 
-#mixedmedia .navmixed, 
-#about .navabout, 
-#blog .navblog,
-#contact .navcontact, 
-#project-template .navproject {
-	border-top:none;
+	border-top: none;
 }
 
 /*......... MAIN CONTENT AREA .......................................*/
@@ -453,7 +438,7 @@ a:active {
 #kansas .menu-side li:nth-child(5) a,
 #weather .menu-side li:nth-child(6) a {
 	color: #099949;
-	
+
 	/*border-bottom:1px solid #099949;*/
 }
 

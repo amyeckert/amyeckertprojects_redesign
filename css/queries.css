@@ -96,10 +96,7 @@ grey #878787;
 	    border-top: 5px solid #98983e;
 	}
 	nav ul li a { font-size: 1.2rem;}
-
-	nav.menu-top ul.main-menu {
-		border-top: 1px solid #878787;
-	}
+	
 	nav.menu-top ul.main-menu li:first-child {
 		border-left: none;
 	}
@@ -445,8 +442,6 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 /*----------------------------------------------------------------------
 -------MEDIUM ----------------------------------------------------------
 ----------------------------------------------------------------------*/
-
-
 @media only screen and (min-width: 701px) and (max-width:1299px) {
 
 	body {
@@ -562,7 +557,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	#project-template .navproject {
 		border: none;
 	}
-	nav.menu-top ul li {
+	.menu-top ul li {
 		display: inline-block;
 		padding: 0;
 		float: none;
@@ -574,23 +569,21 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	nav ul li a {
 		font-size: 1rem;
 	}
-	nav.menu-top ul li:first-child {
+	.menu-top ul li:first-child {
 		border-left: none;
 	}
 
-	nav.menu-top ul.share {
+	.menu-top ul.share {
 		width: 50%;
 		margin: 0 auto;
 	}
-	nav.menu-top ul.share li {
+	.menu-top ul.share li {
 		display: inline-block;
 		width: 30%;
 		margin: 0 auto;
 		padding: 0;
-	
-
 	}
-	nav.menu-top ul.share li a{
+	.menu-top ul.share li a{
 		width: 100%;
 		display: inline-block;
 	}
@@ -669,7 +662,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
-		display: none;
+		display: block;
 		width:100%;
 	}
 
@@ -705,28 +698,24 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	}
 
 	.carousel-nav {
-
 		display: block;
 		visibility: hidden;
 		width: 100%;
 		min-width: 25%;
 		margin: 2rem 0 0 0;
-		/*order: 4;*/
+	
 	}
 	.carousel-nav button {
 		display: inline-block;
-
 	}
 
 	#carousel, 
 	.big,
 	.big-img-container, 
 	.image-info,
-	/*.carousel-nav,*/
 	.item p  {	
 		display: none;
 	 }
-
 	#carousel {
 		display: none;
 		visibility: visible;
@@ -737,7 +726,6 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		margin: 1rem 0 0 13rem; 
 		order: 2;
 		flex-grow: 2;
-		/*border: 1px solid red;*/
 	}	
 	.big {	
 		display: block;
@@ -755,10 +743,9 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	    height: 80vh;
 	   	position: absolute;
 	    top: 0;
-	    right: 0; /*-11.2%;*/
+	    right: 0; 
 	    background-size: contain;
-	    background-repeat: no-repeat;
-	    /*border: 1px solid purple;*/
+	    background-repeat: no-repeat; 
 	}
 
 	.image-info {
@@ -782,13 +769,20 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		
 	}
 	.grid-item img {
-		/*display: block;*/
+		display: block;
 		width: 100%;
 		height: auto;
 		padding: 7px;
 	}
-	.item p {
-		display: none;
+	#photography .grid-sizer,
+	#photography .grid-item,
+	#design .grid-sizer,
+	#design .grid-item,
+	#interactive .grid-sizer,
+	#interactive .grid-item,
+	#mixedmedia .grid-sizer,
+	#mixedmedia .grid-item {
+		width: 25%;
 	}
 	/*.statement-body {*/
 		/*display: none;
@@ -1002,17 +996,16 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 
 	.wrapper  {
 		max-width: 1200px;
-		min-width: 305px;
-		margin:0 auto;
+/*		min-width: 305px;
+*/		margin:0 auto;
 	}
 	header {
 		display: block;
-		position: relative;
-		top: -109px;
+		/*position: relative;*/
+		top: 0;
 		width:100%;
 		padding-top: 10px;
-
-		margin-bottom: 0;
+		margin: 0 auto;
 
 	}
 	.header a img {
@@ -1024,10 +1017,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		display: none;
 	}
 
-	span.menu-toggle {
+	/*span.menu-toggle {
         display: block;
-    }
-	nav.menu-top {
+    }*/
+	/*.menu-top {
 		display: flex; 
 		flex-direction: column;
 		align-items: flex-end;
@@ -1039,31 +1032,31 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		width: 100%;
 		background-color: transparent;
 
-	}
+	}*/
 
-	nav.menu-top ul.main-menu {
+	/*.menu-top ul.main-menu {
 		margin: 0;
 		
 	}
-	nav.menu-top ul.share {
+	.menu-top ul.share {
 
 
 	}
-	nav.menu-top ul.share li {
+	.menu-top ul.share li {
 		padding: 5px;
 	}
 
-	nav.menu-top ul.share li a img {
+	.menu-top ul.share li a img {
 		height: 30px;
-	}
+	}*/
 	/*.main-menu {
 		position: fixed;
 	}*/
-	nav.menu-side ul {
+	/*.menu-side ul {
 		font-size: 1rem;
 		width:100%;
 		margin:0 auto;
-	}
+	}*/
 	.main-content {
 		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 	  	display: -moz-box;         /*OLD - Firefox 19- (buggy but mostly works)*/ 
@@ -1074,9 +1067,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		width:100%;
 		height: auto;
 		position: relative;
-		top: -110px;
+		/*top: -110px;*/
 	}
-	#contact.main-content {
+	/*#contact.main-content {
 		margin-top:0.28rem;
 		margin-bottom:1rem;
 	}
@@ -1086,7 +1079,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	}
 	.front-row-img img {
 		width: 25%;
-	}
+	}*/
 	/*........PORTFOLIO LANDING PAGES....................................
 
 	#photography .grid,
@@ -1153,46 +1146,46 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 
 	/*.........PROJECT PAGES .......................................*/
 
-	nav.menu-side {
+/*	.menu-side {
 		order: 0;
 	}
-	nav.menu-side p {
+	.menu-side p {
 		display: none;
 	}
-	nav.menu-side button {
+	.menu-side button {
 	 	display: none;
 	}
 	#exhibitions .menu-side{
 		display: block;
 		visibility: hidden;
-	}
+	}*/
 
-	#manhome .menu-side ul li:first-child, 
+/*	#manhome .menu-side ul li:first-child, 
 	#truckers .menu-side ul li:first-child,
 	#mncooks .menu-side ul li:first-child,
 	#submarine .menu-side ul li:first-child,
 	#soap .menu-side ul li:first-child,
 	#optimiste .menu-side ul li:first-child,
-	#mossburn .menu-side ul li:first-child,
+	#mossburn .menu-side ul li:first-child,*/
 	/*design*/
-	#mhbook .menu-side ul li:first-child,
+/*	#mhbook .menu-side ul li:first-child,
 	#nzbirds .menu-side ul li:first-child,
 	#letters .menu-side ul li:first-child,
 	#print-portfolio .menu-side ul li:first-child,
-	#d6sunset .menu-side ul li:first-child,
+	#d6sunset .menu-side ul li:first-child,*/
 	/*interactive*/
 	
 	/*mixed media*/ 
-	#misunderstood .menu-side ul li:first-child,
+/*	#misunderstood .menu-side ul li:first-child,
 	#rigs .menu-side ul li:first-child,
 	#prefab .menu-side ul li:first-child,
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
 		display: block;
-	}
+	}*/
 
-	#carousel {
+/*	#carousel {
 		display:none;
 		position: relative;
 		order: 2;
@@ -1207,8 +1200,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		visibility: visible;
 		z-index:1;
 
-	}
-	.big-img-container {
+	}*/
+/*	.big-img-container {
 		display: block;
 		visibility: visible;
 		width:100%;
@@ -1218,8 +1211,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		background-size: contain;
 		background-repeat: no-repeat;
 
-	}
-	.image-info {
+	}*/
+	/*.image-info {
 		height:40px; 
 		width:60%;
 		margin-left:0;
@@ -1230,15 +1223,15 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		visibility: hidden;
 		color: #878787;
 
-	}
-	.image-info p {
+	}*/
+	/*.image-info p {
 		padding:0;
 		margin:0;
 		display: inline-block;
 		padding:10px;
 		color: #878787;
-	}
-	.image-info p:first-child {
+	}*/
+	/*.image-info p:first-child {
 		padding-left:0;
 	}
 
@@ -1274,7 +1267,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		height: auto;
 		width: 100%;
 		
-	}
+	}*/
 	/*.statement-body {
 		max-width: 80%;
 		margin-left: 0;
