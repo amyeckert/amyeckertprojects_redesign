@@ -411,8 +411,7 @@ a:active {
 
 /*......... PROJECT PAGES.......................................*/
 
-nav.menu-side {
-	order: 1;
+.menu-side {
 	flex: 1 0;
 	min-width: 25%;
 	max-width: 25%;
@@ -421,10 +420,13 @@ nav.menu-side {
 	padding: 0 0 0 10px;
 	line-height:2rem;	
 }
-nav.menu-side li a:hover{
+.menu-side li a:active,
+.menu-side li a:hover {
 	color: #099949;
 	
 }
+
+
 /*.PHOTGRPHY side menu......... */
 #manhome .menu-side li:nth-child(1) a,
 #truckers .menu-side li:nth-child(2) a,
@@ -450,14 +452,11 @@ nav.menu-side li a:hover{
 #proteus .menu-side li:nth-child(4) a,
 #kansas .menu-side li:nth-child(5) a,
 #weather .menu-side li:nth-child(6) a {
-	border-bottom:1px solid #878787;
+	color: #099949;
+	
+	/*border-bottom:1px solid #099949;*/
 }
 
-/*.carousel-nav {
-	display: block;
-	visibility: visible;
-
-}*/
 .carousel-nav button:first-child {
 	padding-left: 0;
 

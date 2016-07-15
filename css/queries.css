@@ -625,7 +625,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	
 	/*.........PROJECT PAGES.......................................*/
 	
-	nav.menu-side {
+	.menu-side {
 		position: fixed;
 		order: 0;
 		max-width: 27%; 
@@ -634,18 +634,14 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		font-size: 0.8rem;
 
 	}
-	nav.menu-side p {
+	.menu-side p {
 		display: none;
 	}
-	nav.menu-side button {
-	 	display: block;
-	 }
-
 	#exhibitions .menu-side {
 		display: none;
 	}
 	
-	nav.menu-side ul li {
+	.menu-side ul li {
 		display: block;
 		width:100%;
 	}
@@ -707,13 +703,21 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		display: block;
 		width:100%;
 	}
+
 	.carousel-nav {
+
 		display: block;
 		visibility: hidden;
 		width: 100%;
 		min-width: 25%;
-		order: 4;
+		margin: 2rem 0 0 0;
+		/*order: 4;*/
 	}
+	.carousel-nav button {
+		display: inline-block;
+
+	}
+
 	#carousel, 
 	.big,
 	.big-img-container, 
@@ -733,7 +737,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		margin: 1rem 0 0 13rem; 
 		order: 2;
 		flex-grow: 2;
-		border: 1px solid red;
+		/*border: 1px solid red;*/
 	}	
 	.big {	
 		display: block;
@@ -754,7 +758,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	    right: 0; /*-11.2%;*/
 	    background-size: contain;
 	    background-repeat: no-repeat;
-	    border: 1px solid purple;
+	    /*border: 1px solid purple;*/
 	}
 
 	.image-info {
