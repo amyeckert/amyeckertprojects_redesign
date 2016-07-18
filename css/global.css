@@ -25,7 +25,7 @@ time, mark, audio, video {
 }
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, section {
   display: block;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 .wrapper {
 	min-height: 100%;
-	display: block;
+	display: flex;
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -158,99 +158,15 @@ header span.menu-toggle {
 }
 /*......... HAMBURGER MENU ITEMS.........................................*/
 
-/*.menu-top ul.main-menu,
-.menu-top ul.share {
-	z-index: 1;
-	width:100%;
-	max-width: 100%;
-	text-align: center;
-	margin: 0 auto;
-	padding:0;  
-	list-style: none;
-	position: relative;
-	display: inline-block; 
-
-}*/
-/*nav.menu-top ul.main-menu li a,
-nav.menu-top ul.share li a  {
-	padding: 4px 4px;
-	font-size: 0.9em;
-	letter-spacing: 0.05rem;
-	padding: 0;
-	font-size: 1em;
-	letter-spacing: 0.07rem;
-	display: block; 
-	color: #878787; 
-	text-decoration: none;
-}*/	
-.menu-top ul.share li a img {
-	height: 25px;
-	width: auto;
-
-}
 /*.menu-top ul:after {
 	content: ""; clear: both; 
 	display: block;
 }*/
-/*.menu-top ul li a {
-	display: inline-block;
-    width: 100%;
-    height: 100%;
-    font-family: 'Josefin Sans', sans-serif; 
-}*/
-/*.menu-top ul li a:hover { 
-	border-bottom: none;
-}*/
-.menu-top ul.main-menu li:nth-child(1):hover, /*photography*/
-.menu-top ul.main-menu li:nth-child(1):active,
-.menu-top ul.main-menu li:nth-child(1) a:hover {
-	background-color: #a84420;
-	color: #fff;
-}
-nav.menu-top ul.main-menu li:nth-child(2):hover, /*design*/
-nav.menu-top ul.main-menu li:nth-child(2):active
- {
-	background-color: #5f9797;
-	color: #fff;	
-}
-nav.menu-top ul.main-menu li:nth-child(3):hover, /*mixed media*/
-nav.menu-top ul.main-menu li:nth-child(3):active {
-	background-color: #8a5cd1;
-	color: #fff;
-} 
-nav.menu-top ul.main-menu li:nth-child(4):hover, /*exhibitions*/
-nav.menu-top ul.main-menu li:nth-child(4):active {
-	background-color: #4866fb;	
-	color: #fff;
-}
-nav.menu-top ul.main-menu li:nth-child(5):hover, /*about*/
-nav.menu-top ul.main-menu li:nth-child(5):active{
-	background-color: #099949;
-	color: #fff;
-}
-
-nav.menu-top ul.main-menu li:nth-child(6):hover,  /*contact*/
-nav.menu-top ul.main-menu li:nth-child(6):active {
-	background-color: #b56618;
-	color: #fff;
-	
-}
-
-nav.menu-top ul.main-menu li,
-nav.menu-top ul.share li  {
-	float: none;
-}
-
-
-nav.menu-top ul.main-menu li:first-child {
-	/*border-left: 1px solid #878787;*/
-}
-
-li.navphoto:hover {
-	color: #fff;
-}
-
 /*..... main list item link text cover */
+
+.menu-top ul.main-menu li {
+	background-color: transparent;
+}
 
 a:link {
 	color: #878787;
@@ -259,9 +175,52 @@ a:link {
 a:visited {
 	color: #878787;
 }
-a:hover,
-a:active {
+a:hover {
 	color:#fff;
+}
+
+/*photography*/
+.menu-top ul.main-menu li:first-child:hover, 
+.menu-top ul.main-menu li:first-child:active {
+    background-color: #a84420;
+    color: #fff;
+}
+/*design*/
+.menu-top ul.main-menu li:nth-child(2):hover, 
+.menu-top ul.main-menu li:nth-child(2):active {
+    background-color: #5f9797;
+    color: #fff;    
+}
+/*mixed media*/
+.menu-top ul.main-menu li:nth-child(3):hover, 
+.menu-top ul.main-menu li:nth-child(3):active {
+    background-color: #8a5cd1;
+    color: #fff;
+} 
+/*exhibitions*/
+.menu-top ul.main-menu li:nth-child(4):hover, 
+.menu-top ul.main-menu li:nth-child(4):active {
+    background-color: #4866fb;  
+    color: #fff;
+}
+ /*about*/
+.menu-top ul.main-menu li:nth-child(5):hover,
+.menu-top ul.main-menu li:nth-child(5):active{
+    background-color: #099949;
+    color: #fff;
+}
+/*contact*/
+.menu-top ul.main-menu li:nth-child(6):hover,
+.menu-top ul.main-menu li:nth-child(6):active {
+    background-color: #b56618;
+    color: #fff;
+    
+}
+
+.menu-top ul.share li a img {
+	height: 25px;
+	width: auto;
+
 }
 /*.........SHOW PAGE LOCATION .......................................*/
 
@@ -282,7 +241,7 @@ a:active {
 
 }
 
-#photography .navphoto, 
+/*#photography .navphoto, 
 #design .navdesign, 
 #interactive .navinter, 
 #mixedmedia .navmixed, 
@@ -291,7 +250,7 @@ a:active {
 #contact .navcontact, 
 #project-template .navproject {
 	border-top: none;
-}
+}*/
 
 /*......... MAIN CONTENT AREA .......................................*/
 	

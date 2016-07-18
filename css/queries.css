@@ -751,10 +751,10 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	.image-info {
 		display: none;
 	}
-	.grid {
+	/*.grid {
 		display: block;
 		
-	}
+	}*/
 	.grid {
 		display: block;
 		width: 73%;
@@ -996,67 +996,70 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 
 	.wrapper  {
 		max-width: 1200px;
-/*		min-width: 305px;
-*/		margin:0 auto;
+		margin:0 auto;
 	}
 	header {
 		display: block;
-		/*position: relative;*/
 		top: 0;
 		width:100%;
 		padding-top: 10px;
 		margin: 0 auto;
 
 	}
-	.header a img {
-		max-width: 30%;
+	.logo {
+		display: block;
+		width: 60%;
+		height: auto;
+		margin: 12px 0;
+		background-color: #fff;
 
 	}
-	.hamburger,
-	.hamburger a {
-		display: none;
+    .hamburger,
+    .menu-icon,
+    .border-icon { 
+    	display: none;		
+    }
+   
+	.menu-top {
+		display: block;
+		width: ;
 	}
 
-	/*span.menu-toggle {
-        display: block;
-    }*/
-	/*.menu-top {
-		display: flex; 
-		flex-direction: column;
-		align-items: flex-end;
-		border: none;
-		position: relative;
-		top: 21px;
-		right: 0;
-		z-index: 0;
-		width: 100%;
-		background-color: transparent;
-
-	}*/
-
-	/*.menu-top ul.main-menu {
-		margin: 0;
-		
+	.menu-top ul {
+		width: ;
 	}
-	.menu-top ul.share {
-
-
+	
+	.menu-top ul li {
+			display: inline-block;
+			padding: 0;
+			float: none;
+			width: 100%;
 	}
-	.menu-top ul.share li {
-		padding: 5px;
+	nav ul li {
+		float: none;
 	}
-
-	.menu-top ul.share li a img {
-		height: 30px;
-	}*/
-	/*.main-menu {
-		position: fixed;
-	}*/
-	/*.menu-side ul {
+	nav ul li a {
 		font-size: 1rem;
-		width:100%;
-		margin:0 auto;
-	}*/
+	}
+	.menu-top ul li:first-child {
+		border-left: none;
+	}
+
+	.menu-top ul.share {
+		display: none;
+
+	}
+	#photography .navphoto, 
+	#design .navdesign, 
+	#interactive .navinter, 
+	#mixedmedia .navmixed, 
+	#about .navabout, 
+	#blog .navblog,
+	#contact .navcontact, 
+	#project-template .navproject {
+		border: none;
+	}
+	
 	.main-content {
 		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 	  	display: -moz-box;         /*OLD - Firefox 19- (buggy but mostly works)*/ 
@@ -1065,22 +1068,40 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	  	display: flex;              /*NEW, Spec - Opera 12.1, Firefox 20+ */
 		flex-direction: row;
 		width:100%;
-		height: auto;
+		height: 73vh;
 		position: relative;
-		/*top: -110px;*/
+		top: 0;
 	}
-	/*#contact.main-content {
+
+	#contact.main-content {
 		margin-top:0.28rem;
 		margin-bottom:1rem;
 	}
+	.front-row {
+		width: 100%;
+		margin: 0 auto;
+	}
 
 	.front-row-img {
-		margin: 1rem auto;
+		display: flex;
+		width: 100%;
+		margin: 0 auto;
 	}
 	.front-row-img img {
-		width: 25%;
-	}*/
-	/*........PORTFOLIO LANDING PAGES....................................
+		align-self: center;
+		width: 30%;
+		margin: 0 auto;
+
+	}
+
+	/*........PORTFOLIO LANDING PAGES....................................*/
+	
+	.grid {
+		display: block;
+		width: 73%;
+		height: auto;
+		margin: 0 ;
+	}
 
 	#photography .grid,
 	#design .grid,
@@ -1094,11 +1115,15 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		margin: 1rem auto;
 		
 	}
-
+	
 	#photography .grid-sizer, 
+	#photography .grid-item,
 	#design .grid-sizer,
+	#design .grid-item,
 	#interactive .grid-sizer,
-	#mixedmedia .grid-sizer {
+	#interactive .grid-item,
+	#mixedmedia .grid-sizer, 
+	#mixedmedia .grid-item {
 		width: 50%;
 	}
 
@@ -1115,13 +1140,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	#mixedmedia .grid-sizer a:nth-child(-n+2) {
 		display: block;
 	}
-
-	#photography .grid-item,
-	#design .grid-item,
-	#interactive .grid-item,
-	#mixedmedia .grid-item {
-		width: 50%;
-	}
 	#photography .grid-item img,
 	#design .grid-item img,
 	#interactive .grid-item img,
@@ -1133,20 +1151,20 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	#portfolio-template .page-location, #project-template .page-location, 
 	#exhibitions .page-location, #contact .page-location, #about .page-location,
 	#blog .page-location {
-		display: block;
+		display: none;
 	}
 	#interactive .page-location p, #mixedmedia .page-location p, 
 	#photography .page-location p, #design .page-location p, 
 	#portfolio-template .page-location p, #project-template .page-location p, 
 	#exhibitions .page-location p,
 	#about .page-location p, #blog.page-location p {
-		display:none;
-		margin-bottom:0;
+		display: none;
+		margin-bottom: 0;
 	}		
 
 	/*.........PROJECT PAGES .......................................*/
 
-/*	.menu-side {
+	.menu-side {
 		order: 0;
 	}
 	.menu-side p {
@@ -1157,36 +1175,48 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	}
 	#exhibitions .menu-side{
 		display: block;
-		visibility: hidden;
-	}*/
+		visibility: visible;
+	}
 
-/*	#manhome .menu-side ul li:first-child, 
+	#manhome .menu-side ul li:first-child, 
 	#truckers .menu-side ul li:first-child,
 	#mncooks .menu-side ul li:first-child,
 	#submarine .menu-side ul li:first-child,
 	#soap .menu-side ul li:first-child,
 	#optimiste .menu-side ul li:first-child,
-	#mossburn .menu-side ul li:first-child,*/
+	#mossburn .menu-side ul li:first-child,
 	/*design*/
-/*	#mhbook .menu-side ul li:first-child,
+	#mhbook .menu-side ul li:first-child,
 	#nzbirds .menu-side ul li:first-child,
 	#letters .menu-side ul li:first-child,
 	#print-portfolio .menu-side ul li:first-child,
-	#d6sunset .menu-side ul li:first-child,*/
-	/*interactive*/
+	#d6sunset .menu-side ul li:first-child,
+	/*interactive
 	
 	/*mixed media*/ 
-/*	#misunderstood .menu-side ul li:first-child,
+	#misunderstood .menu-side ul li:first-child,
 	#rigs .menu-side ul li:first-child,
 	#prefab .menu-side ul li:first-child,
 	#proteus .menu-side ul li:first-child,
 	#kansas .menu-side ul li:first-child,
 	#weather .menu-side ul li:first-child {
 		display: block;
-	}*/
+	}
 
-/*	#carousel {
-		display:none;
+	.carousel-nav {
+		display: block;
+		visibility: hidden;
+		width: 100%;
+		min-width: 25%;
+		margin: 2rem 0 0 0;
+	
+	}
+	.carousel-nav button {
+		display: inline-block;
+	}
+
+	#carousel {
+		display: block;
 		position: relative;
 		order: 2;
 		flex-grow: 2;
@@ -1194,55 +1224,59 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 
 	}
 	.big {
-		width:100%;
-		height:600px;
-		display:block;
-		visibility: visible;
-		z-index:1;
-
-	}*/
-/*	.big-img-container {
 		display: block;
 		visibility: visible;
-		width:100%;
-		height:600px;
-		margin-left:0;
+		width: 100%;
+		height: 600px;
+		
+		z-index: 1;
+
+	}
+	.big-img-container {
+		display: block;
+		visibility: visible;
+		width: 100%;
+		height: 600px;
+		margin-left: 0;
 		margin-top: 0;
 		background-size: contain;
 		background-repeat: no-repeat;
 
-	}*/
-	/*.image-info {
+	}
+	.image-info {
+		display: block;
+		visibility: hidden;
 		height:40px; 
 		width:60%;
 		margin-left:0;
 		text-align:left;
 		font-family: 'Josefin Sans', sans-serif;
-		font-size: 0.7rem;
-		display: block;
-		visibility: hidden;
+		font-size: 0.7rem;	
 		color: #878787;
 
-	}*/
-	/*.image-info p {
+	}
+	.image-info p {
+		display: inline-block;
 		padding:0;
 		margin:0;
-		display: inline-block;
+	
 		padding:10px;
 		color: #878787;
-	}*/
-	/*.image-info p:first-child {
+	}
+	.image-info p:first-child {
 		padding-left:0;
 	}
 
 	.grid {
+		display: block;
+		visibility: visible;
 		order: 0;
 		margin: 1rem 0 0 0 ;
 	}
 
 	.grid-sizer,
 	.grid-item {
-		width: 50%;
+		width: 15%;
 
 	}
 	.grid-item img {
@@ -1267,7 +1301,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		height: auto;
 		width: 100%;
 		
-	}*/
+	}
 	/*.statement-body {
 		max-width: 80%;
 		margin-left: 0;
