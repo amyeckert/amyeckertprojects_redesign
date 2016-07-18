@@ -1421,22 +1421,22 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	----footer---------------------------------------------------------*/
 
 	footer {
-	display: block;	
+		display: block;	
 		font-size: 1rem;
 		margin-bottom: 15px;
 	}
 
 	.column {
-		width:15%; 
+		width: 15%; 
 	}
 
 	.footer ul li {
-		margin:0;
+		margin: 0;
 
 	}
 	.footer-col-1 ul li a, .footer-col-2 ul li a  {
 		display: block;
-	    padding:5% 0;
+	    padding: 5% 0;
 	}
 	.footer-col-3 {
 		margin: 0 0 0 36%;

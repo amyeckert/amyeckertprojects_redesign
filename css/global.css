@@ -752,18 +752,18 @@ footer {
 
 }
 .footer-col-3 img {
-	width:33.3%;
-	padding:10%;
-	margin:auto;
- 	float:left;
- 	cursor:pointer;
+	width: 33.3%;
+	padding: 10%;
+	margin: auto;
+ 	float: left;
+ 	/*cursor: pointer;*/
 }
 .footer-col-3 ul {
-	margin:0;
-	padding:0; 
+	margin: 0;
+	padding: 0; 
 }
 .footer-col-3 li:nth-last-of-type(1) {
-	padding-top:1%;
+	padding-top: 1%;
 }
 #about .footer-col-3 li:nth-last-of-type(1) {
 	padding-top: 1.5%;
