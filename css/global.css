@@ -178,44 +178,50 @@ a:visited {
 li:hover,
 a:hover {
 	color:#fff;
+
 }
 
 /*photography*/
-ul.main-menu li:first-child:hover, 
-ul.main-menu li:first-child:active {
+.main-menu li:first-child:hover, 
+.main-menu li:first-child:active {
     background-color: #a84420;
     color: #fff;
+    border-bottom: 1px solid #a84420;
 }
 /*design*/
 .menu-top ul.main-menu li:nth-child(2):hover, 
 .menu-top ul.main-menu li:nth-child(2):active {
     background-color: #5f9797;
-    color: #fff;    
+    color: #fff; 
+    border-bottom: 1px solid #5f9797;   
 }
 /*mixed media*/
 .menu-top ul.main-menu li:nth-child(3):hover, 
 .menu-top ul.main-menu li:nth-child(3):active {
     background-color: #8a5cd1;
     color: #fff;
+    border-bottom: 1px solid #8a5cd1;
 } 
 /*exhibitions*/
 .menu-top ul.main-menu li:nth-child(4):hover, 
 .menu-top ul.main-menu li:nth-child(4):active {
     background-color: #4866fb;  
     color: #fff;
+    border-bottom: 1px solid #4866fb;
 }
  /*about*/
 .menu-top ul.main-menu li:nth-child(5):hover,
 .menu-top ul.main-menu li:nth-child(5):active{
     background-color: #099949;
     color: #fff;
+    border-bottom: 1px solid #099949;
 }
 /*contact*/
 .menu-top ul.main-menu li:nth-child(6):hover,
 .menu-top ul.main-menu li:nth-child(6):active {
     background-color: #b56618;
     color: #fff;
-    
+    border-bottom: 1px solid #b56618;
 }
 
 .menu-top ul.share li a img {
@@ -241,17 +247,6 @@ ul.main-menu li:first-child:active {
 	margin: 0 auto;
 
 }
-
-/*#photography .navphoto, 
-#design .navdesign, 
-#interactive .navinter, 
-#mixedmedia .navmixed, 
-#about .navabout, 
-#blog .navblog,
-#contact .navcontact, 
-#project-template .navproject {
-	border-top: none;
-}*/
 
 /*......... MAIN CONTENT AREA .......................................*/
 	
@@ -317,14 +312,6 @@ ul.main-menu li:first-child:active {
 	width: 100%;
 	height: auto;
 }
-/*.front-row-img {
-	flex-direction: column;
-	justify-content: center;
-	margin: 1.5rem 0 0 0;
-}
-.front-row-img img {
-	margin: 0 auto;
-}*/
  /*.............PORTFOLIO TITLES ............................... */
 
 .front-titles, .project-titles {
@@ -648,10 +635,9 @@ footer {
 	order:3;
 	align-self: flex-end;
 	color: #878787;
-	max-width: 1600px;
+	max-width: 1200px;
 	width:100%;
 	text-align:left;
-	border-top: 1px solid #878787;
 	zoom: 1; /*I.E hack */
 	clear: both;
 }
@@ -669,20 +655,21 @@ footer {
 	float:left;
 	margin:0;
 	padding:0;
+	border-top: 1px solid #878787;
 }
 .column ul li {
  	padding:0;
  	margin:0;
  	font-size: 0.8rem;
- 	text-align:left;
- 	text-indent: 4px;
+ 	text-align: center;
+ 	/*text-indent: 4px;*/
 }
  .footer-col-3 ul li {
  	border:none;
 }
 .footer-col-1, .footer-col-2  {
 	width:100%;
- 	margin:0;
+ 	margin:0 1rem 0 0 ;
  
 }
 .footer-col-1 ul li a, 
@@ -750,6 +737,7 @@ footer {
 .footer-col-3 {
 	display:inline-block;
 	width: 100%;
+	margin: 0;
 
 }
 .footer-col-3 img {
@@ -772,11 +760,12 @@ footer {
 .footer-col-4 {
 	font-size: 0.8rem;
 	width: 25%;
+	padding-top: 3px;
 	padding-bottom: 3.2rem; 
 	padding-left: 0.3rem;
- 	margin:0; 
- 	color:#878787;
- 	text-align: left;
+ 	margin: 0; 
+ 	color: #878787;
+ 	text-align: center;
 }
 
 
