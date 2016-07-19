@@ -189,42 +189,42 @@ a:hover {
     border-bottom: 1px solid #a84420;
 }
 /*design*/
-.menu-top ul.main-menu li:nth-child(2):hover, 
-.menu-top ul.main-menu li:nth-child(2):active {
+.main-menu li:nth-child(2):hover, 
+.main-menu li:nth-child(2):active {
     background-color: #5f9797;
     color: #fff; 
     border-bottom: 1px solid #5f9797;   
 }
 /*mixed media*/
-.menu-top ul.main-menu li:nth-child(3):hover, 
-.menu-top ul.main-menu li:nth-child(3):active {
+.main-menu li:nth-child(3):hover, 
+.main-menu li:nth-child(3):active {
     background-color: #8a5cd1;
     color: #fff;
     border-bottom: 1px solid #8a5cd1;
 } 
 /*exhibitions*/
-.menu-top ul.main-menu li:nth-child(4):hover, 
-.menu-top ul.main-menu li:nth-child(4):active {
+.main-menu li:nth-child(4):hover, 
+.main-menu li:nth-child(4):active {
     background-color: #4866fb;  
     color: #fff;
     border-bottom: 1px solid #4866fb;
 }
  /*about*/
-.menu-top ul.main-menu li:nth-child(5):hover,
-.menu-top ul.main-menu li:nth-child(5):active{
+.main-menu li:nth-child(5):hover,
+.main-menu li:nth-child(5):active {
     background-color: #099949;
     color: #fff;
     border-bottom: 1px solid #099949;
 }
 /*contact*/
-.menu-top ul.main-menu li:nth-child(6):hover,
-.menu-top ul.main-menu li:nth-child(6):active {
+.main-menu li:nth-child(6):hover,
+.main-menu li:nth-child(6):active {
     background-color: #b56618;
     color: #fff;
     border-bottom: 1px solid #b56618;
 }
 
-.menu-top ul.share li a img {
+.share li a img {
 	height: 25px;
 	width: auto;
 
@@ -276,15 +276,10 @@ a:hover {
 	margin-bottom: 1%;
 
 }
-#home .page-location p {
-	display: none;
-	padding: 0 0 0 3%;
-	color: #fff;
-}
+
+#home .page-location p,
 #exhibitions .page-location,
-#exhibitions .page-location p {
-	display: none;
-}
+#exhibitions .page-location p,
 #contact .page-location, 
 #contact .page-location p {
 	display: none;

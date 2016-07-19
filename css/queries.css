@@ -97,10 +97,10 @@ grey #878787;
 	}
 	nav ul li a { font-size: 1.2rem;}
 	
-	nav.menu-top ul.main-menu li:first-child {
+	.main-menu li:first-child {
 		border-left: none;
 	}
-	nav.menu-top ul.share li {
+	.share li {
 		display: inline-block;
 		width: 30%;
 		margin: 0;
@@ -148,7 +148,7 @@ grey #878787;
 	}	
 	#exhibitions .page-location,
 	#exhibitions .page-location p {
-		display: block;
+		display: none;
 	}
 	.menu-top {
 		display: none;
@@ -510,7 +510,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	    border-top: 5px solid #98983e;
 	}
 	
-	#exhibitions .menu-top, 
+/*	#exhibitions .menu-top,*/ 
 	#photography .menu-top,
 	#design .menu-top,
 	#interactive .menu-top,
@@ -548,26 +548,32 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	#design .navdesign, 
 	#interactive .navinter, 
 	#mixedmedia .navmixed, 
+	#exhibitions .navexhibitions,
 	#about .navabout, 
 	#blog .navblog,
 	#contact .navcontact, 
 	#project-template .navproject {
 		border: none;
 	}
-	.share {
+	/*.options-menu-horizontal ul.share {
+		display: inline-block;
 		width: 50%;
 		margin: 0 auto;
+	}*/
+	/*.menu-top ul.share ul {
+		width:100%;
 	}
-	.share li {
-		display: inline-block;
-		width: 30%;
+
+	.menu-top ul.share ul li {
+		width: 33.334%;
 		margin: 0 auto;
 		padding: 0;
 	}
-	.share li a{
-		width: 100%;
+	.menu-top ul.share li a {
 		display: inline-block;
-	}
+		width: 100%;
+		
+	}*/
 
 	#contact .page-location, 
 	#contact .page-location p {
@@ -1134,7 +1140,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	}
 	#exhibitions .menu-side{
 		display: block;
-		visibility: visible;
+		visibility: hidden;
 	}
 
 	#manhome .menu-side ul li:first-child, 
