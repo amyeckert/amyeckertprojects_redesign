@@ -655,14 +655,13 @@ footer {
 	float:left;
 	margin:0;
 	padding:0;
-	border-top: 1px solid #878787;
 }
 .column ul li {
  	padding:0;
  	margin:0;
  	font-size: 0.8rem;
  	text-align: center;
- 	/*text-indent: 4px;*/
+ 	
 }
  .footer-col-3 ul li {
  	border:none;

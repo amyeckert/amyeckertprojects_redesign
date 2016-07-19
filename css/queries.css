@@ -1384,6 +1384,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		display: block;	
 		font-size: 1rem;
 		margin-bottom: 15px;
+		border-top: 1px solid #878787;
 	}
 
 	.column {
@@ -1400,15 +1401,19 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	}
 	.footer-col-3 {
 		margin: 0 0 0 32%;
+		
 	}
 
 	.footer-col-3 img {
-		padding: 9%;
+		padding: 11%;
 		
+	}
+	.footer-col-3 img:last-child {
+		padding: 6%;
 	}
 	.footer-col-4 {
 		padding-top: 0.3rem;
-		margin: 0 0 0 4%;
+		margin: 0 0 0 4.5%;
 		text-align: center;
 		font-size: 0.8rem;
 		
