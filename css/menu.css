@@ -75,12 +75,9 @@
     .options-menu-horizontal ul li {
         display: block;
         width: 100%;
-    }
-    .options-menu-horizontal ul li {
-         display: block;
-         font-size: 1.5rem;
-         margin: 0 auto;
-         padding: 4px 0;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        padding: 4px 0;
     }
     .options-menu-horizontal span.close-menu {
         top: 10px;
@@ -99,7 +96,7 @@
         display: inline-block; 
         border: none;
         position: relative;
-        top: -40px;
+        top: -90px;
         left: 0;
         z-index: 0;
         width: 57%;
@@ -113,24 +110,29 @@
         float: right;
         width: 100%;
         margin: 0;
-        padding: 0;
+        /*padding: 1rem 0;*/
         /*outline: 1px solid red;*/
 
 
     }
     .options-menu-horizontal ul li {
+        display: inline-block;
+        padding: 0;
+        float: none;
         font-size: 1rem;
         padding: 0 5px;
         width: 16%;
+        height: 100%;
         margin: 0;
         
     }
 
     .options-menu-horizontal ul li a {
+        display: block;
         font-size: 0.7rem;
         width: 100%;
         height: 100%;
-        padding: 0;
+        padding: 30px 0 5px 0;
         
     }
 

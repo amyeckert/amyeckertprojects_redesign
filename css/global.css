@@ -158,10 +158,10 @@ header span.menu-toggle {
 }
 /*......... HAMBURGER MENU ITEMS.........................................*/
 
-/*.menu-top ul:after {
+.menu-top ul:after {
 	content: ""; clear: both; 
 	display: block;
-}*/
+}
 /*..... main list item link text cover */
 
 .menu-top ul.main-menu li {
@@ -175,13 +175,14 @@ a:link {
 a:visited {
 	color: #878787;
 }
+li:hover,
 a:hover {
 	color:#fff;
 }
 
 /*photography*/
-.menu-top ul.main-menu li:first-child:hover, 
-.menu-top ul.main-menu li:first-child:active {
+ul.main-menu li:first-child:hover, 
+ul.main-menu li:first-child:active {
     background-color: #a84420;
     color: #fff;
 }

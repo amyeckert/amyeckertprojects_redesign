@@ -480,8 +480,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		background-color: #fff;
 
 	}
-    .hamburger {
-    	
+    .hamburger { 	
     	width: 15%;
     	margin: 0;
     	float: right;
@@ -496,14 +495,12 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	    min-width: 30px;
 	    text-indent:-999px;
 	    float: right;
-	}
-	 
+	}	 
 	.border-icon {
 	    height: 15px;
 	    border-top: 5px solid #b56618;
 	    border-bottom: 5px solid #68b7d5; 
-	}
-	 
+	} 
 	.border-icon:before {
 	    content:"";
 	    position: absolute; 
@@ -557,33 +554,17 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	#project-template .navproject {
 		border: none;
 	}
-	.menu-top ul li {
-		display: inline-block;
-		padding: 0;
-		float: none;
-		width: 100%;
-	}
-	nav ul li {
-		float: none;
-	}
-	nav ul li a {
-		font-size: 1rem;
-	}
-	.menu-top ul li:first-child {
-		border-left: none;
-	}
-
-	.menu-top ul.share {
+	.share {
 		width: 50%;
 		margin: 0 auto;
 	}
-	.menu-top ul.share li {
+	.share li {
 		display: inline-block;
 		width: 30%;
 		margin: 0 auto;
 		padding: 0;
 	}
-	.menu-top ul.share li a{
+	.share li a{
 		width: 100%;
 		display: inline-block;
 	}
@@ -1002,7 +983,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		display: block;
 		top: 0;
 		width:100%;
-		padding-top: 10px;
+		padding: 0;
 		margin: 0 auto;
 
 	}
@@ -1019,32 +1000,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
     .border-icon { 
     	display: none;		
     }
-   
-	.menu-top {
-		display: block;
-		width: ;
-	}
-
-	.menu-top ul {
-		width: ;
-	}
-	
-	.menu-top ul li {
-			display: inline-block;
-			padding: 0;
-			float: none;
-			width: 100%;
-	}
-	nav ul li {
-		float: none;
-	}
-	nav ul li a {
-		font-size: 1rem;
-	}
-	.menu-top ul li:first-child {
-		border-left: none;
-	}
-
+  
 	.menu-top ul.share {
 		display: none;
 
@@ -1068,9 +1024,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	  	display: flex;              /*NEW, Spec - Opera 12.1, Firefox 20+ */
 		flex-direction: row;
 		width:100%;
-		height: 73vh;
+		height: 70vh;
 		position: relative;
-		top: 0;
+		top: -38px;
 	}
 
 	#contact.main-content {
@@ -1216,7 +1172,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	}
 
 	#carousel {
-		display: block;
+		display: none;
 		position: relative;
 		order: 2;
 		flex-grow: 2;
@@ -1271,12 +1227,12 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		display: block;
 		visibility: visible;
 		order: 0;
-		margin: 1rem 0 0 0 ;
+		margin: 0 0 0 0 ;
 	}
 
 	.grid-sizer,
 	.grid-item {
-		width: 15%;
+		width: 10%;
 
 	}
 	.grid-item img {
