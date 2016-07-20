@@ -14,10 +14,7 @@
         // layout Isotope after each image loads
         $grid.imagesLoaded().progress( function() {
           $grid.masonry();
-        });  
-
-        // var width = screen.availWidth;
-        // var height = screen.availHeight;      
+        });       
 
         if (width >= 700 ) {
          /*-------------------------------------------------------------------------------------------------
