@@ -1018,6 +1018,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	#design .navdesign, 
 	#interactive .navinter, 
 	#mixedmedia .navmixed, 
+	#exhibitions .navexhibitions,
 	#about .navabout, 
 	#blog .navblog,
 	#contact .navcontact, 
