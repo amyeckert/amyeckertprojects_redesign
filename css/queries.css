@@ -105,8 +105,6 @@ grey #878787;
 		width: 30%;
 		margin: 0;
 		padding: 0;
-		
-
 	}
 
 	/*...............MAIN CONTENT AREA.......................................*/
@@ -215,7 +213,6 @@ grey #878787;
 	}
 	nav.menu-side a button.back {
 		padding: 14px;
-		/*width: 20%;*/
 		background-image: url("../images/go-back-left-arrow.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -409,7 +406,7 @@ grey #878787;
 		
 } 
 
-@media
+/*@media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 700px),
 only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 700px),
 only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 700px),
@@ -419,26 +416,9 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 
   /* Small screen, retina, stuff to override above media query */
 
- /* 	.wrapper {background-color: #red;}
-
-  	#carousel,
-	.big-img-container,
-	.big {	
-		display: block;
-		border: 1px solid red; 
-		display: block;
-		max-width: 60%;
- 	}
-	.carousel-nav {
-		border: 1px solid red; 
-	}
-	.image-info {
-
-	}*/
-  /*.menu-side {display: none;}*/
   
+}*/
 
-}
 /*----------------------------------------------------------------------
 -------MEDIUM ----------------------------------------------------------
 ----------------------------------------------------------------------*/
@@ -554,27 +534,8 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	#contact .navcontact, 
 	#project-template .navproject {
 		border: none;
-	}
-	/*.options-menu-horizontal ul.share {
-		display: inline-block;
-		width: 50%;
-		margin: 0 auto;
-	}*/
-	/*.menu-top ul.share ul {
-		width:100%;
-	}
 
-	.menu-top ul.share ul li {
-		width: 33.334%;
-		margin: 0 auto;
-		padding: 0;
 	}
-	.menu-top ul.share li a {
-		display: inline-block;
-		width: 100%;
-		
-	}*/
-
 	#contact .page-location, 
 	#contact .page-location p {
 		display: none;
@@ -687,7 +648,6 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		display: block;
 		width:100%;
 	}
-
 	.carousel-nav {
 		display: block;
 		visibility: hidden;
@@ -699,7 +659,6 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	.carousel-nav button {
 		display: inline-block;
 	}
-
 	#carousel, 
 	.big,
 	.big-img-container, 
@@ -738,14 +697,9 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	    background-size: contain;
 	    background-repeat: no-repeat; 
 	}
-
 	.image-info {
 		display: none;
 	}
-	/*.grid {
-		display: block;
-		
-	}*/
 	.grid {
 		display: block;
 		width: 73%;
@@ -922,7 +876,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 } 
 
 /*Medium screen, retina, stuff to override above media query */
-@media
+/*@media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 651px) and (max-width:1299px),
 only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 651px) and (max-width:1299px),
 only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 651px) and (max-width:1299px),
@@ -930,50 +884,9 @@ only screen and (        min-device-pixel-ratio: 2)      and (min-width: 651px) 
 only screen and (                min-resolution: 192dpi) and (min-width: 651px) and (max-width:1299px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 651px) and (max-width:1299px) { 
 
-/*
-	
-	#carousel {
-		display: block;
-		visibility: visible;
-		background-color: red;
-		width: 100%;
-	}
-	.big-img-container {
-		display: block;
-		visibility: visible;
-		right: 0;
-	}
 
-	.big {	
-		display: block;
-		visibility: visible;
-		border: 1px solid blue; 
-		width: 100%;
-		height: auto;
-	}
-	nav.menu-top ul li {
-		padding: 0;
-	}
-	.front-row-img {
-		max-width: 100%;
-		height:60vh;
-	/*	border: 1px solid red;*/
-	/*}
-	.front-row-img img {
-		height: 100%;
-		width: auto;
-	}
+}*/
 
-	.front-row-img {
-		max-width: 100%;
-		max-height:60vh;
-	}
-	.front-row-img img {
-		height: 100%;
-		width: auto;
-	}*/
-
-}
 /*--------------------------------------------------------------------------
 -----------LARGE------------------------------------------------------------
 -------------------------------------------------------------------------- */
