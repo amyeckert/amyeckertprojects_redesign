@@ -1072,11 +1072,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	.menu-side button {
 	 	display: none;
 	}
-	#exhibitions .menu-side{
-		display: block;
-		visibility: hidden;
-	}
 
+	#exhibitions .menu-side
 	#manhome .menu-side ul li:first-child, 
 	#truckers .menu-side ul li:first-child,
 	#mncooks .menu-side ul li:first-child,
