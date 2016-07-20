@@ -927,6 +927,26 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		display: none;
 
 	}
+
+	#truckers .navphoto,
+	#manhome .navphoto, 
+	#truckers .navphoto,
+	#mncooks .navphoto,
+	#submarine .navphoto,
+	#soap .navphoto,
+	#optimiste .navphoto,
+	#mossburn .navphoto,
+	#mhbook .navdesign,
+	#nzbirds .navdesign,
+	#letters .navdesign,
+	#print-portfolio .navdesign,
+	#d6sunset .navdesign,	
+	#misunderstood .navmixed,
+	#rigs .navmixed,
+	#prefab .navmixed,
+	#proteus .navmixed,
+	#kansas .navmixed,
+	#weather .navmixed,
 	#photography .navphoto, 
 	#design .navdesign, 
 	#interactive .navinter, 
