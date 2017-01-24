@@ -14,15 +14,56 @@
         // layout Isotope after each image loads
         $grid.imagesLoaded().progress( function() {
           $grid.masonry();
-        });
+        });       
+
+        if (width >= 700 ) {
+         /*-------------------------------------------------------------------------------------------------
+            when a thumbnail is clicked on / hides thumbnail grid / shows image big */
+
+            $('.item').on('click', function(e) {
+                e.preventDefault();
+
+                $('.item.isActive').removeClass('isActive');
+                $(this).addClass('isActive');
+                console.log(e);
+
+                // Figure out which thumbnail is chosen
+                var chosen_thumb = $(this).find('img').attr('src');
+                var carousel = document.getElementById('carousel');
+                var header = document.querySelector('header')
+                $('header').removeClass('nav-up').addClass('nav-down');
+
+                $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
+
+                // Change visibility of .thumbs to hidden and hide statement-body
+                var thumbs = document.getElementById('thumbNav');
+                var cNav = document.getElementById('cNav');
+                var imgInfo = document.getElementById('imgInfo');
+                var previous = document.getElementById('prevImg');
+                var next = document.getElementById('nextImg');
 
 
-        function thumbnailNav() {
+                // var showHideStatement = document.querySelector('statement-body');
+                carousel.style.display = 'block';
+                carousel.style.width = '100%';
+                 
+                bigImg.style.visibility = 'visible';
+                cNav.style.visibility = 'visible';
+                thumbs.style.display =  'none';
+
+                imgInfo.style.visibility = 'hidden';
+                prevImg.style.visibility = 'visible';
+                nextImg.style.visibility = 'visible';
+                // showHideStatement.display = 'none';
+
+                // return header to visible position//   
+                console.log(chosen_thumb, bigImg, imgInfo);
+            });
             /*-------------------------------------------------------------------------------------------------
-                        previous or next button */
+                previous or next button */
 
             $('.previous').on('click', function() {
-      
+
                 var imgCount = document.getElementById('thumbNav').getElementsByTagName('img').length;
                 var items = document.querySelectorAll('div.item');
 
@@ -53,8 +94,7 @@
                     $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
                 }
                     
-                // console.log( mq );
-                });
+            });
 
             $('.next').on('click', function() {
 
@@ -101,46 +141,10 @@
                 console.log (nextImg)
             });
 
+               
             /*-------------------------------------------------------------------------------------------------
-                        picks a thumbnail / hides thumbnail grid */
-
-            $('.item').on('click', function(e) {
-                e.preventDefault();
-                $('.item.isActive').removeClass('isActive');
-                $(this).addClass('isActive');
-                console.log(e);
-
-                // Figure out which thumbnail is chosen
-                var chosen_thumb = $(this).find('img').attr('src');
-                var carousel = document.getElementById('carousel');
-
-                $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
-
-                // Change visibility of .thumbs to hidden and hide statement-body
-                var thumbs = document.getElementById('thumbNav');
-                var cNav = document.getElementById('cNav');
-                var imgInfo = document.getElementById('imgInfo');
-                var previous = document.getElementById('prevImg');
-                var next = document.getElementById('nextImg');
-                // var showHideStatement = document.querySelector('statement-body');
-
-                carousel.style.display = 'block';
-                carousel.style.width = '75%';
-                 
-                bigImg.style.visibility = 'visible';
-                cNav.style.visibility = 'visible';
-                thumbs.style.display =  'none';
-
-                imgInfo.style.visibility = 'hidden';
-                prevImg.style.visibility = 'visible';
-                nextImg.style.visibility = 'visible';
-                // showHideStatement.display = 'none';
-
-                console.log(chosen_thumb, bigImg, imgInfo);
-            }); 
-            /*-------------------------------------------------------------------------------------------------
-                         hides big image/ shows thumbs grid */
-                            
+                hides big image/ shows thumbs grid */
+                                
             $('.thumbs-only').on('click', function() {
 
                 var carousel = document.getElementById('carousel');
@@ -162,17 +166,8 @@
 
             });
             /*-------------------------------------------------------------------------------------------------
-                  SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
-    
-
-            console.log( width, height );
+                      SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
         }
-
-        if ( width >= 650 ) {
-            thumbnailNav();
-        }   
-    
-
 //________THE END______________________________________________________________________________________________________________
 });
 })(jQuery);

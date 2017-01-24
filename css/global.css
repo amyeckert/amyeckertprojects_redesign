@@ -25,7 +25,7 @@ time, mark, audio, video {
 }
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, section {
   display: block;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 .wrapper {
 	min-height: 100%;
-	display: block;
+	display: flex;
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -153,7 +153,7 @@ header span.menu-toggle {
     display: block;
 }
 .logo {
-	height:auto;
+	height: auto;
 
 }
 /*......... HAMBURGER MENU ITEMS.........................................*/
@@ -172,84 +172,16 @@ nav.menu-top ul.share {
 
 }
 nav.menu-top ul:after {
+
 	content: ""; clear: both; 
 	display: block;
 }
-nav.menu-top ul li a {
-	display: block;
-    width: 100%;
-    height: 100%;
-    font-family: 'Josefin Sans', sans-serif; 
-}
-nav.menu-top ul li a:hover { 
-	border-bottom: none;
-}
-nav.menu-top ul.main-menu li:nth-child(1):hover, /*photography*/
-nav.menu-top ul.main-menu li:nth-child(1):active,
-nav.menu-top ul.main-menu li:nth-child(1) a:hover {
-	background-color: #a84420;
-	color: #fff;
-}
-nav.menu-top ul.main-menu li:nth-child(2):hover, /*design*/
-nav.menu-top ul.main-menu li:nth-child(2):active,
-nav.menu-top ul.main-menu li:nth-child(2) a:hover {
-	background-color: #5f9797;
-	color: #fff;	
-}
-nav.menu-top ul.main-menu li:nth-child(3):hover, /*mixed media*/
-nav.menu-top ul.main-menu li:nth-child(3):active, 
-nav.menu-top ul.main-menu li:nth-child(3) a:hover {
-	background-color: #8a5cd1;
-	color: #fff;
-} 
-nav.menu-top ul.main-menu li:nth-child(4):hover, /*exhibitions*/
-nav.menu-top ul.main-menu li:nth-child(4):active, 
-nav.menu-top ul.main-menu li:nth-child(4) a:hover {
-	background-color: #4866fb;	
-	color: #fff;
-}
-nav.menu-top ul.main-menu li:nth-child(5):hover, /*about*/
-nav.menu-top ul.main-menu li:nth-child(5):active,
-nav.menu-top ul.main-menu li:nth-child(5) a:hover {
-	background-color: #099949;
-	color: #fff;
-}
-
-nav.menu-top ul.main-menu li:nth-child(6):hover,  /*contact*/
-nav.menu-top ul.main-menu li:nth-child(6):active,
-nav.menu-top ul.main-menu li:nth-child(6) a:hover {
-	background-color: #b56618;
-	color: #fff;
-	
-}
-
-nav.menu-top ul.main-menu li,
-nav.menu-top ul.share li  {
-	float: none;
-}
-
-/*nav.menu-top ul.main-menu li:first-child {
-	border-left: 1px solid #878787;
-}*/
-li.navphoto:hover {
-	color: #fff;
-}
-
 /*..... main list item link text cover */
-nav.menu-top ul.main-menu li a,
-nav.menu-top ul.share li a  {
-	padding: 0;
-	font-size: 1em;
-	letter-spacing: 0.07rem;
-	display: block; 
-	color: #878787; 
-	text-decoration: none;
-}	
-nav.menu-top ul.share li a img {
-	height: 50px;
-	width: auto;
 
+.menu-top ul.main-menu li {
+	background-color: transparent;
 }
+
 a:link {
 	color: #878787;
 	text-decoration: none;
@@ -257,15 +189,65 @@ a:link {
 a:visited {
 	color: #878787;
 }
-a:hover,
-a:active {
+li:hover,
+a:hover {
 	color:#fff;
+
+}
+
+/*photography*/
+.main-menu li:first-child:hover, 
+.main-menu li:first-child:active {
+    background-color: #a84420;
+    color: #fff;
+    border-bottom: 1px solid #a84420;
+}
+/*design*/
+.main-menu li:nth-child(2):hover, 
+.main-menu li:nth-child(2):active {
+    background-color: #5f9797;
+    color: #fff; 
+    border-bottom: 1px solid #5f9797;   
+}
+/*mixed media*/
+.main-menu li:nth-child(3):hover, 
+.main-menu li:nth-child(3):active {
+    background-color: #8a5cd1;
+    color: #fff;
+    border-bottom: 1px solid #8a5cd1;
+} 
+/*exhibitions*/
+.main-menu li:nth-child(4):hover, 
+.main-menu li:nth-child(4):active {
+    background-color: #4866fb;  
+    color: #fff;
+    border-bottom: 1px solid #4866fb;
+}
+ /*about*/
+.main-menu li:nth-child(5):hover,
+.main-menu li:nth-child(5):active {
+    background-color: #099949;
+    color: #fff;
+    border-bottom: 1px solid #099949;
+}
+/*contact*/
+.main-menu li:nth-child(6):hover,
+.main-menu li:nth-child(6):active {
+    background-color: #b56618;
+    color: #fff;
+    border-bottom: 1px solid #b56618;
+}
+
+.share li a img {
+	height: 25px;
+	width: auto;
+
 }
 /*.........SHOW PAGE LOCATION .......................................*/
 
 .main-content {
 	order: 2;
-	width: 90%;
+	width: 100%;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -276,35 +258,11 @@ a:active {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	flex: 1;
-	margin: 1rem auto;
+	margin: 0 auto;
 
-}
-
-#photography .navphoto, 
-#design .navdesign, 
-#interactive .navinter, 
-#mixedmedia .navmixed, 
-#about .navabout, 
-#blog .navblog,
-#contact .navcontact, 
-#project-template .navproject {
-	border: 1px solid #878787;
-}
-
-#photography .navphoto,
-#photography .navphoto, 
-#design .navdesign, 
-#interactive .navinter, 
-#mixedmedia .navmixed, 
-#about .navabout, 
-#blog .navblog,
-#contact .navcontact, 
-#project-template .navproject {
-	border-top:none;
 }
 
 /*......... MAIN CONTENT AREA .......................................*/
-
 	
 #interactive .page-location, 
 #mixedmedia .page-location, 
@@ -320,8 +278,6 @@ a:active {
 	text-transform:uppercase;
 }
 
-
-
 #interactive .page-location p, 
 #mixedmedia .page-location p, 
 #photography .page-location p, 
@@ -330,19 +286,14 @@ a:active {
 #project-template .page-location p {
 	display:block;
 	border-left:1px solid #878787;
-	padding: 2% 0 0 3%;
+	padding: 1% 0 0 1%;
 	margin-bottom: 1%;
 
 }
-#home .page-location p {
-	display: none;
-	padding: 0 0 0 3%;
-	color: #fff;
-}
+
+#home .page-location p,
 #exhibitions .page-location,
-#exhibitions .page-location p {
-	display: none;
-}
+#exhibitions .page-location p,
 #contact .page-location, 
 #contact .page-location p {
 	display: none;
@@ -350,8 +301,7 @@ a:active {
 #photography .main-content,
 #design .main-content,
 #interactive .main-content,
-#mixedmedia .main-content,
-.front-row-img   {
+#mixedmedia .main-content {
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -370,14 +320,6 @@ a:active {
 .front-row {
 	width: 100%;
 	height: auto;
-}
-.front-row-img {
-	flex-direction: column;
-	justify-content: center;
-	margin: 1.5rem 0 0 0;
-}
-.front-row-img img {
-	margin: 0 auto;
 }
  /*.............PORTFOLIO TITLES ............................... */
 
@@ -410,8 +352,7 @@ a:active {
 
 /*......... PROJECT PAGES.......................................*/
 
-nav.menu-side {
-	order: 1;
+.menu-side {
 	flex: 1 0;
 	min-width: 25%;
 	max-width: 25%;
@@ -420,10 +361,13 @@ nav.menu-side {
 	padding: 0 0 0 10px;
 	line-height:2rem;	
 }
-nav.menu-side li a:hover{
+.menu-side li a:active,
+.menu-side li a:hover {
 	color: #099949;
 	
 }
+
+
 /*.PHOTGRPHY side menu......... */
 #manhome .menu-side li:nth-child(1) a,
 #truckers .menu-side li:nth-child(2) a,
@@ -449,46 +393,24 @@ nav.menu-side li a:hover{
 #proteus .menu-side li:nth-child(4) a,
 #kansas .menu-side li:nth-child(5) a,
 #weather .menu-side li:nth-child(6) a {
-	border-bottom:1px solid #878787;
-}
-
-.carousel-nav {
-	display: block;
-	visibility: hidden;
+	color: #099949;
 
 }
+
 .carousel-nav button:first-child {
 	padding-left: 0;
 
 }
 #carousel {
 	display: block;
-	visibility:hidden;
+	visibility: hidden;
 	order: 2;
 	flex: 1 0;
-	border: 1px solid red;
 	margin-bottom: 1rem;
 }
 .image-info { 
-	display: block;
-	visibility: hidden;
 	color: #878787;
 }
-.item {
-	display: -webkit-inline-block; 
-	order: 1;
-	width: 15%;
-	height: auto;
-	padding: 7px;
-	flex-basis: auto;
-}
-
-.item img {
-	width: 100%;
-	height: auto;
-}
-
-
 .statement-body {
 	order: 4;
 	flex: 2 0;
@@ -533,35 +455,6 @@ nav.menu-side li a:hover{
   content: '';
   display: block;
   clear: both;
-}
-.grid {
-	order: 3;
-	min-width: 75%;
-	height: auto;
-}
-.grid-sizer,
-.grid-item {
-  width: 20%;
-}
-.grid-item {
-	order: 1;
-	flex: 1 0;
-	align-self: flex-start;
-	opacity: 1;
-}
-.item:hover,
-.grid-item:hover {
-	opacity:0.8;
-}
-.grid-item img {
-  	width: 100%;
-	height:auto;
-	display:block;
-	
-}
-.grid-item p {
-	display: none;
-	color: #fff;
 }
 /*.........ABOUT PAGE .......................................*/
 
@@ -750,10 +643,9 @@ footer {
 	order:3;
 	align-self: flex-end;
 	color: #878787;
-	max-width: 1600px;
+	max-width: 1200px;
 	width:100%;
 	text-align:left;
-	border-top: 1px solid #878787;
 	zoom: 1; /*I.E hack */
 	clear: both;
 }
@@ -776,15 +668,15 @@ footer {
  	padding:0;
  	margin:0;
  	font-size: 0.8rem;
- 	text-align:left;
- 	text-indent: 4px;
+ 	text-align: center;
+ 	
 }
  .footer-col-3 ul li {
  	border:none;
 }
 .footer-col-1, .footer-col-2  {
 	width:100%;
- 	margin:0;
+ 	margin:0 1rem 0 0 ;
  
 }
 .footer-col-1 ul li a, 
@@ -792,6 +684,8 @@ footer {
 	display: block;
     width: 100%;
     height: 100%;
+    text-align: left;
+    text-indent: 5px;
 }
 .footer-col-1 li:first-child:hover,
 .footer-col-1 li:first-child:active,
@@ -852,21 +746,22 @@ footer {
 .footer-col-3 {
 	display:inline-block;
 	width: 100%;
+	margin: 0;
 
 }
 .footer-col-3 img {
-	width:33.3%;
-	padding:10%;
-	margin:auto;
- 	float:left;
- 	cursor:pointer;
+	width: 33.3%;
+	padding: 10%;
+	margin: auto;
+ 	float: left;
+ 	/*cursor: pointer;*/
 }
 .footer-col-3 ul {
-	margin:0;
-	padding:0; 
+	margin: 0;
+	padding: 0; 
 }
 .footer-col-3 li:nth-last-of-type(1) {
-	padding-top:1%;
+	padding-top: 1%;
 }
 #about .footer-col-3 li:nth-last-of-type(1) {
 	padding-top: 1.5%;
@@ -874,11 +769,12 @@ footer {
 .footer-col-4 {
 	font-size: 0.8rem;
 	width: 25%;
+	padding-top: 3px;
 	padding-bottom: 3.2rem; 
 	padding-left: 0.3rem;
- 	margin:0; 
- 	color:#878787;
- 	text-align: left;
+ 	margin: 0; 
+ 	color: #878787;
+ 	text-align: center;
 }
 
 

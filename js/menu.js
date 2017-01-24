@@ -19,9 +19,5 @@ $(document).ready(function() {
 	        $(this).closest('.options-menu-horizontal').slideUp('fast');
 		});
 	}
-
 	toggleMainMenu();
-
-	// if ( width <= 650 ) {
- //        toggleMainMenu();
-});        
+});
