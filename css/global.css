@@ -165,7 +165,7 @@ nav.menu-top ul.share {
 	max-width:1125px;
 	text-align: center;
 	margin: 0 auto;
-	padding:0;  
+	padding:0 5px 0 0;  
 	list-style: none;
 	position: relative;
 	display: inline-block; 
