@@ -1353,7 +1353,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		margin: 0 0 0 4.5%;
 		text-align: center;
 		font-size: 0.8rem;
+	 	color: #878787;
+		
 		
 	}
+	
 } 
 

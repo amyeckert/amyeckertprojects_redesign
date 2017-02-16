@@ -205,9 +205,9 @@ a:hover {
 /*exhibitions*/
 .main-menu li:nth-child(4):hover, 
 .main-menu li:nth-child(4):active {
-    background-color: #4866fb;  
+    background-color: #820064;  
     color: #fff;
-    border-bottom: 1px solid #4866fb;
+    border-bottom: 1px solid #820064;
 }
  /*about*/
 .main-menu li:nth-child(5):hover,
@@ -714,7 +714,7 @@ footer {
 .footer-col-2  li:nth-child(2):hover,
 .footer-col-2  li:nth-child(2):active,
 .footer-col-2  li:nth-child(2) a:hover {
-	background-color: #68b7d5;
+	background-color: #099949;
 	color: #fff;
 }
 .footer-col-2  li:nth-child(3):hover,
@@ -753,14 +753,16 @@ footer {
 	padding-top: 1.5%;
 }
 .footer-col-4 {
-	font-size: 0.8rem;
 	width: 25%;
 	padding-top: 3px;
 	padding-bottom: 3.2rem; 
 	padding-left: 0.3rem;
  	margin: 0; 
- 	color: #878787;
  	text-align: center;
 }
+.copyright {
+	font-size: 0.7rem;
+} 
+
 
 
