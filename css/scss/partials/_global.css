@@ -333,7 +333,7 @@ a:hover {
 	letter-spacing: 0.04rem;
 	color:#878787;
 	text-transform: uppercase;
-	float:left;
+	/*float:left;*/
 }
 
 /*......... PROJECT PAGES.......................................*/
@@ -398,16 +398,16 @@ a:hover {
 	color: #878787;
 }
 .statement-body {
+	display: block;
 	order: 4;
 	flex: 2 0;
-	display: none;
 	min-width:75%;
-	margin: 0 auto;
+	margin: 10% auto;
 	height:100%;
 	font-size: 0.8rem;
 	letter-spacing: 0.03rem;
 	color:#878787;
-	text-indent: 1.3rem;
+	/*text-indent: 1.3rem;*/
 		
 }
 /*.showStatement {
@@ -740,7 +740,6 @@ footer {
 	padding: 10%;
 	margin: auto;
  	float: left;
- 	/*cursor: pointer;*/
 }
 .footer-col-3 ul {
 	margin: 0;
