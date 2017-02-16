@@ -30,7 +30,7 @@ gulp.task('js', function () {
     gulp.src('./js/vendor/plugins/*.js')
         .pipe(plumber())
         .pipe(concat('plugins.min.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./js/vendor'))
         .pipe(notify({message: 'Plugins Compiled and Minified!'}));
 
@@ -46,11 +46,11 @@ gulp.task('js', function () {
 
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('./css/scss/*.scss', ['css']);
-    gulp.watch('./css/scss/**/*.scss', ['css']);
-    gulp.watch('./js/vendor/plugins/*.js', ['js']);
-    gulp.watch('./js/vendor/plugins/**/*.js', ['js']);
-    gulp.watch('./js/script.js', ['js']);
+    gulp.watch('./css/scss/*.scss', ['css']); // watch main styles.scss  
+    gulp.watch('./css/scss/**/*.scss', ['css']); // watch partials and vendor dirs
+    // gulp.watch('./js/vendor/plugins/*.js', ['js']);
+    // gulp.watch('./js/vendor/plugins/**/*.js', ['js']);
+    // gulp.watch('./js/script.js', ['js']);
 });
 
 gulp.task('default', ['watch']);
