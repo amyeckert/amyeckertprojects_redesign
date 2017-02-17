@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------*/
 
 
-@media only screen and (max-width: 700px) { 
+@media only screen and (max-width: 768px) { 
 	body {
 		padding-top: 50px;
 	}
@@ -1030,18 +1030,27 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	#mixedmedia .grid-item img {
 		padding: 7px;
 	} 
-	#interactive .page-location, #mixedmedia .page-location, 
-	#photography .page-location, #design .page-location, 
-	#portfolio-template .page-location, #project-template .page-location, 
-	#exhibitions .page-location, #contact .page-location, #about .page-location,
+	#interactive .page-location, 
+	#mixedmedia .page-location, 
+	#photography .page-location, 
+	#design .page-location, 
+	#portfolio-template .page-location, 
+	#project-template .page-location, 
+	#exhibitions .page-location, 
+	#contact .page-location, 
+	#about .page-location,
 	#blog .page-location {
 		display: none;
 	}
-	#interactive .page-location p, #mixedmedia .page-location p, 
-	#photography .page-location p, #design .page-location p, 
-	#portfolio-template .page-location p, #project-template .page-location p, 
+	#interactive .page-location p, 
+	#mixedmedia .page-location p, 
+	#photography .page-location p, 
+	#design .page-location p, 
+	#portfolio-template .page-location p, 
+	#project-template .page-location p, 
 	#exhibitions .page-location p,
-	#about .page-location p, #blog.page-location p {
+	#about .page-location p, 
+	#blog.page-location p {
 		display: none;
 		margin-bottom: 0;
 	}		
