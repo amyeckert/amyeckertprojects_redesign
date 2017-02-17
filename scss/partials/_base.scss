@@ -1,19 +1,26 @@
-* { box-sizing: border-box; }
-html { 
-	height: 100%;
-	margin: 0;
-	padding: 0;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+* {  
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 *, 
 *:before, 
 *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+	  -webkit-box-sizing: inherit;
+	  -moz-box-sizing: inherit;
+	  box-sizing: inherit;
+}
+html { 
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding-top: 50px;
+	font-family: $f-text;
+	
 }
 
 .clear {  	
@@ -22,25 +29,20 @@ html {
 	padding:0;
 	
 }
-body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: 'Josefin Sans', sans-serif;
-	
-}
 .wrapper {
-	min-height: 100%;
+	width: 90%;
+	max-width: 90%;
+	min-height: 100vh;
+	margin: 4% auto;
 	display: flex;
-
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
  	display: -webkit-flex;     /* NEW - Chrome */
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	flex-direction: column;
-	
+	flex-direction: column;	
 }
+nav ul li a { font-size: 1.2rem;}
 ul {
 	margin:0;
 	padding:0;
@@ -68,29 +70,28 @@ button {
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
 	font-size: .8rem;
-}
 
-button:hover {
-	border-bottom: 1px solid #68b7d5;
+	&:hover {
+		border-bottom: 1px solid #68b7d5;
+	}
 }
-
 /* .........HEADER .............................*/
-header {
-	display: inline-block;
-	order: 1;
-	padding-top: 20px;
-	border-bottom:1px solid #878787;
-}
-header .hamburger {
-	display: block;
-}
-header span.menu-toggle {
-    display: block;
-}
-.logo {
-	height: auto;
+// header {
+// 	display: inline-block;
+// 	order: 1;
+// 	padding-top: 20px;
+// 	border-bottom:1px solid #878787;
 
-}
+// 	.hamburger {
+// 		display: block;
+// 	}
+// 	span.menu-toggle {
+// 	    display: block;
+// 	}
+// 	.logo {
+// 		height: auto;
+// 	}
+// }
 /*......... MAIN CONTENT AREA .......................................*/
 
 .main-content {

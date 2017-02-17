@@ -1,18 +1,79 @@
 /********************
 ** Vendors
 ********************/
+/* Cross Browser Compatability CSS */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+html, body, div, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, section {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* end reset styles */
 /********************
 ** Partials
 ********************/
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -22,19 +83,27 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
-.clear {
-  clear: both;
+html {
+  height: 100vh;
   margin: 0;
   padding: 0; }
 
 body {
   height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: 'Josefin Sans', sans-serif; }
+  padding-top: 50px;
+  font-family: "Josefin Sans", sans-serif; }
+
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0; }
 
 .wrapper {
-  min-height: 100%;
+  width: 90%;
+  max-width: 90%;
+  min-height: 100vh;
+  margin: 4% auto;
   display: flex;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -48,6 +117,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+nav ul li a {
+  font-size: 1.2rem; }
 
 ul {
   margin: 0;
@@ -75,28 +147,10 @@ button {
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
   font-size: .8rem; }
-
-button:hover {
-  border-bottom: 1px solid #68b7d5; }
+  button:hover {
+    border-bottom: 1px solid #68b7d5; }
 
 /* .........HEADER .............................*/
-header {
-  display: inline-block;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  padding-top: 20px;
-  border-bottom: 1px solid #878787; }
-
-header .hamburger {
-  display: block; }
-
-header span.menu-toggle {
-  display: block; }
-
-.logo {
-  height: auto; }
-
 /*......... MAIN CONTENT AREA .......................................*/
 .main-content {
   -webkit-box-ordinal-group: 3;
@@ -274,6 +328,53 @@ input[type="submit"]:hover {
   outline: 1px solid #099949;
   font-size: 1rem; }
 
+/* .........HEADER .............................*/
+header {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 50px;
+  padding: 8px 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  -webkit-transition: top 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
+  border-bottom: 1px solid #878787; }
+  header .logo {
+    display: inline-block;
+    width: 100%;
+    min-width: 140px;
+    max-width: 240px;
+    max-height: 50px;
+    margin: 0;
+    background-color: #fff; }
+    header .logo img {
+      width: 100%; }
+  header .menu-mobile {
+    display: inline-block;
+    width: 20%;
+    margin: 2% 5%; }
+    header .menu-mobile .menu-toggle {
+      display: block;
+      height: 50px; }
+
+.nav-up {
+  top: -50px;
+  border-bottom: none; }
+
+.main-menu li:first-child {
+  border-left: none; }
+
+.share li {
+  display: inline-block;
+  width: 30%;
+  margin: 0;
+  padding: 0; }
+
 /*photography*/
 .main-menu li:first-child:hover,
 .main-menu li:first-child:active {
@@ -281,69 +382,8 @@ input[type="submit"]:hover {
   color: #fff;
   border-bottom: 1px solid #a84420; }
 
-/*......... HAMBURGER MENU ITEMS.........................................*/
-.menu-top ul:after {
-  content: "";
-  clear: both;
-  display: block; }
-
-/*..... main list item link text cover */
-.menu-top ul.main-menu li {
-  background-color: transparent; }
-
-a:link {
-  color: #878787;
-  text-decoration: none; }
-
-a:visited {
-  color: #878787; }
-
-li:hover,
-a:hover {
-  color: #fff; }
-
-/*design*/
-.main-menu li:nth-child(2):hover,
-.main-menu li:nth-child(2):active {
-  background-color: #5f9797;
-  color: #fff;
-  border-bottom: 1px solid #5f9797; }
-
-/*mixed media*/
-.main-menu li:nth-child(3):hover,
-.main-menu li:nth-child(3):active {
-  background-color: #8a5cd1;
-  color: #fff;
-  border-bottom: 1px solid #8a5cd1; }
-
-/*exhibitions*/
-.main-menu li:nth-child(4):hover,
-.main-menu li:nth-child(4):active {
-  background-color: #820064;
-  color: #fff;
-  border-bottom: 1px solid #820064; }
-
-/*about*/
-.main-menu li:nth-child(5):hover,
-.main-menu li:nth-child(5):active {
-  background-color: #099949;
-  color: #fff;
-  border-bottom: 1px solid #099949; }
-
-/*contact*/
-.main-menu li:nth-child(6):hover,
-.main-menu li:nth-child(6):active {
-  background-color: #b56618;
-  color: #fff;
-  border-bottom: 1px solid #b56618; }
-
-.share li a img {
-  height: 25px;
-  width: auto; }
-
 /*......... HAMBURGER MENU behavior stuff .........................................*/
 .options-menu-horizontal {
-  font-family: 'Josefin Sans' sans-serif;
   text-align: center;
   display: none;
   background-color: #fff;
@@ -403,11 +443,7 @@ a:hover {
   width: 33.334%; }
 
 /* Responsive */
-@media (max-width: 650px) {
-  .options-menu-horizontal ul li {
-    display: block;
-    width: 100%; }
-  /*
+/*
     .options-menu-horizontal ul:nth-child(2) {
         width: 50%;
         margin: 0 auto;
@@ -417,109 +453,7 @@ a:hover {
         float: left;
         width: 33.334%;
 
-    }*/ }
-
-/*......... SIDE MENUS .........................................*/
-.menu-side {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0;
-          flex: 1 0;
-  min-width: 25%;
-  max-width: 25%;
-  font-size: 1rem;
-  margin: 0;
-  padding: 0 0 0 10px;
-  line-height: 2rem; }
-
-.menu-side li a:active,
-.menu-side li a:hover {
-  color: #099949; }
-
-/*.PHOTGRPHY side menu......... */
-#manhome .menu-side li:nth-child(1) a,
-#truckers .menu-side li:nth-child(2) a,
-#mncooks .menu-side li:nth-child(3) a,
-#submarine .menu-side li:nth-child(4) a,
-#soap .menu-side li:nth-child(5) a,
-#optimiste .menu-side li:nth-child(6) a,
-#mossburn .menu-side li:nth-child(7) a,
-#mhbook .menu-side li:nth-child(1) a,
-#nzbirds .menu-side li:nth-child(2) a,
-#letters .menu-side li:nth-child(3) a,
-#print-portfolio .menu-side li:nth-child(4) a,
-#d6sunset .menu-side li:nth-child(5) a,
-#misunderstood .menu-side li:nth-child(1) a,
-#rigs .menu-side li:nth-child(2) a,
-#prefab .menu-side li:nth-child(3) a,
-#proteus .menu-side li:nth-child(4) a,
-#kansas .menu-side li:nth-child(5) a,
-#weather .menu-side li:nth-child(6) a {
-  color: #099949; }
-
-@media only screen and (min-width: 651px) and (max-width: 1299px) {
-  header span.menu-toggle {
-    display: block; }
-  .hamburger {
-    display: block; }
-  .options-menu-horizontal ul li {
-    display: block;
-    width: 100%;
-    font-size: 1.5rem;
-    margin: 0 auto;
-    padding: 4px 0; }
-  .options-menu-horizontal ul:nth-child(2) {
-    display: block;
-    width: 25%;
-    margin: 0 auto; }
-  .options-menu-horizontal ul:nth-child(2) li {
-    float: left;
-    width: 33.334%; }
-  .options-menu-horizontal span.close-menu {
-    top: 10px;
-    right: 10px;
-    width: 32px;
-    height: 32px;
-    line-height: 1.1;
-    font-size: 30px; } }
-
-@media only screen and (min-width: 1300px) {
-  .options-menu-horizontal {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    display: inline-block;
-    border: none;
-    position: relative;
-    top: -90px;
-    left: 0;
-    z-index: 0;
-    width: 57%;
-    background-color: transparent;
-    margin: 0 0 0 43.2%; }
-  .options-menu-horizontal ul {
-    display: inline-block;
-    float: right;
-    width: 100%;
-    margin: 0; }
-  .options-menu-horizontal ul li {
-    display: inline-block;
-    padding: 0;
-    float: none;
-    font-size: 1rem;
-    padding: 0 5px;
-    width: 16%;
-    height: 100%;
-    margin: 0;
-    border-bottom: 1px solid #878787; }
-  .options-menu-horizontal ul li a {
-    display: block;
-    font-size: 0.7rem;
-    width: 100%;
-    height: 100%;
-    padding: 28px 0 20px 0; }
-  .options-menu-horizontal ul:nth-child(2) {
-    display: none; } }
-
+    }*/
 /*.............FOOTER....................................................*/
 footer {
   display: none;
@@ -652,6 +586,15 @@ footer {
   font-size: 0.7rem; }
 
 /*.........SHOW PAGE LOCATION .......................................*/
+.page-location {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.front-row {
+  width: 100%;
+  height: auto; }
+
 #interactive .page-location,
 #mixedmedia .page-location,
 #photography .page-location,
@@ -674,7 +617,7 @@ footer {
   display: block;
   border-left: 1px solid #878787;
   padding: 1% 0 0 1%;
-  margin-bottom: 1%; }
+  margin-bottom: 0; }
 
 #home .page-location p,
 #exhibitions .page-location,
@@ -703,17 +646,8 @@ footer {
   width: 100%;
   margin: 0 auto; }
 
-.page-location {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1; }
-
-.front-row {
-  width: 100%;
-  height: auto; }
-
 /*.............PORTFOLIO TITLES ............................... */
-.front-titles, .project-titles {
+.project-title {
   width: 100%;
   background-color: white;
   float: left;
@@ -722,11 +656,11 @@ footer {
   top: 30%;
   color: #878787; }
 
-.front-titles p, .project-titles p {
+.project-title p {
   text-align: center;
   display: none; }
 
-.project-title, .statement-title {
+.statement-title {
   width: 60%;
   margin: 0rem 0 1rem 0;
   padding-left: 0.3rem;
@@ -734,16 +668,53 @@ footer {
   font-size: 0.9rem;
   letter-spacing: 0.04rem;
   color: #878787;
-  text-transform: uppercase;
-  /*float:left;*/ }
+  text-transform: uppercase; }
 
 /*......... PROJECT PAGES.......................................*/
+/*	SIDE MENUS .........................................*/
+.menu-side {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  min-width: 25%;
+  max-width: 25%;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0 0 0 10px;
+  line-height: 2rem; }
+
+.menu-side li a:active,
+.menu-side li a:hover {
+  color: #099949; }
+
+/*.PHOTOGRPHY side menu......... */
+#manhome .menu-side li:nth-child(1) a,
+#truckers .menu-side li:nth-child(2) a,
+#mncooks .menu-side li:nth-child(3) a,
+#submarine .menu-side li:nth-child(4) a,
+#soap .menu-side li:nth-child(5) a,
+#optimiste .menu-side li:nth-child(6) a,
+#mossburn .menu-side li:nth-child(7) a,
+#mhbook .menu-side li:nth-child(1) a,
+#nzbirds .menu-side li:nth-child(2) a,
+#letters .menu-side li:nth-child(3) a,
+#print-portfolio .menu-side li:nth-child(4) a,
+#d6sunset .menu-side li:nth-child(5) a,
+#misunderstood .menu-side li:nth-child(1) a,
+#rigs .menu-side li:nth-child(2) a,
+#prefab .menu-side li:nth-child(3) a,
+#proteus .menu-side li:nth-child(4) a,
+#kansas .menu-side li:nth-child(5) a,
+#weather .menu-side li:nth-child(6) a {
+  color: #099949; }
+
+/*	CAROUSEL .........................................*/
 .carousel-nav button:first-child {
   padding-left: 0; }
 
 #carousel {
   display: block;
-  visibility: hidden;
+  visibility: visible;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -768,17 +739,10 @@ footer {
   height: 100%;
   font-size: 0.8rem;
   letter-spacing: 0.03rem;
-  color: #878787;
-  /*text-indent: 1.3rem;*/ }
+  color: #878787; }
 
-/*.showStatement {
-	display: block;
-	z-index: 1;
-	max-width: 50%;
-	margin: 0 25%;
-}*/
 .statement-body p {
-  margin-top: 1rem;
+  margin: 1rem auto;
   line-height: 1.3rem;
   text-decoration: none; }
 
@@ -802,324 +766,290 @@ footer {
   clear: both; }
 
 /*----------------------------------------------------------------------
-------- SMALL-----------------------------------------------------------
+------- MOBILE/SMALL -----------------------------------------------------------
 ----------------------------------------------------------------------*/
-@media only screen and (max-width: 768px) {
-  body {
-    padding-top: 50px; }
-  .wrapper {
-    width: 90%;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    max-width: 90%;
-    margin: 0 auto; }
-  header {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    z-index: 1;
-    width: 100%;
-    height: 50px;
-    margin: 0 auto;
-    padding: 8px 5%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    -webkit-transition: top 0.2s ease-in-out;
-    transition: top 0.2s ease-in-out;
-    border-bottom: 1px solid #878787; }
-  .nav-up {
-    top: -40px;
-    border-bottom: none; }
-  .logo {
-    display: inline-block;
-    width: 85%;
-    min-width: 140px;
-    max-width: 240px;
-    max-height: 40px;
-    margin: 0;
-    background-color: #fff; }
-  .hamburger {
-    display: inline-block;
-    width: 15%;
-    margin: 0;
-    float: right; }
-  .menu-icon {
-    position: relative;
-    display: inline-block;
-    right: 0;
-    top: 0;
-    max-width: 35px;
-    min-width: 25px;
-    text-indent: -999px;
-    float: right; }
-  .border-icon {
-    height: 15px;
-    border-top: 5px solid #b56618;
-    border-bottom: 5px solid #68b7d5; }
-  .border-icon:before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 100%;
-    border-top: 5px solid #98983e; }
-  nav ul li a {
-    font-size: 1.2rem; }
-  .main-menu li:first-child {
-    border-left: none; }
-  .share li {
-    display: inline-block;
-    width: 30%;
-    margin: 0;
-    padding: 0; }
-  /*...............MAIN CONTENT AREA.......................................*/
-  .main-content {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0;
-            flex: 1 0; }
-  #about p {
-    padding: 0.5rem 0 0.5rem 0; }
-  #photography .page-location,
-  #design .page-location,
-  #interactive .page-location,
-  #mixedmedia .page-location {
-    display: block;
-    margin: 0; }
-  #photography .page-location p,
-  #design .page-location p,
-  #interactive .page-location p,
-  #mixedmedia .page-location p {
-    display: block;
-    margin: 0;
-    padding: 2% 0 2% 2%; }
-  #exhibitions .page-location,
-  #exhibitions .page-location p {
-    display: none; }
-  .menu-top {
-    display: none;
-    border-top: none; }
-  /*.....showing page location in menu..... */
-  #photography .navphoto,
-  #design .navdesign,
-  #interactive .navinter,
-  #mixedmedia .navmixed,
-  #about .navabout,
-  #blog .navblog,
-  #contact .navcontact,
-  #project-template .navproject {
-    border: none; }
-  #home .page-location p {
-    display: none; }
-  #home .grid-sizer {
-    width: 100%; }
-  .statement-title {
-    margin: 0.3rem 0 1rem 0;
-    width: 100%; }
-  .front-row {
-    max-width: 100%;
-    padding: 0;
-    margin: 1rem auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .front-row-img {
-    display: block;
-    margin: 0 auto;
-    padding: 0; }
-  .front-row-img img {
-    display: block;
-    margin: 0 auto;
-    max-width: 60%;
-    min-width: 30%; }
-  /*.........PROJECT PAGES .......................................*/
-  nav.menu-side {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 50px; }
-  nav.menu-side a button {
-    display: block;
-    width: 20%; }
-  nav.menu-side a button.back {
-    padding: 14px;
-    background-image: url("../images/go-back-left-arrow.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: transparent;
-    margin: 5px auto;
-    float: left; }
-  nav.menu-side a button.back:hover {
-    border-bottom: 1px solid #fff; }
-  nav.menu-side p {
-    display: block;
-    margin: 1% 0;
-    max-width: 80%;
-    float: right;
-    color: #878787;
-    text-align: right;
-    font-size: 0.6rem;
-    text-transform: uppercase; }
-  nav.menu-side ul li {
-    display: none;
-    width: 100%; }
-  #carousel,
-  .big,
-  .big-img-container,
-  .image-info,
-  .carousel-nav,
-  .item p {
-    display: none; }
-  .grid {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    width: 100%; }
-  #manhome .grid,
-  #mhbook .grid,
-  #print-portfolio .grid {
-    margin-top: 0;
-    -ms-flex-item-align: start;
-        align-self: flex-start; }
-  .grid-sizer,
-  .grid-item,
-  .grid-item img {
-    width: 100%;
-    margin: 0 auto; }
-  #photography .grid-sizer a,
-  #design .grid-sizer a,
-  #interactive .grid-sizer a,
-  #mixedmedia .grid-sizer a {
-    display: block; }
-  #photography .grid-item img,
-  #design .grid-item img,
-  #interactive .grid-item img,
-  #mixedmedia .grid-item img {
-    width: 100%;
-    margin: 0 auto; }
-  .grid-item:hover {
-    opacity: 1; }
-  .statement-body {
-    display: none;
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-    width: 90%;
-    padding: 15px auto;
-    margin: 0 auto;
-    font-size: 1rem;
-    text-indent: 0;
-    letter-spacing: 0.05rem; }
-  /*.........ABOUT PAGE .......................................*/
-  .about-me {
-    width: 100%;
-    overflow: hidden;
-    min-width: 6rem;
-    margin: 0;
-    padding: 0; }
-  #about .about-me p {
-    font-size: 1.2rem; }
-  .about-me p:first-of-type {
-    margin-top: 0; }
-  .cv {
-    margin: auto; }
-  .cv button {
-    padding: 4%;
-    margin: auto;
-    font-size: 0.7rem;
-    letter-spacing: 0.12rem; }
-  .about-col-2, .clients-r, .clients-l, .awards {
-    display: none; }
-  .commercial-site {
-    margin: 1.5rem 0 1.5rem 0; }
-  /*........CONTACT PAGE ............................................*/
-  .contact-img {
-    display: none; }
-  .contact-img img {
-    display: none; }
-  .contact-info {
-    width: 100%;
-    height: 3rem;
-    margin: 2rem auto; }
-  .temp-contact_page {
-    display: block;
-    margin: 0 auto;
-    width: 100%; }
-  .temp-contact_page p {
-    padding: 2% 0;
-    text-align: center; }
-  /*.temp-contact_page p:last-child {
+/*...............MAIN CONTENT AREA.......................................*/
+.main-content {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0; }
+
+#about p {
+  padding: 0.5rem 0 0.5rem 0; }
+
+#photography .page-location,
+#design .page-location,
+#interactive .page-location,
+#mixedmedia .page-location {
+  display: block;
+  margin: 0; }
+
+#photography .page-location p,
+#design .page-location p,
+#interactive .page-location p,
+#mixedmedia .page-location p {
+  display: block;
+  margin: 0;
+  padding: 2% 0 2% 2%; }
+
+#exhibitions .page-location,
+#exhibitions .page-location p {
+  display: none; }
+
+.menu-top {
+  display: none;
+  border-top: none; }
+
+/*.....showing page location in menu..... */
+#photography .navphoto,
+#design .navdesign,
+#interactive .navinter,
+#mixedmedia .navmixed,
+#about .navabout,
+#blog .navblog,
+#contact .navcontact,
+#project-template .navproject {
+  border: none; }
+
+#home .page-location p {
+  display: none; }
+
+#home .grid-sizer {
+  width: 100%; }
+
+.statement-title {
+  margin: 0.3rem 0 1rem 0;
+  width: 100%; }
+
+.front-row {
+  max-width: 100%;
+  padding: 0;
+  margin: 1rem auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.front-row-img {
+  display: block;
+  margin: 0 auto;
+  padding: 0; }
+
+.front-row-img img {
+  display: block;
+  margin: 0 auto;
+  max-width: 60%;
+  min-width: 30%; }
+
+/*.........PROJECT PAGES .......................................*/
+nav.menu-side {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 50px; }
+
+nav.menu-side a button {
+  display: block;
+  width: 20%; }
+
+nav.menu-side a button.back {
+  padding: 14px;
+  background-image: url("../images/go-back-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  margin: 5px auto;
+  float: left; }
+
+nav.menu-side a button.back:hover {
+  border-bottom: 1px solid #fff; }
+
+nav.menu-side p {
+  display: block;
+  margin: 1% 0;
+  max-width: 80%;
+  float: right;
+  color: #878787;
+  text-align: right;
+  font-size: 0.6rem;
+  text-transform: uppercase; }
+
+nav.menu-side ul li {
+  display: none;
+  width: 100%; }
+
+#carousel,
+.big,
+.big-img-container,
+.image-info,
+.carousel-nav,
+.item p {
+  display: none; }
+
+.grid {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 100%; }
+
+#manhome .grid,
+#mhbook .grid,
+#print-portfolio .grid {
+  margin-top: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.grid-sizer,
+.grid-item,
+.grid-item img {
+  width: 100%;
+  margin: 0 auto; }
+
+#photography .grid-sizer a,
+#design .grid-sizer a,
+#interactive .grid-sizer a,
+#mixedmedia .grid-sizer a {
+  display: block; }
+
+#photography .grid-item img,
+#design .grid-item img,
+#interactive .grid-item img,
+#mixedmedia .grid-item img {
+  width: 100%;
+  margin: 0 auto; }
+
+.grid-item:hover {
+  opacity: 1; }
+
+.statement-body {
+  display: block;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  width: 90%;
+  padding: 15px auto;
+  margin: 0 auto;
+  font-size: 1rem;
+  text-indent: 0;
+  letter-spacing: 0.05rem; }
+
+/*.........ABOUT PAGE .......................................*/
+.about-me {
+  width: 100%;
+  overflow: hidden;
+  min-width: 6rem;
+  margin: 0;
+  padding: 0; }
+
+#about .about-me p {
+  font-size: 1.2rem; }
+
+.about-me p:first-of-type {
+  margin-top: 0; }
+
+.cv {
+  margin: auto; }
+
+.cv button {
+  padding: 4%;
+  margin: auto;
+  font-size: 0.7rem;
+  letter-spacing: 0.12rem; }
+
+.about-col-2, .clients-r, .clients-l, .awards {
+  display: none; }
+
+.commercial-site {
+  margin: 1.5rem 0 1.5rem 0; }
+
+/*........CONTACT PAGE ............................................*/
+.contact-img {
+  display: none; }
+
+.contact-img img {
+  display: none; }
+
+.contact-info {
+  width: 100%;
+  height: 3rem;
+  margin: 2rem auto; }
+
+.temp-contact_page {
+  display: block;
+  margin: 0 auto;
+  width: 100%; }
+
+.temp-contact_page p {
+  padding: 2% 0;
+  text-align: center; }
+
+/*.temp-contact_page p:last-child {
  		display:none;
  	}*/
-  .temp-contact_page:hover {
-    background-color: #4866fb; }
-  /*......... FOOTER.......................................*/
-  #home footer {
-    display: none; }
-  footer {
-    display: none;
-    width: 90%;
-    margin: 10px auto 0 auto;
-    padding: 0;
-    border-top: 1px solid #878787; }
-  .column {
-    width: 100%; }
-  .footer-col-1,
-  .footer-col-2,
-  .footer-col-3 {
-    margin: 0;
-    width: 100%; }
-  .footer ul li {
-    margin: 0; }
-  .footer-col-1 ul li,
-  .footer-col-2 ul li {
-    width: 100%;
-    padding-left: 0; }
-  .footer-col-1 ul li a,
-  .footer-col-2 ul li a {
-    display: block;
-    padding: 6% 0;
-    width: 100%;
-    height: 100%;
-    text-align: center; } }
+.temp-contact_page:hover {
+  background-color: #4866fb; }
+
+/*......... FOOTER.......................................*/
+#home footer {
+  display: none; }
+
+footer {
+  display: none;
+  width: 90%;
+  margin: 10px auto 0 auto;
+  padding: 0;
+  border-top: 1px solid #878787; }
+
+.column {
+  width: 100%; }
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  margin: 0;
+  width: 100%; }
+
+.footer ul li {
+  margin: 0; }
+
+.footer-col-1 ul li,
+.footer-col-2 ul li {
+  width: 100%;
+  padding-left: 0; }
+
+.footer-col-1 ul li a,
+.footer-col-2 ul li a {
+  display: block;
+  padding: 6% 0;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
 
 /*@media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 700px),
@@ -1134,9 +1064,9 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
   
 }*/
 /*----------------------------------------------------------------------
--------MEDIUM ----------------------------------------------------------
+------- MEDIUM ----------------------------------------------------------
 ----------------------------------------------------------------------*/
-@media only screen and (min-width: 701px) and (max-width: 1299px) {
+@media only screen and (min-width: 700px) {
   body {
     padding-top: 50px; }
   .wrapper {
@@ -1244,6 +1174,14 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
         -ms-flex-order: 2;
             order: 2;
     width: 100%; }
+  #photography .page-location,
+  #design .page-location,
+  #interactive .page-location,
+  #mixedmedia .page-location {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin: 0 0 0 3%; }
   /* ............	FRONT PAGE...........................................*/
   .front-row {
     margin-top: 1rem; }
@@ -1255,6 +1193,35 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
     max-height: 100%;
     width: 40vh;
     margin: 0 auto; }
+  /* ............	PORTFOLIO PAGE...........................................*/
+  .grid {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    max-width: 100%;
+    margin: 2.5% 2.5% 0 2.5%; }
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+    height: auto; }
+  .grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 7px; }
+  #photography .grid-sizer,
+  #photography .grid-item,
+  #design .grid-sizer,
+  #design .grid-item,
+  #interactive .grid-sizer,
+  #interactive .grid-item,
+  #mixedmedia .grid-sizer,
+  #mixedmedia .grid-item {
+    width: 50%; }
   /*.........PROJECT PAGES.......................................*/
   .menu-side {
     position: fixed;
@@ -1364,51 +1331,22 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
     background-repeat: no-repeat; }
   .image-info {
     display: none; }
-  .grid {
+  .statement-body {
     display: block;
-    width: 75%;
-    height: auto;
-    margin: 0 0 0 25%; }
-  .grid-sizer,
-  .grid-item {
-    width: 50%;
-    height: auto; }
-  .grid-item img {
-    display: block;
+    visibility: visible;
+    max-width: 70%;
+    margin: 1rem auto; }
+  .statement-title {
     width: 100%;
-    height: auto;
-    padding: 7px; }
-  #photography .grid-sizer,
-  #photography .grid-item,
-  #design .grid-sizer,
-  #design .grid-item,
-  #interactive .grid-sizer,
-  #interactive .grid-item,
-  #mixedmedia .grid-sizer,
-  #mixedmedia .grid-item {
-    width: 25%; }
-  /*.statement-body {*/
-  /*display: none;
-		visibility: visible;
-		max-width: 70%;
-		margin-left: 0;
-
-	}
-	.statement-title {
-		/*width:100%;
-		margin:1rem 0 1rem 0;
-	}
-	.statement-body p {
-		/*display: block;
-		visibility: visible;
-		min-width: 50%;
-		max-width: 80%;
-		width:100%;
-		padding-top: 8px;
-		margin:0;
-		text-indent: 10px;
-		letter-spacing: 0.05rem;*/
-  /*}*/
+    margin: 1rem auto; }
+  .statement-body p {
+    display: block;
+    visibility: visible;
+    min-width: 50%;
+    max-width: 100%;
+    width: 100%;
+    padding-top: 8px;
+    letter-spacing: 0.05rem; }
   /*.........ABOUT PAGE .......................................*/
   .about-me {
     width: 80%;
@@ -1604,10 +1542,21 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
     margin: 0 auto; }
   /*........PORTFOLIO LANDING PAGES....................................*/
   .grid {
-    display: block;
-    width: 73%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
+  .grid-sizer,
+  .grid-item {
+    width: 15%; }
+  .grid-item img {
+    max-width: 100%;
     height: auto;
-    margin: 0; }
+    padding: 7px; }
+  .item:hover,
+  .grid-item:hover {
+    opacity: 1; }
+  .item p {
+    display: none; }
   #photography .grid,
   #design .grid,
   #mixedmedia .grid,
@@ -1616,8 +1565,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
     top: 0;
     right: 0;
     width: 100%;
-    height: auto;
-    margin: 1rem auto; }
+    height: auto; }
   #photography .grid-sizer,
   #photography .grid-item,
   #design .grid-sizer,
@@ -1744,25 +1692,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
     color: #878787; }
   .image-info p:first-child {
     padding-left: 0; }
-  .grid {
-    display: block;
-    visibility: visible;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    margin: 0 0 0 0; }
-  .grid-sizer,
-  .grid-item {
-    width: 15%; }
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-    padding: 7px; }
-  .item:hover,
-  .grid-item:hover {
-    opacity: 1; }
-  .item p {
-    display: none; }
   .carousel-nav {
     visibility: hidden;
     display: block;

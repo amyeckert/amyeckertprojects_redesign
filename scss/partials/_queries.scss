@@ -1,96 +1,94 @@
 /*----------------------------------------------------------------------
-------- SMALL-----------------------------------------------------------
+------- MOBILE/SMALL -----------------------------------------------------------
 ----------------------------------------------------------------------*/
 
+	// body {
+	// 	padding-top: 50px;
+	// }
+	// .wrapper {
+	// 	width: 90%;
+	// 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	//   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	//  	display: -ms-flexbox;      TWEENER - IE 10
+	//  	display: -webkit-flex;     /* NEW - Chrome */
+	//   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
-@media only screen and (max-width: 768px) { 
-	body {
-		padding-top: 50px;
-	}
-	.wrapper {
-		width: 90%;
-		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-	  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-	 	display: -ms-flexbox;      /* TWEENER - IE 10 */
-	 	display: -webkit-flex;     /* NEW - Chrome */
-	  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
-		flex-direction: column;
-		max-width: 90%;
-		margin: 0 auto;
+	// 	flex-direction: column;
+	// 	max-width: 90%;
+	// 	margin: 0 auto;
 	
-	}
-	header {
-		order: 1;
-		z-index: 1;	
-		width: 100%;
-		height: 50px;
-		margin: 0 auto;
-		padding: 8px 5%;	
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: #fff;
-		transition: top 0.2s ease-in-out;	
-		border-bottom:1px solid #878787;
-	}
-	.nav-up {
-		top: -40px;
-		border-bottom: none;
-	}
-	.logo {
-		display: inline-block;
-		width: 85%;
-		min-width: 140px;
-		max-width: 240px;
-		max-height: 40px;
-		margin: 0;
-		background-color: #fff;
+	// }
+	// header {
+	// 	order: 1;
+	// 	z-index: 1;	
+	// 	width: 100%;
+	// 	height: 50px;
+	// 	margin: 0 auto;
+	// 	padding: 8px 5%;	
+	// 	position: fixed;
+	// 	top: 0;
+	// 	left: 0;
+	// 	background-color: #fff;
+	// 	transition: top 0.2s ease-in-out;	
+	// 	border-bottom:1px solid #878787;
+	// }
+	// .nav-up {
+	// 	top: -40px;
+	// 	border-bottom: none;
+	// }
+	// .logo {
+	// 	display: inline-block;
+	// 	width: 85%;
+	// 	min-width: 140px;
+	// 	max-width: 240px;
+	// 	max-height: 40px;
+	// 	margin: 0;
+	// 	background-color: #fff;
 
-	}
-    .hamburger {
-    	display: inline-block;
-    	width: 15%;
-    	margin: 0;
-    	float: right;
+	// }
+ //    .hamburger {
+ //    	display: inline-block;
+ //    	width: 15%;
+ //    	margin: 0;
+ //    	float: right;
     	
-    }
-    .menu-icon {
-	    position: relative;
-	    display: inline-block;
-	    right: 0;
-	    top: 0;
-	    max-width: 35px;
-	    min-width: 25px;
-	    text-indent: -999px;
-	    float: right;
-	}
+ //    }
+ //    .menu-icon {
+	//     position: relative;
+	//     display: inline-block;
+	//     right: 0;
+	//     top: 0;
+	//     max-width: 35px;
+	//     min-width: 25px;
+	//     text-indent: -999px;
+	//     float: right;
+	// }
 	 
-	.border-icon {
-	    height: 15px;
-	    border-top: 5px solid #b56618;
-	    border-bottom: 5px solid #68b7d5; 
-	}
+	// .border-icon {
+	//     height: 15px;
+	//     border-top: 5px solid #b56618;
+	//     border-bottom: 5px solid #68b7d5; 
+	// }
 	 
-	.border-icon:before {
-	    content:"";
-	    position: absolute; 
-	    top: 15px;
-	    left: 0;
-	    width: 100%;
-	    border-top: 5px solid #98983e;
-	}
-	nav ul li a { font-size: 1.2rem;}
+	// .border-icon:before {
+	//     content:"";
+	//     position: absolute; 
+	//     top: 15px;
+	//     left: 0;
+	//     width: 100%;
+	//     border-top: 5px solid #98983e;
+	// }
+	// nav ul li a { font-size: 1.2rem;}
 	
-	.main-menu li:first-child {
-		border-left: none;
-	}
-	.share li {
-		display: inline-block;
-		width: 30%;
-		margin: 0;
-		padding: 0;
-	}
+	// .main-menu li:first-child {
+	// 	border-left: none;
+	// }
+	// .share li {
+	// 	display: inline-block;
+	// 	width: 30%;
+	// 	margin: 0;
+	// 	padding: 0;
+	// }
 
 	/*...............MAIN CONTENT AREA.......................................*/
 	.main-content {	
@@ -268,7 +266,7 @@
 
 	}
 	.statement-body {
-		display: none;
+		display: block;
 		order: 5;
 		width: 90%;
 		padding: 15px auto;
@@ -389,7 +387,7 @@
 	    text-align: center;
 	}		
 		
-} 
+// } 
 
 /*@media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 700px),
@@ -405,10 +403,10 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 }*/
 
 /*----------------------------------------------------------------------
--------MEDIUM ----------------------------------------------------------
+------- MEDIUM ----------------------------------------------------------
 ----------------------------------------------------------------------*/
-@media only screen and (min-width: 701px) and (max-width:1299px) {
-
+@media only screen and (min-width: 700px)  {
+// and (max-width:1299px)
 	body {
 		padding-top: 50px;
 	}
@@ -533,6 +531,15 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		width: 100%;
 
 	}
+	#photography .page-location,
+	#design	.page-location, 
+	#interactive .page-location,
+	#mixedmedia .page-location {
+		order: 0;
+		// max-width: 20%;
+		margin: 0 0 0 3%;
+		
+	}
 	/* ............	FRONT PAGE...........................................*/
 
 	.front-row {
@@ -548,7 +555,37 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 		width: 40vh;
 		margin: 0 auto;
 	}
-	
+	/* ............	PORTFOLIO PAGE...........................................*/	
+
+	.grid {
+		flex-direction: row;
+		order: 1;
+		max-width: 100%;
+		margin: 2.5% 2.5% 0 2.5%;
+	}
+	.grid-sizer,
+	.grid-item {
+		width: 50%;
+		height: auto;	
+	}
+	.grid-item img {
+		display: block;
+		width: 100%;
+		height: auto;
+		padding: 7px;
+	}
+	#photography .grid-sizer,
+	#photography .grid-item,
+	#design .grid-sizer,
+	#design .grid-item,
+	#interactive .grid-sizer,
+	#interactive .grid-item,
+	#mixedmedia .grid-sizer,
+	#mixedmedia .grid-item {
+		width: 50%;
+	}
+
+
 	/*.........PROJECT PAGES.......................................*/
 	
 	.menu-side {
@@ -685,69 +722,33 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 	.image-info {
 		display: none;
 	}
-	.grid {
+	
+	
+	.statement-body {
 		display: block;
-		width: 75%;
-		height: auto;
-		margin: 0 0 0 25%;
-
-	}
-	.grid-sizer,
-	.grid-item {
-		width: 50%;
-		height: auto;
-		
-	}
-	.grid-item img {
-		display: block;
-		width: 100%;
-		height: auto;
-		padding: 7px;
-	}
-	#photography .grid-sizer,
-	#photography .grid-item,
-	#design .grid-sizer,
-	#design .grid-item,
-	#interactive .grid-sizer,
-	#interactive .grid-item,
-	#mixedmedia .grid-sizer,
-	#mixedmedia .grid-item {
-		width: 25%;
-	}
-	/*.statement-body {*/
-		/*display: none;
 		visibility: visible;
 		max-width: 70%;
-		margin-left: 0;
-
+		margin:1rem auto;
 	}
 	.statement-title {
-		/*width:100%;
-		margin:1rem 0 1rem 0;
+		width:100%;
+		margin:1rem auto;
 	}
 	.statement-body p {
-		/*display: block;
+		display: block;
 		visibility: visible;
 		min-width: 50%;
-		max-width: 80%;
+		max-width: 100%;
 		width:100%;
 		padding-top: 8px;
-		margin:0;
-		text-indent: 10px;
-		letter-spacing: 0.05rem;*/
-
-	/*}*/
-
-	
-
+		letter-spacing: 0.05rem;
+	}
 	/*.........ABOUT PAGE .......................................*/
 	.about-me {
 		width: 80%;
 		margin: 0 auto;
 		padding: 0;
 	}
-	
-
 	/*.........CONTACT PAGE .......................................*/
 
  	#contact .main-content{
@@ -979,12 +980,31 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	}
 
 	/*........PORTFOLIO LANDING PAGES....................................*/
-	
 	.grid {
-		display: block;
-		width: 73%;
+		// display: block;
+		// visibility: visible;
+		order: 0;
+		// margin: 0 0 0 0 ;
+	}
+
+	.grid-sizer,
+	.grid-item {
+		width: 15%;
+
+	}
+	.grid-item img {
+		max-width: 100%;
 		height: auto;
-		margin: 0 ;
+		padding: 7px;
+
+	}
+	.item:hover,
+	.grid-item:hover {
+		opacity: 1;
+	}
+	
+	.item p {
+		display: none;
 	}
 
 	#photography .grid,
@@ -996,7 +1016,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		right: 0;
 		width: 100%;
 		height: auto;
-		margin: 1rem auto;
+		// margin: 1rem auto;
 		
 	}
 	
@@ -1157,32 +1177,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		padding-left:0;
 	}
 
-	.grid {
-		display: block;
-		visibility: visible;
-		order: 0;
-		margin: 0 0 0 0 ;
-	}
-
-	.grid-sizer,
-	.grid-item {
-		width: 15%;
-
-	}
-	.grid-item img {
-		max-width: 100%;
-		height: auto;
-		padding: 7px;
-
-	}
-	.item:hover,
-	.grid-item:hover {
-		opacity: 1;
-	}
-	
-	.item p {
-		display: none;
-	}
 
 	.carousel-nav { 
 		visibility: hidden;
@@ -1231,8 +1225,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	/*.........CONTACT PAGE.......................................*/
 
 	#contact .page-location,
-	#contact .page-location p,
-	{
+	#contact .page-location p {
 		display:none;
 	}
 

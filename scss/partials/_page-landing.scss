@@ -1,16 +1,23 @@
 /*.........SHOW PAGE LOCATION .......................................*/
+.page-location {
+	order: 1;
+}
+.front-row {
+	width: 100%;
+	height: auto;
+}
 #interactive .page-location, 
 #mixedmedia .page-location, 
 #photography .page-location, 
 #design .page-location, 
 #portfolio-template .page-location, 
 #project-template .page-location {
-	width:100%;
-	display:block;
-	margin:0;
-	padding:0 0 0 0%;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0 0 0 0%;
 	color: #878787;
-	text-transform:uppercase;
+	text-transform: uppercase;
 }
 
 #interactive .page-location p, 
@@ -19,10 +26,10 @@
 #design .page-location p, 
 #portfolio-template .page-location p, 
 #project-template .page-location p {
-	display:block;
-	border-left:1px solid #878787;
+	display: block;
+	border-left: 1px solid #878787;
 	padding: 1% 0 0 1%;
-	margin-bottom: 1%;
+	margin-bottom: 0;
 
 }
 
@@ -50,16 +57,9 @@
 	margin: 0 auto;
 
 }
-.page-location {
-	order: 1;
-}
-.front-row {
-	width: 100%;
-	height: auto;
-}
 /*.............PORTFOLIO TITLES ............................... */
 
-.front-titles, .project-titles {
+.project-title {
 	width: 100%;
 	background-color: white;
 	float: left;
@@ -68,13 +68,14 @@
 	top: 30%;
 	color: #878787;
 }
-.front-titles p, .project-titles p {
-	text-align:center;
-	display:none;
+ 
+.project-title p {
+	text-align: center;
+	display: none;
 	
-
 }
-.project-title, .statement-title {
+ 
+.statement-title {
 	width:60%;
 	margin:0rem 0 1rem 0;
 	padding-left: 0.3rem;
@@ -83,5 +84,5 @@
 	letter-spacing: 0.04rem;
 	color:#878787;
 	text-transform: uppercase;
-	/*float:left;*/
+
 }
