@@ -76,22 +76,62 @@ button {
 	}
 }
 /* .........HEADER .............................*/
-// header {
-// 	display: inline-block;
-// 	order: 1;
-// 	padding-top: 20px;
-// 	border-bottom:1px solid #878787;
+header {
+	// display: inline-block;
+	// order: 1;
+	// padding-top: 20px;
+	// border-bottom:1px solid #878787;
+	header {
+	order: 1;
+	z-index: 1;	
+	min-width: 100%;
+	min-height: 50px;
+	// margin: 0 auto;
+	padding: 8px 5%;	
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	transition: top 0.2s ease-in-out;	
+	border-bottom:1px solid #878787;
 
-// 	.hamburger {
-// 		display: block;
-// 	}
-// 	span.menu-toggle {
-// 	    display: block;
-// 	}
-// 	.logo {
-// 		height: auto;
-// 	}
-// }
+	.menu-top {
+		display: none;
+
+		@media only screen and (min-width: 1300px ){
+			display: block;
+		}
+	}
+	.logo {
+		display: inline-block;
+		width: 100%;
+		min-width: 140px;
+		max-width: 240px;
+		max-height: 50px;
+		margin: 0;
+		background-color: #fff;
+
+		img {
+			width: 100%;
+		}
+
+	}
+
+	// span.menu-toggle {
+	//     display: block;
+	// }
+	// .logo {
+	// 	height: auto;
+	// }
+	// @media only screen and (min-width: 1300px ){
+
+	// }
+
+}
+}
+
+
+
 /*......... MAIN CONTENT AREA .......................................*/
 
 .main-content {
@@ -128,7 +168,7 @@ button {
 	font-size: 1rem;
 }
 
-.about-me span:hover {
+.about-me span :hover {
 	color: #099949;
 	border-bottom: 1px solid #099949;
 	
@@ -276,4 +316,54 @@ input[type="submit"]:hover {
 	box-shadow:none;
 	outline:1px solid #099949;
 	font-size:1rem;   
+}
+/*.............FOOTER....................................................
+ ONLY DISPLAYS AT DESKTOP WIDTH */
+footer {
+	display: none;
+
+	@media only screen and (min-width: 1300px ) {
+		#home footer {
+			display: block;
+		}
+		footer {
+			width: 100%;
+			display: block;	
+			font-size: 1rem;
+			margin-bottom: 15px;
+			border-top: 1px solid #878787;
+		}
+
+		.column {
+			width: 15%; 
+		}
+
+		.footer ul li {
+			margin: 0;
+
+		}
+		.footer-col-1 ul li a, .footer-col-2 ul li a  {
+			display: block;
+		    padding: 5% 0;
+		}
+		.footer-col-3 {
+			margin: 0 0 0 32%;
+			
+		}
+
+		.footer-col-3 img {
+			padding: 11%;
+			
+		}
+		.footer-col-3 img:last-child {
+			padding: 6%;
+		}
+		.footer-col-4 {
+			padding-top: 0.3rem;
+			margin: 0 0 0 4.5%;
+			text-align: center;
+			font-size: 0.8rem;
+		 	color: #878787;	
+		}		
+	}
 }

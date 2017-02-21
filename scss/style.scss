@@ -11,8 +11,8 @@ $MQs: true;
 ********************/
 @import 'partials/variables';
 @import 'partials/base';
-@import 'partials/header';
-@import 'partials/footer';
+// @import 'partials/header';
+@import 'partials/mob-nav';
 @import 'partials/page-front.scss';
 @import 'partials/page-landing.scss';
 @import 'partials/page-project.scss';

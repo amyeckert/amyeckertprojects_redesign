@@ -1,33 +1,4 @@
-/* .........HEADER .............................*/	
-
-header {
-	order: 1;
-	z-index: 1;	
-	min-width: 100%;
-	min-height: 50px;
-	// margin: 0 auto;
-	padding: 8px 5%;	
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: #fff;
-	transition: top 0.2s ease-in-out;	
-	border-bottom:1px solid #878787;
-
-	.logo {
-		display: inline-block;
-		width: 100%;
-		min-width: 140px;
-		max-width: 240px;
-		max-height: 50px;
-		margin: 0;
-		background-color: #fff;
-
-		img {
-			width: 100%;
-		}
-
-	}
+/* ......... MOBILE NAVIGATION MENU .............................*/	
     .menu-mobile {
     	display: inline-block;
 	    width: 20%;
@@ -36,7 +7,15 @@ header {
 		.menu-toggle {
 	    	display: block;
 	    	height: 50px;
-		}	
+		}
+		.nav-up {
+		top: -50px;
+		border-bottom: none;
+		}
+	}
+
+
+	
 	 //    .menu-icon {
 		//     position: relative;
 		//     display: inline-block;
@@ -61,8 +40,8 @@ header {
 		//     width: 100%;
 		//     border-top: 5px solid #98983e;
 		// }
-    }
-}
+    // }
+// }
 
 // 	header {
 // 	display: inline-block;
@@ -75,10 +54,7 @@ header {
 // 		height: auto;
 // 	}
 // }
-	.nav-up {
-		top: -50px;
-		border-bottom: none;
-	}
+	
 	 
 	 
 	// nav ul li a { font-size: 1.2rem;}
