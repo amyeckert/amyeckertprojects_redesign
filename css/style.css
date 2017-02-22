@@ -83,6 +83,11 @@ input, select {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0; }
+
 html {
   height: 100vh;
   margin: 0;
@@ -94,13 +99,7 @@ body {
   padding-top: 50px;
   font-family: "Josefin Sans", sans-serif; }
 
-.clear {
-  clear: both;
-  margin: 0;
-  padding: 0; }
-
 .wrapper {
-  width: 90%;
   max-width: 90%;
   min-height: 100vh;
   margin: 4% auto;
@@ -151,14 +150,17 @@ button {
     border-bottom: 1px solid #68b7d5; }
 
 /* .........HEADER .............................*/
-header header {
+header {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   z-index: 1;
-  min-width: 100%;
+  width: 100%;
+  min-width: 140px;
   min-height: 50px;
-  padding: 8px 5%;
+  min-height: 50px;
+  margin: 0 auto;
+  padding: 5% 5% 0 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -166,21 +168,36 @@ header header {
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
   border-bottom: 1px solid #878787; }
-  header header .menu-top {
+  header .menu-top {
     display: none; }
     @media only screen and (min-width: 1300px) {
-      header header .menu-top {
+      header .menu-top {
         display: block; } }
-  header header .logo {
+  header .logo {
     display: inline-block;
-    width: 100%;
-    min-width: 140px;
-    max-width: 240px;
-    max-height: 50px;
-    margin: 0;
+    width: 90%;
+    margin: 0 auto;
     background-color: #fff; }
-    header header .logo img {
+    header .logo img {
       width: 100%; }
+  header .menu-mobile {
+    height: 40px;
+    width: 90%;
+    padding-top: 3%;
+    position: relative; }
+    header .menu-mobile .menu-toggle {
+      display: block;
+      font-size: 25px;
+      color: #878787;
+      height: 40px;
+      text-align: right;
+      width: 50%;
+      position: absolute;
+      top: 20px;
+      right: 9px; }
+    header .menu-mobile .nav-up {
+      top: -40px;
+      border-bottom: none; }
 
 /*......... MAIN CONTENT AREA .......................................*/
 .main-content {
@@ -393,17 +410,6 @@ footer {
       color: #878787; } }
 
 /* ......... MOBILE NAVIGATION MENU .............................*/
-.menu-mobile {
-  display: inline-block;
-  width: 20%;
-  margin: 2% 5%; }
-  .menu-mobile .menu-toggle {
-    display: block;
-    height: 50px; }
-  .menu-mobile .nav-up {
-    top: -50px;
-    border-bottom: none; }
-
 .main-menu li:first-child {
   border-left: none; }
 
