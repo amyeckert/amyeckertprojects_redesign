@@ -4,17 +4,17 @@ $MQs: true;
 ** Vendors
 ********************/
 
-@import 'vendor/reset';
+// @import 'vendor/reset';
 
 /********************
 ** Partials
 ********************/
 @import 'partials/variables';
-@import 'partials/base';
 // @import 'partials/header';
-@import 'partials/mob-nav';
+@import 'partials/base';
 @import 'partials/page-front.scss';
 @import 'partials/page-landing.scss';
 @import 'partials/page-project.scss';
 @import 'partials/queries';
+@import 'partials/mob-nav';
 

@@ -74,70 +74,70 @@
 
 /*......... HAMBURGER MENU behavior stuff .........................................*/
 
-.options-menu-horizontal {
-    font-family: 'Josefin Sans' sans-serif;
-    text-align: center;
-    display: block;
-    background-color: #fff;
-    bottom: 0;
-    left:0;
-    position: fixed;
-    width: 100%;
-    padding: 0;
-    z-index: 10; 
-    border-top: 1px solid #68b7d5;
-}
+// .options-menu-horizontal {
+//     font-family: 'Josefin Sans' sans-serif;
+//     text-align: center;
+//     display: block;
+//     background-color: #fff;
+//     bottom: 0;
+//     left:0;
+//     position: fixed;
+//     width: 100%;
+//     padding: 0;
+//     z-index: 10; 
+//     border-top: 1px solid #68b7d5;
+// }
 
-.options-menu-horizontal span.close-menu {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    border: 3px solid #ffffff;
-    color: #ffffff;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    line-height: 48px;
-    font-size: 37px;
-    text-align: center;
-    cursor: pointer;
-}
+// .options-menu-horizontal span.close-menu {
+//     position: absolute;
+//     top: 20px;
+//     right: 30px;
+//     border: 3px solid #ffffff;
+//     color: #ffffff;
+//     border-radius: 50%;
+//     width: 45px;
+//     height: 45px;
+//     line-height: 48px;
+//     font-size: 37px;
+//     text-align: center;
+//     cursor: pointer;
+// }
 
-.options-menu-horizontal ul {
-    list-style: none;
-    text-align: center;
-    cursor: default;
-    margin:0;
-    padding:0;
-}
+// .options-menu-horizontal ul {
+//     list-style: none;
+//     text-align: center;
+//     cursor: default;
+//     margin:0;
+//     padding:0;
+// }
 
-.options-menu-horizontal ul li {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: normal;
-    margin: 0;
-    line-height: 2.5;
-    /*margin: 0 60px auto auto;   */
-    padding: 0;
-    line-height: 2;
-    background-color: transparent;
+// .options-menu-horizontal ul li {
+//     display: inline-block;
+//     font-size: 20px;
+//     font-weight: normal;
+//     margin: 0;
+//     line-height: 2.5;
+//     /*margin: 0 60px auto auto;   */
+//     padding: 0;
+//     line-height: 2;
+//     background-color: transparent;
 
-    -webkit-user-select: none;
-    user-select: none;
-    box-sizing: border-box;
-}
+//     -webkit-user-select: none;
+//     user-select: none;
+//     box-sizing: border-box;
+// }
 
-.options-menu-horizontal ul:nth-child(2) {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
+// .options-menu-horizontal ul:nth-child(2) {
+//     display: block;
+//     width: 50%;
+//     margin: 0 auto;
     
-}
-.options-menu-horizontal ul:nth-child(2) li {
-    float: left;
-    width: 33.334%;
+// }
+// .options-menu-horizontal ul:nth-child(2) li {
+//     float: left;
+//     width: 33.334%;
 
-}
+// }
 
 /* Responsive */
 

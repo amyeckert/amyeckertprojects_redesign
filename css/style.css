@@ -1,78 +1,11 @@
 /********************
 ** Vendors
 ********************/
-/* Cross Browser Compatability CSS */
-/**
- * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
- * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
- * html5doctor.com/html-5-reset-stylesheet/
- */
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-html, body, div, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, section {
-  display: block; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none; }
-
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none; }
-
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold; }
-
-del {
-  text-decoration: line-through; }
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1rem 0;
-  padding: 0; }
-
-input, select {
-  vertical-align: middle; }
-
-/* end reset styles */
 /********************
 ** Partials
 ********************/
+/*********	COLORS *************/
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -121,8 +54,6 @@ nav ul li a {
   font-size: 1.2rem; }
 
 ul {
-  margin: 0;
-  padding: 0;
   list-style: none; }
 
 img {
@@ -378,126 +309,6 @@ input[type="submit"]:hover {
 
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */
-footer {
-  display: none; }
-  @media only screen and (min-width: 1300px) {
-    footer #home footer {
-      display: block; }
-    footer footer {
-      width: 100%;
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 15px;
-      border-top: 1px solid #878787; }
-    footer .column {
-      width: 15%; }
-    footer .footer ul li {
-      margin: 0; }
-    footer .footer-col-1 ul li a, footer .footer-col-2 ul li a {
-      display: block;
-      padding: 5% 0; }
-    footer .footer-col-3 {
-      margin: 0 0 0 32%; }
-    footer .footer-col-3 img {
-      padding: 11%; }
-    footer .footer-col-3 img:last-child {
-      padding: 6%; }
-    footer .footer-col-4 {
-      padding-top: 0.3rem;
-      margin: 0 0 0 4.5%;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #878787; } }
-
-/* ......... MOBILE NAVIGATION MENU .............................*/
-.main-menu li:first-child {
-  border-left: none; }
-
-.share li {
-  display: inline-block;
-  width: 30%;
-  margin: 0;
-  padding: 0; }
-
-/*photography*/
-.main-menu li:first-child:hover,
-.main-menu li:first-child:active {
-  background-color: #a84420;
-  color: #fff;
-  border-bottom: 1px solid #a84420; }
-
-/*......... HAMBURGER MENU behavior stuff .........................................*/
-.options-menu-horizontal {
-  text-align: center;
-  display: none;
-  background-color: #fff;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  padding: 0;
-  z-index: 10;
-  border-top: 1px solid #68b7d5; }
-
-.options-menu-horizontal span.close-menu {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  border: 3px solid #ffffff;
-  color: #ffffff;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  line-height: 48px;
-  font-size: 37px;
-  text-align: center;
-  cursor: pointer; }
-
-.options-menu-horizontal ul {
-  list-style: none;
-  text-align: center;
-  cursor: default;
-  margin: 0;
-  padding: 0; }
-
-.options-menu-horizontal ul li {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: normal;
-  margin: 0;
-  line-height: 2.5;
-  /*margin: 0 60px auto auto;   */
-  padding: 0;
-  line-height: 2;
-  background-color: transparent;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-.options-menu-horizontal ul:nth-child(2) {
-  display: block;
-  width: 50%;
-  margin: 0 auto; }
-
-.options-menu-horizontal ul:nth-child(2) li {
-  float: left;
-  width: 33.334%; }
-
-/* Responsive */
-/*
-    .options-menu-horizontal ul:nth-child(2) {
-        width: 50%;
-        margin: 0 auto;
-    
-    }
-    .options-menu-horizontal ul:nth-child(2) li {
-        float: left;
-        width: 33.334%;
-
-    }*/
 /*.........SHOW PAGE LOCATION .......................................*/
 .page-location {
   -webkit-box-ordinal-group: 2;
@@ -1698,16 +1509,74 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
     max-width: 30rem; }
   label {
     font-size: 1rem;
-    display: inline-block; }
-  /*------------------------------------------------------------------
-	----footer---------------------------------------------------------*/
-  .footer-col-3 img {
-    padding: 11%; }
-  .footer-col-3 img:last-child {
-    padding: 6%; }
-  .footer-col-4 {
-    padding-top: 0.3rem;
-    margin: 0 0 0 4.5%;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #878787; } }
+    display: inline-block; } }
+
+/* ......... MOBILE NAVIGATION MENU .............................*/
+/*......... HAMBURGER MENU behavior stuff .........................................*/
+.options-menu-horizontal {
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 10;
+  border-top: 1px solid #68b7d5; }
+  .options-menu-horizontal .column {
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0; }
+    .options-menu-horizontal .column ul {
+      width: 100%;
+      padding: 0 0 0 0; }
+
+.footer-col-3 ul {
+  padding: 0;
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0 0 1rem 0;
+  background-color: yellow; }
+  .footer-col-3 ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 33.334%; }
+    .footer-col-3 ul li a img {
+      height: 30px;
+      width: 30px; }
+
+
+.footer-col-4 {
+  color: #878787; }
+
+.options-menu-horizontal ul:nth-child(2) {
+  display: block;
+  width: 50%;
+  margin: 0 auto; }
+  .options-menu-horizontal ul:nth-child(2) li {
+    float: left;
+    width: 33.334%; }
+
+/* Responsive */
+/*
+    .options-menu-horizontal ul:nth-child(2) {
+        width: 50%;
+        margin: 0 auto;
+    
+    }
+    .options-menu-horizontal ul:nth-child(2) li {
+        float: left;
+        width: 33.334%;
+
+    }*/
