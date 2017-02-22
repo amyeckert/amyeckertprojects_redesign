@@ -1,11 +1,79 @@
 /********************
 ** Vendors
 ********************/
+/* Cross Browser Compatability CSS */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+html, body, div, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, section {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote :before, blockquote :after,
+q :before, q :after {
+  content: "";
+  content: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* end reset styles */
 /********************
 ** Partials
 ********************/
 /*********	COLORS *************/
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -309,6 +377,37 @@ input[type="submit"]:hover {
 
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */
+.footer {
+  display: none; }
+  @media only screen and (min-width: 1300px) {
+    .footer #home footer {
+      display: block; }
+    .footer .footer {
+      width: 100%;
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      border-top: 1px solid #878787; }
+    .footer .column {
+      width: 15%; }
+    .footer .footer ul li {
+      margin: 0; }
+    .footer .footer-col-1 ul li a, .footer .footer-col-2 ul li a {
+      display: block;
+      padding: 5% 0; }
+    .footer .footer-col-3 {
+      margin: 0 0 0 32%; }
+    .footer .footer-col-3 img {
+      padding: 11%; }
+    .footer .footer-col-3 img:last-child {
+      padding: 6%; }
+    .footer .footer-col-4 {
+      padding-top: 0.3rem;
+      margin: 0 0 0 4.5%;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #878787; } }
+
 /*.........SHOW PAGE LOCATION .......................................*/
 .page-location {
   -webkit-box-ordinal-group: 2;
@@ -491,290 +590,42 @@ input[type="submit"]:hover {
 
 /*----------------------------------------------------------------------
 ------- MOBILE/SMALL -----------------------------------------------------------
-----------------------------------------------------------------------*/
-/*...............MAIN CONTENT AREA.......................................*/
-.main-content {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0;
-          flex: 1 0; }
 
-#about p {
-  padding: 0.5rem 0 0.5rem 0; }
+	#about p {
+	 	padding:0.5rem 0 0.5rem 0;
 
-#photography .page-location,
-#design .page-location,
-#interactive .page-location,
-#mixedmedia .page-location {
-  display: block;
-  margin: 0; }
+	}
+	#photography .page-location,
+	#design	.page-location, 
+	#interactive .page-location,
+	#mixedmedia .page-location {
+		display: block;
+		margin: 0;
+		
+	}
+	#photography .page-location p,
+	#design	.page-location p,
+	#interactive .page-location p, 
+	#mixedmedia .page-location p {
+		display: block;
+		margin: 0;
+		padding: 2% 0 2% 2%;
 
-#photography .page-location p,
-#design .page-location p,
-#interactive .page-location p,
-#mixedmedia .page-location p {
-  display: block;
-  margin: 0;
-  padding: 2% 0 2% 2%; }
-
-#exhibitions .page-location,
-#exhibitions .page-location p {
-  display: none; }
-
-.menu-top {
-  display: none;
-  border-top: none; }
-
-/*.....showing page location in menu..... */
-#photography .navphoto,
-#design .navdesign,
-#interactive .navinter,
-#mixedmedia .navmixed,
-#about .navabout,
-#blog .navblog,
-#contact .navcontact,
-#project-template .navproject {
-  border: none; }
-
-#home .page-location p {
-  display: none; }
-
-#home .grid-sizer {
-  width: 100%; }
-
-.statement-title {
-  margin: 0.3rem 0 1rem 0;
-  width: 100%; }
-
-.front-row {
-  max-width: 100%;
-  padding: 0;
-  margin: 1rem auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
-.front-row-img {
-  display: block;
-  margin: 0 auto;
-  padding: 0; }
-
-.front-row-img img {
-  display: block;
-  margin: 0 auto;
-  max-width: 60%;
-  min-width: 30%; }
-
+	}	
+	#exhibitions .page-location,
+	#exhibitions .page-location p {
+		display: none;
+	}
+	.menu-top {
+		display: none;
+	 	border-top: none;
+	}
+	
+	/*.....showing page location in menu..... */
 /*.........PROJECT PAGES .......................................*/
-nav.menu-side {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: 50px; }
-
-nav.menu-side a button {
-  display: block;
-  width: 20%; }
-
-nav.menu-side a button.back {
-  padding: 14px;
-  background-image: url("../images/go-back-left-arrow.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
-  margin: 5px auto;
-  float: left; }
-
-nav.menu-side a button.back:hover {
-  border-bottom: 1px solid #fff; }
-
-nav.menu-side p {
-  display: block;
-  margin: 1% 0;
-  max-width: 80%;
-  float: right;
-  color: #878787;
-  text-align: right;
-  font-size: 0.6rem;
-  text-transform: uppercase; }
-
-nav.menu-side ul li {
-  display: none;
-  width: 100%; }
-
-#carousel,
-.big,
-.big-img-container,
-.image-info,
-.carousel-nav,
-.item p {
-  display: none; }
-
-.grid {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  width: 100%; }
-
-#manhome .grid,
-#mhbook .grid,
-#print-portfolio .grid {
-  margin-top: 0;
-  -ms-flex-item-align: start;
-      align-self: flex-start; }
-
-.grid-sizer,
-.grid-item,
-.grid-item img {
-  width: 100%;
-  margin: 0 auto; }
-
-#photography .grid-sizer a,
-#design .grid-sizer a,
-#interactive .grid-sizer a,
-#mixedmedia .grid-sizer a {
-  display: block; }
-
-#photography .grid-item img,
-#design .grid-item img,
-#interactive .grid-item img,
-#mixedmedia .grid-item img {
-  width: 100%;
-  margin: 0 auto; }
-
-.grid-item:hover {
-  opacity: 1; }
-
-.statement-body {
-  display: block;
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
-  width: 90%;
-  padding: 15px auto;
-  margin: 0 auto;
-  font-size: 1rem;
-  text-indent: 0;
-  letter-spacing: 0.05rem; }
-
 /*.........ABOUT PAGE .......................................*/
-.about-me {
-  width: 100%;
-  overflow: hidden;
-  min-width: 6rem;
-  margin: 0;
-  padding: 0; }
-
-#about .about-me p {
-  font-size: 1.2rem; }
-
-.about-me p:first-of-type {
-  margin-top: 0; }
-
-.cv {
-  margin: auto; }
-
-.cv button {
-  padding: 4%;
-  margin: auto;
-  font-size: 0.7rem;
-  letter-spacing: 0.12rem; }
-
-.about-col-2, .clients-r, .clients-l, .awards {
-  display: none; }
-
-.commercial-site {
-  margin: 1.5rem 0 1.5rem 0; }
-
 /*........CONTACT PAGE ............................................*/
-.contact-img {
-  display: none; }
-
-.contact-img img {
-  display: none; }
-
-.contact-info {
-  width: 100%;
-  height: 3rem;
-  margin: 2rem auto; }
-
-.temp-contact_page {
-  display: block;
-  margin: 0 auto;
-  width: 100%; }
-
-.temp-contact_page p {
-  padding: 2% 0;
-  text-align: center; }
-
-/*.temp-contact_page p:last-child {
- 		display:none;
- 	}*/
-.temp-contact_page:hover {
-  background-color: #4866fb; }
-
 /*......... FOOTER.......................................*/
-#home footer {
-  display: none; }
-
-footer {
-  display: none;
-  width: 90%;
-  margin: 10px auto 0 auto;
-  padding: 0;
-  border-top: 1px solid #878787; }
-
-.column {
-  width: 100%; }
-
-.footer-col-1,
-.footer-col-2,
-.footer-col-3 {
-  margin: 0;
-  width: 100%; }
-
-.footer ul li {
-  margin: 0; }
-
-.footer-col-1 ul li,
-.footer-col-2 ul li {
-  width: 100%;
-  padding-left: 0; }
-
-.footer-col-1 ul li a,
-.footer-col-2 ul li a {
-  display: block;
-  padding: 6% 0;
-  width: 100%;
-  height: 100%;
-  text-align: center; }
-
 /*@media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 700px),
 only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 700px),
@@ -790,377 +641,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 /*----------------------------------------------------------------------
 ------- MEDIUM ----------------------------------------------------------
 ----------------------------------------------------------------------*/
-@media only screen and (min-width: 700px) {
-  body {
-    padding-top: 50px; }
-  .wrapper {
-    max-width: 1600px;
-    margin: 0 auto; }
-  header {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    z-index: 1;
-    width: 100%;
-    height: 50px;
-    margin: 0 auto;
-    padding: 8px 5%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    -webkit-transition: top 0.2s ease-in-out;
-    transition: top 0.2s ease-in-out;
-    border-bottom: 1px solid #878787; }
-  .nav-up {
-    top: -40px;
-    border-bottom: none; }
-  .logo {
-    display: inline-block;
-    width: 85%;
-    min-width: 140px;
-    max-width: 240px;
-    max-height: 40px;
-    margin: 0;
-    background-color: #fff; }
-  .hamburger {
-    width: 15%;
-    margin: 0;
-    float: right; }
-  .menu-icon {
-    position: relative;
-    display: inline-block;
-    right: 0;
-    top: 0;
-    max-width: 45px;
-    min-width: 30px;
-    text-indent: -999px;
-    float: right; }
-  .border-icon {
-    height: 15px;
-    border-top: 5px solid #b56618;
-    border-bottom: 5px solid #68b7d5; }
-  .border-icon:before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 100%;
-    border-top: 5px solid #98983e; }
-  /*	#exhibitions .menu-top,*/
-  #photography .menu-top,
-  #design .menu-top,
-  #interactive .menu-top,
-  #mixedmedia .menu-top,
-  #about .menu-top,
-  #contact .menu-top,
-  #manhome .menu-top,
-  #truckers .menu-top,
-  #mncooks .menu-top,
-  #submarine .menu-top,
-  #soap .menu-top,
-  #optimiste .menu-top,
-  #mossburn .menu-top,
-  #mhbook .menu-top,
-  #nzbirds .menu-top,
-  #letters .menu-top,
-  #print-portfolio .menu-top,
-  #d6sunset .menu-top,
-  #misunderstood .menu-top,
-  #rigs .menu-top,
-  #prefab .menu-top,
-  #proteus .menu-top,
-  #kansas .menu-top,
-  #weather .menu-top {
-    display: none; }
-  #photography .navphoto,
-  #design .navdesign,
-  #interactive .navinter,
-  #mixedmedia .navmixed,
-  #exhibitions .navexhibitions,
-  #about .navabout,
-  #blog .navblog,
-  #contact .navcontact,
-  #project-template .navproject {
-    border: none; }
-  #contact .page-location,
-  #contact .page-location p {
-    display: none; }
-  .main-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    width: 100%; }
-  #photography .page-location,
-  #design .page-location,
-  #interactive .page-location,
-  #mixedmedia .page-location {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    margin: 0 0 0 3%; }
-  /* ............	FRONT PAGE...........................................*/
-  .front-row {
-    margin-top: 1rem; }
-  .front-row-img {
-    max-width: 100%;
-    margin: 1rem auto; }
-  .front-row-img img {
-    display: block;
-    max-height: 100%;
-    width: 40vh;
-    margin: 0 auto; }
-  /* ............	PORTFOLIO PAGE...........................................*/
-  .grid {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    max-width: 100%;
-    margin: 2.5% 2.5% 0 2.5%; }
-  .grid-sizer,
-  .grid-item {
-    width: 50%;
-    height: auto; }
-  .grid-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 7px; }
-  #photography .grid-sizer,
-  #photography .grid-item,
-  #design .grid-sizer,
-  #design .grid-item,
-  #interactive .grid-sizer,
-  #interactive .grid-item,
-  #mixedmedia .grid-sizer,
-  #mixedmedia .grid-item {
-    width: 50%; }
-  /*.........PROJECT PAGES.......................................*/
-  .menu-side {
-    position: fixed;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    max-width: 27%;
-    max-height: 50vh;
-    margin-top: -1.3em;
-    font-size: 1rem; }
-  .menu-side p {
-    display: none; }
-  .menu-side ul {
-    display: block; }
-  #exhibitions .menu-side {
-    display: block; }
-  .menu-side ul li {
-    display: block;
-    width: 100%; }
-  /*	 display the "back to... projects" <li> */
-  #manhome .menu-side ul li:first-child,
-  #truckers .menu-side ul li:first-child,
-  #mncooks .menu-side ul li:first-child,
-  #submarine .menu-side ul li:first-child,
-  #soap .menu-side ul li:first-child,
-  #optimiste .menu-side ul li:first-child,
-  #mossburn .menu-side ul li:first-child,
-  #mhbook .menu-side ul li:first-child,
-  #nzbirds .menu-side ul li:first-child,
-  #letters .menu-side ul li:first-child,
-  #print-portfolio .menu-side ul li:first-child,
-  #misunderstood .menu-side ul li:first-child,
-  #rigs .menu-side ul li:first-child,
-  #prefab .menu-side ul li:first-child,
-  #proteus .menu-side ul li:first-child,
-  #kansas .menu-side ul li:first-child,
-  #weather .menu-side ul li:first-child {
-    display: block;
-    width: 100%; }
-  /*	display the current project */
-  /*photography*/
-  #manhome .menu-side ul li:nth-child(2),
-  #truckers .menu-side ul li:nth-child(3),
-  #mncooks .menu-side ul li:nth-child(4),
-  #submarine .menu-side ul li:nth-child(5),
-  #soap .menu-side ul li:nth-child(6),
-  #optimiste .menu-side ul li:nth-child(7),
-  #mossburn .menu-side ul li:nth-child(8),
-  #mhbook .menu-side ul li:nth-child(2),
-  #nzbirds .menu-side ul li:nth-child(3),
-  #letters .menu-side ul li:nth-child(4),
-  #print-portfolio .menu-side ul li:nth-child(5),
-  #d6sunset .menu-side li:nth-child(6),
-  #misunderstood .menu-side ul li:nth-child(2),
-  #rigs .menu-side ul li:nth-child(3),
-  #prefab .menu-side ul li:nth-child(4),
-  #proteus .menu-side ul li:nth-child(5),
-  #kansas .menu-side ul li:nth-child(6),
-  #weather .menu-side ul li:nth-child(7) {
-    display: block;
-    width: 100%; }
-  .carousel-nav {
-    display: block;
-    visibility: hidden;
-    width: 100%;
-    min-width: 25%;
-    margin: 2rem 0 0 0; }
-  .carousel-nav button {
-    display: inline-block; }
-  #carousel,
-  .big,
-  .big-img-container,
-  .image-info,
-  .item p {
-    display: none; }
-  #carousel {
-    display: none;
-    visibility: visible;
-    position: relative;
-    max-width: 75%;
-    width: 100%;
-    height: 80vh;
-    margin: 1rem 1rem 0 13rem;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2; }
-  .big {
-    display: block;
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: auto; }
-  .big-img-container {
-    display: block;
-    visibility: visible;
-    width: 100%;
-    height: 80vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .image-info {
-    display: none; }
-  .statement-body {
-    display: block;
-    visibility: visible;
-    max-width: 70%;
-    margin: 1rem auto; }
-  .statement-title {
-    width: 100%;
-    margin: 1rem auto; }
-  .statement-body p {
-    display: block;
-    visibility: visible;
-    min-width: 50%;
-    max-width: 100%;
-    width: 100%;
-    padding-top: 8px;
-    letter-spacing: 0.05rem; }
-  /*.........ABOUT PAGE .......................................*/
-  .about-me {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0; }
-  /*.........CONTACT PAGE .......................................*/
-  #contact .main-content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  .contact-img {
-    display: block;
-    width: 40%;
-    height: auto;
-    margin: 0 5%; }
-  .contact-img img {
-    width: 100%;
-    height: auto;
-    margin: 1rem auto; }
-  .contact-info {
-    width: 40%;
-    margin: 0 5%;
-    text-align: center; }
-  .temp-contact_page {
-    display: block;
-    margin: 30px auto;
-    width: 100%; }
-  .temp-contact_page p {
-    padding: 4% 0 1.5% 0;
-    text-indent: 6px; }
-  .temp-contact_page:hover {
-    background-color: #4866fb; }
-  .message-body {
-    width: 100%;
-    float: left;
-    clear: both; }
-  legend {
-    margin: 0; }
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="url"],
-  input[type="tel"],
-  input[type="search"],
-  input[type="number"],
-  input[type="range"],
-  input[type="date"],
-  input[type="month"],
-  input[type="week"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  textarea {
-    width: 100%;
-    max-width: 40rem; }
-  input[type="submit"] {
-    width: 50%; }
-  /*.........FOOTER .......................................*/
-  #home footer {
-    display: none; }
-  footer {
-    display: none;
-    color: #878787;
-    max-width: 1125px;
-    width: 100%;
-    border-top: 1px solid #878787;
-    text-align: left;
-    zoom: 1; }
-  .column {
-    width: 50%;
-    height: auto; }
-  .footer-col-3 img {
-    max-width: 20%;
-    min-width: 17%;
-    height: auto;
-    padding: 1% 14% 0 3%; }
-  .footer-col-3 img:first-child {
-    padding-left: 2px; }
-  .footer-col-4 {
-    padding-top: 0.3rem;
-    font-size: 0.7rem; }
-  .footer ul li {
-    margin: 0;
-    font-size: 1rem; }
-  .footer-col-1 ul li a,
-  .footer-col-2 ul li a {
-    display: block;
-    padding: 2% 0; } }
-
+/*.........FOOTER .......................................*/
 /*Medium screen, retina, stuff to override above media query */
 /*@media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 651px) and (max-width:1299px),
@@ -1175,261 +656,12 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 /*--------------------------------------------------------------------------
 -----------LARGE------------------------------------------------------------
 -------------------------------------------------------------------------- */
-@media only screen and (min-width: 1300px) {
-  body {
-    padding-top: 0; }
-  .wrapper {
-    max-width: 1200px;
-    margin: 0 auto; }
-  header {
-    display: block;
-    top: 0;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    border: none; }
-  .logo {
-    display: block;
-    width: 60%;
-    height: auto;
-    margin: 12px 0;
-    background-color: #fff; }
-  .hamburger,
-  .menu-icon,
-  .border-icon {
-    display: none; }
-  .menu-top ul.share {
-    display: none; }
-  #truckers .navphoto,
-  #manhome .navphoto,
-  #truckers .navphoto,
-  #mncooks .navphoto,
-  #submarine .navphoto,
-  #soap .navphoto,
-  #optimiste .navphoto,
-  #mossburn .navphoto,
-  #mhbook .navdesign,
-  #nzbirds .navdesign,
-  #letters .navdesign,
-  #print-portfolio .navdesign,
-  #d6sunset .navdesign,
-  #misunderstood .navmixed,
-  #rigs .navmixed,
-  #prefab .navmixed,
-  #proteus .navmixed,
-  #kansas .navmixed,
-  #weather .navmixed,
-  #photography .navphoto,
-  #design .navdesign,
-  #interactive .navinter,
-  #mixedmedia .navmixed,
-  #exhibitions .navexhibitions,
-  #about .navabout,
-  #blog .navblog,
-  #contact .navcontact,
-  #project-template .navproject {
-    border: none; }
-  .main-content {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    /*OLD - Firefox 19- (buggy but mostly works)*/
-    display: -ms-flexbox;
-    /*TWEENER - IE 10 */
-    /*NEW - Chrome */
-    display: flex;
-    /*NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    height: 70vh;
-    position: relative;
-    top: -38px; }
-  #contact.main-content {
-    margin-top: 0.28rem;
-    margin-bottom: 1rem; }
-  .front-row {
-    width: 100%;
-    margin: 0 auto; }
-  .front-row-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    margin: 0 auto; }
-  .front-row-img img {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    width: 30%;
-    margin: 0 auto; }
-  /*........PORTFOLIO LANDING PAGES....................................*/
-  .grid {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0; }
-  .grid-sizer,
-  .grid-item {
-    width: 15%; }
-  .grid-item img {
-    max-width: 100%;
-    height: auto;
-    padding: 7px; }
-  .item:hover,
-  .grid-item:hover {
-    opacity: 1; }
-  .item p {
-    display: none; }
-  #photography .grid,
-  #design .grid,
-  #mixedmedia .grid,
-  #interactive .grid {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: auto; }
-  #photography .grid-sizer,
-  #photography .grid-item,
-  #design .grid-sizer,
-  #design .grid-item,
-  #interactive .grid-sizer,
-  #interactive .grid-item,
-  #mixedmedia .grid-sizer,
-  #mixedmedia .grid-item {
-    width: 50%; }
-  #photography .grid-sizer a,
-  #design .grid-sizer a,
-  #interactive .grid-sizer a,
-  #mixedmedia .grid-sizer a {
-    display: none; }
-  #photography .grid-sizer a:nth-child(-n+2),
-  #design .grid-sizer a:nth-child(-n+2),
-  #interactive .grid-sizer a:nth-child(-n+2),
-  #mixedmedia .grid-sizer a:nth-child(-n+2) {
-    display: block; }
-  #photography .grid-item img,
-  #design .grid-item img,
-  #interactive .grid-item img,
-  #mixedmedia .grid-item img {
-    padding: 7px; }
-  #interactive .page-location,
-  #mixedmedia .page-location,
-  #photography .page-location,
-  #design .page-location,
-  #portfolio-template .page-location,
-  #project-template .page-location,
-  #exhibitions .page-location,
-  #contact .page-location,
-  #about .page-location,
-  #blog .page-location {
-    display: none; }
-  #interactive .page-location p,
-  #mixedmedia .page-location p,
-  #photography .page-location p,
-  #design .page-location p,
-  #portfolio-template .page-location p,
-  #project-template .page-location p,
-  #exhibitions .page-location p,
-  #about .page-location p,
-  #blog.page-location p {
-    display: none;
-    margin-bottom: 0; }
-  /*.........PROJECT PAGES .......................................*/
-  .menu-side {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0; }
-  .menu-side p {
-    display: none; }
-  .menu-side button {
-    display: none; }
-  #exhibitions .menu-side
-#manhome .menu-side ul li:first-child,
-  #truckers .menu-side ul li:first-child,
-  #mncooks .menu-side ul li:first-child,
-  #submarine .menu-side ul li:first-child,
-  #soap .menu-side ul li:first-child,
-  #optimiste .menu-side ul li:first-child,
-  #mossburn .menu-side ul li:first-child,
-  #mhbook .menu-side ul li:first-child,
-  #nzbirds .menu-side ul li:first-child,
-  #letters .menu-side ul li:first-child,
-  #print-portfolio .menu-side ul li:first-child,
-  #d6sunset .menu-side ul li:first-child,
-  #misunderstood .menu-side ul li:first-child,
-  #rigs .menu-side ul li:first-child,
-  #prefab .menu-side ul li:first-child,
-  #proteus .menu-side ul li:first-child,
-  #kansas .menu-side ul li:first-child,
-  #weather .menu-side ul li:first-child {
-    display: block; }
-  .carousel-nav {
-    display: block;
-    visibility: hidden;
-    width: 100%;
-    min-width: 25%;
-    margin: 2rem 0 0 0; }
-  .carousel-nav button {
-    display: inline-block; }
-  #carousel {
-    display: none;
-    position: relative;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-    height: 26rem; }
-  .big {
-    display: block;
-    visibility: visible;
-    width: 100%;
-    height: 600px;
-    z-index: 1; }
-  .big-img-container {
-    display: block;
-    visibility: visible;
-    width: 100%;
-    height: 600px;
-    margin-left: 0;
-    margin-top: 0;
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .image-info {
-    display: block;
-    visibility: hidden;
-    height: 40px;
-    width: 60%;
-    margin-left: 0;
-    text-align: left;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.7rem;
-    color: #878787; }
-  .image-info p {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    padding: 10px;
-    color: #878787; }
-  .image-info p:first-child {
-    padding-left: 0; }
-  .carousel-nav {
-    visibility: hidden;
-    display: block;
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    height: auto;
-    width: 100%; }
-  /*.statement-body {
+/*.statement-body {
 		max-width: 80%;
 		margin-left: 0;
 
 	}*/
-  /*
+/*
 	.statement-title {
 		position:relative;
 		width:100%;
@@ -1439,78 +671,19 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 		text-indent:0;
 
 	}*/
-  /*.statement-body p {*/
-  /*display: block;
+/*.statement-body p {*/
+/*display: block;
 		visibility: visible;*/
-  /*	min-width: 50%;
+/*	min-width: 50%;
 		max-width: 80%;
 		width:100%;
 		padding-top: 8px;
 		margin:0;
 		text-indent: 10px;
 		letter-spacing: 0.05rem;*/
-  /*}*/
-  /*.........ABOUT PAGE .......................................*/
-  .about-me {
-    max-width: 45%;
-    margin: 0; }
-  /*.........CONTACT PAGE.......................................*/
-  #contact .page-location,
-  #contact .page-location p {
-    display: none; }
-  #contact .contact-img {
-    display: block;
-    width: 45%;
-    float: left;
-    margin-left: 5%; }
-  #contact .contact-info {
-    width: 45%;
-    margin: 1.3rem auto 1rem auto;
-    overflow: auto; }
-  .temp-contact_page {
-    display: block;
-    margin-top: 200px;
-    width: 100%; }
-  .temp-contact_page p {
-    padding: 2% 0 2% 2%;
-    text-indent: 4px; }
-  .temp-contact_page:hover {
-    background-color: #4866fb; }
-  div .message-body {
-    width: 40%;
-    float: right; }
-  div .contact-img {
-    display: block;
-    width: 45%;
-    margin: 33px 0 0 0;
-    height: auto;
-    float: left; }
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="url"],
-  input[type="tel"],
-  input[type="search"],
-  input[type="number"],
-  input[type="range"],
-  input[type="date"],
-  input[type="month"],
-  input[type="week"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="submit"],
-  textarea {
-    width: 100%;
-    max-width: 50rem; }
-  input[type="submit"] {
-    display: block;
-    width: 50%;
-    max-width: 30rem; }
-  label {
-    font-size: 1rem;
-    display: inline-block; } }
-
+/*}*/
+/*.........ABOUT PAGE .......................................*/
+/*.........CONTACT PAGE.......................................*/
 /* ......... MOBILE NAVIGATION MENU .............................*/
 /*......... HAMBURGER MENU behavior stuff .........................................*/
 .options-menu-horizontal {
@@ -1529,8 +702,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
   left: 0;
   width: 100%;
   padding: 0;
-  z-index: 10;
-  border-top: 1px solid #68b7d5; }
+  z-index: 10; }
   .options-menu-horizontal .column {
     width: 100%;
     padding: 0 0 0 0;
@@ -1538,35 +710,71 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
     .options-menu-horizontal .column ul {
       width: 100%;
       padding: 0 0 0 0; }
+      .options-menu-horizontal .column ul li {
+        height: 2.5rem;
+        color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .options-menu-horizontal .column ul li a {
+          display: block;
+          width: 100%;
+          color: #fff;
+          text-decoration: none; }
 
-.footer-col-3 ul {
-  padding: 0;
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0 0 1rem 0;
-  background-color: yellow; }
-  .footer-col-3 ul li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto;
-    width: 33.334%; }
-    .footer-col-3 ul li a img {
-      height: 30px;
-      width: 30px; }
+.footer-col-1 ul li:first-child {
+  background-color: #b56618; }
 
+.footer-col-1 ul li:nth-child(2) {
+  background-color: #5f9797; }
+
+.footer-col-1 ul li:nth-child(3) {
+  background-color: #8a5cd1; }
+
+.footer-col-1 ul li:nth-child(4) {
+  background-color: #4866fb; }
+
+.footer-col-2 ul li:first-child {
+  background-color: #099949; }
+
+.footer-col-2 ul li:nth-child(2) {
+  background-color: #98983e; }
+
+.footer-col-2 ul li:nth-child(3) {
+  background-color: #68b7d5; }
+
+.footer-col-3 {
+  display: none; }
+  .footer-col-3 ul {
+    padding: 0;
+    width: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 1rem 0 1rem 0; }
+    .footer-col-3 ul li {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 auto;
+              flex: 0 1 auto;
+      width: 33.334%; }
+      .footer-col-3 ul li a img {
+        height: 30px;
+        width: 30px; }
 
 .footer-col-4 {
+  display: none;
+  border-top: 1px solid #878787;
+  font-size: 0.8rem;
   color: #878787; }
-
-.options-menu-horizontal ul:nth-child(2) {
-  display: block;
-  width: 50%;
-  margin: 0 auto; }
-  .options-menu-horizontal ul:nth-child(2) li {
-    float: left;
-    width: 33.334%; }
+  .footer-col-4 p {
+    display: block;
+    margin: 5% 0 5% 0; }
 
 /* Responsive */
 /*
@@ -1580,3 +788,25 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
         width: 33.334%;
 
     }*/
+.menu-top {
+  display: none; }
+  .menu-top ul:after {
+    content: "";
+    clear: both;
+    display: block; }
+
+/*......... MAIN MENU replaces THE FOOTER MENU ON MOBILE AND TABLET ****************************/
+/*......... HAMBURGER MENU behavior stuff .........................................*/
+/* Responsive */
+/*
+    .options-menu-horizontal ul:nth-child(2) {
+        width: 50%;
+        margin: 0 auto;
+    
+    }
+    .options-menu-horizontal ul:nth-child(2) li {
+        float: left;
+        width: 33.334%;
+
+    }*/
+/*......... SIDE MENUS .........................................*/

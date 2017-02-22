@@ -1,3 +1,15 @@
+.menu-top {
+	display: none;
+
+	 ul{
+	 	
+	 	&:after {
+	    content: ""; clear: both; 
+	    display: block;
+		}
+	}
+}
+
 /*......... MAIN MENU replaces THE FOOTER MENU ON MOBILE AND TABLET ****************************/
 
 // /*photography*/
@@ -8,10 +20,6 @@
 //     border-bottom: 1px solid #a84420;
 // }
 // /*......... MOBILE MENU ITEMS.........................................*/
-// .menu-top ul:after {
-//     content: ""; clear: both; 
-//     display: block;
-// }
 // /*..... main list item link text cover */
 
 // .menu-top ul.main-menu li {

@@ -26,14 +26,14 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: $white;
     position: fixed;
     bottom: 0;
     left:0;
     width: 100%;
     padding: 0;
     z-index: 10; 
-    border-top: 1px solid #68b7d5;
+    // border-top: 1px solid #68b7d5;
 	
 	.column {
 		width: 100%;
@@ -42,35 +42,94 @@
 
 		ul {
 			width: 100%;
-			// margin: 0 0 0 0 ;
 			padding: 0 0 0 0 ;
 
+			li {
+				height: 2.5rem;
+				color: $white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+
+				a {
+					display: block;
+    				width: 100%;
+					color: $white;
+					text-decoration: none;
+			
+
+				}
+			}
 		}
 	}	
 }
 
-.footer-col-1, 
-.footer-col-2 {
+.footer-col-1 {
 
 	ul {
+
 		li {
-			// margin: 0 0 0 0 ;
+			// display: flex;
+			
+
+			&:first-child {
+			background-color:$orange-light;
+		 		// &:active {
+		 		// 	color: red;
+		 		// }
+			}
+			&:nth-child(2) {
+				background-color:$teal;
+			}
+			&:nth-child(3) {
+				background-color:$purple;
+			}
+			&:nth-child(4) {
+				background-color:$blue-med;
+			} 
+
+			
+		
 			a {
+				// width: 100%;
+	
+				
+			}
+		}
+	}
+
+} 
+.footer-col-2 {
+
+	ul {	
+		li {
+			&:first-child {
+			background-color:$green-kelly;
+			}
+			&:nth-child(2) {
+				background-color:$green-olive;
+			}
+			&:nth-child(3) {
+				background-color:$cyan;
+			}
+		
+			a {
+				
 
 			}
 		}
 	}
 } 
 
-
-
 .footer-col-3 {
+	display: none;
 	ul {
 		padding: 0;
 		width: 100%;
 		display: inline-flex;
-		margin: 0 0 1rem 0;
-			background-color: yellow;
+		margin: 1rem 0 1rem 0;
+			// background-color: yellow;
 
 		li {
 			flex: 0 1 auto;
@@ -87,40 +146,19 @@
 		}
 
 	}
-}
-
-, 
+} 
 .footer-col-4 {
+	display: none;
+	border-top: 1px solid $grey-med;
+	font-size: 0.8rem;
 	color: $grey-med;
-}
-// .options-menu-horizontal span.close-menu {
-//     position: absolute;
-//     top: 20px;
-//     right: 30px;
-//     border: 3px solid #ffffff;
-//     color: #ffffff;
-//     border-radius: 50%;
-//     width: 45px;
-//     height: 45px;
-//     line-height: 48px;
-//     font-size: 37px;
-//     text-align: center;
-//     cursor: pointer;
-// }
-
-
-
-.options-menu-horizontal ul:nth-child(2) {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    
-	li {
-	    float: left;
-	    width: 33.334%;
-
+	p {
+		display: block;
+		margin: 5% 0 5% 0;
+		
 	}
 }
+
 
 /* Responsive */
 
@@ -228,16 +266,6 @@
 //     }
 
 // 	//	MAIN NAV MENU .........................................*/
-
-// 	.menu-top ul:after {
-// 	    content: ""; clear: both; 
-// 	    display: block;
-// 	}
-// 	/*..... main list item link text cover */
-
-// 	.menu-top ul.main-menu li {
-// 	    background-color: transparent;
-// 	}
 
 // 	a:link {
 // 	    color: #878787;
