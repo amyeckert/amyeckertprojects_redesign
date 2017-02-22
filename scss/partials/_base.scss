@@ -32,7 +32,7 @@ body {
 	// width: 90%;
 	max-width: 90%;
 	min-height: 100vh;
-	margin: 4% auto;
+	margin: 10% auto;
 	display: flex;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -81,16 +81,15 @@ header {
 	z-index: 1;	
 	width: 100%;
 	min-width: 140px;
-	min-height: 50px;
-	min-height: 50px;
+	height: 3rem;
 	margin: 0 auto;
 	padding: 5% 5% 0 5%;	
 	position: fixed;
 	top: 0;
 	left: 0; 
-	background-color: #fff;
+	background-color: $white;
 	transition: top 0.2s ease-in-out;	
-	border-bottom:1px solid #878787;
+	// border-bottom:1px solid #878787;
 
 	.menu-top {
 		display: none;
@@ -129,32 +128,22 @@ header {
     	    top: 20px;
     		right: 9px;
 		}
-		.nav-up {
-		top: -40px;
-		border-bottom: none;
-		}
+	}
+	.nav-up {
+		top: $nav-up;
+	
+	}
+	.nav-down{
+		top: $nav-down;
 	}
 
-	// span.menu-toggle {
-	//     display: block;
-	// }
-	// .logo {
-	// 	height: auto;
-	// }
-	// @media only screen and (min-width: 1300px ){
-
-	// }
-
-}
-
-
-
+} /* end header */
 
 /*......... MAIN CONTENT AREA .......................................*/
 
 .main-content {
 	order: 2;
-	width: 100%;
+	// width: 100%;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -342,11 +331,11 @@ input[type="submit"]:hover {
 
 	@media only screen and (min-width: 1300px ) {
 		#home footer {
-			display: block;
+			display: none;
 		}
 		.footer {
 			width: 100%;
-			display: block;	
+			display: none;	
 			font-size: 1rem;
 			margin-bottom: 15px;
 			border-top: 1px solid #878787;

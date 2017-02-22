@@ -103,7 +103,7 @@ body {
 .wrapper {
   max-width: 90%;
   min-height: 100vh;
-  margin: 4% auto;
+  margin: 10% auto;
   display: flex;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -156,8 +156,7 @@ header {
   z-index: 1;
   width: 100%;
   min-width: 140px;
-  min-height: 50px;
-  min-height: 50px;
+  height: 3rem;
   margin: 0 auto;
   padding: 5% 5% 0 5%;
   position: fixed;
@@ -165,8 +164,7 @@ header {
   left: 0;
   background-color: #fff;
   -webkit-transition: top 0.2s ease-in-out;
-  transition: top 0.2s ease-in-out;
-  border-bottom: 1px solid #878787; }
+  transition: top 0.2s ease-in-out; }
   header .menu-top {
     display: none; }
     @media only screen and (min-width: 1300px) {
@@ -194,16 +192,17 @@ header {
       position: absolute;
       top: 20px;
       right: 9px; }
-    header .menu-mobile .nav-up {
-      top: -40px;
-      border-bottom: none; }
+  header .nav-up {
+    top: -3rem; }
+  header .nav-down {
+    top: 3rem; }
 
+/* end header */
 /*......... MAIN CONTENT AREA .......................................*/
 .main-content {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  width: 100%;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   /* OLD - Firefox 19- (buggy but mostly works) */
@@ -381,10 +380,10 @@ input[type="submit"]:hover {
   display: none; }
   @media only screen and (min-width: 1300px) {
     .footer #home footer {
-      display: block; }
+      display: none; }
     .footer .footer {
       width: 100%;
-      display: block;
+      display: none;
       font-size: 1rem;
       margin-bottom: 15px;
       border-top: 1px solid #878787; }
@@ -408,15 +407,34 @@ input[type="submit"]:hover {
       font-size: 0.8rem;
       color: #878787; } }
 
+#home .page-location {
+  display: none; }
+
+.front-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%; }
+  .front-row .front-img-container {
+    width: 100%;
+    height: 100vh; }
+    .front-row .front-img-container img {
+      max-height: 75%;
+      max-width: 75%;
+      padding: 0 10%; }
+
 /*.........SHOW PAGE LOCATION .......................................*/
 .page-location {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
-
-.front-row {
-  width: 100%;
-  height: auto; }
 
 #interactive .page-location,
 #mixedmedia .page-location,

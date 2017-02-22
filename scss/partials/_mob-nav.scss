@@ -33,7 +33,6 @@
     width: 100%;
     padding: 0;
     z-index: 10; 
-    // border-top: 1px solid #68b7d5;
 	
 	.column {
 		width: 100%;
@@ -51,14 +50,11 @@
 				justify-content: center;
 				align-items: center;
 				
-
 				a {
 					display: block;
     				width: 100%;
 					color: $white;
 					text-decoration: none;
-			
-
 				}
 			}
 		}
@@ -70,9 +66,6 @@
 	ul {
 
 		li {
-			// display: flex;
-			
-
 			&:first-child {
 			background-color:$orange-light;
 		 		// &:active {
@@ -88,13 +81,8 @@
 			&:nth-child(4) {
 				background-color:$blue-med;
 			} 
-
-			
-		
 			a {
-				// width: 100%;
-	
-				
+		
 			}
 		}
 	}
@@ -124,19 +112,18 @@
 
 .footer-col-3 {
 	display: none;
+	
 	ul {
 		padding: 0;
 		width: 100%;
 		display: inline-flex;
 		margin: 1rem 0 1rem 0;
-			// background-color: yellow;
 
 		li {
 			flex: 0 1 auto;
 			width: 33.334%;
 		
 			a {
-				// link hover styles etc.go here
 				img {
 					height: 30px;
 					width: 30px;

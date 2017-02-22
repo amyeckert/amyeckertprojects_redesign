@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	function toggleMainMenu() {	
 
-		// Show the main nav menu
+		// Show the mobile nav menu
 	    $('.menu-toggle').click(function(e){
 
 	        var menu = $(this).data('show-dialog');
@@ -14,7 +14,7 @@ $(document).ready(function() {
 	        $('.' + menu).slideToggle('fast');
 	    });
 
-	    $('.options-menu-horizontal span.close-menu').click(function(){
+	    $('.options-menu-horizontal').click(function(){
 
 	        $(this).closest('.options-menu-horizontal').slideUp('fast');
 		});
