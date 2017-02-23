@@ -1,29 +1,35 @@
 /*......... PROJECT PAGES.......................................*/
 #carousel {
-	display: block;
-	visibility: visible;
-	order: 2;
-	flex: 1 0;
-	margin-bottom: 1rem;
-}
-.big {
+	display: none;
 
-	.big-img-container {
+	@media only screen and (min-width: 700px) {
+		display: block;
+		visibility: visible;
+		order: 1;
+		flex: 1 0;
+		margin-bottom: 1rem;
+		.big {
 
+			.big-img-container {
+
+			}
+
+			.image-info { 
+				color: #878787;
+				font-size: $base-font-size;
+			}
+		}
+		
+		//grid
+		.thumbs {
+
+			//grid-sizer
+			.thumbs-container {
+
+			}
+		} 
 	}
-
-	.image-info { 
-		color: #878787;
-		font-size: $base-font-size;
-	}
 }
-//grid
-.thumbs {
-
-} 
-
-
-
 // .carousel-nav button:first-child {
 // 	padding-left: 0;
 // }
@@ -31,16 +37,17 @@
 .statement {
 	margin: 1rem 0 0 0 ;
 	padding: 0 0 0 0 ;
+	order: 4;
 
 	.statement-title {
 		width: 100%;
-		margin: 0 0 0.3rem 0;
-		padding-left: 0.4rem;
-		border-left: 1px solid $grey-med;
-		font-size: 0.9rem;
-		letter-spacing: 0.04rem;
-		color: $grey-med;
-		text-transform: uppercase;
+		// margin: 0 0 0.3rem 0;
+		// padding-left: 0.4rem;
+		// border-left: 1px solid $grey-med;
+		// font-size: 0.9rem;
+		// letter-spacing: 0.04rem;
+		// text-transform: uppercase;
+
 
 	}
 	.statement-body {
