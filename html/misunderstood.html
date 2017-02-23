@@ -6,12 +6,9 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../css/global.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/queries.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.min.css"/>
 </head>
 	
-
 <body id="misunderstood">
 
 <div class="wrapper">
@@ -21,21 +18,21 @@
 		<div class="logo">	
 			<a href="index.html"> <img src="../images/LOGO/nameLOGO2.png" class="logo" alt="amy eckert projects"></a>
 		</div>
-		<!-- <span class="menu-toggle" data-show-dialog="options-menu-horizontal">Show Menu</span> -->
-		<div class="hamburger">
-			<a href="#" class="menu-icon menu-toggle border-icon" data-show-dialog="options-menu-horizontal"></a>
+
+		<div class="menu-mobile">
+			<span class="menu-toggle" data-show-dialog="options-menu-horizontal">Menu</span>
 		</div>
 	</header>
 
-	<nav role="navigation" class="options-menu-horizontal menu-top"> 
+	<nav role="navigation" class="menu-top"> 
 
 		<ul class="main-menu">
 
-			<li class="navphoto"><a href="photography.html">PHOTOGRAPHY</a></li>
+			<li class="navinter"><a href="interactive.html">INTERACTIVE</a></li>
 			<li class="navdesign"><a href="design.html">DESIGN</a></li>
-			<!-- <li class="navinter"><a href="interactive.html">INTERACTIVE</a></li> -->
+			<li class="navphoto"><a href="photography.html" >PHOTOGRAPHY</a></li>
 			<li class="navmixed"><a href="mixedmedia.html">MIXED MEDIA</a></li>
-			<li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li>
+			<!-- <li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li> -->
 			<li class="navabout"><a href="about.html">ABOUT</a></li>
 			<!-- <li class="navblog"><a href="blog.html">BLOG</a></li> -->
 			<li class="navcontact"><a href="contact.html">CONTACT</a></li>
@@ -54,9 +51,9 @@
 
 	<!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
 	<section class="main-content">
-		
+
+		<h3 class="back"><a href="mixedmedia.html">back</a></h3>
 		<nav role="navigation" class="menu-side">	
-			<a href="mixedmedia.html"><button class="back"></button></a>
 			<p>Misunderstood Buildings</p>
 			<ul>
 				<li><a href="misunderstood.html">Misunderstood Buildings</a></li>
@@ -270,26 +267,24 @@
 			</div> 
 		</div>
 		
-		<div class="statement-body">
-			<div class="statement-title">Misunderstood buildings</div>
+		<div class="statement">
+			<h3 class="statement-title">Misunderstood buildings</h3>
+			<div class="statement-body">
+				<p>What began as a way to re-imagine what goes on inside other people’s homes, namely, famous buildings and architect-designed homes of the wealthy, has become an exploration of the supposedly stable boundary between the rationality of architectural form &mdash;and by implication architectural photography, versus the irrationality of imagination and emotion. I am led by a sense of play. In this collage series I combine my own images with found photographs taken from pages of architecture books. I physically remove the structure from these landscapes and overlay the remaining scene on top of my own, filling up the voids with other possibilities. I think of it as renovating.</p>
 
-			<p>What began as a way to re-imagine what goes on inside other people’s homes, namely, famous buildings and architect-designed homes of the wealthy, has become an exploration of the supposedly stable boundary between the rationality of architectural form &mdash;and by implication architectural photography, versus the irrationality of imagination and emotion. I am led by a sense of play. In this collage series I combine my own images with found photographs taken from pages of architecture books. I physically remove the structure from these landscapes and overlay the remaining scene on top of my own, filling up the voids with other possibilities. I think of it as renovating.</p>
-
-			<p>In architecture, a folly is an extravagant, useless, or fanciful building, or one that appears to be something other than what it is. In their book <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Follies%2C+Grottoes+%26+Garden+Buildings%2C+Headley+%26+Meulenkamp" target="_blank"><span>Follies, Grottoes &amp; Garden Buildings,</span></a> Headley and Meulenkamp define a folly as a &quot;<em>Misunderstood Building</em>&quot;. </p>			
+				<p>In architecture, a folly is an extravagant, useless, or fanciful building, or one that appears to be something other than what it is. In their book <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Follies%2C+Grottoes+%26+Garden+Buildings%2C+Headley+%26+Meulenkamp" target="_blank"><span>Follies, Grottoes &amp; Garden Buildings,</span></a> Headley and Meulenkamp define a folly as a &quot;<em>Misunderstood Building</em>&quot;. </p>
+			</div>			
 		</div>
 	</section>
 
 	<!-- FOOTER .................................................. -->
-	<footer role="contentinfo" class="footer">
+	<footer role="contentinfo" class="options-menu-horizontal footer">
 
 		<div class= "column footer-col-1">
 				<ul>
-				<li><a href="photography.html">PHOTOGRAPHY</a></li>
-				
+				<li><a href="interactive.html">INTERACTIVE</a></li>
 				<li><a href="design.html">DESIGN</a></li>
-			
-				<!-- <li><a href="interactive.html">INTERACTIVE</a></li> -->
-			
+				<li><a href="photography.html">PHOTOGRAPHY</a></li>
 				<li><a href="mixedmedia.html">MIXED MEDIA</a></li>
 				
 			</ul>
@@ -315,7 +310,8 @@
 			</ul>
 		</div>
 
-		<div class="column footer-col-4">  © All images Copyright Amy Eckert 1999-2015
+		<div class="column footer-col-4">
+			<p class="copyright"></p>
 		</div>
 	</footer>
 
@@ -332,7 +328,7 @@
 <!-- imagesLoaded.js -->
 <script src="../js/imagesloaded.pkgd.min.js"></script>
 <!--custom.js -->
-<script src="../js/thumb-nav.js"></script>
+<script src="../js/main.js"></script>
 <script src="../js/header.js"></script>  
 <script src="../js/menu.js"></script> 
 

@@ -1,0 +1,143 @@
+/*......... PROJECT PAGES.......................................*/
+#carousel {
+	display: none;
+
+	@media only screen and (min-width: 700px) {
+		display: block;
+		visibility: visible;
+		order: 1;
+		flex: 1 0;
+		margin-bottom: 1rem;
+		.big {
+
+			.big-img-container {
+
+			}
+
+			.image-info { 
+				color: #878787;
+				font-size: $base-font-size;
+			}
+		}
+		
+		//grid
+		.thumbs {
+
+			//grid-sizer
+			.thumbs-container {
+
+			}
+		} 
+	}
+}
+.carousel-nav {
+	display: none;
+}
+// .carousel-nav button:first-child {
+// 	padding-left: 0;
+// }
+
+.statement {
+	margin: 1rem 0 0 0 ;
+	padding: 0 0 0 0 ;
+	order: 4;
+
+	.statement-title {
+		width: 100%;
+		// margin: 0 0 0.3rem 0;
+		// padding-left: 0.4rem;
+		// border-left: 1px solid $grey-med;
+		// font-size: 0.9rem;
+		// letter-spacing: 0.04rem;
+		// text-transform: uppercase;
+
+
+	}
+	.statement-body {
+		display: block;
+		order: 4;
+		flex: 2 0;
+		min-width:75%;
+		margin: 1% auto;
+		height:100%;
+		font-size: 0.8rem;
+		letter-spacing: 0.03rem;
+		color: $grey-med;	
+
+		p {
+			margin: 0 auto;
+			line-height:1.3rem;
+			// text-decoration: none;	
+
+			&:nth-child(1) {
+			margin-top: 0;
+			
+			}
+		}
+		span {
+			border-bottom:1px solid #878787;
+			color: $grey-med;
+			text-decoration: none;
+
+			&:hover {
+				color:#099949;
+				border-bottom:1px solid #099949;
+			} 
+			a {
+				// &:hover{
+				// 	color: #099949
+				// }
+			}
+		}	
+	}
+} 
+/*	SIDE NAV .........................................*/
+.menu-side {
+	display: none;
+
+	@media only screen and (min-width: 700px) {
+	    flex: 1 0;
+	    min-width: 25%;
+	    max-width: 25%;
+	    font-size: 1rem;
+	    margin: 0;
+	    padding: 0 0 0 10px;
+	    line-height:2rem;   
+	}
+}
+.menu-side li a:active,
+.menu-side li a:hover {
+    color: #099949;
+    
+}
+
+/*.PHOTOGRPHY side menu......... */
+#manhome .menu-side li:nth-child(1) a,
+#truckers .menu-side li:nth-child(2) a,
+#mncooks .menu-side li:nth-child(3) a,
+#submarine .menu-side li:nth-child(4) a, 
+#soap .menu-side li:nth-child(5) a,
+#optimiste .menu-side li:nth-child(6) a, 
+#mossburn .menu-side li:nth-child(7) a,
+    
+/*.DESIGN side menu*/
+#mhbook .menu-side li:nth-child(1) a,
+#nzbirds .menu-side li:nth-child(2) a,
+#letters .menu-side li:nth-child(3) a, 
+#print-portfolio .menu-side li:nth-child(4) a, 
+#d6sunset .menu-side li:nth-child(5) a,
+
+/*.INTERACTIVE side-menu...... */
+
+/*.MIXED MEDIA side menu.....*/
+#misunderstood .menu-side li:nth-child(1) a, 
+#rigs .menu-side li:nth-child(2) a,
+#prefab .menu-side li:nth-child(3) a,
+#proteus .menu-side li:nth-child(4) a,
+#kansas .menu-side li:nth-child(5) a,
+#weather .menu-side li:nth-child(6) a {
+    color: #099949;
+
+}
+
+/*	CAROUSEL .........................................*/

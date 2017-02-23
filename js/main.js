@@ -2,20 +2,29 @@
 
     $(document).ready(function() {
 
+        //update copyright site-wide
+        var date = new Date();
+        var year = date.getFullYear();
+
+        var copyright = $('p.copyright').text();
+        var copyrightNotice = 'All images © ' + `${year}` + ' Amy Eckert';
+        $('p.copyright').html(copyrightNotice);
+        
         var width = screen.availWidth;
         var height = screen.availHeight;
 
         // init Masory
         var $grid = $('.grid').masonry({
           itemSelector: '.grid-item',
-          percentPosition: true,
+          percentPosition: true, 
           columnWidth: '.grid-sizer'
         });
         // layout Isotope after each image loads
         $grid.imagesLoaded().progress( function() {
           $grid.masonry();
-        });       
+        });  
 
+        // for tablet and desktop
         if (width >= 700 ) {
          /*-------------------------------------------------------------------------------------------------
             when a thumbnail is clicked on / hides thumbnail grid / shows image big */
@@ -140,7 +149,6 @@
                 }
                 console.log (nextImg)
             });
-
                
             /*-------------------------------------------------------------------------------------------------
                 hides big image/ shows thumbs grid */
@@ -166,8 +174,10 @@
 
             });
             /*-------------------------------------------------------------------------------------------------
-                      SHOW / HIDE STATEMENT click BUTTON  COMING SOON!! */
+                SHOW / HIDE STATEMENT  */
+
+                
         }
-//________THE END______________________________________________________________________________________________________________
-});
+});//________THE END________________________________________________________________________________________
+
 })(jQuery);

@@ -1,0 +1,445 @@
+* {  
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*, 
+*:before, 
+*:after {
+	  -webkit-box-sizing: inherit;
+	  -moz-box-sizing: inherit;
+	  box-sizing: inherit;
+}
+.clear {  	
+	clear:both;
+	margin:0;
+	padding:0;
+	
+}
+html { 
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding-top: 4rem;
+	font-family: $f-text;
+	
+}
+.wrapper {
+	// width: 90%;
+	max-width: 90%;
+	min-height: 100vh;
+	margin: 10% auto;
+	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex-direction: column;	
+}
+nav ul li a { font-size: 1.2rem;}
+ul {
+	// margin:0;
+	// padding:0;
+	list-style: none;
+}
+img {
+   	margin:0;
+	padding:0;
+}
+section {	
+	height:100%;
+}
+
+div, p {
+	margin:0;
+	padding:0;
+}
+button { 
+	outline: none;
+	background-color: #fff;
+	border: 1px solid #fff;
+	color: #68b7d5;
+	cursor: pointer;
+	padding: 7px;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: .8rem;
+
+	&:hover {
+		border-bottom: 1px solid #68b7d5;
+	}
+}
+/* .........LINKS...............................*/
+
+a { text-decoration: none; }
+/* .........HEADER .............................*/
+
+header {
+	order: 1;
+	z-index: 1;	
+	width: 100%;
+	min-width: 140px;
+	height: 4rem;
+	margin: 0 auto;
+	padding: 5%;	
+	position: fixed;
+	top: 0;
+	left: 0; 
+	background-color: $white;
+	transition: top 0.2s ease-in-out;	
+	// border-bottom:1px solid #878787;
+
+	.menu-top {
+		display: none;
+
+		@media only screen and (min-width: 1300px ){
+			display: block;
+		}
+	}
+	.logo {
+		display: inline-block;
+		width: 90%;
+		margin: 0 auto;
+		background-color: #fff;
+
+		img {
+			width: 100%;
+		}
+
+	}
+	// ****** menu toggle *************
+    .menu-mobile {
+    	height: 40px;
+	    width: 90%;
+		position: relative;
+		top: 0;
+    	
+		.menu-toggle {
+	    	display: block;
+	    	font-size: 18px;
+	    	color: $grey-med;
+	    	height: 40px;
+	    	text-align: right;
+	    	width: 50%;
+	    	position: absolute;
+    	    top: 6px;
+    		right: 0;
+    		text-transform: uppercase;
+		}
+	}
+	.nav-up {
+		top: $nav-up;
+	
+	}
+	.nav-down{
+		top: $nav-down;
+	}
+
+} 
+//all pages except LANDING pages. 
+.main-content {
+
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex-direction: column;
+	width: 100%;
+	margin: 0 auto;
+
+	.back {
+		order: 1;
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0%;
+		color: #878787;
+		text-transform: uppercase;
+		a {
+			display: block;
+			padding: 1% 0 0 1%;
+			margin-bottom: 0;
+			color: $grey-med;
+			text-decoration: none;
+		}
+	}
+
+	h3 {
+		width: 100%;
+		margin: 0 0 0.3rem 0;
+		padding-left: 0.4rem;
+		border-left: 1px solid $grey-med;
+		font-size: 0.9rem;
+		letter-spacing: 0.04rem;
+		color: $grey-med;
+		text-transform: uppercase;
+
+
+	}
+
+	/*.........SHOW CURRENT PORTFOLIO .........................*/
+	.page-location {
+		order: 1;
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0%;
+		color: #878787;
+		text-transform: uppercase;
+
+		p {
+			display: block;
+			border-left: 1px solid #878787;
+			padding: 1% 0 0 1%;
+			margin-bottom: 0;	
+		}
+	}
+}
+
+/*.........ABOUT PAGE .......................................*/
+
+.about-me {
+	width: 100%;
+	min-width: 300px;
+	padding: 1rem 2rem 1rem 1rem;
+	margin: auto;
+	font-size: 1rem;
+	color: #878787;
+		
+}
+.about-me span {
+	border-bottom: 1px solid #878787;
+	padding: 0;
+	margin: 0;
+	font-size: 1rem;
+}
+
+.about-me span :hover {
+	color: #099949;
+	border-bottom: 1px solid #099949;
+	
+}
+
+.about-me p {
+	margin-top: 4%;
+
+
+}
+.clients-l {
+	text-align: left;
+	padding: 1rem 3rem;
+	height: auto;
+	float: left;
+	color: #878787;
+
+}
+.clients-r {
+	
+	text-align:right;
+	padding-right: 1rem;
+	padding-top: 1rem;
+	height: auto;
+	float: left;
+	color: #878787;
+
+}
+.awards {
+	width: 100%;
+	height: auto;
+	float: right;
+	padding-left: 0;
+	color: #878787;
+	clear: both;
+	
+}
+a.button {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-top: 2rem;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	color: #878787;
+	border:1px solid #878787;
+	padding: 10px;
+	text-align: center;
+}
+
+a.button:hover {
+	color: #099949;
+	border-color: #099949;
+}
+/*................BLOG PAGE .......................................*/
+//  someday...?
+/*.............CONTACT PAGE ..........................................*/
+
+
+#contact form {
+	display: none;
+
+	fieldset { border:none; color:#878787;}
+
+	fieldset.contact {
+		padding-bottom: 0;
+	}
+	fieldset.contact-message {
+		padding-top: 0;
+	}
+	label { 
+		display:block;
+		padding-bottom: 5px; 
+	}
+	input[type="text"], 
+	input[type="email"],
+	input[type="search"],
+	input[type="number"],
+	textarea {
+		box-sizing:border-box;
+		display:block;
+		margin-bottom: 19px;
+		width:100%;
+		max-width:40rem;
+		padding:10px;
+		color:#878787;
+	}
+	textarea {
+		margin-bottom: 0;
+	}	
+	input[type="text"]:focus, 
+	input[type="email"]:focus,
+	textarea:focus  {
+		background:#fff;
+		border-color:#099949;
+		box-shadow:none;
+		outline-color: #099949;
+	 	outline-style: solid;
+	}	
+	input[type="submit"] {
+		width: 50%;
+		border-radius:0;
+		border-style:none;
+		background-color:#099949;
+		outline-color: #099949;
+		color:#fff;
+		text-transform: uppercase;
+		font-size:1rem;
+		max-width:40rem;
+
+	}
+	input[type="submit"]:hover {	
+		border-radius:0;
+		color:#fff;
+		box-shadow:none;
+		outline:1px solid #099949;
+		font-size:1rem;   
+	}
+	.message-body {
+		margin-top: 20px;
+		width: 100%; 
+		float: left;
+		clear:both;
+	}
+}
+#contact .main-content {
+
+	.page-location { display: none; }
+
+	.contact-img-container {
+		display: block;
+		width: 100%;
+		height: auto;
+
+		img {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+	.contact-info {
+		display: block;
+		// margin-top: 1rem;
+
+		.temp-contact_page {
+			width: 100%;
+
+			&:hover {
+				color: $white;
+				background-color: #4866fb;    
+			}
+				    
+			a {	
+				display: block;
+				margin-top: 0.5rem;
+				color: $grey-med;
+				&:hover{ 
+					color: $white;
+				}
+				&:active {
+					color: $green-kelly;
+				} 
+				&:visited{
+					color: $grey-med;
+				}
+			
+			}
+			p {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}
+/*.............FOOTER....................................................
+ ONLY DISPLAYS AT DESKTOP WIDTH */
+.footer {
+	display: none;
+
+	@media only screen and (min-width: 1300px ) {
+		#home footer {
+			display: none;
+		}
+		.footer {
+			width: 100%;
+			display: none;	
+			font-size: 1rem;
+			margin-bottom: 15px;
+			border-top: 1px solid #878787;
+		}
+
+		.column {
+			width: 15%; 
+		}
+
+		.footer ul li {
+			margin: 0;
+
+		}
+		.footer-col-1 ul li a, .footer-col-2 ul li a  {
+			display: block;
+		    padding: 5% 0;
+		}
+		.footer-col-3 {
+			margin: 0 0 0 32%;
+			
+		}
+
+		.footer-col-3 img {
+			padding: 11%;
+			
+		}
+		.footer-col-3 img:last-child {
+			padding: 6%;
+		}
+		.footer-col-4 {
+			padding-top: 0.3rem;
+			margin: 0 0 0 4.5%;
+			text-align: center;
+			font-size: 0.8rem;
+		 	color: #878787;	
+		}		
+	}
+}

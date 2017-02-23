@@ -6,9 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../css/global.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/queries.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.min.css"/>
 </head>
 	
 <body id="proteus">
@@ -20,21 +18,21 @@
 		<div class="logo">	
 			<a href="index.html"> <img src="../images/LOGO/nameLOGO2.png" class="logo" alt="amy eckert projects"></a>
 		</div>
-		<!-- <span class="menu-toggle" data-show-dialog="options-menu-horizontal">Show Menu</span> -->
-		<div class="hamburger">
-			<a href="#" class="menu-icon menu-toggle border-icon" data-show-dialog="options-menu-horizontal"></a>
+
+		<div class="menu-mobile">
+			<span class="menu-toggle" data-show-dialog="options-menu-horizontal">Menu</span>
 		</div>
 	</header>
 
-	<nav role="navigation" class="options-menu-horizontal menu-top"> 
+	<nav role="navigation" class="menu-top"> 
 
 		<ul class="main-menu">
 
-			<li class="navphoto"><a href="photography.html">PHOTOGRAPHY</a></li>
+			<li class="navinter"><a href="interactive.html">INTERACTIVE</a></li>
 			<li class="navdesign"><a href="design.html">DESIGN</a></li>
-			<!-- <li class="navinter"><a href="interactive.html">INTERACTIVE</a></li> -->
+			<li class="navphoto"><a href="photography.html" >PHOTOGRAPHY</a></li>
 			<li class="navmixed"><a href="mixedmedia.html">MIXED MEDIA</a></li>
-			<li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li>
+			<!-- <li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li> -->
 			<li class="navabout"><a href="about.html">ABOUT</a></li>
 			<!-- <li class="navblog"><a href="blog.html">BLOG</a></li> -->
 			<li class="navcontact"><a href="contact.html">CONTACT</a></li>
@@ -53,9 +51,10 @@
 
 	<!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
 	<section class="main-content">
-		
+
+		<h3 class="back"><a href="mixedmedia.html">back</a></h3>
+
 		<nav role="navigation" class="menu-side">
-			<a href="mixedmedia.html"><button class="back"></button></a>	
 			<p>Proteus</p>
 			<ul>
 				<li><a href="misunderstood.html">Misunderstood Buildings</a></li>
@@ -228,23 +227,22 @@
 			</div> 
 		</div> 
 
-		<div class="statement-body">
-			<div class="statement-title">Proteus</div>
-			<p></p>			
+		<div class="statement">
+			<h3 class="statement-title">Proteus</h3>
+			<div class="statement-body">
+				<p>Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+			</div>			
 		</div>		
 	</section>
 
 	<!-- FOOTER .................................................. -->
-	<footer role="contentinfo" class="footer">
+	<footer role="contentinfo" class="options-menu-horizontal footer">
 
 		<div class= "column footer-col-1">
 				<ul>
-				<li><a href="photography.html">PHOTOGRAPHY</a></li>
-				
+				<li><a href="interactive.html">INTERACTIVE</a></li>
 				<li><a href="design.html">DESIGN</a></li>
-			
-				<!-- <li><a href="interactive.html">INTERACTIVE</a></li> -->
-			
+				<li><a href="photography.html">PHOTOGRAPHY</a></li>
 				<li><a href="mixedmedia.html">MIXED MEDIA</a></li>
 				
 			</ul>
@@ -270,7 +268,8 @@
 			</ul>
 		</div>
 
-		<div class="column footer-col-4">  © All images Copyright Amy Eckert 1999-2015
+		<div class="column footer-col-4">
+			<p class="copyright"></p>
 		</div>
 	</footer>
 

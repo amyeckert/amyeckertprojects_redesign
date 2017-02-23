@@ -6,17 +6,17 @@ $(document).ready(function() {
 
 	function toggleMainMenu() {	
 
-		// Show the main nav menu
+		// Show the mobile nav menu
 	    $('.menu-toggle').click(function(e){
 
 	        var menu = $(this).data('show-dialog');
 
-	        $('.' + menu).slideToggle('fast');
+	        $('.' + menu).slideToggle(300, 'swing');
 	    });
 
-	    $('.options-menu-horizontal span.close-menu').click(function(){
+	    $('.options-menu-horizontal').click(function(){
 
-	        $(this).closest('.options-menu-horizontal').slideUp('fast');
+	        $(this).closest('.options-menu-horizontal').slideUp(300, 'swing');
 		});
 	}
 	toggleMainMenu();

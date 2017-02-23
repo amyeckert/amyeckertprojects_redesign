@@ -6,9 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="../css/global.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/queries.css"/>
-	<link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/style.min.css"/>
 </head>
 	
 <body id="portfolio-template">
@@ -20,21 +18,21 @@
 		<div class="logo">	
 			<a href="index.html"> <img src="../images/LOGO/nameLOGO2.png" class="logo" alt="amy eckert projects"></a>
 		</div>
-		<!-- <span class="menu-toggle" data-show-dialog="options-menu-horizontal">Show Menu</span> -->
-		<div class="hamburger">
-			<a href="#" class="menu-icon menu-toggle border-icon" data-show-dialog="options-menu-horizontal"></a>
+
+		<div class="menu-mobile">
+			<span class="menu-toggle" data-show-dialog="options-menu-horizontal">Menu</span>
 		</div>
 	</header>
 
-	<nav role="navigation" class="options-menu-horizontal menu-top"> 
+	<nav role="navigation" class="menu-top"> 
 
 		<ul class="main-menu">
 
-			<li class="navphoto"><a href="photography.html">PHOTOGRAPHY</a></li>
+			<li class="navinter"><a href="interactive.html">INTERACTIVE</a></li>
 			<li class="navdesign"><a href="design.html">DESIGN</a></li>
-			<!-- <li class="navinter"><a href="interactive.html">INTERACTIVE</a></li> -->
+			<li class="navphoto"><a href="photography.html" >PHOTOGRAPHY</a></li>
 			<li class="navmixed"><a href="mixedmedia.html">MIXED MEDIA</a></li>
-			<li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li>
+			<!-- <li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li> -->
 			<li class="navabout"><a href="about.html">ABOUT</a></li>
 			<!-- <li class="navblog"><a href="blog.html">BLOG</a></li> -->
 			<li class="navcontact"><a href="contact.html">CONTACT</a></li>
@@ -53,7 +51,7 @@
 			<a href="manhome.html">
 				<div class="project-row-img">
 						<img src="../images/manufacturing-home/050416-4-6_PRINT.jpg" alt="photography projects">
-					<div class="front-titles">
+					<div class="project-title">
 						<p>Manufacturing Home</p>
 					</div> 
 				</div>
@@ -63,7 +61,7 @@
 			<a href="#">
 				<div class="project-row-img">
 					<img src="../images/je-suis-optimiste/090530_038.jpg" alt="design projects" > 
-					<div class="project-titles">
+					<div class="project-title">
 						<p>Je Suis Optimiste</p>
 					</div> 
 				</div>
@@ -72,7 +70,7 @@
 			<a href="#">
 				<div class="project-row-img">
 					<img src="../images/mossburn/0902NZ-0885.jpg" alt="interactive projects">
-					<div class="project-titles">
+					<div class="project-title">
 						<p>Mossburn</p>
 					</div> 
 				</div>
@@ -81,7 +79,7 @@
 			<a href="#">
 				<div class="project-row-img">
 					<img src="../images/front/100228_110.jpg"  alt="collage and mixed media projects"> 
-					<div class="project-titles">
+					<div class="project-title">
 						<p>Corn</p>
 					</div> 
 				</div>
@@ -90,7 +88,7 @@
 			<a href="#">
 				<div class="project-row-img">
 					<img src="../images/front/yellow.png"  alt="collage and mixed media projects"> 
-					<div class="project-titles">
+					<div class="project-title">
 						<p>Another Project</p>
 					</div> 
 				</div>
@@ -99,7 +97,7 @@
 			<a href="#">
 				<div class="project-row-img">
 					<img src="../images/front/purple.png"  alt="collage and mixed media projects"> 
-					<div class="project-titles">
+					<div class="project-title">
 						<p>Another Incredible Project</p>
 					</div> 
 				</div>
@@ -108,7 +106,7 @@
 			<a href="#">
 				<div class="project-row-img">
 					<img src="../images/front/aqua.png"  alt="collage and mixed media projects"> 
-					<div class="project-titles">
+					<div class="project-title">
 						<p>There Sure Are a LOT of Projects On this Site...</p>
 					</div> 
 				</div>
@@ -122,16 +120,13 @@
 	</section> 
 
 	<!-- FOOTER .................................................. -->
-	<footer role="contentinfo" class="footer">
+	<footer role="contentinfo" class="options-menu-horizontal footer">
 
 		<div class= "column footer-col-1">
 				<ul>
-				<li><a href="photography.html">PHOTOGRAPHY</a></li>
-				
+				<li><a href="interactive.html">INTERACTIVE</a></li>
 				<li><a href="design.html">DESIGN</a></li>
-			
-				<!-- <li><a href="interactive.html">INTERACTIVE</a></li> -->
-			
+				<li><a href="photography.html">PHOTOGRAPHY</a></li>
 				<li><a href="mixedmedia.html">MIXED MEDIA</a></li>
 			
 			</ul>
@@ -157,7 +152,8 @@
 			</ul>
 		</div>
 
-		<div class="column footer-col-4">  © All images Copyright Amy Eckert 1999-2015
+		<div class="column footer-col-4">
+			<p class="copyright"></p>
 		</div>
 	</footer>
 
@@ -174,7 +170,7 @@
 <!-- imagesLoaded.js -->
 <script src="../js/imagesloaded.pkgd.min.js"></script>
 <!--custom.js -->
-<script src="../js/thumb-nav.js"></script> 
+<script src="../js/main.js"></script> 
 <script src="../js/header.js"></script> 
 <script src="../js/menu.js"></script> 
 

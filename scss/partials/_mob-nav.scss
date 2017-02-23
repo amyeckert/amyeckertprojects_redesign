@@ -1,0 +1,310 @@
+/* ......... MOBILE NAVIGATION MENU .............................*/	
+
+	
+// .main-menu li:first-child {
+// 		border-left: none;
+// 	}
+// 	.share li {
+// 		display: inline-block;
+// 		width: 30%;
+// 		margin: 0;
+// 		padding: 0;
+// 	}
+
+// /*photography*/
+// .main-menu li:first-child:hover, 
+// .main-menu li:first-child:active {
+//     background-color: #a84420;
+//     color: #fff;
+//     border-bottom: 1px solid #a84420;
+// }
+
+/*......... HAMBURGER MENU behavior stuff .........................................*/
+
+.options-menu-horizontal {
+    font-family: $f-text;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    background-color: $white;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    padding: 0;
+    z-index: 10; 
+	
+	.column {
+		width: 100%;
+		padding: 0 0 0 0 ;
+		margin: 0 0 0 0 ;
+
+		ul {
+			width: 100%;
+			padding: 0 0 0 0 ;
+
+			li {
+				height: 2.5rem;
+				color: $white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+				a {
+					display: block;
+    				width: 100%;
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+	}	
+}
+
+.footer-col-1 {
+
+	ul {
+
+		li {
+			&:first-child {
+			background-color:$orange-light;
+		 		// &:active {
+		 		// 	color: red;
+		 		// }
+			}
+			&:nth-child(2) {
+				background-color:$teal;
+			}
+			&:nth-child(3) {
+				background-color:$purple;
+			}
+			&:nth-child(4) {
+				background-color:$blue-med;
+			} 
+			a {
+		
+			}
+		}
+	}
+
+} 
+.footer-col-2 {
+
+	ul {	
+		li {
+			&:first-child {
+			background-color:$green-kelly;
+			}
+			&:nth-child(2) {
+				background-color:$green-olive;
+			}
+			&:nth-child(3) {
+				background-color:$cyan;
+			}
+		
+			a {
+				
+
+			}
+		}
+	}
+} 
+
+.footer-col-3 {
+	display: none;
+
+	ul {
+		padding: 0;
+		width: 100%;
+		display: inline-flex;
+		margin: 1rem 0 1rem 0;
+
+		li {
+			flex: 0 1 auto;
+			width: 33.334%;
+		
+			a {
+				img {
+					height: 30px;
+					width: 30px;
+					
+				}
+			}
+		}
+
+	}
+} 
+.footer-col-4 {
+	display: none;
+	border-top: 1px solid $grey-med;
+	font-size: 0.8rem;
+	color: $grey-med;
+	p {
+		display: block;
+		margin: 5% 0 5% 0;
+		
+	}
+}
+
+
+/* Responsive */
+
+// @media (min-width: 700px) {
+
+// * {background-color: blue;}
+//     .options-menu-horizontal ul li {
+//         display: block;
+//         width: 100%;
+//     }
+/*
+    .options-menu-horizontal ul:nth-child(2) {
+        width: 50%;
+        margin: 0 auto;
+    
+    }
+    .options-menu-horizontal ul:nth-child(2) li {
+        float: left;
+        width: 33.334%;
+
+    }*/
+
+// }
+// @media only screen and (min-width: 1300px) {
+// * {background-color: red;}
+
+//     header span.menu-toggle {
+//         display: block;
+//     }
+//     .hamburger {
+//         display: block;
+//     }
+//     .options-menu-horizontal ul li {
+//         display: block;
+//         width: 100%;
+//         font-size: 1.5rem;
+//         margin: 0 auto;
+//         padding: 4px 0;
+//     }
+//     .options-menu-horizontal ul:nth-child(2) {
+//         display: block;
+//         width: 25%;
+//         margin: 0 auto;
+        
+//     }
+//     .options-menu-horizontal ul:nth-child(2) li {
+//         float: left;
+//         width: 33.334%;
+ 
+//     }
+//     .options-menu-horizontal span.close-menu {
+//         top: 10px;
+//         right: 10px;
+//         width: 32px;
+//         height: 32px;
+//         line-height: 1.1;
+//         font-size: 30px;
+//     }
+// }
+
+// @media only screen and (min-width: 1500px ) {
+// * {background-color: green;}
+//  .options-menu-horizontal { 
+//         order: 2;
+//         display: inline-block; 
+//         border: none;
+//         position: relative;
+//         top: -90px;
+//         left: 0;
+//         z-index: 0;
+//         width: 57%;
+//         background-color: transparent;
+//         margin: 0 0 0 43.2% ;
+
+//     }
+//      .options-menu-horizontal ul {
+//         display: inline-block;
+//         float: right;
+//         width: 100%;
+//         margin: 0;
+
+//     }
+//     .options-menu-horizontal ul li {
+//         display: inline-block;
+//         padding: 0;
+//         float: none;
+//         font-size: 1rem;
+//         padding: 0 5px;
+//         width: 16%;
+//         height: 100%;
+//         margin: 0;
+//         border-bottom: 1px solid #878787;
+//     }
+//     .options-menu-horizontal ul li a {
+//         display: block;
+//         font-size: 0.7rem;
+//         width: 100%;
+//         height: 100%;
+//         padding: 28px 0 20px 0;
+        
+//     }
+//      .options-menu-horizontal ul:nth-child(2) {
+//         display: none;
+        
+//     }
+
+// 	//	MAIN NAV MENU .........................................*/
+
+// 	a:link {
+// 	    color: #878787;
+// 	    text-decoration: none;
+// 	} 
+// 	a:visited {
+// 	    color: #878787;
+// 	}
+// 	li:hover,
+// 	a:hover {
+// 	    color:#fff;
+
+// 	}
+// 	/*design*/
+// 	.main-menu li:nth-child(2):hover, 
+// 	.main-menu li:nth-child(2):active {
+// 	    background-color: #5f9797;
+// 	    color: #fff; 
+// 	    border-bottom: 1px solid #5f9797;   
+// 	}
+// 	/*mixed media*/
+// 	.main-menu li:nth-child(3):hover, 
+// 	.main-menu li:nth-child(3):active {
+// 	    background-color: #8a5cd1;
+// 	    color: #fff;
+// 	    border-bottom: 1px solid #8a5cd1;
+// 	} 
+// 	/*exhibitions*/
+// 	.main-menu li:nth-child(4):hover, 
+// 	.main-menu li:nth-child(4):active {
+// 	    background-color: #820064;  
+// 	    color: #fff;
+// 	    border-bottom: 1px solid #820064;
+// 	}
+// 	 /*about*/
+// 	.main-menu li:nth-child(5):hover,
+// 	.main-menu li:nth-child(5):active {
+// 	    background-color: #099949;
+// 	    color: #fff;
+// 	    border-bottom: 1px solid #099949;
+// 	}
+// 	/*contact*/
+// 	.main-menu li:nth-child(6):hover,
+// 	.main-menu li:nth-child(6):active {
+// 	    background-color: #b56618;
+// 	    color: #fff;
+// 	    border-bottom: 1px solid #b56618;
+// 	}
+
+// 	.share li a img {
+// 	    height: 25px;
+// 	    width: auto;
+
+// }
+// }
