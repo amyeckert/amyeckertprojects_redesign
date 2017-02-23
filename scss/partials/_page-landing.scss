@@ -1,88 +1,33 @@
-/*.........SHOW PAGE LOCATION .......................................*/
-.page-location {
-	order: 1;
-}
-// .front-row {
-// 	width: 100%;
-// 	height: auto;
-// }
-#interactive .page-location, 
-#mixedmedia .page-location, 
-#photography .page-location, 
-#design .page-location, 
-#portfolio-template .page-location, 
-#project-template .page-location {
-	width: 100%;
-	display: block;
-	margin: 0;
-	padding: 0 0 0 0%;
-	color: #878787;
-	text-transform: uppercase;
-}
-
-#interactive .page-location p, 
-#mixedmedia .page-location p, 
-#photography .page-location p, 
-#design .page-location p, 
-#portfolio-template .page-location p, 
-#project-template .page-location p {
-	display: block;
-	border-left: 1px solid #878787;
-	padding: 1% 0 0 1%;
-	margin-bottom: 0;
-
-}
-
-#home .page-location p,
-#exhibitions .page-location,
-#exhibitions .page-location p,
-#contact .page-location, 
-#contact .page-location p {
-	display: none;
-}
-#interactive .main-content,
-#photography .main-content,
-#design .main-content,
-#interactive .main-content,
-#mixedmedia .main-content {
+// #interactive .main-content,
+// #photography .main-content,
+// #design .main-content,
+// #mixedmedia 
+.main-content {
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
  	display: -webkit-flex;     /* NEW - Chrome */
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	
 	flex-direction: column;
 	width: 100%;
 	margin: 0 auto;
 
-}
-/*.............PORTFOLIO TITLES ............................... */
+	/*.........SHOW CURRENT PORTFOLIO .........................*/
+	.page-location {
+		order: 1;
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0%;
+		color: #878787;
+		text-transform: uppercase;
 
-.project-title {
-	width: 100%;
-	background-color: white;
-	float: left;
-	font-size: 1.3em;
-	position: relative; 
-	top: 30%;
-	color: #878787;
-}
- 
-.project-title p {
-	text-align: center;
-	display: none;
-	
-}
- 
-.statement-title {
-	width:60%;
-	margin:0rem 0 1rem 0;
-	padding-left: 0.3rem;
-	border-left:1px solid #878787;
-	font-size: 0.9rem;
-	letter-spacing: 0.04rem;
-	color:#878787;
-	text-transform: uppercase;
-
+		p {
+			display: block;
+			border-left: 1px solid #878787;
+			padding: 1% 0 0 1%;
+			margin-bottom: 0;	
+		}
+	}
 }

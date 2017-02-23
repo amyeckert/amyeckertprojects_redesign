@@ -1,4 +1,31 @@
 /*......... PROJECT PAGES.......................................*/
+.project-title {
+	width: 100%;
+	background-color: white;
+	float: left;
+	font-size: 1.3em;
+	position: relative; 
+	top: 30%;
+	color: #878787;
+}
+ 
+.project-title p {
+	text-align: center;
+	display: none;
+	
+}
+ 
+.statement-title {
+	width:60%;
+	margin:0rem 0 1rem 0;
+	padding-left: 0.3rem;
+	border-left:1px solid #878787;
+	font-size: 0.9rem;
+	letter-spacing: 0.04rem;
+	color:#878787;
+	text-transform: uppercase;
+
+}
 
 /*	SIDE MENUS .........................................*/
 .menu-side {

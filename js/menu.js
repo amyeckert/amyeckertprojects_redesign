@@ -11,12 +11,12 @@ $(document).ready(function() {
 
 	        var menu = $(this).data('show-dialog');
 
-	        $('.' + menu).slideToggle('fast');
+	        $('.' + menu).slideToggle(300, 'swing');
 	    });
 
 	    $('.options-menu-horizontal').click(function(){
 
-	        $(this).closest('.options-menu-horizontal').slideUp('fast');
+	        $(this).closest('.options-menu-horizontal').slideUp(300, 'swing');
 		});
 	}
 	toggleMainMenu();

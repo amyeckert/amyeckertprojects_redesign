@@ -24,7 +24,7 @@
 .options-menu-horizontal {
     font-family: $f-text;
     text-align: center;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: $white;
     position: fixed;
@@ -112,7 +112,7 @@
 
 .footer-col-3 {
 	display: none;
-	
+
 	ul {
 		padding: 0;
 		width: 100%;

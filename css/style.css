@@ -97,7 +97,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  padding-top: 50px;
+  padding-top: 60px;
   font-family: "Josefin Sans", sans-serif; }
 
 .wrapper {
@@ -158,7 +158,7 @@ header {
   min-width: 140px;
   height: 3rem;
   margin: 0 auto;
-  padding: 5% 5% 0 5%;
+  padding: 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -180,18 +180,19 @@ header {
   header .menu-mobile {
     height: 40px;
     width: 90%;
-    padding-top: 3%;
-    position: relative; }
+    position: relative;
+    top: 0; }
     header .menu-mobile .menu-toggle {
       display: block;
-      font-size: 25px;
+      font-size: 18px;
       color: #878787;
       height: 40px;
       text-align: right;
       width: 50%;
       position: absolute;
-      top: 20px;
-      right: 9px; }
+      top: 6px;
+      right: 0;
+      text-transform: uppercase; }
   header .nav-up {
     top: -3rem; }
   header .nav-down {
@@ -199,32 +200,6 @@ header {
 
 /* end header */
 /*......... MAIN CONTENT AREA .......................................*/
-.main-content {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 auto; }
-
 /*.........ABOUT PAGE .......................................*/
 .about-me {
   width: 100%;
@@ -407,10 +382,12 @@ input[type="submit"]:hover {
       font-size: 0.8rem;
       color: #878787; } }
 
-#home .page-location {
-  display: none; }
-
-.front-row {
+.grid {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  max-width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,58 +397,63 @@ input[type="submit"]:hover {
           flex-direction: row;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100%; }
-  .front-row .front-img-container {
+          justify-content: flex-start; }
+  .grid .grid-sizer {
     width: 100%;
-    height: 100vh; }
-    .front-row .front-img-container img {
-      max-height: 75%;
-      max-width: 75%;
-      padding: 0 10%; }
+    height: auto; }
+    .grid .grid-sizer .grid-item {
+      width: 100%;
+      height: auto; }
+      .grid .grid-sizer .grid-item img {
+        width: 100%;
+        height: auto; }
 
-/*.........SHOW PAGE LOCATION .......................................*/
-.page-location {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1; }
+#home {
+  overflow: hidden; }
+  #home .main-content {
+    overflow: hidden;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 auto; }
+    #home .main-content .front-row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%; }
+      #home .main-content .front-row .front-img-container {
+        width: 100%;
+        height: 100vh; }
+        #home .main-content .front-row .front-img-container img {
+          max-height: 75%;
+          max-width: 75%;
+          padding: 0 10%; }
 
-#interactive .page-location,
-#mixedmedia .page-location,
-#photography .page-location,
-#design .page-location,
-#portfolio-template .page-location,
-#project-template .page-location {
-  width: 100%;
-  display: block;
-  margin: 0;
-  padding: 0 0 0 0%;
-  color: #878787;
-  text-transform: uppercase; }
-
-#interactive .page-location p,
-#mixedmedia .page-location p,
-#photography .page-location p,
-#design .page-location p,
-#portfolio-template .page-location p,
-#project-template .page-location p {
-  display: block;
-  border-left: 1px solid #878787;
-  padding: 1% 0 0 1%;
-  margin-bottom: 0; }
-
-#home .page-location p,
-#exhibitions .page-location,
-#exhibitions .page-location p,
-#contact .page-location,
-#contact .page-location p {
-  display: none; }
-
-#interactive .main-content,
-#photography .main-content,
-#design .main-content,
-#interactive .main-content,
-#mixedmedia .main-content {
+.main-content {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   /* OLD - Firefox 19- (buggy but mostly works) */
@@ -485,9 +467,25 @@ input[type="submit"]:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  /*.........SHOW CURRENT PORTFOLIO .........................*/ }
+  .main-content .page-location {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0 0 0 0%;
+    color: #878787;
+    text-transform: uppercase; }
+    .main-content .page-location p {
+      display: block;
+      border-left: 1px solid #878787;
+      padding: 1% 0 0 1%;
+      margin-bottom: 0; }
 
-/*.............PORTFOLIO TITLES ............................... */
+/*......... PROJECT PAGES.......................................*/
 .project-title {
   width: 100%;
   background-color: white;
@@ -511,7 +509,6 @@ input[type="submit"]:hover {
   color: #878787;
   text-transform: uppercase; }
 
-/*......... PROJECT PAGES.......................................*/
 /*	SIDE MENUS .........................................*/
 .menu-side {
   -webkit-box-flex: 1;
@@ -609,35 +606,6 @@ input[type="submit"]:hover {
 /*----------------------------------------------------------------------
 ------- MOBILE/SMALL -----------------------------------------------------------
 
-	#about p {
-	 	padding:0.5rem 0 0.5rem 0;
-
-	}
-	#photography .page-location,
-	#design	.page-location, 
-	#interactive .page-location,
-	#mixedmedia .page-location {
-		display: block;
-		margin: 0;
-		
-	}
-	#photography .page-location p,
-	#design	.page-location p,
-	#interactive .page-location p, 
-	#mixedmedia .page-location p {
-		display: block;
-		margin: 0;
-		padding: 2% 0 2% 2%;
-
-	}	
-	#exhibitions .page-location,
-	#exhibitions .page-location p {
-		display: none;
-	}
-	.menu-top {
-		display: none;
-	 	border-top: none;
-	}
 	
 	/*.....showing page location in menu..... */
 /*.........PROJECT PAGES .......................................*/
@@ -707,9 +675,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 .options-menu-horizontal {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
