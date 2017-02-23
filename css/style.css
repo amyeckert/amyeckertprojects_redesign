@@ -22,7 +22,8 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  text-decoration: none; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, section {
@@ -147,6 +148,10 @@ button {
   font-size: .8rem; }
   button:hover {
     border-bottom: 1px solid #68b7d5; }
+
+/* .........LINKS...............................*/
+a {
+  text-decoration: none; }
 
 /* .........HEADER .............................*/
 header {
@@ -320,89 +325,93 @@ a.button:hover {
 /*.............CONTACT PAGE ..........................................*/
 #contact form {
   display: none; }
+  #contact form fieldset {
+    border: none;
+    color: #878787; }
+  #contact form fieldset.contact {
+    padding-bottom: 0; }
+  #contact form fieldset.contact-message {
+    padding-top: 0; }
+  #contact form label {
+    display: block;
+    padding-bottom: 5px; }
+  #contact form input[type="text"],
+  #contact form input[type="email"],
+  #contact form input[type="search"],
+  #contact form input[type="number"],
+  #contact form textarea {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    margin-bottom: 19px;
+    width: 100%;
+    max-width: 40rem;
+    padding: 10px;
+    color: #878787; }
+  #contact form textarea {
+    margin-bottom: 0; }
+  #contact form input[type="text"]:focus,
+  #contact form input[type="email"]:focus,
+  #contact form textarea:focus {
+    background: #fff;
+    border-color: #099949;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline-color: #099949;
+    outline-style: solid; }
+  #contact form input[type="submit"] {
+    width: 50%;
+    border-radius: 0;
+    border-style: none;
+    background-color: #099949;
+    outline-color: #099949;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    max-width: 40rem; }
+  #contact form input[type="submit"]:hover {
+    border-radius: 0;
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: 1px solid #099949;
+    font-size: 1rem; }
+  #contact form .message-body {
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+    clear: both; }
 
-.temp-contact_page {
+#contact .main-content .page-location {
+  display: none; }
+
+#contact .main-content .contact-img-container {
   display: block;
-  margin-top: 200px;
-  width: 70%; }
-
-.temp-contact_page p {
-  padding: 2% 0 1.5% 0;
-  text-indent: 4px; }
-
-.temp-contact_page:hover {
-  background-color: #4866fb; }
-
-.message-body {
-  margin-top: 20px;
   width: 100%;
-  float: left;
-  clear: both; }
-
-.contact-img {
-  display: block;
-  width: 45%;
   height: auto; }
+  #contact .main-content .contact-img-container img {
+    max-width: 100%;
+    margin: 0 auto; }
 
-fieldset {
-  border: none;
-  color: #878787; }
-
-fieldset.contact {
-  padding-bottom: 0; }
-
-fieldset.contact-message {
-  padding-top: 0; }
-
-label {
-  display: block;
-  padding-bottom: 5px; }
-
-input[type="text"],
-input[type="email"],
-input[type="search"],
-input[type="number"],
-textarea {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  margin-bottom: 19px;
-  width: 100%;
-  max-width: 40rem;
-  padding: 10px;
-  color: #878787; }
-
-textarea {
-  margin-bottom: 0; }
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  background: #fff;
-  border-color: #099949;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline-color: #099949;
-  outline-style: solid; }
-
-input[type="submit"] {
-  width: 50%;
-  border-radius: 0;
-  border-style: none;
-  background-color: #099949;
-  outline-color: #099949;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1rem;
-  max-width: 40rem; }
-
-input[type="submit"]:hover {
-  border-radius: 0;
-  color: #fff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: 1px solid #099949;
-  font-size: 1rem; }
+#contact .main-content .contact-info {
+  display: block; }
+  #contact .main-content .contact-info .temp-contact_page {
+    width: 100%; }
+    #contact .main-content .contact-info .temp-contact_page:hover {
+      color: #fff;
+      background-color: #4866fb; }
+    #contact .main-content .contact-info .temp-contact_page a {
+      display: block;
+      margin-top: 0.5rem;
+      color: #878787; }
+      #contact .main-content .contact-info .temp-contact_page a:hover {
+        color: #fff; }
+      #contact .main-content .contact-info .temp-contact_page a:active {
+        color: #099949; }
+      #contact .main-content .contact-info .temp-contact_page a:visited {
+        color: #878787; }
+    #contact .main-content .contact-info .temp-contact_page p {
+      margin-bottom: 0.5rem; }
 
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */

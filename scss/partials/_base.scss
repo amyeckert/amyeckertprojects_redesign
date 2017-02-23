@@ -74,6 +74,9 @@ button {
 		border-bottom: 1px solid #68b7d5;
 	}
 }
+/* .........LINKS...............................*/
+
+a { text-decoration: none; }
 /* .........HEADER .............................*/
 
 header {
@@ -273,98 +276,122 @@ a.button:hover {
 	border-color: #099949;
 }
 /*................BLOG PAGE .......................................*/
-
-// #blog div p {
-// 	color: #878787;
-// }
-
+//  someday...?
 /*.............CONTACT PAGE ..........................................*/
 
 
 #contact form {
 	display: none;
-}
 
-.temp-contact_page {
-	display: block;
-	margin-top: 200px;
-	width: 70%;
-}
-.temp-contact_page p {
-	padding: 2% 0 1.5% 0;
-	text-indent: 4px;
-}
-.temp-contact_page:hover {
-	background-color: #4866fb;    
-	    
-}
-.message-body {
-	margin-top: 20px;
-	width: 100%; 
-	float:left;
-	clear:both;
-}
-.contact-img {
-	display: block;
-	width:45%;
-	height: auto;
+	fieldset { border:none; color:#878787;}
 
-}
-fieldset { border:none; color:#878787;}
+	fieldset.contact {
+		padding-bottom: 0;
+	}
+	fieldset.contact-message {
+		padding-top: 0;
+	}
+	label { 
+		display:block;
+		padding-bottom: 5px; 
+	}
+	input[type="text"], 
+	input[type="email"],
+	input[type="search"],
+	input[type="number"],
+	textarea {
+		box-sizing:border-box;
+		display:block;
+		margin-bottom: 19px;
+		width:100%;
+		max-width:40rem;
+		padding:10px;
+		color:#878787;
+	}
+	textarea {
+		margin-bottom: 0;
+	}	
+	input[type="text"]:focus, 
+	input[type="email"]:focus,
+	textarea:focus  {
+		background:#fff;
+		border-color:#099949;
+		box-shadow:none;
+		outline-color: #099949;
+	 	outline-style: solid;
+	}	
+	input[type="submit"] {
+		width: 50%;
+		border-radius:0;
+		border-style:none;
+		background-color:#099949;
+		outline-color: #099949;
+		color:#fff;
+		text-transform: uppercase;
+		font-size:1rem;
+		max-width:40rem;
 
-fieldset.contact {
-	padding-bottom: 0;
+	}
+	input[type="submit"]:hover {	
+		border-radius:0;
+		color:#fff;
+		box-shadow:none;
+		outline:1px solid #099949;
+		font-size:1rem;   
+	}
+	.message-body {
+		margin-top: 20px;
+		width: 100%; 
+		float: left;
+		clear:both;
+	}
 }
-fieldset.contact-message {
-	padding-top: 0;
-}
-label { 
-	display:block;
-	padding-bottom: 5px; 
-}
-input[type="text"], 
-input[type="email"],
-input[type="search"],
-input[type="number"],
-textarea {
-	box-sizing:border-box;
-	display:block;
-	margin-bottom: 19px;
-	width:100%;
-	max-width:40rem;
-	padding:10px;
-	color:#878787;
-}
-textarea {
-	margin-bottom: 0;
-}	
-input[type="text"]:focus, 
-input[type="email"]:focus,
-textarea:focus  {
-	background:#fff;
-	border-color:#099949;
-	box-shadow:none;
-	outline-color: #099949;
- 	outline-style: solid;
-}	
-input[type="submit"] {
-	width: 50%;
-	border-radius:0;
-	border-style:none;
-	background-color:#099949;
-	outline-color: #099949;
-	color:#fff;
-	text-transform: uppercase;
-	font-size:1rem;
-	max-width:40rem;
+#contact .main-content {
 
-}
-input[type="submit"]:hover {	
-	border-radius:0;
-	color:#fff;
-	box-shadow:none;
-	outline:1px solid #099949;
-	font-size:1rem;   
+	.page-location { display: none; }
+
+	.contact-img-container {
+		display: block;
+		width: 100%;
+		height: auto;
+
+		img {
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	}
+	.contact-info {
+		display: block;
+		// margin-top: 1rem;
+
+		.temp-contact_page {
+			width: 100%;
+
+			&:hover {
+				color: $white;
+				background-color: #4866fb;    
+			}
+				    
+			a {	
+				display: block;
+				margin-top: 0.5rem;
+				color: $grey-med;
+				&:hover{ 
+					color: $white;
+				}
+				&:active {
+					color: $green-kelly;
+				} 
+				&:visited{
+					color: $grey-med;
+				}
+			
+			}
+			p {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
 }
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */
