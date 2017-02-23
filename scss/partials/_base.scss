@@ -81,7 +81,7 @@ header {
 	z-index: 1;	
 	width: 100%;
 	min-width: 140px;
-	height: 3rem;
+	height: 4rem;
 	margin: 0 auto;
 	padding: 5%;	
 	position: fixed;
@@ -151,7 +151,17 @@ header {
 	margin: 0 auto;
 
 	.back {
+		order: 1;
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0%;
+		color: #878787;
+		text-transform: uppercase;
 		a {
+			display: block;
+			padding: 1% 0 0 1%;
+			margin-bottom: 0;
 			color: $grey-med;
 			text-decoration: none;
 		}

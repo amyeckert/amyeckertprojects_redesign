@@ -30,6 +30,9 @@
 		} 
 	}
 }
+.carousel-nav {
+	display: none;
+}
 // .carousel-nav button:first-child {
 // 	padding-left: 0;
 // }
@@ -73,15 +76,17 @@
 		}
 		span {
 			border-bottom:1px solid #878787;
+			color: $grey-med;
+			text-decoration: none;
 
 			&:hover {
 				color:#099949;
 				border-bottom:1px solid #099949;
 			} 
 			a {
-				&:hover{
-					color: #099949
-				}
+				// &:hover{
+				// 	color: #099949
+				// }
 			}
 		}	
 	}

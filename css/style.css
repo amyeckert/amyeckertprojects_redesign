@@ -156,7 +156,7 @@ header {
   z-index: 1;
   width: 100%;
   min-width: 140px;
-  height: 3rem;
+  height: 4rem;
   margin: 0 auto;
   padding: 5%;
   position: fixed;
@@ -214,9 +214,22 @@ header {
   width: 100%;
   margin: 0 auto;
   /*.........SHOW CURRENT PORTFOLIO .........................*/ }
-  .main-content .back a {
+  .main-content .back {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0 0 0 0%;
     color: #878787;
-    text-decoration: none; }
+    text-transform: uppercase; }
+    .main-content .back a {
+      display: block;
+      padding: 1% 0 0 1%;
+      margin-bottom: 0;
+      color: #878787;
+      text-decoration: none; }
   .main-content h3 {
     width: 100%;
     margin: 0 0 0.3rem 0;
@@ -520,6 +533,9 @@ input[type="submit"]:hover {
         color: #878787;
         font-size: 1rem; } }
 
+.carousel-nav {
+  display: none; }
+
 .statement {
   margin: 1rem 0 0 0;
   padding: 0 0 0 0;
@@ -548,12 +564,12 @@ input[type="submit"]:hover {
       .statement .statement-body p:nth-child(1) {
         margin-top: 0; }
     .statement .statement-body span {
-      border-bottom: 1px solid #878787; }
+      border-bottom: 1px solid #878787;
+      color: #878787;
+      text-decoration: none; }
       .statement .statement-body span:hover {
         color: #099949;
         border-bottom: 1px solid #099949; }
-      .statement .statement-body span a:hover {
-        color: #099949; }
 
 /*	SIDE NAV .........................................*/
 .menu-side {
