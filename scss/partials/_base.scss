@@ -109,7 +109,7 @@ header {
 		}
 
 	}
-	// menu toggle 
+	// ****** menu toggle *************
     .menu-mobile {
     	height: 40px;
 	    width: 90%;
@@ -123,7 +123,6 @@ header {
 	    	height: 40px;
 	    	text-align: right;
 	    	width: 50%;
-	    	// outline: 1px solid $grey-med;
 	    	position: absolute;
     	    top: 6px;
     		right: 0;
@@ -138,26 +137,7 @@ header {
 		top: $nav-down;
 	}
 
-} /* end header */
-
-/*......... MAIN CONTENT AREA .......................................*/
-
-// .main-content {
-// 	order: 2;
-// 	// width: 100%;
-// 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-//   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-//  	display: -ms-flexbox;      /* TWEENER - IE 10 */
-//  	display: -webkit-flex;     /* NEW - Chrome */
-//   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-//   	border: 1px solid red;
-// 	flex-direction: row;
-// 	flex-wrap: wrap;
-// 	justify-content: flex-start;
-// 	// flex: 1;
-// 	margin: 0 auto;
-
-// }
+} 
 /*.........ABOUT PAGE .......................................*/
 
 .about-me {

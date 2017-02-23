@@ -1,8 +1,7 @@
-// #interactive .main-content,
-// #photography .main-content,
-// #design .main-content,
-// #mixedmedia 
-.main-content {
+#interactive .main-content,
+#photography .main-content,
+#design .main-content,
+#mixedmedia .main-content {
 
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */

@@ -1,41 +1,97 @@
 /*......... PROJECT PAGES.......................................*/
-.project-title {
-	width: 100%;
-	background-color: white;
-	float: left;
-	font-size: 1.3em;
-	position: relative; 
-	top: 30%;
-	color: #878787;
+#carousel {
+	display: block;
+	visibility: visible;
+	order: 2;
+	flex: 1 0;
+	margin-bottom: 1rem;
 }
- 
-.project-title p {
-	text-align: center;
-	display: none;
-	
-}
- 
-.statement-title {
-	width:60%;
-	margin:0rem 0 1rem 0;
-	padding-left: 0.3rem;
-	border-left:1px solid #878787;
-	font-size: 0.9rem;
-	letter-spacing: 0.04rem;
-	color:#878787;
-	text-transform: uppercase;
+.big {
 
-}
+	.big-img-container {
 
-/*	SIDE MENUS .........................................*/
+	}
+
+	.image-info { 
+		color: #878787;
+		font-size: $base-font-size;
+	}
+}
+//grid
+.thumbs {
+
+} 
+
+
+
+// .carousel-nav button:first-child {
+// 	padding-left: 0;
+// }
+
+.statement {
+	margin: 1rem 0 0 0 ;
+	padding: 0 0 0 0 ;
+
+	.statement-title {
+		width: 100%;
+		margin: 0 0 0.3rem 0;
+		padding-left: 0.4rem;
+		border-left: 1px solid $grey-med;
+		font-size: 0.9rem;
+		letter-spacing: 0.04rem;
+		color: $grey-med;
+		text-transform: uppercase;
+
+	}
+	.statement-body {
+		display: block;
+		order: 4;
+		flex: 2 0;
+		min-width:75%;
+		margin: 1% auto;
+		height:100%;
+		font-size: 0.8rem;
+		letter-spacing: 0.03rem;
+		color: $grey-med;	
+
+		p {
+			margin: 0 auto;
+			line-height:1.3rem;
+			// text-decoration: none;	
+
+			&:nth-child(1) {
+			margin-top: 0;
+			
+			}
+		}
+		span {
+			border-bottom:1px solid #878787;
+
+			&:hover {
+				color:#099949;
+				border-bottom:1px solid #099949;
+			} 
+			a {
+				&:hover{
+					color: #099949
+				}
+			}
+		}	
+	}
+} 
+/*	SIDE NAV .........................................*/
 .menu-side {
-    flex: 1 0;
-    min-width: 25%;
-    max-width: 25%;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0 0 0 10px;
-    line-height:2rem;   
+	display: none;
+
+	@media only screen and (min-width: 700px) {
+	    flex: 1 0;
+	    min-width: 25%;
+	    max-width: 25%;
+	    font-size: 1rem;
+	    margin: 0;
+	    padding: 0 0 0 10px;
+	    line-height:2rem;   
+	}
 }
 .menu-side li a:active,
 .menu-side li a:hover {
@@ -73,54 +129,3 @@
 }
 
 /*	CAROUSEL .........................................*/
-
-.carousel-nav button:first-child {
-	padding-left: 0;
-}
-#carousel {
-	display: block;
-	visibility: visible;
-	order: 2;
-	flex: 1 0;
-	margin-bottom: 1rem;
-}
-.image-info { 
-	color: #878787;
-}
-
-
-
-.statement-body {
-	display: block;
-	order: 4;
-	flex: 2 0;
-	min-width:75%;
-	margin: 10% auto;
-	height:100%;
-	font-size: 0.8rem;
-	letter-spacing: 0.03rem;
-	color:#878787;		
-}
-.statement-body p {
-	margin: 1rem auto;
-	line-height:1.3rem;
-	text-decoration: none;
-}
-.statement-body p:nth-child(1) {
-	margin-top:0;
-	
-}
-.statement-body span {
-	border-bottom:1px solid #878787;
-}
-.statement-body span a:hover{color: #099949}
-.statement-body span:hover {
-	color:#099949;
-	border-bottom:1px solid #099949;
-} 
-/* ............MASONRY AND IMAGES LOADED STYLES...............*/
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}

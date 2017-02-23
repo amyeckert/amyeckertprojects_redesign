@@ -23,17 +23,8 @@
 		}
 	}
 }
-
-
-
-
-// #photography .grid-sizer,
-// #photography .grid-item,
-// #design .grid-sizer,
-// #design .grid-item,
-// #interactive .grid-sizer,
-// #interactive .grid-item,
-// #mixedmedia .grid-sizer,
-// #mixedmedia .grid-item {
-// 	width: 50%;
-// }
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
