@@ -7,7 +7,7 @@
         var year = date.getFullYear();
 
         var copyright = $('p.copyright').text();
-        var copyrightNotice = 'All images © ' + `${year}` + ' Amy Eckert';
+        var copyrightNotice = 'All images © ' + year + ' Amy Eckert';
         $('p.copyright').html(copyrightNotice);
         
         var width = screen.availWidth;
@@ -50,7 +50,6 @@
                 var imgInfo = document.getElementById('imgInfo');
                 var previous = document.getElementById('prevImg');
                 var next = document.getElementById('nextImg');
-
 
                 // var showHideStatement = document.querySelector('statement-body');
                 carousel.style.display = 'block';

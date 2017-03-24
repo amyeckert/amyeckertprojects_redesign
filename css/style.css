@@ -192,6 +192,30 @@ header {
     width: 90%;
     position: relative;
     margin: 1% auto; }
+    header .menu-mobile h3 {
+      width: 100%;
+      margin: 0 0 0.3rem 0;
+      padding-left: 0.4rem;
+      border-left: 1px solid #878787;
+      font-size: 0.9rem;
+      letter-spacing: 0.04rem;
+      color: #878787;
+      text-transform: uppercase; }
+      header .menu-mobile h3 a {
+        display: block;
+        padding: 1% 0 0 1%;
+        margin-bottom: 0;
+        color: #878787;
+        text-decoration: none; }
+        header .menu-mobile h3 a svg {
+          display: block;
+          -webkit-box-ordinal-group: 2;
+              -ms-flex-order: 1;
+                  order: 1;
+          height: 17px;
+          display: block;
+          margin: 0;
+          padding: 0.15rem; }
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 18px;
@@ -243,15 +267,6 @@ header {
       margin-bottom: 0;
       color: #878787;
       text-decoration: none; }
-  .main-content h3 {
-    width: 100%;
-    margin: 0 0 0.3rem 0;
-    padding-left: 0.4rem;
-    border-left: 1px solid #878787;
-    font-size: 0.9rem;
-    letter-spacing: 0.04rem;
-    color: #878787;
-    text-transform: uppercase; }
   .main-content .page-location {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -404,7 +419,8 @@ a.button:hover {
 #contact .main-content .contact-info {
   display: block; }
   #contact .main-content .contact-info .temp-contact_page {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
     #contact .main-content .contact-info .temp-contact_page:hover {
       color: #fff;
       background-color: #4866fb; }
@@ -597,14 +613,17 @@ a.button:hover {
 
 .menu-side p {
   display: block;
-  margin: 0; }
+  margin: 0;
+  color: #878787;
+  font-size: 1.3rem;
+  margin-bottom: 1rem; }
 
 .menu-side svg {
   display: block;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  height: 30px;
+  height: 17px;
   display: block;
   margin: 0;
   padding: 0.15rem; }
