@@ -163,7 +163,7 @@ header {
   min-width: 140px;
   height: 4rem;
   margin: 0 auto;
-  padding: 5%;
+  padding: 5% 5% 0 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -191,16 +191,29 @@ header {
     height: 40px;
     width: 90%;
     position: relative;
-    margin: 1% auto; }
+    margin: 4% auto; }
+    @media only screen and (min-width: 340px) {
+      header .menu-mobile {
+        margin: 3% auto; } }
+    @media only screen and (min-width: 750px) {
+      header .menu-mobile {
+        margin: 2% auto; } }
+    header .menu-mobile .btn-back {
+      display: block;
+      height: 20px;
+      padding: 0.15rem 0; }
+      header .menu-mobile .btn-back a svg {
+        display: block;
+        height: 22px; }
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 18px;
       color: #878787;
-      padding: 6px;
+      padding: 6px 0;
       width: 30%;
       position: absolute;
-      top: 5px;
-      right: 0px;
+      top: 0;
+      right: 0;
       text-align: right;
       text-transform: uppercase; }
       @media only screen and (min-width: 1024px) {
@@ -227,22 +240,6 @@ header {
   width: 100%;
   margin: 0 auto;
   /*.........SHOW CURRENT PORTFOLIO .........................*/ }
-  .main-content .back {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 100%;
-    display: block;
-    margin: 0 0 10px 0;
-    padding: 0 0 0 0%;
-    color: #878787;
-    text-transform: uppercase; }
-    .main-content .back a {
-      display: block;
-      padding: 1% 0 0 1%;
-      margin-bottom: 0;
-      color: #878787;
-      text-decoration: none; }
   .main-content h3 {
     width: 100%;
     margin: 0 0 0.3rem 0;
@@ -563,7 +560,13 @@ a.button:hover {
       -ms-flex-order: 4;
           order: 4; }
   .statement .statement-title {
-    width: 100%; }
+    width: 100%;
+    display: block;
+    padding: 1% 0 0 1%;
+    margin-bottom: 0;
+    color: #878787;
+    border-left: 1px solid #878787;
+    text-transform: uppercase; }
   .statement .statement-body {
     display: block;
     -webkit-box-ordinal-group: 5;
@@ -592,34 +595,28 @@ a.button:hover {
         border-bottom: 1px solid #099949; }
 
 /*	SIDE NAV .........................................*/
+.menu-side .project-name {
+  display: block;
+  padding: 1% 0 0 1%;
+  margin-bottom: 0;
+  color: #878787;
+  border-left: 1px solid #878787;
+  text-transform: uppercase; }
+
 .menu-side ul {
   display: none; }
-
-.menu-side p {
-  display: block;
-  margin: 0; }
-
-.menu-side svg {
-  display: block;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  height: 30px;
-  display: block;
-  margin: 0;
-  padding: 0.15rem; }
-
-@media only screen and (min-width: 700px) {
-  .menu-side {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0;
-            flex: 1 0;
-    min-width: 25%;
-    max-width: 25%;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0 0 0 10px;
-    line-height: 2rem; } }
+  @media only screen and (min-width: 1024px) {
+    .menu-side ul {
+      display: block;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0;
+              flex: 1 0;
+      min-width: 25%;
+      max-width: 25%;
+      font-size: 1rem;
+      margin: 0;
+      padding: 0 0 0 10px;
+      line-height: 2rem; } }
 
 .menu-side li a:active,
 .menu-side li a:hover {

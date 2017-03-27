@@ -85,7 +85,7 @@ header {
 	min-width: 140px;
 	height: 4rem;
 	margin: 0 auto;
-	padding: 5%;	
+	padding: 5% 5% 0 5%;	
 	position: fixed;
 	top: 0;
 	left: 0; 
@@ -124,17 +124,37 @@ header {
     	height: 40px;
 	    width: 90%;
 		position: relative;
-		margin: 1% auto;
-    	
+		margin: 4% auto;
+
+		@include bp(xsmall){
+		 	margin: 3% auto;
+		}
+		@include bp(small){
+			margin: 2% auto;
+		}
+
+    	.btn-back {
+    		display: block;
+    		height: 20px;
+			padding: 0.15rem 0 ;
+			a {
+				svg {
+					display: block;
+					height: 22px;
+				}
+
+				
+			}
+    	}
 		.menu-toggle {
 	    	display: block;
 	    	font-size: 18px;
 	    	color: $grey-med;
-	    	padding: 6px;
+	    	padding: 6px 0 ;
 	    	width: 30%;
 	    	position: absolute;
-	    	top: 5px;
-	    	right: 0px;
+	    	top: 0;
+	    	right: 0;
 	    	text-align: right;
     		text-transform: uppercase;
     		@include bp(medium) {
@@ -162,22 +182,22 @@ header {
 	width: 100%;
 	margin: 0 auto;
 
-	.back {
-		order: 1;
-		width: 100%;
-		display: block;
-		margin: 0 0 10px 0;
-		padding: 0 0 0 0%;
-		color: #878787;
-		text-transform: uppercase;
-		a {
-			display: block;
-			padding: 1% 0 0 1%;
-			margin-bottom: 0;
-			color: $grey-med;
-			text-decoration: none;
-		}
-	}
+	// .back {
+	// 	order: 1;
+	// 	width: 100%;
+	// 	display: block;
+	// 	margin: 0 0 10px 0;
+	// 	padding: 0 0 0 0%;
+	// 	color: #878787;
+	// 	text-transform: uppercase;
+	// 	a {
+	// 		display: block;
+	// 		padding: 1% 0 0 1%;
+	// 		margin-bottom: 0;
+	// 		color: $grey-med;
+	// 		text-decoration: none;
+	// 	}
+	// }
 
 	h3 {
 		width: 100%;
@@ -199,7 +219,7 @@ header {
 		display: block;
 		margin: 0;
 		padding: 0 0 0 0%;
-		color: #878787;
+		color: $grey-med;
 		text-transform: uppercase;
 
 		p {

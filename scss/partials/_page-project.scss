@@ -44,12 +44,12 @@
 
 	.statement-title {
 		width: 100%;
-		// margin: 0 0 0.3rem 0;
-		// padding-left: 0.4rem;
-		// border-left: 1px solid $grey-med;
-		// font-size: 0.9rem;
-		// letter-spacing: 0.04rem;
-		// text-transform: uppercase;
+		display: block;
+    	padding: 1% 0 0 1%;
+    	margin-bottom: 0;
+		color: $grey-med;
+		border-left: 1px solid $grey-med;
+		text-transform: uppercase;
 
 
 	}
@@ -94,42 +94,28 @@
 /*	SIDE NAV .........................................*/
 .menu-side {
 	
-	ul {
-	display: none;
-	}
-	p {
+	.project-name {
 		display: block;
-		margin: 0;
-
-	}
-	svg {
-		display: block;
-		order: 1;
-		height: 30px;
-		// width: 100%;
-		display: block;
-		margin: 0;
-		// border-left: 1px solid $grey-med;
-		padding: 0.15rem;
-		// color: #878787;
-		// text-transform: uppercase;
-		// a {
-		// 	display: block;
-		// 	padding: 1% 0 0 1%;
-		// 	margin-bottom: 0;
-		// 	color: $grey-med;
-		// 	text-decoration: none;
-		// }
+    	padding: 1% 0 0 1%;
+    	margin-bottom: 0;
+		color: $grey-med;
+		border-left: 1px solid $grey-med;
+		text-transform: uppercase;
 	}
 	
-	@media only screen and (min-width: 700px) {
-	    flex: 1 0;
-	    min-width: 25%;
-	    max-width: 25%;
-	    font-size: 1rem;
-	    margin: 0;
-	    padding: 0 0 0 10px;
-	    line-height:2rem;   
+	ul {
+		display: none;
+	
+		@include bp(medium) {
+			display: block;
+		    flex: 1 0;
+		    min-width: 25%;
+		    max-width: 25%;
+		    font-size: 1rem;
+		    margin: 0;
+		    padding: 0 0 0 10px;
+		    line-height:2rem;   
+		}
 	}
 }
 .menu-side li a:active,
