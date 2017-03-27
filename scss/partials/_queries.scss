@@ -48,14 +48,14 @@
 	// 	float: left;
 	// }
 	// nav.menu-side a button.back:hover {
-	// 	border-bottom: 1px solid #fff;
+	// 	border-bottom: 1px solid $c-white;
 	// }
 	// nav.menu-side p {
 	// 	display: block;
  //    	margin: 1% 0;
 	// 	max-width: 80%;
 	// 	float: right;
-	// 	color: #878787;
+	// 	color: $c-grey-med;
 	// 	text-align: right;	
 	// 	font-size: 0.6rem;
  //    	text-transform: uppercase;
@@ -180,7 +180,7 @@
  // 		display:none;
  // 	}*/
 	// .temp-contact_page:hover {
-	// 	    background-color: #4866fb;	    
+	// 	    background-color: $c-blue-med;	    
 	// }
 
 
@@ -195,7 +195,7 @@
 	// 	width: 90%;
 	// 	margin: 10px auto 0 auto;
 	// 	padding: 0;
-	// 	border-top: 1px solid #878787;
+	// 	border-top: 1px solid $c-grey-med;
 			
 	// }
 
@@ -269,9 +269,9 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 // 		position: fixed;
 // 		top: 0;
 // 		left: 0;
-// 		background-color: #fff;
+// 		background-color: $c-white;
 // 		transition: top 0.2s ease-in-out;	
-// 		border-bottom:1px solid #878787;
+// 		border-bottom:1px solid $c-grey-med;
 // 	}
 // 	.nav-up {
 // 		top: -40px;
@@ -284,7 +284,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 // 		max-width: 240px;
 // 		max-height: 40px;
 // 		margin: 0;
-// 		background-color: #fff;
+// 		background-color: $c-white;
 
 // 	}
 //     .hamburger { 	
@@ -305,8 +305,8 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 // 	}	 
 // 	.border-icon {
 // 	    height: 15px;
-// 	    border-top: 5px solid #b56618;
-// 	    border-bottom: 5px solid #68b7d5; 
+// 	    border-top: 5px solid $c-orange-light;
+// 	    border-bottom: 5px solid $c-cyan; 
 // 	} 
 // 	.border-icon:before {
 // 	    content:"";
@@ -314,7 +314,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 // 	    top: 15px;
 // 	    left: 0;
 // 	    width: 100%;
-// 	    border-top: 5px solid #98983e;
+// 	    border-top: 5px solid $c-green-olive;
 // 	}
 	
 // /*	#exhibitions .menu-top,*/ 
@@ -627,7 +627,7 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 // 	}
 
 // 	.temp-contact_page:hover {
-// 		    background-color: #4866fb;	    
+// 		    background-color: $c-blue-med;	    
 // 	}
 // 	.message-body {
 // 		width: 100%; 
@@ -664,10 +664,10 @@ only screen and (                min-resolution: 2dppx)  and (max-width: 700px) 
 // 	}
 // 	footer {
 // 		display: none;
-// 		color: #878787;	
+// 		color: $c-grey-med;	
 // 		max-width:1125px;
 // 		width: 100%;
-// 		border-top: 1px solid #878787;
+// 		border-top: 1px solid $c-grey-med;
 // 		text-align:left;
 // 		zoom: 1; 	
 // 	}
@@ -744,7 +744,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 // 		width: 60%;
 // 		height: auto;
 // 		margin: 12px 0;
-// 		background-color: #fff;
+// 		background-color: $c-white;
 
 // 	}
 //     .hamburger,
@@ -1006,7 +1006,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 // 		text-align:left;
 // 		font-family: 'Josefin Sans', sans-serif;
 // 		font-size: 0.7rem;	
-// 		color: #878787;
+// 		color: $c-grey-med;
 
 // 	}
 // 	.image-info p {
@@ -1015,7 +1015,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 // 		margin:0;
 	
 // 		padding:10px;
-// 		color: #878787;
+// 		color: $c-grey-med;
 // 	}
 // 	.image-info p:first-child {
 // 		padding-left:0;
@@ -1096,7 +1096,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 // 		text-indent: 4px;
 // 	}
 // 	.temp-contact_page:hover {
-// 		    background-color: #4866fb;    
+// 		    background-color: $c-blue-med;    
 // 	}
 // 	div .message-body {
 // 		width: 40%; 
@@ -1150,7 +1150,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	// 	display: block;	
 	// 	font-size: 1rem;
 	// 	margin-bottom: 15px;
-	// 	border-top: 1px solid #878787;
+	// 	border-top: 1px solid $c-grey-med;
 	// }
 
 	// .column {
@@ -1182,7 +1182,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
 	// 	margin: 0 0 0 4.5%;
 	// 	text-align: center;
 	// 	font-size: 0.8rem;
-	//  	color: #878787;
+	//  	color: $c-grey-med;
 		
 		
 	// }

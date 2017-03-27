@@ -60,9 +60,9 @@ div, p {
 }
 button { 
 	outline: none;
-	background-color: #fff;
-	border: 1px solid #fff;
-	color: #68b7d5;
+	background-color: $c-white;
+	border: 1px solid $c-white;
+	color: $c-cyan;
 	cursor: pointer;
 	padding: 7px;
 	font-family: 'Josefin Sans', sans-serif;
@@ -70,7 +70,7 @@ button {
 	font-size: .8rem;
 
 	&:hover {
-		border-bottom: 1px solid #68b7d5;
+		border-bottom: 1px solid $c-cyan;
 	}
 }
 /* .........LINKS...............................*/
@@ -89,9 +89,9 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0; 
-	background-color: $white;
+	background-color: $c-white;
 	transition: top 0.2s ease-in-out;	
-	// border-bottom:1px solid #878787;
+	// border-bottom:1px solid $c-grey-med;
 
 	@include bp(medium) {
 		width: 90%;
@@ -111,7 +111,7 @@ header {
 		display: block;
 		width: 90%;
 		margin: 0 auto;
-		background-color: #fff;
+		background-color: $c-white;
 	
 		img {
 			width: 100%;
@@ -141,16 +141,14 @@ header {
 				svg {
 					display: block;
 					height: 22px;
-				}
-
-				
+				}	
 			}
     	}
 
 		.menu-toggle {
 	    	display: block;
 	    	font-size: 18px;
-	    	color: $grey-med;
+	    	color: $c-grey-med;
 	    	padding: 6px 0 ;
 	    	width: 30%;
 	    	position: absolute;
@@ -182,24 +180,6 @@ header {
 	flex-direction: column;
 	width: 100%;
 	margin: 0 auto;
-
-	// .back {
-	// 	order: 1;
-	// 	width: 100%;
-	// 	display: block;
-	// 	margin: 0 0 10px 0;
-	// 	padding: 0 0 0 0%;
-	// 	color: #878787;
-	// 	text-transform: uppercase;
-	// 	a {
-	// 		display: block;
-	// 		padding: 1% 0 0 1%;
-	// 		margin-bottom: 0;
-	// 		color: $grey-med;
-	// 		text-decoration: none;
-	// 	}
-	// }
-
 	
 	/*.........SHOW CURRENT PORTFOLIO .........................*/
 	.page-location {
@@ -208,12 +188,12 @@ header {
 		display: block;
 		margin: 0;
 		padding: 0 0 0 0%;
-		color: $grey-med;
+		color: $c-grey-med;
 		text-transform: uppercase;
 
 		p {
 			display: block;
-			border-left: 1px solid #878787;
+			border-left: 1px solid $c-grey-med;
 			padding: 1% 0 0 1%;
 			margin-bottom: 0;	
 		}
@@ -221,78 +201,92 @@ header {
 }
 
 /*.........ABOUT PAGE .......................................*/
+.page-location {
+	order: 1;
+}
 
-.about-me {
-	width: 100%;
-	min-width: 300px;
-	padding: 1rem 2rem 1rem 1rem;
-	margin: auto;
+.bio {
+	max-width: 100%;
+	min-width: 200px;
+	padding: 1rem 0 0 0 ;
+	margin: 0 auto 2rem auto;
 	font-size: 1rem;
-	color: #878787;
-		
-}
-.about-me span {
-	border-bottom: 1px solid #878787;
-	padding: 0;
-	margin: 0;
-	font-size: 1rem;
-}
+	color:$c-grey-med;
+	order: 2;
 
-.about-me span :hover {
-	color: #099949;
-	border-bottom: 1px solid #099949;
+	a {
+		border-bottom: 1px solid $c-grey-med;
+		padding: 0;
+		margin: 0;
+		font-size: 1rem;
+		color: $c-grey-med;
+		&:hover {
+			color: $c-green-kelly;
+			border-bottom: 1px solid $c-green-kelly;
+		}
+		&:visited {
+			color: $c-grey-med;
+		}
+		span {
+			color: $c-grey-med;
+			&:hover	{
+				color: $c-green-kelly;
+			}
+			
+		}
+	}
+	p {
+		margin-bottom: 4%;
+
+	}
+	.btn-cv {
+		display: block;
+		margin:  1rem auto ;
+		max-width: 100%;
+		text-align: center;
+		color: $c-grey-med;
+		border:1px solid $c-grey-med;
+		padding: 10px;
+		font-size: 1.1rem;
+
+		&:hover {
+			color: $c-green-kelly;
+			border-color: $c-green-kelly;	
+		}
+	}
+
+}
+			
+
+
+// .clients-l {
+// 	text-align: left;
+// 	padding: 1rem 3rem;
+// 	height: auto;
+// 	float: left;
+// 	color: $c-grey-med;
+
+// }
+// .clients-r {
 	
-}
+// 	text-align:right;
+// 	padding-right: 1rem;
+// 	padding-top: 1rem;
+// 	height: auto;
+// 	float: left;
+// 	color: $c-grey-med;
 
-.about-me p {
-	margin-top: 4%;
-
-
-}
-.clients-l {
-	text-align: left;
-	padding: 1rem 3rem;
-	height: auto;
-	float: left;
-	color: #878787;
-
-}
-.clients-r {
+// }
+// .awards {
+// 	width: 100%;
+// 	height: auto;
+// 	float: right;
+// 	padding-left: 0;
+// 	color: $c-grey-med;
+// 	clear: both;
 	
-	text-align:right;
-	padding-right: 1rem;
-	padding-top: 1rem;
-	height: auto;
-	float: left;
-	color: #878787;
+// }
 
-}
-.awards {
-	width: 100%;
-	height: auto;
-	float: right;
-	padding-left: 0;
-	color: #878787;
-	clear: both;
-	
-}
-a.button {
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin-top: 2rem;
-	text-transform: uppercase;
-	font-size: 1.1rem;
-	color: #878787;
-	border:1px solid #878787;
-	padding: 10px;
-	text-align: center;
-}
-
-a.button:hover {
-	color: #099949;
-	border-color: #099949;
-}
 /*................BLOG PAGE .......................................*/
 //  someday...?
 /*.............CONTACT PAGE ..........................................*/
@@ -301,7 +295,7 @@ a.button:hover {
 #contact form {
 	display: none;
 
-	fieldset { border:none; color:#878787;}
+	fieldset { border:none; color:$c-grey-med;}
 
 	fieldset.contact {
 		padding-bottom: 0;
@@ -324,7 +318,7 @@ a.button:hover {
 		width:100%;
 		max-width:40rem;
 		padding:10px;
-		color:#878787;
+		color:$c-grey-med;
 	}
 	textarea {
 		margin-bottom: 0;
@@ -332,19 +326,19 @@ a.button:hover {
 	input[type="text"]:focus, 
 	input[type="email"]:focus,
 	textarea:focus  {
-		background:#fff;
-		border-color:#099949;
+		background:$c-white;
+		border-color:$c-green-kelly;
 		box-shadow:none;
-		outline-color: #099949;
+		outline-color: $c-green-kelly;
 	 	outline-style: solid;
 	}	
 	input[type="submit"] {
 		width: 50%;
 		border-radius:0;
 		border-style:none;
-		background-color:#099949;
-		outline-color: #099949;
-		color:#fff;
+		background-color:$c-green-kelly;
+		outline-color: $c-green-kelly;
+		color:$c-white;
 		text-transform: uppercase;
 		font-size:1rem;
 		max-width:40rem;
@@ -352,9 +346,9 @@ a.button:hover {
 	}
 	input[type="submit"]:hover {	
 		border-radius:0;
-		color:#fff;
+		color:$c-white;
 		box-shadow:none;
-		outline:1px solid #099949;
+		outline:1px solid $c-green-kelly;
 		font-size:1rem;   
 	}
 	.message-body {
@@ -387,22 +381,22 @@ a.button:hover {
 			text-align: center;
 
 			&:hover {
-				color: $white;
-				background-color: #4866fb;    
+				color: $c-white;
+				background-color: $c-blue-med;    
 			}
 				    
 			a {	
 				display: block;
 				margin-top: 0.5rem;
-				color: $grey-med;
+				color: $c-grey-med;
 				&:hover{ 
-					color: $white;
+					color: $c-white;
 				}
 				&:active {
-					color: $green-kelly;
+					color: $c-green-kelly;
 				} 
 				&:visited{
-					color: $grey-med;
+					color: $c-grey-med;
 				}
 			
 			}
@@ -426,7 +420,7 @@ a.button:hover {
 			display: none;	
 			font-size: 1rem;
 			margin-bottom: 15px;
-			border-top: 1px solid #878787;
+			border-top: 1px solid $c-grey-med;
 		}
 
 		.column {
@@ -458,7 +452,7 @@ a.button:hover {
 			margin: 0 0 0 4.5%;
 			text-align: center;
 			font-size: 0.8rem;
-		 	color: #878787;	
+		 	color: $c-grey-med;	
 		}		
 	}
 }

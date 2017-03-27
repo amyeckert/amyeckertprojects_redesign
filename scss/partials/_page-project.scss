@@ -15,7 +15,7 @@
 			}
 
 			.image-info { 
-				color: #878787;
+				color: $c-grey-med;
 				font-size: $baseFontSize;
 			}
 		}
@@ -47,8 +47,8 @@
 		display: block;
     	padding: 1% 0 0 1%;
     	margin-bottom: 0;
-		color: $grey-med;
-		border-left: 1px solid $grey-med;
+		color: $c-grey-med;
+		border-left: 1px solid $c-grey-med;
 		text-transform: uppercase;
 
 
@@ -62,7 +62,7 @@
 		height:100%;
 		font-size: 0.8rem;
 		letter-spacing: 0.03rem;
-		color: $grey-med;	
+		color: $c-grey-med;	
 
 		p {
 			margin: 0 auto;
@@ -75,31 +75,31 @@
 			}
 		}
 		span {
-			border-bottom:1px solid #878787;
-			color: $grey-med;
+			border-bottom:1px solid $c-grey-med;
+			color: $c-grey-med;
 			text-decoration: none;
 
 			&:hover {
-				color:#099949;
-				border-bottom:1px solid #099949;
+				color:$c-green-kelly;
+				border-bottom:1px solid $c-green-kelly;
 			} 
 			a {
 				// &:hover{
-				// 	color: #099949
+				// 	color: $c-green-kelly
 				// }
 			}
 		}	
 	}
 } 
-/*	SIDE NAV .........................................*/
+/*	SIDE NAV ON DESKTOP .........................................*/
 .menu-side {
 	
 	.project-name {
 		display: block;
     	padding: 1% 0 0 1%;
     	margin-bottom: 0;
-		color: $grey-med;
-		border-left: 1px solid $grey-med;
+		color: $c-grey-med;
+		border-left: 1px solid $c-grey-med;
 		text-transform: uppercase;
 	}
 	
@@ -120,7 +120,7 @@
 }
 .menu-side li a:active,
 .menu-side li a:hover {
-    color: #099949;
+    color: $c-green-kelly;
     
 }
 
@@ -149,7 +149,7 @@
 #proteus .menu-side li:nth-child(4) a,
 #kansas .menu-side li:nth-child(5) a,
 #weather .menu-side li:nth-child(6) a {
-    color: #099949;
+    color: $c-green-kelly;
 
 }
 

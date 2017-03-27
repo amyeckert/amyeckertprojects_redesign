@@ -14,9 +14,9 @@
 // /*photography*/
 // .main-menu li:first-child:hover, 
 // .main-menu li:first-child:active {
-//     background-color: #a84420;
-//     color: #fff;
-//     border-bottom: 1px solid #a84420;
+//     background-color: $c-orange-dark;
+//     color: $c-white;
+//     border-bottom: 1px solid $c-orange-dark;
 // }
 
 /*......... HAMBURGER MENU behavior stuff .........................................*/
@@ -26,7 +26,7 @@
     text-align: center;
     display: none;
     flex-direction: column;
-    background-color: $white;
+    background-color: $c-white;
     position: fixed;
     bottom: 0;
     left:0;
@@ -45,7 +45,7 @@
 
 			li {
 				height: 2.5rem;
-				color: $white;
+				color: $c-white;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -53,7 +53,7 @@
 				a {
 					display: block;
     				width: 100%;
-					color: $white;
+					color: $c-white;
 					text-decoration: none;
 				}
 			}
@@ -67,19 +67,19 @@
 
 		li {
 			&:first-child {
-			background-color:$orange-light;
+			background-color:$c-orange-light;
 		 		// &:active {
 		 		// 	color: red;
 		 		// }
 			}
 			&:nth-child(2) {
-				background-color:$teal;
+				background-color:$c-teal;
 			}
 			&:nth-child(3) {
-				background-color:$purple;
+				background-color:$c-purple;
 			}
 			&:nth-child(4) {
-				background-color:$blue-med;
+				background-color:$c-blue-med;
 			} 
 			a {
 		
@@ -93,13 +93,13 @@
 	ul {	
 		li {
 			&:first-child {
-			background-color:$green-kelly;
+			background-color:$c-green-kelly;
 			}
 			&:nth-child(2) {
-				background-color:$green-olive;
+				background-color:$c-green-olive;
 			}
 			&:nth-child(3) {
-				background-color:$cyan;
+				background-color:$c-cyan;
 			}
 		
 			a {
@@ -136,9 +136,9 @@
 } 
 .footer-col-4 {
 	display: none;
-	border-top: 1px solid $grey-med;
+	border-top: 1px solid $c-grey-med;
 	font-size: 0.8rem;
-	color: $grey-med;
+	color: $c-grey-med;
 	p {
 		display: block;
 		margin: 5% 0 5% 0;
@@ -237,7 +237,7 @@
 //         width: 16%;
 //         height: 100%;
 //         margin: 0;
-//         border-bottom: 1px solid #878787;
+//         border-bottom: 1px solid $c-grey-med;
 //     }
 //     .options-menu-horizontal ul li a {
 //         display: block;
@@ -255,51 +255,51 @@
 // 	//	MAIN NAV MENU .........................................*/
 
 // 	a:link {
-// 	    color: #878787;
+// 	    color: $c-grey-med;
 // 	    text-decoration: none;
 // 	} 
 // 	a:visited {
-// 	    color: #878787;
+// 	    color: $c-grey-med;
 // 	}
 // 	li:hover,
 // 	a:hover {
-// 	    color:#fff;
+// 	    color:$c-white;
 
 // 	}
 // 	/*design*/
 // 	.main-menu li:nth-child(2):hover, 
 // 	.main-menu li:nth-child(2):active {
-// 	    background-color: #5f9797;
-// 	    color: #fff; 
-// 	    border-bottom: 1px solid #5f9797;   
+// 	    background-color: $c-teal;
+// 	    color: $c-white; 
+// 	    border-bottom: 1px solid $c-teal;   
 // 	}
 // 	/*mixed media*/
 // 	.main-menu li:nth-child(3):hover, 
 // 	.main-menu li:nth-child(3):active {
-// 	    background-color: #8a5cd1;
-// 	    color: #fff;
-// 	    border-bottom: 1px solid #8a5cd1;
+// 	    background-color: $c-purple;
+// 	    color: $c-white;
+// 	    border-bottom: 1px solid $c-purple;
 // 	} 
 // 	/*exhibitions*/
 // 	.main-menu li:nth-child(4):hover, 
 // 	.main-menu li:nth-child(4):active {
-// 	    background-color: #820064;  
-// 	    color: #fff;
-// 	    border-bottom: 1px solid #820064;
+// 	    background-color: $c-magenta;  
+// 	    color: $c-white;
+// 	    border-bottom: 1px solid $c-magenta;
 // 	}
 // 	 /*about*/
 // 	.main-menu li:nth-child(5):hover,
 // 	.main-menu li:nth-child(5):active {
-// 	    background-color: #099949;
-// 	    color: #fff;
-// 	    border-bottom: 1px solid #099949;
+// 	    background-color: $c-green-kelly;
+// 	    color: $c-white;
+// 	    border-bottom: 1px solid $c-green-kelly;
 // 	}
 // 	/*contact*/
 // 	.main-menu li:nth-child(6):hover,
 // 	.main-menu li:nth-child(6):active {
-// 	    background-color: #b56618;
-// 	    color: #fff;
-// 	    border-bottom: 1px solid #b56618;
+// 	    background-color: $c-orange-light;
+// 	    color: $c-white;
+// 	    border-bottom: 1px solid $c-orange-light;
 // 	}
 
 // 	.share li a img {
