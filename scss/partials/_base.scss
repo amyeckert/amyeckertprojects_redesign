@@ -209,26 +209,30 @@ header {
 	order: 2;
 	display: flex;
 	flex-flow: column nowrap;
-	padding: 1rem 0 0 0;
+	padding: 0 0 0 0;
+	background-color: $c-orange-light;
+	color:$c-white;
 
 	@include bp(small){
 		flex-flow: row nowrap;
 	}
 	.bio-col-half {
-		// border: 1px solid green;
 		max-width: 100%;
 		min-width: 200px;
-		padding: 0 0 0 0 ;
+		padding: 0 30px ;
 		margin: 0 auto;
 		font-size: 1rem;
 		letter-spacing: 0.03rem;
-		color:$c-grey-med;
 		order: 2;
+		@include bp(xsmall) {
+	    	border-left: none;
 
+		}
 		@include bp(small){
-			max-width: 50%;
-			margin: 0 auto 1rem auto;
-			
+			width: 50%;
+			margin: 0 auto ;
+			padding: 60px;
+	    	border-left: 1px solid #878787;
 		}
 		p {
 			@include line-height(23);
@@ -236,51 +240,60 @@ header {
 
 		}
 	}
-	// view cv button
+	.col-l {
+		border-left: none;
+		padding: 30px 30px 0 30px;
+
+	}
+	.col-r {
+		border-left: none;
+		@include bp(small){
+			border-left: 1px solid $c-white;
+		}
+	}
+	
 	a {
-			border-bottom: 1px solid $c-grey-med;
-			padding: 0;
-			margin: 0;
-			font-size: 1rem;
-			color: $c-grey-med;
-			&:hover {
-				color: $c-green-kelly;
-				border-bottom: 1px solid $c-green-kelly;
+		border-bottom: 1px solid $c-white;
+		padding: 0;
+		margin: 0;
+		font-size: 1rem;
+		color: $c-white;
+		&:hover {
+			background-color: $c-white;
+			color: $c-orange-light;
+			border-bottom: 1px solid $c-white;
+		}
+		&:visited {
+			color: $c-white;
+		}
+		span {
+			color: $c-white;
+			&:hover	{
+				background-color: $c-white;
+				color: $c-orange-light;
 			}
-			&:visited {
-				color: $c-grey-med;
-			}
-			span {
-				color: $c-grey-med;
-				&:hover	{
-					color: $c-green-kelly;
-				}
-				
-			}
+			
+		}
 	}
 }
+// view cv button
 .btn-cv {
 	order: 3;
 	display: block;
 	margin:  1rem auto ;
-	min-width: 100%;
-	text-align: center;
-	color: $c-grey-med;
-	border:1px solid $c-grey-med;
-	padding: 10px;
+	max-width: 90%;
 	font-size: 1.1rem;
-	a {
-		border-bottom: none;
+	text-align: center;	
+	.cv-pdf {
+		padding: 10px 30px;
+		color: $c-white;
+		border:1px solid $c-white;
+		&:hover {		 
+		}
 	}
-
-
 	@include bp(small) {
-		max-width: 50%;
+		max-width: 90%;
 		align-self: flex-end;
-	}
-	&:hover {
-		color: $c-green-kelly;
-		border-color: $c-green-kelly;	
 	}
 }
 			
