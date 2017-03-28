@@ -206,55 +206,82 @@ header {
 }
 
 .bio {
-	max-width: 100%;
-	min-width: 200px;
-	padding: 1rem 0 0 0 ;
-	margin: 0 auto 2rem auto;
-	font-size: 1rem;
-	color:$c-grey-med;
 	order: 2;
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 1rem 0 0 0;
 
-	a {
-		border-bottom: 1px solid $c-grey-med;
-		padding: 0;
-		margin: 0;
+	@include bp(small){
+		flex-flow: row nowrap;
+	}
+	.bio-col-half {
+		// border: 1px solid green;
+		max-width: 100%;
+		min-width: 200px;
+		padding: 0 0 0 0 ;
+		margin: 0 auto;
 		font-size: 1rem;
-		color: $c-grey-med;
-		&:hover {
-			color: $c-green-kelly;
-			border-bottom: 1px solid $c-green-kelly;
-		}
-		&:visited {
-			color: $c-grey-med;
-		}
-		span {
-			color: $c-grey-med;
-			&:hover	{
-				color: $c-green-kelly;
-			}
+		letter-spacing: 0.03rem;
+		color:$c-grey-med;
+		order: 2;
+
+		@include bp(small){
+			max-width: 50%;
+			margin: 0 auto 1rem auto;
 			
 		}
-	}
-	p {
-		margin-bottom: 4%;
+		p {
+			@include line-height(23);
+			margin-bottom: 4%;
 
-	}
-	.btn-cv {
-		display: block;
-		margin:  1rem auto ;
-		max-width: 100%;
-		text-align: center;
-		color: $c-grey-med;
-		border:1px solid $c-grey-med;
-		padding: 10px;
-		font-size: 1.1rem;
-
-		&:hover {
-			color: $c-green-kelly;
-			border-color: $c-green-kelly;	
 		}
 	}
+	// view cv button
+	a {
+			border-bottom: 1px solid $c-grey-med;
+			padding: 0;
+			margin: 0;
+			font-size: 1rem;
+			color: $c-grey-med;
+			&:hover {
+				color: $c-green-kelly;
+				border-bottom: 1px solid $c-green-kelly;
+			}
+			&:visited {
+				color: $c-grey-med;
+			}
+			span {
+				color: $c-grey-med;
+				&:hover	{
+					color: $c-green-kelly;
+				}
+				
+			}
+	}
+}
+.btn-cv {
+	order: 3;
+	display: block;
+	margin:  1rem auto ;
+	min-width: 100%;
+	text-align: center;
+	color: $c-grey-med;
+	border:1px solid $c-grey-med;
+	padding: 10px;
+	font-size: 1.1rem;
+	a {
+		border-bottom: none;
+	}
 
+
+	@include bp(small) {
+		max-width: 50%;
+		align-self: flex-end;
+	}
+	&:hover {
+		color: $c-green-kelly;
+		border-color: $c-green-kelly;	
+	}
 }
 			
 

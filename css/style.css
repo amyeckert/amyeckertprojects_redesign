@@ -263,15 +263,42 @@ header {
           order: 1; }
 
 .bio {
-  max-width: 100%;
-  min-width: 200px;
-  padding: 1rem 0 0 0;
-  margin: 0 auto 2rem auto;
-  font-size: 1rem;
-  color: #878787;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
-          order: 2; }
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 1rem 0 0 0; }
+  @media only screen and (min-width: 750px) {
+    .bio {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap; } }
+  .bio .bio-col-half {
+    max-width: 100%;
+    min-width: 200px;
+    padding: 0 0 0 0;
+    margin: 0 auto;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
+    color: #878787;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+    @media only screen and (min-width: 750px) {
+      .bio .bio-col-half {
+        max-width: 50%;
+        margin: 0 auto 1rem auto; } }
+    .bio .bio-col-half p {
+      line-height: 1.4375rem;
+      line-height: 23px;
+      margin-bottom: 4%; }
   .bio a {
     border-bottom: 1px solid #878787;
     padding: 0;
@@ -287,20 +314,29 @@ header {
       color: #878787; }
       .bio a span:hover {
         color: #099949; }
-  .bio p {
-    margin-bottom: 4%; }
-  .bio .btn-cv {
-    display: block;
-    margin: 1rem auto;
-    max-width: 100%;
-    text-align: center;
-    color: #878787;
-    border: 1px solid #878787;
-    padding: 10px;
-    font-size: 1.1rem; }
-    .bio .btn-cv:hover {
-      color: #099949;
-      border-color: #099949; }
+
+.btn-cv {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  display: block;
+  margin: 1rem auto;
+  min-width: 100%;
+  text-align: center;
+  color: #878787;
+  border: 1px solid #878787;
+  padding: 10px;
+  font-size: 1.1rem; }
+  .btn-cv a {
+    border-bottom: none; }
+  @media only screen and (min-width: 750px) {
+    .btn-cv {
+      max-width: 50%;
+      -ms-flex-item-align: end;
+          align-self: flex-end; } }
+  .btn-cv:hover {
+    color: #099949;
+    border-color: #099949; }
 
 /*................BLOG PAGE .......................................*/
 /*.............CONTACT PAGE ..........................................*/
@@ -553,14 +589,15 @@ header {
         -ms-flex: 2 0;
             flex: 2 0;
     min-width: 75%;
-    margin: 1% auto;
+    margin: 3% auto;
     height: 100%;
     font-size: 0.8rem;
     letter-spacing: 0.03rem;
     color: #878787; }
     .statement .statement-body p {
       margin: 0 auto;
-      line-height: 1.3rem; }
+      line-height: 1.375rem;
+      line-height: 22px; }
       .statement .statement-body p:nth-child(1) {
         margin-top: 0; }
     .statement .statement-body span {
