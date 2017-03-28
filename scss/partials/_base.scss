@@ -39,6 +39,10 @@ body {
  	display: -webkit-flex;     /* NEW - Chrome */
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	flex-direction: column;	
+
+	@include bp(small) {
+		margin: 4% auto;
+	}
 }
 nav ul li a { font-size: 1.2rem;}
 ul {
@@ -62,16 +66,12 @@ button {
 	outline: none;
 	background-color: $c-white;
 	border: 1px solid $c-white;
-	color: $c-cyan;
 	cursor: pointer;
 	padding: 7px;
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
-	font-size: .8rem;
+	
 
-	&:hover {
-		border-bottom: 1px solid $c-cyan;
-	}
 }
 /* .........LINKS...............................*/
 
@@ -93,30 +93,31 @@ header {
 	transition: top 0.2s ease-in-out;	
 	// border-bottom:1px solid $c-grey-med;
 
-	@include bp(medium) {
+	@include bp(small) {
+		height: 120px;
 		width: 90%;
 		margin: 0 auto;
-		padding: 1% 5%;
-		};
-		
-	.menu-top {
-		display: none;
+		padding: 3% 5% 0 5%;
+	// }
+	// @include bp(medium) {
+		display: flex;
+		flex-direction: row;
+		height: 80px;
 
-		@include bp(medium){
-			display: block;
-		}
-	}
-		
+	}		
 	.logo {
-		display: block;
+		flex: 2 1 auto;
 		width: 90%;
 		margin: 0 auto;
-		background-color: $c-white;
-	
+		@include bp(small){
+			margin: 0;
+		}
 		img {
 			width: 100%;
+			@include bp(small){
+				width: 75%;
+			}
 		}
-
 	}
 
 	// ****** menu toggle *************
@@ -130,7 +131,15 @@ header {
 		 	margin: 3% auto;
 		}
 		@include bp(small){
-			margin: 2% auto;
+			width: 50%;
+			margin: 0;
+			float: right;
+    		// border: 1px solid orange;
+		}
+		@include bp(medium) {
+			margin: 0;
+    		flex: 0 1 auto;
+
 		}
 
     	.btn-back {
@@ -144,7 +153,6 @@ header {
 				}	
 			}
     	}
-
 		.menu-toggle {
 	    	display: block;
 	    	font-size: 18px;
@@ -156,20 +164,29 @@ header {
 	    	right: 0;
 	    	text-align: right;
     		text-transform: uppercase;
-    		@include bp(medium) {
-    			right: 35px;
+
+    		@include bp(small) {
+    			border-right: 1px solid $c-grey-med;
+			    padding: 3% 3% 1% 0;
+			    margin-bottom: 0;
+			    display: block;
+			    @include font-size(22);
     		}
 		}
 	}
 	.nav-up {
-		top: $nav-up;
-	
+		top: $nav-up;	
 	}
 	.nav-down{
 		top: $nav-down;
 	}
-
-} 
+}//------ desktop menu style-----------------------------// 
+.menu-top {
+	display: none;
+	@include bp(medium){
+	
+	}
+}
 //all pages except LANDING pages. 
 .main-content {
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -181,6 +198,9 @@ header {
 	width: 100%;
 	margin: 0 auto;
 	
+	@include bp(medium) {
+		margin: 0 auto;
+	}
 	/*.........SHOW CURRENT PORTFOLIO .........................*/
 	.page-location {
 		order: 1;
@@ -204,7 +224,6 @@ header {
 .page-location {
 	order: 1;
 }
-
 .bio {
 	order: 2;
 	display: flex;
@@ -237,18 +256,22 @@ header {
 		p {
 			@include line-height(23);
 			margin-bottom: 4%;
-
 		}
 	}
 	.col-l {
 		border-left: none;
 		padding: 30px 30px 0 30px;
 
+		@include bp(small) {
+			padding: 45px;
+		}
 	}
 	.col-r {
 		border-left: none;
+
 		@include bp(small){
 			border-left: 1px solid $c-white;
+			padding: 45px;
 		}
 	}
 	
@@ -280,7 +303,7 @@ header {
 .btn-cv {
 	order: 3;
 	display: block;
-	margin:  1rem auto ;
+	margin:  2rem auto ;
 	max-width: 90%;
 	font-size: 1.1rem;
 	text-align: center;	
@@ -296,41 +319,10 @@ header {
 		align-self: flex-end;
 	}
 }
-			
-
-
-// .clients-l {
-// 	text-align: left;
-// 	padding: 1rem 3rem;
-// 	height: auto;
-// 	float: left;
-// 	color: $c-grey-med;
-
-// }
-// .clients-r {
-	
-// 	text-align:right;
-// 	padding-right: 1rem;
-// 	padding-top: 1rem;
-// 	height: auto;
-// 	float: left;
-// 	color: $c-grey-med;
-
-// }
-// .awards {
-// 	width: 100%;
-// 	height: auto;
-// 	float: right;
-// 	padding-left: 0;
-// 	color: $c-grey-med;
-// 	clear: both;
-	
-// }
 
 /*................BLOG PAGE .......................................*/
 //  someday...?
 /*.............CONTACT PAGE ..........................................*/
-
 
 #contact form {
 	display: none;
@@ -451,7 +443,7 @@ header {
 .footer {
 	display: none;
 
-	@media only screen and (min-width: 1300px ) {
+	@include bp(medium) {
 		#home footer {
 			display: none;
 		}

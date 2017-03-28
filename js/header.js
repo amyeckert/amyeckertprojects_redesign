@@ -7,7 +7,8 @@
 	var lastScrollTop = 0;
 	var delta = 5;
 	var navbarHeight = $('header').outerHeight();
-
+	console.log(navbarHeight);
+	
 	$(window).scroll(function(event){
 	    didScroll = true;
 	});

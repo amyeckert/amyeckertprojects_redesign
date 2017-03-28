@@ -118,6 +118,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (min-width: 750px) {
+    .wrapper {
+      margin: 4% auto; } }
 
 nav ul li a {
   font-size: 1.2rem; }
@@ -140,14 +143,10 @@ button {
   outline: none;
   background-color: #fff;
   border: 1px solid #fff;
-  color: #68b7d5;
   cursor: pointer;
   padding: 7px;
   font-family: 'Josefin Sans', sans-serif;
-  text-transform: uppercase;
-  font-size: .8rem; }
-  button:hover {
-    border-bottom: 1px solid #68b7d5; }
+  text-transform: uppercase; }
 
 /* .........LINKS...............................*/
 a {
@@ -170,23 +169,34 @@ header {
   background-color: #fff;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 750px) {
     header {
+      height: 120px;
       width: 90%;
       margin: 0 auto;
-      padding: 1% 5%; } }
-  header .menu-top {
-    display: none; }
-    @media only screen and (min-width: 1024px) {
-      header .menu-top {
-        display: block; } }
+      padding: 3% 5% 0 5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      height: 80px; } }
   header .logo {
-    display: block;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 1 auto;
+            flex: 2 1 auto;
     width: 90%;
-    margin: 0 auto;
-    background-color: #fff; }
+    margin: 0 auto; }
+    @media only screen and (min-width: 750px) {
+      header .logo {
+        margin: 0; } }
     header .logo img {
       width: 100%; }
+      @media only screen and (min-width: 750px) {
+        header .logo img {
+          width: 75%; } }
   header .menu-mobile {
     height: 40px;
     width: 90%;
@@ -197,7 +207,15 @@ header {
         margin: 3% auto; } }
     @media only screen and (min-width: 750px) {
       header .menu-mobile {
-        margin: 2% auto; } }
+        width: 50%;
+        margin: 0;
+        float: right; } }
+    @media only screen and (min-width: 1024px) {
+      header .menu-mobile {
+        margin: 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 auto;
+                flex: 0 1 auto; } }
     header .menu-mobile .btn-back {
       display: block;
       height: 20px;
@@ -216,13 +234,21 @@ header {
       right: 0;
       text-align: right;
       text-transform: uppercase; }
-      @media only screen and (min-width: 1024px) {
+      @media only screen and (min-width: 750px) {
         header .menu-mobile .menu-toggle {
-          right: 35px; } }
+          border-right: 1px solid #878787;
+          padding: 3% 3% 1% 0;
+          margin-bottom: 0;
+          display: block;
+          font-size: 1.375rem;
+          font-size: 22px; } }
   header .nav-up {
     top: -3rem; }
   header .nav-down {
     top: 3rem; }
+
+.menu-top {
+  display: none; }
 
 .main-content {
   display: -webkit-box;
@@ -240,6 +266,9 @@ header {
   width: 100%;
   margin: 0 auto;
   /*.........SHOW CURRENT PORTFOLIO .........................*/ }
+  @media only screen and (min-width: 1024px) {
+    .main-content {
+      margin: 0 auto; } }
   .main-content .page-location {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -308,11 +337,15 @@ header {
   .bio .col-l {
     border-left: none;
     padding: 30px 30px 0 30px; }
+    @media only screen and (min-width: 750px) {
+      .bio .col-l {
+        padding: 45px; } }
   .bio .col-r {
     border-left: none; }
     @media only screen and (min-width: 750px) {
       .bio .col-r {
-        border-left: 1px solid #fff; } }
+        border-left: 1px solid #fff;
+        padding: 45px; } }
   .bio a {
     border-bottom: 1px solid #fff;
     padding: 0;
@@ -336,7 +369,7 @@ header {
       -ms-flex-order: 3;
           order: 3;
   display: block;
-  margin: 1rem auto;
+  margin: 2rem auto;
   max-width: 90%;
   font-size: 1.1rem;
   text-align: center; }
@@ -447,7 +480,7 @@ header {
  ONLY DISPLAYS AT DESKTOP WIDTH */
 .footer {
   display: none; }
-  @media only screen and (min-width: 1300px) {
+  @media only screen and (min-width: 1024px) {
     .footer #home footer {
       display: none; }
     .footer .footer {
