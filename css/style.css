@@ -525,12 +525,21 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
+  @media only screen and (min-width: 750px) {
+    .grid {
+      max-width: 100%; } }
   .grid .grid-sizer {
     width: 100%;
     height: auto; }
+    @media only screen and (min-width: 750px) {
+      .grid .grid-sizer {
+        max-width: 33.333%; } }
     .grid .grid-sizer .grid-item {
       width: 100%;
       height: auto; }
+      @media only screen and (min-width: 750px) {
+        .grid .grid-sizer .grid-item {
+          width: 33.333%; } }
       .grid .grid-sizer .grid-item img {
         width: 100%;
         height: auto; }
@@ -593,7 +602,10 @@ header {
 /*......... PROJECT PAGES.......................................*/
 #carousel {
   display: none; }
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 750px) {
+    #carousel {
+      display: none; } }
+  @media only screen and (min-width: 1200px) {
     #carousel {
       display: block;
       visibility: visible;
@@ -603,10 +615,11 @@ header {
       -webkit-box-flex: 1;
           -ms-flex: 1 0;
               flex: 1 0;
-      margin-bottom: 1rem; }
-      #carousel .big .image-info {
-        color: #878787;
-        font-size: 16; } }
+      margin-bottom: 1rem; } }
+  #carousel .big .image-info {
+    display: none;
+    color: #878787;
+    font-size: 16; }
 
 .carousel-nav {
   display: none; }

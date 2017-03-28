@@ -2,34 +2,30 @@
 #carousel {
 	display: none;
 
-	@media only screen and (min-width: 700px) {
+	@include bp(small) {
+		display: none;
+	}
+	@include bp(large){
 		display: block;
 		visibility: visible;
 		order: 1;
 		flex: 1 0;
 		margin-bottom: 1rem;
-		.big {
+	}
+	.big {
 
-			.big-img-container {
+		.big-img-container {
 
-			}
-
-			.image-info { 
-				color: $c-grey-med;
-				font-size: $baseFontSize;
-			}
 		}
-		
-		//grid
-		.thumbs {
 
-			//grid-sizer
-			.thumbs-container {
-
-			}
-		} 
+		.image-info { 
+			display: none;
+			color: $c-grey-med;
+			font-size: $baseFontSize;
+		}
 	}
 }
+
 .carousel-nav {
 	display: none;
 }
@@ -50,9 +46,8 @@
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
 		text-transform: uppercase;
-
-
 	}
+	
 	.statement-body {
 		display: block;
 		order: 4;
