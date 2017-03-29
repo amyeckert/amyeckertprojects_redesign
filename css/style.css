@@ -679,6 +679,7 @@ header {
       background-repeat: no-repeat; }
     #carousel .big .image-info {
       display: block;
+      visibility: hidden;
       color: #878787;
       font-size: 16;
       visibility: visible;
@@ -694,13 +695,12 @@ header {
           padding-left: 0; }
 
 .statement {
+  display: block;
   margin: 1rem 0 0 0;
   padding: 0 0 0 0;
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-  -ms-flex-item-align: end;
-      align-self: flex-end; }
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
   .statement .statement-title {
     width: 100%;
     display: block;
@@ -710,13 +710,7 @@ header {
     border-left: 1px solid #878787;
     text-transform: uppercase; }
   .statement .statement-body {
-    display: block;
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-    -webkit-box-flex: 2;
-        -ms-flex: 2 0;
-            flex: 2 0;
+    display: none;
     min-width: 75%;
     margin: 3% auto;
     height: 100%;
@@ -736,6 +730,8 @@ header {
       .statement .statement-body span:hover {
         color: #099949;
         border-bottom: 1px solid #099949; }
+      .statement .statement-body span a:hover {
+        color: #099949; }
 
 /*	SIDE NAV ON DESKTOP .........................................*/
 /*.PHOTOGRPHY side menu......... */

@@ -24,14 +24,17 @@
           $grid.masonry();
         });  
 
+        var statement = document.querySelector('.statement');
+        var statementBody =document.querySelector('.statement-body');
+        var carousel = document.getElementById('#carousel');
+       
         // for tablet and desktop
         if (width >= 700 ) {
-            console.log(width);
+
             $('.next').hide();
             $('.previous').hide();
             $('.thumbs-only').hide();
 
-            console.log('hid carousel nav');
          /*-------------------------------------------------------------------------------------------------
             when a thumbnail is clicked on / hides thumbnail grid / shows image big */
 
@@ -44,7 +47,7 @@
 
                 $('.item.isActive').removeClass('isActive');
                 $(this).addClass('isActive');
-                console.log(e);
+                // console.log(e);
 
                 // Figure out which thumbnail is chosen
                 var chosen_thumb = $(this).find('img').attr('src');
@@ -72,10 +75,8 @@
                 imgInfo.style.visibility = 'visible';
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
-                // showHideStatement.display = 'none';
+                statement.style.order = 2;
 
-                // return header to visible position//   
-                console.log(chosen_thumb, bigImg, imgInfo);
             });
             /*-------------------------------------------------------------------------------------------------
                 previous or next button */
@@ -184,6 +185,14 @@
             });
             /*-------------------------------------------------------------------------------------------------
                 SHOW / HIDE STATEMENT  */
+            $('.statement').on('click', function(e) {
+                e.preventDefault();
+                // statementBody.style.display = 'block';
+                $(statementBody).toggle();
+                console.log(statementBody);
+
+
+            });
 
                 
         }

@@ -130,6 +130,7 @@
 
 		.image-info { 
 			display: block;
+			visibility: hidden;
 			color: $c-grey-med;
 			font-size: $baseFontSize;
 			visibility: visible;
@@ -154,10 +155,10 @@
 
 // ----- STATEMENT ----------------------//
 .statement {
+	display: block;
 	margin: 1rem 0 0 0 ;
 	padding: 0 0 0 0 ;
-	order: 4;
-	align-self: flex-end;
+	order: 1;
 
 	.statement-title {
 		width: 100%;
@@ -170,9 +171,7 @@
 	}
 	
 	.statement-body {
-		display: block;
-		order: 4;
-		flex: 2 0;
+		display: none;
 		min-width:75%;
 		margin: 3% auto;
 		height:100%;
@@ -199,9 +198,9 @@
 				border-bottom:1px solid $c-green-kelly;
 			} 
 			a {
-				// &:hover{
-				// 	color: $c-green-kelly
-				// }
+				&:hover{
+					color: $c-green-kelly
+				}
 			}
 		}	
 	}
