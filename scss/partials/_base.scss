@@ -325,74 +325,6 @@ header {
 //  someday...?
 /*.............CONTACT PAGE ..........................................*/
 
-#contact form {
-	width: 50%;
-	display: block;
-	order: 2;
-
-	fieldset { border:none; color:$c-grey-med;}
-
-	fieldset.contact {
-		padding-bottom: 0;
-	}
-	fieldset.contact-message {
-		padding-top: 0;
-	}
-	label { 
-		display:block;
-		padding-bottom: 5px; 
-	}
-	input[type="text"], 
-	input[type="email"],
-	input[type="search"],
-	input[type="number"],
-	textarea {
-		box-sizing:border-box;
-		display:block;
-		margin-bottom: 19px;
-		width:100%;
-		max-width:40rem;
-		padding:10px;
-		color:$c-grey-med;
-	}
-	textarea {
-		margin-bottom: 0;
-	}	
-	input[type="text"]:focus, 
-	input[type="email"]:focus,
-	textarea:focus  {
-		background:$c-white;
-		border-color:$c-green-kelly;
-		box-shadow:none;
-		outline-color: $c-green-kelly;
-	 	outline-style: solid;
-	}	
-	input[type="submit"] {
-		width: 50%;
-		border-radius:0;
-		border-style:none;
-		background-color:$c-green-kelly;
-		outline-color: $c-green-kelly;
-		color:$c-white;
-		text-transform: uppercase;
-		font-size:1rem;
-		max-width:40rem;
-
-	}
-	input[type="submit"]:hover {	
-		border-radius:0;
-		color:$c-white;
-		box-shadow:none;
-		outline:1px solid $c-green-kelly;
-		font-size:1rem;   
-	}
-	.message-body {
-		margin-top: 20px;
-		width: 100%; 
-		float: left;
-		clear:both;
-	}
-}
 #contact .main-content {
 	display: flex;
 	flex-direction: row;
@@ -414,38 +346,95 @@ header {
 		order: 2;
 		display: block;
 		// margin-top: 1rem;
+		form {
+			width: 50%;
+			display: block;
+			order: 2;
 
-		// .temp-contact_page {
-		// 	display: none;
-		// 	width: 100%;
-		// 	text-align: center;
+			fieldset { border:none; color:$c-grey-med;}
 
-		// 	&:hover {
-		// 		color: $c-white;
-		// 		background-color: $c-blue-med;    
-		// 	}
-				    
-			a {	
-				display: block;
-				margin-top: 0.5rem;
-				color: $c-grey-med;
-				&:hover{ 
-					color: $c-white;
-				}
-				&:active {
-					color: $c-green-kelly;
-				} 
-				&:visited{
-					color: $c-grey-med;
-				}
-			
+			fieldset.contact {
+				padding-bottom: 0;
 			}
-			p {
-				margin-bottom: 0.5rem;
+			fieldset.contact-message {
+				padding-top: 0;
+			}
+			label { 
+				display:block;
+				padding-bottom: 5px; 
+			}
+			input[type="text"], 
+			input[type="email"],
+			input[type="search"],
+			input[type="number"],
+			textarea {
+				box-sizing:border-box;
+				display:block;
+				margin-bottom: 19px;
+				width:100%;
+				max-width:40rem;
+				padding:10px;
+				color:$c-grey-med;
+			}
+			textarea {
+				margin-bottom: 0;
+			}	
+			input[type="text"]:focus, 
+			input[type="email"]:focus,
+			textarea:focus  {
+				background:$c-white;
+				border-color:$c-green-kelly;
+				box-shadow:none;
+				outline-color: $c-green-kelly;
+			 	outline-style: solid;
+			}	
+			input[type="submit"] {
+				width: 50%;
+				border-radius:0;
+				border-style:none;
+				background-color:$c-green-kelly;
+				outline-color: $c-green-kelly;
+				color:$c-white;
+				text-transform: uppercase;
+				font-size:1rem;
+				max-width:40rem;
+
+			}
+			input[type="submit"]:hover {	
+				border-radius:0;
+				color:$c-white;
+				box-shadow:none;
+				outline:1px solid $c-green-kelly;
+				font-size:1rem;   
+			}
+			.message-body {
+				margin-top: 20px;
+				width: 100%; 
+				float: left;
+				clear:both;
 			}
 		}
 	}
 }
+
+			// a {	
+			// 	display: block;
+			// 	margin-top: 0.5rem;
+			// 	color: $c-grey-med;
+			// 	&:hover{ 
+			// 		color: $c-white;
+			// 	}
+			// 	&:active {
+			// 		color: $c-green-kelly;
+			// 	} 
+			// 	&:visited{
+			// 		color: $c-grey-med;
+			// 	}
+			
+			// }
+			// p {
+			// 	margin-bottom: 0.5rem;
+			// }
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */
 .footer {
