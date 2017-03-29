@@ -1,42 +1,163 @@
-/*......... PROJECT PAGES.......................................*/
+//-------------- all pages except LANDING pages. 
+.main-content {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+ 	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	flex-direction: column;
+	width: 100%;
+	margin: 0 auto;
+	
+	@include bp(medium) {
+		margin: 0 auto;
+	}
+	/*.........SHOW CURRENT PORTFOLIO .........................*/
+	// .page-location {
+	// 	order: 1;
+	// 	width: 100%;
+	// 	display: block;
+	// 	margin: 0;
+	// 	padding: 0 0 0 0%;
+	// 	color: $c-grey-med;
+	// 	text-transform: uppercase;
+
+	// 	p {
+	// 		display: block;
+	// 		border-left: 1px solid $c-grey-med;
+	// 		padding: 1% 0 0 1%;
+	// 		margin-bottom: 0;	
+	// 	}
+	// }
+	
+	.menu-side {
+		order: 1;
+
+		.project-name {
+			display: block;
+	    	padding: 1% 0 0 1%;
+	    	margin-bottom: 0;
+			color: $c-grey-med;
+			border-left: 1px solid $c-grey-med;
+			text-transform: uppercase;
+		}
+		
+		ul {
+			display: none;
+		
+			@include bp(medium) {
+				display: block;
+			    flex: 1 0;
+			    min-width: 25%;
+			    max-width: 25%;
+			    font-size: 1rem;
+			    margin: 0;
+			    padding: 0 0 0 10px;
+			    line-height:2rem;   
+			}
+
+			&li:active, 
+			&li:hover {
+    			color: $c-green-kelly;
+				
+			}
+		}
+
+		.carousel-nav {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			
+			button{ 
+				display: inline-block;
+				@include font-size(30);
+				height: 25px;
+				color: $c-grey-med;
+				padding: 10px;
+				@include line-height(25);
+			}
+			.thumbs-only {
+				order: 1;
+				padding-left: 0;
+				svg {
+					display: inline-block;
+					height: 25px;
+				}
+			}
+			.previous {
+				order: 2;
+
+			}
+			.next {
+				order: 3;
+
+			}
+		}
+	}
+}
+/*......... CAROUSEL .......................................*/
 #carousel {
 	display: none;
 
-	@include bp(small) {
-		display: none;
-	}
-	@include bp(large){
+	@include bp(small){
 		display: block;
 		visibility: visible;
-		order: 1;
+		order: 2;
 		flex: 1 0;
 		margin-bottom: 1rem;
 	}
 	.big {
+		display: none;
+
+		@include bp(small) {
+			display: block;
+			width: 100%;
+			height: 600px;
+			z-index: 1;
+		}
 
 		.big-img-container {
+			display: block;
+			visibility: visible;
+			width: 100%;
+			height: 600px;
+			margin-left: 0;
+			margin-top: 0;
+			background-size: contain;
+			background-repeat: no-repeat;
 
 		}
 
 		.image-info { 
-			display: none;
+			display: block;
 			color: $c-grey-med;
 			font-size: $baseFontSize;
+			visibility: visible;
+			height: 40px; 
+			width: 60%;
+			margin-left: 0;
+			text-align: left;
+			p {
+				display: inline-block;
+				margin: 0;
+				padding: 10px;
+				&:first-child {
+					padding-left:0;
+				}
+			}
 		}
 	}
 }
 
-.carousel-nav {
-	display: none;
-}
-// .carousel-nav button:first-child {
-// 	padding-left: 0;
-// }
+// 	FOR THUMBNAIL GRID STYLES REFER TO _grid.scss -------//
 
+
+// ----- STATEMENT ----------------------//
 .statement {
 	margin: 1rem 0 0 0 ;
 	padding: 0 0 0 0 ;
 	order: 4;
+	align-self: flex-end;
 
 	.statement-title {
 		width: 100%;
@@ -85,38 +206,9 @@
 		}	
 	}
 } 
+
 /*	SIDE NAV ON DESKTOP .........................................*/
-.menu-side {
-	
-	.project-name {
-		display: block;
-    	padding: 1% 0 0 1%;
-    	margin-bottom: 0;
-		color: $c-grey-med;
-		border-left: 1px solid $c-grey-med;
-		text-transform: uppercase;
-	}
-	
-	ul {
-		display: none;
-	
-		@include bp(medium) {
-			display: block;
-		    flex: 1 0;
-		    min-width: 25%;
-		    max-width: 25%;
-		    font-size: 1rem;
-		    margin: 0;
-		    padding: 0 0 0 10px;
-		    line-height:2rem;   
-		}
-	}
-}
-.menu-side li a:active,
-.menu-side li a:hover {
-    color: $c-green-kelly;
-    
-}
+
 
 /*.PHOTOGRPHY side menu......... */
 #manhome .menu-side li:nth-child(1) a,
@@ -146,5 +238,3 @@
     color: $c-green-kelly;
 
 }
-
-/*	CAROUSEL .........................................*/

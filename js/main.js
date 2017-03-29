@@ -26,11 +26,21 @@
 
         // for tablet and desktop
         if (width >= 700 ) {
+            console.log(width);
+            $('.next').hide();
+            $('.previous').hide();
+            $('.thumbs-only').hide();
+
+            console.log('hid carousel nav');
          /*-------------------------------------------------------------------------------------------------
             when a thumbnail is clicked on / hides thumbnail grid / shows image big */
 
             $('.item').on('click', function(e) {
                 e.preventDefault();
+
+                $('.thumbs-only').show();
+                $('.next').show();
+                $('.previous').show();
 
                 $('.item.isActive').removeClass('isActive');
                 $(this).addClass('isActive');
@@ -59,7 +69,7 @@
                 cNav.style.visibility = 'visible';
                 thumbs.style.display =  'none';
 
-                imgInfo.style.visibility = 'hidden';
+                imgInfo.style.visibility = 'visible';
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
                 // showHideStatement.display = 'none';

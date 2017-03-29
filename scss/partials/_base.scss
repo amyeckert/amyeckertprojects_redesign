@@ -46,8 +46,6 @@ body {
 }
 nav ul li a { font-size: 1.2rem;}
 ul {
-	// margin:0;
-	// padding:0;
 	list-style: none;
 }
 img {
@@ -183,42 +181,38 @@ header {
 }//------ desktop menu style-----------------------------// 
 .menu-top {
 	display: none;
-	@include bp(medium){
-	
-	}
 }
-//all pages except LANDING pages. 
-.main-content {
-	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
- 	display: -ms-flexbox;      /* TWEENER - IE 10 */
- 	display: -webkit-flex;     /* NEW - Chrome */
-  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	flex-direction: column;
-	width: 100%;
-	margin: 0 auto;
+// //all pages except PROJECT pages. 
+// .main-content {
+// 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+//   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+//  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+//  	display: -webkit-flex;     /* NEW - Chrome */
+//   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+// 	flex-direction: column;
+// 	width: 100%;
+// 	margin: 0 auto;
 	
-	@include bp(medium) {
-		margin: 0 auto;
-	}
-	/*.........SHOW CURRENT PORTFOLIO .........................*/
-	.page-location {
-		order: 1;
-		width: 100%;
-		display: block;
-		margin: 0;
-		padding: 0 0 0 0%;
-		color: $c-grey-med;
-		text-transform: uppercase;
+// 	@include bp(medium) {
+// 		margin: 0 auto;
+// 	}
+// 	/*.........SHOW CURRENT PORTFOLIO .........................*/
+// 	.page-location {
+// 		order: 1;
+// 		width: 100%;
+// 		display: block;
+// 		margin: 0;
+// 		padding: 0 0 0 0%;
+// 		color: $c-grey-med;
+// 		text-transform: uppercase;
 
-		p {
-			display: block;
-			border-left: 1px solid $c-grey-med;
-			padding: 1% 0 0 1%;
-			margin-bottom: 0;	
-		}
-	}
-}
+// 		p {
+// 			display: block;
+// 			border-left: 1px solid $c-grey-med;
+// 			padding: 1% 0 0 1%;
+// 			margin-bottom: 0;	
+// 		}
+// 	}
 
 /*.........ABOUT PAGE .......................................*/
 .page-location {
