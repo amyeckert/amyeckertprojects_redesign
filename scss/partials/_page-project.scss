@@ -13,22 +13,22 @@
 		margin: 0 auto;
 	}
 	/*.........SHOW CURRENT PORTFOLIO .........................*/
-	// .page-location {
-	// 	order: 1;
-	// 	width: 100%;
-	// 	display: block;
-	// 	margin: 0;
-	// 	padding: 0 0 0 0%;
-	// 	color: $c-grey-med;
-	// 	text-transform: uppercase;
+	.page-location {
+		order: 1;
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0%;
+		color: $c-grey-med;
+		text-transform: uppercase;
 
-	// 	p {
-	// 		display: block;
-	// 		border-left: 1px solid $c-grey-med;
-	// 		padding: 1% 0 0 1%;
-	// 		margin-bottom: 0;	
-	// 	}
-	// }
+		p {
+			display: block;
+			border-left: 1px solid $c-grey-med;
+			padding: 1% 0 0 1%;
+			margin-bottom: 0;	
+		}
+	}
 	
 	.menu-side {
 		order: 1;
@@ -63,36 +63,7 @@
 			}
 		}
 
-		.carousel-nav {
-			display: flex;
-			flex-direction: row;
-			align-items: stretch;
-			
-			button{ 
-				display: inline-block;
-				@include font-size(30);
-				height: 25px;
-				color: $c-grey-med;
-				padding: 10px;
-				@include line-height(25);
-			}
-			.thumbs-only {
-				order: 1;
-				padding-left: 0;
-				svg {
-					display: inline-block;
-					height: 25px;
-				}
-			}
-			.previous {
-				order: 2;
 
-			}
-			.next {
-				order: 3;
-
-			}
-		}
 	}
 }
 /*......... CAROUSEL .......................................*/
@@ -100,11 +71,11 @@
 	display: none;
 
 	@include bp(small){
-		display: block;
+		display: none;
 		visibility: visible;
 		order: 2;
 		flex: 1 0;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 	}
 	.big {
 		display: none;
@@ -151,7 +122,40 @@
 }
 
 // 	FOR THUMBNAIL GRID STYLES REFER TO _grid.scss -------//
+.carousel-nav {
+	display: none;
 
+	@include bp(small) {
+		display: flex;
+		flex-direction: row;
+		order: 2;
+		align-items: stretch;
+		
+		button{ 
+			display: inline-block;
+			@include font-size(30);
+			height: 25px;
+			color: $c-grey-med;
+			padding: 10px;
+			@include line-height(25);
+		}
+		.thumbs-only {
+			order: 1;
+			padding-left: 0;
+			svg {
+				display: inline-block;
+				height: 25px;
+			}
+		}
+		.previous {
+			order: 2;
+
+		}
+		.next {
+			order: 3;
+		}
+	}	
+}
 
 // ----- STATEMENT ----------------------//
 .statement {
