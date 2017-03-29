@@ -377,6 +377,8 @@ header {
     padding: 10px 30px;
     color: #fff;
     border: 1px solid #fff; }
+    .btn-cv .cv-pdf:hover {
+      color: #b56618; }
   @media only screen and (min-width: 750px) {
     .btn-cv {
       max-width: 90%;
@@ -386,7 +388,11 @@ header {
 /*................BLOG PAGE .......................................*/
 /*.............CONTACT PAGE ..........................................*/
 #contact form {
-  display: none; }
+  width: 50%;
+  display: block;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
   #contact form fieldset {
     border: none;
     color: #878787; }
@@ -444,37 +450,47 @@ header {
     float: left;
     clear: both; }
 
-#contact .main-content .page-location {
-  display: none; }
-
-#contact .main-content .contact-img-container {
-  display: block;
-  width: 100%;
-  height: auto; }
-  #contact .main-content .contact-img-container img {
-    max-width: 100%;
-    margin: 0 auto; }
-
-#contact .main-content .contact-info {
-  display: block; }
-  #contact .main-content .contact-info .temp-contact_page {
+#contact .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  #contact .main-content .page-location {
+    display: none; }
+  #contact .main-content .contact-img-container {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: block;
     width: 100%;
-    text-align: center; }
-    #contact .main-content .contact-info .temp-contact_page:hover {
-      color: #fff;
-      background-color: #4866fb; }
-    #contact .main-content .contact-info .temp-contact_page a {
-      display: block;
-      margin-top: 0.5rem;
-      color: #878787; }
-      #contact .main-content .contact-info .temp-contact_page a:hover {
-        color: #fff; }
-      #contact .main-content .contact-info .temp-contact_page a:active {
-        color: #099949; }
-      #contact .main-content .contact-info .temp-contact_page a:visited {
+    height: auto; }
+    #contact .main-content .contact-img-container img {
+      max-width: 100%;
+      margin: 0 auto; }
+  #contact .main-content .contact-info {
+    display: block; }
+    #contact .main-content .contact-info .temp-contact_page {
+      display: none;
+      width: 100%;
+      text-align: center; }
+      #contact .main-content .contact-info .temp-contact_page:hover {
+        color: #fff;
+        background-color: #4866fb; }
+      #contact .main-content .contact-info .temp-contact_page a {
+        display: block;
+        margin-top: 0.5rem;
         color: #878787; }
-    #contact .main-content .contact-info .temp-contact_page p {
-      margin-bottom: 0.5rem; }
+        #contact .main-content .contact-info .temp-contact_page a:hover {
+          color: #fff; }
+        #contact .main-content .contact-info .temp-contact_page a:active {
+          color: #099949; }
+        #contact .main-content .contact-info .temp-contact_page a:visited {
+          color: #878787; }
+      #contact .main-content .contact-info .temp-contact_page p {
+        margin-bottom: 0.5rem; }
 
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */

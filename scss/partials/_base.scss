@@ -311,7 +311,8 @@ header {
 		padding: 10px 30px;
 		color: $c-white;
 		border:1px solid $c-white;
-		&:hover {		 
+		&:hover {
+			color: $c-orange-light;		 
 		}
 	}
 	@include bp(small) {
@@ -325,7 +326,9 @@ header {
 /*.............CONTACT PAGE ..........................................*/
 
 #contact form {
-	display: none;
+	width: 50%;
+	display: block;
+	order: 2;
 
 	fieldset { border:none; color:$c-grey-med;}
 
@@ -391,12 +394,15 @@ header {
 	}
 }
 #contact .main-content {
+	display: flex;
+	flex-direction: row;
 
 	.page-location { display: none; }
 
 	.contact-img-container {
+		order: 1;
 		display: block;
-		width: 100%;
+		width: 50%;
 		height: auto;
 
 		img {
@@ -405,17 +411,19 @@ header {
 		}
 	}
 	.contact-info {
+		order: 2;
 		display: block;
 		// margin-top: 1rem;
 
-		.temp-contact_page {
-			width: 100%;
-			text-align: center;
+		// .temp-contact_page {
+		// 	display: none;
+		// 	width: 100%;
+		// 	text-align: center;
 
-			&:hover {
-				color: $c-white;
-				background-color: $c-blue-med;    
-			}
+		// 	&:hover {
+		// 		color: $c-white;
+		// 		background-color: $c-blue-med;    
+		// 	}
 				    
 			a {	
 				display: block;
