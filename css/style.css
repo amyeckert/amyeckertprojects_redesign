@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /********************
 ** Vendors
 ********************/
@@ -79,7 +80,6 @@ input, select {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-*,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
@@ -90,6 +90,7 @@ input, select {
   margin: 0;
   padding: 0; }
 
+‹
 html {
   height: 100vh;
   margin: 0;
@@ -251,7 +252,7 @@ header {
       display: block;
       font-size: 18px;
       color: #878787;
-      padding: 6px 0;
+      padding: 6px;
       width: 30%;
       position: absolute;
       top: 0;
@@ -263,12 +264,12 @@ header {
           padding: 11px 0 0 0; } }
       @media only screen and (min-width: 750px) {
         header .menu-mobile .menu-toggle {
-          border-right: 1px solid #878787;
           padding: 3% 3% 1% 0;
           margin-bottom: 0;
           display: block;
           font-size: 1.375rem;
-          font-size: 22px; } }
+          font-size: 22px;
+          border-right: 1px solid #878787; } }
   header .nav-up {
     top: -3rem; }
   header .nav-down {
@@ -405,21 +406,29 @@ header {
       .contact-container img {
         display: block;
         position: absolute;
-        top: -2.5rem;
-        left: -7.5rem;
-        width: 123%;
+        top: 0;
+        left: 0;
+        width: 100%;
         margin: 0 auto; } }
+    @media only screen and (min-width: 1024px) {
+      .contact-container img {
+        width: 107%;
+        height: auto;
+        top: -18%;
+        left: -7%; } }
   .contact-container .contact-form {
     display: block;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     z-index: 0; }
     @media only screen and (min-width: 750px) {
       .contact-container .contact-form {
         width: 50%;
-        height: 100%; } }
+        height: 100%;
+        top: 0;
+        right: 0; } }
     .contact-container .contact-form:after {
       content: "";
       background-color: #fff;
@@ -433,11 +442,17 @@ header {
 
 form {
   width: 100%;
-  display: block; }
+  display: block;
+  position: absolute; }
   @media only screen and (min-width: 750px) {
     form {
+      top: 5%;
+      right: 5%;
       width: 90%;
       margin: 5% auto; } }
+  @media only screen and (min-width: 1024px) {
+    form {
+      top: 0; } }
   form fieldset {
     border: none;
     width: 100%;
@@ -477,7 +492,7 @@ form {
     border-color: #099949;
     -webkit-box-shadow: none;
             box-shadow: none;
-    outline-color: #099949;
+    outline-color: #98983e;
     outline-style: solid; }
   form input[type="submit"] {
     width: 90%;
@@ -485,8 +500,8 @@ form {
     border-style: none;
     padding: 10px;
     margin: 1rem auto;
-    background-color: #099949;
-    outline-color: #099949;
+    background-color: #98983e;
+    outline-color: #98983e;
     color: #fff;
     text-transform: uppercase;
     font-size: 1rem; }
@@ -499,7 +514,7 @@ form {
     color: #fff;
     -webkit-box-shadow: none;
             box-shadow: none;
-    outline: 1px solid #099949;
+    outline: 1px solid #98983e;
     font-size: 1rem; }
 
 /*.............FOOTER....................................................
