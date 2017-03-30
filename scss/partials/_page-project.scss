@@ -36,25 +36,35 @@
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
 		text-transform: capitalize;
-		
+
 	}
 	.menu-side {
 		order: 1;
 
 		ul {
 			display: none;
+
 		
 			@include bp(medium) {
 				display: block;
+				background-color: tomato;
 			    flex: 1 0;
 			    min-width: 25%;
 			    max-width: 25%;
 			    font-size: 1rem;
 			    margin: 0;
 			    padding: 0 0 0 10px;
-			    line-height:2rem;   
+			    text-align: left;
+			    @include line-height(30); 
+			    margin-left: -25%; 
+			    transition: margin-left 0.7s;
 			}
-
+			&:hover {
+				margin-left: -5%;
+			}
+			li {
+				padding: 0 25px 0 0;
+			}
 			&li:active, 
 			&li:hover {
     			color: $c-green-kelly;

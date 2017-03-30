@@ -35,7 +35,13 @@
         var grid = document.querySelector('.grid');
         var thumbs = document.getElementById('thumbGrid');
 
-        
+        // var addBackButton = function(e){
+        //     e.preventDefault();
+
+        //     var back = $('.project-name').previousSibling();
+        //     console.log(back);
+
+        // }();
 
         var imageInfo = function() {
 
@@ -57,6 +63,12 @@
             $('.next').hide();
             $('.previous').hide();
             $('.thumbs-only').hide();
+
+
+            $('.menu-side').prepend("<button class='btn-back'><a href='#'><img source='../images/arrow-left-grey.svg'</a></button>");
+                
+
+
 
          /*--------------------------------
             when a thumbnail is clicked on-hides thumbnail grid 

@@ -182,8 +182,7 @@ header {
   @media only screen and (min-width: 750px) {
     header {
       height: 120px;
-      width: 90%;
-      margin: 0 auto;
+      width: 100%;
       padding: 3% 5% 0 5%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -192,7 +191,12 @@ header {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      height: 60px; } }
+      height: 70px; } }
+  @media only screen and (min-width: 1024px) {
+    header {
+      width: 100%;
+      padding: 3% 5%;
+      height: 125px; } }
   header .logo {
     -webkit-box-flex: 2;
         -ms-flex: 2 1 auto;
@@ -236,18 +240,6 @@ header {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 auto;
                 flex: 0 1 auto; } }
-    header .menu-mobile .btn-back {
-      display: block;
-      visibility: visible;
-      height: 32px;
-      width: 40px;
-      padding: 0.15rem 0; }
-      header .menu-mobile .btn-back svg {
-        border: 1px solid orange;
-        display: block;
-        visibility: visible;
-        height: 25px;
-        width: auto; }
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 18px;
@@ -274,6 +266,25 @@ header {
     top: -3rem; }
   header .nav-down {
     top: 3rem; }
+
+.btn-back {
+  display: block;
+  visibility: visible;
+  height: 32px;
+  width: 40px;
+  padding: 0.15rem 0; }
+  @media only screen and (min-width: 1024px) {
+    .btn-back {
+      display: none; } }
+  .btn-back svg {
+    border: 1px solid orange;
+    display: block;
+    visibility: visible;
+    height: 25px;
+    width: auto; }
+  .btn-back img {
+    display: block;
+    background-color: red; }
 
 .menu-top {
   display: none; }
@@ -566,9 +577,6 @@ form {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
-  @media only screen and (min-width: 750px) {
-    .grid {
-      max-width: 100%; } }
   .grid .grid-sizer {
     width: 100%;
     height: auto; }
@@ -689,6 +697,7 @@ form {
       @media only screen and (min-width: 1024px) {
         .main-content .menu-side ul {
           display: block;
+          background-color: tomato;
           -webkit-box-flex: 1;
               -ms-flex: 1 0;
                   flex: 1 0;
@@ -697,7 +706,16 @@ form {
           font-size: 1rem;
           margin: 0;
           padding: 0 0 0 10px;
-          line-height: 2rem; } }
+          text-align: left;
+          line-height: 1.875rem;
+          line-height: 30px;
+          margin-left: -25%;
+          -webkit-transition: margin-left 0.7s;
+          transition: margin-left 0.7s; } }
+      .main-content .menu-side ul:hover {
+        margin-left: -5%; }
+      .main-content .menu-side ul li {
+        padding: 0 25px 0 0; }
       .main-content .menu-side ulli:active, .main-content .menu-side ulli:hover {
         color: #099949; }
 
@@ -969,6 +987,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
           @media only screen and (min-width: 340px) {
             .options-menu-horizontal .column ul li a {
               padding-top: 3px; } }
+          @media only screen and (min-width: 1024px) {
+            .options-menu-horizontal .column ul li a {
+              padding: 0; } }
 
 .footer-col-1 ul li:first-child {
   background-color: #b56618; }

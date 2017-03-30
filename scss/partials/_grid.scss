@@ -6,9 +6,6 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	@include bp(small) {
-		max-width: 100%;
-	}
 
 	.grid-sizer {
 		width: 100%;

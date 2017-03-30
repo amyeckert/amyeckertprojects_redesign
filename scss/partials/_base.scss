@@ -103,13 +103,17 @@ header {
 	
 	@include bp(small) {
 		height: 120px;
-		width: 90%;
-		margin: 0 auto;
+		width: 100%;
 		padding: 3% 5% 0 5%;
 		display: flex;
 		flex-direction: row;
-		height: 60px;
+		height: 70px;
 
+	}
+	@include bp(medium){
+		width: 100%;
+		padding: 3% 5%;	
+		height: 125px;
 	}		
 	.logo {
 		flex: 2 1 auto;
@@ -157,20 +161,6 @@ header {
 
 		}
 
-    	.btn-back {
-    		display: block;
-    		visibility: visible;
-		    height: 32px;
-    		width: 40px;
-			padding: 0.15rem 0 ;
-			svg {
-    			border: 1px solid orange;
-				display: block;
-				visibility: visible;
-				height: 25px;
-				width: auto;
-			}		
-    	}
 		.menu-toggle {
 	    	display: block;
 	    	font-size: 18px;
@@ -201,7 +191,32 @@ header {
 	.nav-down{
 		top: $nav-down;
 	}
-}//------ desktop menu style-----------------------------// 
+}
+
+
+.btn-back {
+	display: block;
+	visibility: visible;
+    height: 32px;
+	width: 40px;
+	padding: 0.15rem 0 ;
+	@include bp(medium){
+		display: none;
+	}
+	svg {
+		border: 1px solid orange;
+		display: block;
+		visibility: visible;
+		height: 25px;
+		width: auto;
+	}
+	img {
+		display: block;
+		background-color: red;
+	}		
+}
+
+//------ desktop menu style-----------------------------// 
 .menu-top {
 	display: none;
 
@@ -213,37 +228,6 @@ header {
 		}
 	}
 }
-// //all pages except PROJECT pages. 
-// .main-content {
-// 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-//   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-//  	display: -ms-flexbox;      /* TWEENER - IE 10 */
-//  	display: -webkit-flex;     /* NEW - Chrome */
-//   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-// 	flex-direction: column;
-// 	width: 100%;
-// 	margin: 0 auto;
-	
-// 	@include bp(medium) {
-// 		margin: 0 auto;
-// 	}
-// 	/*.........SHOW CURRENT PORTFOLIO .........................*/
-// 	.page-location {
-// 		order: 1;
-// 		width: 100%;
-// 		display: block;
-// 		margin: 0;
-// 		padding: 0 0 0 0%;
-// 		color: $c-grey-med;
-// 		text-transform: uppercase;
-
-// 		p {
-// 			display: block;
-// 			border-left: 1px solid $c-grey-med;
-// 			padding: 1% 0 0 1%;
-// 			margin-bottom: 0;	
-// 		}
-// 	}
 
 /*.........ABOUT PAGE .......................................*/
 .page-location {
