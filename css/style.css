@@ -100,11 +100,13 @@ body {
   margin: 0;
   padding-top: 4rem;
   font-family: "Josefin Sans", sans-serif; }
+  body#contact {
+    overflow: hidden; }
 
 .wrapper {
   max-width: 90%;
   min-height: 100vh;
-  margin: 10% auto;
+  margin: 4% auto;
   display: flex;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -118,6 +120,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (min-width: 340px) {
+    .wrapper {
+      margin: 0 auto; } }
   @media only screen and (min-width: 750px) {
     .wrapper {
       margin: 4% auto; } }
@@ -160,7 +165,7 @@ header {
   z-index: 1;
   max-width: 100%;
   min-width: 140px;
-  height: 4.5rem;
+  height: 3.8rem;
   margin: 0 auto;
   padding: 5% 5% 0 5%;
   position: fixed;
@@ -169,6 +174,10 @@ header {
   background-color: #fff;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out; }
+  @media only screen and (min-width: 340px) {
+    header {
+      height: 3rem;
+      padding: 2% 5% 0 5%; } }
   @media only screen and (min-width: 750px) {
     header {
       height: 120px;
@@ -189,6 +198,11 @@ header {
             flex: 2 1 auto;
     width: 90%;
     margin: 0 auto; }
+    @media only screen and (min-width: 340px) {
+      header .logo {
+        width: 65%;
+        margin: 0;
+        display: inline-block; } }
     @media only screen and (min-width: 750px) {
       header .logo {
         margin: 0; } }
@@ -204,9 +218,14 @@ header {
     margin: 4% auto; }
     @media only screen and (min-width: 340px) {
       header .menu-mobile {
-        margin: 3% auto; } }
+        display: inline-block;
+        margin: 0;
+        width: 25%; } }
     @media only screen and (min-width: 750px) {
       header .menu-mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         width: 50%;
         margin: 0;
         float: right; } }
@@ -239,6 +258,9 @@ header {
       right: 0;
       text-align: right;
       text-transform: uppercase; }
+      @media only screen and (min-width: 340px) {
+        header .menu-mobile .menu-toggle {
+          padding: 11px 0 0 0; } }
       @media only screen and (min-width: 750px) {
         header .menu-mobile .menu-toggle {
           border-right: 1px solid #878787;
@@ -363,70 +385,64 @@ header {
 /*................BLOG PAGE .......................................*/
 /*.............CONTACT PAGE ..........................................*/
 #contact .main-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap; }
+  display: block; }
   #contact .main-content .page-location {
-    display: block;
+    display: none;
     width: 100%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
     margin-bottom: 1rem; }
-  #contact .main-content .contact-img-container {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+
+.contact-container {
+  display: block;
+  position: relative; }
+  @media only screen and (min-width: 750px) {
+    .contact-container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden; } }
+  .contact-container img {
+    display: none; }
+    @media only screen and (min-width: 750px) {
+      .contact-container img {
+        display: block;
+        position: absolute;
+        top: -2.5rem;
+        left: -7.5rem;
+        width: 123%;
+        margin: 0 auto; } }
+  .contact-container .contact-form {
     display: block;
     width: 100%;
-    height: auto; }
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0; }
     @media only screen and (min-width: 750px) {
-      #contact .main-content .contact-img-container {
+      .contact-container .contact-form {
         width: 50%;
-        -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2; } }
-    #contact .main-content .contact-img-container img {
-      max-width: 100%;
-      margin: 0 auto; }
-  #contact .main-content .contact-info {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    display: block; }
-    @media only screen and (min-width: 750px) {
-      #contact .main-content .contact-info {
-        -webkit-box-ordinal-group: 4;
-            -ms-flex-order: 3;
-                order: 3;
-        width: 45%; } }
+        height: 100%; } }
+    .contact-container .contact-form:after {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1; }
 
 form {
   width: 100%;
-  display: block;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2; }
+  display: block; }
   @media only screen and (min-width: 750px) {
     form {
-      width: 50%;
-      margin-left: 5%; } }
+      width: 90%;
+      margin: 5% auto; } }
   form fieldset {
     border: none;
     width: 100%;
     color: #878787; }
     form fieldset.contact {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
       padding-bottom: 0; }
     form fieldset.contact-message {
       padding-top: 0; }
@@ -446,6 +462,7 @@ form {
     width: 100%;
     max-width: 40rem;
     padding: 10px;
+    background-color: transparent;
     color: #878787;
     border: 1px solid #878787;
     font-size: 1.125rem;
@@ -456,7 +473,7 @@ form {
   form input[type="text"]:focus,
   form input[type="email"]:focus,
   form textarea:focus {
-    background: #fff;
+    background: transparent;
     border-color: #099949;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -923,11 +940,20 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
+        @media only screen and (min-width: 340px) {
+          .options-menu-horizontal .column ul li {
+            height: 2rem; } }
+        @media only screen and (min-width: 750px) {
+          .options-menu-horizontal .column ul li {
+            height: 2.5rem; } }
         .options-menu-horizontal .column ul li a {
           display: block;
           width: 100%;
           color: #fff;
           text-decoration: none; }
+          @media only screen and (min-width: 340px) {
+            .options-menu-horizontal .column ul li a {
+              padding-top: 3px; } }
 
 .footer-col-1 ul li:first-child {
   background-color: #b56618; }

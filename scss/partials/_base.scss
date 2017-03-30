@@ -27,11 +27,14 @@ body {
 	padding-top: 4rem;
 	font-family: $f-text;
 	
+	&#contact {
+		overflow: hidden;
+	}
 }
 .wrapper {
 	max-width: 90%;
 	min-height: 100vh;
-	margin: 10% auto;
+	margin: 4% auto;
 	display: flex;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -40,6 +43,9 @@ body {
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	flex-direction: column;	
 
+	@include bp(xsmall){
+		margin: 0 auto;
+	}
 	@include bp(small) {
 		margin: 4% auto;
 	}
@@ -81,7 +87,7 @@ header {
 	z-index: 1;	
 	max-width: 100%;
 	min-width: 140px;
-	height: 4.5rem;
+	height: 3.8rem;
 	margin: 0 auto;
 	padding: 5% 5% 0 5%;	
 	position: fixed;
@@ -89,15 +95,17 @@ header {
 	left: 0; 
 	background-color: $c-white;
 	transition: top 0.2s ease-in-out;	
-	// border-bottom:1px solid $c-grey-med;
 
+	@include bp(xsmall) {
+		height: 3rem;
+		padding: 2% 5% 0 5%;
+	}
+	
 	@include bp(small) {
 		height: 120px;
 		width: 90%;
 		margin: 0 auto;
 		padding: 3% 5% 0 5%;
-	// }
-	// @include bp(medium) {
 		display: flex;
 		flex-direction: row;
 		height: 60px;
@@ -107,6 +115,13 @@ header {
 		flex: 2 1 auto;
 		width: 90%;
 		margin: 0 auto;
+
+		@include bp(xsmall){
+			width: 65%;
+			margin: 0;
+			display: inline-block;
+
+		}
 		@include bp(small){
 			margin: 0;
 		}
@@ -126,9 +141,12 @@ header {
 		margin: 4% auto;
 
 		@include bp(xsmall){
-		 	margin: 3% auto;
+		 	display: inline-block;
+		 	margin: 0;
+		 	width: 25%;
 		}
 		@include bp(small){
+			display: flex;
 			width: 50%;
 			margin: 0;
 			float: right;
@@ -164,7 +182,10 @@ header {
 	    	right: 0;
 	    	text-align: right;
     		text-transform: uppercase;
+    		@include bp(xsmall){
+    			padding: 11px 0 0 0 ;
 
+    		}
     		@include bp(small) {
     			border-right: 1px solid $c-grey-med;
 			    padding: 3% 3% 1% 0;
@@ -331,39 +352,59 @@ header {
 /*.............CONTACT PAGE ..........................................*/
 
 #contact .main-content {
-	display: flex;
-	flex-flow: column wrap;
+	display: block;
 
 	.page-location { 
-		display: block;
+		display: none;
 		width: 100%;
-		order: 1;
 		margin-bottom: 1rem;
 	 }
+}
+.contact-container {
+	display: block;
+	position: relative;
 
-	.contact-img-container {
-		order: 3;
-		display: block;
+	@include bp(small) {
 		width: 100%;
-		height: auto;
+		height: 100vh;
+		overflow: hidden;
+		
+	}
+	img {
+		display: none;
 
 		@include bp(small){
-			width: 50%;
-			order: 2;	
-		}
-
-		img {
-			max-width: 100%;
+			display: block;
+			position: absolute;
+		    top: -2.5rem;
+    		left: -7.5rem;
+    		width: 123%;
 			margin: 0 auto;
 		}
 	}
-	.contact-info {
-		order: 2;
+	
+	.contact-form {
 		display: block;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 0;
 
 		@include bp(small){
-			order: 3;
-			width: 45%;	
+			width: 50%;	
+			height: 100%;
+		}
+		&:after {
+			content: "";
+			background-color: $c-white;
+			position: absolute;
+			opacity: 0.8;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
 		}
 	}	
 }
@@ -371,11 +412,10 @@ header {
 form {
 	width: 100%;
 	display: block;
-	order: 2;
 
 	@include bp(small){
-		width: 50%;
-		margin-left: 5%;
+		width: 90%;
+		margin: 5% auto;
 	}
 	fieldset { 
 		border: none; 
@@ -383,8 +423,6 @@ form {
 		color: $c-grey-med;
 
 		&.contact {
-			display: flex;
-			flex-flow: row wrap;
 			padding-bottom: 0;
 		}
 		&.contact-message {
@@ -410,6 +448,7 @@ form {
 		width: 100%;
 		max-width: 40rem;
 		padding: 10px;
+		background-color: transparent;
 		color: $c-grey-med;
 		border: 1px solid $c-grey-med;
 		@include font-size(18);	
@@ -421,7 +460,7 @@ form {
 	input[type="text"]:focus, 
 	input[type="email"]:focus,
 	textarea:focus  {
-		background:$c-white;
+		background: transparent;
 		border-color:$c-green-kelly;
 		box-shadow:none;
 		outline-color: $c-green-kelly;
@@ -452,34 +491,8 @@ form {
 		outline:1px solid $c-green-kelly;
 		font-size:1rem;   
 	}
-	// .message-body {
-	// 	margin-top: 20px;
-	// 	width: 100%; 
-	// 	float: left;
-	// 	clear: both;
-	// }
 }
 
-
-
-			// a {	
-			// 	display: block;
-			// 	margin-top: 0.5rem;
-			// 	color: $c-grey-med;
-			// 	&:hover{ 
-			// 		color: $c-white;
-			// 	}
-			// 	&:active {
-			// 		color: $c-green-kelly;
-			// 	} 
-			// 	&:visited{
-			// 		color: $c-grey-med;
-			// 	}
-			
-			// }
-			// p {
-			// 	margin-bottom: 0.5rem;
-			// }
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */
 .footer {
