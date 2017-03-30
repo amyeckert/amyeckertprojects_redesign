@@ -100,7 +100,7 @@ header {
 	// @include bp(medium) {
 		display: flex;
 		flex-direction: row;
-		height: 80px;
+		height: 60px;
 
 	}		
 	.logo {
@@ -124,7 +124,6 @@ header {
 	    width: 90%;
 		position: relative;
 		margin: 4% auto;
-		// background-color: tomato;
 
 		@include bp(xsmall){
 		 	margin: 3% auto;
@@ -149,6 +148,7 @@ header {
 			svg {
     			border: 1px solid orange;
 				display: block;
+				visibility: visible;
 				height: 25px;
 				width: auto;
 			}		
@@ -226,6 +226,7 @@ header {
 
 /*.........ABOUT PAGE .......................................*/
 .page-location {
+	display: block;
 	order: 1;
 }
 .bio {
@@ -331,15 +332,25 @@ header {
 
 #contact .main-content {
 	display: flex;
-	flex-direction: row;
+	flex-flow: column wrap;
 
-	.page-location { display: none; }
+	.page-location { 
+		display: block;
+		width: 100%;
+		order: 1;
+		margin-bottom: 1rem;
+	 }
 
 	.contact-img-container {
-		order: 1;
+		order: 3;
 		display: block;
-		width: 50%;
+		width: 100%;
 		height: auto;
+
+		@include bp(small){
+			width: 50%;
+			order: 2;	
+		}
 
 		img {
 			max-width: 100%;
@@ -349,77 +360,107 @@ header {
 	.contact-info {
 		order: 2;
 		display: block;
-		// margin-top: 1rem;
-		form {
-			width: 50%;
-			display: block;
-			order: 2;
 
-			fieldset { border:none; color:$c-grey-med;}
-
-			fieldset.contact {
-				padding-bottom: 0;
-			}
-			fieldset.contact-message {
-				padding-top: 0;
-			}
-			label { 
-				display:block;
-				padding-bottom: 5px; 
-			}
-			input[type="text"], 
-			input[type="email"],
-			input[type="search"],
-			input[type="number"],
-			textarea {
-				box-sizing:border-box;
-				display:block;
-				margin-bottom: 19px;
-				width:100%;
-				max-width:40rem;
-				padding:10px;
-				color:$c-grey-med;
-			}
-			textarea {
-				margin-bottom: 0;
-			}	
-			input[type="text"]:focus, 
-			input[type="email"]:focus,
-			textarea:focus  {
-				background:$c-white;
-				border-color:$c-green-kelly;
-				box-shadow:none;
-				outline-color: $c-green-kelly;
-			 	outline-style: solid;
-			}	
-			input[type="submit"] {
-				width: 50%;
-				border-radius:0;
-				border-style:none;
-				background-color:$c-green-kelly;
-				outline-color: $c-green-kelly;
-				color:$c-white;
-				text-transform: uppercase;
-				font-size:1rem;
-				max-width:40rem;
-
-			}
-			input[type="submit"]:hover {	
-				border-radius:0;
-				color:$c-white;
-				box-shadow:none;
-				outline:1px solid $c-green-kelly;
-				font-size:1rem;   
-			}
-			.message-body {
-				margin-top: 20px;
-				width: 100%; 
-				float: left;
-				clear:both;
-			}
+		@include bp(small){
+			order: 3;
+			width: 45%;	
 		}
-	}
+	}	
 }
+
+form {
+	width: 100%;
+	display: block;
+	order: 2;
+
+	@include bp(small){
+		width: 50%;
+		margin-left: 5%;
+	}
+	fieldset { 
+		border: none; 
+		width: 100%;
+		color: $c-grey-med;
+
+		&.contact {
+			display: flex;
+			flex-flow: row wrap;
+			padding-bottom: 0;
+		}
+		&.contact-message {
+			padding-top: 0;
+		}
+		legend {
+			margin-bottom: 15px;
+		}
+		label { 
+			padding-bottom: 5px; 
+		}
+
+	}
+
+	input[type="text"], 
+	input[type="email"],
+	input[type="search"],
+	input[type="number"],
+	textarea {
+		box-sizing: border-box;
+		display: block;
+		margin-bottom: 19px;
+		width: 100%;
+		max-width: 40rem;
+		padding: 10px;
+		color: $c-grey-med;
+		border: 1px solid $c-grey-med;
+		@include font-size(18);	
+	}
+	textarea {
+		margin-bottom: 15px;
+		height: 5rem;
+	}	
+	input[type="text"]:focus, 
+	input[type="email"]:focus,
+	textarea:focus  {
+		background:$c-white;
+		border-color:$c-green-kelly;
+		box-shadow:none;
+		outline-color: $c-green-kelly;
+	 	outline-style: solid;
+	}	
+	input[type="submit"] {
+		width: 90%;
+		border-radius: 0;
+		border-style: none;
+		padding: 10px;
+		margin: 1rem auto;
+		background-color: $c-green-kelly;
+		outline-color: $c-green-kelly;
+		color: $c-white;
+		text-transform: uppercase;
+		font-size:1rem;
+
+		@include bp(small) {
+			width: 50%;
+			max-width:40rem;
+		}
+
+	}
+	input[type="submit"]:hover {	
+		border-radius:0;
+		color:$c-white;
+		box-shadow:none;
+		outline:1px solid $c-green-kelly;
+		font-size:1rem;   
+	}
+	// .message-body {
+	// 	margin-top: 20px;
+	// 	width: 100%; 
+	// 	float: left;
+	// 	clear: both;
+	// }
+}
+
+
 
 			// a {	
 			// 	display: block;

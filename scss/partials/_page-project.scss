@@ -15,7 +15,6 @@
 	/*.........SHOW CURRENT PORTFOLIO .........................*/
 	.page-location {
 		order: 1;
-		width: 100%;
 		display: block;
 		margin: 0;
 		padding: 0 0 0 0%;
@@ -30,18 +29,18 @@
 		}
 	}
 	
+	.project-name {
+		display: block;
+    	padding: 1% 0 0 1%;
+    	margin-bottom: 1rem;
+		color: $c-grey-med;
+		border-left: 1px solid $c-grey-med;
+		text-transform: capitalize;
+		
+	}
 	.menu-side {
 		order: 1;
 
-		.project-name {
-			display: block;
-	    	padding: 1% 0 0 1%;
-	    	margin-bottom: 0;
-			color: $c-grey-med;
-			border-left: 1px solid $c-grey-med;
-			text-transform: uppercase;
-		}
-		
 		ul {
 			display: none;
 		
@@ -67,12 +66,11 @@
 	}
 }
 /*......... CAROUSEL .......................................*/
-#carousel {
+.carousel {
 	display: none;
 
 	@include bp(small){
 		display: none;
-		visibility: visible;
 		order: 2;
 		flex: 1 0;
 		margin-bottom: 2rem;
@@ -101,7 +99,7 @@
 
 		.image-info { 
 			display: block;
-			visibility: hidden;
+			visibility: visible;
 			color: $c-grey-med;
 			font-size: $baseFontSize;
 			visibility: visible;

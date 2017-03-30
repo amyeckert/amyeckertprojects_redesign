@@ -182,7 +182,7 @@ header {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      height: 80px; } }
+      height: 60px; } }
   header .logo {
     -webkit-box-flex: 2;
         -ms-flex: 2 1 auto;
@@ -225,6 +225,7 @@ header {
       header .menu-mobile .btn-back svg {
         border: 1px solid orange;
         display: block;
+        visibility: visible;
         height: 25px;
         width: auto; }
     header .menu-mobile .menu-toggle {
@@ -260,6 +261,7 @@ header {
 
 /*.........ABOUT PAGE .......................................*/
 .page-location {
+  display: block;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1; }
@@ -364,19 +366,30 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap; }
   #contact .main-content .page-location {
-    display: none; }
-  #contact .main-content .contact-img-container {
+    display: block;
+    width: 100%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-bottom: 1rem; }
+  #contact .main-content .contact-img-container {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
     display: block;
-    width: 50%;
+    width: 100%;
     height: auto; }
+    @media only screen and (min-width: 750px) {
+      #contact .main-content .contact-img-container {
+        width: 50%;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2; } }
     #contact .main-content .contact-img-container img {
       max-width: 100%;
       margin: 0 auto; }
@@ -385,68 +398,92 @@ header {
         -ms-flex-order: 2;
             order: 2;
     display: block; }
-    #contact .main-content .contact-info form {
+    @media only screen and (min-width: 750px) {
+      #contact .main-content .contact-info {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+        width: 45%; } }
+
+form {
+  width: 100%;
+  display: block;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2; }
+  @media only screen and (min-width: 750px) {
+    form {
       width: 50%;
-      display: block;
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2; }
-      #contact .main-content .contact-info form fieldset {
-        border: none;
-        color: #878787; }
-      #contact .main-content .contact-info form fieldset.contact {
-        padding-bottom: 0; }
-      #contact .main-content .contact-info form fieldset.contact-message {
-        padding-top: 0; }
-      #contact .main-content .contact-info form label {
-        display: block;
-        padding-bottom: 5px; }
-      #contact .main-content .contact-info form input[type="text"],
-      #contact .main-content .contact-info form input[type="email"],
-      #contact .main-content .contact-info form input[type="search"],
-      #contact .main-content .contact-info form input[type="number"],
-      #contact .main-content .contact-info form textarea {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        display: block;
-        margin-bottom: 19px;
-        width: 100%;
-        max-width: 40rem;
-        padding: 10px;
-        color: #878787; }
-      #contact .main-content .contact-info form textarea {
-        margin-bottom: 0; }
-      #contact .main-content .contact-info form input[type="text"]:focus,
-      #contact .main-content .contact-info form input[type="email"]:focus,
-      #contact .main-content .contact-info form textarea:focus {
-        background: #fff;
-        border-color: #099949;
-        -webkit-box-shadow: none;
-                box-shadow: none;
-        outline-color: #099949;
-        outline-style: solid; }
-      #contact .main-content .contact-info form input[type="submit"] {
+      margin-left: 5%; } }
+  form fieldset {
+    border: none;
+    width: 100%;
+    color: #878787; }
+    form fieldset.contact {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      padding-bottom: 0; }
+    form fieldset.contact-message {
+      padding-top: 0; }
+    form fieldset legend {
+      margin-bottom: 15px; }
+    form fieldset label {
+      padding-bottom: 5px; }
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="search"],
+  form input[type="number"],
+  form textarea {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    margin-bottom: 19px;
+    width: 100%;
+    max-width: 40rem;
+    padding: 10px;
+    color: #878787;
+    border: 1px solid #878787;
+    font-size: 1.125rem;
+    font-size: 18px; }
+  form textarea {
+    margin-bottom: 15px;
+    height: 5rem; }
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    background: #fff;
+    border-color: #099949;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline-color: #099949;
+    outline-style: solid; }
+  form input[type="submit"] {
+    width: 90%;
+    border-radius: 0;
+    border-style: none;
+    padding: 10px;
+    margin: 1rem auto;
+    background-color: #099949;
+    outline-color: #099949;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem; }
+    @media only screen and (min-width: 750px) {
+      form input[type="submit"] {
         width: 50%;
-        border-radius: 0;
-        border-style: none;
-        background-color: #099949;
-        outline-color: #099949;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1rem;
-        max-width: 40rem; }
-      #contact .main-content .contact-info form input[type="submit"]:hover {
-        border-radius: 0;
-        color: #fff;
-        -webkit-box-shadow: none;
-                box-shadow: none;
-        outline: 1px solid #099949;
-        font-size: 1rem; }
-      #contact .main-content .contact-info form .message-body {
-        margin-top: 20px;
-        width: 100%;
-        float: left;
-        clear: both; }
+        max-width: 40rem; } }
+  form input[type="submit"]:hover {
+    border-radius: 0;
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: 1px solid #099949;
+    font-size: 1rem; }
 
 /*.............FOOTER....................................................
  ONLY DISPLAYS AT DESKTOP WIDTH */
@@ -594,7 +631,6 @@ header {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    width: 100%;
     display: block;
     margin: 0;
     padding: 0 0 0 0%;
@@ -605,17 +641,17 @@ header {
       border-left: 1px solid #878787;
       padding: 1% 0 0 1%;
       margin-bottom: 0; }
+  .main-content .project-name {
+    display: block;
+    padding: 1% 0 0 1%;
+    margin-bottom: 1rem;
+    color: #878787;
+    border-left: 1px solid #878787;
+    text-transform: capitalize; }
   .main-content .menu-side {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
-    .main-content .menu-side .project-name {
-      display: block;
-      padding: 1% 0 0 1%;
-      margin-bottom: 0;
-      color: #878787;
-      border-left: 1px solid #878787;
-      text-transform: uppercase; }
     .main-content .menu-side ul {
       display: none; }
       @media only screen and (min-width: 1024px) {
@@ -634,12 +670,11 @@ header {
         color: #099949; }
 
 /*......... CAROUSEL .......................................*/
-#carousel {
+.carousel {
   display: none; }
   @media only screen and (min-width: 750px) {
-    #carousel {
+    .carousel {
       display: none;
-      visibility: visible;
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
               order: 2;
@@ -647,15 +682,15 @@ header {
           -ms-flex: 1 0;
               flex: 1 0;
       margin-bottom: 2rem; } }
-  #carousel .big {
+  .carousel .big {
     display: none; }
     @media only screen and (min-width: 750px) {
-      #carousel .big {
+      .carousel .big {
         display: block;
         width: 100%;
         height: 600px;
         z-index: 1; } }
-    #carousel .big .big-img-container {
+    .carousel .big .big-img-container {
       display: block;
       visibility: visible;
       width: 100%;
@@ -664,9 +699,9 @@ header {
       margin-top: 0;
       background-size: contain;
       background-repeat: no-repeat; }
-    #carousel .big .image-info {
+    .carousel .big .image-info {
       display: block;
-      visibility: hidden;
+      visibility: visible;
       color: #878787;
       font-size: 16;
       visibility: visible;
@@ -674,11 +709,11 @@ header {
       width: 60%;
       margin-left: 0;
       text-align: left; }
-      #carousel .big .image-info p {
+      .carousel .big .image-info p {
         display: inline-block;
         margin: 0;
         padding: 10px; }
-        #carousel .big .image-info p:first-child {
+        .carousel .big .image-info p:first-child {
           padding-left: 0; }
 
 .carousel-nav {

@@ -73,7 +73,6 @@
 			<form action="#" method="POST">
 
 				<fieldset class="contact">
-				<legend></legend>
 
 					<label for="firstName">First Name</label>
 					<input type="text" name="firstName" id="firstName" required aria-required="true" autofocus>
@@ -85,19 +84,16 @@
 					<input type="email" name="email" id="email" required aria-required="true">
 				</fieldset>
 
-				<fieldset class="contact-message">
-					<legend></legend>	
-					<label for="message">Your message</label>
+				<fieldset class="contact-message">	
+					<label for="message">Message</label>
 					<textarea name="message" rows="10" cols="30" id="message" placeholder= "Hello!"></textarea>
 				</fieldset>
 
 				<fieldset class="contact">
-				<legend>Join my mailing list?</legend>
-
+					<legend>Join my mailing list?</legend>
 					<label><input type="radio" name="mailing-list" value="yes">Yes, please!</label>
 					<label><input type="radio" name="mailing-list" value="no">No thank you. </label>
 					<input type="submit" name="formSubmit" value ="send">
-					<!-- <input type="image" src="submit.gif" alt="Submit">  -->
 				</fieldset>
 			</form> 
 		</div>
