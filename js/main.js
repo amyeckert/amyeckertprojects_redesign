@@ -72,7 +72,7 @@
 
          /*--------------------------------
             when a thumbnail is clicked on-hides thumbnail grid 
-             -shows #carousel -------------------------*/
+             -shows #carousel and carousel nav buttons-------------------------*/
 
             $('.item').on('click', function(e) {
                 e.preventDefault();
@@ -93,11 +93,12 @@
                 $('.big-img-container').attr('style', 'background-image: url('+chosen_thumb+')');
 
                 carousel.style.display = 'block';
+                carousel.style.order = 3;
                 carousel.style.width = '100%';
 
                 // Change visibility of .thumbs to hidden 
                 thumbs.style.display = 'none';
-                cNav.style.order = 2; 
+                cNav.style.order = 4; 
                 cNav.style.visibility = 'visible';
 
                 $('.next').show();
@@ -107,7 +108,7 @@
                 imgInfo.style.visibility = 'visible';
                 prevImg.style.visibility = 'visible';
                 nextImg.style.visibility = 'visible';
-                statement.style.order = 3;
+                statement.style.order = 5;
 
             });
             /*-------------------------------------------------------------------------------------------------

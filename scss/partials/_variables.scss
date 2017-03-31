@@ -16,6 +16,17 @@ $c-grey-med: #878787;
 // ********	FONTS *************/
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
+// @font-face {
+//   font-family: 'FontAwesome';
+//   src: url('../fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+//   src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        // url('../fonts/Majesti-Banner-Heavy.woff2') format('woff2'), /* Super Modern Browsers */
+//        url('../fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//        url('../fonts/fontawesome-webfont.woff2') format('woff2'), /* Pretty Modern Browsers */
+//        url('../fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('../fonts/fontawesome-webfont#svgFontName') format('svg'); /* Legacy iOS */
+// }
+
 $f-text: 'Josefin Sans', sans-serif;
 $baseFontSize:			16;
 $baseLineHeight:		$baseFontSize * 1.8;

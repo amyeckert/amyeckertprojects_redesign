@@ -124,7 +124,7 @@ body {
   @media only screen and (min-width: 340px) {
     .wrapper {
       margin: 0 auto; } }
-  @media only screen and (min-width: 750px) {
+  @media only screen and (min-width: 1024px) {
     .wrapper {
       margin: 4% auto; } }
 
@@ -196,8 +196,7 @@ header {
     header {
       width: 100%;
       padding: 3% 5%;
-      height: 120px;
-      border: 1px solid yellow; } }
+      height: 120px; } }
   header .logo {
     -webkit-box-flex: 2;
         -ms-flex: 2 1 auto;
@@ -401,14 +400,8 @@ header {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 50%;
         margin: 0 auto; } }
-    @media only screen and (min-width: 1024px) {
-      .contact-container img {
-        width: 107%;
-        height: auto;
-        top: -18%;
-        left: -7%; } }
   .contact-container .contact-form {
     display: block;
     width: 100%;
@@ -422,34 +415,34 @@ header {
         height: 100%;
         top: 0;
         right: 0; } }
-    .contact-container .contact-form:after {
-      content: "";
-      background-color: #fff;
-      position: absolute;
-      opacity: 0.8;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: -1; }
+    .contact-container .contact-form .temp-contact-page {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      color: #878787; }
+      .contact-container .contact-form .temp-contact-page:hover {
+        background-color: #98983e;
+        color: #fff; }
 
 form {
+  display: none;
   width: 100%;
-  display: block;
   position: absolute; }
   @media only screen and (min-width: 750px) {
     form {
-      top: 5%;
-      right: 5%;
-      width: 90%;
-      margin: 5% auto; } }
-  @media only screen and (min-width: 1024px) {
-    form {
-      top: 0; } }
+      top: 0;
+      right: 0;
+      width: 100%;
+      margin: 0 auto; } }
   form fieldset {
     border: none;
     width: 100%;
     color: #878787; }
+    @media only screen and (min-width: 750px) {
+      form fieldset {
+        width: 90%;
+        margin: 0 auto; } }
     form fieldset.contact {
       padding-bottom: 0; }
     form fieldset.contact-message {
@@ -475,9 +468,19 @@ form {
     border: 1px solid #878787;
     font-size: 1.125rem;
     font-size: 18px; }
+    @media only screen and (min-width: 750px) {
+      form input[type="text"],
+      form input[type="email"],
+      form input[type="search"],
+      form input[type="number"],
+      form textarea {
+        padding: 7px; } }
   form textarea {
     margin-bottom: 15px;
     height: 5rem; }
+    @media only screen and (min-width: 750px) {
+      form textarea {
+        height: 4rem; } }
   form input[type="text"]:focus,
   form input[type="email"]:focus,
   form textarea:focus {
@@ -621,31 +624,37 @@ form {
       border-left: 1px solid #878787;
       padding: 1% 0 0 1%;
       margin-bottom: 0; }
-  .main-content .project-name {
+  .main-content .btn-back {
+    display: block;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    visibility: visible;
+    height: 30px;
+    width: 30px;
+    padding: 0 0 0 10px;
+    margin: 0;
+    border-left: 1px solid #878787; }
+    .main-content .btn-back a {
+      color: #878787;
+      text-decoration: none;
+      font-size: 2.0625rem;
+      font-size: 33px; }
+  .main-content .project-name {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     display: block;
     padding: 1% 0 0 1%;
-    margin-bottom: 1rem;
     color: #878787;
     border-left: 1px solid #878787;
     text-transform: capitalize; }
   .main-content .menu-side {
+    display: none;
     border: 1px solid tomato;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2; }
-    .main-content .menu-side .btn-back {
-      display: block;
-      visibility: visible;
-      height: 30px;
-      width: 30px;
-      padding: 0 0;
-      margin: 10px 0 0 0;
-      border: 1px solid orange; }
-      .main-content .menu-side .btn-back img {
-        display: block; }
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
     .main-content .menu-side ul {
       background-color: tomato;
       display: none; }
@@ -674,9 +683,9 @@ form {
         color: #099949; }
 
 .grid {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   display: block;
   max-width: 100%;
   height: auto;
@@ -688,6 +697,15 @@ form {
       -ms-flex-pack: start;
           justify-content: flex-start;
   border: 1px solid green; }
+  @media only screen and (min-width: 1024px) {
+    .grid {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      float: right;
+      margin-right: 0;
+      max-width: 100%; } }
   .grid .grid-sizer {
     max-width: 100%;
     height: auto; }
@@ -717,15 +735,15 @@ form {
   @media only screen and (min-width: 750px) {
     .carousel {
       display: none;
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2;
+      -webkit-box-ordinal-group: 6;
+          -ms-flex-order: 5;
+              order: 5;
       -webkit-box-flex: 1;
           -ms-flex: 1 0 auto;
               flex: 1 0 auto; } }
   @media only screen and (min-width: 1024px) {
     .carousel {
-      display: block;
+      display: none;
       -webkit-box-flex: 1;
           -ms-flex: 1 0;
               flex: 1 0;
@@ -753,9 +771,10 @@ form {
       font-size: 16;
       visibility: visible;
       height: 40px;
-      width: 60%;
+      width: 100%;
       margin-left: 0;
-      text-align: left; }
+      text-align: left;
+      background-color: tomato; }
       .carousel .big .image-info p {
         display: inline-block;
         margin: 0;
@@ -774,9 +793,9 @@ form {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      -webkit-box-ordinal-group: 5;
-          -ms-flex-order: 4;
-              order: 4;
+      -webkit-box-ordinal-group: 7;
+          -ms-flex-order: 6;
+              order: 6;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
               align-items: stretch; }
@@ -810,9 +829,9 @@ form {
   display: block;
   margin: 1rem 0 0 0;
   padding: 0 0 0 0;
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5; }
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7; }
   .statement .statement-title {
     width: 100%;
     display: block;
