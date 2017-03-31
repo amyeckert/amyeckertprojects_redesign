@@ -124,9 +124,9 @@ body {
   @media only screen and (min-width: 340px) {
     .wrapper {
       margin: 0 auto; } }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1200px) {
     .wrapper {
-      margin: 4% auto; } }
+      margin: 1% auto; } }
 
 nav ul li a {
   font-size: 1.2rem; }
@@ -195,8 +195,12 @@ header {
   @media only screen and (min-width: 1024px) {
     header {
       width: 100%;
-      padding: 3% 5%;
-      height: 120px; } }
+      padding: 1% 5%;
+      height: 75px; } }
+  @media only screen and (min-width: 1200px) {
+    header {
+      padding: 0;
+      height: 90px; } }
   header .logo {
     -webkit-box-flex: 2;
         -ms-flex: 2 1 auto;
@@ -211,11 +215,18 @@ header {
     @media only screen and (min-width: 750px) {
       header .logo {
         margin: 0; } }
+    @media only screen and (min-width: 1200px) {
+      header .logo {
+        width: 50%;
+        margin: 0.8% 3.5%; } }
     header .logo img {
       width: 100%; }
       @media only screen and (min-width: 750px) {
         header .logo img {
           width: 75%; } }
+      @media only screen and (min-width: 1200px) {
+        header .logo img {
+          width: 60%; } }
   header .menu-mobile {
     height: 40px;
     width: 90%;
@@ -239,12 +250,18 @@ header {
         margin: 0;
         -webkit-box-flex: 0;
             -ms-flex: 0 1 auto;
-                flex: 0 1 auto; } }
+                flex: 0 1 auto;
+        height: 100px; } }
+    @media only screen and (min-width: 1200px) {
+      header .menu-mobile {
+        height: 90px;
+        margin: 1% 5%; } }
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 18px;
       color: #878787;
       padding: 6px;
+      height: 100%;
       width: 30%;
       position: absolute;
       top: 0;
@@ -262,6 +279,13 @@ header {
           font-size: 1.375rem;
           font-size: 22px;
           border-right: 1px solid #878787; } }
+      @media only screen and (min-width: 1024px) {
+        header .menu-mobile .menu-toggle {
+          padding: 0 3% 0 0; } }
+      @media only screen and (min-width: 1200px) {
+        header .menu-mobile .menu-toggle {
+          height: 60px;
+          padding-top: 20px; } }
   header .nav-up {
     top: -3rem; }
   header .nav-down {
@@ -385,45 +409,75 @@ header {
     margin-bottom: 1rem; }
 
 .contact-container {
-  display: block;
-  position: relative; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100%;
+  overflow: hidden; }
+  @media only screen and (min-width: 340px) {
+    .contact-container {
+      width: 100%; } }
   @media only screen and (min-width: 750px) {
     .contact-container {
-      width: 100%;
-      height: 100vh;
-      overflow: hidden; } }
-  .contact-container img {
-    display: none; }
-    @media only screen and (min-width: 750px) {
-      .contact-container img {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        margin: 0 auto; } }
-  .contact-container .contact-form {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  .contact-container .contact-img {
     display: block;
     width: 100%;
-    position: absolute;
-    top: 10%;
-    right: 0;
-    z-index: 0; }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+    @media only screen and (min-width: 750px) {
+      .contact-container .contact-img {
+        width: 50%;
+        height: auto; } }
+    .contact-container .contact-img img {
+      display: block;
+      width: 100%; }
+  .contact-container .contact-form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: block;
+    width: 100%; }
     @media only screen and (min-width: 750px) {
       .contact-container .contact-form {
-        width: 50%;
-        height: 100%;
-        top: 0;
-        right: 0; } }
-    .contact-container .contact-form .temp-contact-page {
+        width: 50%; } }
+    .contact-container .contact-form .temp-contact-info {
       display: block;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
       width: 100%;
-      margin: 0 auto;
       text-align: center;
-      color: #878787; }
-      .contact-container .contact-form .temp-contact-page:hover {
-        background-color: #98983e;
+      color: #878787;
+      padding: 15px 10px;
+      z-index: 0;
+      font-size: 0.875rem;
+      font-size: 14px;
+      line-height: 1.25rem;
+      line-height: 20px; }
+      .contact-container .contact-form .temp-contact-info:hover {
+        background-color: #4866fb;
         color: #fff; }
+      .contact-container .contact-form .temp-contact-info:active {
+        background-color: #4866fb;
+        color: #fff; }
+      @media only screen and (min-width: 750px) {
+        .contact-container .contact-form .temp-contact-info {
+          font-size: 1.125rem;
+          font-size: 18px;
+          line-height: 1.5625rem;
+          line-height: 25px; } }
 
 form {
   display: none;
@@ -564,14 +618,11 @@ form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin: 0 auto; }
-    #home .main-content .front-row {
+            flex-direction: row; }
+    @media only screen and (min-width: 1024px) {
+      #home .main-content {
+        min-height: 100vh; } }
+    #home .main-content .front-img-container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -579,20 +630,16 @@ form {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
+      width: 100%;
+      height: 100vh;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center;
-      width: 100%; }
-      #home .main-content .front-row .front-img-container {
-        width: 100%;
-        height: 100vh; }
-        @media only screen and (min-width: 1024px) {
-          #home .main-content .front-row .front-img-container {
-            margin-top: 2rem; } }
-        #home .main-content .front-row .front-img-container img {
-          max-height: 75%;
-          max-width: 75%;
-          padding: 0 10%; }
+              justify-content: center; }
+      @media only screen and (min-width: 1024px) {
+        #home .main-content .front-img-container {
+          margin-top: 2rem; } }
+      #home .main-content .front-img-container img {
+        min-width: 20vw; }
 
 .main-content {
   display: -webkit-box;
@@ -695,8 +742,7 @@ form {
           flex-direction: row;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
-  border: 1px solid green; }
+          justify-content: flex-start; }
   @media only screen and (min-width: 1024px) {
     .grid {
       display: block;
@@ -746,8 +792,7 @@ form {
       display: none;
       -webkit-box-flex: 1;
           -ms-flex: 1 0;
-              flex: 1 0;
-      border: 1px solid pink; } }
+              flex: 1 0; } }
   .carousel .big {
     display: none; }
     @media only screen and (min-width: 750px) {
@@ -865,96 +910,7 @@ form {
         color: #099949; }
 
 /*	SIDE NAV ON DESKTOP .........................................*/
-/*.PHOTOGRPHY side menu......... */
-#manhome .menu-side li:nth-child(1) a,
-#truckers .menu-side li:nth-child(2) a,
-#mncooks .menu-side li:nth-child(3) a,
-#submarine .menu-side li:nth-child(4) a,
-#soap .menu-side li:nth-child(5) a,
-#optimiste .menu-side li:nth-child(6) a,
-#mossburn .menu-side li:nth-child(7) a,
-#mhbook .menu-side li:nth-child(1) a,
-#nzbirds .menu-side li:nth-child(2) a,
-#letters .menu-side li:nth-child(3) a,
-#print-portfolio .menu-side li:nth-child(4) a,
-#d6sunset .menu-side li:nth-child(5) a,
-#misunderstood .menu-side li:nth-child(1) a,
-#rigs .menu-side li:nth-child(2) a,
-#prefab .menu-side li:nth-child(3) a,
-#proteus .menu-side li:nth-child(4) a,
-#kansas .menu-side li:nth-child(5) a,
-#weather .menu-side li:nth-child(6) a {
-  color: #099949; }
-
-/*----------------------------------------------------------------------
-------- MOBILE/SMALL -----------------------------------------------------------
-
-	
-	/*.....showing page location in menu..... */
-/*.........PROJECT PAGES .......................................*/
-/*.........ABOUT PAGE .......................................*/
-/*........CONTACT PAGE ............................................*/
-/*......... FOOTER.......................................*/
-/*@media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 700px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 700px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 700px),
-only screen and (        min-device-pixel-ratio: 2)      and (max-width: 700px),
-only screen and (                min-resolution: 192dpi) and (max-width: 700px),
-only screen and (                min-resolution: 2dppx)  and (max-width: 700px) { 
-
-  /* Small screen, retina, stuff to override above media query 
-
-  
-}*/
-/*----------------------------------------------------------------------
-------- MEDIUM ----------------------------------------------------------
-----------------------------------------------------------------------*/
-/*.........FOOTER .......................................*/
-/*Medium screen, retina, stuff to override above media query */
-/*@media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 651px) and (max-width:1299px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 651px) and (max-width:1299px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 651px) and (max-width:1299px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 651px) and (max-width:1299px),
-only screen and (                min-resolution: 192dpi) and (min-width: 651px) and (max-width:1299px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 651px) and (max-width:1299px) { 
-
-
-}*/
-/*--------------------------------------------------------------------------
------------LARGE------------------------------------------------------------
--------------------------------------------------------------------------- */
-/*.statement-body {
-		max-width: 80%;
-		margin-left: 0;
-
-	}*/
-/*
-	.statement-title {
-		position:relative;
-		width:100%;
-		margin:1rem 0;
-		float:right;
-		font-size: 1rem;
-		text-indent:0;
-
-	}*/
-/*.statement-body p {*/
-/*display: block;
-		visibility: visible;*/
-/*	min-width: 50%;
-		max-width: 80%;
-		width:100%;
-		padding-top: 8px;
-		margin:0;
-		text-indent: 10px;
-		letter-spacing: 0.05rem;*/
-/*}*/
-/*.........ABOUT PAGE .......................................*/
-/*.........CONTACT PAGE.......................................*/
-/* ......... MOBILE NAVIGATION MENU .............................*/
-/*......... FOOTER MENU AS MOBILE MENU behavior .........................................*/
+/*......... FOOTER MENU AS MOBILE MENU .........................................*/
 .options-menu-horizontal {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
@@ -1054,19 +1010,3 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 651px) 
   .footer-col-4 p {
     display: block;
     margin: 5% 0 5% 0; }
-
-/*......... MAIN MENU replaces THE FOOTER MENU ON MOBILE AND TABLET ****************************/
-/*......... HAMBURGER MENU behavior stuff .........................................*/
-/* Responsive */
-/*
-    .options-menu-horizontal ul:nth-child(2) {
-        width: 50%;
-        margin: 0 auto;
-    
-    }
-    .options-menu-horizontal ul:nth-child(2) li {
-        float: left;
-        width: 33.334%;
-
-    }*/
-/*......... SIDE MENUS .........................................*/

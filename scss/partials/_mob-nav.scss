@@ -1,25 +1,4 @@
-/* ......... MOBILE NAVIGATION MENU .............................*/	
-
-	
-// .main-menu li:first-child {
-// 		border-left: none;
-// 	}
-// 	.share li {
-// 		display: inline-block;
-// 		width: 30%;
-// 		margin: 0;
-// 		padding: 0;
-// 	}
-
-// /*photography*/
-// .main-menu li:first-child:hover, 
-// .main-menu li:first-child:active {
-//     background-color: $c-orange-dark;
-//     color: $c-white;
-//     border-bottom: 1px solid $c-orange-dark;
-// }
-
-/*......... FOOTER MENU AS MOBILE MENU behavior .........................................*/
+//-------- FOOTER MENU AS MOBILE MENU -------------------*/
 
 .options-menu-horizontal {
     font-family: $f-text;
@@ -83,9 +62,6 @@
 		li {
 			&:first-child {
 			background-color:$c-orange-light;
-		 		// &:active {
-		 		// 	color: red;
-		 		// }
 			}
 			&:nth-child(2) {
 				background-color:$c-teal;

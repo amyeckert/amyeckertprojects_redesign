@@ -16,7 +16,7 @@
 		// margin: 0 auto;
 
 	}
-	/*.........SHOW CURRENT PORTFOLIO .........................*/
+	//---------- CURRENT PORTFOLIO NAME-----------------*/
 	.page-location {
 		order: 1;
 		display: block;
@@ -52,10 +52,10 @@
 		order: 2;
 		display: block;
     	padding: 1% 0 0 1%;
-    	// margin-bottom: 1rem;
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
 		text-transform: capitalize;
+
 	}
 	.menu-side {
 		display: none;
@@ -67,7 +67,6 @@
 
 			@include bp(medium) {
 				display: block;
-				// z-index: -1;
 			    flex: 1 0;
 			    min-width: 25%;
 			    max-width: 25%;
@@ -101,9 +100,7 @@
 	height: auto;
 	flex-direction: row;
 	justify-content: flex-start;
-	border: 1px solid green;
-	// z-index: 0;
-
+	
 	@include bp(medium) {
 		display: block;
 		position: absolute;
@@ -154,13 +151,10 @@
 		display: none;
 		order: 5;
 		flex: 1 0 auto;
-		// margin-bottom: 2rem;
-		// z-index: 0;
 	}
 	@include bp(medium){
 		display: none;
 		flex: 1 0;
-		border: 1px solid pink;
 	}
 	.big {
 		display: none;
@@ -168,11 +162,7 @@
 		@include bp(small) {
 			display: block;
 			width: 100%;
-			// height: 600px;
 			z-index: 1;
-		}
-		@include bp(medium){
-			// max-width: 75%;
 		}
 
 		.big-img-container {
@@ -186,7 +176,6 @@
 			background-repeat: no-repeat;
 
 		}
-
 		.image-info { 
 			display: block;
 			visibility: visible;
@@ -209,7 +198,7 @@
 		}
 	}
 }
-
+//------------------ CAROUSEL CONTROLS ---------------------//
 .carousel-nav {
 	display: none;
 
@@ -217,8 +206,7 @@
 		display: flex;
 		flex-direction: row;
 		order: 6;
-		align-items: stretch;
-		// z-index: 0;	
+		align-items: stretch;	
 		
 		button{ 
 			display: inline-block;
@@ -252,11 +240,6 @@
 	margin: 1rem 0 0 0 ;
 	padding: 0 0 0 0 ;
 	order: 7;
-
-	// @include bp(medium){
-	// 	order: 5;
-
-	// }
 
 	.statement-title {
 		width: 100%;
@@ -304,34 +287,34 @@
 	}
 } 
 
-/*	SIDE NAV ON DESKTOP .........................................*/
+/*	------------ SIDE NAV ON DESKTOP --------------------*/
 
 
-/*.PHOTOGRPHY side menu......... */
-#manhome .menu-side li:nth-child(1) a,
-#truckers .menu-side li:nth-child(2) a,
-#mncooks .menu-side li:nth-child(3) a,
-#submarine .menu-side li:nth-child(4) a, 
-#soap .menu-side li:nth-child(5) a,
-#optimiste .menu-side li:nth-child(6) a, 
-#mossburn .menu-side li:nth-child(7) a,
+// /*.PHOTOGRPHY side menu......... */
+// #manhome .menu-side li:nth-child(1) a,
+// #truckers .menu-side li:nth-child(2) a,
+// #mncooks .menu-side li:nth-child(3) a,
+// #submarine .menu-side li:nth-child(4) a, 
+// #soap .menu-side li:nth-child(5) a,
+// #optimiste .menu-side li:nth-child(6) a, 
+// #mossburn .menu-side li:nth-child(7) a,
     
-/*.DESIGN side menu*/
-#mhbook .menu-side li:nth-child(1) a,
-#nzbirds .menu-side li:nth-child(2) a,
-#letters .menu-side li:nth-child(3) a, 
-#print-portfolio .menu-side li:nth-child(4) a, 
-#d6sunset .menu-side li:nth-child(5) a,
+// /*.DESIGN side menu*/
+// #mhbook .menu-side li:nth-child(1) a,
+// #nzbirds .menu-side li:nth-child(2) a,
+// #letters .menu-side li:nth-child(3) a, 
+// #print-portfolio .menu-side li:nth-child(4) a, 
+// #d6sunset .menu-side li:nth-child(5) a,
 
-/*.INTERACTIVE side-menu...... */
+// /*.INTERACTIVE side-menu...... */
 
-/*.MIXED MEDIA side menu.....*/
-#misunderstood .menu-side li:nth-child(1) a, 
-#rigs .menu-side li:nth-child(2) a,
-#prefab .menu-side li:nth-child(3) a,
-#proteus .menu-side li:nth-child(4) a,
-#kansas .menu-side li:nth-child(5) a,
-#weather .menu-side li:nth-child(6) a {
-    color: $c-green-kelly;
+// /*.MIXED MEDIA side menu.....*/
+// #misunderstood .menu-side li:nth-child(1) a, 
+// #rigs .menu-side li:nth-child(2) a,
+// #prefab .menu-side li:nth-child(3) a,
+// #proteus .menu-side li:nth-child(4) a,
+// #kansas .menu-side li:nth-child(5) a,
+// #weather .menu-side li:nth-child(6) a {
+//     color: $c-green-kelly;
 
-}
+// }

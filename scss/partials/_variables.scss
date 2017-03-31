@@ -1,4 +1,4 @@
-/*********	COLORS *************/
+//------------COLORS -------------//
 $c-white: #fff;
 $c-orange-dark: #a84420;
 $c-teal: #5f9797; 
@@ -13,30 +13,19 @@ $c-cyan: #68b7d5;
 $c-magenta: #820064; 
 $c-grey-med: #878787;
 
-// ********	FONTS *************/
+//------------	FONTS -------------//
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-
-// @font-face {
-//   font-family: 'FontAwesome';
-//   src: url('../fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
-//   src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//        // url('../fonts/Majesti-Banner-Heavy.woff2') format('woff2'), /* Super Modern Browsers */
-//        url('../fonts/fontawesome-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-//        url('../fonts/fontawesome-webfont.woff2') format('woff2'), /* Pretty Modern Browsers */
-//        url('../fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-//        url('../fonts/fontawesome-webfont#svgFontName') format('svg'); /* Legacy iOS */
-// }
 
 $f-text: 'Josefin Sans', sans-serif;
 $baseFontSize:			16;
 $baseLineHeight:		$baseFontSize * 1.8;
 
-// ********	units *************/
+//------------ units -------------//
 $nav-up: -3rem;
 $nav-down: 3rem;
 
 
-// ------- BREAKPOINTS -------//
+//------------ BREAKPOINTS -------//
 $bp-xsmall:				340;
 $bp-small:        		750;
 $bp-medium:				1024;
@@ -44,7 +33,7 @@ $bp-large:				1200;
 $bp-xlarge:				1500;
 
 
-// ------- MEDIA QUERIES -------//
+//------------ MEDIA QUERIES -------//
 $mq-xsmall:				"only screen and (min-width: #{$bp-xsmall}px)";
 $mq-small:        "only screen and (min-width: #{$bp-small}px)";
 $mq-medium:				"only screen and (min-width: #{$bp-medium}px)";

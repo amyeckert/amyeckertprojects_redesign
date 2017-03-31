@@ -38,7 +38,7 @@
   }
 }
 
-//Arbitrary Media Query Mixin
+//---------- Arbitrary Media Query Mixin ---------------//
 @mixin bp-arb($val) {
   @if ($MQs) {
     @media only screen and (min-width: #{$val}px) { @content; }
