@@ -65,7 +65,7 @@
             $('.thumbs-only').hide();
 
 
-            $('.menu-side').prepend("<button class='btn-back'><a href='#'><img source='../images/arrow-left-grey.svg'</a></button>");
+            // $('.menu-side').prepend("<button class='btn-back'><a href='#'><img source='../images/arrow-left-grey.svg'</a></button>");
                 
 
 

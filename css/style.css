@@ -196,7 +196,8 @@ header {
     header {
       width: 100%;
       padding: 3% 5%;
-      height: 125px; } }
+      height: 120px;
+      border: 1px solid yellow; } }
   header .logo {
     -webkit-box-flex: 2;
         -ms-flex: 2 1 auto;
@@ -266,25 +267,6 @@ header {
     top: -3rem; }
   header .nav-down {
     top: 3rem; }
-
-.btn-back {
-  display: block;
-  visibility: visible;
-  height: 32px;
-  width: 40px;
-  padding: 0.15rem 0; }
-  @media only screen and (min-width: 1024px) {
-    .btn-back {
-      display: none; } }
-  .btn-back svg {
-    border: 1px solid orange;
-    display: block;
-    visibility: visible;
-    height: 25px;
-    width: auto; }
-  .btn-back img {
-    display: block;
-    background-color: red; }
 
 .menu-top {
   display: none; }
@@ -561,45 +543,6 @@ form {
       font-size: 0.8rem;
       color: #878787; } }
 
-.grid {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  max-width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-  .grid .grid-sizer {
-    width: 100%;
-    height: auto; }
-    @media only screen and (min-width: 750px) {
-      .grid .grid-sizer {
-        max-width: 33.333%; } }
-    .grid .grid-sizer .grid-item {
-      width: 100%;
-      height: auto; }
-      @media only screen and (min-width: 750px) {
-        .grid .grid-sizer .grid-item {
-          width: 33.333%; } }
-      .grid .grid-sizer .grid-item img {
-        width: 100%;
-        height: auto; }
-      .grid .grid-sizer .grid-item p {
-        display: none; }
-
-.grid:after {
-  content: '';
-  display: block;
-  clear: both; }
-
 #home {
   overflow: hidden; }
   #home .main-content {
@@ -659,14 +602,11 @@ form {
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   width: 100%;
   margin: 0 auto;
   /*.........SHOW CURRENT PORTFOLIO .........................*/ }
-  @media only screen and (min-width: 1024px) {
-    .main-content {
-      margin: 0 auto; } }
   .main-content .page-location {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -682,6 +622,9 @@ form {
       padding: 1% 0 0 1%;
       margin-bottom: 0; }
   .main-content .project-name {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     display: block;
     padding: 1% 0 0 1%;
     margin-bottom: 1rem;
@@ -689,22 +632,33 @@ form {
     border-left: 1px solid #878787;
     text-transform: capitalize; }
   .main-content .menu-side {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
+    border: 1px solid tomato;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+    .main-content .menu-side .btn-back {
+      display: block;
+      visibility: visible;
+      height: 30px;
+      width: 30px;
+      padding: 0 0;
+      margin: 10px 0 0 0;
+      border: 1px solid orange; }
+      .main-content .menu-side .btn-back img {
+        display: block; }
     .main-content .menu-side ul {
+      background-color: tomato;
       display: none; }
       @media only screen and (min-width: 1024px) {
         .main-content .menu-side ul {
           display: block;
-          background-color: tomato;
           -webkit-box-flex: 1;
               -ms-flex: 1 0;
                   flex: 1 0;
           min-width: 25%;
           max-width: 25%;
           font-size: 1rem;
-          margin: 0;
+          margin: 10px 0 0 0;
           padding: 0 0 0 10px;
           text-align: left;
           line-height: 1.875rem;
@@ -719,7 +673,45 @@ form {
       .main-content .menu-side ulli:active, .main-content .menu-side ulli:hover {
         color: #099949; }
 
-/*......... CAROUSEL .......................................*/
+.grid {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border: 1px solid green; }
+  .grid .grid-sizer {
+    max-width: 100%;
+    height: auto; }
+    @media only screen and (min-width: 750px) {
+      .grid .grid-sizer {
+        max-width: 33.333%; } }
+    .grid .grid-sizer .grid-item {
+      width: 100%;
+      height: auto; }
+      @media only screen and (min-width: 750px) {
+        .grid .grid-sizer .grid-item {
+          width: 33.333%; } }
+      .grid .grid-sizer .grid-item img {
+        width: 100%;
+        height: auto; }
+      .grid .grid-sizer .grid-item p {
+        display: none; }
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/*---------------------- CAROUSEL -------------------*/
 .carousel {
   display: none; }
   @media only screen and (min-width: 750px) {
@@ -729,16 +721,21 @@ form {
           -ms-flex-order: 2;
               order: 2;
       -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto; } }
+  @media only screen and (min-width: 1024px) {
+    .carousel {
+      display: block;
+      -webkit-box-flex: 1;
           -ms-flex: 1 0;
               flex: 1 0;
-      margin-bottom: 2rem; } }
+      border: 1px solid pink; } }
   .carousel .big {
     display: none; }
     @media only screen and (min-width: 750px) {
       .carousel .big {
         display: block;
         width: 100%;
-        height: 600px;
         z-index: 1; } }
     .carousel .big .big-img-container {
       display: block;
@@ -777,9 +774,9 @@ form {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2;
+      -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+              order: 4;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
               align-items: stretch; }
@@ -813,9 +810,9 @@ form {
   display: block;
   margin: 1rem 0 0 0;
   padding: 0 0 0 0;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1; }
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5; }
   .statement .statement-title {
     width: 100%;
     display: block;

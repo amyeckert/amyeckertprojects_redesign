@@ -5,12 +5,14 @@
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
  	display: -webkit-flex;     /* NEW - Chrome */
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-	flex-direction: column;
+	flex-flow: column nowrap;
 	width: 100%;
 	margin: 0 auto;
 	
 	@include bp(medium) {
-		margin: 0 auto;
+		// position: relative;
+		// margin: 0 auto;
+
 	}
 	/*.........SHOW CURRENT PORTFOLIO .........................*/
 	.page-location {
@@ -20,39 +22,51 @@
 		padding: 0 0 0 0%;
 		color: $c-grey-med;
 		text-transform: uppercase;
-
 		p {
 			display: block;
 			border-left: 1px solid $c-grey-med;
 			padding: 1% 0 0 1%;
 			margin-bottom: 0;	
 		}
-	}
-	
+	}	
 	.project-name {
+		order: 1;
 		display: block;
     	padding: 1% 0 0 1%;
     	margin-bottom: 1rem;
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
 		text-transform: capitalize;
-
 	}
 	.menu-side {
-		order: 1;
-
+		border: 1px solid tomato;
+		order: 2;
+		.btn-back {
+			display: block;
+			visibility: visible;
+		    height: 30px;
+			width: 30px;
+			padding: 0 0 ; 
+			margin: 10px 0 0 0 ; 
+			border: 1px solid orange;
+			
+			img {
+				display: block;
+				
+			}		
+		}
 		ul {
+			background-color: tomato;
 			display: none;
 
-		
 			@include bp(medium) {
 				display: block;
-				background-color: tomato;
+				// z-index: -1;
 			    flex: 1 0;
 			    min-width: 25%;
 			    max-width: 25%;
 			    font-size: 1rem;
-			    margin: 0;
+			    margin: 10px 0 0 0 ;
 			    padding: 0 0 0 10px;
 			    text-align: left;
 			    @include line-height(30); 
@@ -67,23 +81,79 @@
 			}
 			&li:active, 
 			&li:hover {
-    			color: $c-green-kelly;
-				
+    			color: $c-green-kelly;	
 			}
 		}
-
-
 	}
 }
-/*......... CAROUSEL .......................................*/
+
+//----------------- Thumbnail GRID ------------------//
+.grid {
+	order: 3;
+	display: block;
+	max-width: 100%;
+	height: auto;
+	flex-direction: row;
+	justify-content: flex-start;
+	border: 1px solid green;
+	// z-index: 0;
+
+	// @include bp(medium) {
+		// position: absolute;
+		// top: 0;
+		// right: 0;
+		// float: right;
+	// 	margin-right: 0;
+	// 	max-width: 100%;
+	// }
+
+	.grid-sizer {
+		max-width: 100%;
+		height: auto;
+		@include bp(small) {
+			max-width: 33.333%;
+		}
+		.grid-item {
+			width: 100%;
+			height: auto;
+			@include bp(small) {
+				width: 33.333%;
+			}	
+
+			img {
+				width: 100%;
+				height: auto;
+				@include bp(small){
+					// width: 95%;
+				}
+			
+			}
+			p {
+				display: none;
+			}
+		}
+	}
+}
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/*---------------------- CAROUSEL -------------------*/
 .carousel {
 	display: none;
 
 	@include bp(small){
 		display: none;
 		order: 2;
+		flex: 1 0 auto;
+		// margin-bottom: 2rem;
+		// z-index: 0;
+	}
+	@include bp(medium){
+		display: block;
 		flex: 1 0;
-		margin-bottom: 2rem;
+		border: 1px solid pink;
 	}
 	.big {
 		display: none;
@@ -91,8 +161,11 @@
 		@include bp(small) {
 			display: block;
 			width: 100%;
-			height: 600px;
+			// height: 600px;
 			z-index: 1;
+		}
+		@include bp(medium){
+			// max-width: 75%;
 		}
 
 		.big-img-container {
@@ -129,15 +202,15 @@
 	}
 }
 
-// 	FOR THUMBNAIL GRID STYLES REFER TO _grid.scss -------//
 .carousel-nav {
 	display: none;
 
 	@include bp(small) {
 		display: flex;
 		flex-direction: row;
-		order: 2;
+		order: 4;
 		align-items: stretch;
+		// z-index: 0;	
 		
 		button{ 
 			display: inline-block;
@@ -170,7 +243,12 @@
 	display: block;
 	margin: 1rem 0 0 0 ;
 	padding: 0 0 0 0 ;
-	order: 1;
+	order: 5;
+
+	// @include bp(medium){
+	// 	order: 5;
+
+	// }
 
 	.statement-title {
 		width: 100%;

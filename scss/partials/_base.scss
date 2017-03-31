@@ -113,7 +113,8 @@ header {
 	@include bp(medium){
 		width: 100%;
 		padding: 3% 5%;	
-		height: 125px;
+		height: 120px;
+		border: 1px solid yellow;
 	}		
 	.logo {
 		flex: 2 1 auto;
@@ -191,29 +192,6 @@ header {
 	.nav-down{
 		top: $nav-down;
 	}
-}
-
-
-.btn-back {
-	display: block;
-	visibility: visible;
-    height: 32px;
-	width: 40px;
-	padding: 0.15rem 0 ;
-	@include bp(medium){
-		display: none;
-	}
-	svg {
-		border: 1px solid orange;
-		display: block;
-		visibility: visible;
-		height: 25px;
-		width: auto;
-	}
-	img {
-		display: block;
-		background-color: red;
-	}		
 }
 
 //------ desktop menu style-----------------------------// 
