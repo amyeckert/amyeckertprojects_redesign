@@ -786,8 +786,7 @@ form {
       height: 40px;
       width: 100%;
       margin-left: 0;
-      text-align: left;
-      border: 1px solid tomato; }
+      text-align: left; }
       .carousel .big .image-info p {
         display: inline-block;
         margin: 0;
