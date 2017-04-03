@@ -775,6 +775,7 @@ form {
       background-size: contain;
       background-repeat: no-repeat; }
     .carousel .big .image-info {
+      clear: both;
       -ms-flex-item-align: end;
           align-self: flex-end;
       display: block;
