@@ -116,13 +116,13 @@
 
             $('.previous').on('click', function() {
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
-                var items = document.querySelectorAll('div.item');
+                var items = document.querySelectorAll('figure.item');
 
                 //find the active item 
-                var activeImg = document.querySelector('div.isActive');
+                var activeImg = document.querySelector('figure.isActive');
                 var lastImg = document.querySelector('div.thumbs-container').lastElementChild;  
                 var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
-                var prevImg = document.querySelector('div.isActive').previousElementSibling;
+                var prevImg = document.querySelector('figure.isActive').previousElementSibling;
 
                 $('.item.isActive').removeClass('isActive');
 
@@ -148,13 +148,13 @@
             $('.next').on('click', function() {
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
-                var items = document.querySelectorAll('div.item');
+                var items = document.querySelectorAll('figure.item');
                 
                 // find the active item 
-                var activeImg = document.querySelector('div.isActive');
+                var activeImg = document.querySelector('figure.isActive');
                 var lastImg = document.querySelector('div.thumbs-container').lastElementChild;  
                 var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
-                var nextImg = document.querySelector('div.isActive').nextElementSibling;
+                var nextImg = document.querySelector('figure.isActive').nextElementSibling;
 
                 $('.item.isActive').removeClass('isActive');
 
