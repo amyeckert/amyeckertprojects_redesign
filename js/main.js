@@ -37,7 +37,7 @@
         var cNav = document.getElementById('cNav');
         var grid = document.querySelector('.grid');
         var thumbs = document.getElementById('thumbGrid');
-        var newImageCaption = document.querySelector('.big-img-container');
+        var newImageCaption = document.querySelector('.big');
 
 
         var imageInfo = function() {
@@ -72,7 +72,7 @@
             $('.item').on('click', function(e) {
                 e.preventDefault();
                 // empty big image caption info
-                $('.big-img-container > figcaption').remove();
+                $('.big > figcaption').remove();
                 // console.log(newImageCaption);
 
                 $('.thumbs-only').show();
@@ -117,7 +117,7 @@
 
             $('.previous').on('click', function() {
                 //clear bigImage caption details
-                $('.big-img-container > figcaption').remove();
+                $('.big> figcaption').remove();
                 console.log(newImageCaption);
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
@@ -151,10 +151,10 @@
 
                 imageInfo();                  
             });
-
+ 
             $('.next').on('click', function() {
                 // remove the last figcaption 
-               $('.big-img-container > figcaption').remove();
+               $('.big > figcaption').remove();
                 console.log(newImageCaption);
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
@@ -202,7 +202,7 @@
                                 
             $('.thumbs-only').on('click', function() { 
                 // empty big image caption info
-                $('.big-img-container > figcaption').empty();
+                $('.big > figcaption').empty();
 
                 carousel.style.display = 'none';
                 showThumbs.style.display = 'block';
