@@ -8,7 +8,7 @@
 	flex-flow: column nowrap;
 	width: 100%;
 	// min-height: 100vh;
-	// overflow: hidden;
+	overflow: hidden;
 	margin: 0 auto;
 	
 	@include bp(medium) {
@@ -34,13 +34,14 @@
 	.btn-back {
 		display: block;
 		order: 1;
-		visibility: visible;
-	    height: 30px;
-		width: 30px;
-		padding: 0 0 0 10px;
-    	margin: 0;
-    	border-left: 1px solid #878787;
-
+		@include font-size(15);
+		@include line-height(19);
+		max-width: 50px;
+		float: left;
+		color: $c-grey-med;
+		border-left: 1px solid $c-grey-med;
+		text-transform: uppercase;
+   
     	a {
     		color: $c-grey-med;
     		text-decoration: none;
@@ -49,13 +50,13 @@
 
 	}
 	.project-name {
+		min-width: 200px;
 		order: 2;
 		display: block;
-    	padding: 1% 0 0 1%;
+    	padding: 2% 0 0 0 ;
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
 		text-transform: capitalize;
-
 	}
 	.menu-side {
 		display: none;
@@ -253,7 +254,6 @@
 }
 
 // ----- STATEMENT ----------------------//
-
 .statement-title {
 	margin-top: 10px;
 	order: 7;
@@ -272,7 +272,7 @@
 	// 	width: 25%;
 	// }
 }
-
+// 
 .modal-on {
 	overflow: hidden;
 }
@@ -298,16 +298,19 @@
 	.modal {
 		background-color: $c-white;
 		width: 80%;
-		height: 600px;;
+		height: auto;
 		margin: 0 auto;
 		border-radius: 20px;
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%); //centers it. 
 		text-align: left;
+		overflow: scroll;
+
 
 		@include bp(small){
 			width: 40%;
+			height: 600px;
 
 		}
 		@include bp(medium){
@@ -315,11 +318,12 @@
 		}
 		.modal-header {
 			width: 90%;
+			max-height: 40px;
 			margin: 0 auto;
 			position: relative;
 
 			.close {
-				color: $c-Grey-med;
+				color: $c-grey-med;
 				position: absolute;
 				text-transform: uppercase;
 				@include font-size(12);

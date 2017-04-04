@@ -612,6 +612,7 @@ form {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 100%;
+  overflow: hidden;
   margin: 0 auto; }
   .main-content .page-location {
     -webkit-box-ordinal-group: 2;
@@ -632,23 +633,27 @@ form {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    visibility: visible;
-    height: 30px;
-    width: 30px;
-    padding: 0 0 0 10px;
-    margin: 0;
-    border-left: 1px solid #878787; }
+    font-size: 0.9375rem;
+    font-size: 15px;
+    line-height: 1.1875rem;
+    line-height: 19px;
+    max-width: 50px;
+    float: left;
+    color: #878787;
+    border-left: 1px solid #878787;
+    text-transform: uppercase; }
     .main-content .btn-back a {
       color: #878787;
       text-decoration: none;
       font-size: 2.0625rem;
       font-size: 33px; }
   .main-content .project-name {
+    min-width: 200px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     display: block;
-    padding: 1% 0 0 1%;
+    padding: 2% 0 0 0;
     color: #878787;
     border-left: 1px solid #878787;
     text-transform: capitalize; }
@@ -878,7 +883,7 @@ form {
   .modal-container .modal {
     background-color: #fff;
     width: 80%;
-    height: 600px;
+    height: auto;
     margin: 0 auto;
     border-radius: 20px;
     position: relative;
@@ -886,18 +891,22 @@ form {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    text-align: left; }
+    text-align: left;
+    overflow: scroll; }
     @media only screen and (min-width: 750px) {
       .modal-container .modal {
-        width: 40%; } }
+        width: 40%;
+        height: 600px; } }
     @media only screen and (min-width: 1024px) {
       .modal-container .modal {
         top: 50%; } }
     .modal-container .modal .modal-header {
       width: 90%;
+      max-height: 40px;
       margin: 0 auto;
       position: relative; }
       .modal-container .modal .modal-header .close {
+        color: #878787;
         position: absolute;
         text-transform: uppercase;
         font-size: 0.75rem;
