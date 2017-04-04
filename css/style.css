@@ -182,7 +182,6 @@ header {
     header {
       height: 120px;
       width: 100%;
-      padding: 3% 5% 0 5%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -190,12 +189,11 @@ header {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      height: 70px; } }
+      height: 75px; } }
   @media only screen and (min-width: 1024px) {
     header {
       width: 100%;
-      padding: 1% 5%;
-      height: 75px; } }
+      padding: 1% 5%; } }
   @media only screen and (min-width: 1200px) {
     header {
       padding: 0;
@@ -227,10 +225,10 @@ header {
         header .logo img {
           width: 60%; } }
   header .menu-mobile {
-    height: 40px;
+    height: 35px;
     width: 90%;
     position: relative;
-    margin: 4% auto; }
+    margin: 1% auto; }
     @media only screen and (min-width: 340px) {
       header .menu-mobile {
         display: inline-block;
@@ -249,11 +247,9 @@ header {
         margin: 0;
         -webkit-box-flex: 0;
             -ms-flex: 0 1 auto;
-                flex: 0 1 auto;
-        height: 100px; } }
+                flex: 0 1 auto; } }
     @media only screen and (min-width: 1200px) {
       header .menu-mobile {
-        height: 90px;
         margin: 1% 5%; } }
     header .menu-mobile .menu-toggle {
       display: block;
@@ -278,9 +274,6 @@ header {
           font-size: 1.375rem;
           font-size: 22px;
           border-right: 1px solid #878787; } }
-      @media only screen and (min-width: 1024px) {
-        header .menu-mobile .menu-toggle {
-          padding: 0 3% 0 0; } }
       @media only screen and (min-width: 1200px) {
         header .menu-mobile .menu-toggle {
           height: 60px;
@@ -781,12 +774,17 @@ form {
       display: block;
       visibility: visible;
       color: #878787;
-      font-size: 16;
+      font-size: 0.9375rem;
+      font-size: 15px;
       visibility: visible;
       height: 40px;
       width: 100%;
       margin-left: 0;
       text-align: left; }
+      @media only screen and (min-width: 750px) {
+        .carousel .big .image-info {
+          height: 30px;
+          margin-top: 10px; } }
       .carousel .big .image-info p {
         display: inline-block;
         margin: 0;
@@ -817,7 +815,7 @@ form {
         font-size: 30px;
         height: 25px;
         color: #878787;
-        padding: 10px;
+        padding: 5px 10px;
         line-height: 1.5625rem;
         line-height: 25px; }
       .carousel-nav .thumbs-only {
@@ -839,27 +837,45 @@ form {
 
 .statement {
   display: block;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0;
   padding: 0 0 0 0;
   -webkit-box-ordinal-group: 8;
       -ms-flex-order: 7;
-          order: 7; }
+          order: 7;
+  position: relative; }
   .statement .statement-title {
-    width: 100%;
-    display: block;
+    font-size: 0.9375rem;
+    font-size: 15px;
+    min-width: 25%;
+    display: inline-block;
+    float: left;
     padding: 1% 0 0 1%;
     margin-bottom: 0;
     color: #878787;
     border-left: 1px solid #878787;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    @media only screen and (min-width: 340px) {
+      .statement .statement-title {
+        font-size: 1rem;
+        font-size: 16px; } }
   .statement .statement-body {
     display: none;
-    min-width: 75%;
-    margin: 3% auto;
+    max-width: 75%;
+    margin: 0 auto;
     height: 100%;
     font-size: 0.8rem;
     letter-spacing: 0.03rem;
-    color: #878787; }
+    color: #878787;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    @media only screen and (min-width: 750px) {
+      .statement .statement-body {
+        max-width: 66.666%;
+        float: right; } }
     .statement .statement-body p {
       margin: 0 auto;
       line-height: 1.375rem;

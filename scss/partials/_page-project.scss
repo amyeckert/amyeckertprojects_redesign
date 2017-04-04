@@ -182,13 +182,18 @@
 			display: block;
 			visibility: visible;
 			color: $c-grey-med;
-			font-size: $baseFontSize;
+			@include font-size(15);
 			visibility: visible;
 			height: 40px; 
 			width: 100%;
 			margin-left: 0;
 			text-align: left;
-			// border: 1px solid tomato;
+			
+			@include bp(small){
+				height: 30px;
+				margin-top: 10px;
+
+			}
 			p {
 				display: inline-block;
 				margin: 0;
@@ -215,7 +220,7 @@
 			@include font-size(30);
 			height: 25px;
 			color: $c-grey-med;
-			padding: 10px;
+			padding: 5px 10px;
 			@include line-height(25);
 		}
 		.thumbs-only {
@@ -239,28 +244,46 @@
 // ----- STATEMENT ----------------------//
 .statement {
 	display: block;
-	margin: 1rem 0 0 0 ;
+	margin: 1rem 0;
 	padding: 0 0 0 0 ;
 	order: 7;
+	position: relative;
 
 	.statement-title {
-		width: 100%;
-		display: block;
+		@include font-size(15);
+		min-width: 25%;
+		display: inline-block;
+		float: left;
     	padding: 1% 0 0 1%;
     	margin-bottom: 0;
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
 		text-transform: uppercase;
+		position: absolute;
+		top: 0;left: 0;
+		@include bp(xsmall){
+			@include font-size(16);
+		}
+
 	}
 	
 	.statement-body {
 		display: none;
-		min-width:75%;
-		margin: 3% auto;
+		max-width:75%;
+		// float: right;
+		margin: 0 auto;
 		height:100%;
 		font-size: 0.8rem;
 		letter-spacing: 0.03rem;
 		color: $c-grey-med;	
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		@include bp(small){
+			max-width: 66.666%;
+			float: right;
+		}
 
 		p {
 			margin: 0 auto;

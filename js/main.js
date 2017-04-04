@@ -31,7 +31,7 @@
         var statementBody =document.querySelector('.statement-body');
         var carousel =document.querySelector('.carousel');
         var showThumbs = document.getElementById('thumbGrid');
-        var imgInfo = document.getElementById('imgInfo');
+        // var imgInfo = document.getElementById('imgInfo');
         var previous = document.getElementById('prevImg');
         var next = document.getElementById('nextImg');
         var cNav = document.getElementById('cNav');
@@ -40,10 +40,10 @@
         var newImageCaption = document.querySelector('.big');
 
 
-        var imageInfo = function() {
+        var updateCaption = function() {
             //get contents of current image info <p>s
             var chosenImageCaption = document.querySelector('.isActive > figcaption');
-            var chosenImageDetails = $('.isActive > figcaption').children(); //makes an array
+            var chosenImageDetails = $('.isActive > figcaption').children(); //make an array
             var imageTitle = $(chosenImageDetails[0]).text();
             var imageDate = $(chosenImageDetails[1]).text();
             var imageDimensions = $(chosenImageDetails[2]).text();
@@ -91,7 +91,7 @@
                 $('.big-img-container').attr('style', 'background-image: url('+chosenThumb+')');
                 
                 // change caption
-                imageInfo();
+                updateCaption();
 
                 carousel.style.display = 'block';
                 carousel.style.order = 3;
@@ -148,8 +148,8 @@
                     //make that img new big img.
                     $('.big-img-container').attr('style', 'background-image: url('+chosenThumb+')');
                 }
-
-                imageInfo();                  
+                // update to current figcaption
+                updateCaption();                  
             });
  
             $('.next').on('click', function() {
@@ -195,13 +195,13 @@
                     //make that img new big img.
                     $('.big-img-container').attr('style', 'background-image: url('+chosenThumb+')');
                 }
-                imageInfo();
+                // get curretn image figcaption
+                updateCaption();
             });    
-            /*-------------------------------------------------------------------------------------------------
-                hides big image/ shows thumbs grid */
+            /*----------------------------------------------------------------
+            hides big image/ shows thumbs grid */
                                 
             $('.thumbs-only').on('click', function() { 
-                // empty big image caption info
                 $('.big > figcaption').empty();
 
                 carousel.style.display = 'none';
