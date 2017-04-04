@@ -237,17 +237,26 @@
 			<button class="next button" id="nextImg">&gt;</button>
 		</div>
 
-		<article class="statement">
-			<h3 class="statement-title">About</h3>
-			<div class="statement-body">
-				<p>For two years in a row I had the immense pleasure of photographing organic, sustainable farmers and chefs all over Minnesota. My husband and I had just moved to Minneapolis and this was my first assignment. I fell in love with the state of Minnesota and it's people (and food) as I travelled thousands of miles (it's a big state!) making these pictures for the <a href="http://www.mfu.org/" target="_blank"><span>MN Farmer's Union</span></a> and <a href="http://foodalliance.org/" target="_blank"><span>Food Alliance Midwest.</span></a></p>  
+		<button class="statement-title js-modal-open">About</button>
 
-				<p>The Minnesota Cooks program is an annual event held at the MN State Fair.The program brings together local farmers with some of Minnesota's premier chefs as they demonstrate how they use farm fresh, Minnesota-grown ingredients to create award-winning fare for their restaurants.</p>
+		<div class="modal-container">
+			<div class="modal">	
+				<header class="modal-header">
+						<button class= "close">Close</button>
+				</header>
 
-				<p>The Minnesota Cooks Calendar is a celebration of the wonderful food produced in the great state of Minnesota. Each 16-month calendar features the year's participating chef's,the farmers who supply them, and, best of all, a delicious recipe every month. For more information, please visist <a href="http://www.minnesotacooks.net" target="_blank"><span>www.minnestoacooks.net</span></a> and support local farmers wherever you live.</p>
-			</div>			
-		</article>
+				<article class="statement modal-content">
+					
+					<div class="statement-body">
+						<p>For two years in a row I had the immense pleasure of photographing organic, sustainable farmers and chefs all over Minnesota. My husband and I had just moved to Minneapolis and this was my first assignment. I fell in love with the state of Minnesota and it's people (and food) as I travelled thousands of miles (it's a big state!) making these pictures for the <a href="http://www.mfu.org/" target="_blank"><span>MN Farmer's Union</span></a> and <a href="http://foodalliance.org/" target="_blank"><span>Food Alliance Midwest.</span></a></p>  
 
+						<p>The Minnesota Cooks program is an annual event held at the MN State Fair. The program brings together local farmers with some of Minnesota's premier chefs as they demonstrate how they use farm fresh, Minnesota-grown ingredients to create award-winning fare for their restaurants.</p>
+
+						<p>The Minnesota Cooks Calendar is a celebration of the wonderful food produced in the great state of Minnesota. Each 16-month calendar features the year's participating chef's,the farmers who supply them, and, best of all, a delicious recipe every month. For more information, please visist <a href="http://www.minnesotacooks.net" target="_blank"><span>www.minnestoacooks.net</span></a> and support local farmers wherever you live.</p>
+					</div>			
+				</article>
+			</div>
+		</div>
 	</section>
 
 	<!-- FOOTER .................................................. -->
@@ -296,10 +305,12 @@
 <!--  JQuery UI -->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>	
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- masonry.js -->
+
+<!-- external libraries -->
 <script src="../js/masonry.pkgd.js"></script>
-<!-- imagesLoaded.js -->
+<script src="../js/isotope.pkgd.js"></script>
 <script src="../js/imagesloaded.pkgd.min.js"></script>
+
 <!--custom.js -->
 <script src="../js/main.js"></script> 
 <script src="../js/header.js"></script> 

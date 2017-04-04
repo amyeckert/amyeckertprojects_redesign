@@ -690,15 +690,13 @@ form {
       -ms-flex-order: 4;
           order: 4;
   display: block;
-  max-width: 100%;
+  min-width: 100%;
   height: auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+  margin-top: 15px; }
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both; }
   @media only screen and (min-width: 1024px) {
     .grid {
       display: block;
@@ -707,19 +705,24 @@ form {
       right: 0;
       float: right;
       margin-right: 0;
-      max-width: 100%; } }
+      width: 100%; } }
   .grid .grid-sizer {
-    max-width: 100%;
+    border: 1px solid tomato;
+    width: 100%;
     height: auto; }
     @media only screen and (min-width: 750px) {
       .grid .grid-sizer {
-        max-width: 33.333%; } }
+        width: 100%; } }
     .grid .grid-sizer .grid-item {
+      float: left;
       width: 100%;
-      height: auto; }
+      height: auto;
+      margin-bottom: 5px; }
       @media only screen and (min-width: 750px) {
         .grid .grid-sizer .grid-item {
-          width: 33.333%; } }
+          float: none;
+          width: 33.333%;
+          margin-bottom: -10px; } }
       .grid .grid-sizer .grid-item img {
         width: 100%;
         height: auto; }
@@ -835,62 +838,99 @@ form {
             -ms-flex-order: 3;
                 order: 3; } }
 
-.statement {
-  display: block;
-  margin: 1rem 0;
-  padding: 0 0 0 0;
+.statement-title {
+  margin-top: 10px;
   -webkit-box-ordinal-group: 8;
       -ms-flex-order: 7;
           order: 7;
-  position: relative; }
-  .statement .statement-title {
-    font-size: 0.9375rem;
-    font-size: 15px;
-    min-width: 25%;
-    display: inline-block;
-    float: left;
-    padding: 1% 0 0 1%;
-    margin-bottom: 0;
-    color: #878787;
-    border-left: 1px solid #878787;
-    text-transform: uppercase;
+  font-size: 0.9375rem;
+  font-size: 15px;
+  line-height: 1.1875rem;
+  line-height: 19px;
+  max-width: 50px;
+  display: inline-block;
+  float: left;
+  margin: 25px 0 0 0;
+  color: #878787;
+  border-left: 1px solid #878787;
+  text-transform: uppercase; }
+
+.modal-on {
+  overflow: hidden; }
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .modal-container:after {
+    content: "";
     position: absolute;
+    background-color: #8a5cd1;
+    opacity: 0.9;
     top: 0;
-    left: 0; }
-    @media only screen and (min-width: 340px) {
-      .statement .statement-title {
-        font-size: 1rem;
-        font-size: 16px; } }
-  .statement .statement-body {
-    display: none;
-    max-width: 75%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1; }
+  .modal-container .modal {
+    background-color: #fff;
+    width: 80%;
+    height: 600px;
     margin: 0 auto;
-    height: 100%;
-    font-size: 0.8rem;
-    letter-spacing: 0.03rem;
-    color: #878787;
-    position: absolute;
-    top: 0;
-    right: 0; }
+    border-radius: 20px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: left; }
     @media only screen and (min-width: 750px) {
-      .statement .statement-body {
-        max-width: 66.666%;
-        float: right; } }
-    .statement .statement-body p {
+      .modal-container .modal {
+        width: 40%; } }
+    @media only screen and (min-width: 1024px) {
+      .modal-container .modal {
+        top: 50%; } }
+    .modal-container .modal .modal-header {
+      width: 90%;
       margin: 0 auto;
-      line-height: 1.375rem;
-      line-height: 22px; }
-      .statement .statement-body p:nth-child(1) {
-        margin-top: 0; }
-    .statement .statement-body span {
-      border-bottom: 1px solid #878787;
-      color: #878787;
-      text-decoration: none; }
-      .statement .statement-body span:hover {
-        color: #099949;
-        border-bottom: 1px solid #099949; }
-      .statement .statement-body span a:hover {
-        color: #099949; }
+      position: relative; }
+      .modal-container .modal .modal-header .close {
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-size: 12px;
+        right: 0;
+        top: 0; }
+    .modal-container .modal .modal-content {
+      width: 100%; }
+    .modal-container .modal .statement-body {
+      width: 90%;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 0.8rem;
+      letter-spacing: 0.03rem;
+      background-color: #fff;
+      color: #878787; }
+
+@inlcude bp(medium) {
+  .modal-container .modal .statement-body {
+    width: 75%; } }
+      .modal-container .modal .statement-body p {
+        margin: 1rem auto;
+        line-height: 1.375rem;
+        line-height: 22px; }
+      .modal-container .modal .statement-body span {
+        border-bottom: 1px solid #878787;
+        color: #878787;
+        text-decoration: none; }
+        .modal-container .modal .statement-body span:hover {
+          color: #b56618;
+          border-bottom: 1px solid #b56618; }
+        .modal-container .modal .statement-body span a:hover {
+          color: #b56618; }
 
 /*	------------ SIDE NAV ON DESKTOP --------------------*/
 .options-menu-horizontal {

@@ -96,10 +96,15 @@
 .grid {
 	order: 4;
 	display: block;
-	max-width: 100%;
+	min-width: 100%;
 	height: auto;
-	flex-direction: row;
-	justify-content: flex-start;
+	margin-top: 15px;
+	
+	&:after {
+		  content: '';
+		  display: block;
+		  clear: both;
+		}
 	
 	@include bp(medium) {
 		display: block;
@@ -108,20 +113,26 @@
 		right: 0;
 		float: right;
 		margin-right: 0;
-		max-width: 100%;
+		width: 100%;
 	}
 
 	.grid-sizer {
-		max-width: 100%;
+		border: 1px solid tomato;
+		width: 100%;
 		height: auto;
 		@include bp(small) {
-			max-width: 33.333%;
+			width: 100%;
+
 		}
 		.grid-item {
+			float: left;
 			width: 100%;
 			height: auto;
+			margin-bottom: 5px;	
 			@include bp(small) {
+				float: none;
 				width: 33.333%;
+				margin-bottom: -10px;
 			}	
 
 			img {
@@ -242,75 +253,124 @@
 }
 
 // ----- STATEMENT ----------------------//
-.statement {
-	display: block;
-	margin: 1rem 0;
-	padding: 0 0 0 0 ;
+
+.statement-title {
+	margin-top: 10px;
 	order: 7;
-	position: relative;
+	@include font-size(15);
+	@include line-height(19);
+	max-width: 50px;
+	display: inline-block;
+	float: left;
+	margin: 25px 0 0 0 ;
+	color: $c-grey-med;
+	border-left: 1px solid $c-grey-med;
+	text-transform: uppercase;
 
-	.statement-title {
-		@include font-size(15);
-		min-width: 25%;
-		display: inline-block;
-		float: left;
-    	padding: 1% 0 0 1%;
-    	margin-bottom: 0;
-		color: $c-grey-med;
-		border-left: 1px solid $c-grey-med;
-		text-transform: uppercase;
-		position: absolute;
-		top: 0;left: 0;
-		@include bp(xsmall){
-			@include font-size(16);
-		}
+	// @include bp(xsmall){
+	// 	@include font-size(16);
+	// 	width: 25%;
+	// }
+}
 
-	}
-	
-	.statement-body {
-		display: none;
-		max-width:75%;
-		// float: right;
-		margin: 0 auto;
-		height:100%;
-		font-size: 0.8rem;
-		letter-spacing: 0.03rem;
-		color: $c-grey-med;	
+.modal-on {
+	overflow: hidden;
+}
+.modal-container {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	&:after {
+		content: "";
 		position: absolute;
+		background-color: $c-purple;
+		opacity: 0.9;
 		top: 0;
+		left: 0;
+		bottom: 0;
 		right: 0;
+		z-index: -1;
+	}
+	.modal {
+		background-color: $c-white;
+		width: 80%;
+		height: 600px;;
+		margin: 0 auto;
+		border-radius: 20px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%); //centers it. 
+		text-align: left;
 
 		@include bp(small){
-			max-width: 66.666%;
-			float: right;
+			width: 40%;
+
 		}
-
-		p {
+		@include bp(medium){
+			top: 50%;
+		}
+		.modal-header {
+			width: 90%;
 			margin: 0 auto;
-			@include line-height(22);
+			position: relative;
 
-			&:nth-child(1) {
-			margin-top: 0;
-			
+			.close {
+				color: $c-Grey-med;
+				position: absolute;
+				text-transform: uppercase;
+				@include font-size(12);
+				right: 0;
+				top: 0;
 			}
 		}
-		span {
-			border-bottom:1px solid $c-grey-med;
-			color: $c-grey-med;
-			text-decoration: none;
+		.modal-content {
+			width: 100%;
+			
 
-			&:hover {
-				color:$c-green-kelly;
-				border-bottom:1px solid $c-green-kelly;
-			} 
-			a {
-				&:hover{
-					color: $c-green-kelly
+		}
+		.statement-body {
+			width: 90%;
+			margin: 0 auto;
+			text-align: left;
+			font-size: 0.8rem;
+			letter-spacing: 0.03rem;
+			background-color: $c-white;
+			color: $c-grey-med;	
+
+			@inlcude bp(medium){
+				width: 75%;
+			}
+			p {
+
+				margin: 1rem auto;
+				@include line-height(22);
+			}
+			span {
+				border-bottom:1px solid $c-grey-med;
+				color: $c-grey-med;
+				text-decoration: none;
+
+				&:hover {
+					color:$c-orange-light;
+					border-bottom:1px solid $c-orange-light;
+				} 
+				a {
+					&:hover{
+						color: $c-orange-light;
+					}
 				}
 			}
-		}	
+		}
 	}
-} 
+}
+
+
+
+ 
 
 /*	------------ SIDE NAV ON DESKTOP --------------------*/
 

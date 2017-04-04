@@ -10,15 +10,16 @@
         var copyrightNotice = 'All images © ' + year + ' Amy Eckert';
         $('p.copyright').html(copyrightNotice);   
 
-        // init Masory
+        //init masonry
         var $grid = $('.grid').masonry({
-          itemSelector: '.grid-item',
-          percentPosition: true, 
-          columnWidth: '.grid-sizer'
+            itemSelector: '.grid-item',
+            percentPosition: true, 
+            masonry: {columnWidth: '.grid-sizer'}
+            
         });
-        // layout Isotope after each image loads
+        //layout Isotope after each image loads
         $grid.imagesLoaded().progress( function() {
-          $grid.masonry();
+          $grid.masonry('layout');
         }); 
 
         //clear big image caption
@@ -54,10 +55,33 @@
 
         }
         //-------------- toggle statement text -----------------------------------//
-        $('.statement').on('click', function(e) {
-            e.preventDefault();
-            $(statementBody).toggle();
+        var modal = function(state) {
+            if(state === 'open') {
+                $('.modal-container').fadeIn(function(){
+                    $('body').addClass('modal-on'); 
+                });
+            } 
+            else {
+                $('.modal-container').fadeOut(function(){
+                    $('body').removeClass('modal-on');
+                });
+            }   
+        };
+        //open the modal
+        $('.js-modal-open').on('click', function(event) {
+            event.preventDefault();
+            modal('open');
         });
+
+        //close the modal
+        $('.close').on('click', function(event){
+            event.preventDefault();
+            modal('close');
+        });
+        // $('.statement').on('click', function(e) {
+        //     e.preventDefault();
+        //     $(statementBody).toggle();
+        // });
        
         // behaviour for tablet and desktop only ---------------------------------------------------//
         if (width >= 700 ) {
@@ -211,8 +235,9 @@
                 prevImg.style.visibility = 'hidden';
                 nextImg.style.visibility = 'hidden';
             });
-            /*-------------------------------------------------------------------------------------------------
-                SHOW / HIDE STATEMENT  */         
+            //---------- SHOW / HIDE ABOUT --------------------------------//
+
+        
         }
 });//________THE END________________________________________________________________________________________
 
