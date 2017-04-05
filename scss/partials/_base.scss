@@ -327,9 +327,15 @@ header {
 		align-self: flex-end;
 	}
 }
-
-/*------------------ BLOG PAGE ------------------------------------*/
-//  someday...?
+// ------- COPYRIGHT NOTICE-----------------//
+.copyright-notice {
+	order: 9;
+	width: 90%;
+	margin: 25px auto;
+	color: $c-grey-med;
+	@include font-size(14);
+	text-align: center;
+}
 //----------------- CONTACT PAGE ------------------------------------*/
 
 #contact .main-content {
@@ -351,20 +357,25 @@ header {
 	}
 	@include bp(small){
 		flex-flow: row nowrap;
-		align-items: center;
+		
 	}
 	.contact-img {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		order: 1;
 
 		@include bp(small){
-    		width: 50%;
+    		width: 100%;
     		height: auto;
+			flex-direction: row;
 		}
 		img{
-			display: block;
 			width: 100%;
+			@include bp(small){
+				width: 50%;
+				height: 100%;
+			}
 		} 
 	}	
 	.contact-form {
@@ -377,12 +388,12 @@ header {
 		}
 		.temp-contact-info {
 			display: block;
-			order: 2;
+			order: 3;
 			width: 100%;
+			vertical-align: middle;
 			text-align: center;
 			color: $c-grey-med; 
 			padding: 15px 10px;
-			z-index: 0;
 			@include font-size(14);
 			@include line-height(20);
 			&:hover {
@@ -396,6 +407,8 @@ header {
 		 	@include bp(small){
 		 		@include font-size(18);
 		 		@include line-height(25);
+				margin-top: 50%;
+				transform: translateY(-50%);
 		 	}	
 		}
 	}	

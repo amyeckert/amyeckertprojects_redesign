@@ -7,7 +7,6 @@
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	flex-flow: column nowrap;
 	width: 100%;
-	// min-height: 100vh;
 	overflow: hidden;
 	margin: 0 auto;
 	
@@ -41,6 +40,7 @@
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
 		text-transform: uppercase;
+		padding: 0;
    
     	a {
     		color: $c-grey-med;
@@ -225,6 +225,8 @@
 		flex-direction: row;
 		order: 6;
 		align-items: stretch;	
+	    margin: 10px 0;
+	    height: 40px;
 		
 		button{ 
 			display: inline-block;
@@ -258,18 +260,60 @@
 	order: 7;
 	@include font-size(15);
 	@include line-height(19);
-	max-width: 50px;
+	max-width: 25%;
 	display: inline-block;
 	float: left;
-	margin: 25px 0 ;
+	margin: 0 ;
 	color: $c-grey-med;
 	border-left: 1px solid $c-grey-med;
 	text-transform: uppercase;
 
-	// @include bp(medium){
-	// 	@include font-size()
-	// }
+	@include bp(small){
+	
+		max-width: 75px;
+		margin: 0;
+	}
 }
+
+// -------- SHARE AND SOCIAL MEDIA
+.social {
+	display: none;
+	border: 1px solid tomato;
+	width: 100%;
+	order: 8;
+	flex: 0 1 auto;
+
+	@include bp(small){
+		width: 30%;
+	}
+
+	ul {
+		padding: 0;
+		width: 75%;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		margin:0 auto;
+
+		li {
+			flex: 0 1 auto;
+			width: 33.334%;
+			padding: 10px;
+		
+			a {
+				max-height: 100%;
+				width: 100%;
+
+				svg {
+					height: 40px;
+					width: 100%;
+					
+				}
+			}
+		}
+
+	}
+} 
 // ABOUT THE PROJECT MODAL ----------------//
 .modal-on {
 	overflow: hidden;
