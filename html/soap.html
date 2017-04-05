@@ -23,7 +23,7 @@
 		</div>
 	</header>
 
-	<nav role="navigation" class="menu-top"> 
+<!-- 	<nav role="navigation" class="menu-top"> 
 
 		<ul class="main-menu">
 
@@ -31,11 +31,11 @@
 			<li class="navdesign"><a href="design.html">DESIGN</a></li>
 			<li class="navphoto"><a href="photography.html" >PHOTOGRAPHY</a></li>
 			<li class="navmixed"><a href="mixedmedia.html">MIXED MEDIA</a></li>
-			<!-- <li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li> -->
-			<li class="navabout"><a href="about.html">ABOUT</a></li>
-			<!-- <li class="navblog"><a href="blog.html">BLOG</a></li> -->
-			<li class="navcontact"><a href="contact.html">CONTACT</a></li>
-		</ul>
+			<li class="navexhibitions"><a href="exhibitions.html">EXHIBITIONS</a></li>
+			 <li class="navabout"><a href="about.html">ABOUT</a></li>
+			<li class="navblog"><a href="blog.html">BLOG</a></li>
+			<li class="navcontact"><a href="contact.html">CONTACT</a></li> -->
+		<!-- </ul>
 
 		<ul class="share">	
 		
@@ -45,13 +45,12 @@
 
 			<li><a href="https://twitter.com/amyeckertphoto" target="blank"><img src="../images/front/Twitter-icon.png" alt="twitter icon"></a></li>
 		</ul>
-		 
-	</nav>
+	</nav>  -->
 
 	<!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
 	<section class="main-content">
-		<div class="btn btn-back"><a href="photography.html"><</a>
-		</div>
+		<button class="btn btn-back"><a href="photography.html"><</a>
+		</button>
 		<p class="project-name">Soap</p>
 		
 		<nav role="navigation" class="menu-side">
@@ -231,16 +230,26 @@
 			<button class="previous button" id="prevImg">&lt;</button>
 			<button class="next button" id="nextImg">&gt;</button>
 		</div>
-	
-		<article class="statement">
-			<h3 class="statement-title">About</h3>
-			<div class="statement-body">
-				<p>"Carly tells Jack she realizes they're finally over. Barbara is about to pay off Iris when Will and Glen catch them red-handed. Chris tries to revive unconscious Bob. Brad offers to father Katie's children, Dusty overhears. Meg and Craig get trapped in an elevator and bond over delivering a baby. Noah outs himself to a friend. Emily comforts Chris, who blames himself. "
 
-				<p>As The World Turns</p>
+		<button class="statement-title js-modal-open">About</button>
 
-			</div>			
-		</article>
+		<div class="modal-container">
+			<div class="modal">	
+				<header class="modal-header">
+						<button class= "close">Close</button>
+				</header>
+
+				<article class="statement  modal-content">
+
+					<div class="statement-body">
+						<p>"Carly tells Jack she realizes they're finally over. Barbara is about to pay off Iris when Will and Glen catch them red-handed. Chris tries to revive unconscious Bob. Brad offers to father Katie's children, Dusty overhears. Meg and Craig get trapped in an elevator and bond over delivering a baby. Noah outs himself to a friend. Emily comforts Chris, who blames himself. "</p>
+
+						<p>As The World Turns</p>
+
+					</div>			
+				</article>
+			</div>
+		</div>
 	</section>
 
 	<!-- FOOTER .................................................. -->

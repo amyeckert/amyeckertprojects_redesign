@@ -51,8 +51,8 @@
 
 	<!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
 	<section class="main-content">
-		<div class="btn btn-back"><a href="mixedmedia.html"><</a>
-		</div>
+		<button class="btn btn-back"><a href="mixedmedia.html"><</a>
+		</button>
 		<p class="project-name">Misunderstood Buildings</p>
 
 		<nav role="navigation" class="menu-side">
@@ -299,15 +299,25 @@
 			<button class="previous button" id="prevImg">&lt;</button>
 			<button class="next button" id="nextImg">&gt;</button>
 		</div>
-	
-		<article class="statement">
-			<h3 class="statement-title">About</h3>
-			<div class="statement-body">
-				<p>What began as a way to re-imagine what goes on inside other people’s homes, namely, famous buildings and architect-designed homes of the wealthy, has become an exploration of the supposedly stable boundary between the rationality of architectural form &mdash;and by implication architectural photography, versus the irrationality of imagination and emotion. I am led by a sense of play. In this collage series I combine my own images with found photographs taken from pages of architecture books. I physically remove the structure from these landscapes and overlay the remaining scene on top of my own, filling up the voids with other possibilities. I think of it as renovating.</p>
 
-				<p>In architecture, a folly is an extravagant, useless, or fanciful building, or one that appears to be something other than what it is. In their book <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Follies%2C+Grottoes+%26+Garden+Buildings%2C+Headley+%26+Meulenkamp" target="_blank"><span>Follies, Grottoes &amp; Garden Buildings,</span></a> Headley and Meulenkamp define a folly as a &quot;<em>Misunderstood Building</em>&quot;. </p>
-			</div>			
-		</article>
+		<button class="statement-title js-modal-open">About</button>
+
+		<div class="modal-container">
+			<div class="modal">	
+				<header class="modal-header">
+						<button class= "close">Close</button>
+				</header>
+
+				<article class="statement  modal-content">
+
+					<div class="statement-body">
+						<p>What began as a way to re-imagine the goings-on inside other people’s homes, especially famous buildings and architect-designed homes of the wealthy, has become an exploration of the supposedly stable boundary between the rationality of architectural form &mdash;and by implication architectural photography, versus the irrationality of imagination and emotion. I am led by a sense of play. In this collage series I combine my own images with found photographs cut out of architecture books. I physically remove the structure from the scene and overlay the remaining landscape on top of my own image, filling up the voids with other possibilities. I like to think of it as renovating.</p>
+
+						<p>In architecture, a folly is an extravagant, useless, or fanciful building, or one that appears to be something other than what it is. In their book <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Follies%2C+Grottoes+%26+Garden+Buildings%2C+Headley+%26+Meulenkamp" target="_blank"><span>Follies, Grottoes &amp; Garden Buildings,</span></a> Headley and Meulenkamp define a folly as a &quot;<em>Misunderstood Building</em>&quot;. </p>
+					</div>			
+				</article>
+			</div>
+		</div>
 	</section>
 
 	<!-- FOOTER .................................................. -->

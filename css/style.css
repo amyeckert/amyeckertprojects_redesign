@@ -225,12 +225,13 @@ header {
         header .logo img {
           width: 60%; } }
   header .menu-mobile {
-    height: 35px;
+    height: 20px;
     width: 90%;
     position: relative;
-    margin: 1% auto; }
+    margin: 0 auto; }
     @media only screen and (min-width: 340px) {
       header .menu-mobile {
+        height: 35px;
         display: inline-block;
         margin: 0;
         width: 25%; } }
@@ -240,11 +241,9 @@ header {
         display: -ms-flexbox;
         display: flex;
         width: 50%;
-        margin: 0;
         float: right; } }
     @media only screen and (min-width: 1024px) {
       header .menu-mobile {
-        margin: 0;
         -webkit-box-flex: 0;
             -ms-flex: 0 1 auto;
                 flex: 0 1 auto; } }
@@ -254,8 +253,8 @@ header {
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 18px;
-      color: #878787;
-      padding: 6px;
+      color: #6b6b6b;
+      padding: 0 6px 6px 6px;
       height: 100%;
       width: 30%;
       position: absolute;
@@ -273,7 +272,7 @@ header {
           display: block;
           font-size: 1.375rem;
           font-size: 22px;
-          border-right: 1px solid #878787; } }
+          border-right: 1px solid #6b6b6b; } }
       @media only screen and (min-width: 1200px) {
         header .menu-mobile .menu-toggle {
           height: 60px;
@@ -334,7 +333,7 @@ header {
         width: 50%;
         margin: 0 auto;
         padding: 60px;
-        border-left: 1px solid #878787; } }
+        border-left: 1px solid #6b6b6b; } }
     .bio .bio-col-half p {
       line-height: 1.4375rem;
       line-height: 23px;
@@ -449,7 +448,7 @@ header {
               order: 2;
       width: 100%;
       text-align: center;
-      color: #878787;
+      color: #6b6b6b;
       padding: 15px 10px;
       z-index: 0;
       font-size: 0.875rem;
@@ -482,7 +481,7 @@ form {
   form fieldset {
     border: none;
     width: 100%;
-    color: #878787; }
+    color: #6b6b6b; }
     @media only screen and (min-width: 750px) {
       form fieldset {
         width: 90%;
@@ -508,8 +507,8 @@ form {
     max-width: 40rem;
     padding: 10px;
     background-color: transparent;
-    color: #878787;
-    border: 1px solid #878787;
+    color: #6b6b6b;
+    border: 1px solid #6b6b6b;
     font-size: 1.125rem;
     font-size: 18px; }
     @media only screen and (min-width: 750px) {
@@ -621,11 +620,11 @@ form {
     display: block;
     margin: 0;
     padding: 0 0 0 0%;
-    color: #878787;
+    color: #6b6b6b;
     text-transform: uppercase; }
     .main-content .page-location p {
       display: block;
-      border-left: 1px solid #878787;
+      border-left: 1px solid #6b6b6b;
       padding: 1% 0 0 1%;
       margin-bottom: 0; }
   .main-content .btn-back {
@@ -639,11 +638,11 @@ form {
     line-height: 19px;
     max-width: 50px;
     float: left;
-    color: #878787;
-    border-left: 1px solid #878787;
+    color: #6b6b6b;
+    border-left: 1px solid #6b6b6b;
     text-transform: uppercase; }
     .main-content .btn-back a {
-      color: #878787;
+      color: #6b6b6b;
       text-decoration: none;
       font-size: 2.0625rem;
       font-size: 33px; }
@@ -654,8 +653,7 @@ form {
             order: 2;
     display: block;
     padding: 2% 0 0 0;
-    color: #878787;
-    border-left: 1px solid #878787;
+    color: #6b6b6b;
     text-transform: capitalize; }
   .main-content .menu-side {
     display: none;
@@ -712,7 +710,6 @@ form {
       margin-right: 0;
       width: 100%; } }
   .grid .grid-sizer {
-    border: 1px solid tomato;
     width: 100%;
     height: auto; }
     @media only screen and (min-width: 750px) {
@@ -781,7 +778,7 @@ form {
           align-self: flex-end;
       display: block;
       visibility: visible;
-      color: #878787;
+      color: #6b6b6b;
       font-size: 0.9375rem;
       font-size: 15px;
       visibility: visible;
@@ -822,7 +819,7 @@ form {
         font-size: 1.875rem;
         font-size: 30px;
         height: 25px;
-        color: #878787;
+        color: #6b6b6b;
         padding: 5px 10px;
         line-height: 1.5625rem;
         line-height: 25px; }
@@ -855,9 +852,9 @@ form {
   max-width: 50px;
   display: inline-block;
   float: left;
-  margin: 25px 0 0 0;
-  color: #878787;
-  border-left: 1px solid #878787;
+  margin: 25px 0;
+  color: #6b6b6b;
+  border-left: 1px solid #6b6b6b;
   text-transform: uppercase; }
 
 .modal-on {
@@ -882,58 +879,83 @@ form {
     z-index: -1; }
   .modal-container .modal {
     background-color: #fff;
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: 0 auto;
     border-radius: 20px;
     position: relative;
-    top: 50%;
+    top: 57%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    text-align: left;
-    overflow: scroll; }
+    text-align: left; }
+    @media only screen and (min-width: 340px) {
+      .modal-container .modal {
+        width: 80%;
+        top: 50%; } }
     @media only screen and (min-width: 750px) {
       .modal-container .modal {
-        width: 40%;
-        height: 600px; } }
+        width: 55%; } }
     @media only screen and (min-width: 1024px) {
       .modal-container .modal {
-        top: 50%; } }
+        top: 40%; } }
+    @media only screen and (min-width: 1200px) {
+      .modal-container .modal {
+        width: 40%; } }
     .modal-container .modal .modal-header {
+      height: 15px;
       width: 90%;
-      max-height: 40px;
       margin: 0 auto;
-      position: relative; }
+      position: relative;
+      border-radius: 20px; }
+      @media only screen and (min-width: 750px) {
+        .modal-container .modal .modal-header {
+          height: 40px; } }
+      @media only screen and (min-width: 1200px) {
+        .modal-container .modal .modal-header {
+          height: 30px; } }
       .modal-container .modal .modal-header .close {
-        color: #878787;
+        color: #6b6b6b;
         position: absolute;
         text-transform: uppercase;
         font-size: 0.75rem;
         font-size: 12px;
         right: 0;
         top: 0; }
+        @media only screen and (min-width: 750px) {
+          .modal-container .modal .modal-header .close {
+            padding: 12px; } }
     .modal-container .modal .modal-content {
-      width: 100%; }
+      width: 100%;
+      padding: 0 0 1rem 0; }
     .modal-container .modal .statement-body {
       width: 90%;
       margin: 0 auto;
       text-align: left;
       font-size: 0.8rem;
-      letter-spacing: 0.03rem;
       background-color: #fff;
-      color: #878787; }
-
-@inlcude bp(medium) {
-  .modal-container .modal .statement-body {
-    width: 75%; } }
+      color: #6b6b6b; }
+      @media only screen and (min-width: 750px) {
+        .modal-container .modal .statement-body {
+          width: 80%; } }
+      @media only screen and (min-width: 1024px) {
+        .modal-container .modal .statement-body {
+          width: 75%; } }
       .modal-container .modal .statement-body p {
-        margin: 1rem auto;
+        letter-spacing: 0.02rem;
         line-height: 1.375rem;
-        line-height: 22px; }
+        line-height: 22px;
+        margin: 1rem auto; }
+        @media only screen and (min-width: 750px) {
+          .modal-container .modal .statement-body p {
+            letter-spacing: 0;
+            font-size: 1.125rem;
+            font-size: 18px;
+            line-height: 1.5rem;
+            line-height: 24px; } }
       .modal-container .modal .statement-body span {
-        border-bottom: 1px solid #878787;
-        color: #878787;
+        border-bottom: 1px solid #6b6b6b;
+        color: #6b6b6b;
         text-decoration: none; }
         .modal-container .modal .statement-body span:hover {
           color: #b56618;
@@ -1035,9 +1057,9 @@ form {
 
 .footer-col-4 {
   display: none;
-  border-top: 1px solid #878787;
+  border-top: 1px solid #6b6b6b;
   font-size: 0.8rem;
-  color: #878787; }
+  color: #6b6b6b; }
   .footer-col-4 p {
     display: block;
     margin: 5% 0 5% 0; }

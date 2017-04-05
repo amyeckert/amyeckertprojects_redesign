@@ -55,7 +55,6 @@
 		display: block;
     	padding: 2% 0 0 0 ;
 		color: $c-grey-med;
-		border-left: 1px solid $c-grey-med;
 		text-transform: capitalize;
 	}
 	.menu-side {
@@ -118,7 +117,7 @@
 	}
 
 	.grid-sizer {
-		border: 1px solid tomato;
+		// border: 1px solid tomato;
 		width: 100%;
 		height: auto;
 		@include bp(small) {
@@ -262,17 +261,16 @@
 	max-width: 50px;
 	display: inline-block;
 	float: left;
-	margin: 25px 0 0 0 ;
+	margin: 25px 0 ;
 	color: $c-grey-med;
 	border-left: 1px solid $c-grey-med;
 	text-transform: uppercase;
 
-	// @include bp(xsmall){
-	// 	@include font-size(16);
-	// 	width: 25%;
+	// @include bp(medium){
+	// 	@include font-size()
 	// }
 }
-// 
+// ABOUT THE PROJECT MODAL ----------------//
 .modal-on {
 	overflow: hidden;
 }
@@ -297,31 +295,43 @@
 	}
 	.modal {
 		background-color: $c-white;
-		width: 80%;
+		width: 90%;
 		height: auto;
 		margin: 0 auto;
 		border-radius: 20px;
 		position: relative;
-		top: 50%;
+		top: 57%;
 		transform: translateY(-50%); //centers it. 
 		text-align: left;
-		overflow: scroll;
 
-
+		@include bp(xsmall){
+			width: 80%;
+			top: 50%;
+		}
 		@include bp(small){
-			width: 40%;
-			height: 600px;
+			width: 55%;
 
 		}
 		@include bp(medium){
-			top: 50%;
+			top: 40%;
+		}
+		@include bp(large){
+			width: 40%;
 		}
 		.modal-header {
+			height: 15px;
 			width: 90%;
-			max-height: 40px;
 			margin: 0 auto;
 			position: relative;
+			border-radius: 20px;
+			
+			@include bp(small){
+				height: 40px;
 
+			}
+			@include bp(large){
+				height: 30px;
+			}
 			.close {
 				color: $c-grey-med;
 				position: absolute;
@@ -329,10 +339,14 @@
 				@include font-size(12);
 				right: 0;
 				top: 0;
+				@include bp(small){
+					padding: 12px;
+				}
 			}
 		}
 		.modal-content {
 			width: 100%;
+			padding: 0 0 1rem 0 ;
 			
 
 		}
@@ -341,17 +355,26 @@
 			margin: 0 auto;
 			text-align: left;
 			font-size: 0.8rem;
-			letter-spacing: 0.03rem;
 			background-color: $c-white;
 			color: $c-grey-med;	
 
-			@inlcude bp(medium){
+			@include bp(small){
+				width: 80%;
+
+			}
+			@include bp(medium){
 				width: 75%;
 			}
 			p {
-
-				margin: 1rem auto;
+				letter-spacing: 0.02rem;
 				@include line-height(22);
+				margin: 1rem auto;
+
+				@include bp(small){
+					letter-spacing: 0;
+					@include font-size(18);
+					@include line-height(24);
+				}
 			}
 			span {
 				border-bottom:1px solid $c-grey-med;

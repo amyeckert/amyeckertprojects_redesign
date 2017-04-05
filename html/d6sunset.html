@@ -51,9 +51,9 @@
 
 	<!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
 	<section class="main-content">
-		<div class="btn btn-back">
+		<button class="btn btn-back">
 			<a href="design.html">< </a>
-		</div>
+		</button>
 		<p class="project-name">Sunset Action Team!</p>
 		
 		<nav role="navigation" class="menu-side">
@@ -105,13 +105,25 @@
 			<button class="previous button" id="prevImg">&lt;</button>
 			<button class="next button" id="nextImg">&gt;</button>
 		</div>
-		<article class="statement">
-			<h3 class="statement-title">About</h3>
-			<div class="statement-body">
-				<p>I was invited by <a href="http://www.messageagency.com" target="_blank"><span class="underline"> Message Agency </span></a> to design a t-shirt for the team of folks 
-				responsible for client's Drupal 6 to Druapl 7 site hardening and updates. Drupal 6 reached end-of-life on February 24th, 2016.</p>	
+
+		<button class="statement-title js-modal-open">About</button>
+
+		<div class="modal-container">
+			<div class="modal">	
+				<header class="modal-header">
+						<button class= "close">Close</button>
+				</header>
+
+				<article class="statement  modal-content">
+
+					<div class="statement-body">
+						<p>I was invited by <a href="http://www.messageagency.com" target="_blank"><span class="underline"> Message Agency </span></a> to design a t-shirt for the team of folks 
+						responsible for client's Drupal 6 to Druapl 7 site hardening and updates. Drupal 6 reached end-of-life on February 24th, 2016.</p>	
+					</div>
+				</article>
 			</div>
-		</article>
+		</div>
+
 	</section>
 
 	<!-- FOOTER .................................................. -->

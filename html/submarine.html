@@ -51,8 +51,8 @@
 
 	<!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
 	<section class="main-content">
-		<div class="btn btn-back"><a href="photography.html">< </a>
-		</div>
+		<button class="btn btn-back"><a href="photography.html">< </a>
+		</button>
 		<p class="project-name">Submarine</p>
 		
 		<nav role="navigation" class="menu-side">
@@ -239,12 +239,22 @@
 			<button class="previous button" id="prevImg">&lt;</button>
 			<button class="next button" id="nextImg">&gt;</button>
 		</div>		
-		<article class="statement">
-			<h3 class="statement-title">About</h3>
-			<div class="statement-body">
-				<p>What color is the upholstery on a <span><a href="https://en.wikipedia.org/wiki/USS_Louisiana_(SSBN-743)" target="_blank">nuclear submarine?</a><span></p>
-			</div>
-		</article>
+
+		<button class="statement-title js-modal-open">About</button>
+
+		<div class="modal-container">
+			<div class="modal">	
+				<header class="modal-header">
+						<button class= "close">Close</button>
+				</header>
+
+				<article class="statement  modal-content">
+
+					<div class="statement-body">
+						<p>Me (to the U.S. Navy): "What color is the upholstery on a <a href="https://en.wikipedia.org/wiki/USS_Louisiana_(SSBN-743)" target="_blank"><span>nuclear submarine?"</span></a></p>
+						<p>Navy: "Um, what?"</p>
+					</div>
+				</article>
 	</section>
 
 	<!-- FOOTER .................................................. -->

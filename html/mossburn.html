@@ -51,8 +51,8 @@
 
 	<!-- MAIN CONTENT AREA . . . . .. . . . . ..............-->
 	<section class="main-content">
-		<div class="btn btn-back"><a href="photography.html">< </a>
-		</div>
+		<button class="btn btn-back"><a href="photography.html">< </a>
+		</button>
 		<p class="project-name">Mossburn</p>
 		
 		<nav role="navigation" class="menu-side">
@@ -205,13 +205,23 @@
 			<button class="previous button" id="prevImg">&lt;</button>
 			<button class="next button" id="nextImg">&gt;</button>
 		</div>
-	
-		<article class="statement">
-			<h3 class="statement-title">About</h3>
-			<div class="statement-body">
-				<p>Mossburn is a set of images about a <a href="https://www.google.com/maps/place/Mossburn,+New+Zealand/@-43.8051922,168.7494157,6.68z/data=!4m2!3m1!1s0xa9d37917aea52ff7:0x0500ef8684798fd0" target="_blank"><span>particular spot</span></a>, on a particular day, at the bottom of New Zealand. They are part of a continuum of various works inspired by my roots there, in my mother’s homeland, Aotearoa: Land of the Long White Cloud. This work is my ongoing attempt to reconcile the two worlds I live in and long for.</p>	
-			</div>		
-		</article>
+
+		<button class="statement-title js-modal-open">About</button>
+
+		<div class="modal-container">
+			<div class="modal">	
+				<header class="modal-header">
+						<button class= "close">Close</button>
+				</header>
+
+				<article class="statement  modal-content">
+
+					<div class="statement-body">	
+						<p>Mossburn is a set of images about a <a href="https://www.google.com/maps/place/Mossburn,+New+Zealand/@-43.8051922,168.7494157,6.68z/data=!4m2!3m1!1s0xa9d37917aea52ff7:0x0500ef8684798fd0" target="_blank"><span>particular spot</span></a>, on a particular day, at the bottom of New Zealand. They are part of a continuum of various works inspired by my roots there, in my mother’s homeland, Aotearoa: Land of the Long White Cloud. This work is my ongoing attempt to reconcile the two worlds I live in and long for.</p>	
+					</div>		
+				</article>
+			</div>
+		</div>
 	</section>
 
 	<!-- FOOTER .................................................. -->
