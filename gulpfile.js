@@ -13,7 +13,7 @@ var uglify = require('gulp-uglify');
 var paths = {
     styles: ['./scss/style.scss']
 }
-// './css/scss/ie.scss'
+
 gulp.task('styles', function () {
     return gulp.src('./scss/style.scss')
         .pipe(sass())
@@ -28,35 +28,26 @@ gulp.task('styles', function () {
         .pipe(notify("SCSS compiled!"));
 });
 
-// gulp.task('js', function () {
+gulp.task('js', function () {
 
-//     gulp.src('./js/vendor/plugins/*.js')
-//         .pipe(plumber())
-//         .pipe(concat('plugins.min.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest('./js/vendor'))
-//         .pipe(notify({message: 'Plugins Compiled and Minified!'}));
-
-
-//     gulp.src('./js/script.js')
-//         .pipe(plumber())
-//         .pipe(uglify())
-//         .pipe(rename({suffix: '-min'}))
-//         .pipe(gulp.dest('js/min'))
-//         .pipe(notify({message: 'JS Compiled!'}))
-//         .pipe(livereload());
-// });
+    gulp.src('./js/*.js')
+        .pipe(plumber())
+        .pipe(concat('styles.js'))
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('js/min'))
+        .pipe(notify({message: 'JS Compiled!'}))
+        // .pipe(livereload());
+});
 
 gulp.task('watch', function () {
     // livereload.listen();
     gulp.watch('./scss/partials/*.scss', ['styles']); // watch main styles.scss  
     gulp.watch('./scss/vendor/*.scss', ['styles']); // watch partials and vendor dirs
-    // gulp.watch('./js/vendor/plugins/*.js', ['js']);
-    // gulp.watch('./js/vendor/plugins/**/*.js', ['js']);
-    // gulp.watch('./js/main.js', ['js']);
+    gulp.watch('./js/*.js', ['js']);
 });
 
 
 gulp.task('default', function() {
-  gulp.start('watch','styles');
+  gulp.start('watch','styles', 'js');
 });
