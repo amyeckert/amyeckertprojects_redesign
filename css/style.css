@@ -819,7 +819,12 @@ form {
       .grid .grid-sizer .grid-item p {
         display: none; }
       .grid .grid-sizer .grid-item .placeholder {
-        opacity: 0.2; }
+        display: none;
+        opacity: 0.1;
+        height: 200px; }
+        @media only screen and (min-width: 750px) {
+          .grid .grid-sizer .grid-item .placeholder {
+            display: block; } }
 
 .grid:after {
   content: '';

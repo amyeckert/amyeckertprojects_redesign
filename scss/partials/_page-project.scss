@@ -167,8 +167,15 @@
 				display: none;
 			}
 			.placeholder {
-				 opacity: 0.2;
+				display: none;
+				@include bp(small){
+					display: block;
+				}
+				 opacity: 0.1;
+				 height: 200px;
+				
 			}
+
 		}
 	}
 }
