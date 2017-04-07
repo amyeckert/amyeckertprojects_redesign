@@ -288,20 +288,14 @@ header {
 		font-size: 1rem;
 		color: $c-white;
 		&:hover {
-			background-color: $c-white;
-			color: $c-orange-light;
-			border-bottom: 1px solid $c-white;
+		
+			border-bottom: 2px solid $c-white;
 		}
 		&:visited {
 			color: $c-white;
 		}
 		span {
-			color: $c-white;
-			&:hover	{
-				background-color: $c-white;
-				color: $c-orange-light;
-			}
-			
+			color: $c-white;	
 		}
 	}
 }
@@ -316,9 +310,11 @@ header {
 	.cv-pdf {
 		padding: 10px 30px;
 		color: $c-white;
-		border:1px solid $c-white;
+		border: 1px solid $c-white;
 		&:hover {
-			color: $c-orange-light;		 
+			color: $c-orange-light;
+			background-color: $c-white;
+			border-bottom: 1px solid $c-white;		 
 		}
 	}
 	@include bp(small) {
@@ -334,9 +330,7 @@ header {
 		li{
 			display: inline-block;
 			border: 1px solid $c-orange-light;
-			&:hover{
-				border: 1px solid $c-white;
-			}
+
 			a {
 				text-decoration: none;
 				border-bottom: none;
@@ -346,12 +340,17 @@ header {
 			}
 		}
 	}
-
-
 	.white {
-		height: 40px;
 		width: 40px;
 		fill: $c-white;
+	}
+	#instagram-white {
+		height: 27px;
+	}
+	#twitter-white {
+  	  	width: 30px;
+   	 	margin-left: 5px;
+
 	}
 }
 // ------- COPYRIGHT NOTICE-----------------//

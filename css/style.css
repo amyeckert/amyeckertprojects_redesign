@@ -356,16 +356,11 @@ header {
     font-size: 1rem;
     color: #fff; }
     .bio a:hover {
-      background-color: #fff;
-      color: #b56618;
-      border-bottom: 1px solid #fff; }
+      border-bottom: 2px solid #fff; }
     .bio a:visited {
       color: #fff; }
     .bio a span {
       color: #fff; }
-      .bio a span:hover {
-        background-color: #fff;
-        color: #b56618; }
 
 .btn-cv {
   -webkit-box-ordinal-group: 4;
@@ -381,7 +376,9 @@ header {
     color: #fff;
     border: 1px solid #fff; }
     .btn-cv .cv-pdf:hover {
-      color: #b56618; }
+      color: #b56618;
+      background-color: #fff;
+      border-bottom: 1px solid #fff; }
   @media only screen and (min-width: 750px) {
     .btn-cv {
       max-width: 90%;
@@ -396,17 +393,19 @@ header {
     .social ul li {
       display: inline-block;
       border: 1px solid #b56618; }
-      .social ul li:hover {
-        border: 1px solid #fff; }
       .social ul li a {
         text-decoration: none;
         border-bottom: none; }
         .social ul li a:hover {
           background-color: #b56618; }
   .social .white {
-    height: 40px;
     width: 40px;
     fill: #fff; }
+  .social #instagram-white {
+    height: 27px; }
+  .social #twitter-white {
+    width: 30px;
+    margin-left: 5px; }
 
 .copyright-notice {
   -webkit-box-ordinal-group: 10;
