@@ -818,6 +818,8 @@ form {
         height: auto; }
       .grid .grid-sizer .grid-item p {
         display: none; }
+      .grid .grid-sizer .grid-item .placeholder {
+        opacity: 0.2; }
 
 .grid:after {
   content: '';

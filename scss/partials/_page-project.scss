@@ -142,12 +142,10 @@
 	}
 
 	.grid-sizer {
-		// border: 1px solid tomato;
 		width: 100%;
 		height: auto;
 		@include bp(small) {
 			width: 100%;
-
 		}
 		.grid-item {
 			float: left;
@@ -159,17 +157,17 @@
 				width: 33.333%;
 				margin-bottom: -10px;
 			}	
-
 			img {
 				width: 100%;
 				height: auto;
 				@include bp(small){
-					// width: 95%;
 				}
-			
-			}
+			}		
 			p {
 				display: none;
+			}
+			.placeholder {
+				 opacity: 0.2;
 			}
 		}
 	}
