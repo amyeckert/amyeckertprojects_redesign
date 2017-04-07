@@ -1,4 +1,5 @@
 //-------------- all pages except LANDING pages. 
+
 .main-content {
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -10,10 +11,12 @@
 	overflow: hidden;
 	margin: 0 auto;
 	
-	@include bp(medium) {
-		// position: relative;
-		// margin: 0 auto;
+	@include bp(small) {
+		flex-flow: row wrap;
 
+	}
+	@include bp(medium){
+		flex-flow: row wrap;
 	}
 	//---------- CURRENT PORTFOLIO NAME-----------------*/
 	.page-location {
@@ -41,6 +44,15 @@
 		border-left: 1px solid $c-grey-med;
 		text-transform: uppercase;
 		padding: 0;
+
+		@include bp(small){
+		    padding: 4px 0 0 5px;
+		}
+		@include bp(medium){
+			flex: 0 1 auto;
+		    width: 50px;
+			height: 30px;
+		}
    
     	a {
     		color: $c-grey-med;
@@ -56,6 +68,16 @@
     	padding: 2% 0 0 0 ;
 		color: $c-grey-med;
 		text-transform: capitalize;
+
+		@include bp(small){
+		    padding: 7px 0 0 20px;
+
+		}
+		@include bp(medium){
+			width: 200px;
+			height: 30px;		
+
+		}
 	}
 	.menu-side {
 		display: none;
@@ -98,14 +120,17 @@
 	display: block;
 	min-width: 100%;
 	height: auto;
-	margin-top: 15px;
+	margin: 0 0 15px 0;
 	
 	&:after {
 		  content: '';
 		  display: block;
 		  clear: both;
 		}
-	
+	@include bp(small){
+		// margin: 0 0 15px 0;
+		
+	}
 	@include bp(medium) {
 		display: block;
 		position: absolute;
@@ -165,7 +190,7 @@
 	}
 	@include bp(medium){
 		display: none;
-		flex: 1 0;
+		flex: 1 0 auto;
 	}
 	.big {
 		display: none;
@@ -225,91 +250,106 @@
 		flex-direction: row;
 		order: 6;
 		align-items: stretch;	
-	    margin: 10px 0;
-	    height: 40px;
+	}	
 		
-		button{ 
+	button{ 
+		display: inline-block;
+		@include font-size(30);
+		color: $c-grey-med;
+		padding: 5px 10px;
+		@include line-height(25);
+	}
+	.thumbs-only {
+		order: 1;
+		padding-left: 0;
+		svg {
 			display: inline-block;
-			@include font-size(30);
 			height: 25px;
-			color: $c-grey-med;
-			padding: 5px 10px;
-			@include line-height(25);
 		}
-		.thumbs-only {
-			order: 1;
-			padding-left: 0;
-			svg {
-				display: inline-block;
-				height: 25px;
+			
+		#thumbnails-icon {
+			@include bp(medium){
+				height: 30px;
 			}
 		}
-		.previous {
-			order: 2;
+	}
+	.previous {
+		order: 2;
 
-		}
-		.next {
-			order: 3;
-		}
-	}	
+	}
+	.next {
+		order: 3;
+	}
 }
 
 // ----- STATEMENT ----------------------//
 .statement-title {
 	margin-top: 10px;
 	order: 7;
-	@include font-size(15);
-	@include line-height(19);
+	@include font-size(16);
 	max-width: 25%;
 	display: inline-block;
 	float: left;
 	margin: 0 ;
 	color: $c-grey-med;
 	border-left: 1px solid $c-grey-med;
-	text-transform: uppercase;
+	text-transform: capitalize;
 
 	@include bp(small){
-	
-		max-width: 75px;
+		// width: 75px;
 		margin: 0;
 	}
 }
 
-// -------- SHARE AND SOCIAL MEDIA
-.social {
-	display: none;
-	border: 1px solid tomato;
+// -------- SHARE / SOCIAL MEDIA
+.share {
+	display: block;
 	width: 100%;
 	order: 8;
 	flex: 0 1 auto;
 
 	@include bp(small){
-		width: 30%;
+		width: 25%;
+		border-left: 1px solid $c-grey-med;
 	}
 
 	ul {
 		padding: 0;
-		width: 75%;
 		display: flex;
 		flex-flow: row nowrap;
-		align-items: center;
-		margin:0 auto;
+		width: 100%;
+		justify-content: space-around;
+
+		@include bp(small){
+			margin-left: 15px;
+		}
 
 		li {
-			flex: 0 1 auto;
 			width: 33.334%;
-			padding: 10px;
+			padding: 30px;
+			
+			@include bp(small){
+			    padding: 5px;
+			    
+			}
 		
-			a {
-				max-height: 100%;
+			a { display: block;
+				height: 100%;
 				width: 100%;
 
 				svg {
-					height: 40px;
+					max-height: 30px;
 					width: 100%;
 					
 				}
+				@include bp(small){
+					
+				}
 			}
+		}
+		&:nth-of-type(3){
+			border: 1px solid tomato;
+			width: 28px;
 		}
 
 	}

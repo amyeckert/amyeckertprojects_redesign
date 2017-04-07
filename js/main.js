@@ -124,7 +124,7 @@
                 // Change visibility of .thumbs to hidden 
                 thumbs.style.display = 'none';
                 cNav.style.order = 4; 
-                cNav.style.visibility = 'visible';
+                cNav.style.display = 'flex';
 
                 $('.next').show();
                 $('.previous').show();
@@ -231,9 +231,9 @@
                 carousel.style.display = 'none';
                 showThumbs.style.display = 'block';
                 imgInfo.style.visibility = 'hidden';
-                cNav.style.visibility = 'hidden';
-                prevImg.style.visibility = 'hidden';
-                nextImg.style.visibility = 'hidden';
+                cNav.style.display = 'none';
+                prevImg.style.display = 'none';
+                nextImg.style.display = 'none';
             });
             //---------- SHOW / HIDE ABOUT --------------------------------//
 
