@@ -12,12 +12,6 @@
     width: 100%;
     padding: 0;
     z-index: 10; 
-
-    // @include bp(medium){
-    // 	width: 50%;
-    // 	right: 0;
-    // 	left: 50%;
-    // }
 	
 	.column {
 		width: 100%;
@@ -35,9 +29,6 @@
 				justify-content: center;
 				align-items: center;
 
-				@include bp(xsmall){
-					height: 2rem;
-				}
 				@include bp(small){
 					height: 2.7rem;
 				}

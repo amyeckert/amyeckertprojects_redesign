@@ -274,10 +274,12 @@ header {
 	}
 	.col-r {
 		border-left: none;
+	    margin-bottom: 2rem;
 
 		@include bp(small){
 			border-left: 1px solid $c-white;
 			padding: 45px;
+	    	margin-bottom: 0;
 		}
 	}
 	

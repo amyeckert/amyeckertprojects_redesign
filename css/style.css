@@ -344,11 +344,13 @@ header {
       .bio .col-l {
         padding: 45px; } }
   .bio .col-r {
-    border-left: none; }
+    border-left: none;
+    margin-bottom: 2rem; }
     @media only screen and (min-width: 750px) {
       .bio .col-r {
         border-left: 1px solid #fff;
-        padding: 45px; } }
+        padding: 45px;
+        margin-bottom: 0; } }
   .bio a {
     border-bottom: 1px solid #fff;
     padding: 0;
@@ -1141,9 +1143,6 @@ form {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
-        @media only screen and (min-width: 340px) {
-          .options-menu-horizontal .column ul li {
-            height: 2rem; } }
         @media only screen and (min-width: 750px) {
           .options-menu-horizontal .column ul li {
             height: 2.7rem; } }
