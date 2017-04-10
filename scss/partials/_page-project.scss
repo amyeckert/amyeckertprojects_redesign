@@ -166,50 +166,25 @@
 				display: none;
 				p{display: none;}
 			}
-			// .interactive-project {
-			// 	display: block;
-			// 	margin: 10px 0;
-			// 	@include font-size(16);
-			// 	p {
-			// 		color: $c-grey-med;
-			// 		dispay: block;
-			// 		a {
-			// 			text-align: right;
-			// 			display: block;
-			// 			@include font-size(18);
-			// 			letter-spacing: 0.7px;
-						 
-			// 			&:visited {
-			// 				color: $c-grey-med;
-			// 			}
-			// 			&:active,
-			// 			&:hover {
-			// 				color: $c-green-kelly;
-			// 				border-bottom: 1px solid $c-green-kelly;
-			// 			}
-			// 		}
-			// 	}
-			// }
-
+			
 			.project-title {
 				visibility: visible;
 				display: block;
 				opacity: 0;
-				transition: opacity 0.5s ease-in-out;
+				transition: opacity 0.2s ease-in;
 			
 				p {	
 					display: block;
 					position: absolute;
-					top: 50%;
+					top: 40%;
 					left: 50%;
 					transform: translateX(-50%);
 					color: $c-white;
-					margin: 10px 0;
-					@include font-size(16);
+					text-transform: uppercase;
+					@include font-size(25);
 					a {
 						text-align: right;
 						display: block;
-						@include font-size(18);
 						letter-spacing: 0.7px;
 						 
 						&:visited {
@@ -247,11 +222,10 @@
 
 		}
 	}
-//---------- interactive landing page only --------//				
+//---------- Interactive projects landing page only --------//				
 #interactive {
 
 	.interactive-project {
-	
 		display: block;
 		margin: 10px 0;
 		@include font-size(16);
@@ -264,6 +238,8 @@
 				display: block;
 				@include font-size(18);
 				letter-spacing: 0.7px;
+				border-bottom: 1px solid $c-white;
+				transition: all 0.2s;
 				 
 				&:visited {
 					color: $c-grey-med;

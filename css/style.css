@@ -356,7 +356,9 @@ header {
     padding: 0;
     margin: 0;
     font-size: 1rem;
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
     .bio a:hover {
       border-bottom: 2px solid #fff; }
     .bio a:visited {
@@ -376,7 +378,9 @@ header {
   .btn-cv .cv-pdf {
     padding: 10px 30px;
     color: #fff;
-    border: 1px solid #fff; }
+    border: 1px solid #fff;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
     .btn-cv .cv-pdf:hover {
       color: #b56618;
       background-color: #fff;
@@ -394,11 +398,14 @@ header {
     width: 100%; }
     .social ul li {
       display: inline-block;
-      border: 1px solid #b56618; }
+      border: 2px solid #b56618; }
       .social ul li a {
         text-decoration: none;
-        border-bottom: none; }
+        border-bottom: none;
+        -webkit-transition: border-bottom 0.2s;
+        transition: border-bottom 0.2s; }
         .social ul li a:hover {
+          border-bottom: 2px solid #fff;
           background-color: #b56618; }
   .social .white {
     width: 40px;
@@ -494,7 +501,10 @@ header {
       font-size: 0.875rem;
       font-size: 14px;
       line-height: 1.25rem;
-      line-height: 20px; }
+      line-height: 20px;
+      background-color: transparent;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
       .contact-container .contact-form .temp-contact-info:hover {
         background-color: #4866fb;
         color: #fff; }
@@ -827,25 +837,23 @@ form {
         visibility: visible;
         display: block;
         opacity: 0;
-        -webkit-transition: opacity 0.5s ease-in-out;
-        transition: opacity 0.5s ease-in-out; }
+        -webkit-transition: opacity 0.2s ease-in;
+        transition: opacity 0.2s ease-in; }
         .grid .grid-sizer .grid-item .project-title p {
           display: block;
           position: absolute;
-          top: 50%;
+          top: 40%;
           left: 50%;
           -webkit-transform: translateX(-50%);
               -ms-transform: translateX(-50%);
                   transform: translateX(-50%);
           color: #fff;
-          margin: 10px 0;
-          font-size: 1rem;
-          font-size: 16px; }
+          text-transform: uppercase;
+          font-size: 1.5625rem;
+          font-size: 25px; }
           .grid .grid-sizer .grid-item .project-title p a {
             text-align: right;
             display: block;
-            font-size: 1.125rem;
-            font-size: 18px;
             letter-spacing: 0.7px; }
             .grid .grid-sizer .grid-item .project-title p a:visited {
               color: #6b6b6b; }
@@ -879,7 +887,10 @@ form {
       display: block;
       font-size: 1.125rem;
       font-size: 18px;
-      letter-spacing: 0.7px; }
+      letter-spacing: 0.7px;
+      border-bottom: 1px solid #fff;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
       #interactive .interactive-project .show-caption a:visited {
         color: #6b6b6b; }
       #interactive .interactive-project .show-caption a:active, #interactive .interactive-project .show-caption a:hover {

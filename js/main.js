@@ -95,7 +95,7 @@
 
                 //hide image info
                 console.log(figcaption);
-                $(figcaption).hide();
+                // $(figcaption).hide();
                 // empty big image caption info
                 $('.big > figcaption').remove();
 
