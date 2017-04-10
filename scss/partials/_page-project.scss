@@ -106,8 +106,8 @@
 			li {
 				padding: 0 25px 0 0;
 			}
-			&li:active, 
-			&li:hover {
+			&:active, 
+			&:hover {
     			color: $c-green-kelly;	
 			}
 		}
@@ -121,16 +121,13 @@
 	min-width: 100%;
 	height: auto;
 	margin: 0 0 15px 0;
-	
+
 	&:after {
 		  content: '';
 		  display: block;
 		  clear: both;
 		}
-	@include bp(small){
-		// margin: 0 0 15px 0;
-		
-	}
+
 	@include bp(medium) {
 		display: block;
 		position: absolute;
@@ -166,24 +163,46 @@
 			p {
 				display: none;
 			}
+			p.show-caption {	
+				display: block;
+				color: $c-grey-med;
+				margin: 10px 0;
+				@include font-size(16);
+				a {
+					text-align: right;
+					display: block;
+					@include font-size(18);
+					letter-spacing: 0.7px;
+					 
+					&:visited {
+						color: $c-grey-med;
+					}
+					&:active,
+					&:hover {
+						color: $c-green-kelly;
+						border-bottom: 1px solid $c-green-kelly;
+					}
+				}
+			}	
 			.placeholder {
 				display: none;
 				@include bp(small){
 					display: block;
 				}
 				 opacity: 0.1;
-				 height: 200px;
-				
+				 height: 200px;	
 			}
-
 		}
+
 	}
 }
+
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
+
 /*---------------------- CAROUSEL -------------------*/
 .carousel {
 	display: none;

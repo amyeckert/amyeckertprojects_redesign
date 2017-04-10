@@ -775,7 +775,7 @@ form {
         margin-left: -5%; }
       .main-content .menu-side ul li {
         padding: 0 25px 0 0; }
-      .main-content .menu-side ulli:active, .main-content .menu-side ulli:hover {
+      .main-content .menu-side ul:active, .main-content .menu-side ul:hover {
         color: #099949; }
 
 .grid {
@@ -820,6 +820,23 @@ form {
         height: auto; }
       .grid .grid-sizer .grid-item p {
         display: none; }
+      .grid .grid-sizer .grid-item p.show-caption {
+        display: block;
+        color: #6b6b6b;
+        margin: 10px 0;
+        font-size: 1rem;
+        font-size: 16px; }
+        .grid .grid-sizer .grid-item p.show-caption a {
+          text-align: right;
+          display: block;
+          font-size: 1.125rem;
+          font-size: 18px;
+          letter-spacing: 0.7px; }
+          .grid .grid-sizer .grid-item p.show-caption a:visited {
+            color: #6b6b6b; }
+          .grid .grid-sizer .grid-item p.show-caption a:active, .grid .grid-sizer .grid-item p.show-caption a:hover {
+            color: #099949;
+            border-bottom: 1px solid #099949; }
       .grid .grid-sizer .grid-item .placeholder {
         display: none;
         opacity: 0.1;
