@@ -23,7 +23,8 @@
 		order: 1;
 		display: block;
 		margin: 0;
-		padding: 0 0 0 0%;
+		padding: 0 0 0 0;
+		text-indent: 15px;
 		color: $c-grey-med;
 		text-transform: uppercase;
 		p {
@@ -50,7 +51,7 @@
 		}
 		@include bp(medium){
 			flex: 0 1 auto;
-		    width: 50px;
+		    width: 40px;
 			height: 30px;
 		}
    
@@ -149,6 +150,7 @@
 			width: 100%;
 			height: auto;
 			margin-bottom: 5px;	
+			
 			@include bp(small) {
 				float: none;
 				width: 33.333%;
@@ -159,44 +161,122 @@
 				height: auto;
 				@include bp(small){
 				}
-			}		
-			p {
-				display: none;
 			}
-			p.show-caption {	
+			figcaption  {
+				display: none;
+				p{display: none;}
+			}
+			// .interactive-project {
+			// 	display: block;
+			// 	margin: 10px 0;
+			// 	@include font-size(16);
+			// 	p {
+			// 		color: $c-grey-med;
+			// 		dispay: block;
+			// 		a {
+			// 			text-align: right;
+			// 			display: block;
+			// 			@include font-size(18);
+			// 			letter-spacing: 0.7px;
+						 
+			// 			&:visited {
+			// 				color: $c-grey-med;
+			// 			}
+			// 			&:active,
+			// 			&:hover {
+			// 				color: $c-green-kelly;
+			// 				border-bottom: 1px solid $c-green-kelly;
+			// 			}
+			// 		}
+			// 	}
+			// }
+
+			.project-title {
+				visibility: visible;
 				display: block;
-				color: $c-grey-med;
-				margin: 10px 0;
-				@include font-size(16);
-				a {
-					text-align: right;
+				opacity: 0;
+				transition: opacity 0.5s ease-in-out;
+			
+				p {	
 					display: block;
-					@include font-size(18);
-					letter-spacing: 0.7px;
-					 
-					&:visited {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%);
+					color: $c-white;
+					margin: 10px 0;
+					@include font-size(16);
+					a {
+						text-align: right;
+						display: block;
+						@include font-size(18);
+						letter-spacing: 0.7px;
+						 
+						&:visited {
+							color: $c-grey-med;
+						}
+						&:active,
+						&:hover {
+							color: $c-green-kelly;
+							border-bottom: 1px solid $c-green-kelly;
+						}
+					}
+				}
+			}
+			&:hover {		
+				.project-title {
+					display: block;
+					visibility: visible;
+					position: absolute;
+					top: 0;
+					right: 0;
+					height: 100%;
+					width: 100%;
+					background-color: $c-cyan;
+					opacity: 0.9;
+			
+					.show-caption {
+						display: block;
 						color: $c-grey-med;
 					}
-					&:active,
-					&:hover {
-						color: $c-green-kelly;
-						border-bottom: 1px solid $c-green-kelly;
+					
+				
 					}
 				}
-			}	
-			.placeholder {
-				display: none;
-				@include bp(small){
-					display: block;
+			}
+
+		}
+	}
+//---------- interactive landing page only --------//				
+#interactive {
+
+	.interactive-project {
+	
+		display: block;
+		margin: 10px 0;
+		@include font-size(16);
+
+		.show-caption {
+			display: block;
+			color: $c-grey-med;
+			a {
+				text-align: right;
+				display: block;
+				@include font-size(18);
+				letter-spacing: 0.7px;
+				 
+				&:visited {
+					color: $c-grey-med;
 				}
-				 opacity: 0.1;
-				 height: 200px;	
+				&:active,
+				&:hover {
+					color: $c-green-kelly;
+					border-bottom: 1px solid $c-green-kelly;
+				}
 			}
 		}
-
-	}
 }
-
+}
 .grid:after {
   content: '';
   display: block;

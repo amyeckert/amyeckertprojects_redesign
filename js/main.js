@@ -32,14 +32,15 @@
         var statementBody =document.querySelector('.statement-body');
         var carousel =document.querySelector('.carousel');
         var showThumbs = document.getElementById('thumbGrid');
-        // var imgInfo = document.getElementById('imgInfo');
         var previous = document.getElementById('prevImg');
         var next = document.getElementById('nextImg');
         var cNav = document.getElementById('cNav');
         var grid = document.querySelector('.grid');
         var thumbs = document.getElementById('thumbGrid');
         var newImageCaption = document.querySelector('.big');
+        var figcaption = $('figcaption').not('#imgInfo').not('.project-title');
 
+        $(figcaption).show();
 
         var updateCaption = function() {
             //get contents of current image info <p>s
@@ -54,7 +55,7 @@
             $(newImageCaption).append('<figcaption class="image-info" id="imgInfo"><p class="title">' + imageTitle + '</p><p class="date">' + imageDate + '</p><p class="dimensions">' + imageDimensions + '</p><p class="media">' + imageMedia + '</p><p class="client">' + imageClient + '</p></figcaption>');   
 
         }
-        //-------------- toggle statement text -----------------------------------//
+        //-------------- toggle statement text --------------------//
         var modal = function(state) {
             if(state === 'open') {
                 $('.modal-container').fadeIn(function(){
@@ -78,10 +79,6 @@
             event.preventDefault();
             modal('close');
         });
-        // $('.statement').on('click', function(e) {
-        //     e.preventDefault();
-        //     $(statementBody).toggle();
-        // });
        
         // behaviour for tablet and desktop only ---------------------------------------------------//
         if (width >= 700 ) {
@@ -95,9 +92,12 @@
 
             $('.item').on('click', function(e) {
                 e.preventDefault();
+
+                //hide image info
+                console.log(figcaption);
+                $(figcaption).hide();
                 // empty big image caption info
                 $('.big > figcaption').remove();
-                // console.log(newImageCaption);
 
                 $('.thumbs-only').show();
                 $('.next').show();
@@ -113,7 +113,7 @@
                 $('header').removeClass('nav-up').addClass('nav-down');
 
                 $('.big-img-container').attr('style', 'background-image: url('+chosenThumb+')');
-                
+
                 // change caption
                 updateCaption();
 
@@ -136,8 +136,7 @@
                 statement.style.order = 5;
 
             });
-            /*-------------------------------------------------------------------------------------------------
-                previous or next button */
+            /*---------------- previous button ------------- */
 
             $('.previous').on('click', function() {
                 //clear bigImage caption details
@@ -175,7 +174,7 @@
                 // update to current figcaption
                 updateCaption();                  
             });
- 
+             /*---------------- next button ------------- */
             $('.next').on('click', function() {
                 // remove the last figcaption 
                $('.big > figcaption').remove();
@@ -228,12 +227,17 @@
             $('.thumbs-only').on('click', function() { 
                 $('.big > figcaption').empty();
 
+                
+                console.log(figcaption);
+
                 carousel.style.display = 'none';
                 showThumbs.style.display = 'block';
+                $(figcaption).hide();
                 imgInfo.style.visibility = 'hidden';
                 cNav.style.display = 'none';
                 prevImg.style.display = 'none';
                 nextImg.style.display = 'none';
+
             });
             //---------- SHOW / HIDE ABOUT --------------------------------//
 
