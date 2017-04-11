@@ -173,7 +173,7 @@
             $('.next').on('click', function() {
                 // remove the last figcaption 
                $('.big > figcaption').remove();
-                console.log(newImageCaption);
+                // console.log(newImageCaption);
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
                 var items = document.querySelectorAll('figure.item');

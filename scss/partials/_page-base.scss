@@ -44,6 +44,7 @@ body {
 
 	@include bp(xsmall){
 		margin: 0 auto;
+		min-height: 100vh;
 	}
 	@include bp(large) {
 		margin: 1% auto;
