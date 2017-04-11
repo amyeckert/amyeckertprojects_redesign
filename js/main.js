@@ -93,9 +93,6 @@
             $('.item').on('click', function(e) {
                 e.preventDefault();
 
-                //hide image info
-                console.log(figcaption);
-                // $(figcaption).hide();
                 // empty big image caption info
                 $('.big > figcaption').remove();
 
@@ -105,7 +102,6 @@
 
                 $('.item.isActive').removeClass('isActive');
                 $(this).addClass('isActive');
-                // console.log(e);
 
                 // Figure out which thumbnail is chosen
                 var chosenThumb = $(this).find('img').attr('src');
@@ -141,7 +137,6 @@
             $('.previous').on('click', function() {
                 //clear bigImage caption details
                 $('.big> figcaption').remove();
-                console.log(newImageCaption);
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
                 var items = document.querySelectorAll('figure.item');
@@ -226,9 +221,6 @@
                                 
             $('.thumbs-only').on('click', function() { 
                 $('.big > figcaption').empty();
-
-                
-                console.log(figcaption);
 
                 carousel.style.display = 'none';
                 showThumbs.style.display = 'block';
