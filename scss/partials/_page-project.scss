@@ -43,34 +43,23 @@
 	.btn-back {
 		display: block;
 		order: 1;
-		@include font-size(15);
-		@include line-height(19);
 		max-width: 50px;
-		float: left;
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
-		text-transform: uppercase;
 		padding: 0;
 
 		@include bp(small){
 			height: 30px;
-		    padding: 4px 0 0 5px;
+		    padding: 0 0 0 5px;
 		}
 		@include bp(medium){
 			flex: 0 1 auto;
 		    width: 40px;
 			height: 30px;
 		}
-   
-    	a {
-    		color: $c-grey-med;
-    		text-decoration: none;
-    		@include font-size(33);
-			z-index: 777;
-			
-
-    	}
-
+		svg {
+			height: 25px;
+		}
 	}
 	.project-name {
 		min-width: 200px;
