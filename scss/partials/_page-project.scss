@@ -239,11 +239,13 @@
 		.show-caption {
 			display: block;
 			color: $c-grey-med;
+
 			a {
 				text-align: right;
 				display: block;
 				@include font-size(18);
 				letter-spacing: 0.7px;
+				color: $c-grey-med;
 				border-bottom: 1px solid $c-white;
 				transition: all 0.2s;
 				 
@@ -257,7 +259,7 @@
 				}
 			}
 		}
-}
+	}
 }
 .grid:after {
   content: '';
