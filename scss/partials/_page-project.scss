@@ -17,6 +17,7 @@
 	}
 	@include bp(medium){
 		flex-flow: row wrap;
+		margin-top: 1rem;
 	}
 	//---------- CURRENT PORTFOLIO NAME-----------------*/
 	.page-location {
@@ -207,12 +208,12 @@
 					right: 0;
 					height: 100%;
 					width: 100%;
-					background-color: $c-cyan;
-					opacity: 0.9;
+					background-color: $c-green-kelly;
+					opacity: 0.97;
 			
 					.show-caption {
 						display: block;
-						color: $c-grey-med;
+						color: $c-white;
 					}
 					
 				

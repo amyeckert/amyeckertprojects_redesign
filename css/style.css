@@ -694,7 +694,8 @@ form {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
-              flex-flow: row wrap; } }
+              flex-flow: row wrap;
+      margin-top: 1rem; } }
   .main-content .page-location {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -868,11 +869,11 @@ form {
         right: 0;
         height: 100%;
         width: 100%;
-        background-color: #68b7d5;
-        opacity: 0.9; }
+        background-color: #099949;
+        opacity: 0.97; }
         .grid .grid-sizer .grid-item:hover .project-title .show-caption {
           display: block;
-          color: #6b6b6b; }
+          color: #fff; }
 
 #interactive .interactive-project {
   display: block;
