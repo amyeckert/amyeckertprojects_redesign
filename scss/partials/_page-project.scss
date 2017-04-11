@@ -46,7 +46,7 @@
 		max-width: 50px;
 		color: $c-grey-med;
 		border-left: 1px solid $c-grey-med;
-		padding: 0;
+		padding: 0 0 0 5px;
 
 		@include bp(small){
 			height: 30px;
@@ -58,7 +58,7 @@
 			height: 30px;
 		}
 		svg {
-			height: 25px;
+			height: 20px;
 		}
 	}
 	.project-name {
@@ -68,6 +68,7 @@
     	padding: 2% 0 0 0 ;
 		color: $c-grey-med;
 		text-transform: capitalize;
+		
 
 		@include bp(small){
 		    padding: 7px 0 0 20px;
@@ -79,6 +80,12 @@
 
 		}
 	}
+	#exhibitions > .project-name {
+		border-left: 1px solid $c-grey-med;
+	}
+}
+		
+	
 	.menu-side {
 		display: none;
 		border: 1px solid tomato;
@@ -112,7 +119,7 @@
 			}
 		}
 	}
-}
+
 
 //----------------- Thumbnail GRID ------------------//
 .grid {
@@ -162,8 +169,12 @@
 				}
 			}
 			figcaption  {
+				color: $c-white;
 				display: none;
-				p{display: none;}
+				p {
+					color: $c-white;
+					display: none;
+				}
 			}
 			
 			.project-title {
@@ -212,11 +223,9 @@
 					.show-caption {
 						display: block;
 						color: $c-white;
-					}
-					
-				
-					}
+					}	
 				}
+			}
 		}
 	}
 }
