@@ -34,7 +34,7 @@ body {
 .wrapper {
 	max-width: 90%;
 	min-height: 100vh;
-	margin: 4% auto;
+	margin: 0 auto;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
  	display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -543,4 +543,10 @@ form {
 		outline: 1px solid $c-green-olive;
 		font-size:1rem;   
 	}
+}
+
+.footer {
+	display: block;
+	width: 100%;
+
 }

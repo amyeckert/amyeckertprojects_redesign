@@ -106,7 +106,7 @@ body {
 .wrapper {
   max-width: 90%;
   min-height: 100vh;
-  margin: 4% auto;
+  margin: 0 auto;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   /* OLD - Firefox 19- (buggy but mostly works) */
@@ -611,6 +611,10 @@ form {
     outline: 1px solid #98983e;
     font-size: 1rem; }
 
+.footer {
+  display: block;
+  width: 100%; }
+
 #home {
   overflow: hidden; }
   #home .main-content {
@@ -798,7 +802,7 @@ form {
   display: block;
   min-width: 100%;
   height: auto;
-  margin: 0 0 15px 0; }
+  margin: 20px 0; }
   .grid:after {
     content: '';
     display: block;

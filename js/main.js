@@ -10,17 +10,17 @@
         var copyrightNotice = 'All images © ' + year + ' Amy Eckert';
         $('p.copyright').html(copyrightNotice);   
 
-        //init masonry
-        var $grid = $('.grid').masonry({
-            itemSelector: '.grid-item',
-            percentPosition: true, 
-            masonry: {columnWidth: '.grid-sizer'}
+        // //init masonry
+        // var $grid = $('.grid').masonry({
+        //     itemSelector: '.grid-item',
+        //     percentPosition: true, 
+        //     masonry: {columnWidth: '.grid-sizer'}
             
-        });
-        //layout Isotope after each image loads
-        $grid.imagesLoaded().progress( function() {
-          $grid.masonry('layout');
-        }); 
+        // });
+        // //layout Isotope after each image loads
+        // $grid.imagesLoaded().progress( function() {
+        //   $grid.masonry('layout');
+        // }); 
 
         //clear big image caption
         $('.big-img-container > figcaption').remove();
@@ -85,7 +85,20 @@
             $('.next').hide();
             $('.previous').hide();
             $('.thumbs-only').hide();
-            
+            $(footer).addClass('options-menu-horizontal');
+
+            //init masonry
+            var $grid = $('.grid').masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true, 
+                masonry: {columnWidth: '.grid-sizer'}
+                
+            });
+            //layout Isotope after each image loads
+            $grid.imagesLoaded().progress( function() {
+              $grid.masonry('layout');
+            }); 
+
          /*--------------------------------
             when a thumbnail is clicked on-hides thumbnail grid 
              -shows #carousel and carousel nav buttons, updates caption-------------------------*/
