@@ -1114,7 +1114,8 @@ form {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    text-align: left; }
+    text-align: left;
+    z-index: 2; }
     @media only screen and (min-width: 340px) {
       .modal-container .modal {
         width: 80%;

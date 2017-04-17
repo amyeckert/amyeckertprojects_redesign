@@ -470,8 +470,6 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
-		;
-		;
 	}
 
 	.modal {
@@ -484,6 +482,7 @@
 		top: 57%;
 		transform: translateY(-50%); //centers it. 
 		text-align: left;
+		z-index: 2;
 
 		@include bp(xsmall){
 			width: 80%;
