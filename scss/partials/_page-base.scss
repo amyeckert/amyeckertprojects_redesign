@@ -99,7 +99,7 @@ header {
 	@include bp(xsmall) {
 		height: 3rem;
 		padding: 2% 5% 0 5%;
-		height: 75px;
+		height: 100px;
 	}
 	
 	@include bp(small) {
@@ -122,9 +122,9 @@ header {
 		margin: 0 auto 2% auto;
 
 		@include bp(xsmall){
-			width: 65%;
-			margin: 0;
-			display: inline-block;
+			// width: 100%;
+			margin: 0 auto 5% auto;
+			display: block;
 		}
 		@include bp(small){
 			margin: 0;
@@ -146,7 +146,7 @@ header {
 
 	// -------------------- menu toggle ------------------------------------//
     .menu-mobile {
-    	height: 20px;
+    	height: 25px;
 	    width: 90%;
 		position: relative;
 		margin: 0 auto;
@@ -154,15 +154,16 @@ header {
 		// padding: 7px 0 7px 7px;
 
 		@include bp(xsmall){
-    		height: 35px;
-		 	display: inline-block;
-		 	margin: 0 ;
-		 	width: 25%;
+    		height: 30px;
+		 	display: flex;
+		 	flex-flow: row nowrap;
+		 	width: 100%;
+		 	justify-content: space-between;
 		}
 		@include bp(small){
 			display: flex;
-			width: 50%;
-			float: right;
+			// width: 50%;
+			// float: right;
 		}
 		@include bp(medium) {
     		flex: 0 1 auto;
@@ -173,8 +174,9 @@ header {
 			margin: 1% 5%;
 		}
 
-		a {
-			// width: 100%;
+		a { 	
+			order: 1;
+			height: 100%;
 			// margin: 10px 0 20px 0 ;
 
 			@include bp(medium) {
@@ -184,11 +186,12 @@ header {
 
 			.btn-back {
 				display: block;
-				order: 1;
+				order: 2;
 				max-width: 50px;
 				color: $c-grey-med;
 				border-left: 1px solid $c-grey-med;
 				padding: 0 0 0 5px;
+				height: 100%;
 
 				@include bp(small){
 					height: 30px;
@@ -206,19 +209,20 @@ header {
 		}
 
 		.menu-toggle {
+			// background-color: tomato;
 	    	display: block;
 	    	font-size: 18px;
 	    	color: $c-grey-med;
-	    	// padding: 0 6px 6px 6px;
 	    	height: 100%;
 	    	width: 30%;
 	    	position: absolute;
-	    	top: 5px;
+	    	top: 10px;
 	    	right: 0;
 	    	text-align: right;
     		text-transform: uppercase;
+
     		@include bp(xsmall){
-    			padding: 11px 0 0 0 ;
+    			top: 5px;
 
     		}
     		@include bp(small) {
@@ -230,7 +234,7 @@ header {
     		}
 
     		@include bp(medium){
-    			// padding: 0 3% 0 0 ;
+    		
     		}
     		@include bp(large){
     			height: 60px;

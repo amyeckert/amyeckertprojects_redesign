@@ -178,7 +178,7 @@ header {
     header {
       height: 3rem;
       padding: 2% 5% 0 5%;
-      height: 75px; } }
+      height: 100px; } }
   @media only screen and (min-width: 750px) {
     header {
       width: 100%;
@@ -205,9 +205,8 @@ header {
     margin: 0 auto 2% auto; }
     @media only screen and (min-width: 340px) {
       header .logo {
-        width: 65%;
-        margin: 0;
-        display: inline-block; } }
+        margin: 0 auto 5% auto;
+        display: block; } }
     @media only screen and (min-width: 750px) {
       header .logo {
         margin: 0; } }
@@ -224,23 +223,29 @@ header {
         header .logo img {
           width: 60%; } }
   header .menu-mobile {
-    height: 20px;
+    height: 25px;
     width: 90%;
     position: relative;
     margin: 0 auto; }
     @media only screen and (min-width: 340px) {
       header .menu-mobile {
-        height: 35px;
-        display: inline-block;
-        margin: 0;
-        width: 25%; } }
+        height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+        width: 100%;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     @media only screen and (min-width: 750px) {
       header .menu-mobile {
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex;
-        width: 50%;
-        float: right; } }
+        display: flex; } }
     @media only screen and (min-width: 1024px) {
       header .menu-mobile {
         -webkit-box-flex: 0;
@@ -249,31 +254,37 @@ header {
     @media only screen and (min-width: 1200px) {
       header .menu-mobile {
         margin: 1% 5%; } }
-    @media only screen and (min-width: 1024px) {
-      header .menu-mobile a {
-        margin: 10px 0; } }
-    header .menu-mobile a .btn-back {
-      display: block;
+    header .menu-mobile a {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
-      max-width: 50px;
-      color: #6b6b6b;
-      border-left: 1px solid #6b6b6b;
-      padding: 0 0 0 5px; }
-      @media only screen and (min-width: 750px) {
-        header .menu-mobile a .btn-back {
-          height: 30px;
-          padding: 0 0 0 5px; } }
+      height: 100%; }
       @media only screen and (min-width: 1024px) {
-        header .menu-mobile a .btn-back {
-          -webkit-box-flex: 0;
-              -ms-flex: 0 1 auto;
-                  flex: 0 1 auto;
-          width: 40px;
-          height: 30px; } }
-      header .menu-mobile a .btn-back svg {
-        height: 20px; }
+        header .menu-mobile a {
+          margin: 10px 0; } }
+      header .menu-mobile a .btn-back {
+        display: block;
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        max-width: 50px;
+        color: #6b6b6b;
+        border-left: 1px solid #6b6b6b;
+        padding: 0 0 0 5px;
+        height: 100%; }
+        @media only screen and (min-width: 750px) {
+          header .menu-mobile a .btn-back {
+            height: 30px;
+            padding: 0 0 0 5px; } }
+        @media only screen and (min-width: 1024px) {
+          header .menu-mobile a .btn-back {
+            -webkit-box-flex: 0;
+                -ms-flex: 0 1 auto;
+                    flex: 0 1 auto;
+            width: 40px;
+            height: 30px; } }
+        header .menu-mobile a .btn-back svg {
+          height: 20px; }
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 18px;
@@ -281,13 +292,13 @@ header {
       height: 100%;
       width: 30%;
       position: absolute;
-      top: 5px;
+      top: 10px;
       right: 0;
       text-align: right;
       text-transform: uppercase; }
       @media only screen and (min-width: 340px) {
         header .menu-mobile .menu-toggle {
-          padding: 11px 0 0 0; } }
+          top: 5px; } }
       @media only screen and (min-width: 750px) {
         header .menu-mobile .menu-toggle {
           padding: 3% 3% 1% 0;
@@ -728,11 +739,11 @@ form {
         -ms-flex-order: 1;
             order: 1;
     display: block;
-    margin: 0;
+    margin: 0 0 15px 0;
     padding: 2px 0 0 0;
     color: #6b6b6b;
     height: 25px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     border-left: 1px solid #6b6b6b; }
     @media only screen and (min-width: 750px) {
       .main-content .page-location {
@@ -750,7 +761,7 @@ form {
         -ms-flex-order: 2;
             order: 2;
     display: block;
-    margin: 0 auto;
+    margin: 15px 0;
     color: #6b6b6b;
     text-transform: capitalize; }
     @media only screen and (min-width: 750px) {
@@ -799,7 +810,7 @@ form {
   display: block;
   width: 100%;
   height: auto;
-  margin: 20px 0; }
+  margin: 0 0 0 0; }
   .grid:after {
     content: '';
     display: block;
