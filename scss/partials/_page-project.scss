@@ -7,7 +7,7 @@
 	flex-flow: column nowrap;
 	width: 100%;
 	// overflow: hidden;
-	margin: 40px auto;
+	margin: 35px auto;
 	
 	@include bp(small) {
 		flex-flow: row wrap;
@@ -27,6 +27,7 @@
     	margin: 15px 0 ;
 		color: $c-grey-med;
 		text-transform: capitalize;
+		@include font-size(18);
 
 		@include bp(small){
 		    // padding: 7px 0 0 20px;

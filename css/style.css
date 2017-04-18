@@ -215,6 +215,10 @@ header {
     @media only screen and (min-width: 700px) {
       header .logo {
         margin: 0; } }
+    @media only screen and (min-width: 1200px) {
+      header .logo {
+        width: 50%;
+        margin: 0.8% 3.5%; } }
     header .logo img {
       width: 100%; }
       @media only screen and (min-width: 340px) {
@@ -224,10 +228,13 @@ header {
         header .logo img {
           width: 100%; } }
   header .menu-mobile {
-    height: 25px;
+    height: 30px;
     width: 100%;
     position: relative;
-    margin: 0 auto; }
+    margin: 15px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
     @media only screen and (min-width: 340px) {
       header .menu-mobile {
         height: 30px;
@@ -244,19 +251,15 @@ header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
-    @media only screen and (min-width: 1200px) {
-      header .menu-mobile {
-        margin: 1% 5%; } }
     header .menu-mobile .page-location {
+      display: block;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
-      display: block;
-      margin: 0 0 15px 0;
-      padding: 2px 0 0 0;
+      margin: 0 15px 15px 0;
+      padding: 0 0 0 0;
       color: #6b6b6b;
-      height: 25px;
-      text-transform: lowercase;
+      height: 100%;
       border-left: 1px solid #6b6b6b; }
       @media only screen and (min-width: 700px) {
         header .menu-mobile .page-location {
@@ -265,9 +268,10 @@ header {
           margin: 0 0 0 20px; } }
       header .menu-mobile .page-location p {
         display: block;
-        padding: 0 0 0 5px;
-        font-size: 1.5625rem;
-        font-size: 25px; }
+        padding: 5px 0 0 5px;
+        font-size: 1.125rem;
+        font-size: 18px;
+        text-transform: lowercase; }
         @media only screen and (min-width: 700px) {
           header .menu-mobile .page-location p {
             padding: 3px 0 0 10px; } }
@@ -285,18 +289,23 @@ header {
           height: 30px;
           padding: 0;
           margin: 0 0 0 20px; } }
-      @media only screen and (min-width: 1024px) {
-        header .menu-mobile a {
-          margin: 10px 0; } }
       header .menu-mobile a .btn-back {
-        display: block;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
         -webkit-box-ordinal-group: 3;
             -ms-flex-order: 2;
                 order: 2;
-        max-width: 50px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         color: #6b6b6b;
         border-left: 1px solid #6b6b6b;
-        padding: 0 0 0 5px;
+        padding: 0 0 0 0;
         height: 100%; }
         @media only screen and (min-width: 700px) {
           header .menu-mobile a .btn-back {
@@ -307,10 +316,18 @@ header {
             -webkit-box-flex: 0;
                 -ms-flex: 0 1 auto;
                     flex: 0 1 auto;
-            width: 40px;
             height: 30px; } }
+        header .menu-mobile a .btn-back p {
+          display: block;
+          padding: 0 10px 0 5px;
+          font-size: 1.125rem;
+          font-size: 18px;
+          text-transform: lowercase; }
+          @media only screen and (min-width: 700px) {
+            header .menu-mobile a .btn-back p {
+              padding: 3px 0 0 10px; } }
         header .menu-mobile a .btn-back svg {
-          height: 20px; }
+          height: 15px; }
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 1.125rem;
@@ -723,7 +740,7 @@ form {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 100%;
-  margin: 40px auto; }
+  margin: 35px auto; }
   @media only screen and (min-width: 700px) {
     .main-content {
       -webkit-box-orient: horizontal;
@@ -746,7 +763,9 @@ form {
     display: block;
     margin: 15px 0;
     color: #6b6b6b;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    font-size: 1.125rem;
+    font-size: 18px; }
     @media only screen and (min-width: 700px) {
       .main-content .project-name {
         margin: 0 0 0 0; } }

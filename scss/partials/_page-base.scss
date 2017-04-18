@@ -136,10 +136,10 @@ header {
 		@include bp(small){
 			margin: 0;
 		}
-		// @include bp(large){
-		// 	width: 50%;
-		// 	margin: 0.8% 3.5% ;
-		// }
+		@include bp(large){
+			width: 50%;
+			margin: 0.8% 3.5% ;
+		}
 		img {
 			width: 100%;
 
@@ -149,17 +149,15 @@ header {
 			@include bp(small){
 				width: 100%;
 			}
-			// @include bp(large){
-			// 	width: 60%;
-			// }
 		}
 	}
 
     .menu-mobile {
-    	height: 25px;
+    	height: 30px;
 	    width: 100%;
 		position: relative;
-		margin: 0 auto;
+		margin: 15px auto;
+		display: flex;
 
 		@include bp(xsmall){
     		height: 30px;
@@ -170,26 +168,22 @@ header {
 		@include bp(small){
 			display: flex;
 		}
-		// @include bp(medium) {
-  //   		flex: 0 1 auto;
-  //   		// height: 75px;
-		// }	
+	
 		@include bp(large){
-			// height: 90px;
-			margin: 1% 5%;
+			// margin: 1% 5%;
 		}
 
 		// -------------------- menu toggle ------------------------------------//
 
 		.page-location {
-			order: 1;
 			display: block;
-			margin: 0 0 15px 0 ;
-			padding: 2px 0 0 0 ;
+			order: 1;
+			margin: 0 15px 15px 0 ;
+			padding: 0 0 0 0 ;
 			color: $c-grey-med;
-			height: 25px;
-			text-transform: lowercase;
+			height: 100%;
 			border-left: 1px solid $c-grey-med;
+			
 
 			@include bp(small){
 				height: 30px;
@@ -198,8 +192,10 @@ header {
 			}
 			p {
 				display: block;
-				padding: 0 0 0 5px;
-				@include font-size(25);	
+				padding: 5px 0 0 5px;
+				@include font-size(18);	
+				text-transform: lowercase;
+
 				@include bp(small){
 					padding: 3px 0 0 10px;
 				}
@@ -217,21 +213,18 @@ header {
 			@include bp(small){
 		    	height: 30px;
 			    padding: 0;
-			    margin: 0 0 0 20px;
-			}
-
-			@include bp(medium) {
-				margin: 10px 0;
-				
+		    	margin: 0 0 0 20px;
 			}
 
 			.btn-back {
-				display: block;
-				order: 2;
-				max-width: 50px;
+			    display: flex;
+    			flex-flow: row nowrap;				
+    			order: 2;
+    			align-items: center;
 				color: $c-grey-med;
 				border-left: 1px solid $c-grey-med;
-				padding: 0 0 0 5px;
+				// 
+				padding: 0 0 0 0 ;
 				height: 100%;
 
 				@include bp(small){
@@ -240,11 +233,26 @@ header {
 				}
 				@include bp(medium){
 					flex: 0 1 auto;
-				    width: 40px;
+				    // width: 40px;
 					height: 30px;
 				}
+				p {
+					display: block;
+					padding: 0 10px 0 5px;
+					@include font-size(18);	
+					text-transform: lowercase;
+
+					// display: block;
+					// padding: 0 10px 0 0;
+					// @include font-size(18);	
+					// text-transform: lowercase;
+
+					@include bp(small){
+						padding: 3px 0 0 10px;
+					}
+				}
 				svg {
-					height: 20px;
+					height: 15px;
 				}
 			}
 		}
