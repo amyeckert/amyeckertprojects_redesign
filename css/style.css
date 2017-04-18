@@ -679,7 +679,8 @@ form {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    height: 100vh; }
+    height: 100vh;
+    overflow: hidden; }
     @media only screen and (min-width: 1024px) {
       #home .main-content {
         min-height: 100vh; } }
