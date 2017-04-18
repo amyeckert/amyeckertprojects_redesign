@@ -78,8 +78,6 @@ button {
 	padding: 7px;
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
-	
-
 }
 /* ------------ LINKS-------------------------------*/
 
@@ -99,7 +97,6 @@ header {
 	left: 0; 
 	background-color: $c-white;
 	transition: top 0.2s ease-in-out;	
-	// outline: 1px solid tomato;
 
 	@include bp(xsmall) {
 		height: 3rem;
@@ -160,20 +157,19 @@ header {
 		display: flex;
 
 		@include bp(xsmall){
-    		height: 30px;
 		 	display: flex;
 		 	flex-flow: row nowrap;
 		 	width: 100%;
 		}
 		@include bp(small){
-			display: flex;
+			margin: 0 auto;
+			height: 32px;
+			
 		}
-	
 		@include bp(large){
-			// margin: 1% 5%;
+			height: 40px;
+			margin-right: 5%;
 		}
-
-		// -------------------- menu toggle ------------------------------------//
 
 		.page-location {
 			display: block;
@@ -195,10 +191,6 @@ header {
 				padding: 5px 0 0 5px;
 				@include font-size(18);	
 				text-transform: lowercase;
-
-				@include bp(small){
-					padding: 3px 0 0 10px;
-				}
 			}
 		}
 
@@ -229,27 +221,15 @@ header {
 
 				@include bp(small){
 					height: 32px;
-				    padding: 0 0 0 10px;
+				    padding: 0 0 0 0
 				}
-				@include bp(medium){
-					flex: 0 1 auto;
-				    // width: 40px;
-					height: 30px;
-				}
+		
 				p {
 					display: block;
 					padding: 0 10px 0 5px;
 					@include font-size(18);	
 					text-transform: lowercase;
 
-					// display: block;
-					// padding: 0 10px 0 0;
-					// @include font-size(18);	
-					// text-transform: lowercase;
-
-					@include bp(small){
-						padding: 3px 0 0 10px;
-					}
 				}
 				svg {
 					height: 15px;
@@ -271,20 +251,15 @@ header {
 
     		@include bp(xsmall){
     			top: 5px;
-
     		}
     		@include bp(small) {
 			    padding: 8px 10px;
 			    top: 0;
-				border-right: 1px solid $c-grey-med;
-    		}
-
-    		@include bp(medium){
-    		
+				border: none;
     		}
     		@include bp(large){
-    			height: 60px;
-    			padding-top: 20px;
+    			height: 40px;
+    			padding: 20px 0 0 0 ;
     		}
 		}
 	}

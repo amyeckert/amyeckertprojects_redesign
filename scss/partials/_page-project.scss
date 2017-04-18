@@ -30,56 +30,11 @@
 		@include font-size(18);
 
 		@include bp(small){
-		    // padding: 7px 0 0 20px;
         	margin: 0 0 0 0 ;
 
 		}
-		@include bp(medium){
-			// min-width: 300px;
-			// height: 30px;		
-
-		}
-	}
-	#exhibitions > .project-name {
-		border-left: 1px solid $c-grey-med;
 	}
 }
-		
-	
-	.menu-side {
-		display: none;
-		border: 1px solid tomato;
-		order: 3;
-		ul {
-			background-color: tomato;
-			display: none;
-
-			@include bp(medium) {
-				display: block;
-			    flex: 1 0;
-			    min-width: 25%;
-			    max-width: 25%;
-			    font-size: 1rem;
-			    margin: 10px 0 0 0 ;
-			    padding: 0 0 0 10px;
-			    text-align: left;
-			    @include line-height(30); 
-			    margin-left: -25%; 
-			    transition: margin-left 0.7s;
-			}
-			&:hover {
-				margin-left: -5%;
-			}
-			li {
-				padding: 0 25px 0 0;
-			}
-			&:active, 
-			&:hover {
-    			color: $c-green-kelly;	
-			}
-		}
-	}
-
 
 //----------------- Thumbnail GRID ------------------//
 .grid {
