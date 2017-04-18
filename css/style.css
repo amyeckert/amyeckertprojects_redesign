@@ -98,7 +98,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  padding-top: 4rem;
+  padding-top: 55px;
   font-family: "Josefin Sans", sans-serif; }
   body#contact {
     overflow: hidden; }
@@ -165,9 +165,9 @@ header {
   z-index: 1;
   max-width: 100%;
   min-width: 140px;
-  height: 3.8rem;
+  height: 90px;
   margin: 0 auto;
-  padding: 5% 5% 0 5%;
+  padding: 3% 5% 0 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -202,7 +202,7 @@ header {
         -ms-flex: 2 1 auto;
             flex: 2 1 auto;
     width: 90%;
-    margin: 0 auto; }
+    margin: 0 auto 2% auto; }
     @media only screen and (min-width: 340px) {
       header .logo {
         width: 65%;
@@ -249,15 +249,39 @@ header {
     @media only screen and (min-width: 1200px) {
       header .menu-mobile {
         margin: 1% 5%; } }
+    @media only screen and (min-width: 1024px) {
+      header .menu-mobile a {
+        margin: 10px 0; } }
+    header .menu-mobile a .btn-back {
+      display: block;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      max-width: 50px;
+      color: #6b6b6b;
+      border-left: 1px solid #6b6b6b;
+      padding: 0 0 0 5px; }
+      @media only screen and (min-width: 750px) {
+        header .menu-mobile a .btn-back {
+          height: 30px;
+          padding: 0 0 0 5px; } }
+      @media only screen and (min-width: 1024px) {
+        header .menu-mobile a .btn-back {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 1 auto;
+                  flex: 0 1 auto;
+          width: 40px;
+          height: 30px; } }
+      header .menu-mobile a .btn-back svg {
+        height: 20px; }
     header .menu-mobile .menu-toggle {
       display: block;
       font-size: 18px;
       color: #6b6b6b;
-      padding: 0 6px 6px 6px;
       height: 100%;
       width: 30%;
       position: absolute;
-      top: 0;
+      top: 5px;
       right: 0;
       text-align: right;
       text-transform: uppercase; }
@@ -684,7 +708,7 @@ form {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 100%;
-  margin: 0 auto; }
+  margin: 40px auto; }
   @media only screen and (min-width: 750px) {
     .main-content {
       -webkit-box-orient: horizontal;
@@ -720,43 +744,18 @@ form {
       margin-bottom: 0;
       font-size: 1.5625rem;
       font-size: 25px; }
-  .main-content a {
-    width: 100%;
-    margin: 0 0 20px 0; }
-    @media only screen and (min-width: 1024px) {
-      .main-content a {
-        margin: 20px 0; } }
-    .main-content a .btn-back {
-      display: block;
-      -webkit-box-ordinal-group: 2;
-          -ms-flex-order: 1;
-              order: 1;
-      max-width: 50px;
-      color: #6b6b6b;
-      border-left: 1px solid #6b6b6b;
-      padding: 0 0 0 5px; }
-      @media only screen and (min-width: 750px) {
-        .main-content a .btn-back {
-          height: 30px;
-          padding: 0 0 0 5px; } }
-      @media only screen and (min-width: 1024px) {
-        .main-content a .btn-back {
-          -webkit-box-flex: 0;
-              -ms-flex: 0 1 auto;
-                  flex: 0 1 auto;
-          width: 40px;
-          height: 30px; } }
-      .main-content a .btn-back svg {
-        height: 20px; }
   .main-content .project-name {
     min-width: 200px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     display: block;
-    margin: 0 0 0 0;
+    margin: 0 auto;
     color: #6b6b6b;
     text-transform: capitalize; }
+    @media only screen and (min-width: 750px) {
+      .main-content .project-name {
+        margin: 0 0 0 10%; } }
   .main-content #exhibitions > .project-name {
     border-left: 1px solid #6b6b6b; }
 
@@ -800,7 +799,7 @@ form {
   display: block;
   width: 100%;
   height: auto;
-  margin: 5px 0; }
+  margin: 20px 0; }
   .grid:after {
     content: '';
     display: block;

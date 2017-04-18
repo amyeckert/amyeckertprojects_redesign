@@ -8,7 +8,7 @@
 	width: 100%;
 	// height: 100vh;
 	// overflow: hidden;
-	margin: 0 auto;
+	margin: 40px auto;
 	
 	@include bp(small) {
 		flex-flow: row wrap;
@@ -42,47 +42,48 @@
 			@include font-size(25);	
 		}
 	}	
-	a {
-		width: 100%;
-		margin: 0 0 20px 0 ;
+	// a {
+	// 	width: 100%;
+	// 	margin: 10px 0 20px 0 ;
 
-		@include bp(medium) {
-			margin: 20px 0;
+	// 	@include bp(medium) {
+	// 		margin: 10px 0;
 			
-		}
+	// 	}
 
-		.btn-back {
-			display: block;
-			order: 1;
-			max-width: 50px;
-			color: $c-grey-med;
-			border-left: 1px solid $c-grey-med;
-			padding: 0 0 0 5px;
+	// 	.btn-back {
+	// 		display: block;
+	// 		order: 1;
+	// 		max-width: 50px;
+	// 		color: $c-grey-med;
+	// 		border-left: 1px solid $c-grey-med;
+	// 		padding: 0 0 0 5px;
 
-			@include bp(small){
-				height: 30px;
-			    padding: 0 0 0 5px;
-			}
-			@include bp(medium){
-				flex: 0 1 auto;
-			    width: 40px;
-				height: 30px;
-			}
-			svg {
-				height: 20px;
-			}
-		}
-}
+	// 		@include bp(small){
+	// 			height: 30px;
+	// 		    padding: 0 0 0 5px;
+	// 		}
+	// 		@include bp(medium){
+	// 			flex: 0 1 auto;
+	// 		    width: 40px;
+	// 			height: 30px;
+	// 		}
+	// 		svg {
+	// 			height: 20px;
+	// 		}
+	// 	}
+	// }
 	.project-name {
 		min-width: 200px;
 		order: 2;
 		display: block;
-    	margin: 0 0 0 0 ;
+    	margin: 0 auto ;
 		color: $c-grey-med;
 		text-transform: capitalize;
 
 		@include bp(small){
 		    // padding: 7px 0 0 20px;
+        	margin: 0 0 0 10% ;
 
 		}
 		@include bp(medium){
@@ -138,7 +139,7 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	margin: 5px 0;
+	margin: 20px 0;
 
 	&:after {
 		  content: '';
