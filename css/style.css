@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /********************
 ** Vendors
 ********************/
@@ -89,7 +88,6 @@ input, select {
   margin: 0;
   padding: 0; }
 
-‹
 html {
   height: 100vh;
   margin: 0;
@@ -100,6 +98,9 @@ body {
   margin: 0;
   padding-top: 55px;
   font-family: "Josefin Sans", sans-serif; }
+  @media only screen and (min-width: 700px) {
+    body {
+      padding-top: 70px; } }
   body#contact {
     overflow: hidden; }
 
@@ -179,8 +180,9 @@ header {
       height: 3rem;
       padding: 2% 5% 0 5%;
       height: 100px; } }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     header {
+      height: 70px;
       width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -202,26 +204,25 @@ header {
         -ms-flex: 2 1 auto;
             flex: 2 1 auto;
     width: 90%;
-    margin: 0 auto 2% auto; }
+    margin: 0 auto 5px auto;
+    display: block; }
     @media only screen and (min-width: 340px) {
       header .logo {
-        margin: 0 auto;
-        display: block; } }
-    @media only screen and (min-width: 768px) {
+        margin: 0 auto 15px auto; } }
+    @media only screen and (min-width: 500px) {
+      header .logo {
+        width: 65%; } }
+    @media only screen and (min-width: 700px) {
       header .logo {
         margin: 0; } }
-    @media only screen and (min-width: 1200px) {
-      header .logo {
-        width: 50%;
-        margin: 0.8% 3.5%; } }
     header .logo img {
       width: 100%; }
       @media only screen and (min-width: 340px) {
         header .logo img {
-          width: 75%; } }
-      @media only screen and (min-width: 1200px) {
+          width: 90%; } }
+      @media only screen and (min-width: 700px) {
         header .logo img {
-          width: 60%; } }
+          width: 100%; } }
   header .menu-mobile {
     height: 25px;
     width: 100%;
@@ -237,20 +238,12 @@ header {
         -webkit-box-direction: normal;
             -ms-flex-flow: row nowrap;
                 flex-flow: row nowrap;
-        width: 100%;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; } }
-    @media only screen and (min-width: 768px) {
+        width: 100%; } }
+    @media only screen and (min-width: 700px) {
       header .menu-mobile {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
-    @media only screen and (min-width: 1024px) {
-      header .menu-mobile {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 1 auto;
-                flex: 0 1 auto; } }
     @media only screen and (min-width: 1200px) {
       header .menu-mobile {
         margin: 1% 5%; } }
@@ -265,17 +258,21 @@ header {
       height: 25px;
       text-transform: lowercase;
       border-left: 1px solid #6b6b6b; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         header .menu-mobile .page-location {
-          height: 25px;
-          padding: 0 0 0 0; } }
+          height: 30px;
+          padding: 0 0 0 0;
+          margin: 0 0 0 20px; } }
       header .menu-mobile .page-location p {
         display: block;
         padding: 0 0 0 5px;
-        margin-bottom: 0;
         font-size: 1.5625rem;
         font-size: 25px; }
+        @media only screen and (min-width: 700px) {
+          header .menu-mobile .page-location p {
+            padding: 3px 0 0 10px; } }
     header .menu-mobile a {
+      display: block;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
@@ -283,6 +280,11 @@ header {
       @media only screen and (min-width: 340px) {
         header .menu-mobile a {
           height: 90%; } }
+      @media only screen and (min-width: 700px) {
+        header .menu-mobile a {
+          height: 30px;
+          padding: 0;
+          margin: 0 0 0 20px; } }
       @media only screen and (min-width: 1024px) {
         header .menu-mobile a {
           margin: 10px 0; } }
@@ -296,10 +298,10 @@ header {
         border-left: 1px solid #6b6b6b;
         padding: 0 0 0 5px;
         height: 100%; }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 700px) {
           header .menu-mobile a .btn-back {
-            height: 30px;
-            padding: 0 0 0 5px; } }
+            height: 32px;
+            padding: 0 0 0 10px; } }
         @media only screen and (min-width: 1024px) {
           header .menu-mobile a .btn-back {
             -webkit-box-flex: 0;
@@ -311,25 +313,23 @@ header {
           height: 20px; }
     header .menu-mobile .menu-toggle {
       display: block;
+      font-size: 1.125rem;
       font-size: 18px;
       color: #6b6b6b;
       height: 100%;
       width: 30%;
       position: absolute;
-      top: 10px;
+      top: 7px;
       right: 0;
       text-align: right;
       text-transform: uppercase; }
       @media only screen and (min-width: 340px) {
         header .menu-mobile .menu-toggle {
           top: 5px; } }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         header .menu-mobile .menu-toggle {
-          padding: 3% 3% 1% 0;
-          margin-bottom: 0;
-          display: block;
-          font-size: 1.375rem;
-          font-size: 22px;
+          padding: 8px 10px;
+          top: 0;
           border-right: 1px solid #6b6b6b; } }
       @media only screen and (min-width: 1200px) {
         header .menu-mobile .menu-toggle {
@@ -339,19 +339,6 @@ header {
     top: -3rem; }
   header .nav-down {
     top: 3rem; }
-
-.menu-top {
-  display: none; }
-  .menu-top ul:after {
-    content: "";
-    clear: both;
-    display: block; }
-
-.page-location {
-  display: block;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1; }
 
 .bio {
   -webkit-box-ordinal-group: 3;
@@ -367,7 +354,7 @@ header {
   padding: 0 0 0 0;
   background-color: #b56618;
   color: #fff; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .bio {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -386,7 +373,7 @@ header {
     @media only screen and (min-width: 340px) {
       .bio .bio-col-half {
         border-left: none; } }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .bio .bio-col-half {
         width: 50%;
         margin: 0 auto;
@@ -399,13 +386,13 @@ header {
   .bio .col-l {
     border-left: none;
     padding: 30px 30px 0 30px; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .bio .col-l {
         padding: 45px; } }
   .bio .col-r {
     border-left: none;
     margin-bottom: 2rem; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .bio .col-r {
         border-left: 1px solid #fff;
         padding: 45px;
@@ -444,7 +431,7 @@ header {
       color: #b56618;
       background-color: #fff;
       border-bottom: 1px solid #fff; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .btn-cv {
       max-width: 90%;
       -ms-flex-item-align: end;
@@ -486,13 +473,6 @@ header {
   font-size: 14px;
   text-align: center; }
 
-#contact .main-content {
-  display: block; }
-  #contact .main-content .page-location {
-    display: none;
-    width: 100%;
-    margin-bottom: 1rem; }
-
 .contact-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -506,7 +486,7 @@ header {
   @media only screen and (min-width: 340px) {
     .contact-container {
       width: 100%; } }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .contact-container {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -524,7 +504,7 @@ header {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .contact-container .contact-img {
         width: 100%;
         height: auto;
@@ -534,7 +514,7 @@ header {
                 flex-direction: row; } }
     .contact-container .contact-img img {
       width: 100%; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         .contact-container .contact-img img {
           width: 50%;
           height: 100%; } }
@@ -544,7 +524,7 @@ header {
             order: 2;
     display: block;
     width: 100%; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .contact-container .contact-form {
         width: 50%; } }
     .contact-container .contact-form .temp-contact-info {
@@ -570,7 +550,7 @@ header {
       .contact-container .contact-form .temp-contact-info:active {
         background-color: #4866fb;
         color: #fff; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         .contact-container .contact-form .temp-contact-info {
           font-size: 1.125rem;
           font-size: 18px;
@@ -585,7 +565,7 @@ form {
   display: none;
   width: 100%;
   position: absolute; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     form {
       top: 0;
       right: 0;
@@ -595,7 +575,7 @@ form {
     border: none;
     width: 100%;
     color: #6b6b6b; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       form fieldset {
         width: 90%;
         margin: 0 auto; } }
@@ -624,7 +604,7 @@ form {
     border: 1px solid #6b6b6b;
     font-size: 1.125rem;
     font-size: 18px; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       form input[type="text"],
       form input[type="email"],
       form input[type="search"],
@@ -634,7 +614,7 @@ form {
   form textarea {
     margin-bottom: 15px;
     height: 5rem; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       form textarea {
         height: 4rem; } }
   form input[type="text"]:focus,
@@ -657,7 +637,7 @@ form {
     color: #fff;
     text-transform: uppercase;
     font-size: 1rem; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       form input[type="submit"] {
         width: 50%;
         max-width: 40rem; } }
@@ -704,7 +684,7 @@ form {
       width: 100%;
       height: 100vh;
       margin-top: 10px; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         #home .main-content .front-img-container {
           margin-top: 40px; } }
       @media only screen and (min-width: 1024px) {
@@ -719,7 +699,7 @@ form {
             -ms-transform: translateX(-50%);
                 transform: translateX(-50%);
         margin-left: 50%; }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 700px) {
           #home .main-content .front-img-container img {
             width: 60vw; } }
         @media only screen and (min-width: 1024px) {
@@ -744,41 +724,20 @@ form {
           flex-flow: column nowrap;
   width: 100%;
   margin: 40px auto; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .main-content {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
       height: auto;
-      height: auto; } }
+      margin-top: 10px; } }
   @media only screen and (min-width: 1024px) {
     .main-content {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap; } }
-  .main-content .page-location {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    display: block;
-    margin: 0 0 15px 0;
-    padding: 2px 0 0 0;
-    color: #6b6b6b;
-    height: 25px;
-    text-transform: lowercase;
-    border-left: 1px solid #6b6b6b; }
-    @media only screen and (min-width: 768px) {
-      .main-content .page-location {
-        height: 25px;
-        padding: 0 0 0 0; } }
-    .main-content .page-location p {
-      display: block;
-      padding: 0 0 0 5px;
-      margin-bottom: 0;
-      font-size: 1.5625rem;
-      font-size: 25px; }
   .main-content .project-name {
     min-width: 200px;
     -webkit-box-ordinal-group: 3;
@@ -788,9 +747,9 @@ form {
     margin: 15px 0;
     color: #6b6b6b;
     text-transform: capitalize; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .main-content .project-name {
-        margin: 0 0 0 10%; } }
+        margin: 0 0 0 0; } }
   .main-content #exhibitions > .project-name {
     border-left: 1px solid #6b6b6b; }
 
@@ -851,7 +810,7 @@ form {
   .grid .grid-sizer {
     width: 100%;
     height: auto; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .grid .grid-sizer {
         width: 100%; } }
     .grid .grid-sizer .grid-item {
@@ -859,7 +818,7 @@ form {
       width: 100%;
       height: auto;
       margin-bottom: 5px; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         .grid .grid-sizer .grid-item {
           float: none;
           width: 33.333%;
@@ -946,7 +905,7 @@ form {
 /*---------------------- CAROUSEL -------------------*/
 .carousel {
   display: none; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .carousel {
       display: none;
       -webkit-box-ordinal-group: 6;
@@ -964,7 +923,7 @@ form {
               flex: 1 0 auto; } }
   .carousel .big {
     display: none; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .carousel .big {
         display: block;
         width: 100%; } }
@@ -993,7 +952,7 @@ form {
       width: 100%;
       margin-left: 0;
       text-align: left; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         .carousel .big .image-info {
           height: 30px;
           margin-top: 10px; } }
@@ -1006,7 +965,7 @@ form {
 
 .carousel-nav {
   display: none; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .carousel-nav {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1063,7 +1022,7 @@ form {
   color: #6b6b6b;
   border-left: 1px solid #6b6b6b;
   text-transform: capitalize; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .statement-title {
       height: 30px;
       margin: 0; } }
@@ -1077,7 +1036,7 @@ form {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto; }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 700px) {
     .share {
       width: 25%;
       border-left: 1px solid #6b6b6b;
@@ -1094,14 +1053,14 @@ form {
     width: 100%;
     -ms-flex-pack: distribute;
         justify-content: space-around; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .share ul {
         margin-left: 15px;
         height: 30px; } }
     .share ul li {
       width: 33.334%;
       padding: 30px; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         .share ul li {
           padding: 0; } }
       .share ul li a {
@@ -1112,7 +1071,7 @@ form {
           height: 30px;
           width: 100%;
           padding: 2px; }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 700px) {
           .share ul li a {
             max-height: 25px; } }
     .share ul:nth-of-type(3) {
@@ -1155,7 +1114,7 @@ form {
       .modal-container .modal {
         width: 80%;
         top: 50%; } }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 700px) {
       .modal-container .modal {
         width: 55%; } }
     @media only screen and (min-width: 1024px) {
@@ -1170,7 +1129,7 @@ form {
       margin: 0 auto;
       position: relative;
       border-radius: 20px; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         .modal-container .modal .modal-header {
           height: 40px; } }
       @media only screen and (min-width: 1200px) {
@@ -1184,7 +1143,7 @@ form {
         font-size: 12px;
         right: 0;
         top: 0; }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 700px) {
           .modal-container .modal .modal-header .close {
             padding: 12px; } }
     .modal-container .modal .modal-content {
@@ -1197,7 +1156,7 @@ form {
       font-size: 0.8rem;
       background-color: #fff;
       color: #6b6b6b; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 700px) {
         .modal-container .modal .statement-body {
           width: 80%; } }
       @media only screen and (min-width: 1024px) {
@@ -1208,7 +1167,7 @@ form {
         line-height: 1.375rem;
         line-height: 22px;
         margin: 1rem auto; }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 700px) {
           .modal-container .modal .statement-body p {
             letter-spacing: 0;
             font-size: 1.125rem;
@@ -1255,7 +1214,7 @@ form {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 700px) {
           .options-menu-horizontal .column ul li {
             height: 2.7rem; } }
         .options-menu-horizontal .column ul li a {
