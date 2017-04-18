@@ -678,7 +678,8 @@ form {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; }
+            flex-direction: row;
+    height: 100vh; }
     @media only screen and (min-width: 1024px) {
       #home .main-content {
         min-height: 100vh; } }
@@ -730,6 +731,7 @@ form {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 100%;
+  height: 100vh;
   margin: 35px auto; }
   @media only screen and (min-width: 700px) {
     .main-content {
