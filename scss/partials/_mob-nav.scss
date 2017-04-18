@@ -4,7 +4,6 @@
     font-family: $f-text;
     text-align: center;
     display: none;
-    flex-direction: column;
     background-color: $c-white;
     position: fixed;
     bottom: 0;
@@ -12,8 +11,8 @@
     width: 100%;
     padding: 0;
     z-index: 3; 
-	
-	.column {
+    
+ 	.column {
 		width: 100%;
 		padding: 0 0 0 0 ;
 		margin: 0 0 0 0 ;

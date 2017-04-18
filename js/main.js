@@ -85,7 +85,7 @@
             $('.next').hide();
             $('.previous').hide();
             $('.thumbs-only').hide();
-            $(footer).addClass('options-menu-horizontal');
+            // $(footer).addClass('options-menu-horizontal');
 
             //init masonry
             var $grid = $('.grid').masonry({

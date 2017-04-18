@@ -177,10 +177,10 @@ header {
   @media only screen and (min-width: 340px) {
     header {
       height: 3rem;
-      padding: 2% 5% 0 5%; } }
+      padding: 2% 5% 0 5%;
+      height: 75px; } }
   @media only screen and (min-width: 750px) {
     header {
-      height: 120px;
       width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -188,12 +188,11 @@ header {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row;
-      height: 75px; } }
+              flex-direction: row; } }
   @media only screen and (min-width: 1024px) {
     header {
       width: 100%;
-      padding: 1% 5%; } }
+      padding: 2% 5%; } }
   @media only screen and (min-width: 1200px) {
     header {
       padding: 0;
@@ -685,7 +684,6 @@ form {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   width: 100%;
-  height: 100vh;
   margin: 0 auto; }
   @media only screen and (min-width: 750px) {
     .main-content {
@@ -694,7 +692,6 @@ form {
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
       height: auto;
-      margin-top: 1rem;
       height: auto; } }
   @media only screen and (min-width: 1024px) {
     .main-content {
@@ -708,57 +705,58 @@ form {
             order: 1;
     display: block;
     margin: 0;
-    padding: 5px 0 0 0;
-    text-indent: 15px;
+    padding: 2px 0 0 0;
     color: #6b6b6b;
-    text-transform: uppercase; }
+    height: 25px;
+    text-transform: uppercase;
+    border-left: 1px solid #6b6b6b; }
     @media only screen and (min-width: 750px) {
       .main-content .page-location {
         height: 25px;
         padding: 0 0 0 0; } }
     .main-content .page-location p {
       display: block;
-      border-left: 1px solid #6b6b6b;
-      padding: 3% 0 0 1%;
-      margin-bottom: 0; }
-  .main-content .btn-back {
-    display: block;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    max-width: 50px;
-    color: #6b6b6b;
-    border-left: 1px solid #6b6b6b;
-    padding: 0 0 0 5px; }
-    @media only screen and (min-width: 750px) {
-      .main-content .btn-back {
-        height: 30px;
-        padding: 0 0 0 5px; } }
+      padding: 0 0 0 5px;
+      margin-bottom: 0;
+      font-size: 1.5625rem;
+      font-size: 25px; }
+  .main-content a {
+    width: 100%;
+    margin: 0 0 20px 0; }
     @media only screen and (min-width: 1024px) {
-      .main-content .btn-back {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 1 auto;
-                flex: 0 1 auto;
-        width: 40px;
-        height: 30px; } }
-    .main-content .btn-back svg {
-      height: 20px; }
+      .main-content a {
+        margin: 20px 0; } }
+    .main-content a .btn-back {
+      display: block;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      max-width: 50px;
+      color: #6b6b6b;
+      border-left: 1px solid #6b6b6b;
+      padding: 0 0 0 5px; }
+      @media only screen and (min-width: 750px) {
+        .main-content a .btn-back {
+          height: 30px;
+          padding: 0 0 0 5px; } }
+      @media only screen and (min-width: 1024px) {
+        .main-content a .btn-back {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 1 auto;
+                  flex: 0 1 auto;
+          width: 40px;
+          height: 30px; } }
+      .main-content a .btn-back svg {
+        height: 20px; }
   .main-content .project-name {
     min-width: 200px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     display: block;
-    padding: 2% 0 0 0;
+    margin: 0 0 0 0;
     color: #6b6b6b;
     text-transform: capitalize; }
-    @media only screen and (min-width: 750px) {
-      .main-content .project-name {
-        padding: 7px 0 0 20px; } }
-    @media only screen and (min-width: 1024px) {
-      .main-content .project-name {
-        min-width: 300px;
-        height: 30px; } }
   .main-content #exhibitions > .project-name {
     border-left: 1px solid #6b6b6b; }
 
@@ -800,9 +798,9 @@ form {
       -ms-flex-order: 4;
           order: 4;
   display: block;
-  min-width: 100%;
+  width: 100%;
   height: auto;
-  margin: 20px 0; }
+  margin: 5px 0; }
   .grid:after {
     content: '';
     display: block;
@@ -1197,10 +1195,6 @@ form {
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: #fff;
   position: fixed;
   bottom: 0;
