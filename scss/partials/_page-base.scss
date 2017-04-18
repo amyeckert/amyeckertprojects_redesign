@@ -122,8 +122,7 @@ header {
 		margin: 0 auto 2% auto;
 
 		@include bp(xsmall){
-			// width: 100%;
-			margin: 0 auto 5% auto;
+			margin: 0 auto ;
 			display: block;
 		}
 		@include bp(small){
@@ -135,8 +134,11 @@ header {
 		}
 		img {
 			width: 100%;
-			@include bp(small){
+			@include bp(xsmall) {
 				width: 75%;
+			}
+			@include bp(small){
+				// width: 75%;
 			}
 			@include bp(large){
 				width: 60%;
@@ -147,7 +149,7 @@ header {
 	// -------------------- menu toggle ------------------------------------//
     .menu-mobile {
     	height: 25px;
-	    width: 90%;
+	    width: 100%;
 		position: relative;
 		margin: 0 auto;
 		// background-color: tomato;
@@ -174,10 +176,33 @@ header {
 			margin: 1% 5%;
 		}
 
+		.page-location {
+			order: 1;
+			display: block;
+			margin: 0 0 15px 0 ;
+			padding: 2px 0 0 0 ;
+			color: $c-grey-med;
+			height: 25px;
+			text-transform: lowercase;
+			border-left: 1px solid $c-grey-med;
+			@include bp(small){
+				height: 25px;
+				padding: 0 0 0 0 ;
+			}
+			p {
+				display: block;
+				padding: 0 0 0 5px;
+				margin-bottom: 0;
+				@include font-size(25);	
+			}
+		}
+
 		a { 	
 			order: 1;
 			height: 100%;
-			// margin: 10px 0 20px 0 ;
+			@include bp(xsmall){
+				height: 90%;
+			}
 
 			@include bp(medium) {
 				margin: 10px 0;
