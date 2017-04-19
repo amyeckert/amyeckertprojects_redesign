@@ -398,12 +398,13 @@ header {
         padding: 45px; } }
   .bio .col-r {
     border-left: none;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    padding: 30px 30px 0 30px; }
     @media only screen and (min-width: 700px) {
       .bio .col-r {
         border-left: 1px solid #fff;
-        padding: 45px;
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        padding: 45px; } }
   .bio a {
     border-bottom: 1px solid #fff;
     padding: 0;
@@ -1023,7 +1024,7 @@ form {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      height: 30px;
+      height: 35px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
@@ -1077,7 +1078,7 @@ form {
   text-transform: lowercase; }
   @media only screen and (min-width: 700px) {
     .statement-title {
-      height: 30px;
+      height: 35px;
       margin: 0; } }
 
 .modal-on {

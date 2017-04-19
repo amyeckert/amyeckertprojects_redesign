@@ -253,7 +253,7 @@
 
 	@include bp(small) {
 		display: flex;
-		height: 30px;
+		height: 35px;
 		flex-direction: row;
 		order: 6;
 		align-items: stretch;	
@@ -302,7 +302,7 @@
 	text-transform: lowercase;
 
 	@include bp(small){
-		height: 30px;
+		height: 35px;
 		margin: 0;
 	}
 }

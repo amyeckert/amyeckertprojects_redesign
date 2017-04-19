@@ -272,10 +272,7 @@ header {
 }
 
 //------------------ ABOUT PAGE ------------------------*/
-// .page-location {
-// 	display: block;
-// 	order: 1;
-// }
+
 .bio {
 	order: 2;
 	display: flex;
@@ -320,11 +317,12 @@ header {
 	.col-r {
 		border-left: none;
 	    margin-bottom: 2rem;
+		padding: 30px 30px 0 30px;
 
 		@include bp(small){
 			border-left: 1px solid $c-white;
-			padding: 45px;
 	    	margin-bottom: 0;
+	    	padding: 45px
 		}
 	}
 	
