@@ -6,8 +6,7 @@
   	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	flex-flow: column nowrap;
 	width: 100%;
-	height: 100%;
-	// overflow: hidden;
+	height: auto;
 	margin: 35px auto;
 	
 	@include bp(small) {
@@ -300,7 +299,7 @@
 	margin: 0 ;
 	color: $c-grey-med;
 	border-left: 1px solid $c-grey-med;
-	text-transform: capitalize;
+	text-transform: lowercase;
 
 	@include bp(small){
 		height: 30px;

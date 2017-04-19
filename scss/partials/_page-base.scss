@@ -404,15 +404,6 @@ header {
 
 	}
 }
-// // ------- COPYRIGHT NOTICE-----------------//
-// .copyright-notice {
-// 	order: 9;
-// 	width: 90%;
-// 	margin: 25px auto;
-// 	color: $c-grey-med;
-// 	@include font-size(14);
-// 	text-align: center;
-// }
 //----------------- CONTACT PAGE ------------------------------------*/
 
 .contact-container {
@@ -585,7 +576,14 @@ form {
 .footer-top {
 	display: block;
 	width: 100%;
-	// -------- SHARE / SOCIAL MEDIA
+
+	@include bp(small) {
+		display: flex;
+		flex-direction: row nowrap;
+		align-items: center;
+
+	}
+	// -------- SHARE / SOCIAL MEDIA -----------------//
 	.share {
 		display: block;
 		width: 100%;
@@ -593,7 +591,7 @@ form {
 		flex: 0 1 auto;
 
 		@include bp(small){
-			width: 25%;
+			width: 200px;
 			border-left: 1px solid $c-grey-med;
 			height: 30px;
 		}
@@ -606,7 +604,6 @@ form {
 			justify-content: space-around;
 
 			@include bp(small){
-				margin-left: 15px;
 				height: 30px;
 			}
 
@@ -614,8 +611,12 @@ form {
 				width: 33.334%;
 				padding: 30px;
 				
+				&:nth-of-type(3){
+					width: 35px;
+				}
 				@include bp(small){
 				    padding: 0;
+				    width: 35px;
 				    
 				}
 			
@@ -625,8 +626,10 @@ form {
 
 					svg {
 						height: 30px;
-						width: 100%;
+						width: 30px;
 						padding: 2px;
+
+						
 						
 					}
 					@include bp(small){
@@ -634,21 +637,34 @@ form {
 					}
 				}
 			}
-			&:nth-of-type(3){
-				border: 1px solid tomato;
-				width: 28px;
-			}
-
 		}
 	}
 
 	// ------- COPYRIGHT NOTICE-----------------//
 	.copyright-notice {
 		order: 9;
-		width: 90%;
+		width: 100%;
 		margin: 25px auto;
 		color: $c-grey-med;
-		@include font-size(14);
-		text-align: center;
+		display: flex;
+		align-items: center;
+		
+		.copyright{
+		    width: 60%;
+    		margin: 0 auto;
+			text-align: center;
+			@include font-size(14);
+
+			@include bp(small){
+				text-align: left;
+				margin: 0;
+			}
+
+		}
+
+		@include bp(small){
+			height: 30px;
+
+		}
 	}
 }
