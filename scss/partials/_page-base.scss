@@ -404,15 +404,15 @@ header {
 
 	}
 }
-// ------- COPYRIGHT NOTICE-----------------//
-.copyright-notice {
-	order: 9;
-	width: 90%;
-	margin: 25px auto;
-	color: $c-grey-med;
-	@include font-size(14);
-	text-align: center;
-}
+// // ------- COPYRIGHT NOTICE-----------------//
+// .copyright-notice {
+// 	order: 9;
+// 	width: 90%;
+// 	margin: 25px auto;
+// 	color: $c-grey-med;
+// 	@include font-size(14);
+// 	text-align: center;
+// }
 //----------------- CONTACT PAGE ------------------------------------*/
 
 .contact-container {
@@ -582,8 +582,73 @@ form {
 	}
 }
 
-.footer {
+.footer-top {
 	display: block;
 	width: 100%;
+	// -------- SHARE / SOCIAL MEDIA
+	.share {
+		display: block;
+		width: 100%;
+		order: 8;
+		flex: 0 1 auto;
 
+		@include bp(small){
+			width: 25%;
+			border-left: 1px solid $c-grey-med;
+			height: 30px;
+		}
+
+		ul {
+			padding: 0;
+			display: flex;
+			flex-flow: row nowrap;
+			width: 100%;
+			justify-content: space-around;
+
+			@include bp(small){
+				margin-left: 15px;
+				height: 30px;
+			}
+
+			li {
+				width: 33.334%;
+				padding: 30px;
+				
+				@include bp(small){
+				    padding: 0;
+				    
+				}
+			
+				a { display: block;
+					height: 100%;
+					width: 100%;
+
+					svg {
+						height: 30px;
+						width: 100%;
+						padding: 2px;
+						
+					}
+					@include bp(small){
+						max-height: 25px;
+					}
+				}
+			}
+			&:nth-of-type(3){
+				border: 1px solid tomato;
+				width: 28px;
+			}
+
+		}
+	}
+
+	// ------- COPYRIGHT NOTICE-----------------//
+	.copyright-notice {
+		order: 9;
+		width: 90%;
+		margin: 25px auto;
+		color: $c-grey-med;
+		@include font-size(14);
+		text-align: center;
+	}
 }
