@@ -166,7 +166,7 @@ header {
   z-index: 1;
   max-width: 100%;
   min-width: 140px;
-  height: 90px;
+  height: 100px;
   margin: 0 auto;
   padding: 3% 5% 0 5%;
   position: fixed;
@@ -174,12 +174,17 @@ header {
   left: 0;
   background-color: #fff;
   -webkit-transition: top 0.2s ease-in-out;
-  transition: top 0.2s ease-in-out; }
+  transition: top 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap; }
   @media only screen and (min-width: 340px) {
     header {
-      height: 3rem;
-      padding: 2% 5% 0 5%;
-      height: 100px; } }
+      padding: 2% 5% 0 5%; } }
   @media only screen and (min-width: 700px) {
     header {
       height: 70px;
@@ -197,18 +202,14 @@ header {
       padding: 1%;
       height: 75px; } }
   header .logo {
-    -webkit-box-flex: 2;
-        -ms-flex: 2 1 auto;
-            flex: 2 1 auto;
-    width: 90%;
-    margin: 0 auto 5px auto;
-    display: block; }
-    @media only screen and (min-width: 340px) {
-      header .logo {
-        margin: 0 auto 15px auto; } }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    min-width: 100%; }
     @media only screen and (min-width: 500px) {
       header .logo {
-        width: 65%; } }
+        width: 75%;
+        margin: 15px 0 0 0; } }
     @media only screen and (min-width: 700px) {
       header .logo {
         width: 50%;
@@ -224,6 +225,9 @@ header {
       @media only screen and (min-width: 340px) {
         header .logo img {
           width: 90%; } }
+      @media only screen and (min-width: 500px) {
+        header .logo img {
+          width: 80%; } }
       @media only screen and (min-width: 700px) {
         header .logo img {
           width: 60%; } }
@@ -238,21 +242,26 @@ header {
   header .menu-mobile {
     height: 30px;
     width: 100%;
-    position: relative;
     margin: 15px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     @media only screen and (min-width: 340px) {
       header .menu-mobile {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
+        -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-flow: row nowrap;
-                flex-flow: row nowrap;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
         width: 100%; } }
+    @media only screen and (min-width: 500px) {
+      header .menu-mobile {
+        width: 25%; } }
     @media only screen and (min-width: 700px) {
       header .menu-mobile {
         margin: 0 auto;
@@ -262,11 +271,12 @@ header {
         display: none; } }
     header .menu-mobile .page-location {
       display: block;
+      float: left;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
       margin: 0 15px 15px 0;
-      padding: 0 0 0 0;
+      padding: 5px 0;
       color: #6b6b6b;
       height: 100%;
       border-left: 1px solid #6b6b6b; }
@@ -277,7 +287,7 @@ header {
           margin: 0 0 0 20px; } }
       header .menu-mobile .page-location p {
         display: block;
-        padding: 5px 0 0 5px;
+        padding: 0 0 0 5px;
         font-size: 1.125rem;
         font-size: 18px;
         text-transform: lowercase; }
@@ -286,7 +296,8 @@ header {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
-      height: 100%; }
+      height: 100%;
+      float: left; }
       @media only screen and (min-width: 340px) {
         header .menu-mobile a {
           height: 90%; } }
@@ -331,17 +342,16 @@ header {
       font-size: 18px;
       color: #6b6b6b;
       height: 100%;
-      width: 30%;
-      position: absolute;
-      top: 7px;
-      right: 0;
+      width: 100%;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      padding: 5px 0 0 0;
       text-align: right;
       text-transform: uppercase; }
-      @media only screen and (min-width: 340px) {
-        header .menu-mobile .menu-toggle {
-          top: 5px; } }
       @media only screen and (min-width: 700px) {
         header .menu-mobile .menu-toggle {
+          top: 0;
           padding: 8px 10px;
           top: 0;
           border: none; } }
@@ -813,7 +823,7 @@ form {
           flex-flow: column nowrap;
   width: 100%;
   height: auto;
-  margin: 35px auto; }
+  margin: 45px auto; }
   @media only screen and (min-width: 700px) {
     .main-content {
       -webkit-box-orient: horizontal;
@@ -834,7 +844,7 @@ form {
         -ms-flex-order: 2;
             order: 2;
     display: block;
-    margin: 15px 0;
+    margin: 10px 0;
     color: #6b6b6b;
     text-transform: capitalize;
     font-size: 1.125rem;

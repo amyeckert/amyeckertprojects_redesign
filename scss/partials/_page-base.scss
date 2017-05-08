@@ -89,7 +89,7 @@ header {
 	z-index: 1;	
 	max-width: 100%;
 	min-width: 140px;
-	height: 90px;
+	height: 100px;
 	margin: 0 auto;
 	padding: 3% 5% 0 5%;	
 	position: fixed;
@@ -97,11 +97,13 @@ header {
 	left: 0; 
 	background-color: $c-white;
 	transition: top 0.2s ease-in-out;
+	display: flex;
+	flex-flow: column nowrap;
 
 	@include bp(xsmall) {
-		height: 3rem;
+		// height: 3rem;
 		padding: 2% 5% 0 5%;
-		height: 100px;
+		// height: 100px;
 	}
 	
 	@include bp(small) {
@@ -113,32 +115,30 @@ header {
 	@include bp(medium){
 		width: 100%;
 		padding: 1%;
-		// border: 1px solid orange;
 		height: 75px;
 	}
-	@include bp(large){
-		// padding: 0;
-	}		
+			
 	.logo {
-		flex: 2 1 auto;
-		width: 90%;
-		margin: 0 auto 5px auto;
-		display: block;
+		order: 1;
+		// flex: 2 1 auto;
+		// margin: 0 auto 5px auto;
+		// display: block;
+		min-width: 100%;
 
 		@include bp(xsmall){
-			margin: 0 auto 15px auto ;
+			// margin: 0 auto 15px auto ;
 		}
 		@include bp-arb(500){
-			width: 65%;
+			width: 75%;
+			margin: 15px 0 0 0 ;
+
 		}
 		@include bp(small){
 			width: 50%;
 			margin: 1%;
 		}
 		@include bp(medium){
-			// width: 70%;
 			margin: 0;
-			// background-color: pink;
 		}
 		@include bp(large){
 			height: 58px;
@@ -148,6 +148,9 @@ header {
 
 			@include bp(xsmall) {
 				width: 90%;
+			}
+			@include bp-arb(500){
+				width: 80%;
 			}
 			@include bp(small){
 				width: 60%;
@@ -166,14 +169,17 @@ header {
     .menu-mobile {
     	height: 30px;
 	    width: 100%;
-		position: relative;
 		margin: 15px auto;
-		display: flex;
+		order: 2;
+		justify-content: center;
 
 		@include bp(xsmall){
 		 	display: flex;
-		 	flex-flow: row nowrap;
+		 	flex-flow: column nowrap;
 		 	width: 100%;
+		}
+		@include bp-arb(500){
+			width: 25%;
 		}
 		@include bp(small){
 			margin: 0 auto;
@@ -183,21 +189,16 @@ header {
 		@include bp(medium){
 			display: none;
 		}
-		// @include bp(large){
-		// 	height: 40px;
-		// 	margin-right: 5%;
-		// }
-
 		.page-location {
 			display: block;
+			float: left;
 			order: 1;
 			margin: 0 15px 15px 0 ;
-			padding: 0 0 0 0 ;
+			padding: 5px 0 ;
 			color: $c-grey-med;
 			height: 100%;
 			border-left: 1px solid $c-grey-med;
 			
-
 			@include bp(small){
 				height: 30px;
 				padding: 0 0 0 0 ;
@@ -205,7 +206,7 @@ header {
 			}
 			p {
 				display: block;
-				padding: 5px 0 0 5px;
+				padding: 0 0 0 5px;
 				@include font-size(18);	
 				text-transform: lowercase;
 			}
@@ -215,6 +216,7 @@ header {
 			display: block;
 			order: 1;
 			height: 100%;
+			float: left;
 
 			@include bp(xsmall){
 				height: 90%;
@@ -259,25 +261,23 @@ header {
 	    	@include font-size(18);
 	    	color: $c-grey-med;
 	    	height: 100%;
-	    	width: 30%;
-	    	position: absolute;
-	    	top: 7px;
-	    	right: 0;
+	    	width: 100%;
+	    	order: 2;
+	    	padding: 5px 0 0 0 ;
 	    	text-align: right;
     		text-transform: uppercase;
 
-    		@include bp(xsmall){
-    			top: 5px;
+    
+    		@include bp-arb(500){
+    			// top: -30px;
     		}
-    		@include bp(small) {	
+    		@include bp(small) {
+    			top: 0;	
 			    padding: 8px 10px;
 			    top: 0;
 				border: none;
     		}
-    		// @include bp(large){
-    		// 	height: 40px;
-    		// 	padding: 20px 0 0 0 ;
-    		// }
+    
 		}
 	}
 	.nav-up {
