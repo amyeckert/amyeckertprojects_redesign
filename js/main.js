@@ -149,7 +149,7 @@
 
             $('.previous').on('click', function() {
                 //clear bigImage caption details
-                $('.big> figcaption').remove();
+                $('.big > figcaption').remove();
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
                 var items = document.querySelectorAll('figure.item');

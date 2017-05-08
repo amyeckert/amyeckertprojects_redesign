@@ -1,3 +1,45 @@
+.header-nav {
+	display: none;
+
+	@include bp(medium){
+		display: block;
+		width: 50%;
+		height: 57px;
+	}
+	@include bp-arb(1300){
+		width: 40%;
+	}	
+	
+	ul {
+
+		@include bp(medium){
+			height: 100%;
+			width: 100%;
+		    display: inline-flex;
+		    flex-flow: row nowrap;
+			align-items: flex-end;
+				justify-content: space-around;
+		}		
+		li {
+
+			@include bp(medium){
+			    display: inline-block;
+			    // padding: 4% 1% 0 1%;
+			    padding: 0;
+			    height: 100%;
+			}
+			a {
+				@include bp(medium){
+					display: block;
+					@include font-size(14);
+					height: 100%;
+					padding: 20px 5px;
+					border-bottom: 1px solid tomato;
+				}	
+			}
+		}
+	}
+}
 // Keep this file in case.....it's OLD styles.
 
 // ****** indicate current location by removing bottom border ****
@@ -15,14 +57,14 @@
 
 /*......... MAIN MENU replaces THE FOOTER MENU ON MOBILE AND TABLET ****************************/
 
-// /*photography*/
-// .main-menu li:first-child:hover, 
-// .main-menu li:first-child:active {
-//     background-color: $c-orange-dark;
-//     color: $c-white;
-//     border-bottom: 1px solid $c-orange-dark;
-// }
-// /*......... MOBILE MENU ITEMS.........................................*/
+/*photography*/
+.main-menu li:first-child:hover, 
+.main-menu li:first-child:active {
+    background-color: $c-orange-dark;
+    color: $c-white;
+    border-bottom: 1px solid $c-orange-dark;
+}
+// /*.........  MENU ITEMS.........................................*/
 // /*..... main list item link text cover */
 
 // .menu-top ul.main-menu li {

@@ -194,11 +194,8 @@ header {
   @media only screen and (min-width: 1024px) {
     header {
       width: 100%;
-      padding: 2% 5%; } }
-  @media only screen and (min-width: 1200px) {
-    header {
-      padding: 0;
-      height: 90px; } }
+      padding: 1%;
+      height: 75px; } }
   header .logo {
     -webkit-box-flex: 2;
         -ms-flex: 2 1 auto;
@@ -214,11 +211,14 @@ header {
         width: 65%; } }
     @media only screen and (min-width: 700px) {
       header .logo {
+        width: 50%;
+        margin: 1%; } }
+    @media only screen and (min-width: 1024px) {
+      header .logo {
         margin: 0; } }
     @media only screen and (min-width: 1200px) {
       header .logo {
-        width: 50%;
-        margin: 0.8% 3.5%; } }
+        height: 58px; } }
     header .logo img {
       width: 100%; }
       @media only screen and (min-width: 340px) {
@@ -226,7 +226,15 @@ header {
           width: 90%; } }
       @media only screen and (min-width: 700px) {
         header .logo img {
-          width: 100%; } }
+          width: 60%; } }
+      @media only screen and (min-width: 1024px) {
+        header .logo img {
+          width: 80%;
+          margin: 0 0 0 1%; } }
+      @media only screen and (min-width: 1200px) {
+        header .logo img {
+          width: 450px;
+          margin: 0 0 0 5%; } }
   header .menu-mobile {
     height: 30px;
     width: 100%;
@@ -249,10 +257,9 @@ header {
       header .menu-mobile {
         margin: 0 auto;
         height: 32px; } }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1024px) {
       header .menu-mobile {
-        height: 40px;
-        margin-right: 5%; } }
+        display: none; } }
     header .menu-mobile .page-location {
       display: block;
       -webkit-box-ordinal-group: 2;
@@ -338,10 +345,6 @@ header {
           padding: 8px 10px;
           top: 0;
           border: none; } }
-      @media only screen and (min-width: 1200px) {
-        header .menu-mobile .menu-toggle {
-          height: 40px;
-          padding: 20px 0 0 0; } }
   header .nav-up {
     top: -3rem; }
   header .nav-down {
@@ -1253,6 +1256,54 @@ form {
               font-size: 1.25rem;
               font-size: 20px;
               padding-top: 1rem; } }
+
+.header-nav {
+  display: none; }
+  @media only screen and (min-width: 1024px) {
+    .header-nav {
+      display: block;
+      width: 50%;
+      height: 57px; } }
+  @media only screen and (min-width: 1300px) {
+    .header-nav {
+      width: 40%; } }
+  @media only screen and (min-width: 1024px) {
+    .header-nav ul {
+      height: 100%;
+      width: 100%;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+  @media only screen and (min-width: 1024px) {
+    .header-nav ul li {
+      display: inline-block;
+      padding: 0;
+      height: 100%; } }
+  @media only screen and (min-width: 1024px) {
+    .header-nav ul li a {
+      display: block;
+      font-size: 0.875rem;
+      font-size: 14px;
+      height: 100%;
+      padding: 20px 5px;
+      border-bottom: 1px solid tomato; } }
+
+/*......... MAIN MENU replaces THE FOOTER MENU ON MOBILE AND TABLET ****************************/
+/*photography*/
+.main-menu li:first-child:hover,
+.main-menu li:first-child:active {
+  background-color: #a84420;
+  color: #fff;
+  border-bottom: 1px solid #a84420; }
 
 #video .main-content {
   padding: 0;

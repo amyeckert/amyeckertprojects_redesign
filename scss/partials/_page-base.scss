@@ -96,7 +96,7 @@ header {
 	top: 0;
 	left: 0; 
 	background-color: $c-white;
-	transition: top 0.2s ease-in-out;	
+	transition: top 0.2s ease-in-out;
 
 	@include bp(xsmall) {
 		height: 3rem;
@@ -112,11 +112,12 @@ header {
 	}
 	@include bp(medium){
 		width: 100%;
-		padding: 2% 5%;
+		padding: 1%;
+		// border: 1px solid orange;
+		height: 75px;
 	}
 	@include bp(large){
-		padding: 0;
-		height: 90px;
+		// padding: 0;
 	}		
 	.logo {
 		flex: 2 1 auto;
@@ -131,11 +132,16 @@ header {
 			width: 65%;
 		}
 		@include bp(small){
+			width: 50%;
+			margin: 1%;
+		}
+		@include bp(medium){
+			// width: 70%;
 			margin: 0;
+			// background-color: pink;
 		}
 		@include bp(large){
-			width: 50%;
-			margin: 0.8% 3.5% ;
+			height: 58px;
 		}
 		img {
 			width: 100%;
@@ -144,7 +150,15 @@ header {
 				width: 90%;
 			}
 			@include bp(small){
-				width: 100%;
+				width: 60%;
+			}
+			@include bp(medium){
+				width: 80%;
+			    margin: 0 0 0 1%;
+			}
+			@include bp(large){
+				width: 450px;
+				margin: 0 0 0 5%;
 			}
 		}
 	}
@@ -166,10 +180,13 @@ header {
 			height: 32px;
 			
 		}
-		@include bp(large){
-			height: 40px;
-			margin-right: 5%;
+		@include bp(medium){
+			display: none;
 		}
+		// @include bp(large){
+		// 	height: 40px;
+		// 	margin-right: 5%;
+		// }
 
 		.page-location {
 			display: block;
@@ -252,15 +269,15 @@ header {
     		@include bp(xsmall){
     			top: 5px;
     		}
-    		@include bp(small) {
+    		@include bp(small) {	
 			    padding: 8px 10px;
 			    top: 0;
 				border: none;
     		}
-    		@include bp(large){
-    			height: 40px;
-    			padding: 20px 0 0 0 ;
-    		}
+    		// @include bp(large){
+    		// 	height: 40px;
+    		// 	padding: 20px 0 0 0 ;
+    		// }
 		}
 	}
 	.nav-up {
