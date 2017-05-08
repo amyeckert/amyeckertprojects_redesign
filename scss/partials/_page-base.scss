@@ -175,7 +175,7 @@ header {
 
 		@include bp(xsmall){
 		 	display: flex;
-		 	flex-flow: column nowrap;
+		 	// flex-flow: column nowrap;
 		 	width: 100%;
 		}
 		@include bp-arb(500){
@@ -196,7 +196,8 @@ header {
 			margin: 0 15px 15px 0 ;
 			padding: 5px 0 ;
 			color: $c-grey-med;
-			height: 100%;
+			height: 30px;
+			min-width: 125px;
 			border-left: 1px solid $c-grey-med;
 			
 			@include bp(small){
@@ -217,10 +218,11 @@ header {
 			order: 1;
 			height: 100%;
 			float: left;
+			height: 30px;
 
-			@include bp(xsmall){
-				height: 90%;
-			}
+			// @include bp(xsmall){
+			// 	height: 90%;
+			// }
 			@include bp(small){
 		    	height: 30px;
 			    padding: 0;
@@ -234,9 +236,9 @@ header {
     			align-items: center;
 				color: $c-grey-med;
 				border-left: 1px solid $c-grey-med;
-				// 
 				padding: 0 0 0 0 ;
 				height: 100%;
+				min-width: 125px;
 
 				@include bp(small){
 					height: 32px;
