@@ -98,7 +98,7 @@ body {
   margin: 0;
   padding-top: 65px;
   font-family: "Josefin Sans", sans-serif; }
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 500px) {
     body {
       padding-top: 70px; } }
   body#contact {
@@ -166,7 +166,7 @@ header {
   z-index: 1;
   max-width: 100%;
   min-width: 140px;
-  height: 100px;
+  height: 110px;
   margin: 0 auto;
   padding: 3% 5% 0 5%;
   position: fixed;
@@ -181,7 +181,8 @@ header {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap; }
+          flex-flow: column nowrap;
+  @includebp-arb (500) {} }
   @media only screen and (min-width: 340px) {
     header {
       padding: 2% 5% 0 5%; } }
@@ -205,32 +206,28 @@ header {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    min-width: 100%; }
+    width: 100%; }
     @media only screen and (min-width: 500px) {
       header .logo {
-        width: 75%;
-        margin: 15px 0 0 0; } }
+        width: 75%; } }
     @media only screen and (min-width: 700px) {
       header .logo {
-        width: 50%;
-        margin: 1%; } }
+        width: 50%; } }
     @media only screen and (min-width: 1024px) {
       header .logo {
         margin: 0; } }
     @media only screen and (min-width: 1200px) {
       header .logo {
         height: 58px; } }
+    header .logo a {
+      display: block;
+      height: 100%; }
     header .logo img {
+      display: block;
       width: 100%; }
-      @media only screen and (min-width: 340px) {
-        header .logo img {
-          width: 90%; } }
       @media only screen and (min-width: 500px) {
         header .logo img {
           width: 80%; } }
-      @media only screen and (min-width: 700px) {
-        header .logo img {
-          width: 60%; } }
       @media only screen and (min-width: 1024px) {
         header .logo img {
           width: 80%;
@@ -242,7 +239,7 @@ header {
   header .menu-mobile {
     height: 30px;
     width: 100%;
-    margin: 15px auto;
+    margin: 5px auto;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -254,20 +251,28 @@ header {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
         width: 100%; } }
     @media only screen and (min-width: 500px) {
       header .menu-mobile {
-        width: 25%; } }
+        width: 100%; } }
     @media only screen and (min-width: 700px) {
       header .menu-mobile {
-        margin: 0 auto;
-        height: 32px; } }
+        height: 45px;
+        width: 50%; } }
     @media only screen and (min-width: 1024px) {
       header .menu-mobile {
         display: none; } }
     header .menu-mobile .page-location {
-      display: block;
-      float: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
@@ -279,9 +284,8 @@ header {
       border-left: 1px solid #6b6b6b; }
       @media only screen and (min-width: 700px) {
         header .menu-mobile .page-location {
-          height: 30px;
           padding: 0 0 0 0;
-          margin: 0 0 0 20px; } }
+          margin: 0 0 0 0; } }
       header .menu-mobile .page-location p {
         display: block;
         padding: 0 0 0 5px;
@@ -347,9 +351,7 @@ header {
       text-transform: uppercase; }
       @media only screen and (min-width: 700px) {
         header .menu-mobile .menu-toggle {
-          top: 0;
           padding: 8px 10px;
-          top: 0;
           border: none; } }
   header .nav-up {
     top: -3rem; }
