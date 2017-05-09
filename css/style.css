@@ -360,26 +360,35 @@ header {
   header .nav-down {
     top: 3rem; }
 
+@media only screen and (min-width: 1024px) {
+  #about .main-content {
+    max-height: 100vh;
+    margin-top: 50px;
+    overflow: hidden; } }
+
 .bio {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   padding: 0 0 0 0;
-  background-color: #b56618;
+  background-color: #98983e;
   color: #fff; }
   @media only screen and (min-width: 700px) {
     .bio {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row nowrap;
-              flex-flow: row nowrap; } }
+              flex-flow: row nowrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
   .bio .bio-col-half {
     max-width: 100%;
     min-width: 200px;
@@ -449,7 +458,7 @@ header {
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
     .btn-cv .cv-pdf:hover {
-      color: #b56618;
+      color: #98983e;
       background-color: #fff;
       border-bottom: 1px solid #fff; }
   @media only screen and (min-width: 700px) {
@@ -465,7 +474,7 @@ header {
     width: 100%; }
     .social ul li {
       display: inline-block;
-      border: 2px solid #b56618; }
+      border: 2px solid #98983e; }
       .social ul li a {
         text-decoration: none;
         border-bottom: none;
@@ -473,7 +482,7 @@ header {
         transition: border-bottom 0.2s; }
         .social ul li a:hover {
           border-bottom: 2px solid #fff;
-          background-color: #b56618; }
+          background-color: #98983e; }
   .social .white {
     width: 40px;
     fill: #fff; }
