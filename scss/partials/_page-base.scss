@@ -24,7 +24,7 @@ html {
 body {
 	height: 100%;
 	margin: 0;
-	padding-top: 55px;
+	padding-top: 65px;
 	font-family: $f-text;
 
 	@include bp(small) {
@@ -193,7 +193,7 @@ header {
 			display: block;
 			float: left;
 			order: 1;
-			margin: 0 15px 15px 0 ;
+			margin: 0 10px 10px 0 ;
 			padding: 5px 0 ;
 			color: $c-grey-med;
 			height: 30px;
@@ -617,43 +617,27 @@ form {
 			padding: 0;
 			display: flex;
 			flex-flow: row nowrap;
-			width: 100%;
+			// width: 100%;
 			justify-content: space-around;
 
 			@include bp(small){
 				height: 30px;
 			}
 
-			li {
-				width: 33.334%;
-				padding: 30px;
-				
-				&:nth-of-type(3){
-					width: 35px;
+			a { display: block;
+				height: 100%;
+				width: 100%;
+
+				svg {
+					height: 30px;
+					width: 30px;
+					padding: 2px;	
 				}
 				@include bp(small){
-				    padding: 0;
-				    width: 35px;
-				    
-				}
-			
-				a { display: block;
-					height: 100%;
-					width: 100%;
-
-					svg {
-						height: 30px;
-						width: 30px;
-						padding: 2px;
-
-						
-						
-					}
-					@include bp(small){
-						max-height: 25px;
-					}
+					max-height: 25px;
 				}
 			}
+
 		}
 	}
 

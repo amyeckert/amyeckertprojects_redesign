@@ -96,7 +96,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  padding-top: 55px;
+  padding-top: 65px;
   font-family: "Josefin Sans", sans-serif; }
   @media only screen and (min-width: 700px) {
     body {
@@ -271,7 +271,7 @@ header {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
-      margin: 0 15px 15px 0;
+      margin: 0 10px 10px 0;
       padding: 5px 0;
       color: #6b6b6b;
       height: 30px;
@@ -693,32 +693,22 @@ form {
       -webkit-box-direction: normal;
           -ms-flex-flow: row nowrap;
               flex-flow: row nowrap;
-      width: 100%;
       -ms-flex-pack: distribute;
           justify-content: space-around; }
       @media only screen and (min-width: 700px) {
         .footer-top .share ul {
           height: 30px; } }
-      .footer-top .share ul li {
-        width: 33.334%;
-        padding: 30px; }
-        .footer-top .share ul li:nth-of-type(3) {
-          width: 35px; }
+      .footer-top .share ul a {
+        display: block;
+        height: 100%;
+        width: 100%; }
+        .footer-top .share ul a svg {
+          height: 30px;
+          width: 30px;
+          padding: 2px; }
         @media only screen and (min-width: 700px) {
-          .footer-top .share ul li {
-            padding: 0;
-            width: 35px; } }
-        .footer-top .share ul li a {
-          display: block;
-          height: 100%;
-          width: 100%; }
-          .footer-top .share ul li a svg {
-            height: 30px;
-            width: 30px;
-            padding: 2px; }
-          @media only screen and (min-width: 700px) {
-            .footer-top .share ul li a {
-              max-height: 25px; } }
+          .footer-top .share ul a {
+            max-height: 25px; } }
   .footer-top .copyright-notice {
     -webkit-box-ordinal-group: 10;
         -ms-flex-order: 9;
@@ -819,7 +809,7 @@ form {
           flex-flow: column nowrap;
   width: 100%;
   height: auto;
-  margin: 45px auto; }
+  margin: 40px auto; }
   @media only screen and (min-width: 700px) {
     .main-content {
       -webkit-box-orient: horizontal;
@@ -840,7 +830,7 @@ form {
         -ms-flex-order: 2;
             order: 2;
     display: block;
-    margin: 10px 0;
+    margin: 5px 0;
     color: #6b6b6b;
     text-transform: capitalize;
     font-size: 1.125rem;
@@ -886,6 +876,9 @@ form {
           float: none;
           width: 33.333%;
           margin-bottom: -10px; } }
+      .grid .grid-sizer .grid-item a {
+        height: 100%;
+        display: block; }
       .grid .grid-sizer .grid-item img {
         width: 100%;
         height: auto; }
@@ -1072,23 +1065,27 @@ form {
         -ms-flex-order: 3;
             order: 3; }
 
-.statement-title {
-  margin-top: 10px;
+.about {
   -webkit-box-ordinal-group: 8;
       -ms-flex-order: 7;
           order: 7;
-  font-size: 1rem;
-  font-size: 16px;
+  font-size: 1.125rem;
+  font-size: 18px;
   max-width: 25%;
-  display: inline-block;
-  margin: 0;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
   color: #6b6b6b;
   border-left: 1px solid #6b6b6b;
   text-transform: lowercase; }
   @media only screen and (min-width: 700px) {
-    .statement-title {
+    .about {
       height: 35px;
       margin: 0; } }
+  .about p {
+    padding: 0 10px 0 5px; }
 
 .modal-on {
   overflow: hidden; }

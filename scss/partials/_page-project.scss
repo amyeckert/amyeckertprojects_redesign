@@ -7,7 +7,7 @@
 	flex-flow: column nowrap;
 	width: 100%;
 	height: auto;
-	margin: 45px auto;
+	margin: 40px auto;
 	
 	@include bp(small) {
 		flex-flow: row wrap;
@@ -24,7 +24,7 @@
 		min-width: 200px;
 		order: 2;
 		display: block;
-    	margin: 10px 0 ;
+    	margin: 5px 0 ;
 		color: $c-grey-med;
 		text-transform: capitalize;
 		@include font-size(18);
@@ -76,6 +76,10 @@
 				float: none;
 				width: 33.333%;
 				margin-bottom: -10px;
+			}
+			a {
+			    height: 100%;
+    			display: block;
 			}	
 			img {
 				width: 100%;
@@ -290,13 +294,15 @@
 }
 
 // ----- STATEMENT ----------------------//
-.statement-title {
-	margin-top: 10px;
+.about {
+	// margin-top: 10px;
 	order: 7;
-	@include font-size(16);
+	@include font-size(18);
+	// min-width: 125px;
 	max-width: 25%;
-	display: inline-block;
-	margin: 0 ;
+	height: 30px;
+	display: flex;
+    padding: 0 ;
 	color: $c-grey-med;
 	border-left: 1px solid $c-grey-med;
 	text-transform: lowercase;
@@ -304,6 +310,9 @@
 	@include bp(small){
 		height: 35px;
 		margin: 0;
+	}
+	p {
+	    padding: 0 10px 0 5px;
 	}
 }
  
