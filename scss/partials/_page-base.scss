@@ -85,6 +85,8 @@ a { text-decoration: none; }
 /* ------------- HEADER -----------------------------*/
 
 header {
+	display: flex;
+	flex-flow: column nowrap;
 	order: 1;
 	z-index: 1;	
 	max-width: 100%;
@@ -97,46 +99,33 @@ header {
 	left: 0; 
 	background-color: $c-white;
 	transition: top 0.2s ease-in-out;
-	display: flex;
-	flex-flow: column nowrap;
 
 	@include bp(xsmall) {
 		padding: 2% 5% 0 5%;
-	}
-	@includebp-arb(500){
-
 	}
 	@include bp(small) {
 		height: 70px;
 		width: 100%;
 		display: flex;
 		flex-direction: row;
-		// align-items: center; 
+		
 	}
 	@include bp(medium){
+		justify-content: space-between;
 		width: 100%;
 		padding: 1%;
-		height: 75px;
+		height: 90px;
 	}
 			
 	.logo {
 		order: 1;
-		// flex: 2 1 auto;
-		// margin: 0 auto 5px auto;
-		// display: block;
 		width: 100%;
 
-		@include bp(xsmall){
-			// margin: 0 auto 15px auto ;
-		}
 		@include bp-arb(500){
 			width: 75%;
-			// margin: 15px 0 0 0 ;
-
 		}
 		@include bp(small){
 			width: 50%;
-			// margin: 1%;
 		}
 		@include bp(medium){
 			margin: 0;
@@ -144,6 +133,7 @@ header {
 		@include bp(large){
 			height: 58px;
 		}
+
 		a {
 			display: block;
 			height: 100%;
@@ -152,19 +142,13 @@ header {
 			display: block;
 			width: 100%;
 
-			// @include bp(xsmall) {
-			// 	width: 100%;
-			// }
 			@include bp-arb(500){
 				width: 80%;
 			}
-			@include bp(small){
-				// width: 60%;
-				// margin: 0 auto;
-			}
+		
 			@include bp(medium){
 				width: 80%;
-			    margin: 0 0 0 1%;
+			    margin: 0 auto;
 			}
 			@include bp(large){
 				width: 450px;
@@ -200,19 +184,17 @@ header {
 		.page-location {
 			display: flex;
 			align-items: center;
-			// float: left;
 			order: 1;
-			margin: 0 10px 10px 0 ;
-			padding: 5px 0 ;
-			color: $c-grey-med;
+			margin: 0 10px;
+			padding: 5px 0;
 			height: 30px;
 			min-width: 125px;
+			color: $c-grey-med;
 			border-left: 1px solid $c-grey-med;
 			
 			@include bp(small){
-				// height: 30px;
-				padding: 0 0 0 0 ;
-				margin: 0 0 0 0;
+				padding: 0 ;
+				margin: 0 ;
 			}
 			p {
 				display: block;
@@ -229,9 +211,6 @@ header {
 			float: left;
 			height: 30px;
 
-			// @include bp(xsmall){
-			// 	height: 90%;
-			// }
 			@include bp(small){
 		    	height: 30px;
 			    padding: 0;
@@ -277,17 +256,14 @@ header {
 	    	padding: 5px 0 0 0 ;
 	    	text-align: right;
     		text-transform: uppercase;
-
     
     		@include bp-arb(500){
     		
     		}
     		@include bp(small) {
     		    padding: 8px 10px;
-			    // top: 0;
 				border: none;
     		}
-    
 		}
 	}
 	.nav-up {

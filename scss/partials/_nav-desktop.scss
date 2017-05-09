@@ -3,125 +3,113 @@
 
 	@include bp(medium){
 		display: block;
+		order: 2;
 		width: 50%;
 		height: 57px;
 	}
 	@include bp-arb(1300){
 		width: 40%;
 	}	
-	
 	ul {
-
 		@include bp(medium){
 			height: 100%;
 			width: 100%;
 		    display: inline-flex;
 		    flex-flow: row nowrap;
 			align-items: flex-end;
-				justify-content: space-around;
+			justify-content: space-around;
 		}		
 		li {
-
 			@include bp(medium){
-			    display: inline-block;
-			    // padding: 4% 1% 0 1%;
+			    display: flex;
+			    align-items: center;
 			    padding: 0;
 			    height: 100%;
 			}
 			a {
 				@include bp(medium){
 					display: block;
-					@include font-size(14);
 					height: 100%;
 					padding: 20px 5px;
-					border-bottom: 1px solid tomato;
-				}	
+					@include font-size(14);
+			    	border-bottom: 1px solid $c-grey-med;
+			    	transition: all 0.2s;
+				}
+				&:visited {
+					color: $c-grey-med;
+				}
+				&:hover {
+					color: $c-white;
+				}
 			}
 		}
 	}
 }
-// Keep this file in case.....it's OLD styles.
-
-// ****** indicate current location by removing bottom border ****
-	// #photography .navphoto, 
-	// #design .navdesign, 
-	// #interactive .navinter, 
-	// #mixedmedia .navmixed, 
-	// #about .navabout, 
-	// #blog .navblog,
-	// #contact .navcontact, 
-	// #project-template .navproject {
-	// 	border: none;
-		
-	// }
-
-/*......... MAIN MENU replaces THE FOOTER MENU ON MOBILE AND TABLET ****************************/
-
-/*photography*/
-.main-menu li:first-child:hover, 
-.main-menu li:first-child:active {
-    background-color: $c-orange-dark;
-    color: $c-white;
-    border-bottom: 1px solid $c-orange-dark;
+.nav-design a{
+	&:hover{
+		background-color: $c-teal;
+		border-bottom: 1px solid $c-teal;
+	}
 }
-// /*.........  MENU ITEMS.........................................*/
-// /*..... main list item link text cover */
+.nav-interactive a{
+	&:hover {
+		background-color: $c-orange-light;
+		border-bottom: 1px solid $c-orange-light;
+	}
+}
+.nav-photo a {
+	&:hover {
+		background-color: $c-purple;
+		border-bottom: 1px solid $c-purple;
+	}
+}
+.nav-mixed a{
+	&:hover {
+		background-color: $c-blue-med;
+		border-bottom: 1px solid $c-blue-med;
+	}
+}
+.nav-about a{
+	&:hover {
+		background-color: $c-green-olive;
+		border-bottom: 1px solid $c-green-olive;
+	}
+}
+.nav-contact a{
+	&:hover {
+		background-color: $c-green-kelly;
+		border-bottom: 1px solid $c-green-kelly;
+	}
+}
+// -----indicate current location -----//
+#design .nav-design a,
+#letters .nav-design a,
+#nzbirds .nav-design a,
+#d6sunset .nav-design a,
+#print-portfolio .nav-design a,
 
-// .menu-top ul.main-menu li {
-//     background-color: transparent;
-// }
+#interactive .nav-interactive a, 
+#perfect .nav-interactive a,
 
-// a:link {
-//     color: $c-grey-med;
-//     text-decoration: none;
-// } 
-// a:visited {
-//     color: $c-grey-med;
-// }
-// li:hover,
-// a:hover {
-//     color:$c-white;
+#photography .nav-photo a, 
+#truckers .nav-photo a,
+#manhome .nav-photo a,
+#mncooks .nav-photo a,
+#submarine .nav-photo a,
+#soap .nav-photo a,
+#optimiste .nav-photo a,
+#mossburn .nav-photo a,
 
-// }
-// /*design*/
-// .main-menu li:nth-child(2):hover, 
-// .main-menu li:nth-child(2):active {
-//     background-color: $c-teal;
-//     color: $c-white; 
-//     border-bottom: 1px solid $c-teal;   
-// }
-// /*mixed media*/
-// .main-menu li:nth-child(3):hover, 
-// .main-menu li:nth-child(3):active {
-//     background-color: $c-purple;
-//     color: $c-white;
-//     border-bottom: 1px solid $c-purple;
-// } 
-// /*exhibitions*/
-// .main-menu li:nth-child(4):hover, 
-// .main-menu li:nth-child(4):active {
-//     background-color: $c-magenta;  
-//     color: $c-white;
-//     border-bottom: 1px solid $c-magenta;
-// }
-//  /*about*/
-// .main-menu li:nth-child(5):hover,
-// .main-menu li:nth-child(5):active {
-//     background-color: $c-green-kelly;
-//     color: $c-white;
-//     border-bottom: 1px solid $c-green-kelly;
-// }
-// /*contact*/
-// .main-menu li:nth-child(6):hover,
-// .main-menu li:nth-child(6):active {
-//     background-color: $c-orange-light;
-//     color: $c-white;
-//     border-bottom: 1px solid $c-orange-light;
-// }
+#mixedmedia .nav-mixed a, 
+#prefab .nav-mixed a, 
+#weather .nav-mixed a,
+#misunderstood .nav-mixed a,
+#proteus .nav-mixed a,
+#rigs .nav-mixed a,
+#kansas .nav-mixed a,
 
-// .share li a img {
-//     height: 25px;
-//     width: auto;
+#about .nav-about a, 
+#contact .nav-contact a { 
+	border-bottom: none;
 
-// }
-
+}

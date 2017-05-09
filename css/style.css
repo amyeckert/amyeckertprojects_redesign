@@ -160,6 +160,13 @@ a {
 
 /* ------------- HEADER -----------------------------*/
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -174,15 +181,7 @@ header {
   left: 0;
   background-color: #fff;
   -webkit-transition: top 0.2s ease-in-out;
-  transition: top 0.2s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  @includebp-arb (500) {} }
+  transition: top 0.2s ease-in-out; }
   @media only screen and (min-width: 340px) {
     header {
       padding: 2% 5% 0 5%; } }
@@ -199,9 +198,12 @@ header {
               flex-direction: row; } }
   @media only screen and (min-width: 1024px) {
     header {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       width: 100%;
       padding: 1%;
-      height: 75px; } }
+      height: 90px; } }
   header .logo {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -231,7 +233,7 @@ header {
       @media only screen and (min-width: 1024px) {
         header .logo img {
           width: 80%;
-          margin: 0 0 0 1%; } }
+          margin: 0 auto; } }
       @media only screen and (min-width: 1200px) {
         header .logo img {
           width: 450px;
@@ -276,16 +278,16 @@ header {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
-      margin: 0 10px 10px 0;
+      margin: 0 10px;
       padding: 5px 0;
-      color: #6b6b6b;
       height: 30px;
       min-width: 125px;
+      color: #6b6b6b;
       border-left: 1px solid #6b6b6b; }
       @media only screen and (min-width: 700px) {
         header .menu-mobile .page-location {
-          padding: 0 0 0 0;
-          margin: 0 0 0 0; } }
+          padding: 0;
+          margin: 0; } }
       header .menu-mobile .page-location p {
         display: block;
         padding: 0 0 0 5px;
@@ -1267,6 +1269,9 @@ form {
   @media only screen and (min-width: 1024px) {
     .header-nav {
       display: block;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
       width: 50%;
       height: 57px; } }
   @media only screen and (min-width: 1300px) {
@@ -1290,25 +1295,78 @@ form {
           justify-content: space-around; } }
   @media only screen and (min-width: 1024px) {
     .header-nav ul li {
-      display: inline-block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       padding: 0;
       height: 100%; } }
   @media only screen and (min-width: 1024px) {
     .header-nav ul li a {
       display: block;
-      font-size: 0.875rem;
-      font-size: 14px;
       height: 100%;
       padding: 20px 5px;
-      border-bottom: 1px solid tomato; } }
+      font-size: 0.875rem;
+      font-size: 14px;
+      border-bottom: 1px solid #6b6b6b;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; } }
+  .header-nav ul li a:visited {
+    color: #6b6b6b; }
+  .header-nav ul li a:hover {
+    color: #fff; }
 
-/*......... MAIN MENU replaces THE FOOTER MENU ON MOBILE AND TABLET ****************************/
-/*photography*/
-.main-menu li:first-child:hover,
-.main-menu li:first-child:active {
-  background-color: #a84420;
-  color: #fff;
-  border-bottom: 1px solid #a84420; }
+.nav-design a:hover {
+  background-color: #5f9797;
+  border-bottom: 1px solid #5f9797; }
+
+.nav-interactive a:hover {
+  background-color: #b56618;
+  border-bottom: 1px solid #b56618; }
+
+.nav-photo a:hover {
+  background-color: #8a5cd1;
+  border-bottom: 1px solid #8a5cd1; }
+
+.nav-mixed a:hover {
+  background-color: #4866fb;
+  border-bottom: 1px solid #4866fb; }
+
+.nav-about a:hover {
+  background-color: #98983e;
+  border-bottom: 1px solid #98983e; }
+
+.nav-contact a:hover {
+  background-color: #099949;
+  border-bottom: 1px solid #099949; }
+
+#design .nav-design a,
+#letters .nav-design a,
+#nzbirds .nav-design a,
+#d6sunset .nav-design a,
+#print-portfolio .nav-design a,
+#interactive .nav-interactive a,
+#perfect .nav-interactive a,
+#photography .nav-photo a,
+#truckers .nav-photo a,
+#manhome .nav-photo a,
+#mncooks .nav-photo a,
+#submarine .nav-photo a,
+#soap .nav-photo a,
+#optimiste .nav-photo a,
+#mossburn .nav-photo a,
+#mixedmedia .nav-mixed a,
+#prefab .nav-mixed a,
+#weather .nav-mixed a,
+#misunderstood .nav-mixed a,
+#proteus .nav-mixed a,
+#rigs .nav-mixed a,
+#kansas .nav-mixed a,
+#about .nav-about a,
+#contact .nav-contact a {
+  border-bottom: none; }
 
 #video .main-content {
   padding: 0;

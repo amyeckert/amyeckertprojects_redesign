@@ -31,7 +31,6 @@
 
 		@include bp(small){
         	margin: 0 0 0 0 ;
-
 		}
 	}
 }
@@ -295,10 +294,8 @@
 
 // ----- STATEMENT ----------------------//
 .about {
-	// margin-top: 10px;
 	order: 7;
 	@include font-size(18);
-	// min-width: 125px;
 	max-width: 25%;
 	height: 30px;
 	display: flex;
@@ -347,7 +344,7 @@
 		border-radius: 20px;
 		position: relative;
 		top: 57%;
-		transform: translateY(-50%); //centers it. 
+		transform: translateY(-50%); 
 		text-align: left;
 		z-index: 2;
 
