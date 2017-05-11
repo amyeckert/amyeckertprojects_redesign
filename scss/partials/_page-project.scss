@@ -158,6 +158,8 @@
 		.show-caption {
 			display: block;
 			color: $c-grey-med;
+			padding: 0 10px;
+			@include line-height(20)
 
 			a {
 				text-align: right;
@@ -167,6 +169,7 @@
 				color: $c-grey-med;
 				border-bottom: 1px solid $c-white;
 				transition: all 0.2s;
+				padding-left:10px;
 				 
 				&:visited {
 					color: $c-grey-med;
@@ -175,6 +178,9 @@
 				&:hover {
 					color: $c-green-kelly;
 					border-bottom: 1px solid $c-green-kelly;
+				}
+				span {
+
 				}
 			}
 		}

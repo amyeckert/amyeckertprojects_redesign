@@ -949,7 +949,10 @@ form {
   font-size: 16px; }
   #interactive .interactive-project .show-caption {
     display: block;
-    color: #6b6b6b; }
+    color: #6b6b6b;
+    padding: 0 10px;
+    line-height: 1.25rem;
+    line-height: 20px; }
     #interactive .interactive-project .show-caption a {
       text-align: right;
       display: block;
@@ -959,7 +962,8 @@ form {
       color: #6b6b6b;
       border-bottom: 1px solid #fff;
       -webkit-transition: all 0.2s;
-      transition: all 0.2s; }
+      transition: all 0.2s;
+      padding-left: 10px; }
       #interactive .interactive-project .show-caption a:visited {
         color: #6b6b6b; }
       #interactive .interactive-project .show-caption a:active, #interactive .interactive-project .show-caption a:hover {
