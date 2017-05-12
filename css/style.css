@@ -1389,119 +1389,175 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   background: #fff;
   min-height: 100vh;
-  background-size: cover;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-.project-name {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1; }
-
-.player {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  max-width: 750px;
-  border: 1px solid #6b6b6b;
-  position: relative;
-  font-size: 0;
-  background-color: #f2f2f2;
-  overflow: hidden;
-  /* This css is only applied when fullscreen is active. */ }
-  .player .player:-webkit-full-screen {
-    max-width: none;
-    width: 100%; }
-  .player .player:-moz-full-screen {
-    max-width: none;
-    width: 100%; }
-  .player .player:-ms-fullscreen {
-    max-width: none;
-    width: 100%; }
-  .player .player:fullscreen {
-    max-width: none;
-    width: 100%; }
-  .player .player:-webkit-full-screen {
-    max-width: none;
-    width: 100%; }
-
-.player__video {
-  width: 100%; }
-
-.player__button {
-  background: none;
-  border: 0;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  outline: 0;
-  padding: 0;
-  cursor: pointer;
-  max-width: 50px; }
-  .player__button:focus {
-    border-color: #ffc600; }
-
-.player__slider {
-  width: 10px;
-  height: 30px; }
-
-.player__controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: -40px;
-  width: 100%;
-  opacity: 0;
-  z-index: 9;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background: rgba(0, 0, 0, 0.1); }
-
-.player:hover .player__controls {
-  opacity: 1; }
-
-.player__controls > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
-
-.progress {
-  -webkit-box-flex: 10;
-      -ms-flex: 10;
-          flex: 10;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  height: 15px;
-  -webkit-transition: height 0.3s;
-  transition: height 0.3s;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: ew-resize; }
-  .progress .progress__filled {
-    width: 100%;
-    background: #68b7d5;
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%; }
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  #video .main-content .project-name {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  #video .main-content .player {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    max-width: 750px;
+    border: 1px solid #6b6b6b;
+    position: relative;
+    font-size: 0;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    /* This css is only applied when fullscreen is active. */ }
+    #video .main-content .player .player:-webkit-full-screen {
+      max-width: none;
+      width: 100%; }
+    #video .main-content .player .player:-moz-full-screen {
+      max-width: none;
+      width: 100%; }
+    #video .main-content .player .player:-ms-fullscreen {
+      max-width: none;
+      width: 100%; }
+    #video .main-content .player .player:fullscreen {
+      max-width: none;
+      width: 100%; }
+    #video .main-content .player .player:-webkit-full-screen {
+      max-width: none;
+      width: 100%; }
+    #video .main-content .player .player__video {
+      width: 100%; }
+    #video .main-content .player .player__controls > * {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      outline: 1px solid red; }
+    #video .main-content .player .player__controls {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      bottom: -40px;
+      width: 100%;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.4); }
+      #video .main-content .player .player__controls .progress {
+        -webkit-box-flex: 10;
+            -ms-flex: 10;
+                flex: 10;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        height: 15px;
+        -webkit-transition: height 0.3s;
+        transition: height 0.3s;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: ew-resize; }
+        #video .main-content .player .player__controls .progress .progress__filled {
+          width: 100%;
+          background: #68b7d5;
+          -webkit-box-flex: 0;
+              -ms-flex: 0;
+                  flex: 0;
+          -ms-flex-preferred-size: 50%;
+              flex-basis: 50%; }
+      #video .main-content .player .player__controls .time {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 20px;
+        color: #6b6b6b;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        #video .main-content .player .player__controls .time p {
+          padding: 5px;
+          color: #fff;
+          font-size: 0.875rem;
+          font-size: 14px; }
+      #video .main-content .player .player__controls .toggle {
+        background: none;
+        border: 0;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 20px;
+                flex: 1 0 20px;
+        color: #fff;
+        text-align: center;
+        outline: 0;
+        padding: 0;
+        cursor: pointer; }
+        #video .main-content .player .player__controls .toggle:focus {
+          border-color: #68b7d5; }
+      #video .main-content .player .player__controls .player__volume {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-flex: 4;
+            -ms-flex: 4;
+                flex: 4; }
+        #video .main-content .player .player__controls .player__volume svg {
+          height: 20px; }
+        #video .main-content .player .player__controls .player__volume .player__slider {
+          -webkit-box-flex: 2;
+              -ms-flex: 2;
+                  flex: 2; }
+      #video .main-content .player .player__controls .skip {
+        background: none;
+        border: 0;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        color: #fff;
+        text-align: center;
+        outline: 0;
+        padding: 0;
+        cursor: pointer;
+        font-size: 0.9375rem;
+        font-size: 15px; }
+      #video .main-content .player .player__controls .player__fullscreen {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        background: none;
+        border: none; }
+        #video .main-content .player .player__controls .player__fullscreen svg {
+          height: 25px; }
 
 /* unholy css to style input type="range" */
 input[type=range] {
   -webkit-appearance: none;
   background: transparent;
-  width: 100%;
+  width: 50%;
   margin: 0 5px; }
   input[type=range]:focus {
     outline: none; }

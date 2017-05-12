@@ -41,7 +41,7 @@
 		<div class="player">
 	<!-- 	<iframe width="560" height="315" src="https://www.youtube.com/embed/cOmqny8BbwY" frameborder="0" allowfullscreen></iframe> -->
 
-		<video class="player__video viewer" src="vid/vanish.webm"></video>
+		<video class="player__video viewer" src="vid/Yellow-Cars.webm"></video>
 
 
  		<div class="player__controls">
@@ -49,13 +49,27 @@
 	   		<div class="progress">
 	    		<div class="progress__filled"></div>
 	   		</div>
+	   		<div class="time">
+		   		<p class="start-time">0</p>
+	    		<p class="remaining-time"></p>
+    		</div>
+   			
 
 	   		<button class="player__button toggle" title="Toggle Play">►</button>
-			<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
-			<input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
-			<button data-skip="-10" class="player__button">« 10s</button>
-			<button data-skip="25" class="player__button">25s »</button>
-			<button class='player__fullscreen'>[ &nbsp; ]</button>
+	   		<label class="player__volume icon" title="volume">
+	   			<svg id="volume" data-name="volume" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436.17 451.66"><defs><style>.cls-1{fill:#fff;}</style></defs><title>volume</title><path class="cls-1" d="M198.94,423l-29-32.22q-39.08-43.5-78.11-87.06a10.3,10.3,0,0,0-8.59-3.8c-25.83.15-51.65.08-77.48.08H0V151.67H5.33c26,0,52-.08,78,.07a10.31,10.31,0,0,0,8.6-3.8Q143.54,90.19,195.39,32.61c1-1.07,2-2,3.55-3.55Zm-28-73.41V101.47c-1.83,2.31-2.76,3.63-3.83,4.82-21,23.43-42,46.89-63.21,70.16a10.87,10.87,0,0,1-7.11,3.2c-21.15.25-42.31.15-63.46.16H28.21v92.06h5.67c20.65,0,41.31.11,62-.09a10.63,10.63,0,0,1,8.91,4.06c13.12,14.85,26.42,29.55,39.66,44.3C153,329.74,161.69,339.32,170.94,349.59Z"/><path class="cls-1" d="M436.17,226.21c-.22,109.57-81.74,206.17-190.07,225.22A14.21,14.21,0,0,1,229.44,440a13.9,13.9,0,0,1,11.38-16.18c22.42-4.14,44-10.87,63.85-22.09,56.18-31.67,90.19-79.32,100.53-143,8.69-53.55-1.81-103.51-32.88-148.28-30.69-44.21-73.37-70.64-125.87-81.52-2-.41-3.94-.67-5.88-1.13-7.78-1.82-12.62-9.05-11.06-16.43A14.13,14.13,0,0,1,246.36.28C313,13,364.24,48.49,400.78,105.21A220.92,220.92,0,0,1,436.17,226.21Z"/><path class="cls-1" d="M371.34,218.07c-.4,81.16-51.74,147.77-122.22,166.49-9.54,2.53-17.11-1.22-19.39-9.62-2.17-8,2.53-14.95,11.91-17.59.8-.22,1.61-.41,2.41-.63,23-6.54,43.5-17.67,60.28-34.83,30.2-30.9,42.35-68.34,37.91-111-4.83-46.34-27.89-81.31-68.69-103.83-10.5-5.8-22.43-9.07-33.8-13.23-6.65-2.43-11-8.1-10.49-14.66a13.76,13.76,0,0,1,12-12.83,22.15,22.15,0,0,1,8.31.93,159.46,159.46,0,0,1,76,45.86C355.19,144.86,370.79,182.43,371.34,218.07Z"/><path class="cls-1" d="M306.73,226.08c-2.4,39.54-20.27,69.54-55.39,88.7-8.45,4.61-16.75,2.15-20.55-5.42s-.78-15.41,7.94-19.65c48.66-23.62,47.78-82.29,23.82-109.51a80.46,80.46,0,0,0-25-18.8c-7.94-4-10.61-12.54-6.47-19.78,3.82-6.69,11.64-9,19.1-5.32,21.28,10.5,36.58,26.93,46.81,48.15A96,96,0,0,1,306.73,226.08Z"/></svg>
+	   		
+				<input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1">
+			</label>
+
+			<!-- <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1"> -->
+
+			<button data-skip="-10" class="player__button skip">« 10s</button>
+			<button data-skip="25" class="player__button skip">25s »</button>
+
+			<button class='player__fullscreen'>
+				<svg id="fullscreen" data-name="fullscreen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376.95 375.45"><defs><style>.cls-1{fill:#ffffff;}</style></defs><title>fullscreen</title><path class="cls-1" d="M85,0V23.4L41.21,25.08,180.67,163.44,163.52,179.5,25.68,42.78l-1.54.51V85.74H0L2.25,3Z"/><path class="cls-1" d="M213.14,179.79l-16.63-16.56L335.76,25.07,292,23.42V0l82.74,3,2.24,82.68H353.07V43.33l-1.78-.58Z"/><path class="cls-1" d="M85,352v23.4l-82.74-3L0,289.78H23.84v42.31l1.81.64,137.61-136.5,16.63,16.56L41.19,350.38Z"/><path class="cls-1" d="M196.19,211.92,213,195.55l138.2,137.07,1.74-.51V289.7h24l-2.23,82.72-82.73,3V352.08l43.72-1.75Z"/></svg>	
+			</button>
  		</div>
 
    	</div>
@@ -81,7 +95,7 @@
 
 
 <!-- jQuery  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
 <!--  JQuery UI -->
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>	
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
