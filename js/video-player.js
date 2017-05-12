@@ -8,8 +8,11 @@ const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
 const timeCurrent = player.querySelector('.start-time');
 const timeRemaining = player.querySelector('.remaining-time');
+const fullScreen = player.querySelector('.player__fullscreen');
 
-const totalTime = video.duration;
+timeCurrent.innerHTML = "00:00";
+timeRemaining.innerHTML = "00:" + parseInt(video.duration);
+
 
 /* Build out functions */
 function togglePlay() {
@@ -23,26 +26,27 @@ function updateButton() {
   toggle.textContent = icon;
 }
 
-// source: https://coderwall.com/p/wkdefg/converting-milliseconds-to-hh-mm-ss-mmm
+
 function durationToTime(duration) {
-    // duration = totalTime;
-    // var milliseconds = parseInt((duration%1000)/100), 
-        var seconds = parseInt((duration/1000)%60),
-        minutes = parseInt((duration/(1000*60))%60),
-        hours = parseInt((duration/(1000*60*60))%24);
+
+    var hours = Math.floor(((duration % 31536000) % 86400) / 3600);
+    var minutes = Math.floor((((duration % 31536000) % 86400) % 3600) / 60);
+    var seconds = parseInt((((duration % 31536000) % 86400) % 3600) % 60);
 
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-    return hours + ':' + minutes + ':' + seconds;
-    // console.log('-' + hours + ":" + minutes + ":" + seconds + "." + milliseconds);
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    } 
+    return (hours + ':' + minutes + ':' + seconds);
 }
 
 
 function updateRemainingTime() {
-    console.log(totalTime);
+    var totalTime = video.duration;
     var elapsedTime = video.currentTime;
     var remainingTime = (totalTime - elapsedTime);
+
     timeCurrent.innerHTML = durationToTime(elapsedTime);
     timeRemaining.innerHTML = durationToTime(remainingTime);
 }
@@ -65,6 +69,17 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
+function toggleFullScreen(e){
+    console.log(e);
+    if(video.requestFullScreen){
+        video.requestFullScreen();
+    } else if(video.webkitRequestFullScreen){
+        video.webkitRequestFullScreen();
+    } else if(vid.mozRequestFullScreen){
+        video.mozRequestFullScreen();
+    }
+}
+
 /* Hook up the event listners */
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
@@ -84,3 +99,5 @@ progress.addEventListener('click', scrub);
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
+
+fullScreen.addEventListener('click', toggleFullScreen);

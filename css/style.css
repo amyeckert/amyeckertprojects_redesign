@@ -1404,7 +1404,8 @@ form {
   #video .main-content .project-name {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
-            order: 1; }
+            order: 1;
+    margin: 2rem; }
   #video .main-content .player {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -1436,8 +1437,7 @@ form {
     #video .main-content .player .player__controls > * {
       -webkit-box-flex: 1;
           -ms-flex: 1;
-              flex: 1;
-      outline: 1px solid red; }
+              flex: 1; }
     #video .main-content .player .player__controls {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1449,8 +1449,12 @@ form {
               justify-content: space-between;
       bottom: -40px;
       width: 100%;
-      opacity: 1;
+      opacity: 0;
+      -webkit-transition: opacity .3s;
+      transition: opacity .3s;
       background: rgba(0, 0, 0, 0.4); }
+      #video .main-content .player .player__controls:hover {
+        opacity: 1; }
       #video .main-content .player .player__controls .progress {
         -webkit-box-flex: 10;
             -ms-flex: 10;
@@ -1482,9 +1486,9 @@ form {
         display: flex;
         height: 20px;
         color: #6b6b6b;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
@@ -1545,13 +1549,13 @@ form {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         background: none;
         border: none; }
         #video .main-content .player .player__controls .player__fullscreen svg {
-          height: 25px; }
+          height: 20px; }
 
 /* unholy css to style input type="range" */
 input[type=range] {
