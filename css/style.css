@@ -1389,15 +1389,15 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   background: #fff;
   min-height: 100vh;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
@@ -1405,16 +1405,13 @@ form {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin: 2rem; }
+    margin: 1rem;
+    text-transform: none; }
   #video .main-content .player {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    max-width: 750px;
-    border: 1px solid #6b6b6b;
+    max-width: 650px;
     position: relative;
     font-size: 0;
-    background-color: #f2f2f2;
+    background-color: #fff;
     overflow: hidden;
     /* This css is only applied when fullscreen is active. */ }
     #video .main-content .player .player:-webkit-full-screen {
@@ -1449,7 +1446,7 @@ form {
               justify-content: space-between;
       bottom: -40px;
       width: 100%;
-      opacity: 0;
+      opacity: 0.5;
       -webkit-transition: opacity .3s;
       transition: opacity .3s;
       background: rgba(0, 0, 0, 0.4); }
