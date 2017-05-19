@@ -1408,12 +1408,16 @@ form {
     margin: 1rem;
     text-transform: none; }
   #video .main-content .player {
-    max-width: 650px;
+    width: 90%;
     position: relative;
     font-size: 0;
     background-color: #fff;
     overflow: hidden;
+    margin: 0 0 2rem 0;
     /* This css is only applied when fullscreen is active. */ }
+    @media only screen and (min-width: 700px) {
+      #video .main-content .player {
+        width: 50%; } }
     #video .main-content .player .player:-webkit-full-screen {
       max-width: none;
       width: 100%; }
@@ -1553,6 +1557,11 @@ form {
         border: none; }
         #video .main-content .player .player__controls .player__fullscreen svg {
           height: 20px; }
+      #video .main-content .player .player__controls .iframe {
+        max-width: 600px; }
+        @media only screen and (min-width: 700px) {
+          #video .main-content .player .player__controls .iframe {
+            width: 750px; } }
 
 /* unholy css to style input type="range" */
 input[type=range] {

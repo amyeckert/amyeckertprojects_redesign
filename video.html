@@ -38,10 +38,13 @@
 	<section class="main-content">
 
 		<div class="player ">
-            <p class="project-name">custom video controls</p>
-		  <video class="player__video viewer" src="vid/bludot.webm"></video>
+            <p class="project-name">Custom Video Controls</p>
+		  <video class="player__video viewer" poster="images/bluedot-bts.jpg" controls>
+              <!-- <source src="movie.mp4" type="video/mp4"> FALL BACKS NEEDED-->
+              <!-- <source src="movie.ogg" type="video/ogg"> FALL BACKS NEEDED-->
+              <source src="vid/bludot.webm" type="video/webm">
+          </video>
           <div class="player__controls">
-
 	   		<div class="progress">
 	    		<div class="progress__filled"></div>
 	   		</div>
@@ -49,7 +52,6 @@
 		   		<p><span class="start-time"></span>  /
 	    		<sapn class="remaining-time"></span></p>
     		</div>
-
 
 	   		<button class="player__button toggle" title="Toggle Play">►</button>
 	   		<label class="player__volume icon" title="volume">
@@ -66,13 +68,13 @@
 			<button class='player__fullscreen'>
 				<svg id="fullscreen" data-name="fullscreen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376.95 375.45"><defs><style>.cls-1{fill:#ffffff;}</style></defs><title>fullscreen</title><path class="cls-1" d="M85,0V23.4L41.21,25.08,180.67,163.44,163.52,179.5,25.68,42.78l-1.54.51V85.74H0L2.25,3Z"/><path class="cls-1" d="M213.14,179.79l-16.63-16.56L335.76,25.07,292,23.42V0l82.74,3,2.24,82.68H353.07V43.33l-1.78-.58Z"/><path class="cls-1" d="M85,352v23.4l-82.74-3L0,289.78H23.84v42.31l1.81.64,137.61-136.5,16.63,16.56L41.19,350.38Z"/><path class="cls-1" d="M196.19,211.92,213,195.55l138.2,137.07,1.74-.51V289.7h24l-2.23,82.72-82.73,3V352.08l43.72-1.75Z"/></svg>
 			</button>
- 		</div>
+ 		  </div>
    	    </div>
         <div class="player ">
-            <p class="project-name">iFrame</p>
-    		<iframe width="750" height="422" src="https://www.youtube.com/embed/cOmqny8BbwY" frameborder="0" allowfullscreen></iframe>
+            <p class="project-name">Embedded</p>
+    		<iframe width="720" height="400" src="https://www.youtube.com/embed/cOmqny8BbwY" frameborder="0" allowfullscreen></iframe>
         </div>
-        <iframe src="" width="" height=""></iframe>
+
 
 	</section>
 

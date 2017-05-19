@@ -37,7 +37,7 @@ function durationToTime(duration) {
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     if (seconds < 10) {
         seconds = "0" + seconds;
-    } 
+    }
     return (hours + ':' + minutes + ':' + seconds);
 }
 

@@ -15,14 +15,15 @@
         text-transform: none;
     }
     .player {
-    	// order: 2;
-      	max-width:650px;
-    	// border: 1px solid $c-grey-med;
+      	width: 90%;
     	position: relative;
     	font-size: 0;
     	background-color: $c-white;
     	overflow: hidden;
-
+        margin: 0 0 2rem 0;
+        @include bp(small){
+            width: 50%;
+        }
     	/* This css is only applied when fullscreen is active. */
     	.player:fullscreen {
     		max-width: none;
@@ -128,6 +129,12 @@
                 border: none;
                 svg {
                   height: 20px;
+                }
+            }
+            .iframe{
+                max-width: 600px;
+                @include bp(small){
+                    width: 750px;
                 }
             }
         }
