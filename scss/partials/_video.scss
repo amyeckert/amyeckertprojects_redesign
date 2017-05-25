@@ -8,21 +8,21 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-.video-item {
-    display: flex;
-    flex-flow: column wrap;
-    flex: 1 1 auto;
-    border: 1px solid orange;
-    @include bp(small){
+    .video-item {
+        display: flex;
+        flex-flow: column wrap;
         flex: 1 1 auto;
-        width: 50%;
+        // border: 1px solid orange;
+        @include bp(small){
+            flex: 1 1 auto;
+            width: 50%;
+        }
+        .project-name {
+        	order: 1;
+            margin: 1rem;
+            text-transform: none;
+        }
     }
-    .project-name {
-    	order: 1;
-        margin: 1rem;
-        text-transform: none;
-    }
-}
 
     .video-container {
         order: 2;

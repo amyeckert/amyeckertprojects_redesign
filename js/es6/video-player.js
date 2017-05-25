@@ -1,6 +1,6 @@
 /* Get Elements */
-const player       = document.querySelector('.player');
-const video        = player.querySelector('.viewer');
+const player       = document.querySelector('.video-container');
+const video        = player.querySelector('.video');
 const progress     = player.querySelector('.progress');
 const progressBar  = player.querySelector('.progress__filled');
 const toggle       = player.querySelector('.toggle');
@@ -8,7 +8,7 @@ const skipButtons  = player.querySelectorAll('[data-skip]');
 const ranges       = player.querySelectorAll('.player__slider');
 const timeCurrent  = player.querySelector('.start-time');
 const timeRemaining= player.querySelector('.remaining-time');
-const fullScreen   = player.querySelector('.player__fullscreen');
+const fullScreen   = player.querySelector('.video__fullscreen');
 
 timeCurrent.innerHTML = "00:00";
 timeRemaining.innerHTML = "00:" + parseInt(video.duration);
