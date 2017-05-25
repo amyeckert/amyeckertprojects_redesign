@@ -1,14 +1,14 @@
 /* Get Elements */
-const player = document.querySelector('.player');
-const video = player.querySelector('.viewer');
-const progress = player.querySelector('.progress');
-const progressBar = player.querySelector('.progress__filled');
-const toggle = player.querySelector('.toggle');
-const skipButtons = player.querySelectorAll('[data-skip]');
-const ranges = player.querySelectorAll('.player__slider');
-const timeCurrent = player.querySelector('.start-time');
-const timeRemaining = player.querySelector('.remaining-time');
-const fullScreen = player.querySelector('.player__fullscreen');
+const player       = document.querySelector('.player');
+const video        = player.querySelector('.viewer');
+const progress     = player.querySelector('.progress');
+const progressBar  = player.querySelector('.progress__filled');
+const toggle       = player.querySelector('.toggle');
+const skipButtons  = player.querySelectorAll('[data-skip]');
+const ranges       = player.querySelectorAll('.player__slider');
+const timeCurrent  = player.querySelector('.start-time');
+const timeRemaining= player.querySelector('.remaining-time');
+const fullScreen   = player.querySelector('.player__fullscreen');
 
 timeCurrent.innerHTML = "00:00";
 timeRemaining.innerHTML = "00:" + parseInt(video.duration);
@@ -29,12 +29,12 @@ function updateButton() {
 
 function durationToTime(duration) {
 
-    var hours = Math.floor(((duration % 31536000) % 86400) / 3600);
-    var minutes = Math.floor((((duration % 31536000) % 86400) % 3600) / 60);
-    var seconds = parseInt((((duration % 31536000) % 86400) % 3600) % 60);
+    var hours  = Math.floor(((duration % 31536000) % 86400) / 3600);
+    var minutes= Math.floor((((duration % 31536000) % 86400) % 3600) / 60);
+    var seconds= parseInt((((duration % 31536000) % 86400) % 3600) % 60);
 
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    hours  = (hours < 10) ? "0" + hours : hours;
+    minutes= (minutes < 10) ? "0" + minutes : minutes;
     if (seconds < 10) {
         seconds = "0" + seconds;
     }
@@ -61,7 +61,7 @@ function handleRangeUpdate() {
 
 function handleProgress() {
   const percent = (video.currentTime / video.duration) * 100;
-  progressBar.style.flexBasis = `${percent}%`;
+  progressBar.style.flexBasis = percent;
 }
 
 function scrub(e) {
@@ -96,8 +96,8 @@ ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
 
 let mousedown = false;
 progress.addEventListener('click', scrub);
-progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+progress.addEventListener('mousemove', (e)=> mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
-progress.addEventListener('mouseup', () => mousedown = false);
+progress.addEventListener('mouseup', ()   => mousedown = false);
 
 fullScreen.addEventListener('click', toggleFullScreen);

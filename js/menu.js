@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	// $('.menu-toggle').hide();
 	var width = screen.availWidth;
-    var height = screen.availHeight;
+    var height= screen.availHeight;
 
 	function toggleMainMenu() {		
 	    $('.menu-toggle').click(function(e){

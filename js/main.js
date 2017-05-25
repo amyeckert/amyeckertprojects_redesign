@@ -12,9 +12,9 @@
 
         // //init masonry
         // var $grid = $('.grid').masonry({
-        //     itemSelector: '.grid-item',
+        //     itemSelector   : '.grid-item',
         //     percentPosition: true, 
-        //     masonry: {columnWidth: '.grid-sizer'}
+        //     masonry        : {columnWidth: '.grid-sizer'}
             
         // });
         // //layout Isotope after each image loads
@@ -26,31 +26,31 @@
         $('.big-img-container > figcaption').remove();
 
         //  GLOBAL VARIABLES---------------------------//
-        var width = screen.availWidth;
-        var height = screen.availHeight;
-        var statement = document.querySelector('.statement');
-        var statementBody =document.querySelector('.statement-body');
-        var carousel =document.querySelector('.carousel');
-        var showThumbs = document.getElementById('thumbGrid');
-        var previous = document.getElementById('prevImg');
-        var next = document.getElementById('nextImg');
-        var cNav = document.getElementById('cNav');
-        var grid = document.querySelector('.grid');
-        var thumbs = document.getElementById('thumbGrid');
-        var newImageCaption = document.querySelector('.big');
-        var figcaption = $('figcaption').not('#imgInfo').not('.project-title');
+        var width          = screen.availWidth;
+        var height         = screen.availHeight;
+        var statement      = document.querySelector('.statement');
+        var statementBody  = document.querySelector('.statement-body');
+        var carousel       = document.querySelector('.carousel');
+        var showThumbs     = document.getElementById('thumbGrid');
+        var previous       = document.getElementById('prevImg');
+        var next           = document.getElementById('nextImg');
+        var cNav           = document.getElementById('cNav');
+        var grid           = document.querySelector('.grid');
+        var thumbs         = document.getElementById('thumbGrid');
+        var newImageCaption= document.querySelector('.big');
+        var figcaption     = $('figcaption').not('#imgInfo').not('.project-title');
 
         $(figcaption).show();
 
         var updateCaption = function() {
             //get contents of current image info <p>s
-            var chosenImageCaption = document.querySelector('.isActive > figcaption');
-            var chosenImageDetails = $('.isActive > figcaption').children(); //make an array
-            var imageTitle = $(chosenImageDetails[0]).text();
-            var imageDate = $(chosenImageDetails[1]).text();
-            var imageDimensions = $(chosenImageDetails[2]).text();
-            var imageMedia = $(chosenImageDetails[3]).text();
-            var imageClient = $(chosenImageDetails[4]).text();
+            var chosenImageCaption= document.querySelector('.isActive > figcaption');
+            var chosenImageDetails= $('.isActive > figcaption').children(); //make an array
+            var imageTitle        = $(chosenImageDetails[0]).text();
+            var imageDate         = $(chosenImageDetails[1]).text();
+            var imageDimensions   = $(chosenImageDetails[2]).text();
+            var imageMedia        = $(chosenImageDetails[3]).text();
+            var imageClient       = $(chosenImageDetails[4]).text();
 
             $(newImageCaption).append('<figcaption class="image-info" id="imgInfo"><p class="title">' + imageTitle + '</p><p class="date">' + imageDate + '</p><p class="dimensions">' + imageDimensions + '</p><p class="media">' + imageMedia + '</p><p class="client">' + imageClient + '</p></figcaption>');   
 
@@ -117,8 +117,8 @@
                 $(this).addClass('isActive');
 
                 // Figure out which thumbnail is chosen
-                var chosenThumb = $(this).find('img').attr('src');
-                var header = document.querySelector('header')
+                var chosenThumb= $(this).find('img').attr('src');
+                var header     = document.querySelector('header')
                 $('header').removeClass('nav-up').addClass('nav-down');
 
                 $('.big-img-container').attr('style', 'background-image: url('+chosenThumb+')');
@@ -126,23 +126,23 @@
                 // change caption
                 updateCaption();
 
-                carousel.style.display = 'block';
-                carousel.style.order = 3;
-                carousel.style.width = '100%';
+                carousel.style.display= 'block';
+                carousel.style.order  = 3;
+                carousel.style.width  = '100%';
 
                 // Change visibility of .thumbs to hidden 
-                thumbs.style.display = 'none';
-                cNav.style.order = 4; 
-                cNav.style.display = 'flex';
+                thumbs.style.display= 'none';
+                cNav.style.order    = 4; 
+                cNav.style.display  = 'flex';
 
                 $('.next').show();
                 $('.previous').show();
                 $('.thumbs-only').show();
 
-                imgInfo.style.visibility = 'visible';
-                prevImg.style.visibility = 'visible';
-                nextImg.style.visibility = 'visible';
-                statement.style.order = 5;
+                imgInfo.style.visibility= 'visible';
+                prevImg.style.visibility= 'visible';
+                nextImg.style.visibility= 'visible';
+                statement.style.order   = 5;
 
             });
             /*---------------- previous button ------------- */
@@ -152,13 +152,13 @@
                 $('.big > figcaption').remove();
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
-                var items = document.querySelectorAll('figure.item');
+                var items    = document.querySelectorAll('figure.item');
 
                 //find the active item 
-                var activeImg = document.querySelector('figure.isActive');
-                var lastImg = document.querySelector('div.thumbs-container').lastElementChild;  
+                var activeImg= document.querySelector('figure.isActive');
+                var lastImg  = document.querySelector('div.thumbs-container').lastElementChild;  
                 var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
-                var prevImg = document.querySelector('figure.isActive').previousElementSibling;
+                var prevImg  = document.querySelector('figure.isActive').previousElementSibling;
 
                 $('.item.isActive').removeClass('isActive');
 
@@ -189,13 +189,13 @@
                 // console.log(newImageCaption);
 
                 var imgCount = document.getElementById('thumbGrid').getElementsByTagName('img').length;
-                var items = document.querySelectorAll('figure.item');
+                var items    = document.querySelectorAll('figure.item');
                 
                 // find the active item 
-                var activeImg = document.querySelector('figure.isActive');
-                var lastImg = document.querySelector('div.thumbs-container').lastElementChild;  
+                var activeImg= document.querySelector('figure.isActive');
+                var lastImg  = document.querySelector('div.thumbs-container').lastElementChild;  
                 var firstImg = document.querySelector('div.thumbs-container').firstElementChild;
-                var nextImg = document.querySelector('figure.isActive').nextElementSibling;
+                var nextImg  = document.querySelector('figure.isActive').nextElementSibling;
 
                 $('.item.isActive').removeClass('isActive');
 
@@ -235,13 +235,13 @@
             $('.thumbs-only').on('click', function() { 
                 $('.big > figcaption').empty();
 
-                carousel.style.display = 'none';
-                showThumbs.style.display = 'block';
+                carousel.style.display  = 'none';
+                showThumbs.style.display= 'block';
                 $(figcaption).hide();
-                imgInfo.style.visibility = 'hidden';
-                cNav.style.display = 'none';
-                prevImg.style.display = 'none';
-                nextImg.style.display = 'none';
+                imgInfo.style.visibility= 'hidden';
+                cNav.style.display      = 'none';
+                prevImg.style.display   = 'none';
+                nextImg.style.display   = 'none';
 
             });
             //---------- SHOW / HIDE ABOUT --------------------------------//
