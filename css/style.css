@@ -1425,15 +1425,15 @@ form {
                 flex: 1 1 auto;
         width: 50%; } }
     #video .main-content .video-item .project-name {
-      -webkit-box-ordinal-group: 2;
-          -ms-flex-order: 1;
-              order: 1;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
       margin: 1rem;
       text-transform: none; }
   #video .main-content .video-container {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     position: relative;
     background-color: #fff;
     overflow: hidden;

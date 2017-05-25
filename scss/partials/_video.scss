@@ -18,14 +18,14 @@
             width: 50%;
         }
         .project-name {
-        	order: 1;
+        	order: 2;
             margin: 1rem;
             text-transform: none;
         }
     }
 
     .video-container {
-        order: 2;
+        order: 1;
     	position: relative;
     	background-color: $c-white;
     	overflow: hidden;
