@@ -28,7 +28,6 @@ function updateButton() {
 
 
 function durationToTime(duration) {
-
     var hours  = Math.floor(((duration % 31536000) % 86400) / 3600);
     var minutes= Math.floor((((duration % 31536000) % 86400) % 3600) / 60);
     var seconds= parseInt((((duration % 31536000) % 86400) % 3600) % 60);
@@ -40,7 +39,6 @@ function durationToTime(duration) {
     }
     return (hours + ':' + minutes + ':' + seconds);
 }
-
 
 function updateRemainingTime() {
     var totalTime = video.duration;
@@ -61,7 +59,7 @@ function handleRangeUpdate() {
 
 function handleProgress() {
   const percent = (video.currentTime / video.duration) * 100;
-  progressBar.style.flexBasis = percent;
+  progressBar.style.flexBasis = percent +"%";
 }
 
 function scrub(e) {

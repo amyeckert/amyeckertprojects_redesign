@@ -1418,18 +1418,22 @@ form {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto; }
-    @media only screen and (min-width: 700px) {
+    @media only screen and (min-width: 1024px) {
       #video .main-content .video-item {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 auto;
                 flex: 1 1 auto;
-        width: 50%; } }
+        max-width: 50%; } }
     #video .main-content .video-item .project-name {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
               order: 2;
-      margin: 1rem;
-      text-transform: none; }
+      margin: 0.5rem;
+      text-transform: none;
+      text-align: center; }
+      @media only screen and (min-width: 700px) {
+        #video .main-content .video-item .project-name {
+          margin: 1rem; } }
   #video .main-content .video-container {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -1437,8 +1441,11 @@ form {
     position: relative;
     background-color: #fff;
     overflow: hidden;
-    margin: 0 0 2rem 0;
+    margin: 0;
     /* This css is only applied when fullscreen is active. */ }
+    @media only screen and (min-width: 700px) {
+      #video .main-content .video-container {
+        margin: 0 0 2rem 0; } }
     #video .main-content .video-container .video-container:-webkit-full-screen {
       max-width: none;
       width: 100%; }
@@ -1521,8 +1528,12 @@ form {
     .video__controls .time p {
       padding: 5px;
       color: #fff;
-      font-size: 0.875rem;
-      font-size: 14px; }
+      font-size: 0.75rem;
+      font-size: 12px; }
+      @media only screen and (min-width: 700px) {
+        .video__controls .time p {
+          font-size: 0.875rem;
+          font-size: 14px; } }
   .video__controls .toggle {
     background: none;
     border: 0;
@@ -1546,15 +1557,20 @@ form {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2; }
     .video__controls .video__volume svg {
       height: 20px; }
     .video__controls .video__volume .video__slider {
       -webkit-box-flex: 2;
           -ms-flex: 2;
               flex: 2; }
+    @media only screen and (min-width: 700px) {
+      .video__controls .video__volume {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; } }
   .video__controls .skip {
     background: none;
     border: 0;
@@ -1569,6 +1585,7 @@ form {
     font-size: 0.9375rem;
     font-size: 15px; }
   .video__controls .video__fullscreen {
+    max-width: 2px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1580,8 +1597,19 @@ form {
             justify-content: flex-end;
     background: none;
     border: none; }
+    @media only screen and (min-width: 700px) {
+      .video__controls .video__fullscreen {
+        max-width: 30px; } }
     .video__controls .video__fullscreen svg {
-      height: 20px; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 20px;
+      visibility: hidden; }
+      @media only screen and (min-width: 700px) {
+        .video__controls .video__fullscreen svg {
+          height: 20px;
+          visibility: visible; } }
 
 .flex-iframe-container {
   height: auto;

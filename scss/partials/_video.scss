@@ -6,21 +6,26 @@
     background: $c-white;
     min-height: 100vh;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-start; 
 
     .video-item {
         display: flex;
         flex-flow: column wrap;
         flex: 1 1 auto;
-        // border: 1px solid orange;
-        @include bp(small){
+
+        @include bp(medium){
             flex: 1 1 auto;
-            width: 50%;
+            max-width: 50%;
         }
+
         .project-name {
         	order: 2;
-            margin: 1rem;
+            margin: 0.5rem;
             text-transform: none;
+            text-align: center;
+            @include bp(small){
+                margin: 1rem;
+            }
         }
     }
 
@@ -29,8 +34,11 @@
     	position: relative;
     	background-color: $c-white;
     	overflow: hidden;
-        margin: 0 0 2rem 0;
-     
+        margin: 0;
+
+        @include bp(small){  
+            margin: 0 0 2rem 0;
+        }
         
     	/* This css is only applied when fullscreen is active. */
     	.video-container:fullscreen {
@@ -89,7 +97,11 @@
          p {
             padding: 5px;
             color: $c-white;
-            @include font-size(14);
+            @include font-size(12);
+
+            @include bp(small){
+                @include font-size(14);
+            }
          }
     }
     .toggle {
@@ -111,12 +123,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex: 1;
+        flex: 2;
         svg {
             height: 20px;
         }
         .video__slider {
             flex: 2;
+        }
+        @include bp(small){
+            flex: 1;
         }
     }
     .skip {
@@ -131,13 +146,23 @@
         @include font-size(15);
     }
     .video__fullscreen {
+        max-width: 2px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         background: none;
         border: none;
+        @include bp(small){
+            max-width: 30px;
+        }
         svg {
-          height: 20px;
+            display: flex;
+            height: 20px;
+            visibility: hidden;
+            @include bp(small){
+                height: 20px; 
+                visibility: visible;    
+            }
         }
     }
 
