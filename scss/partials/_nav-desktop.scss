@@ -1,17 +1,17 @@
 .header-nav {
 	display: none;
 
-	@include bp(medium){
+	@include bp(medium) {
 		display: block;
 		order  : 2;
 		width  : 50%;
 		height : 57px;
 	}
-	@include bp-arb(1300){
+	@include bp-arb(1300) {
 		width: 40%;
 	}	
 	ul {
-		@include bp(medium){
+		@include bp(medium) {
 			height         : 100%;
 			width          : 100%;
 		    display        : inline-flex;
@@ -20,7 +20,7 @@
 			justify-content: space-around;
 		}		
 		li {
-			@include bp(medium){
+			@include bp(medium) {
 			    display    : flex;
 			    flex       : 1 1 auto;
 			    align-items: center;
@@ -28,7 +28,7 @@
 			    height     : 100%;
 			}
 			a {
-				@include bp(medium){
+				@include bp(medium) {
 					display      : block;
 					height       : 100%;
 					padding      : 20px 5px;

@@ -62,11 +62,11 @@
 					@include font-size(14);
 	    				padding-top: 1rem;
 
-					@include bp(xsmall){
+					@include bp(xsmall) {
 	    				@include font-size(16);
 	    				padding-top: 1rem;	
 					}
-					@include bp(medium){
+					@include bp(medium) {
 						@include font-size(20);
 						padding-top: 1rem;
 

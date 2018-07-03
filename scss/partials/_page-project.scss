@@ -14,7 +14,7 @@
 		height: auto;
 		margin-top: 10px;
 	}
-	@include bp(medium){
+	@include bp(medium) {
 		flex-flow: row wrap;
 		
 	}
@@ -29,7 +29,7 @@
 		text-transform: capitalize;
 		@include font-size(18);
 
-		@include bp(small){
+		@include bp(small) {
         	margin: 0 0 0 0 ;
 		}
 	}
@@ -48,6 +48,27 @@
 		  display: block;
 		  clear: both;
 		}
+	.statement-mobile {
+		display: block;
+		max-width: 90%;
+		margin: 1.5rem auto 1rem auto;
+		color: $c-grey-med;
+		font-size: 1.2rem;
+		line-height: 1.2;
+
+		@include bp(small) {
+			display: none;
+		}
+
+		p {
+			margin-bottom: 1.2rem;
+		}
+		em {
+			font-style: italic;
+
+		}
+
+	}
 
 	@include bp(medium) {
 		display: block;
@@ -65,6 +86,7 @@
 		@include bp(small) {
 			width: 100%;
 		}
+
 		.grid-item {
 			float: left;
 			width: 100%;
@@ -83,7 +105,7 @@
 			img {
 				width: 100%;
 				height: auto;
-				@include bp(small){
+				@include bp(small) { 
 				}
 			}
 			figcaption  {
@@ -196,13 +218,13 @@
 .carousel {
 	display: none;
 
-	@include bp(small){
+	@include bp(small) {
 		display: none;
 		order: 5;
 		flex: 1 0 auto;
 		margin-bottom: 5px;
 	}
-	@include bp(medium){
+	@include bp(medium) {
 		display: none;
 		flex: 1 0 auto;
 	}
@@ -212,8 +234,6 @@
 		@include bp(small) {
 			display: block;
 			width: 100%;
-			
-			
 		}
 
 		.big-img-container {
@@ -240,7 +260,7 @@
 			margin-left: 0;
 			text-align: left;
 			
-			@include bp(small){
+			@include bp(small) {
 				height: 30px;
 				margin-top: 10px;
 
@@ -284,7 +304,7 @@
 		}
 			
 		#thumbnails-icon {
-			@include bp(medium){
+			@include bp(medium) {
 				height: 30px;
 			}
 		}
@@ -310,12 +330,23 @@
 	border-left: 1px solid $c-grey-med;
 	text-transform: lowercase;
 
-	@include bp(small){
+	@include bp(small) {
 		height: 35px;
 		margin: 0;
 	}
 	p {
 	    padding: 0 10px 0 5px;
+	}
+}
+
+#manhome {
+	.main-content {
+		.about{
+			display: none;
+			@include bp(small) {
+				display: block;
+			}
+		}	
 	}
 }
  
@@ -354,18 +385,18 @@
 		text-align: left;
 		z-index: 2;
 
-		@include bp(xsmall){
+		@include bp(xsmall) {
 			width: 80%;
 			top: 50%;
 		}
-		@include bp(small){
+		@include bp(small) {
 			width: 55%;
 
 		}
-		@include bp(medium){
+		@include bp(medium) {
 			top: 40%;
 		}
-		@include bp(large){
+		@include bp(large) {
 			width: 40%;
 		}
 		.modal-header {
@@ -375,12 +406,12 @@
 			position: relative;
 			border-radius: 20px;
 			
-			@include bp(small){
+			@include bp(small) {
 				height: 40px;
 
 			}
-			@include bp(large){
-				height: 30px;
+			@include bp(large) {
+				height: 35px;
 			}
 			.close {
 				color: $c-grey-med;
@@ -389,7 +420,7 @@
 				@include font-size(12);
 				right: 0;
 				top: 0;
-				@include bp(small){
+				@include bp(small) {
 					padding: 12px;
 				}
 			}
@@ -408,11 +439,11 @@
 			background-color: $c-white;
 			color: $c-grey-med;	
 
-			@include bp(small){
+			@include bp(small) {
 				width: 80%;
 
 			}
-			@include bp(medium){
+			@include bp(medium) {
 				width: 75%;
 			}
 			p {
@@ -420,7 +451,7 @@
 				@include line-height(22);
 				margin: 1rem auto;
 
-				@include bp(small){
+				@include bp(small) {
 					letter-spacing: 0;
 					@include font-size(18);
 					@include line-height(24);
@@ -442,5 +473,62 @@
 				}
 			}
 		}
+	}
+}
+
+#manhome {
+	@include bp(small) {
+		.modal-container {
+			.modal {
+				top: 55%;
+				overflow: scroll;
+				height: 715px;
+				width: 60%;
+
+				@include bp(medium) {
+					width: 75%;
+					height: 600px;
+				}
+
+				.statement-body-modal {
+					display: flex;
+					flex-flow: column nowrap;
+					width: 100%;
+					margin: 0 auto;
+					flex: 1 0 auto;
+					justify-content: space-between;
+					color: $c-grey-med;
+					p {	
+						line-height: 1.3;
+						margin-bottom: 1.2rem;
+						em {
+							font-style: italic;
+						}
+					}
+
+					@include bp(small) {
+						flex-flow: row nowrap;
+					}
+ 
+					.statement-col-left {
+						width: 75%;
+						@include bp(small) {
+							width: 40%;	
+							margin: 0 auto;
+							
+						}
+					}
+
+					.statement-col-right {
+						width: 75%;
+						@include bp(small) {
+							width: 40%;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+		}
+		
 	}
 }
