@@ -7,12 +7,13 @@
 	flex-flow: column nowrap;
 	width: 100%;
 	height: auto;
-	margin: 40px auto;
+	margin: 40px auto 20px auto;
 	
 	@include bp(small) {
 		flex-flow: row wrap;
 		height: auto;
 		margin-top: 10px;
+		margin: 40px auto 0 auto;	
 	}
 	@include bp(medium) {
 		flex-flow: row wrap;
@@ -324,15 +325,13 @@
 	@include font-size(18);
 	max-width: 25%;
 	height: 30px;
-	display: flex;
-    padding: 0 ;
 	color: $c-grey-med;
 	border-left: 1px solid $c-grey-med;
 	text-transform: lowercase;
 
 	@include bp(small) {
 		height: 35px;
-		margin: 0;
+		margin-top: 30px;
 	}
 	p {
 	    padding: 0 10px 0 5px;
@@ -420,6 +419,12 @@
 				@include font-size(12);
 				right: 0;
 				top: 0;
+				border: 1px solid $c-white;
+				&:hover {
+					background-color: $c-white;
+					border-bottom: 1px solid $c-green-kelly;
+					color: $c-green-kelly;
+				}
 				@include bp(small) {
 					padding: 12px;
 				}
@@ -431,52 +436,71 @@
 			
 
 		}
-		.statement-body {
-			width: 90%;
-			margin: 0 auto;
-			text-align: left;
-			font-size: 0.8rem;
-			background-color: $c-white;
-			color: $c-grey-med;	
+	}
+}
+.statement-body {
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 0.8rem;
+	background-color: $c-white;
+	color: $c-grey-med;	
 
-			@include bp(small) {
-				width: 80%;
+	@include bp(small) {
+		width: 80%;
 
-			}
-			@include bp(medium) {
-				width: 75%;
-			}
-			p {
-				letter-spacing: 0.02rem;
-				@include line-height(22);
-				margin: 1rem auto;
+	}
+	@include bp(medium) {
+		width: 75%;
+	}
+	p {
+		letter-spacing: 0.02rem;
+		@include line-height(22);
+		margin: 1rem auto;
 
-				@include bp(small) {
-					letter-spacing: 0;
-					@include font-size(18);
-					@include line-height(24);
-				}
-			}
-			span {
-				border-bottom:1px solid $c-grey-med;
-				color: $c-grey-med;
-				text-decoration: none;
+		@include bp(small) {
+			letter-spacing: 0;
+			@include font-size(18);
+			@include line-height(24);
+		}
+	}
+	span {
+		border-bottom:1px solid $c-grey-med;
+		color: $c-grey-med;
+		text-decoration: none;
 
-				&:hover {
-					color:$c-orange-light;
-					border-bottom:1px solid $c-orange-light;
-				} 
-				a {
-					&:hover{
-						color: $c-orange-light;
-					}
-				}
+		&:hover {
+			color:$c-orange-light;
+			border-bottom:1px solid $c-orange-light;
+		} 
+		a {
+			&:hover{
+				color: $c-orange-light;
 			}
 		}
 	}
 }
 
 #manhome {
+	.project-name {
+		padding-top: 7px;
+	}
+
+	.open-statement {
+		display: none;
+
+		@include bp(small) {
+			display: block;
+			@include font-size(18);
+			max-width: 25%;
+			height: 35px;
+			padding: 7px 10px 0 5px;
+			color: $c-grey-med;
+			border-left: 1px solid $c-grey-med;
+			text-transform: lowercase;
+		}
+	}
+
 	@include bp(small) {
 		.modal-container {
 			.modal {
@@ -496,7 +520,7 @@
 					width: 100%;
 					margin: 0 auto;
 					flex: 1 0 auto;
-					justify-content: space-between;
+					justify-content: space-between;    
 					color: $c-grey-med;
 					p {	
 						line-height: 1.3;
@@ -530,5 +554,45 @@
 			}
 		}
 		
+	}
+}
+
+#manhome-about {
+	.main-content {
+		@include bp(small) {
+			max-width: 50%;
+		}
+		@include bp(medium) {
+			width: 100%
+		}
+
+		a {
+			.btn-back {
+				margin-top: 0.3rem;
+					&:hover {
+					border-bottom: 1px solid $c-green-kelly;
+					border-left: 1px solid $c-green-kelly;
+				}
+				p {
+					text-transform: capitalize;
+				}
+			}
+		}	
+		.statement-body {
+			width: 100%;
+			display: flex;
+			flex-flow: column nowrap;
+			@include bp(small ) {
+				max-width: 50%;
+			}
+			@include bp(medium) {
+				max-width: 30rem;
+			}
+
+			p {
+				font-size: 1rem;	
+				@include line-height(30);
+			}
+		}
 	}
 }
