@@ -334,13 +334,14 @@
 		// margin-top: 30px;
 	}
 	p {
-	    padding: 0 10px 0 5px;
+	    padding: 0 20px 0 20px;
 	}
 }
 
 #manhome {
 	.main-content {
 		.about{
+			border-left: 1px solid $c-grey-med;
 			display: none;
 			@include bp(small) {
 				display: block;
@@ -494,7 +495,7 @@
 			@include font-size(18);
 			max-width: 25%;
 			height: 35px;
-			padding: 7px 10px 0 5px;
+			padding: 7px 20px 0 20px;
 			color: $c-grey-med;
 			border-left: 1px solid $c-grey-med;
 			text-transform: lowercase;

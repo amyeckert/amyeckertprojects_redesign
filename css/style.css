@@ -1119,9 +1119,10 @@ form {
     .about {
       height: 35px; } }
   .about p {
-    padding: 0 10px 0 5px; }
+    padding: 0 20px 0 20px; }
 
 #manhome .main-content .about {
+  border-left: 1px solid #6b6b6b;
   display: none; }
   @media only screen and (min-width: 700px) {
     #manhome .main-content .about {
@@ -1251,7 +1252,7 @@ form {
       font-size: 18px;
       max-width: 25%;
       height: 35px;
-      padding: 7px 10px 0 5px;
+      padding: 7px 20px 0 20px;
       color: #6b6b6b;
       border-left: 1px solid #6b6b6b;
       text-transform: lowercase; } }
