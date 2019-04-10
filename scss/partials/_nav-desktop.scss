@@ -32,9 +32,11 @@
 					display      : block;
 					height       : 100%;
 					padding      : 20px 5px;
-					@include font-size(14);
+					// @include font-size(14);
 			    	border-bottom: 1px solid $c-grey-med;
-			    	transition   : all 0.2s;
+					transition   : all 0.2s;
+					
+					font-family: $f-logo;
 				}
 				&:visited {
 					color: $c-grey-med;

@@ -10,34 +10,53 @@
 	  -moz-box-sizing: inherit;
 	  box-sizing: inherit;
 }
-.clear {  	
-	clear:both;
-	margin:0;
-	padding:0;
-	
-}
+
 html { 
 	height: 100vh;
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	height: 100%;
-	margin: 0;
-	padding-top: 65px;
-	font-family: $f-text;
-
-	@include bp-arb(500) {
-		padding-top: 70px;
-	}
-	
-	&#contact {
-		overflow: hidden;
-	}
+	font-family: $f-body;
 }
+
+
+
+nav ul li a { 
+	font-size: $base-font-size;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+   	margin:0;
+	padding:0;
+}
+
+section {	
+	height:100%;
+}
+
+div, p {
+	margin:0;
+	padding:0;
+}
+
+/* ------------ LINKS-------------------------------*/
+
+a { 
+	text-decoration: none; 
+	color: $c-text;
+
+}
+
 .wrapper {
-	max-width: 90%;
-	min-height: 100vh;
+	// max-width: 90%;
+	// min-height: 100vh;
 	margin: 0 auto;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -48,28 +67,13 @@ body {
 
 	@include bp(xsmall) {
 		margin: 0 auto;
-		min-height: 100vh;
+		// min-height: 100vh;
 	}
 	@include bp(large) {
-		margin: 1% auto;
+		// margin: 1% auto;
 	}
 }
-nav ul li a { font-size: 1.2rem;}
-ul {
-	list-style: none;
-}
-img {
-   	margin:0;
-	padding:0;
-}
-section {	
-	height:100%;
-}
 
-div, p {
-	margin:0;
-	padding:0;
-}
 button {
 	outline: none;
 	background-color: $c-white;
@@ -100,7 +104,7 @@ button {
 	p {
 		display: block;
 		padding: 0 10px 0 5px;
-		@include font-size(18);	
+		// @include font-size(18);	
 		text-transform: lowercase;
 
 	}
@@ -108,181 +112,15 @@ button {
 		height: 15px;
 	}
 }
-/* ------------ LINKS-------------------------------*/
-
-a { text-decoration: none; }
-/* ------------- HEADER -----------------------------*/
-
-header {
-	display: flex;
-	flex-flow: column nowrap;
-	order: 1;
-	z-index: 1;	
-	max-width: 100%;
-	min-width: 140px;
-	height: 110px;
-	margin: 0 auto;
-	padding: 3% 5% 0 5%;	
-	position: fixed;
-	top: 0;
-	left: 0; 
-	background-color: $c-white;
-	transition: top 0.2s ease-in-out;
-
-	@include bp(xsmall) {
-		padding: 2% 5% 0 5%;
-	}
-	@include bp(small) {
-		height: 70px;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		
-	}
-	@include bp(medium) {
-		justify-content: space-between;
-		width: 100%;
-		padding: 1%;
-		height: 90px;
-	}
-			
-	.logo {
-		order: 1;
-		width: 100%;
-
-		@include bp-arb(500) {
-			width: 75%;
-		}
-		@include bp(small) {
-			width: 50%;
-		}
-		@include bp(medium) {
-			margin: 0;
-		}
-		@include bp(large) {
-			height: 58px;
-		}
-
-		a {
-			display: block;
-			height: 100%;
-		}
-		img {
-			display: block;
-			width: 100%;
-
-			@include bp-arb(500) {
-				width: 80%;
-			}
-		
-			@include bp(medium) {
-				width: 80%;
-			    margin: 0 auto;
-			}
-			@include bp(large) {
-				width: 450px;
-				margin: 0 0 0 5%;
-			}
-		}
-	}
-
-    .menu-mobile {
-    	height: 30px;
-	    width: 100%;
-		margin: 5px auto;
-		order: 2;
-		justify-content: center;
-
-		@include bp(xsmall) {
-		 	display: flex;
-		 	flex-flow: row nowrap;
-		 	width: 100%;
-		}
-		@include bp-arb(500) {
-			width: 100%;
-		}
-		@include bp(small) {
-			// margin: 0 0 0 30px;
-			height: 45px;
-			width: 50%;
-			
-		}
-		@include bp(medium) {
-			display: none;
-		}
-		.page-location {
-			display: flex;
-			align-items: center;
-			order: 1;
-			margin: 0 10px;
-			padding: 5px 0;
-			height: 30px;
-			min-width: 125px;
-			color: $c-grey-med;
-			border-left: 1px solid $c-grey-med;
-			
-			@include bp(small) {
-				padding: 0 ;
-				margin: 0 ;
-			}
-			p {
-				display: block;
-				padding: 0 0 0 5px;
-				@include font-size(18);	
-				text-transform: lowercase;
-			}
-		}
-
-		a { 	
-			display: block;
-			order: 1;
-			height: 100%;
-			float: left;
-			height: 30px;
-
-			@include bp(small) {
-		    	height: 30px;
-			    padding: 0;
-		    	margin: 0 0 0 20px;
-			}
-		}
-
-		.menu-toggle {
-	    	display: block;
-	    	@include font-size(18);
-	    	color: $c-grey-med;
-	    	height: 100%;
-	    	width: 100%;
-	    	order: 2;
-	    	padding: 5px 0 0 0 ;
-	    	text-align: right;
-    		text-transform: uppercase;
-    
-    		@include bp-arb(500) {
-    		
-    		}
-    		@include bp(small) {
-    		    padding: 8px 10px;
-				border: none;
-    		}
-		}
-	}
-	.nav-up {
-		top: $nav-up;	
-	}
-	.nav-down{
-		top: $nav-down;
-	}
-}
 
 //------------------ ABOUT PAGE ------------------------*/
 
 #about .main-content {
-	@include bp(medium) {
-		max-height: 100vh;
-		margin-top: 50px;
-		overflow: hidden;
-	}	
+	// @include bp(medium) {
+	// 	max-height: 100vh;
+	// 	margin-top: 50px;
+	// 	overflow: hidden;
+	// }	
 }
 .bio {
 	display: flex;
@@ -314,7 +152,7 @@ header {
 	    	border-left: 1px solid $c-grey-med;
 		}
 		p {
-			@include line-height(23);
+			// @include line-height(23);
 			margin-bottom: 4%;
 		}
 	}
@@ -463,8 +301,8 @@ header {
 			text-align: center;
 			color: $c-grey-med; 
 			padding: 15px 10px;
-			@include font-size(14);
-			@include line-height(20);
+			// @include font-size(14);
+			// @include line-height(20);
 			background-color: transparent;
 			transition: all 0.2s;
 			&:hover {
@@ -476,8 +314,8 @@ header {
 			 	color: $c-white;
 		 	}
 		 	@include bp(small) {
-		 		@include font-size(18);
-		 		@include line-height(25);
+		 		// @include font-size(18);
+		 		// @include line-height(25);
 				margin-top: 50%;
 				transform: translateY(-50%);
 		 	}	
@@ -534,7 +372,7 @@ form {
 		background-color: transparent;
 		color: $c-grey-med;
 		border: 1px solid $c-grey-med;
-		@include font-size(18);	
+		// @include font-size(18);	
 
 		@include bp(small) {
 			padding: 7px;
@@ -580,84 +418,5 @@ form {
 		box-shadow: none;
 		outline: 1px solid $c-green-olive;
 		font-size:1rem;   
-	}
-}
-
-.footer-top {
-	display: block;
-	width: 100%;
-
-	@include bp(small) {
-		display: flex;
-		flex-direction: row nowrap;
-		align-items: center;
-
-	}
-	// -------- SHARE / SOCIAL MEDIA -----------------//
-	.share {
-		display: block;
-		width: 100%;
-		order: 8;
-		flex: 0 1 auto;
-
-		@include bp(small) {
-			width: 200px;
-			border-left: 1px solid $c-grey-med;
-			height: 30px;
-		}
-
-		ul {
-			padding: 0;
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: space-around;
-
-			@include bp(small) {
-				height: 30px;
-			}
-
-			a { display: block;
-				height: 100%;
-				width: 100%;
-
-				svg {
-					height: 30px;
-					width: 30px;
-					padding: 2px;	
-				}
-				@include bp(small) {
-					max-height: 25px;
-				}
-			}
-
-		}
-	}
-
-	// ------- COPYRIGHT NOTICE-----------------//
-	.copyright-notice {
-		order: 9;
-		width: 100%;
-		margin: 25px auto;
-		color: $c-grey-med;
-		display: flex;
-		align-items: center;
-		
-		.copyright{
-		    width: 60%;
-    		margin: 0 auto;
-			text-align: center;
-			@include font-size(14);
-
-			@include bp(small) {
-				text-align: left;
-				margin: 0;
-			}
-
-		}
-
-		@include bp(small) {
-			height: 30px;
-
-		}
 	}
 }

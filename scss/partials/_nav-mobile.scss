@@ -1,7 +1,7 @@
 //-------- FOOTER MENU AS MOBILE MENU -------------------*/
 
 .options-menu-horizontal {
-    font-family: $f-text;
+    font-family: $f-body;
     text-align: center;
     display: none;
     background-color: $c-white;
@@ -59,15 +59,15 @@
     				height: 100%;
 					color: $c-white;
 					text-decoration: none;
-					@include font-size(14);
+					// @include font-size(14);
 	    				padding-top: 1rem;
 
 					@include bp(xsmall) {
-	    				@include font-size(16);
+	    				// @include font-size(16);
 	    				padding-top: 1rem;	
 					}
 					@include bp(medium) {
-						@include font-size(20);
+						// @include font-size(20);
 						padding-top: 1rem;
 
 					}

@@ -1,0 +1,140 @@
+
+.header {
+    background-color: $c-white;
+	grid-area: header;
+    transition: top 0.2s ease-in-out;
+	margin-bottom: 2rem;
+	height: 10rem;
+
+    .nav_secondary,
+    .nav_main {
+		display: block;
+		height: 100%;
+		// grid-column: col-1;
+        display: block;
+		font-family: $f-title;
+		
+        a {
+            color: $c-text;
+
+        }
+
+    } 
+
+    .nav_main {
+		display: block;
+		height: 100%;
+        grid-column: col-3;
+        grid-row: row-2/span row-5; 
+
+    }
+
+    .nav_secondary {
+        grid-column: col-1;
+		grid-row: row-2/span row-5; 
+		
+    }
+
+    .logo {
+        display: block;
+        text-align: center;
+        padding-top: 6%;
+        grid-column: col-5;
+        grid-row: row-2/span row-5;
+        justify-self: center;
+    }
+
+    .menu-mobile {
+    	height: 30px;
+	    width: 100%;
+		margin: 5px auto;
+		order: 2;
+		justify-content: center;
+
+		@include bp(xsmall) {
+		 	display: flex;
+		 	flex-flow: row nowrap;
+		 	width: 100%;
+		}
+		@include bp-arb(500) {
+			width: 100%;
+		}
+		@include bp(small) {
+			// margin: 0 0 0 30px;
+			height: 45px;
+			width: 50%;
+			
+		}
+		@include bp(medium) {
+			display: none;
+        }
+        
+		.page-location {
+			display: flex;
+			align-items: center;
+			order: 1;
+			margin: 0 10px;
+			padding: 5px 0;
+			height: 30px;
+			min-width: 125px;
+			color: $c-grey-med;
+			border-left: 1px solid $c-grey-med;
+			
+			@include bp(small) {
+				padding: 0 ;
+				margin: 0 ;
+			}
+			p {
+				display: block;
+				padding: 0 0 0 5px;
+				// @include font-size(18);	
+				text-transform: lowercase;
+			}
+		}
+
+		a { 	
+			display: block;
+			order: 1;
+			height: 100%;
+			float: left;
+			height: 30px;
+
+			@include bp(small) {
+		    	height: 30px;
+			    padding: 0;
+		    	margin: 0 0 0 20px;
+			}
+		}
+
+		.menu-toggle {
+	    	display: block;
+	    	// @include font-size(18);
+	    	color: $c-grey-med;
+	    	height: 100%;
+	    	width: 100%;
+	    	order: 2;
+	    	padding: 5px 0 0 0 ;
+	    	text-align: right;
+    		text-transform: uppercase;
+    
+    		@include bp-arb(500) {
+    		
+    		}
+    		@include bp(small) {
+    		    padding: 8px 10px;
+				border: none;
+    		}
+		}
+	}
+	.nav-up {
+		top: $nav-up;	
+	}
+	.nav-down{
+		top: $nav-down;
+	}
+
+}
+
+
+
+

@@ -1,0 +1,43 @@
+.case-study {
+
+    .case-study_title {
+        display: block;
+        font-family: $f-body;
+        grid-column: col-2/span col-5;
+    }
+
+    .case-study_img {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        
+    }
+
+    .case-study_section {
+        grid-column: col-2/span col-5;
+        display: flex;
+        flex-flow: row nowrap;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        height: auto;
+        border-image: linear-gradient(90deg, $c-text, $c-text, $c-white, transparent) 30;
+        border-image-width: 1px 0 0 0; 
+        
+    }
+    .case-study_line {
+        border: 1px solid $c-text;
+        height: 1px;
+    }
+
+    .case-study_headline,
+    .case-study_text {
+        width: 50%;
+    }
+
+    .case-study_text {
+
+    }
+
+
+}

@@ -11,10 +11,15 @@ $MQs: true;
 ********************/
 @import 'partials/variables';
 @import 'partials/mixins';
-@import 'partials/page-base';
+@import 'partials/base';
 @import 'partials/page-front.scss';
 @import 'partials/page-project.scss';
 @import 'partials/nav-mobile';
 @import 'partials/nav-desktop';
 @import 'partials/video';
 @import 'partials/utilities';
+@import 'partials/typography';
+@import 'partials/grid-layout';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/module-section';
