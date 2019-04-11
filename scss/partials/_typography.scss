@@ -1,14 +1,15 @@
 .h1, ,h2, h3, h4, h5 {
-    font-family: $f-body;
     font-weight: bold;
     color: $c-text;
 }
 
 .h1 {
     font-size: $h1-font-size;
+    margin-bottom: 2rem;
 }
 .h2 {
     font-size: $h2-font-size;
+    margin-bottom: 1.5rem;
 }
 
 .h3 {
@@ -28,4 +29,15 @@
     font-family: $f-logo;
     font-size: 55px;
     color: $c-text;
+}
+
+blockquote {
+    font-style: italic;
+    max-width: 75%;
+    color: $c-grey-med;
+}
+cite, .label {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: $c-grey-med;
 }

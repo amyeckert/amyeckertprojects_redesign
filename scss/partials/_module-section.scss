@@ -6,38 +6,74 @@
         grid-column: col-2/span col-5;
     }
 
-    .case-study_img {
-        width: 100%;
-        img {
-            width: 100%;
-        }
-        
-    }
+}
 
-    .case-study_section {
-        grid-column: col-2/span col-5;
-        display: flex;
-        flex-flow: row nowrap;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        height: auto;
-        border-image: linear-gradient(90deg, $c-text, $c-text, $c-white, transparent) 30;
-        border-image-width: 1px 0 0 0; 
-        
-    }
-    .case-study_line {
+// ---headlline with half-width text block--- //
+.headline-block_section {
+    grid-column: col-2/span col-5;
+    display: flex;
+    flex-flow: row nowrap;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    height: auto;
+    border-image: linear-gradient(90deg, $c-text, $c-coral, $c-yellow, transparent) 30;
+    border-image-width: 1px 0 0 0; 
+    
+    .headline-block_line {
         border: 1px solid $c-text;
         height: 1px;
     }
 
-    .case-study_headline,
-    .case-study_text {
+    .headline-block_headline,
+    .headline-block_text {
         width: 50%;
     }
+    .headline-block_text {
+    
+    }
+}
+ //------text-block full width----//
+.text-block_section {
+    margin: 2rem 0 4rem 0;
 
-    .case-study_text {
+    .text-block_text {
 
     }
+}
 
+//---------- image block---------- //
+.image-block_section {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 2rem 0;
+
+    figure {
+        width: 100%;
+        img {
+           width: 100%;   
+        }
+
+        figcaption {
+            font-style: italic;
+            color: $c-grey-med;
+            font-size: 0.9rem;
+        }
+    }
 
 }
+.image-block_section--full {
+}
+.image-block_section--half {
+    figure {
+        width: 50%;
+
+        figcaption {
+
+        }
+    }
+}
+
+
+
+

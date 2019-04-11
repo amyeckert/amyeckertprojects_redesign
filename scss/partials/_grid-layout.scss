@@ -45,13 +45,14 @@
 .breadcrumbs {
     grid-column: col-2/span col-5;
     grid-row: row-2;
-
     height: 2rem;
     margin-bottom: 2rem;
     
     .breadcrumbs-inline {
-
-		span {
+        
+        span,
+        span a  {
+            color: $c-grey-med;
 			font-family: $f-title;
 			font-style: italic;
 		}
@@ -66,7 +67,7 @@
     
     .page-content {
         grid-column: col-2 /span col-5;
-         background-color: $c-coral;
+        //  background-color: $c-coral;
     }
 }
 
