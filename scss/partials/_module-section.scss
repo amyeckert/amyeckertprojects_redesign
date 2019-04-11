@@ -1,27 +1,18 @@
-.case-study {
 
-    .case-study_title {
-        display: block;
-        font-family: $f-body;
-        grid-column: col-2/span col-5;
-    }
+// ---HEADLINE AND HALF-WIDTH TEXT BLOCK --- //
 
-}
-
-// ---headlline with half-width text block--- //
 .headline-block_section {
     grid-column: col-2/span col-5;
     display: flex;
-    flex-flow: row nowrap;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
+    flex-flow: row wrap;
+    margin-top: 4r0em;
+    padding-bottom: 1rem;
     height: auto;
-    border-image: linear-gradient(90deg, $c-text, $c-coral, $c-yellow, transparent) 30;
-    border-image-width: 1px 0 0 0; 
     
     .headline-block_line {
-        border: 1px solid $c-text;
-        height: 1px;
+        border: 1px solid $c-grey-med;
+        width: 58%;
+        margin-bottom: 3rem;
     }
 
     .headline-block_headline,
@@ -32,7 +23,13 @@
     
     }
 }
- //------text-block full width----//
+
+.headline-block_section--about {
+    height: auto;
+    display: none;
+}
+
+//------text-block full width----//
 .text-block_section {
     margin: 2rem 0 4rem 0;
 
@@ -62,8 +59,10 @@
     }
 
 }
+
 .image-block_section--full {
 }
+
 .image-block_section--half {
     figure {
         width: 50%;
@@ -73,6 +72,13 @@
         }
     }
 }
+
+.image-block_section--thirds {
+    figure {
+        width: 33.3%;
+    }
+}
+
 
 
 

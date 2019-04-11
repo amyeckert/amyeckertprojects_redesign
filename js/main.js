@@ -133,7 +133,7 @@
                 // Change visibility of .thumbs to hidden 
                 thumbs.style.display= 'none';
                 cNav.style.order    = 4; 
-                cNav.style.display  = 'flex';
+                cNav.style.display  = 'block';
 
                 $('.next').show();
                 $('.previous').show();

@@ -45,6 +45,19 @@
     @media only screen and (min-width: #{$val}px) { @content; }
   }
 }
+
+
+
+@mixin btn-hover($color) {
+  background-color: darken($color, 15%);
+  border-color: darken($color, 15%);
+  text-decoration: none; 
+  transition: all, 0.4s;
+  color: $white;
+}
+
+
+
 // $pixelSize: 16;
 // @mixin font-size($pixelSize: $base-font-size) {
 //   font-size: #{$pixelSize / $base-font-size}rem;

@@ -118,13 +118,6 @@ button {
 
 //------------------ ABOUT PAGE ------------------------*/
 
-#about .main-content {
-	// @include bp(medium) {
-	// 	max-height: 100vh;
-	// 	margin-top: 50px;
-	// 	overflow: hidden;
-	// }	
-}
 .bio {
 	display: flex;
 	order: 2;
@@ -423,3 +416,5 @@ form {
 		font-size:1rem;   
 	}
 }
+
+

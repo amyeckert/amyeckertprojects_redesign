@@ -1,6 +1,7 @@
 
 .header {
     background-color: $c-white;
+    background-color: transparent;
 	grid-area: header;
     transition: top 0.2s ease-in-out;
 	margin-bottom: 2rem;
