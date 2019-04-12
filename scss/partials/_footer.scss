@@ -7,15 +7,23 @@
 	padding-top: 1rem;
 	font-family: $f-title;
 	border-top: 1px solid $c-grey-med;
-	height: 11.5rem;
+	height: 14rem;
 
 	li {
-		margin-bottom: 0;
+		margin-bottom: 0.2rem;
 	}
 	
 	a {
 		font-size: $h4-font-size;
 		color: $c-text;
+		padding: 0.2rem;
+		background-color: transparent;
+		transition: background-color 0.5s;
+		border-radius: 5px;
+		
+		&:hover {
+			background-color: $c-coral;
+		}
 	}
 	
 	p {
@@ -53,9 +61,14 @@
 				display: block;
 				height: 100%;
 				width: 100%;
+				transition: none;
 
 				@include bp(small) {
 					max-height: 25px;
+				}
+
+				&:hover {
+					background-color: transparent;
 				}
 			}
 

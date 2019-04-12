@@ -24,7 +24,7 @@
 			    display    : flex;
 			    flex       : 1 1 auto;
 			    align-items: center;
-			    padding    : 0;
+			    padding    : 0.5rem;
 			    height     : 100%;
 			}
 			a {
@@ -32,7 +32,7 @@
 					display      : block;
 					height       : 100%;
 					padding      : 20px 5px;
-					// @include font-size(14);
+					padding    : 0.5rem;
 			    	border-bottom: 1px solid $c-grey-med;
 					transition   : all 0.2s;
 					
@@ -43,47 +43,48 @@
 				}
 				&:hover {
 					color: $c-white;
+					background-color: $c-coral;
 				}
 			}
 		}
 	}
 }
-.nav-design a{
-	&:hover{
-		background-color: $c-teal;
-		border-bottom   : 1px solid $c-teal;
-	}
-}
-.nav-interactive a{
-	&:hover {
-		background-color: $c-orange-light;
-		border-bottom   : 1px solid $c-orange-light;
-	}
-}
-.nav-photo a {
-	&:hover {
-		background-color: $c-purple;
-		border-bottom   : 1px solid $c-purple;
-	}
-}
-.nav-mixed a{
-	&:hover {
-		background-color: $c-blue-med;
-		border-bottom   : 1px solid $c-blue-med;
-	}
-}
-.nav-about a{
-	&:hover {
-		background-color: $c-green-olive;
-		border-bottom   : 1px solid $c-green-olive;
-	}
-}
-.nav-contact a{
-	&:hover {
-		background-color: $c-green-kelly;
-		border-bottom: 1px solid $c-green-kelly;
-	}
-}
+// .nav-design a {
+// 	&:hover{
+// 		background-color: $c-coral;
+// 		// border-bottom   : 1px solid $c-teal;
+// 	}
+// }
+// .nav-interactive a{
+// 	&:hover {
+// 		background-color: $c-coral;
+// 		// border-bottom   : 1px solid $c-orange-light;
+// 	}
+// }
+// .nav-photo a {
+// 	&:hover {
+// 		background-color: $c-coral;
+// 		// border-bottom   : 1px solid $c-purple;
+// 	}
+// }
+// .nav-mixed a{
+// 	&:hover {
+// 		background-color: $c-coral;
+// 		// border-bottom   : 1px solid $c-blue-med;
+// 	}
+// }
+// .nav-about a{
+// 	&:hover {
+// 		background-color: $c-coral;
+// 		// border-bottom   : 1px solid $c-green-olive;
+// 	}
+// }
+// .nav-contact a{
+// 	&:hover {
+// 		background-color: $c-coral;
+// 		// border-bottom: 1px solid $c-green-kelly;
+// 	}
+// }
 // -----indicate current location -----//
 #design .nav-design a,
 #letters .nav-design a,

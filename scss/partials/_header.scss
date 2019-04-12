@@ -14,12 +14,20 @@
 		font-family: $f-title;
 	
 		li {
-			margin-bottom: 0;
+			margin-bottom: 0.5rem;
 		}
 		
         a {
 			font-size: $h4-font-size;
-            color: $c-text;
+			color: $c-text;
+			padding: 0.5rem;
+			background-color: transparent;
+			transition: background-color 0.3s ease-in-out;
+			border-radius: 5px;
+			
+			&:hover {
+				background-color: $c-coral;
+			}
         }
 
     } 

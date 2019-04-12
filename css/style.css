@@ -182,19 +182,12 @@ button {
     height: 15px; }
 
 .bio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   padding: 0 0 0 0;
-  background-color: #98983e;
-  color: #fff; }
+  color: #14171a; }
   @media only screen and (min-width: 768px) {
     .bio {
       -webkit-box-orient: horizontal;
@@ -241,24 +234,21 @@ button {
         margin-bottom: 0;
         padding: 45px; } }
   .bio a {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #14171a;
     padding: 0;
     margin: 0;
     font-size: 1rem;
-    color: #fff;
+    color: #14171a;
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
     .bio a:hover {
-      border-bottom: 2px solid #fff; }
+      border-bottom: 2px solid #fa584c; }
     .bio a:visited {
       color: #fff; }
     .bio a span {
-      color: #fff; }
+      color: #14171a; }
 
 .btn-cv {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
   display: block;
   margin: 2rem auto;
   max-width: 90%;
@@ -266,12 +256,11 @@ button {
   text-align: center; }
   .btn-cv .cv-pdf {
     padding: 10px 30px;
-    color: #fff;
+    color: #14171a;
     border: 1px solid #fff;
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
     .btn-cv .cv-pdf:hover {
-      color: #98983e;
       background-color: #fff;
       border-bottom: 1px solid #fff; }
   @media only screen and (min-width: 768px) {
@@ -756,13 +745,14 @@ form {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 0;
+      padding: 0.5rem;
       height: 100%; } }
   @media only screen and (min-width: 1024px) {
     .header-nav ul li a {
       display: block;
       height: 100%;
       padding: 20px 5px;
+      padding: 0.5rem;
       border-bottom: 1px solid #2a3037;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
@@ -770,31 +760,8 @@ form {
   .header-nav ul li a:visited {
     color: #2a3037; }
   .header-nav ul li a:hover {
-    color: #fff; }
-
-.nav-design a:hover {
-  background-color: #5f9797;
-  border-bottom: 1px solid #5f9797; }
-
-.nav-interactive a:hover {
-  background-color: #b56618;
-  border-bottom: 1px solid #b56618; }
-
-.nav-photo a:hover {
-  background-color: #8a5cd1;
-  border-bottom: 1px solid #8a5cd1; }
-
-.nav-mixed a:hover {
-  background-color: #4866fb;
-  border-bottom: 1px solid #4866fb; }
-
-.nav-about a:hover {
-  background-color: #98983e;
-  border-bottom: 1px solid #98983e; }
-
-.nav-contact a:hover {
-  background-color: #099949;
-  border-bottom: 1px solid #099949; }
+    color: #fff;
+    background-color: #fa584c; }
 
 #design .nav-design a,
 #letters .nav-design a,
@@ -1226,11 +1193,19 @@ cite, .label {
     font-family: "Josefin Sans", sans-serif; }
     .header .nav_secondary li,
     .header .nav_main li {
-      margin-bottom: 0; }
+      margin-bottom: 0.5rem; }
     .header .nav_secondary a,
     .header .nav_main a {
       font-size: 1.3rem;
-      color: #14171a; }
+      color: #14171a;
+      padding: 0.5rem;
+      background-color: transparent;
+      -webkit-transition: background-color 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out;
+      border-radius: 5px; }
+      .header .nav_secondary a:hover,
+      .header .nav_main a:hover {
+        background-color: #fa584c; }
   .header .nav_main {
     display: block;
     height: 100%;
@@ -1382,12 +1357,19 @@ li a #github-icon {
   padding-top: 1rem;
   font-family: "Josefin Sans", sans-serif;
   border-top: 1px solid #2a3037;
-  height: 11.5rem; }
+  height: 14rem; }
   .footer li {
-    margin-bottom: 0; }
+    margin-bottom: 0.2rem; }
   .footer a {
     font-size: 1.3rem;
-    color: #14171a; }
+    color: #14171a;
+    padding: 0.2rem;
+    background-color: transparent;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    border-radius: 5px; }
+    .footer a:hover {
+      background-color: #fa584c; }
   .footer p {
     margin-bottom: 0; }
   .footer .follow {
@@ -1421,10 +1403,14 @@ li a #github-icon {
       .footer .follow ul a {
         display: block;
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        -webkit-transition: none;
+        transition: none; }
         @media only screen and (min-width: 768px) {
           .footer .follow ul a {
             max-height: 25px; } }
+        .footer .follow ul a:hover {
+          background-color: transparent; }
   .footer .copyright-notice {
     width: 100%;
     margin: 0 auto;
