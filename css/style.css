@@ -496,6 +496,10 @@ form {
   width: 3.75rem; }
 
 .project .open-statement {
+  color: #2a3037;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: italic;
+  padding-top: 1.8rem;
   cursor: pointer; }
 
 .project .carousel-nav {
@@ -1242,8 +1246,7 @@ cite, .label {
       grid-column: col-1;
   -ms-grid-row: row-3;
       grid-row: row-3;
-  height: 5rem;
-  margin-bottom: 2rem;
+  height: 5.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1694,7 +1697,8 @@ cite, .label {
         margin-left: 0;
         margin-top: 0;
         background-size: contain;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        background-position: center; }
       .gallery_section .carousel .big .image-info {
         clear: both;
         -ms-flex-item-align: end;

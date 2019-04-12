@@ -22,6 +22,10 @@
 	}
 
 	.open-statement {
+		color: $c-grey-med;
+		font-family: $f-title;
+		font-style: italic;
+		padding-top: 1.8rem;
 		cursor: pointer;
 	}
 
@@ -89,7 +93,7 @@
 	}
 }
 
-// ABOUT THE PROJECT MODAL ----------------//
+// Statement MODAL ----------------//
 .modal-on {
 	overflow: hidden;
 }

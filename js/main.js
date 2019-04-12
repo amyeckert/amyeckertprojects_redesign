@@ -71,14 +71,19 @@
         //open the modal
         $('.js-modal-open').on('click', function(event) {
             event.preventDefault();
+            console.log("opened modal");
             modal('open');
         });
-
+        
         //close the modal
-        $('.close').on('click', function(event){
-            event.preventDefault();
+        $('.modal-container').on('click', function(event){
             modal('close');
         });
+        
+        $('.close').on('click', function(event){
+            modal('close');
+        });
+
        
         // behaviour for tablet and desktop only ---------------------------------------------------//
         if (width >= 700 ) {
