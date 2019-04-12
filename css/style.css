@@ -495,6 +495,9 @@ form {
   text-align: right;
   width: 3.75rem; }
 
+.project .open-statement {
+  cursor: pointer; }
+
 .project .carousel-nav {
   display: block; }
   .project .carousel-nav .thumbs-only {
@@ -542,14 +545,14 @@ form {
   .modal-container:after {
     content: "";
     position: absolute;
-    background-color: #8a5cd1;
-    opacity: 0.9;
+    background-color: #fff;
+    opacity: 0.7;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0; }
   .modal-container .modal {
-    background-color: #fff;
+    background-color: #e8e8e8;
     width: 90%;
     height: auto;
     margin: 0 auto;
@@ -560,7 +563,8 @@ form {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     text-align: left;
-    z-index: 2; }
+    z-index: 2;
+    padding: 1rem; }
     @media only screen and (min-width: 340px) {
       .modal-container .modal {
         width: 80%;
@@ -570,16 +574,19 @@ form {
         width: 55%; } }
     @media only screen and (min-width: 1024px) {
       .modal-container .modal {
-        top: 40%; } }
+        top: 40%;
+        padding: 2rem; } }
     @media only screen and (min-width: 1200px) {
       .modal-container .modal {
-        width: 40%; } }
+        width: 40%;
+        top: 45%;
+        padding: 3rem; } }
     .modal-container .modal .modal-header {
       height: 15px;
       width: 90%;
       margin: 0 auto;
       position: relative;
-      border-radius: 20px; }
+      margin-bottom: 1rem; }
       @media only screen and (min-width: 768px) {
         .modal-container .modal .modal-header {
           height: 40px; } }
@@ -587,19 +594,25 @@ form {
         .modal-container .modal .modal-header {
           height: 35px; } }
       .modal-container .modal .modal-header .close {
-        color: #2a3037;
+        color: #14171a;
+        width: 5.4rem;
         position: absolute;
-        text-transform: uppercase;
         right: 0;
         top: 0;
-        border: 1px solid #fff; }
-        .modal-container .modal .modal-header .close:hover {
-          background-color: #fff;
-          border-bottom: 1px solid #099949;
-          color: #099949; }
+        border: none;
+        background-color: transparent;
+        text-transform: capitalize;
+        font-size: 1rem;
+        font-style: italic; }
         @media only screen and (min-width: 768px) {
           .modal-container .modal .modal-header .close {
             padding: 12px; } }
+        .modal-container .modal .modal-header .close .icon-close {
+          position: absolute;
+          top: 30%;
+          right: 0;
+          height: 15px;
+          width: 15px; }
     .modal-container .modal .modal-content {
       width: 100%;
       padding: 0 0 1rem 0; }
@@ -1171,7 +1184,8 @@ a.click-whole-box {
   margin-bottom: 1.5rem; }
 
 .h3 {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  margin-bottom: 1.3rem; }
 
 .h4 {
   font-size: 1.3rem; }
@@ -1187,7 +1201,8 @@ a.click-whole-box {
 blockquote {
   font-style: italic;
   max-width: 75%;
-  color: #2a3037; }
+  color: #2a3037;
+  font-size: 1.5rem; }
 
 cite, .label {
   font-style: italic;
@@ -1223,13 +1238,25 @@ cite, .label {
   grid-template-areas: "header  header  header  header  header"  "far-left main main main far-right" "footer footer footer footer footer"; }
 
 .breadcrumbs {
-  -ms-grid-column-span: col-5;
-  -ms-grid-column: col-2;
-      grid-column: col-2/span col-5;
-  -ms-grid-row: row-2;
-      grid-row: row-2;
-  height: 2rem;
-  margin-bottom: 2rem; }
+  -ms-grid-column: col-1;
+      grid-column: col-1;
+  -ms-grid-row: row-3;
+      grid-row: row-3;
+  height: 5rem;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .breadcrumbs .breadcrumbs-inline span,
   .breadcrumbs .breadcrumbs-inline span a {
     color: #2a3037;
@@ -1255,15 +1282,19 @@ cite, .label {
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
   margin-bottom: 2rem;
-  height: 10rem; }
+  height: 8rem; }
   .header .nav_secondary,
   .header .nav_main {
     display: block;
     height: 100%;
     display: block;
     font-family: "Josefin Sans", sans-serif; }
+    .header .nav_secondary li,
+    .header .nav_main li {
+      margin-bottom: 0; }
     .header .nav_secondary a,
     .header .nav_main a {
+      font-size: 1.3rem;
       color: #14171a; }
   .header .nav_main {
     display: block;
@@ -1471,11 +1502,23 @@ cite, .label {
   height: auto; }
   .headline-block_section .headline-block_line {
     border: 1px solid #2a3037;
-    width: 58%;
+    opacity: 0.7;
+    width: 75%;
     margin-bottom: 3rem; }
   .headline-block_section .headline-block_headline,
   .headline-block_section .headline-block_text {
     width: 50%; }
+  .headline-block_section .headline-block_headline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 .headline-block_section--about {
   height: auto;

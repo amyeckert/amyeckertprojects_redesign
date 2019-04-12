@@ -5,19 +5,22 @@
 	grid-area: header;
     transition: top 0.2s ease-in-out;
 	margin-bottom: 2rem;
-	height: 10rem;
+	height: 8rem;
 
     .nav_secondary,
     .nav_main {
 		display: block;
 		height: 100%;
-		// grid-column: col-1;
         display: block;
 		font-family: $f-title;
 		
+		li {
+			margin-bottom: 0;
+		}
+		
         a {
+			font-size: $h4-font-size;
             color: $c-text;
-
         }
 
     } 

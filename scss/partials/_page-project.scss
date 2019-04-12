@@ -9,19 +9,20 @@
 }
 
 .project {
+
 	.project_header {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: space-between;
 	}
-	.headline-block_section--about {
-
-	}
 
 	.project_header-info {
 		text-align: right;
-		// background-color: $c-yellow;
 		width: 3.75rem;
+	}
+
+	.open-statement {
+		cursor: pointer;
 	}
 
 	.carousel-nav  {
@@ -104,8 +105,8 @@
 	&:after {
 		content: "";
 		position: absolute;
-		background-color: $c-purple;
-		opacity: 0.9;
+		background-color: $c-white;
+		opacity: 0.7;
 		top: 0;
 		left: 0;
 		bottom: 0;
@@ -113,7 +114,7 @@
 	}
 
 	.modal {
-		background-color: $c-white;
+		background-color: $c-grey-light;
 		width: 90%;
 		height: auto;
 		margin: 0 auto;
@@ -123,58 +124,69 @@
 		transform: translateY(-50%); 
 		text-align: left;
 		z-index: 2;
-
+		padding: 1rem;
+		
 		@include bp(xsmall) {
 			width: 80%;
 			top: 50%;
 		}
 		@include bp(small) {
 			width: 55%;
-
+			
 		}
 		@include bp(medium) {
 			top: 40%;
+			padding: 2rem;
 		}
 		@include bp(large) {
 			width: 40%;
+			top: 45%;
+			padding: 3rem;
 		}
 		.modal-header {
 			height: 15px;
 			width: 90%;
 			margin: 0 auto;
 			position: relative;
-			border-radius: 20px;
+			margin-bottom: 1rem;
 			
 			@include bp(small) {
 				height: 40px;
+			}
 
-			}
 			@include bp(large) {
-				height: 35px;
+				height: 35px;	
 			}
+
 			.close {
-				color: $c-grey-med;
+				color: $c-text;
+				width: 5.4rem;
 				position: absolute;
-				text-transform: uppercase;
-				// @include font-size(12);
 				right: 0;
 				top: 0;
-				border: 1px solid $c-white;
-				&:hover {
-					background-color: $c-white;
-					border-bottom: 1px solid $c-green-kelly;
-					color: $c-green-kelly;
-				}
+				border: none;
+				background-color: transparent;
+				text-transform: capitalize;
+				font-size: $base-font-size;
+				font-style: italic;
+
 				@include bp(small) {
 					padding: 12px;
 				}
+
+				.icon-close {
+					position: absolute;
+					top: 30%;
+					right: 0;
+					height: 15px;
+					width: 15px;
+				}
 			}
 		}
+
 		.modal-content {
 			width: 100%;
 			padding: 0 0 1rem 0 ;
-			
-
 		}
 	}
 }
