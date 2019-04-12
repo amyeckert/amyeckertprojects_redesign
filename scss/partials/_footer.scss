@@ -1,23 +1,37 @@
-.footer-top {
-	display: block;
+.footer {
+	display: flex;
+	flex-direction: row nowrap;
+	justify-content: space-between;
 	width: 100%;
+	align-items: flex-start;
+	padding-top: 1rem;
+	font-family: $f-title;
+	border-top: 1px solid $c-grey-med;
+	height: 11.5rem;
 
-	@include bp(small) {
-		display: flex;
-		flex-direction: row nowrap;
-		align-items: center;
-
+	li {
+		margin-bottom: 0;
 	}
-	// -------- SHARE / SOCIAL MEDIA -----------------//
-	.share {
+	
+	a {
+		font-size: $h4-font-size;
+		color: $c-text;
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
+
+
+	// -------- FOLLOW / SOCIAL MEDIA -----------------//
+	.follow {
 		display: block;
 		width: 100%;
-		order: 8;
 		flex: 0 1 auto;
+		margin-bottom: 1rem;
 
 		@include bp(small) {
 			width: 200px;
-			border-left: 1px solid $c-grey-med;
 			height: 30px;
 		}
 
@@ -25,21 +39,21 @@
 			padding: 0;
 			display: flex;
 			flex-flow: row nowrap;
-			justify-content: space-around;
+			width: 60%;
+			margin: 0 auto;
+			justify-content: space-between;
 
 			@include bp(small) {
 				height: 30px;
 			}
-
-			a { display: block;
+			li {
+				// margin-right: 1rem;
+			}
+			a { 
+				display: block;
 				height: 100%;
 				width: 100%;
 
-				svg {
-					height: 30px;
-					width: 30px;
-					padding: 2px;	
-				}
 				@include bp(small) {
 					max-height: 25px;
 				}
@@ -50,18 +64,19 @@
 
 	// ------- COPYRIGHT NOTICE-----------------//
 	.copyright-notice {
-		order: 9;
 		width: 100%;
-		margin: 25px auto;
+		margin: 0 auto;
 		color: $c-grey-med;
 		display: flex;
 		align-items: center;
 		
+		@include bp(small) {
+			height: 30px;
+
+		}
+
 		.copyright{
-		    width: 60%;
-    		margin: 0 auto;
 			text-align: center;
-			// @include font-size(14);
 
 			@include bp(small) {
 				text-align: left;
@@ -70,9 +85,12 @@
 
 		}
 
-		@include bp(small) {
-			height: 30px;
+	}
 
-		}
+	.nav_footer-three {
+		height: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
 	}
 }

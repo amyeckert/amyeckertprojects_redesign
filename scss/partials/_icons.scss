@@ -1,0 +1,36 @@
+#thumbnails-icon {
+    height: 25px;
+
+    .cls-1 {
+        fill: $c-grey-med;
+    }
+
+    &:hover {
+        .cls-1 {
+            fill: $c-coral;
+        }	
+    }
+
+} 
+
+li a {
+    #instagram-icon,
+    #linkedin-icon, 
+    #github-icon {
+        height: 30px;
+        width: 30px;
+        padding: 2px;
+        
+        .cls-1 {
+            fill: $c-grey-med;
+        }
+    
+        &:hover {
+            .cls-1 {
+                fill: $c-coral;
+            }	
+        }
+    }
+}
+
+

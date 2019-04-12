@@ -47,8 +47,9 @@ div, p {
 }
 
 p { 
-margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
+
 /* ------------ LINKS-------------------------------*/
 
 a { 
@@ -58,8 +59,6 @@ a {
 }
 
 .wrapper {
-	// max-width: 90%;
-	// min-height: 100vh;
 	margin: 0 auto;
 	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -76,20 +75,6 @@ a {
 		// margin: 1% auto;
 	}
 }
-
-// #icon-close {
-
-// 	g {
-// 		path.icon-close-fill {
-// 			background-color: red;
-
-// 			&:hover {
-// 				cursor: pointer;
-// 				background-color: $c-coral;
-// 			}
-// 		}
-// 	}
-// }
 
 button {
 	outline: none;
@@ -125,6 +110,7 @@ button {
 		text-transform: lowercase;
 
 	}
+	
 	svg {
 		height: 15px;
 	}

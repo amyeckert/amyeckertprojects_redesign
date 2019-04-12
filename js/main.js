@@ -22,7 +22,7 @@
         //   $grid.masonry('layout');
         // }); 
 
-        //clear big image caption
+        // clear big image caption
         $('.big-img-container > figcaption').remove();
 
         //  GLOBAL VARIABLES---------------------------//
@@ -79,7 +79,7 @@
         $('.modal-container').on('click', function(event){
             modal('close');
         });
-        
+
         $('.close').on('click', function(event){
             modal('close');
         });
