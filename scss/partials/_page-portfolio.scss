@@ -1,0 +1,25 @@
+// landing page for grid of all projects
+
+.portfolio_header {
+    background-color: pink;
+}
+
+.project-row {
+    .grid-sizer {
+    }
+    .grid-item {
+        figure {
+            a {
+                display: block;
+                width: 33.33%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                .project-title {
+                }
+            }
+        }
+    }
+}

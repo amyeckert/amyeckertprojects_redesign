@@ -700,6 +700,16 @@ form {
     width: 30px;
     margin-left: 5px; }
 
+.portfolio_header {
+  background-color: pink; }
+
+.project-row .grid-item figure a {
+  display: block;
+  width: 33.33%; }
+  .project-row .grid-item figure a img {
+    width: 100%;
+    height: auto; }
+
 .header-nav {
   display: none; }
   @media only screen and (min-width: 1024px) {
@@ -1185,7 +1195,7 @@ cite, .label {
   grid-area: header;
   -webkit-transition: top 0.2s ease-in-out;
   transition: top 0.2s ease-in-out;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   height: 8rem; }
   .header .nav_secondary,
   .header .nav_main {
@@ -1323,7 +1333,9 @@ cite, .label {
 #thumbnails-icon {
   height: 25px; }
   #thumbnails-icon .cls-1 {
-    fill: #2a3037; }
+    fill: #2a3037;
+    -webkit-transition: fill 0.2s ease-in-out;
+    transition: fill 0.2s ease-in-out; }
   #thumbnails-icon:hover .cls-1 {
     fill: #fa584c; }
 
