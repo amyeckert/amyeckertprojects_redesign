@@ -1,5 +1,4 @@
 .gallery_section {
-
     //----------------- Thumbnail GRID ------------------//
     .grid {
         order: 4;
@@ -9,10 +8,10 @@
         margin: 0 0 0 0;
 
         &:after {
-            content: '';
+            content: "";
             display: block;
             clear: both;
-            }
+        }
         .statement-mobile {
             display: block;
             max-width: 90%;
@@ -30,9 +29,7 @@
             }
             em {
                 font-style: italic;
-
             }
-
         }
 
         @include bp(medium) {
@@ -56,8 +53,8 @@
                 float: left;
                 width: 100%;
                 height: auto;
-                margin-bottom: 5px;	
-                
+                margin-bottom: 5px;
+
                 @include bp(small) {
                     float: none;
                     width: 33.333%;
@@ -66,14 +63,14 @@
                 a {
                     height: 100%;
                     display: block;
-                }	
+                }
                 img {
                     width: 100%;
                     height: auto;
-                    @include bp(small) { 
+                    @include bp(small) {
                     }
                 }
-                figcaption  {
+                figcaption {
                     color: $c-white;
                     display: none;
                     p {
@@ -81,14 +78,14 @@
                         display: none;
                     }
                 }
-                
+
                 .project-title {
                     visibility: visible;
                     display: block;
                     opacity: 0;
                     transition: opacity 0.2s ease-in;
-                
-                    p {	
+
+                    p {
                         display: block;
                         position: absolute;
                         top: 40%;
@@ -101,7 +98,7 @@
                             text-align: right;
                             display: block;
                             letter-spacing: 0.7px;
-                            
+
                             &:visited {
                                 color: $c-grey-med;
                             }
@@ -113,7 +110,7 @@
                         }
                     }
                 }
-                &:hover {		
+                &:hover {
                     .project-title {
                         display: block;
                         visibility: visible;
@@ -124,11 +121,11 @@
                         width: 100%;
                         background-color: $c-green-kelly;
                         opacity: 0.97;
-                
+
                         .show-caption {
                             display: block;
                             color: $c-white;
-                        }	
+                        }
                     }
                 }
             }
@@ -136,10 +133,10 @@
     }
 
     .grid:after {
-        content: '';
+        content: "";
         display: block;
         clear: both;
-      }
+    }
 
     /*---------------------- CAROUSEL -------------------*/
     .carousel {
@@ -175,9 +172,8 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-
             }
-            .image-info { 
+            .image-info {
                 clear: both;
                 align-self: flex-end;
                 display: block;
@@ -185,28 +181,27 @@
                 color: $c-grey-med;
                 // @include font-size(15);
                 visibility: visible;
-                height: 40px; 
+                height: 40px;
                 width: 100%;
                 margin-left: 0;
                 text-align: left;
-                
+
                 @include bp(small) {
                     height: 30px;
                     margin-top: 10px;
-
                 }
                 p {
                     display: inline-block;
                     margin: 0;
                     padding: 10px;
                     &:first-child {
-                        padding-left:0;
+                        padding-left: 0;
                     }
                 }
             }
         }
 
-        .previous, 
+        .previous,
         .next {
             height: 75px;
             width: 75px;
@@ -225,7 +220,6 @@
 
         .next {
             right: -95px;
-            
         }
     }
     //------------------ CAROUSEL CONTROLS ---------------------//
@@ -237,10 +231,10 @@
             height: 35px;
             flex-direction: row;
             order: 6;
-            align-items: stretch;	
-        }	
-            
-        button{ 
+            align-items: stretch;
+        }
+
+        button {
             display: inline-block;
             color: $c-grey-med;
             padding: 0 10px;
@@ -253,7 +247,7 @@
                 display: inline-block;
                 height: 25px;
             }
-                
+
             #thumbnails-icon {
                 @include bp(medium) {
                     height: 30px;
