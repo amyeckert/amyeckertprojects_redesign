@@ -11,6 +11,7 @@
         display: block;
         height: 100%;
         font-family: $f-title;
+        z-index: 2;
 
         li {
             margin-bottom: 0.5rem;
@@ -22,28 +23,65 @@
             padding: 0.5rem;
             text-decoration: none;
             background-color: transparent;
-            border: none;
+            border-bottom: 2px solid transparent;
             -webkit-transition: background-color 0.3s ease-in-out;
             transition: background-color 0.3s ease-in-out;
             border-radius: 5px;
 
             &:hover {
-                background-color: $c-coral;
+                border-bottom: 2px solid $c-coral;
             }
         }
     }
+
     .nav-main,
     .nav-secondary {
         display: block;
         height: 100%;
         grid-row: row-2/span row-5;
     }
+
     .nav_main {
         grid-column: col-5;
     }
 
     .nav_secondary {
         grid-column: col-1;
+    }
+
+    .nav_level-1 {
+        .nav_link--level-1 {
+            a:first-child {
+                display: block;
+                height: 2rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .has-sub-nav {
+        position: relative;
+
+        .nav_level-2 {
+            display: none;
+        }
+
+        &:hover {
+            .nav_level-2 {
+                position: absolute;
+                top: 0;
+                left: 18rem;
+                background-color: $c-coral;
+                border-radius: 0.5rem;
+                display: block;
+                width: 19rem;
+                padding: 1rem;
+
+                a:hover {
+                    font-style: italic;
+                }
+            }
+        }
     }
 
     .logo {
