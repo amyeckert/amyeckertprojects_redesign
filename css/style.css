@@ -1184,7 +1184,7 @@ cite, .label {
   -ms-grid-row-span: row-6;
   -ms-grid-row: row-3;
       grid-row: row-3/span row-6; }
-  .main-content .page-content {
+  .main-content .page_content {
     -ms-grid-column-span: col-5;
     -ms-grid-column: col-2;
         grid-column: col-2 / span col-5; }
@@ -1197,16 +1197,13 @@ cite, .label {
   transition: top 0.2s ease-in-out;
   margin-bottom: 5rem;
   height: 8rem; }
-  .header .nav_secondary,
-  .header .nav_main {
+  .header .nav {
     display: block;
     height: 100%;
     font-family: "Josefin Sans", sans-serif; }
-    .header .nav_secondary li,
-    .header .nav_main li {
+    .header .nav li {
       margin-bottom: 0.5rem; }
-    .header .nav_secondary a,
-    .header .nav_main a {
+    .header .nav a {
       font-size: 1.3rem;
       color: #14171a;
       padding: 0.5rem;
@@ -1216,29 +1213,27 @@ cite, .label {
       -webkit-transition: background-color 0.3s ease-in-out;
       transition: background-color 0.3s ease-in-out;
       border-radius: 5px; }
-      .header .nav_secondary a:hover,
-      .header .nav_main a:hover {
+      .header .nav a:hover {
         background-color: #fa584c; }
-  .header .nav_main {
+  .header .nav-main,
+  .header .nav-secondary {
     display: block;
     height: 100%;
-    -ms-grid-column: col-3;
-        grid-column: col-3;
     -ms-grid-row-span: row-5;
     -ms-grid-row: row-2;
         grid-row: row-2/span row-5; }
+  .header .nav_main {
+    -ms-grid-column: col-5;
+        grid-column: col-5; }
   .header .nav_secondary {
     -ms-grid-column: col-1;
-        grid-column: col-1;
-    -ms-grid-row-span: row-5;
-    -ms-grid-row: row-2;
-        grid-row: row-2/span row-5; }
+        grid-column: col-1; }
   .header .logo {
     display: block;
     text-align: center;
     padding-top: 6%;
-    -ms-grid-column: col-5;
-        grid-column: col-5;
+    -ms-grid-column: col-3;
+        grid-column: col-3;
     -ms-grid-row-span: row-5;
     -ms-grid-row: row-2;
         grid-row: row-2/span row-5;
