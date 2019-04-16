@@ -1210,12 +1210,11 @@ cite, .label {
       padding: 0.5rem;
       text-decoration: none;
       background-color: transparent;
-      border-bottom: 2px solid transparent;
       -webkit-transition: background-color 0.3s ease-in-out;
       transition: background-color 0.3s ease-in-out;
       border-radius: 5px; }
       .header .nav a:hover {
-        border-bottom: 2px solid #fa584c; }
+        background-color: #fa584c; }
   .header .nav-main,
   .header .nav-secondary {
     display: block;
@@ -1238,12 +1237,12 @@ cite, .label {
     .header .has-sub-nav .nav_level-2 {
       display: none; }
     .header .has-sub-nav:hover .nav_level-2 {
+      display: block;
       position: absolute;
       top: 0;
-      left: 18rem;
+      left: 12rem;
       background-color: #fa584c;
       border-radius: 0.5rem;
-      display: block;
       width: 19rem;
       padding: 1rem; }
       .header .has-sub-nav:hover .nav_level-2 a:hover {

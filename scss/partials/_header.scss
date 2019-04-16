@@ -23,13 +23,13 @@
             padding: 0.5rem;
             text-decoration: none;
             background-color: transparent;
-            border-bottom: 2px solid transparent;
+            // border-bottom: 2px solid transparent;
             -webkit-transition: background-color 0.3s ease-in-out;
             transition: background-color 0.3s ease-in-out;
             border-radius: 5px;
 
             &:hover {
-                border-bottom: 2px solid $c-coral;
+                background-color: $c-coral;
             }
         }
     }
@@ -64,16 +64,17 @@
 
         .nav_level-2 {
             display: none;
+            // transition: display 0.2s ease-in-out;
         }
 
         &:hover {
             .nav_level-2 {
+                display: block;
                 position: absolute;
                 top: 0;
-                left: 18rem;
+                left: 12rem;
                 background-color: $c-coral;
                 border-radius: 0.5rem;
-                display: block;
                 width: 19rem;
                 padding: 1rem;
 
