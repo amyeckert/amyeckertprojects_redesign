@@ -12,6 +12,7 @@
         height: 100%;
         font-family: $f-title;
         z-index: 2;
+        grid-row: row-2/span row-5;
 
         li {
             // margin-bottom: 0.5rem;
@@ -33,19 +34,12 @@
         }
     }
 
-    .nav-main,
-    .nav-secondary {
-        display: block;
-        height: 100%;
-        grid-row: row-2/span row-5;
-    }
-
     .nav_main {
-        grid-column: col-5;
+        grid-column: col-1;
     }
 
     .nav_secondary {
-        grid-column: col-1;
+        grid-column: col-5;
     }
 
     .nav_level-1 {
