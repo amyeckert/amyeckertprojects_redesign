@@ -60,25 +60,25 @@
         }
     }
 
-    a {
-        border-bottom: 1px solid $c-text;
-        padding: 0;
-        margin: 0;
-        font-size: 1rem;
-        color: $c-text;
-        -webkit-transition: all 0.2s;
-        transition: all 0.2s;
+    // a {
+    //     border-bottom: 1px solid $c-text;
+    //     padding: 0;
+    //     margin: 0;
+    //     font-size: 1rem;
+    //     color: $c-text;
+    //     -webkit-transition: all 0.2s;
+    //     transition: all 0.2s;
 
-        &:hover {
-            border-bottom: 10px solid $c-coral;
-        }
-        &:visited {
-            color: $c-white;
-        }
-        span {
-            color: $c-text;
-        }
-    }
+    //     &:hover {
+    //         border-bottom: 10px solid $c-coral;
+    //     }
+    //     &:visited {
+    //         color: $c-white;
+    //     }
+    //     span {
+    //         color: $c-text;
+    //     }
+    // }
 }
 
 .cv-pdf {

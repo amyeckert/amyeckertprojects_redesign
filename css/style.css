@@ -645,20 +645,6 @@ form {
         border-left: 1px solid #fff;
         margin-bottom: 0;
         padding: 45px; } }
-  .bio a {
-    border-bottom: 1px solid #14171a;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    color: #14171a;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s; }
-    .bio a:hover {
-      border-bottom: 10px solid #fa584c; }
-    .bio a:visited {
-      color: #fff; }
-    .bio a span {
-      color: #14171a; }
 
 .cv-pdf {
   padding: 10px 30px;
@@ -1086,7 +1072,11 @@ a.click-whole-box {
 .font-small {
   font-size: 0.9rem; }
 
-.h1, h2, h3, h4, h5 {
+.h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: bold;
   color: #14171a; }
 
@@ -1119,10 +1109,26 @@ blockquote {
   color: #2a3037;
   font-size: 1.5rem; }
 
-cite, .label {
+cite,
+.label {
   font-style: italic;
   font-size: 0.9rem;
   color: #2a3037; }
+
+a {
+  border-bottom: 1px solid #14171a;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #14171a;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  a:hover {
+    border-bottom: 10px solid #fa584c; }
+  a:visited {
+    color: #2a3037; }
+  a span {
+    color: #14171a; }
 
 .section {
   width: 100%;
@@ -1171,11 +1177,15 @@ cite, .label {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .breadcrumbs .breadcrumbs-inline span,
-  .breadcrumbs .breadcrumbs-inline span a {
-    color: #2a3037;
-    font-family: "Josefin Sans", sans-serif;
-    font-style: italic; }
+  .breadcrumbs .breadcrumbs-inline span {
+    display: block;
+    height: 2rem; }
+    .breadcrumbs .breadcrumbs-inline span a {
+      color: #2a3037;
+      font-family: "Josefin Sans", sans-serif;
+      font-style: italic;
+      text-decoration: none;
+      border-bottom: none; }
 
 .main-content {
   -ms-grid-column-span: col-5;
@@ -1202,19 +1212,17 @@ cite, .label {
     height: 100%;
     font-family: "Josefin Sans", sans-serif;
     z-index: 2; }
-    .header .nav li {
-      margin-bottom: 0.5rem; }
     .header .nav a {
       font-size: 1.3rem;
       color: #14171a;
       padding: 0.5rem;
       text-decoration: none;
       background-color: transparent;
-      -webkit-transition: background-color 0.3s ease-in-out;
-      transition: background-color 0.3s ease-in-out;
-      border-radius: 5px; }
+      border-bottom: 2px solid transparent;
+      -webkit-transition: border-bottom 0.3s ease-in-out;
+      transition: border-bottom 0.3s ease-in-out; }
       .header .nav a:hover {
-        background-color: #fa584c; }
+        border-bottom: 10px solid #fa584c; }
   .header .nav-main,
   .header .nav-secondary {
     display: block;
@@ -1353,20 +1361,20 @@ cite, .label {
   #thumbnails-icon:hover .cls-1 {
     fill: #fa584c; }
 
-li a #instagram-icon,
-li a #linkedin-icon,
-li a #github-icon {
+.follow_icon--instagram,
+.follow_icon--linkedin,
+.follow_icon--github {
   height: 100%;
   width: 100%; }
-  li a #instagram-icon .cls-1,
-  li a #linkedin-icon .cls-1,
-  li a #github-icon .cls-1 {
+  .follow_icon--instagram .cls-1,
+  .follow_icon--linkedin .cls-1,
+  .follow_icon--github .cls-1 {
     fill: #2a3037;
     -webkit-transition: fill 0.2s ease-in-out;
     transition: fill 0.2s ease-in-out; }
-  li a #instagram-icon:hover .cls-1,
-  li a #linkedin-icon:hover .cls-1,
-  li a #github-icon:hover .cls-1 {
+  .follow_icon--instagram:hover .cls-1,
+  .follow_icon--linkedin:hover .cls-1,
+  .follow_icon--github:hover .cls-1 {
     fill: #fa584c; }
 
 .footer {
@@ -1390,53 +1398,60 @@ li a #github-icon {
   align-items: flex-start; }
   .footer li {
     margin-bottom: 0.2rem; }
-  .footer a {
-    font-size: 1.3rem;
-    color: #14171a;
-    padding: 0.2rem;
-    background-color: transparent;
-    -webkit-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-    border-radius: 5px; }
-    .footer a:hover {
-      background-color: #fa584c; }
+    .footer li a {
+      display: block;
+      height: 2rem;
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1.3rem;
+      color: #14171a;
+      text-decoration: none;
+      background-color: transparent;
+      border-bottom: 2px solid transparent;
+      -webkit-transition: border-bottom 0.3s ease-in-out;
+      transition: border-bottom 0.3s ease-in-out; }
+      .footer li a:hover {
+        border-bottom: 10px solid #fa584c; }
   .footer p {
     margin-bottom: 0; }
   .footer .follow {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    margin-bottom: 1rem; }
-    @media only screen and (min-width: 768px) {
-      .footer .follow {
-        width: 200px;
-        height: 30px; } }
-    .footer .follow ul {
-      padding: 0;
+    margin-bottom: 0.4rem; }
+    .footer .follow .follow_icon {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
+      display: block;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
       flex-flow: row nowrap;
       width: 60%;
-      margin: 0 auto;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding: 0;
+      margin: 0 auto; }
       @media only screen and (min-width: 768px) {
-        .footer .follow ul {
+        .footer .follow .follow_icon {
           height: 2rem; } }
-      .footer .follow ul a {
+      .footer .follow .follow_icon .follow_icon-link {
         display: block;
-        height: 100%;
-        width: 100%;
+        height: 2rem;
+        width: auto;
         -webkit-transition: none;
+        transition: none;
+        border-bottom: none;
+        padding: 0;
+        margin-right: 1rem;
         transition: none; }
-        .footer .follow ul a:hover {
+        .footer .follow .follow_icon .follow_icon-link:hover {
+          border-bottom: none;
           background-color: transparent; }
   .footer .copyright-notice {
     width: 100%;
@@ -1450,13 +1465,14 @@ li a #github-icon {
     align-items: center; }
     @media only screen and (min-width: 768px) {
       .footer .copyright-notice {
-        height: 30px; } }
+        height: 1.2rem; } }
     .footer .copyright-notice .copyright {
       text-align: center; }
       @media only screen and (min-width: 768px) {
         .footer .copyright-notice .copyright {
           text-align: left;
           margin: 0; } }
+  .footer .nav_footer--two,
   .footer .nav_footer-three {
     height: 100%;
     display: -webkit-box;

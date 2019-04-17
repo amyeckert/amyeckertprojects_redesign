@@ -1,4 +1,8 @@
-.h1, ,h2, h3, h4, h5 {
+.h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: bold;
     color: $c-text;
 }
@@ -7,6 +11,7 @@
     font-size: $h1-font-size;
     margin-bottom: 2rem;
 }
+
 .h2 {
     font-size: $h2-font-size;
     margin-bottom: 1.5rem;
@@ -18,13 +23,12 @@
 }
 
 .h4 {
-    font-size: $h4-font-size; 
+    font-size: $h4-font-size;
 }
 
 .h5 {
     font-size: $h5-font-size;
 }
-
 
 .logo {
     font-family: $f-logo;
@@ -36,10 +40,33 @@ blockquote {
     font-style: italic;
     max-width: 75%;
     color: $c-grey-med;
-    font-size: $h3-font-size 
+    font-size: $h3-font-size;
 }
-cite, .label {
+
+cite,
+.label {
     font-style: italic;
     font-size: 0.9rem;
     color: $c-grey-med;
+}
+
+a {
+    border-bottom: 1px solid $c-text;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: $c-text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover {
+        border-bottom: 10px solid $c-coral;
+    }
+    &:visited {
+        color: $c-grey-med;
+    }
+
+    span {
+        color: $c-text;
+    }
 }

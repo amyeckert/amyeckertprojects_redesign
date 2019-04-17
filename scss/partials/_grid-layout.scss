@@ -56,11 +56,17 @@
     align-items: center;
 
     .breadcrumbs-inline {
-        span,
-        span a {
-            color: $c-grey-med;
-            font-family: $f-title;
-            font-style: italic;
+        span {
+            display: block;
+            height: 2rem;
+
+            a {
+                color: $c-grey-med;
+                font-family: $f-title;
+                font-style: italic;
+                text-decoration: none;
+                border-bottom: none;
+            }
         }
     }
 }

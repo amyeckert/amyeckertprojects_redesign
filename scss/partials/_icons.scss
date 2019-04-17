@@ -14,23 +14,21 @@
     }
 }
 
-li a {
-    #instagram-icon,
-    #linkedin-icon,
-    #github-icon {
-        height: 100%;
-        width: 100%;
+.follow_icon--instagram,
+.follow_icon--linkedin,
+.follow_icon--github {
+    height: 100%;
+    width: 100%;
 
+    .cls-1 {
+        fill: $c-grey-med;
+        -webkit-transition: fill 0.2s ease-in-out;
+        transition: fill 0.2s ease-in-out;
+    }
+
+    &:hover {
         .cls-1 {
-            fill: $c-grey-med;
-            -webkit-transition: fill 0.2s ease-in-out;
-            transition: fill 0.2s ease-in-out;
-        }
-
-        &:hover {
-            .cls-1 {
-                fill: $c-coral;
-            }
+            fill: $c-coral;
         }
     }
 }
