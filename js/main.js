@@ -8,18 +8,6 @@
         var copyrightNotice = 'All images © ' + year + ' Amy Eckert';
         $('p.copyright').html(copyrightNotice);
 
-        // //init masonry
-        // var $grid = $('.grid').masonry({
-        //     itemSelector   : '.grid-item',
-        //     percentPosition: true,
-        //     masonry        : {columnWidth: '.grid-sizer'}
-
-        // });
-        // //layout Isotope after each image loads
-        // $grid.imagesLoaded().progress( function() {
-        //   $grid.masonry('layout');
-        // });
-
         // clear big image caption
         $('.big-img-container > figcaption').remove();
 
@@ -36,16 +24,18 @@
         var grid = document.querySelector('.grid');
         var thumbs = document.getElementById('thumbGrid');
         var newImageCaption = document.querySelector('.big');
-        var figcaption = $('figcaption')
-            .not('#imgInfo')
-            .not('.project-title');
-
-        $(figcaption).show();
+        var figcaption = $('.grid-item_details--single').not(
+            '.grid-item_details--project'
+        );
 
         var updateCaption = function() {
             //get contents of current image info <p>'s
-            var chosenImageCaption = document.querySelector('.isActive > figcaption');
-            var chosenImageDetails = $('.isActive > figcaption').children(); //make an array
+            var chosenImageCaption = document.querySelector(
+                '.isActive > .grid-item_details--single'
+            );
+            var chosenImageDetails = $(
+                '.isActive > .grid-item_details--single'
+            ).children(); //make an array
             var imageTitle = $(chosenImageDetails[0]).text();
             var imageDate = $(chosenImageDetails[1]).text();
             var imageDimensions = $(chosenImageDetails[2]).text();
@@ -122,7 +112,7 @@
                 e.preventDefault();
 
                 // empty big image caption info
-                $('.big > figcaption').remove();
+                $('.big > .grid-item_details--single').remove();
 
                 $('.thumbs-only').show();
                 $('.next').show();

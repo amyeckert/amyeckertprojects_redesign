@@ -1,131 +1,131 @@
-.header-nav {
-    display: none;
+// .header-nav {
+//     display: none;
 
-    @include bp(medium) {
-        display: block;
-        -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
-                order: 2;
-        width: 50%;
-        height: 57px;
-    }
-    @include bp-arb(1300) {
-        width: 40%;
-    }
-    ul {
-        @include bp(medium) {
-            height: 100%;
-            width: 100%;
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-flow: row nowrap;
-                    flex-flow: row nowrap;
-            -webkit-box-align: end;
-                -ms-flex-align: end;
-                    align-items: flex-end;
-            -ms-flex-pack: distribute;
-                justify-content: space-around;
-        }
-        li {
-            @include bp(medium) {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-flex: 1;
-                    -ms-flex: 1 1 auto;
-                        flex: 1 1 auto;
-                -webkit-box-align: center;
-                    -ms-flex-align: center;
-                        align-items: center;
-                padding: 0.5rem;
-                height: 100%;
-            }
-            a {
-                @include bp(medium) {
-                    display: block;
-                    height: 100%;
-                    padding: 20px 5px;
-                    padding: 0.5rem;
-                    border-bottom: 1px solid $c-grey-med;
-                    -webkit-transition: all 0.2s;
-                    transition: all 0.2s;
+//     @include bp(medium) {
+//         display: block;
+//         -webkit-box-ordinal-group: 3;
+//             -ms-flex-order: 2;
+//                 order: 2;
+//         width: 50%;
+//         height: 57px;
+//     }
+//     @include bp-arb(1300) {
+//         width: 40%;
+//     }
+//     ul {
+//         @include bp(medium) {
+//             height: 100%;
+//             width: 100%;
+//             display: -webkit-inline-box;
+//             display: -ms-inline-flexbox;
+//             display: inline-flex;
+//             -webkit-box-orient: horizontal;
+//             -webkit-box-direction: normal;
+//                 -ms-flex-flow: row nowrap;
+//                     flex-flow: row nowrap;
+//             -webkit-box-align: end;
+//                 -ms-flex-align: end;
+//                     align-items: flex-end;
+//             -ms-flex-pack: distribute;
+//                 justify-content: space-around;
+//         }
+//         li {
+//             @include bp(medium) {
+//                 display: -webkit-box;
+//                 display: -ms-flexbox;
+//                 display: flex;
+//                 -webkit-box-flex: 1;
+//                     -ms-flex: 1 1 auto;
+//                         flex: 1 1 auto;
+//                 -webkit-box-align: center;
+//                     -ms-flex-align: center;
+//                         align-items: center;
+//                 padding: 0.5rem;
+//                 height: 100%;
+//             }
+//             a {
+//                 @include bp(medium) {
+//                     display: block;
+//                     height: 100%;
+//                     padding: 20px 5px;
+//                     padding: 0.5rem;
+//                     border-bottom: 1px solid $c-grey-med;
+//                     -webkit-transition: all 0.2s;
+//                     transition: all 0.2s;
 
-                    font-family: $f-logo;
-                }
-                &:visited {
-                    color: $c-grey-med;
-                }
-                &:hover {
-                    color: $c-white;
-                    background-color: $c-coral;
-                }
-            }
-        }
-    }
-}
-// .nav-design a {
-// 	&:hover{
-// 		background-color: $c-coral;
-// 		// border-bottom   : 1px solid $c-teal;
-// 	}
+//                     font-family: $f-logo;
+//                 }
+//                 &:visited {
+//                     color: $c-grey-med;
+//                 }
+//                 &:hover {
+//                     color: $c-white;
+//                     background-color: $c-coral;
+//                 }
+//             }
+//         }
+//     }
 // }
-// .nav-interactive a{
-// 	&:hover {
-// 		background-color: $c-coral;
-// 		// border-bottom   : 1px solid $c-orange-light;
-// 	}
+// // .nav-design a {
+// // 	&:hover{
+// // 		background-color: $c-coral;
+// // 		// border-bottom   : 1px solid $c-teal;
+// // 	}
+// // }
+// // .nav-interactive a{
+// // 	&:hover {
+// // 		background-color: $c-coral;
+// // 		// border-bottom   : 1px solid $c-orange-light;
+// // 	}
+// // }
+// // .nav-photo a {
+// // 	&:hover {
+// // 		background-color: $c-coral;
+// // 		// border-bottom   : 1px solid $c-purple;
+// // 	}
+// // }
+// // .nav-mixed a{
+// // 	&:hover {
+// // 		background-color: $c-coral;
+// // 		// border-bottom   : 1px solid $c-blue-med;
+// // 	}
+// // }
+// // .nav-about a{
+// // 	&:hover {
+// // 		background-color: $c-coral;
+// // 		// border-bottom   : 1px solid $c-green-olive;
+// // 	}
+// // }
+// // .nav-contact a{
+// // 	&:hover {
+// // 		background-color: $c-coral;
+// // 		// border-bottom: 1px solid $c-green-kelly;
+// // 	}
+// // }
+// // -----indicate current location -----//
+// #design .nav-design a,
+// #letters .nav-design a,
+// #nzbirds .nav-design a,
+// #d6sunset .nav-design a,
+// #print-portfolio .nav-design a,
+// #interactive .nav-interactive a,
+// #perfect .nav-interactive a,
+// #photography .nav-photo a,
+// #truckers .nav-photo a,
+// #manhome .nav-photo a,
+// #mncooks .nav-photo a,
+// #submarine .nav-photo a,
+// #soap .nav-photo a,
+// #optimiste .nav-photo a,
+// #mossburn .nav-photo a,
+// #mixedmedia .nav-mixed a,
+// #prefab .nav-mixed a,
+// #weather .nav-mixed a,
+// #misunderstood .nav-mixed a,
+// #proteus .nav-mixed a,
+// #rigs .nav-mixed a,
+// #kansas .nav-mixed a,
+// #about .nav-about a,
+// #contact .nav-contact a {
+//     border-bottom: none;
 // }
-// .nav-photo a {
-// 	&:hover {
-// 		background-color: $c-coral;
-// 		// border-bottom   : 1px solid $c-purple;
-// 	}
-// }
-// .nav-mixed a{
-// 	&:hover {
-// 		background-color: $c-coral;
-// 		// border-bottom   : 1px solid $c-blue-med;
-// 	}
-// }
-// .nav-about a{
-// 	&:hover {
-// 		background-color: $c-coral;
-// 		// border-bottom   : 1px solid $c-green-olive;
-// 	}
-// }
-// .nav-contact a{
-// 	&:hover {
-// 		background-color: $c-coral;
-// 		// border-bottom: 1px solid $c-green-kelly;
-// 	}
-// }
-// -----indicate current location -----//
-#design .nav-design a,
-#letters .nav-design a,
-#nzbirds .nav-design a,
-#d6sunset .nav-design a,
-#print-portfolio .nav-design a,
-#interactive .nav-interactive a,
-#perfect .nav-interactive a,
-#photography .nav-photo a,
-#truckers .nav-photo a,
-#manhome .nav-photo a,
-#mncooks .nav-photo a,
-#submarine .nav-photo a,
-#soap .nav-photo a,
-#optimiste .nav-photo a,
-#mossburn .nav-photo a,
-#mixedmedia .nav-mixed a,
-#prefab .nav-mixed a,
-#weather .nav-mixed a,
-#misunderstood .nav-mixed a,
-#proteus .nav-mixed a,
-#rigs .nav-mixed a,
-#kansas .nav-mixed a,
-#about .nav-about a,
-#contact .nav-contact a {
-    border-bottom: none;
-}

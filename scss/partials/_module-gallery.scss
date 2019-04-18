@@ -1,6 +1,8 @@
+//----------------- Gallery Grids ------------------//
 .gallery_section {
-    //----------------- Thumbnail GRID ------------------//
     .grid {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
         order: 4;
         display: block;
         width: 100%;
@@ -8,10 +10,11 @@
         margin: 0 0 0 0;
 
         &:after {
-            content: "";
+            content: '';
             display: block;
             clear: both;
         }
+
         .statement-mobile {
             display: block;
             max-width: 90%;
@@ -26,9 +29,6 @@
 
             p {
                 margin-bottom: 1.2rem;
-            }
-            em {
-                font-style: italic;
             }
         }
 
@@ -45,97 +45,81 @@
         .grid-sizer {
             width: 100%;
             height: auto;
+            margin-bottom: 0;
+
             @include bp(small) {
                 width: 100%;
             }
 
             .grid-item {
-                float: left;
                 width: 100%;
                 height: auto;
-                margin-bottom: 5px;
+                margin-bottom: 0;
+                cursor: pointer;
 
                 @include bp(small) {
                     float: none;
                     width: 33.333%;
-                    margin-bottom: -10px;
                 }
-                a {
-                    height: 100%;
-                    display: block;
-                }
-                img {
+
+                .grid-item_image {
                     width: 100%;
                     height: auto;
-                    @include bp(small) {
-                    }
+                    padding: 0;
                 }
-                figcaption {
-                    color: $c-white;
-                    display: none;
+
+                .grid-item_details--project {
+                    // display: none;
+                    opacity: 0;
+                    -webkit-transition: opacity 0.2s ease-in;
+                    transition: opacity 0.2s ease-in;
                     p {
-                        color: $c-white;
                         display: none;
                     }
                 }
 
-                .project-title {
-                    visibility: visible;
-                    display: block;
-                    opacity: 0;
-                    transition: opacity 0.2s ease-in;
-
-                    p {
-                        display: block;
-                        position: absolute;
-                        top: 40%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        color: $c-white;
-                        text-transform: uppercase;
-                        // @include font-size(25);
-                        a {
-                            text-align: right;
-                            display: block;
-                            letter-spacing: 0.7px;
-
-                            &:visited {
-                                color: $c-grey-med;
-                            }
-                            &:active,
-                            &:hover {
-                                color: $c-green-kelly;
-                                border-bottom: 1px solid $c-green-kelly;
-                            }
-                        }
-                    }
-                }
                 &:hover {
-                    .project-title {
+                    // portfolio landing pages
+                    .grid-item_details--project {
                         display: block;
-                        visibility: visible;
+                        color: $c-white;
                         position: absolute;
                         top: 0;
                         right: 0;
                         height: 100%;
                         width: 100%;
                         background-color: $c-green-kelly;
-                        opacity: 0.97;
+                        opacity: 0.87;
 
-                        .show-caption {
+                        .grid-item_link {
                             display: block;
+                            height: 100%;
+                            width: 100%;
+                            border: none;
+                        }
+
+                        .grid-item_title {
+                            display: block;
+                            position: absolute;
+                            top: 40%;
+                            left: 50%;
+                            -webkit-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                            text-decoration: none;
                             color: $c-white;
+                            text-transform: uppercase;
+                            font-size: 2rem;
+                            font-weight: 700;
                         }
                     }
                 }
+
+                // project gallery items
+                .grid-item_details--single {
+                    display: none;
+                }
             }
         }
-    }
-
-    .grid:after {
-        content: "";
-        display: block;
-        clear: both;
     }
 
     /*---------------------- CAROUSEL -------------------*/
@@ -145,12 +129,18 @@
 
         @include bp(small) {
             display: none;
+            -webkit-box-ordinal-group: 6;
+            -ms-flex-order: 5;
             order: 5;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
             flex: 1 0 auto;
             margin-bottom: 5px;
         }
         @include bp(medium) {
             display: none;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
             flex: 1 0 auto;
         }
 
@@ -163,6 +153,8 @@
             }
 
             .big-img-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 visibility: visible;
                 width: 100%;
@@ -175,6 +167,7 @@
             }
             .image-info {
                 clear: both;
+                -ms-flex-item-align: end;
                 align-self: flex-end;
                 display: block;
                 visibility: visible;
@@ -227,10 +220,19 @@
         display: none;
 
         @include bp(small) {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             height: 35px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
             flex-direction: row;
+            -webkit-box-ordinal-group: 7;
+            -ms-flex-order: 6;
             order: 6;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
             align-items: stretch;
         }
 

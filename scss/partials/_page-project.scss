@@ -78,8 +78,8 @@
                 letter-spacing: 0.7px;
                 color: $c-grey-med;
                 border-bottom: 1px solid $c-white;
-                -webkit-transition: all 0.2s;
-                transition: all 0.2s;
+                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 padding-left: 10px;
 
                 &:visited {

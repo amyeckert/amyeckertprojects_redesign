@@ -35,41 +35,6 @@
         'far-left main main main far-right'
         'footer footer footer footer footer';
 }
-// BREADCRUMBS SECTION
-
-.breadcrumbs {
-    grid-column: col-1;
-    grid-row: row-3;
-    height: 5.5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
-    .breadcrumbs-inline {
-        span {
-            display: block;
-            height: 2rem;
-
-            a {
-                color: $c-grey-med;
-                font-family: $f-title;
-                font-style: italic;
-                text-decoration: none;
-                border-bottom: none;
-            }
-        }
-    }
-}
 
 .main-content {
     grid-column: col-2/span col-5;
