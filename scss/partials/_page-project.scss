@@ -63,18 +63,13 @@
     .interactive-project {
         display: block;
         margin: 10px 0;
-        // @include font-size(16);
-
         .show-caption {
             display: block;
             color: $c-grey-med;
             padding: 0 10px;
-            // @include line-height(20)
-
             a {
                 text-align: right;
                 display: block;
-                // @include font-size(18);
                 letter-spacing: 0.7px;
                 color: $c-grey-med;
                 border-bottom: 1px solid $c-white;
