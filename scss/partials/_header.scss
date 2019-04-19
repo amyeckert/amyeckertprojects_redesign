@@ -6,6 +6,8 @@
     transition: top 0.2s ease-in-out;
     margin-bottom: 5rem;
     height: 8rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
 
     .nav {
         display: block;
@@ -40,6 +42,7 @@
 
     .nav_secondary {
         grid-column: col-5;
+        text-align: right;
     }
 
     .nav_level-1 {
