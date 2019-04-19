@@ -164,17 +164,22 @@
 
                         <div class="image-block_text">
                             <form action="" class="form_contact">
-                                <div class="form_item">
+                                <div class="form_item is-required">
                                     <label for="name">What's your full name?</label>
-                                    <input id="name" type="text" name="name" />
+                                    <input id="name" type="text" name="name" required />
                                 </div>
 
-                                <div class="form_item">
+                                <div class="form_item is-required">
                                     <label for="email">What's your email address?</label>
-                                    <input id="email" type="email" name="email" />
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        name="email"
+                                        required
+                                    />
                                 </div>
 
-                                <div class="form_item">
+                                <div class="form_item is-required">
                                     <label for="message">What's on your mind?</label>
                                     <textarea
                                         id="message"
@@ -182,6 +187,7 @@
                                         name="message"
                                         rows="5"
                                         cols="15"
+                                        required
                                     ></textarea>
                                 </div>
 

@@ -67,4 +67,24 @@ form {
     label {
         color: $c-grey-med;
     }
+
+    .is-required {
+        label {
+            display: block;
+            position: relative;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            padding-right: 0.8rem;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: '*';
+                color: $c-coral;
+                font-size: 1.5rem;
+            }
+        }
+    }
 }

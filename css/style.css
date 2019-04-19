@@ -1568,3 +1568,17 @@ form {
       border-radius: 0.5rem; }
   form label {
     color: #2a3037; }
+  form .is-required label {
+    display: block;
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-right: 0.8rem; }
+    form .is-required label::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '*';
+      color: #fa584c;
+      font-size: 1.5rem; }
