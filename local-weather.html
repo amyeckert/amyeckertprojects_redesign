@@ -26,7 +26,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.min.css" />
     </head>
 
-    <body id="perfect">
+    <body id="local-weather">
         <div class="grid-container section">
             <!--...HEADER......................................................-->
             <header role="banner" class="header grid-container nav-down">
@@ -157,119 +157,134 @@
             <main class="main-content section">
                 <div class="page_content page_case-study">
                     <div class="project_header">
-                        <h1 class="h1 project_title"> How about this little gem? </h1>
-					</div>
-					
-					<div class="image-block_section image-block_section--full">
-						<figure class="image-block_img">
-							<img src="images/interactive/perfect-home.jpg" alt="Find your perfect home">
-						</figure>
-					</div>
-
-					<div class="headline-block_section">
-						<hr class="headline-block_line">
-
-						<div class="headline-block_headline">
-							<h2 class="h2">A giant quiz</h2>
-						</div>
-
-						<div class="headline-block_text">
-							<p>
-								I love
-								<a href="http://www.madlibs.com/" target="_blank"
-									><span>Mad Libs.</span></a
-								>
-							</p>
-
-							<p>
-								I also love the hyperbolic, euphemistic language
-								of real estate listings. Why not combine the two?
-							</p>
-
-							<p>
-								Try it out at
-								<a
-									href="http://www.perfecthomequiz.com"
-									title="Perfect home quiz"
-									target="_blank"
-									><span>www.perfecthomequiz.com,</span></a
-								>
-								and find your perfect home!
-							</p>
-						</div>
-					</div>
-
-					<div class="image-block_section image-block_section--text">
-						<hr class="headline-block_line">
-						<figure class="grid-item">
-							<img src="images/interactive/perfect-questions.jpg" 	alt="Find your perfect questions" 
-								class="grid-item_image"
-							/>
-						</figure>
-
-						<div class="image-block_text">
-							<p>One of three quizzes is randomly chosen after you enter your name.</p> </p>The quizzes represent three price ranges, ranging from a gazillion dollars to a total dump, ie.  "fixer-upper".</p><p>Getting the language right for each price point involved reading countless listings on countless sites and consulting with a real estate agent for accuracy and authenticity.</p>
-						</div>
-					</div>
-					
-					<div class="image-block_section image-block_section--text">
-						
-						<figure class="grid-item">
-							<img src="images/interactive/perfect-listing.jpg" alt="Your perfect listing" 
-								class="grid-item_image"
-							/>
-						</figure>
-
-						<div class="image-block_text">
-							<p>Once you are have completed the questionnaire, your custom listing is assembled.</p><p>You can copy this to your clipboard to share with the world on social media.</p>  
-						</div>
-					</div>
-
-					<div class="image-block_section image-block_section--thirds">
-						<hr class="headline-block_line">
-
-						<figure class="image-block_img image-block_img--half img-middle">
-							<img src="images/interactive/perfect-tablet.jpg" alt="Your perfect listing">
-
-							<figcaption class="label"></figcaption>
-						</figure>
-
-						<figure class="image-block_img image-block_img--half img-left">
-							<img src="images/interactive/perfect-mobile.jpg" alt="Find your perfect questions">
-
-							<figcaption class="label"></figcaption>
-						</figure>
-
-
-						<figure class="image-block_img image-block_img--half img-middle">
-							<img src="images/interactive/perfect-android.jpg" alt="Your perfect listing">
-
-							<figcaption class="label"></figcaption>
-						</figure>
-
-					</div>
-
-					                <div class="headline-block_section">
-                    <hr class="headline-block_line">
-
-                    <div class="headline-block_headline">
-                        <!-- <h2 class="h2">Headline</h2> -->
-                        <blockquote class="headline-block_quote">Technical specs and background</blockquote>
-                        <!-- <cite>&mdash; Someone somewhere</cite> -->
-
+                        <h1 class="h1 project_title">What's it like outside?</h1>
                     </div>
 
-                    <div class="headline-block_text">
-						<p>This is an off-shoot of my larger project called <a href="manhome.html" target="_self">Manufacturing Home</a>  which is a photography project exploring ideas about place, comfort, class and mobility through photographs of mass-market, factory-built homes in America.</p>
-						
-						<p>I used the questionnaire format as an excuse to build a giant form and teach myself to style it and validate it, (client side only, I'm not storing any of your ridiculous answers). The site is built using HTML, Sass compiled with Gulp, javascript and jQuery. Feel Free to peek under the hood on <a href="https://github.com/amyeckert/perfecthome-js" target="_blank">github.</a></p>
-
-						<p>Try it out and email me your Perfect Home!</p>
+                    <div class="image-block_section image-block_section--full">
+                        <figure class="image-block_img">
+                            <img
+                                src="images/interactive/weather-cool.png"
+                                alt="Get your local weather conditions"
+                            />
+                        </figure>
                     </div>
 
+                    <div class="headline-block_section">
+                        <hr class="headline-block_line" />
 
-                </div>
-              
+                        <div class="headline-block_headline">
+                            <h2 class="h2">You don't even have to open a window.</h2>
+                        </div>
+
+                        <div class="headline-block_text">
+                            <p>
+                                Are you wondering if you need a raincoat?
+                            </p>
+                            <p>Should you bring an umbrella?</p>
+                            <p>Do I need to apply copious amounts of sunblock?</p>
+                            <p>Is that hail I hear?</p>
+                        </div>
+                    </div>
+
+                    <div class="image-block_section image-block_section--text">
+                        <hr class="headline-block_line" />
+                        <figure class="grid-item">
+                            <img
+                                src="images/interactive/weather-hot.png"
+                                alt="Hot weather conditions"
+                                class="grid-item_image"
+                            />
+                        </figure>
+
+                        <div class="image-block_text">
+                            <p>
+                                <a
+                                    href="https://amyeckert.github.io/local-weather/"
+                                    title="Perfect home quiz"
+                                    target="_blank"
+                                    >Local Weather</a
+                                >
+                                is a simple app that uses your location to tell you what
+                                the current local weather conditions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="image-block_section image-block_section--text">
+                        <figure class="grid-item">
+                            <img
+                                src="images/interactive/perfect-listing.jpg"
+                                alt="Your perfect listing"
+                                class="grid-item_image"
+                            />
+                        </figure>
+
+                        <div class="image-block_text">
+                            <p>
+                                Once you are have completed the questionnaire, your custom
+                                listing is assembled.
+                            </p>
+                            <p>
+                                You can copy this to your clipboard to share with the
+                                world on social media.
+                            </p>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="image-block_section image-block_section--thirds">
+                        <hr class="headline-block_line" />
+
+                        <figure class="image-block_img image-block_img--half img-middle">
+                            <img
+                                src="images/interactive/weather-cold-mobile.png"
+                                alt="cold weather conditions"
+                            />
+
+                            <figcaption class="label"></figcaption>
+                        </figure>
+
+                        <figure class="image-block_img image-block_img--half img-left">
+                            <img
+                                src="images/interactive/weather-mild-mobile.png"
+                                alt="Find your perfect questions"
+                            />
+
+                            <figcaption class="label"></figcaption>
+                        </figure>
+
+                        <figure class="image-block_img image-block_img--half img-middle">
+                            <img
+                                src="images/interactive/weather-warm-mobile.png"
+                                alt="Your perfect listing"
+                            />
+
+                            <figcaption class="label"></figcaption>
+                        </figure>
+                    </div> -->
+
+                    <div class="headline-block_section">
+                        <hr class="headline-block_line" />
+
+                        <div class="headline-block_headline">
+                            <!-- <h2 class="h2">Headline</h2> -->
+                            <blockquote class="headline-block_quote">
+                                Technical specs
+                            </blockquote>
+                            <!-- <cite>&mdash; Someone somewhere</cite> -->
+                        </div>
+
+                        <div class="headline-block_text">
+                            <p>ahaeth a ryjtyj</p>
+                            <p>
+                                See it on
+                                <a
+                                    href="https://github.com/amyeckert/local-weather"
+                                    target="_blank"
+                                    >github.</a
+                                >
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>

@@ -1,13 +1,14 @@
-.project,
+.page_project,
 .case-study {
     .project_title {
-        display: block;
-        font-family: $f-body;
-        grid-column: col-2/span col-5;
+        // display: block;
+        // font-family: $f-body;
+        // grid-column: col-2/span col-5;
     }
 }
 
-.project {
+.page_project,
+.page_case-study {
     .project_header {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -19,6 +20,12 @@
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
+        // background-color: blue;
+    }
+    .project_title {
+        display: block;
+        font-family: $f-body;
+        grid-column: col-2/span col-5;
     }
 
     .project_header-info {

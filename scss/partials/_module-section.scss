@@ -9,20 +9,16 @@
     -webkit-box-direction: normal;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    margin-top: 4r0em;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 4rem;
     padding-bottom: 1rem;
     height: auto;
 
-    .headline-block_line {
-        border-top: 1px solid $c-grey-med;
-        opacity: 0.7;
-        width: 75%;
-        margin-bottom: 3rem;
-    }
-
     .headline-block_headline,
     .headline-block_text {
-        width: 50%;
+        width: 48%;
     }
     .headline-block_text {
     }
@@ -39,6 +35,12 @@
         -ms-flex-pack: center;
         justify-content: center;
     }
+}
+.headline-block_line {
+    border-top: 1px solid $c-grey-med;
+    opacity: 0.7;
+    width: 75%;
+    margin-bottom: 3rem;
 }
 
 .headline-block_section--about {
