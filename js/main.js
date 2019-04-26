@@ -29,13 +29,13 @@
         );
 
         var updateCaption = function() {
-            //get contents of current image info <p>'s
+            // get contents of current image info <p>'s
             var chosenImageCaption = document.querySelector(
                 '.isActive > .grid-item_details--single'
             );
             var chosenImageDetails = $(
                 '.isActive > .grid-item_details--single'
-            ).children(); //make an array
+            ).children();
             var imageTitle = $(chosenImageDetails[0]).text();
             var imageDate = $(chosenImageDetails[1]).text();
             var imageDimensions = $(chosenImageDetails[2]).text();
@@ -80,8 +80,8 @@
             modal('close');
         });
 
-        // todo: needs work so that if there is a link in the text of th emodal it won't close the modal when
-        // clicked on
+        // todo: needs work so that if there is a link in the text of the modal it won't close the modal when clicked on
+
         $('.close').on('click', function(event) {
             modal('close');
         });

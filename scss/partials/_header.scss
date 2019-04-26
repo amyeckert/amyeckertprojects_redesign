@@ -109,6 +109,7 @@
         padding-right: 1rem;
         z-index: 99999;
         background-color: $c-white;
+        display: none;
 
         @include bp(xsmall) {
             top: 4.5rem;

@@ -973,7 +973,8 @@ a {
     padding-left: 1rem;
     padding-right: 1rem;
     z-index: 99999;
-    background-color: #fff; }
+    background-color: #fff;
+    display: none; }
     @media only screen and (min-width: 340px) {
       .header .nav_mobile-container {
         top: 4.5rem; } }
