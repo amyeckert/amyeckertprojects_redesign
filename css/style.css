@@ -851,6 +851,7 @@ h5 {
   font-size: 55px;
   color: #14171a; }
 
+.headline-block_quote,
 blockquote {
   font-style: italic;
   max-width: 75%;
