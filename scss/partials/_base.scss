@@ -19,9 +19,6 @@ body {
     height: 100%;
     font-family: $f-body;
 }
-nav ul li a {
-    font-size: $base-font-size;
-}
 
 ul {
     list-style: none;
@@ -46,40 +43,21 @@ p {
     margin-bottom: 1rem;
 }
 
-/* ------------ LINKS-------------------------------*/
-
-a {
-    text-decoration: none;
-    color: $c-text;
-}
-
-.wrapper {
-    margin: 0 auto;
-    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox; /* TWEENER - IE 10 */ /* NEW - Chrome */
-    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column wrap;
-    flex-flow: column wrap;
-
-    @include bp(xsmall) {
-        margin: 0 auto;
-        // min-height: 100vh;
-    }
-    @include bp(large) {
-        // margin: 1% auto;
-    }
-}
-
-button {
+button,
+.btn {
+    display: block;
     outline: none;
+    border: none;
     background-color: $c-white;
-    border: 1px solid $c-white;
+    border-bottom: 1px solid $c-white;
     cursor: pointer;
-    padding: 7px 5px 7px 10px;
-    font-family: 'Josefin Sans', sans-serif;
-    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    font-family: $f-title;
+    text-transform: capitalize;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .btn-back {
